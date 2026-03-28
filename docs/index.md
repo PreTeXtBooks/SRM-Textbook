@@ -2,7 +2,7 @@
 title: "Scientific Research and Methodology"
 subtitle: "An introduction to quantitative research and statistics"
 author: "Peter K. Dunn"
-date: '2026-03-24 14:38:40.497885'
+date: '2026-03-29 07:23:52.098436'
 knit: render_book
 documentclass: krantz
 classoption: krantz2
@@ -193,7 +193,7 @@ Try it now:
 1. Is $2 + 2 = 4$?
 <select class='webex-select'><option value='blank'></option><option value='answer'>TRUE</option><option value=''>FALSE</option></select>
 1. Which one of these is FALSE?
-<div class='webex-radiogroup' id='radio_KZOVFLNDVV'><label><input type="radio" autocomplete="off" name="radio_KZOVFLNDVV" value=""></input> <span>The inventor of the fairy floss machine was a dentist</span></label><label><input type="radio" autocomplete="off" name="radio_KZOVFLNDVV" value=""></input> <span>Barack Obama has won two Grammy awards</span></label><label><input type="radio" autocomplete="off" name="radio_KZOVFLNDVV" value="answer"></input> <span>Once a year all of Wikipedia is printed, and placed in a vault in Norway.</span></label></div>
+<div class='webex-radiogroup' id='radio_KIOTPAAYKC'><label><input type="radio" autocomplete="off" name="radio_KIOTPAAYKC" value=""></input> <span>The inventor of the fairy floss machine was a dentist</span></label><label><input type="radio" autocomplete="off" name="radio_KIOTPAAYKC" value=""></input> <span>Barack Obama has won two Grammy awards</span></label><label><input type="radio" autocomplete="off" name="radio_KIOTPAAYKC" value="answer"></input> <span>Once a year all of Wikipedia is printed, and placed in a vault in Norway.</span></label></div>
 
 :::
 
