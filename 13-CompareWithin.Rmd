@@ -32,7 +32,7 @@ This chapter studies summarising within-individuals changes in *quantitative* va
 When each individual has *two* observations, the difference between the observations can be computed for each individual.
 Then, the appropriate numerical summary is to summarise these *differences* over all individuals; for example, using the *mean* of these *differences*.
 
-When *more than two* observations are made for each individual, the changes from the first observation (the \emph{reference level})\index{Reference level} may be computed (e.g., if the first observation is pre-intervention, or a benchmark, observation); for example, using the *mean change* (see Sect.\ \@ref(PainRelievingTape)).
+When *more than two* observations are made for each individual, the changes from the first observation (the *reference level*)\index{Reference level} may be computed (e.g., if the first observation is pre-intervention, or a benchmark, observation); for example, using the *mean change* (see Sect.\ \@ref(PainRelievingTape)).
 
 
 :::{.example #WithinIndividualComparison name="Within-individual comparisons"}
@@ -46,7 +46,7 @@ The direction of the difference is implied by the word '*reduction*'.
 
 ::: {.importantBox .important data-latex="{iconmonstr-warning-8-240.png}"}
 In the numerical summary table, the information for the differences is *not* found by subtracting the information in one row from the other.
-In Table\ \@ref(tab:IgETable), for example, the number of differences is not $11 - 11 = 0$; the standard deviation of the differences is *not* $1615.53 - 1354.4 = 261.13\microgs$.$\Ls^{-1}$.
+In Table\ \@ref(tab:IgETable), for example, the number of differences is not $11 - 11 = 0$; the standard deviation of the differences is *not* $1615.53 - 1354.4 = 261.13\mu\text{g}$.$\Ls^{-1}$.
 These statistics are computed from the differences (i.e., the **Reductions** in Table\ \@ref(tab:IgEChanges)).
 :::
 
