@@ -262,7 +262,7 @@ Sensible decisions *can* be made (and *are* made) about parameters based on stat
 To do this though, the process of *how* decisions are made needs to be articulated, which is the purpose of this chapter.
 
 
-In the cards example, obtaining $25$\ reds cards out of\ $25$ (i.e., $\hat{p} = 1$) seems very unlikely from. a fair pack; you would probably conclude that the pack is somehow unfair, or that I was cheating somehow.
+In the cards example, obtaining $25$\ reds cards out of\ $25$ (i.e., $\hat{p} = 1$) seems very unlikely from a fair pack; you would probably conclude that the pack is somehow unfair, or that I was cheating somehow.
 But importantly, *how* did you reach that decision?
 Your unconscious decision-making process may have followed these steps.\index{Decision making}
 
