@@ -7,7 +7,7 @@
 <title>31 Comparing two odds or proportions: CIs and tests | Scientific Research and Methodology</title>
 <meta name="author" content="Peter K. Dunn">
 <meta name="description" content="You have learnt to ask an RQ, design a study, classify and summarise the data, construct confidence intervals, and conduct hypothesis tests. In this chapter, you will learn to: identify situations...">
-<meta name="generator" content="bookdown 0.45 with bs4_book()">
+<meta name="generator" content="bookdown 0.46 with bs4_book()">
 <meta property="og:title" content="31 Comparing two odds or proportions: CIs and tests | Scientific Research and Methodology">
 <meta property="og:type" content="book">
 <meta property="og:description" content="You have learnt to ask an RQ, design a study, classify and summarise the data, construct confidence intervals, and conduct hypothesis tests. In this chapter, you will learn to: identify situations...">
@@ -82,7 +82,6 @@
     div.csl-bib-body { }
     div.csl-entry {
       clear: both;
-          margin-bottom: 0em;
         }
     .hanging div.csl-entry {
       margin-left:2em;
@@ -1190,7 +1189,7 @@ The test is statistically valid.</p>
 <span class="header-section-number">31.9</span> Example: turtle nests<a class="anchor" aria-label="anchor" href="#TurtleNests"><i class="fas fa-link"></i></a>
 </h2>
 <p>The hatching success of loggerhead turtles on Mediterranean beaches is often compromised by fungi and bacteria.
-<span class="citation">Candan, Katılmış, and Ergin (<a href="Bibliography.html#ref-candan2021first">2021</a>)</span> studied the odds of a nest being infected, comparing relocated nests (relocated due to the risk of tidal inundation), and non-relocated nests
+<span class="citation">Candan et al. (<a href="Bibliography.html#ref-candan2021first">2021</a>)</span> studied the odds of a nest being infected, comparing relocated nests (relocated due to the risk of tidal inundation), and non-relocated nests
 (Table <a href="AnalysisOddsRatio.html#tab:TurtleNestDataTable">31.7</a>).
 The researchers were interested in knowing:</p>
 <blockquote>
@@ -1235,6 +1234,66 @@ Relocated
 </tr>
 </tbody>
 </table></div>
+<div class="inline-table"><table class="table table-sm">
+<caption>
+<span id="tab:TurtleNestSummaryTable">TABLE 31.8: </span>Numerical summary for the turtles data.
+</caption>
+<thead><tr>
+<th style="text-align:left;font-weight: bold;">
+</th>
+<th style="text-align:center;font-weight: bold;">
+Odds not infected
+</th>
+<th style="text-align:center;font-weight: bold;">
+Proportion not infected
+</th>
+<th style="text-align:center;font-weight: bold;">
+Sample size
+</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Natural
+</td>
+<td style="text-align:center;">
+<span class="math inline">\(2.90\)</span>
+</td>
+<td style="text-align:center;">
+<span class="math inline">\(0.744\)</span>
+</td>
+<td style="text-align:center;">
+<span class="math inline">\(39\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Relocated
+</td>
+<td style="text-align:center;">
+<span class="math inline">\(1.75\)</span>
+</td>
+<td style="text-align:center;">
+<span class="math inline">\(0.636\)</span>
+</td>
+<td style="text-align:center;">
+<span class="math inline">\(22\)</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:center;">
+<span class="math inline">\(1.66\)</span>
+</td>
+<td style="text-align:center;">
+<span class="math inline">\(0.107\)</span>
+</td>
+<td style="text-align:center;">
+</td>
+</tr>
+</tbody>
+</table></div>
 <div class="figure" style="text-align: center">
 <span style="display:block;" id="fig:TurtleNestsGraphs"></span>
 <img src="31-CIsTesting-OddsRatios_files/figure-html/TurtleNestsGraphs-1.png" alt="Bar chart for the turtle-nesting data." width="50%"><p class="caption">
@@ -1253,10 +1312,12 @@ The parameter is the odds ratio of a nest being infected, comparing natural to r
 (The equivalent hypotheses written in terms of proportions would be <span class="math inline">\(H_0\)</span>: <span class="math inline">\(p_N - p_R = 0\)</span> and <span class="math inline">\(H_1\)</span>: <span class="math inline">\(p_N - p_R \ne 0\)</span>.
 The hypotheses could also be written in terms of associations.)</p>
 <p>A graphical summary is shown in Fig. <a href="AnalysisOddsRatio.html#fig:TurtleNestsGraphs">31.5</a>.
-A numerical summary table (Table <a href="AnalysisOddsRatio.html#tab:TurtleNestDataTable">31.7</a>, right table) shows that the odds of natural nest being infected is <span class="math inline">\(1.66\)</span> times the odds of a relocated nest being infected.
+A numerical summary table
+(Table <a href="AnalysisOddsRatio.html#tab:TurtleNestSummaryTable">31.8</a>)
+shows that the odds of natural nest being infected is <span class="math inline">\(1.66\)</span> times the odds of a relocated nest being infected.
 From the software output (Fig. <a href="AnalysisOddsRatio.html#fig:TurtleNestsOutputjamovi">31.6</a>), the <span class="math inline">\(\chi^2\)</span>-value is <span class="math inline">\(0.777\)</span>.
 Since the table is a <span class="math inline">\(2\times 2\)</span> table, the equivalent <span class="math inline">\(z\)</span>-score can be found: <span class="math inline">\(z = \sqrt{0.777} = 0.88\)</span>.
-This <span class="math inline">\(z\)</span>-scorw is very small, so expect a large <span class="math inline">\(P\)</span>-value.
+This <span class="math inline">\(z\)</span>-score is very small, so expect a large <span class="math inline">\(P\)</span>-value.
 (This is the value of the <span class="math inline">\(z\)</span>-score shown in Fig. <a href="AnalysisOddsRatio.html#fig:TurtleNestsOutputjamovi">31.6</a> for comparing two proportions.)
 The <span class="math inline">\(P\)</span>-value is <span class="math inline">\(0.378\)</span> on the output (for both tests).</p>
 <p>The smallest <em>expected</em> count is <span class="math inline">\((22\times 18) / 61 = 6.49\)</span>, which exceeds five, so the test is statistically valid.
@@ -1282,21 +1343,21 @@ FIGURE 31.6: The software output for the turtle-nesting data.
 <h2>
 <span class="header-section-number">31.10</span> Example: health of female burros<a class="anchor" aria-label="anchor" href="#HTCompareOddsBurros"><i class="fas fa-link"></i></a>
 </h2>
-<p><span class="citation">R. A. Johnson, Carothers, and McGill (<a href="Bibliography.html#ref-johnson1987demography">1987</a>)</span> studied <span class="math inline">\(315\)</span> introduced female burros (donkeys) in the Mojave Desert (California) to understand management processes.
+<p><span class="citation">Johnson et al. (<a href="Bibliography.html#ref-johnson1987demography">1987</a>)</span> studied <span class="math inline">\(315\)</span> introduced female burros (donkeys) in the Mojave Desert (California) to understand management processes.
 One RQ was:</p>
 <blockquote>
 <p>For these female burros, is the reproductive status of the burros related to their health?</p>
 </blockquote>
 <p>The data
-(Table <a href="AnalysisOddsRatio.html#tab:BurrosDataHTML">31.8</a>)
+(Table <a href="AnalysisOddsRatio.html#tab:BurrosDataHTML">31.9</a>)
 are given in a <span class="math inline">\(3\times 3\)</span> table of counts.
 The data are summarised using row proportions in
-Table <a href="AnalysisOddsRatio.html#tab:BurrosSummaryHTML">31.9</a>),
+Table <a href="AnalysisOddsRatio.html#tab:BurrosSummaryHTML">31.10</a>),
 and in a graph in Fig. <a href="AnalysisOddsRatio.html#fig:BurrosChisqjamoviPlot">31.7</a> (left panel).
 Software output is shown in Fig. <a href="AnalysisOddsRatio.html#fig:BurrosChisqjamoviPlot">31.7</a> (right panel).</p>
 <div class="inline-table"><table class="table table-sm">
 <caption>
-<span id="tab:BurrosDataHTML">TABLE 31.8: </span>The health and reproductive status of female burros. (Pregnant and lactating burros were counted with the lactating burros only.)
+<span id="tab:BurrosDataHTML">TABLE 31.9: </span>The health and reproductive status of female burros. (Pregnant and lactating burros were counted with the lactating burros only.)
 </caption>
 <thead><tr>
 <th style="text-align:left;">
@@ -1358,7 +1419,7 @@ Lactating
 </table></div>
 <div class="inline-table"><table class="table table-sm">
 <caption>
-<span id="tab:BurrosSummaryHTML">TABLE 31.9: </span>Row proportions for the burros data (i.e., rows sum to one).
+<span id="tab:BurrosSummaryHTML">TABLE 31.10: </span>Row proportions for the burros data (i.e., rows sum to one).
 </caption>
 <thead><tr>
 <th style="text-align:left;">
@@ -1451,7 +1512,7 @@ FIGURE 31.7: Left: a stacked bar chart for the burro-health data. Right: softwar
 </blockquote>
 <p>Adding sample summary information to this conclusion is cumbersome.
 Instead, readers can be pointed to the numerical summary
-(Table <a href="AnalysisOddsRatio.html#tab:BurrosSummaryHTML">31.9</a>).
+(Table <a href="AnalysisOddsRatio.html#tab:BurrosSummaryHTML">31.10</a>).
 Furthermore, CIs are not reported.</p>
 <p>While we know there is an association between the variables, we can only speculate on the nature of the association (i.e., for which group(s) the <em>population</em> proportions are different).
 Formal methods for doing so requires methods beyond this book, but Fig. <a href="AnalysisOddsRatio.html#fig:BurrosChisqjamoviPlot">31.7</a> (left panel) suggests that lactating burros are far more likely to have poor health.</p>
@@ -1513,7 +1574,7 @@ Use the <span class="math inline">\(P\)</span>-value to make a decision, and wri
 <div class="inline-figure"><img src="Illustrations/pexels-rathaphon-nanthapreecha-3846205.jpg" width="200px"></div>
 </div>
 <div class="webex-check webex-box">
-<p><span class="citation">S.-H. Chen et al. (<a href="Bibliography.html#ref-chen2023triage">2023</a>)</span> investigated the relationship between body temperature of patients admitted to hospital following a heart attack (HA), and a having a subsequent HA while in hospital (Table <a href="AnalysisOddsRatio.html#tab:HAttackData">31.10</a>).</p>
+<p><span class="citation"><span class="nocase">Chen et al.</span> (<a href="Bibliography.html#ref-chen2023triage">2023</a>)</span> investigated the relationship between body temperature of patients admitted to hospital following a heart attack (HA), and a having a subsequent HA while in hospital (Table <a href="AnalysisOddsRatio.html#tab:HAttackData">31.11</a>).</p>
 <p>Are the following statements <em>true</em> or <em>false</em>?</p>
 <ol style="list-style-type: decimal">
 <li>From the software output, the <span class="math inline">\(P\)</span>-value is <span class="math inline">\(0.180\)</span>.
@@ -1569,7 +1630,7 @@ What does this OR <em>mean</em>?
 </div>
 <div class="inline-table"><table class="table table-sm">
 <caption>
-<span id="tab:HAttackData">TABLE 31.10: </span>Body temperature of patients, and whether they experienced a heart attack while in hospital.
+<span id="tab:HAttackData">TABLE 31.11: </span>Body temperature of patients, and whether they experienced a heart attack while in hospital.
 </caption>
 <thead><tr>
 <th style="text-align:left;">
@@ -1623,7 +1684,7 @@ FIGURE 31.8: Software output for the heart-attack study.
 Confirm that the <em>odds</em> of having most meals off-campus is the same for students living with their parents, and for students not living with their parents.</p>
 </div>
 <div class="exercise">
-<p><span id="exr:OddsSame2" class="exercise"><strong>Exercise 31.2  </strong></span>Compute all four expected counts in Table <a href="AnalysisOddsRatio.html#tab:HAttackData">31.10</a>.
+<p><span id="exr:OddsSame2" class="exercise"><strong>Exercise 31.2  </strong></span>Compute all four expected counts in Table <a href="AnalysisOddsRatio.html#tab:HAttackData">31.11</a>.
 Confirm that the corresponding test may not be statistically valid.</p>
 </div>
 <div class="exercise">
@@ -1650,7 +1711,7 @@ What is the sampling distribution for the equivalent OR?</p>
 </div>
 <div class="exercise">
 <p><span id="exr:EVAdoption" class="exercise"><strong>Exercise 31.7  </strong></span>[<em>Dataset</em>: <code>EVPurchase</code>]
-<span class="citation">Egbue, Long, and Samaranayake (<a href="Bibliography.html#ref-egbue2017mass">2017</a>)</span> studied the adoption of electric vehicles (EVs) by a group of professional Americans (Table <a href="AnalysisOddsRatio.html#tab:EV10years">31.11</a>).
+<span class="citation">Egbue et al. (<a href="Bibliography.html#ref-egbue2017mass">2017</a>)</span> studied the adoption of electric vehicles (EVs) by a group of professional Americans (Table <a href="AnalysisOddsRatio.html#tab:EV10years">31.12</a>).
 Software output is shown in Fig. <a href="AnalysisOddsRatio.html#fig:EVjamovi">31.9</a>.</p>
 <ol style="list-style-type: decimal">
 <li>Based on the output, how is the difference between the two proportions defined?</li>
@@ -1666,7 +1727,7 @@ Software output is shown in Fig. <a href="AnalysisOddsRatio.html#fig:EVjamovi">
 </div>
 <div class="inline-table"><table class="table table-sm">
 <caption>
-<span id="tab:EV10years">TABLE 31.11: </span>Responses to 'Would you purchase an electric vehicle in the next <span class="math inline">\(10\)</span> years?' by education.
+<span id="tab:EV10years">TABLE 31.12: </span>Responses to 'Would you purchase an electric vehicle in the next <span class="math inline">\(10\)</span> years?' by education.
 </caption>
 <thead><tr>
 <th style="text-align:left;">
@@ -1710,11 +1771,11 @@ FIGURE 31.9: Software output for the EV study.
 </p>
 </div>
 <div class="exercise">
-<p><span id="exr:EthiopianFarmers" class="exercise"><strong>Exercise 31.8  </strong></span><span class="citation">Meresa, Tadesse, and Zeray (<a href="Bibliography.html#ref-meresa2023effect">2023</a>)</span> investigated Ethiopian farmers' adoption of improved soil and water conservation structures on their farms (Table <a href="AnalysisOddsRatio.html#tab:FarmersData">31.12</a>).
+<p><span id="exr:EthiopianFarmers" class="exercise"><strong>Exercise 31.8  </strong></span><span class="citation">Meresa et al. (<a href="Bibliography.html#ref-meresa2023effect">2023</a>)</span> investigated Ethiopian farmers' adoption of improved soil and water conservation structures on their farms (Table <a href="AnalysisOddsRatio.html#tab:FarmersData">31.13</a>).
 Software output is shown in Fig. <a href="AnalysisOddsRatio.html#fig:farmersjamoviHT">31.10</a>.</p>
 <div class="inline-table"><table class="table table-sm">
 <caption>
-<span id="tab:FarmersData">TABLE 31.12: </span>Adoption of conservation practices by Ethiopian farmers, by farm size.
+<span id="tab:FarmersData">TABLE 31.13: </span>Adoption of conservation practices by Ethiopian farmers, by farm size.
 </caption>
 <thead><tr>
 <th style="text-align:left;">
@@ -1772,7 +1833,7 @@ FIGURE 31.10: Software output for the farming study.
 <div class="exercise">
 <p><span id="exr:ORcrashes" class="exercise"><strong>Exercise 31.9  </strong></span>[<em>Dataset</em>: <code>CarCrashes</code>]
 <span class="citation">Wang et al. (<a href="Bibliography.html#ref-wang2020driver">2020</a>)</span> recorded information about car crashes in a rural, mountainous county in western China
-(Table <a href="AnalysisOddsRatio.html#tab:CrashDataTableHTML">31.13</a>).</p>
+(Table <a href="AnalysisOddsRatio.html#tab:CrashDataTableHTML">31.14</a>).</p>
 <ol style="list-style-type: decimal">
 <li>Sketch a suitable graph to display the data.</li>
 <li>Compute the <em>proportion</em> of crashes involving a pedestrian in 2011 (<span class="math inline">\(\hat{p}_{2011}\)</span>), and in 2015 (<span class="math inline">\(\hat{p}_{2015}\)</span>).</li>
@@ -1793,7 +1854,7 @@ FIGURE 31.10: Software output for the farming study.
 </div>
 <div class="inline-table"><table class="table table-sm">
 <caption>
-<span id="tab:CrashDataTableHTML">TABLE 31.13: </span>Responses to 'Would you purchase an electric vehicle in the next <span class="math inline">\(10\)</span> years?' by education.
+<span id="tab:CrashDataTableHTML">TABLE 31.14: </span>Responses to 'Would you purchase an electric vehicle in the next <span class="math inline">\(10\)</span> years?' by education.
 </caption>
 <thead>
 <tr>
@@ -1854,7 +1915,7 @@ FIGURE 31.11: Software output for the car-crash data.
 </div>
 <div class="exercise">
 <p><span id="exr:TestsOddsRatioScars" class="exercise"><strong>Exercise 31.10  </strong></span>[<em>Dataset</em>: <code>ScarHeight</code>]
-<span class="citation">Wallace et al. (<a href="Bibliography.html#ref-data:Wallace2017:Sunburn">2017</a>)</span> compared the heights of scars from burns received by people in Western Australia (Table <a href="AnalysisOddsRatio.html#tab:ScarsData">31.14</a>).
+<span class="citation">Wallace et al. (<a href="Bibliography.html#ref-data:Wallace2017:Sunburn">2017</a>)</span> compared the heights of scars from burns received by people in Western Australia (Table <a href="AnalysisOddsRatio.html#tab:ScarsData">31.15</a>).
 Software was used to analyse the data (Fig. <a href="AnalysisOddsRatio.html#fig:ScarHeightRiskjamovi">31.12</a>).</p>
 <ol style="list-style-type: decimal">
 <li>Sketch an appropriate graph to summarise the data.</li>
@@ -1876,7 +1937,7 @@ Software was used to analyse the data (Fig. <a href="AnalysisOddsRatio.html#fig
 </div>
 <div class="inline-table"><table class="table table-sm">
 <caption>
-<span id="tab:ScarsData">TABLE 31.14: </span>Heights of scars for men and women.
+<span id="tab:ScarsData">TABLE 31.15: </span>Heights of scars for men and women.
 </caption>
 <thead><tr>
 <th style="text-align:left;font-weight: bold;font-weight: bold;">
@@ -1922,7 +1983,7 @@ FIGURE 31.12: Software output for the scar-height data.
 <div class="exercise">
 <p><span id="exr:PetBirdsTest" class="exercise"><strong>Exercise 31.11  </strong></span>[<em>Dataset</em>: <code>PetBirds</code>]
 <span class="citation">Kohlmeier et al. (<a href="Bibliography.html#ref-data:Kohlmeier1992:BirdsCancer">1992</a>)</span> examined people with lung cancer, and a matched set of controls who did not have lung cancer, and recorded the number in each group that kept pet birds.
-The data are shown in Table <a href="AnalysisOddsRatio.html#tab:BirdsData">31.15</a>, and the software output in Fig. <a href="AnalysisOddsRatio.html#fig:PetBirdsjamovi">31.13</a>.</p>
+The data are shown in Table <a href="AnalysisOddsRatio.html#tab:BirdsData">31.16</a>, and the software output in Fig. <a href="AnalysisOddsRatio.html#fig:PetBirdsjamovi">31.13</a>.</p>
 <p>Consider this RQ:</p>
 <blockquote>
 <p>Are the odds of having a pet bird the same for people <em>with</em> lung cancer (cases) and for people <em>without</em> lung cancer (controls)?</p>
@@ -1945,7 +2006,7 @@ The data are shown in Table <a href="AnalysisOddsRatio.html#tab:BirdsData">31.1
 </div>
 <div class="inline-table"><table class="table table-sm">
 <caption>
-<span id="tab:BirdsData">TABLE 31.15: </span>The pet bird data.
+<span id="tab:BirdsData">TABLE 31.16: </span>The pet bird data.
 </caption>
 <thead><tr>
 <th style="text-align:left;">
@@ -2013,8 +2074,8 @@ FIGURE 31.13: Software output for the pet-birds data.
 </div>
 <div class="exercise">
 <p><span id="exr:TestsOddsRatioAugustRainfallInEmerald" class="exercise"><strong>Exercise 31.12  </strong></span>[<em>Daatset</em>: <code>EmeraldAug</code>]
-The <em>Southern Oscillation Index</em> (SOI) is a standardised measure of the air pressure difference between Tahiti and Darwin, and is related to rainfall in some parts of the world <span class="citation">(<a href="Bibliography.html#ref-climate:stone:1996">Stone, Hammer, and Marcussen 1996</a>)</span>, and especially Queensland <span class="citation">(<a href="Bibliography.html#ref-climate:stone:1992">Stone and Auliciems 1992</a>)</span>.</p>
-<p>The rainfall at Emerald (Queensland) was recorded for Augusts between 1889 and 2002 inclusive <span class="citation">(<a href="Bibliography.html#ref-mypapers:dunnsmyth:glms">P. K. Dunn and Smyth 2018</a>)</span>, where the monthly average SOI was positive, and when the SOI was non-positive (zero or negative), as shown in Table <a href="AnalysisOddsRatio.html#tab:SOItableAnalysis">31.16</a>.</p>
+The <em>Southern Oscillation Index</em> (SOI) is a standardised measure of the air pressure difference between Tahiti and Darwin, and is related to rainfall in some parts of the world <span class="citation">(<a href="Bibliography.html#ref-climate:stone:1996">Stone et al. 1996</a>)</span>, and especially Queensland <span class="citation">(<a href="Bibliography.html#ref-climate:stone:1992">Stone and Auliciems 1992</a>)</span>.</p>
+<p>The rainfall at Emerald (Queensland) was recorded for Augusts between 1889 and 2002 inclusive <span class="citation">(<a href="Bibliography.html#ref-mypapers:dunnsmyth:glms">Dunn and Smyth 2018</a>)</span>, where the monthly average SOI was positive, and when the SOI was non-positive (zero or negative), as shown in Table <a href="AnalysisOddsRatio.html#tab:SOItableAnalysis">31.17</a>.</p>
 <ol style="list-style-type: decimal">
 <li>Compute the difference between the proportions of Augusts with rain, for months with a positive SOI compared to months with a non-positive SOI.</li>
 <li>Compute the standard error needed to compute the CI for the difference in proportions.</li>
@@ -2032,7 +2093,7 @@ The <em>Southern Oscillation Index</em> (SOI) is a standardised measure of the 
 </div>
 <div class="inline-table"><table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
-<span id="tab:SOItableAnalysis">TABLE 31.16: </span>The SOI, and whether rainfall was recorded in Augusts between 1889 and 2002 inclusive.
+<span id="tab:SOItableAnalysis">TABLE 31.17: </span>The SOI, and whether rainfall was recorded in Augusts between 1889 and 2002 inclusive.
 </caption>
 <thead><tr>
 <th style="text-align:left;">
@@ -2077,7 +2138,7 @@ FIGURE 31.14: Software output for the Emerald-rain data.
 </div>
 <div class="exercise">
 <p><span id="exr:TestOddsRatioSunglasses" class="exercise"><strong>Exercise 31.13  </strong></span>[<em>Dataset</em>: <code>HatSunglasses</code>]
-<span class="citation">B. Dexter et al. (<a href="Bibliography.html#ref-data:Dexter2019:SunProtection">2019</a>)</span> recorded the number of people at the foot of the Goodwill Bridge, Brisbane, who wore hats between <span class="math inline">\(11\)</span>:<span class="math inline">\(30\)</span>am to <span class="math inline">\(12\)</span>:<span class="math inline">\(30\)</span>pm.
+<span class="citation">Dexter et al. (<a href="Bibliography.html#ref-data:Dexter2019:SunProtection">2019</a>)</span> recorded the number of people at the foot of the Goodwill Bridge, Brisbane, who wore hats between <span class="math inline">\(11\)</span>:<span class="math inline">\(30\)</span>am to <span class="math inline">\(12\)</span>:<span class="math inline">\(30\)</span>pm.
 Of the <span class="math inline">\(366\)</span> females observed, <span class="math inline">\(22\)</span> wore hats; of the <span class="math inline">\(386\)</span> males observed, <span class="math inline">\(79\)</span> wore hats.</p>
 <ol style="list-style-type: decimal">
 <li>Construct the two-way table for the data.</li>
@@ -2100,7 +2161,7 @@ FIGURE 31.15: Software output for the hats data.
 </div>
 <div class="exercise">
 <p><span id="exr:OddsRatiosCITurbinesHT" class="exercise"><strong>Exercise 31.14  </strong></span>[<em>Dataset</em>: <code>Turbines</code>]
-A study of turbine failures <span class="citation">(<a href="Bibliography.html#ref-MyersBook">Myers, Montgomery, and Vining 2002</a>; <a href="Bibliography.html#ref-NelsonLifeData">Nelson 1982</a>)</span> ran <span class="math inline">\(73\)</span> turbines for around <span class="math inline">\(1\,800\,\text{h}\)</span>, and found that seven developed fissures (small cracks).
+A study of turbine failures <span class="citation">(<a href="Bibliography.html#ref-MyersBook">Myers et al. 2002</a>; <a href="Bibliography.html#ref-NelsonLifeData">Nelson 1982</a>)</span> ran <span class="math inline">\(73\)</span> turbines for around <span class="math inline">\(1\,800\,\text{h}\)</span>, and found that seven developed fissures (small cracks).
 They also ran a different set of <span class="math inline">\(42\)</span> turbines for about <span class="math inline">\(3\,000\,\text{h}\)</span>, and found that nine developed fissures.</p>
 <ol style="list-style-type: decimal">
 <li>Construct the two-way table for the data.</li>
@@ -2123,7 +2184,7 @@ FIGURE 31.16: Software output for the turbine data.
 <div class="exercise">
 <p><span id="exr:TestOddsRatioBearTree" class="exercise"><strong>Exercise 31.15  </strong></span><span class="citation">Witmer and Pipas (<a href="Bibliography.html#ref-witmer2020preliminary">2020</a>)</span> compared various types of repellents (including bear faeces) to prevent bears damaging trees in an Idaho forest.
 Part of the data are summarised in
-Table <a href="AnalysisOddsRatio.html#tab:BearTreeData">31.17</a>.</p>
+Table <a href="AnalysisOddsRatio.html#tab:BearTreeData">31.18</a>.</p>
 <ol style="list-style-type: decimal">
 <li>Compute the odds of new damage for both repellents, and hence the OR.</li>
 <li>Compute the proportion of trees with new damage for both repellents, and hence the difference between the proportions.</li>
@@ -2139,7 +2200,7 @@ Write a conclusion, either using odds or proportions.</li>
 </div>
 <div class="inline-table"><table class="table table-sm">
 <caption>
-<span id="tab:BearTreeData">TABLE 31.17: </span>The number of trees with new damage by bears, according to different repellents.
+<span id="tab:BearTreeData">TABLE 31.18: </span>The number of trees with new damage by bears, according to different repellents.
 </caption>
 <thead><tr>
 <th style="text-align:left;">
@@ -2178,9 +2239,9 @@ Control (water)
 </table></div>
 <div class="exercise">
 <p><span id="exr:B12Deficiency" class="exercise"><strong>Exercise 31.16  </strong></span>[<em>Dataset</em>: <code>B12Diet</code>]
-<span class="citation">Gammon et al. (<a href="Bibliography.html#ref-data:Gammon2012:B12">2012</a>)</span> examined B12 deficiencies in 'predominantly overweight/obese women of South Asian origin living in Auckland'.
+<span class="citation"><span class="nocase">Gammon et al.</span> (<a href="Bibliography.html#ref-data:Gammon2012:B12">2012</a>)</span> examined B12 deficiencies in 'predominantly overweight/obese women of South Asian origin living in Auckland'.
 Some women were on a vegetarian diet and some were not
-(Table <a href="AnalysisOddsRatio.html#tab:B12Data">31.18</a>).
+(Table <a href="AnalysisOddsRatio.html#tab:B12Data">31.19</a>).
 One RQ was:</p>
 <blockquote>
 <p>Among this group of women, are the odds of being vitamin B12 deficient different for women on a vegetarian diet compared to women on a non-vegetarian diet?</p>
@@ -2200,7 +2261,7 @@ Write a conclusion, either using odds or proportions.</li>
 </div>
 <div class="inline-table"><table class="table table-sm">
 <caption>
-<span id="tab:B12Data">TABLE 31.18: </span>The number of vegetarian and non-vegetarian women who are (and are not) B12 deficient.
+<span id="tab:B12Data">TABLE 31.19: </span>The number of vegetarian and non-vegetarian women who are (and are not) B12 deficient.
 </caption>
 <thead><tr>
 <th style="text-align:left;">
@@ -2239,7 +2300,7 @@ Non-vegetarians
 </table></div>
 <!-- ```{r B12jamoviOutput, fig.show="hold", fig.cap="Software output for the B12 data.", fig.align="center", out.width=c("49%", "49%")} --><!-- knitr::include_graphics( "jamovi/B12/B12CI-Both.png") --><!-- knitr::include_graphics( "jamovi/B12/B12Test-Both.png") --><!-- ``` --><div class="exercise">
 <p><span id="exr:DogsHT" class="exercise"><strong>Exercise 31.17  </strong></span>[<em>Dataset</em>: <code>DogWalks</code>]
-<span class="citation">Naughton, Grzelak, and Naughton (<a href="Bibliography.html#ref-naughton2024association">2024</a>)</span> studied the difference between the activities of dogs kept in the city and on farms (Table <a href="AnalysisOddsRatio.html#tab:DogWalkTable">31.19</a>).
+<span class="citation">Naughton et al. (<a href="Bibliography.html#ref-naughton2024association">2024</a>)</span> studied the difference between the activities of dogs kept in the city and on farms (Table <a href="AnalysisOddsRatio.html#tab:DogWalkTable">31.20</a>).
 One RQ was:</p>
 <blockquote>
 <p>For Northern Ireland dogs, is there an association between length of walks, and location?</p>
@@ -2254,7 +2315,7 @@ One RQ was:</p>
 </div>
 <div class="inline-table"><table class="table table-sm">
 <caption>
-<span id="tab:DogWalkTable">TABLE 31.19: </span>The length of walks for dogs, living in the city and farms. ('Varies' means usuually short walks, but occasional longer walks.)
+<span id="tab:DogWalkTable">TABLE 31.20: </span>The length of walks for dogs, living in the city and farms. ('Varies' means usuually short walks, but occasional longer walks.)
 </caption>
 <thead>
 <tr>
@@ -2334,7 +2395,7 @@ One RQ was:</p>
 <p>Is there an association between age group, and compliance with the isolation order?</p>
 </blockquote>
 <p>The data are shown in
-Table <a href="AnalysisOddsRatio.html#tab:MumpsTableHTML">31.20</a>
+Table <a href="AnalysisOddsRatio.html#tab:MumpsTableHTML">31.21</a>
 and the software output in
 Fig. <a href="AnalysisOddsRatio.html#fig:MumpsjamoviHTML">31.18</a>.</p>
 <ol style="list-style-type: decimal">
@@ -2374,7 +2435,7 @@ Older than $22$ & $22$ & $\phantom{0}9$\\
 -->
 <div class="inline-table"><table class="table table-sm">
 <caption>
-<span id="tab:MumpsTableHTML">TABLE 31.20: </span>The compliance of students by age group.
+<span id="tab:MumpsTableHTML">TABLE 31.21: </span>The compliance of students by age group.
 </caption>
 <thead>
 <tr>
@@ -2441,13 +2502,13 @@ FIGURE 31.18: Software output for the compliance data.
 </div>
 <div class="exercise">
 <p><span id="exr:ShoppingBags" class="exercise"><strong>Exercise 31.19  </strong></span>[<em>Dataset</em>: <code>ShoppingBags</code>]
-<span class="citation">Choon, Tan, and Chong (<a href="Bibliography.html#ref-choon2017perception">2017</a>)</span> studied <span class="math inline">\(400\)</span> residents of Klang Valley, Malaysia, to examine residents' approach to waste management.
+<span class="citation">Choon et al. (<a href="Bibliography.html#ref-choon2017perception">2017</a>)</span> studied <span class="math inline">\(400\)</span> residents of Klang Valley, Malaysia, to examine residents' approach to waste management.
 One RQ was:</p>
 <blockquote>
 <p>For residents of Klang Valley, is age group associated with whether people bring their own bags when shopping?</p>
 </blockquote>
 <p>The data
-(Table <a href="AnalysisOddsRatio.html#tab:BagsTableHTHTML">31.21</a>)
+(Table <a href="AnalysisOddsRatio.html#tab:BagsTableHTHTML">31.22</a>)
 are given in a <span class="math inline">\(3\times 2\)</span> table of counts.
 The software output is shown in
 Fig. <a href="AnalysisOddsRatio.html#fig:BagsChisqjamoviHTML">31.19</a>.</p>
@@ -2481,7 +2542,7 @@ Over $40$ & $\phantom{0}41$ & $\phantom{0}13$\\
 -->
 <div class="inline-table"><table class="table table-sm">
 <caption>
-<span id="tab:BagsTableHTHTML">TABLE 31.21: </span>Whether shoppers bring their own bags, and the shoppers age group.
+<span id="tab:BagsTableHTHTML">TABLE 31.22: </span>Whether shoppers bring their own bags, and the shoppers age group.
 </caption>
 <thead>
 <tr>
@@ -2564,7 +2625,7 @@ Hermit crabs place sea anemones on their shells for protection.
 <p>Is there a relationship between the vertical and horizontal locations of anemones placed by hermit crabs on their shells?</p>
 </blockquote>
 <p>The data are shown in
-Table <a href="AnalysisOddsRatio.html#tab:CrabShellDataHTML">31.22</a>,
+Table <a href="AnalysisOddsRatio.html#tab:CrabShellDataHTML">31.23</a>,
 and output in
 Fig. <a href="AnalysisOddsRatio.html#fig:CrabShellsChisqjamoviHTML">31.20</a>.</p>
 <ol style="list-style-type: decimal">
@@ -2607,7 +2668,7 @@ Hence, repeat the test using the <span class="math inline">\(2\times 2\)</span> 
 -->
 <div class="inline-table"><table class="table table-sm">
 <caption>
-<span id="tab:CrabShellDataHTML">TABLE 31.22: </span>The location of anemones placed on shells by hermit crabs.
+<span id="tab:CrabShellDataHTML">TABLE 31.23: </span>The location of anemones placed on shells by hermit crabs.
 </caption>
 <thead>
 <tr>
@@ -2954,7 +3015,7 @@ window.onload = function() {
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Scientific Research and Methodology</strong>: An introduction to quantitative research and statistics" was written by Peter K. Dunn. It was last built on 2026-04-02 08:15:16.078094.</p>
+    <p>"<strong>Scientific Research and Methodology</strong>: An introduction to quantitative research and statistics" was written by Peter K. Dunn. It was last built on 2026-05-12 15:33:04.255603.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

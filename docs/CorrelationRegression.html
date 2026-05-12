@@ -7,7 +7,7 @@
 <title>33 Correlation and regression: CIs and tests | Scientific Research and Methodology</title>
 <meta name="author" content="Peter K. Dunn">
 <meta name="description" content="So far, you have learnt about the research process, including analysing data using confidence intervals and conducting hypothesis tests. In this chapter, you will learn to: produce confidence...">
-<meta name="generator" content="bookdown 0.45 with bs4_book()">
+<meta name="generator" content="bookdown 0.46 with bs4_book()">
 <meta property="og:title" content="33 Correlation and regression: CIs and tests | Scientific Research and Methodology">
 <meta property="og:type" content="book">
 <meta property="og:description" content="So far, you have learnt about the research process, including analysing data using confidence intervals and conducting hypothesis tests. In this chapter, you will learn to: produce confidence...">
@@ -82,7 +82,6 @@
     div.csl-bib-body { }
     div.csl-entry {
       clear: both;
-          margin-bottom: 0em;
         }
     .hanging div.csl-entry {
       margin-left:2em;
@@ -216,7 +215,7 @@ The strength of the relationship (correlation) and the nature of that relationsh
 <blockquote>
 <p>In sorghum crops (AG1090 hybrid) in Brazil, is a larger sugarcane borer infestation associated with smaller yields?</p>
 </blockquote>
-<p><span class="citation">C. da S. F. Souza et al. (<a href="Bibliography.html#ref-da2024potential">2024</a>)</span> recorded the borer infestation in sorghum crops, for <span class="math inline">\(n = 24\)</span> crops over three years <span class="citation">(<a href="Bibliography.html#ref-da2024potentialDATA">C. Souza et al. 2024</a>)</span>, shown in
+<p><span class="citation"><span class="nocase">C. da S. F. Souza et al.</span> (<a href="Bibliography.html#ref-da2024potential">2024</a>)</span> recorded the borer infestation in sorghum crops, for <span class="math inline">\(n = 24\)</span> crops over three years <span class="citation">(<a href="Bibliography.html#ref-da2024potentialDATA">C. Souza et al. 2024</a>)</span>, shown in
 Fig. <a href="CorrelationRegression.html#fig:BorersDataDT">33.1</a>.
 The data comprises two quantitative variables (Fig. <a href="CorrelationRegression.html#fig:BorersScatterjamovi2">33.2</a>, left panel).</p>
 <div class="figure" style="text-align: center">
@@ -262,7 +261,7 @@ We write:</p>
 </blockquote>
 <p>In other words, a population with a correlation coefficient <span class="math inline">\(\rho\)</span> between <span class="math inline">\(-0.971\)</span> and <span class="math inline">\(-0.851\)</span> could reasonably have produced a sample correlation coefficient of <span class="math inline">\(r = -0.934\)</span> from a sample of size <span class="math inline">\(n = 24\)</span>.</p>
 <div class="example">
-<p><span id="exm:CycloneCorrelationCI" class="example"><strong>Example 33.1  (Correlation) </strong></span>The relationship between the number of cyclones <span class="math inline">\(y\)</span> in the Australian region each year from 1969 to 2005, and a unitless climatological index called the <em>Ocean Niño Index</em> (ONI, <span class="math inline">\(x\)</span>), averaged over October, November and December, is shown in Fig. <a href="CorrelationRegression.html#fig:ONIcyclonesCorrelation">33.3</a> (left panel) <span class="citation">(<a href="Bibliography.html#ref-mypapers:dunnsmyth:glms">P. K. Dunn and Smyth 2018</a>)</span>.</p>
+<p><span id="exm:CycloneCorrelationCI" class="example"><strong>Example 33.1  (Correlation) </strong></span>The relationship between the number of cyclones <span class="math inline">\(y\)</span> in the Australian region each year from 1969 to 2005, and a unitless climatological index called the <em>Ocean Niño Index</em> (ONI, <span class="math inline">\(x\)</span>), averaged over October, November and December, is shown in Fig. <a href="CorrelationRegression.html#fig:ONIcyclonesCorrelation">33.3</a> (left panel) <span class="citation">(<a href="Bibliography.html#ref-mypapers:dunnsmyth:glms">Dunn and Smyth 2018</a>)</span>.</p>
 <p>The relationship has a <em>negative</em> direction, so the value of <span class="math inline">\(r\)</span> is <em>negative</em>.
 From the software output, <span class="math inline">\(r = -0.683\)</span> with a <span class="math inline">\(95\)</span>% CI from <span class="math inline">\(-0.824\)</span> to <span class="math inline">\(-0.460\)</span>.</p>
 </div>
@@ -838,7 +837,7 @@ The conditions for which the CIs and tests are statistically valid are:</p>
 The units of analysis are also assumed to be <em>independent</em> (e.g., from a simple random sample).</p>
 <p>If the relationship non-linear but is increasing-only or decreasing-only, alternatives to the Pearson correlation coefficient include the Spearman or Kendall correlation coefficients <span class="citation">(<a href="Bibliography.html#ref-conover2003practical">Conover 2003</a>)</span>.
 Depending on which statistical validity conditions are not met, other regression-like options may be available.
-For example, generalised linear models <span class="citation">(<a href="Bibliography.html#ref-mypapers:dunnsmyth:glms">P. K. Dunn and Smyth 2018</a>)</span> may be appropriate for some non-linear relationships and/or relationships with non-constant variation in <span class="math inline">\(y\)</span>.</p>
+For example, generalised linear models <span class="citation">(<a href="Bibliography.html#ref-mypapers:dunnsmyth:glms">Dunn and Smyth 2018</a>)</span> may be appropriate for some non-linear relationships and/or relationships with non-constant variation in <span class="math inline">\(y\)</span>.</p>
 <div class="example">
 <p><span id="exm:StatisticalValidityBorers" class="example"><strong>Example 33.11  (Statistical validity) </strong></span>For the sorghum data, the scatterplot (Fig. <a href="CorrelationRegression.html#fig:BorersScatterjamovi2">33.2</a>, left panel) shows the relationship is approximately linear, so using a (Pearson) correlation coefficient and a regression line is appropriate.
 For the hypothesis test, the variation in yield doesn't seem to be obviously getting consistently larger or smaller for heavier infestations, and the sample size is only just smaller than <span class="math inline">\(25\)</span> (with <span class="math inline">\(n = 24\)</span>).
@@ -1274,7 +1273,7 @@ Explain.</li>
 </div>
 <div class="exercise">
 <p><span id="exr:CorTestDogs" class="exercise"><strong>Exercise 33.15  </strong></span>[<em>Dataset</em>: <code>Dogs</code>]
-<span class="citation">Quan, Tran, and Chung (<a href="Bibliography.html#ref-quan2017relation">2017</a>)</span> studied Phu Quoc Ridgeback dogs (<em>Canis familiaris</em>), and recorded many measurements of the dogs, including body length and body height.
+<span class="citation">Quan et al. (<a href="Bibliography.html#ref-quan2017relation">2017</a>)</span> studied Phu Quoc Ridgeback dogs (<em>Canis familiaris</em>), and recorded many measurements of the dogs, including body length and body height.
 The scatterplot displaying this relationship and the software output are shown in Fig. <a href="CorrelationRegression.html#fig:DogsScatter">33.18</a>.
 In this example, it does not matter which variable is used as <span class="math inline">\(x\)</span> or <span class="math inline">\(y\)</span>.</p>
 <ol style="list-style-type: decimal">
@@ -1314,7 +1313,7 @@ FIGURE 33.19: The relationship between CBR and PI in <span class="math inline">\
 </div>
 <div class="exercise">
 <p><span id="exr:Apnoea" class="exercise"><strong>Exercise 33.17  </strong></span>[<em>Dataset</em>: <code>OSA</code>]
-<span class="citation">de Carvalho et al. (<a href="Bibliography.html#ref-carvalho2020stop">2020</a>)</span> studied obstructive sleep apnoea (OSA) in <span class="math inline">\(60\)</span> adults with Down Syndrome.
+<span class="citation"><span class="nocase">de Carvalho et al.</span> (<a href="Bibliography.html#ref-carvalho2020stop">2020</a>)</span> studied obstructive sleep apnoea (OSA) in <span class="math inline">\(60\)</span> adults with Down Syndrome.
 The response variable <span class="math inline">\(y\)</span> is OSA severity.
 The explanatory variable <span class="math inline">\(x\)</span> is the average number of episodes of sleep disruption (according to specific criteria) per hour of sleep, the Respiratory Event Index (REI).
 One RQ is:</p>
@@ -1347,7 +1346,7 @@ FIGURE 33.21: The obstructive sleep apnoea dataset.
 </div>
 <div class="exercise">
 <p><span id="exr:EDpatientsCI" class="exercise"><strong>Exercise 33.18  </strong></span>[<em>Dataset</em>: <code>EDpatients</code>]
-<span class="citation">Brunette, Kominsky, and Ruiz (<a href="Bibliography.html#ref-brunette1991correlation">1991</a>)</span> studied the relationship between the number of emergency department (ED) patients and the number of days following the distribution of monthly welfare monies, from 1986 to 1988 in Minneapolis, MN (Fig. <a href="CorrelationRegression.html#fig:EDScatterjamovi">33.22</a>).</p>
+<span class="citation">Brunette et al. (<a href="Bibliography.html#ref-brunette1991correlation">1991</a>)</span> studied the relationship between the number of emergency department (ED) patients and the number of days following the distribution of monthly welfare monies, from 1986 to 1988 in Minneapolis, MN (Fig. <a href="CorrelationRegression.html#fig:EDScatterjamovi">33.22</a>).</p>
 <ol style="list-style-type: decimal">
 <li>Write down the estimated regression equation.</li>
 <li>Interpret the slope in the regression equation.</li>
@@ -1364,7 +1363,7 @@ FIGURE 33.22: The number of emergency department patients, and the number of day
 </div>
 <div class="exercise">
 <p><span id="exr:CorrelationRegressionExerciseBitumen" class="exercise"><strong>Exercise 33.19  </strong></span>[<em>Dataset</em>: <code>Bitumen</code>]
-<span class="citation">Panda, Das, and Sahoo (<a href="Bibliography.html#ref-data:Panda2018:Bitumen">2018</a>)</span> made <span class="math inline">\(n = 42\)</span> observations of hot mix asphalt, and measured the volume of air voids and the bitumen content by weight (Fig. <a href="CorrelationRegression.html#fig:BitumenPlot">33.23</a>).</p>
+<span class="citation">Panda et al. (<a href="Bibliography.html#ref-data:Panda2018:Bitumen">2018</a>)</span> made <span class="math inline">\(n = 42\)</span> observations of hot mix asphalt, and measured the volume of air voids and the bitumen content by weight (Fig. <a href="CorrelationRegression.html#fig:BitumenPlot">33.23</a>).</p>
 <ol style="list-style-type: decimal">
 <li>Describe the plot in words.</li>
 <li>For the data, <span class="math inline">\(R^2 = 99.29\)</span>%.
@@ -1389,7 +1388,7 @@ FIGURE 33.23: Air voids in bitumen. Left: scatterplot. Right: software output
 </div>
 <div class="exercise">
 <p><span id="exr:CorrelationRegressionExercisePossums" class="exercise"><strong>Exercise 33.20  </strong></span>[<em>Dataset</em>: <code>Possums</code>]
-<span class="citation">J. L. Williams et al. (<a href="Bibliography.html#ref-data:Williams2022:Possums">2022</a>)</span> studied Leadbeater's possums in the Victorian Central Highlands.
+<span class="citation">Williams et al. (<a href="Bibliography.html#ref-data:Williams2022:Possums">2022</a>)</span> studied Leadbeater's possums in the Victorian Central Highlands.
 They recorded, among other information, the body weight of the possums (in g) and their location, including the elevation (in m; <code>DEM</code>), as shown in Fig. <a href="CorrelationRegression.html#fig:PossumPlot">33.24</a>.</p>
 <ol style="list-style-type: decimal">
 <li>The value of <span class="math inline">\(R^2\)</span> is <span class="math inline">\(23.0\)</span>%.
@@ -1833,7 +1832,7 @@ window.onload = function() {
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Scientific Research and Methodology</strong>: An introduction to quantitative research and statistics" was written by Peter K. Dunn. It was last built on 2026-04-02 08:15:16.078094.</p>
+    <p>"<strong>Scientific Research and Methodology</strong>: An introduction to quantitative research and statistics" was written by Peter K. Dunn. It was last built on 2026-05-12 15:33:04.255603.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
