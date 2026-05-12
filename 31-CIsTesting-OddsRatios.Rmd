@@ -1239,8 +1239,8 @@ if( knitr::is_latex_output() ) {
                align = "c",
                escape = FALSE,
                #table.env = "@empty",
-               col.names = c("infected",
-                             "infected",
+               col.names = c("not infected",
+                             "not infected",
                              "size")) %>%
     row_spec(0, bold = TRUE) %>%
     row_spec(2, hline_after = TRUE) %>%
@@ -1275,6 +1275,27 @@ if( knitr::is_html_output() ) {
     row_spec(0, bold = TRUE)
 }
 ```
+
+
+```{r TurtleNestSummaryTable}
+if( knitr::is_html_output() ) {
+  kable(pad(TNsummary,
+            surroundMaths = TRUE,
+            targetLength = c(4, 5, 2),
+            decDigits = c(2, 3, 0) ),
+        format = "html",
+        booktabs = TRUE,
+        longtable = FALSE,
+        align = "c",
+        caption = "Numerical summary for the turtles data.",
+        col.names = c("Odds not infected",
+                      "Proportion not infected",
+                      "Sample size")) %>%
+    row_spec(0, bold = TRUE)
+  
+}
+```
+
 
 ```{r TurtleNestsGraphs, fig.show="hold", fig.cap="Bar chart for the turtle-nesting data.", fig.width=4.5, fig.height=3.2, fig.align="center", out.width="50%"}
 par(xpd = TRUE,
@@ -1324,17 +1345,23 @@ The parameter is the odds ratio of a nest being infected, comparing natural to r
 The hypotheses could also be written in terms of associations.)
 
 A graphical summary is shown in Fig.\ \@ref(fig:TurtleNestsGraphs).
-A numerical summary table (Table\ \@ref(tab:TurtleNestDataTable), right table) shows that the odds of natural nest being infected is $1.66$\ times the odds of a relocated nest being infected.
+A numerical summary table
+`r if (knitr::is_latex_output()) {
+'((Table\\ \\@ref(tab:TurtleNestDataTable), right table) )'
+} else {
+'(Table\\ \\@ref(tab:TurtleNestSummaryTable))'
+}`
+shows that the odds of natural nest being infected is $1.66$\ times the odds of a relocated nest being infected.
 From the software output (Fig.\ \@ref(fig:TurtleNestsOutputjamovi)), the $\chi^2$-value is\ $0.777$.
 Since the table is a $2\times 2$ table, the equivalent $z$-score can be found: $z = \sqrt{0.777} = 0.88$.
-This $z$-scorw is very small, so expect a large $P$-value.
+This $z$-score is very small, so expect a large $P$-value.
 (This is the value of the $z$-score shown in Fig.\ \@ref(fig:TurtleNestsOutputjamovi) for comparing two proportions.)
 The $P$-value is\ $0.378$ on the output (for both tests).
 
 The smallest *expected* count is $(22\times 18) / 61 = 6.49$, which exceeds five, so the test is statistically valid.
 Since the RQ and hypotheses were written in terms of odds, the conclusion is also written in terms of odds:
 
-> There is no evidence of a difference in the odds of infection ($\chi^2$: $0.777$; $P$-value: $0.378$; OR: $1.657$; $95$%\ CI: $0.537$ to\ $5.12$) between natural nests (odds: $2.90$; $n = 39$) and relocated nests (odds: $1.75$; $n = 22$).
+> There is no evidence of a difference in the odds of non-infection ($\chi^2$: $0.777$; $P$-value: $0.378$; OR: $1.657$; $95$%\ CI: $0.537$ to\ $5.12$) between natural nests (odds: $2.90$; $n = 39$) and relocated nests (odds: $1.75$; $n = 22$).
 
 There is no evidence that relocating the nest (to protect them from tidal inundation) changes the risk of infection.
 
