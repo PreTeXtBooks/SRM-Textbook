@@ -1,5 +1,227 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <chapter xml:id="ch-05-research-design-ethics" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Ethics in research</title>
-  <p>Skeleton for <em>05-ResearchDesign-Ethics.Rmd</em>. Content to be added.</p>
+  <idx>Ethics</idx>
+
+  <objectives xml:id="objectives-ch05">
+    <introduction>
+      <p>You have learnt how to ask an RQ, and identify different types of studies to obtain data.
+      <em>In this chapter</em>, you will learn to:</p>
+    </introduction>
+    <ul>
+      <li><p>list common ethical issues to be considered in research design.</p></li>
+      <li><p>understand the purpose of reproducible research.</p></li>
+    </ul>
+  </objectives>
+
+
+  <section xml:id="sec-ethical-guidelines">
+    <title>Introduction: obtaining ethical clearance</title>
+    <idx>Ethics</idx>
+
+    <p>
+      All research <em>must</em> be ethical, and <em>must</em> meet ethical guidelines, to minimise risk of harm to the environment, property and to participants, and to preserve the well-being, dignity, rights and safety of participants (including animals).
+      Practically every university and research organisation in the world promotes and enforces ethical research practices.
+    </p>
+
+    <image source="Illustrations/files-1614223_640.jpg" width="25%">
+      <description><p>Photograph of stacked files and folders.</p></description>
+    </image>
+
+    <p>Most research studies require an ethics committee to formally grant ethics approval <em>before</em> research begins. Only brief comments about research ethics are given here.</p>
+
+    <example xml:id="example-ethics-disciplines">
+      <title>Ethics</title>
+      <p>Ethics are important for <em>all</em> studies, not just those involving people or animals. For example:</p>
+      <list><title/>
+        <ul>
+          <li><p>in engineering, <m>238</m> articles published between 1945 and 2015 were retracted, mostly for unethical research practice <xref ref="rubbo2019retractions"/>.</p></li>
+          <li><p>in the chemical sciences, <m>331</m> retractions were reported in 2017 and 2018 due to ethical issues, such as falsification of data<idx>Data falsification</idx> and plagiarism <xref ref="coudert2019correcting"/>.<idx>Plagiarism</idx></p></li>
+        </ul>
+      </list>
+    </example>
+
+  </section>
+
+
+  <section xml:id="sec-common-ethical-issues">
+    <title>Ethical issues in research design</title>
+
+    <image source="Illustrations/mikael-seegen-jX6WXNkvsPs-unsplash.jpg" width="25%">
+      <description><p>Photograph of a person writing notes.</p></description>
+    </image>
+
+    <p>Ethical issues embrace many areas when designing research studies.</p>
+
+    <list><title/>
+      <ul>
+        <li><p><em>Acknowledgements</em>: all those who contributed to the research should be acknowledged, including those who prepare figures, take photographs, or have helped collect data.</p></li>
+        <li><p><em>Analysis</em>: the analysis must use appropriate methods.</p></li>
+        <li><p><em>Confidentiality</em>: data should be kept confidential and secure.</p></li>
+        <li><p><em>Consent</em>: when appropriate, people should consent to being in the study, and hence should be told what the study involves. People should also be able to withdraw from the study without penalty.</p></li>
+        <li><p><em>Economic risks</em>: financial loss to participants should be avoided. Reimbursements of reasonable costs for participating may be appropriate.</p></li>
+        <li><p><em>Environmental risks</em>: environmental impacts and damage should be avoided or minimised.</p></li>
+        <li><p><em>Funding</em>: sources of funding should be disclosed. Any studies funded by, or sanctioned by, companies or organisations with vested interests need to be carefully scrutinised. These may lead to, or may give the impression of, conflicts of interest.</p></li>
+        <li><p><em>Incentives to participate</em>: if participants are offered incentives to participate (above reimbursement of costs), these should be acknowledged as it may cause (perhaps unconsciously), or may give the impression of causing, participants to influence the results.</p></li>
+        <li><p><em>Legal risks</em>: participants should not be put in the position of breaking laws, and the research itself should not break any laws.</p></li>
+        <li><p><em>Plagiarism</em>:<idx>Plagiarism</idx> the work of others should be appropriately acknowledged and not claimed to be original (see <xref ref="sec-referencing"/>).</p></li>
+        <li><p><em>Physical risks</em>: physical harm or discomfort (to researchers, participants or bystanders) should be avoided or minimised.</p></li>
+        <li><p><em>Psychological risks</em>: psychological harm or discomfort (to researchers, participants or bystanders) should be avoided or minimised.</p></li>
+        <li><p><em>Resourcing</em>: the study should not waste resources, time or money (e.g., if the answer to the RQ is already known, the study is not necessary).</p></li>
+        <li><p><em>Sample size</em>: the study should not use more individuals than necessary.<idx>Sample size</idx></p></li>
+        <li><p><em>Social risks</em>: social harm or discomfort (to researchers, participants or bystanders) should be avoided or minimised.</p></li>
+        <li><p><em>Storage of data</em>: data should be stored securely, kept for the required amount of time, then (if appropriate) securely disposed.</p></li>
+      </ul>
+    </list>
+
+    <example xml:id="example-ethics-tuskegee">
+      <title>Poor ethics</title>
+      <p>
+        In the Tuskegee syphilis experiment, conducted between 1932 and 1972, treatments were actively withheld from men with syphilis <xref ref="corbie1999continuing"/>.
+        The men's wives and children were often affected, and the men were lied to about their treatments.
+        This study was highly unethical, and could not be conducted now.
+      </p>
+    </example>
+
+    <example xml:id="example-ethics-challenger">
+      <title>Poor ethics in analysis</title>
+      <p>
+        In 1986, the American space shuttle <em>Challenger</em> exploded just after launch, killing all seven astronauts on board.
+        A review <xref ref="data-dalal-shuttle"/> found the cause was partly that engineers failed to use some data that should have been used.
+        This was unethical.
+      </p>
+    </example>
+
+  </section>
+
+
+  <section xml:id="sec-reproducible-research">
+    <title>Reproducible research</title>
+    <idx>Computers and software</idx><idx><h>Research</h><h>reproducibility</h></idx>
+
+    <p>
+      One way to ensure that research results are reliable and trustworthy is through <em>reproducible</em> research: enabling someone else to repeat the study and analysis, to confirm the findings.
+      For research to be reproducible, the methods, data, analysis methods and relevant computer code must be available <xref ref="laine2007reproducible"/> when possible.
+      (Sometimes releasing data is unethical, such as when individuals may be identified, so should not be released.)
+    </p>
+
+    <p>
+      Methods for ensuring reproducible research are often discipline dependent, and beyond the scope of this book.
+      Different journals also have different expectations regarding reproducibility.
+      Nonetheless, the basic ideas are important.
+    </p>
+
+    <p>The importance of reproducibility in the analysis phase is crucial; for example:</p>
+
+    <blockquote>
+      <p>There are serious medical consequences to errors attributable to the effects of spreadsheet programs and software operated through a graphical user interface [<ellipsis/>] that could have been avoided through a reproducible research paradigm<ellipsis/></p>
+      <attribution><xref ref="simons2019reproducible"/>, p. 471</attribution>
+    </blockquote>
+
+    <p>
+      Using purely point-and-click interfaces for statistical analysis (e.g., spreadsheets)<idx><h>Computers and software</h><h>spreadsheets</h></idx> is not recommended, as results are not reproducible.
+    </p>
+
+    <p>
+      Rather than using spreadsheets (see <xref ref="sec-data-entry"/>), using tools which encourage reproducible research are recommended.
+      Statistical software packages, such as jamovi, Python, R, SAS, SPSS and Stata, are recommended as the analysis commands can be recorded (even when using the point-and-click interfaces), and hence the analysis is reproducible.<idx><h>Computers and software</h><h>statistical</h></idx>
+    </p>
+
+  </section>
+
+
+  <section xml:id="sec-chap5-summary">
+    <title>Chapter summary</title>
+
+    <p>Studies must be ethical, and any formal study must obtain ethical approval <em>before</em> beginning. Ethics covers issues including, but not restricted to:</p>
+
+    <list><title/>
+      <ul>
+        <li><p>acknowledgements.</p></li>
+        <li><p>analysis methods.</p></li>
+        <li><p>confidentiality.</p></li>
+        <li><p>consent.</p></li>
+        <li><p>economic risks.</p></li>
+        <li><p>environmental risks.</p></li>
+        <li><p>funding.</p></li>
+        <li><p>incentives for participants.</p></li>
+        <li><p>legal risks.</p></li>
+        <li><p>plagiarism.</p></li>
+        <li><p>physical risks.</p></li>
+        <li><p>psychological risks.</p></li>
+        <li><p>resourcing.</p></li>
+        <li><p>sample size.</p></li>
+        <li><p>social risks.</p></li>
+        <li><p>storage of data.</p></li>
+      </ul>
+    </list>
+
+  </section>
+
+
+  <reading-questions xml:id="reading-questions-ch05">
+    <title>Quick review questions</title>
+
+    <exercise xml:id="rq-ethics">
+      <p>Are the following statements <em>true</em> or <em>false</em>?</p>
+      <ol>
+        <li><p>Ethics apply for <em>any</em> type of study.</p></li>
+        <li><p>Ethics only refer to the interactions of the researchers with participants in the study.</p></li>
+        <li><p>Ethics only apply when <em>people</em> are the individuals.</p></li>
+        <li><p>Ethics only apply when <em>people</em> or <em>animals</em> are the individuals.</p></li>
+        <li><p>Ethics can extend to storage of data.</p></li>
+        <li><p>Ethics only apply to the design of the study.</p></li>
+        <li><p>Ethics apply even to the analysis of the data.</p></li>
+      </ol>
+    </exercise>
+
+  </reading-questions>
+
+
+  <exercises xml:id="exercises-ch05">
+
+    <introduction>
+      <p>Answers to odd-numbered exercises are given at the end of the book.</p>
+    </introduction>
+
+    <exercise xml:id="exercise-ethics-cougars">
+      <p>Consider this conundrum <xref ref="crozier2015towards"/>:</p>
+      <blockquote>
+        <p>A research team has an extraordinarily successful long-term study of a population of bighorn sheep (<em>Ovis canadensis</em>) on Ram Mountain<ellipsis/></p>
+        <p>The population contains marked individuals for which the research team has incredibly detailed data [<ellipsis/>] this research has lead to numerous important publications.</p>
+        <p>Recently, however, a cougar (<em>Puma concolor</em>) that has learned to specialize on these sheep is slowly but surely eating all of them. This is a study of a natural population, which includes predation, but this cougar is drastically reducing the sample size of the study.</p>
+        <p>Since it is legal to hunt cougars in the region where this study is taking place, one option is to try to kill the predator; however, even if a cougar were successfully hunted, this would not ensure that it was the correct one.</p>
+      </blockquote>
+      <p>What action would you recommend, from an ethical point-of-view?</p>
+    </exercise>
+
+    <exercise xml:id="exercise-ethics-placebo">
+      <p>
+        Suppose a research group is testing a new drug, with the potential to cure a debilitating illness.
+        The researchers could (a) <em>use</em> a control group that does not receive the new drug, and so obtain stronger evidence for using the drug if it works; or (b) <em>not use</em> a control group, so that everyone in the study potentially benefits from the using the new drug.
+      </p>
+      <p>What would you decide? Explain.</p>
+    </exercise>
+
+    <exercise xml:id="exercise-ethics-side-effects">
+      <p>
+        Suppose a very deadly and highly contagious disease breaks out.
+        Is it ethical to use a new drug to treat those affected, even though the drug is experimental and the potentially harmful side effects are unknown?
+        Discuss your point-of-view.
+      </p>
+    </exercise>
+
+    <exercise xml:id="exercise-ethics-lying">
+      <p>
+        Is it ethical to lie to subjects?
+        <em>Deception</em><idx>Deception</idx> is used in some disciplines, and may be approved by ethics committees under some circumstances (such as potential benefits of the study, and whether the deception may cause physical or psychological discomfort to the participants).
+      </p>
+      <p>
+        Is it ethical to tell participants that they are taking an active medication, when it is actually ineffective (a <q>placebo</q>)?
+        Discuss the advantages and disadvantages.
+      </p>
+    </exercise>
+
+  </exercises>
+
 </chapter>

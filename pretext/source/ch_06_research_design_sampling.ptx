@@ -1,5 +1,1070 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <chapter xml:id="ch-06-research-design-sampling" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>External validity: sampling</title>
-  <p>Skeleton for <em>06-ResearchDesign-Sampling.Rmd</em>. Content to be added.</p>
+  <idx>External validity</idx>
+  <idx>Sampling</idx>
+
+  <objectives xml:id="objectives-ch06">
+    <introduction>
+      <p>You have learnt to ask an RQ, and identify a study design.
+      <em>In this chapter</em>, you will learn to:</p>
+    </introduction>
+    <ul>
+      <li><p>distinguish and explain precision and accuracy.</p></li>
+      <li><p>distinguish and explain random and non-random sampling.</p></li>
+      <li><p>explain why random samples are preferred over non-random samples.</p></li>
+      <li><p>identify, describe and use different sampling methods.</p></li>
+      <li><p>identify ways to obtain samples likely to be representative.</p></li>
+    </ul>
+  </objectives>
+
+
+  <section xml:id="sec-intro-external-validity">
+    <title>Introduction</title>
+    <idx>External validity</idx>
+
+    <p>
+      In a research study, the researchers learn about the <em>population</em> by studying just one of the countless possible <em>samples</em>.
+      Ideally the sample that is studied is representative of the population, so the results from the sample generalise to the population.
+      This is called <em>external validity</em>.<idx>External validity</idx>
+      <em>External validity</em> does <em>not</em> mean that the results apply more widely than the intended population.
+    </p>
+
+    <example xml:id="example-external-valid-pop">
+      <title>External validity</title>
+      <p>
+        Suppose the <em>population</em> in a study is <em>Californian home-owners</em>.
+        The sample comprises the Californian home-owners studied by the researchers.
+        If the study is externally valid, the sample is representative of all Californian home-owners.
+      </p>
+      <p>
+        The results will not necessarily apply to home-owners outside of California, or all Californian residents.
+        However, this <em>is irrelevant for external validity</em>.
+        External validity concerns how the <em>sample</em> represents the intended population in the RQ, which is <em>Californian home-owners</em>.
+      </p>
+    </example>
+
+  </section>
+
+
+  <section xml:id="sec-idea-of-sampling">
+    <title>The idea of sampling</title>
+    <idx>Sampling</idx>
+
+    <p>
+      Studying every member of a population is very rare due to cost, time, ethics, logistics and/or practicality.
+      Instead, a subset of the population (a <em>sample</em>) is studied, and <em>many</em> different samples are possible.<idx>Sample</idx>
+    </p>
+
+    <warning xml:id="warn-learning-from-sample">
+      <p>The challenge of research is learning about a population from studying just one of the countless possible samples.</p>
+    </warning>
+
+    <image source="Illustrations/pexels-gerd-altmann-23180.jpg" width="25%">
+      <description><p>Photograph of a colourful crowd of people.</p></description>
+    </image>
+
+    <example xml:id="example-samples-aspirin">
+      <title>Samples</title>
+      <p>
+        A study of the effectiveness of aspirin in treating headaches cannot possibly study every single human who may one day take aspirin.
+        Not only would this be prohibitively expensive, time consuming, and impractical, but the study would not even study those not yet born who might use aspirin.
+      </p>
+      <p>Using the whole target population is <em>impossible</em>, and a sample must be used.</p>
+    </example>
+
+    <p>Only studying one sample out of countless possible samples raises questions:</p>
+
+    <list><title/>
+      <ul>
+        <li><p><em>which</em> individuals should be included in the sample to be studied?</p></li>
+        <li><p><em>how many</em> individuals should be included in the sample to be studied?</p></li>
+      </ul>
+    </list>
+
+    <p>
+      The first issue is studied in this chapter.
+      The second issue is studied later (<xref ref="ch-estimate-sample-size"/>), after learning about the implications of studying samples rather than populations.
+    </p>
+
+    <p>
+      Many samples are possible, and <em>every sample is likely to be different</em>.
+      Hence, the results of studying a sample are likely to vary, depending on which individuals are in the studied sample.
+      The differences between the samples, and differences in the results from each sample, are called <em>sampling variation</em>.<idx>Sampling variation</idx>
+      That is, each sample has different individuals, produces different data, and may even suggest different answers to the RQ.
+    </p>
+
+    <example xml:id="example-number-of-samples">
+      <title>Number of samples</title>
+      <p>In a <q>population</q> of just <m>100</m>, the number of possible samples of size <m>25</m> is more than twice the number of people currently living on earth.</p>
+    </example>
+
+    <p>This is the challenge of research: <em>making decisions about populations, using just one of the many possible samples</em>. A lot can be learnt about the population if selecting a sample is approached correctly.<idx>Decision making</idx></p>
+
+    <warning xml:id="warn-sampling-variation">
+      <p>
+        Almost always, researchers study <em>samples</em>,<idx>Sample</idx> not <em>populations</em>.<idx>Population</idx>
+        Many samples are possible, and <em>every sample is likely to be different</em>, and the <em>results from every sample are likely to be different</em>.
+        This is called <em>sampling variation</em>.<idx>Sampling variation</idx>
+      </p>
+      <p>As a result, <em>conclusions from a sample are never certainties</em>, though special techniques allow us to still learn about the <em>population</em> from a <em>sample</em>.</p>
+    </warning>
+
+    <example xml:id="example-sampling-variation">
+      <title>Sampling variation</title>
+      <p>
+        Consider a fair pack of cards (a <em>population</em>), where <m>50</m>% of cards are red.
+        The percentage of red cards is not the same in every hand (every <em>sample</em>) of ten cards.
+        This is a simple example of <em>sampling variation</em>.<idx>Sampling variation</idx>
+      </p>
+    </example>
+
+  </section>
+
+
+  <section xml:id="sec-precision-accuracy">
+    <title>Precision and accuracy</title>
+
+    <p>
+      Two questions concerning sampling in <xref ref="sec-idea-of-sampling"/> were: <em>which</em> individuals should be in the sample, and <em>how many</em> individuals should be in the sample.
+      The first question addresses the <em>accuracy</em><idx>Accuracy</idx> of using a sample value to estimate a population value.
+      The second addresses the <em>precision</em><idx>Precision</idx> with which a population value is estimated using a sample.
+      An estimate that is not accurate is called <em>biased</em> (<xref ref="def-bias"/>).
+    </p>
+
+    <definition xml:id="def-accuracy">
+      <title>Accuracy</title>
+      <statement>
+        <p><idx>Accuracy</idx><em>Accuracy</em> refers to how close a <em>sample</em> estimate is likely to be to the <em>population</em> value, on average.</p>
+      </statement>
+    </definition>
+
+    <definition xml:id="def-precision">
+      <title>Precision</title>
+      <statement>
+        <p><idx>Precision</idx><em>Precision</em> refers to how similar the sample estimates from different samples are likely to be to each other (that is, how much variation is likely in the sample estimates).</p>
+      </statement>
+    </definition>
+
+    <p>Using this language:</p>
+
+    <list><title/>
+      <ul>
+        <li><p>the sampling <em>method</em> (i.e., <em>how</em> the sample is selected) impacts the <em>accuracy</em> of the sample estimate (i.e., <em>external validity</em>).</p></li>
+        <li><p>the <em>size</em> of the sample impacts the <em>precision</em> of the sample estimate (i.e., <em>internal</em> validity).</p></li>
+      </ul>
+    </list>
+
+    <p>
+      Large samples are more likely to produce <em>precise</em> estimates, but they may or may not be accurate estimates.
+      Similarly, random samples are likely to produce <em>accurate</em> estimates, but they may or may not be <em>precise</em>.
+      As an analogy, consider an archer aiming at a target.
+      The shots can be accurate, or precise, or (ideally) both (<xref ref="fig-precision-accuracy"/>).
+    </p>
+
+    <figure xml:id="fig-precision-accuracy">
+      <caption>Precision and accuracy: each dot indicates where a shot at the target lands, and is like a sample estimate of the population value (shown by the central <m>\times</m>).</caption>
+      <image source="generated/PrecisionAccuracy-1.png" width="55%">
+        <description><p>Four archery targets arranged in a 2×2 grid. Top-left: precise and accurate (shots clustered at centre). Top-right: precise but inaccurate (shots clustered off-centre). Bottom-left: imprecise but accurate (shots spread around centre). Bottom-right: imprecise and inaccurate (shots spread off-centre). Labels indicate: precise/imprecise on left axis, accurate/inaccurate on top, larger/smaller samples on right, random/non-random samples on bottom.</p></description>
+      </image>
+    </figure>
+
+    <image source="Illustrations/pexels-iqwan-alif-1206101.jpg" width="25%">
+      <description><p>Photograph of archery arrows in a target.</p></description>
+    </image>
+
+    <example xml:id="example-precision-accuracy-qld">
+      <title>Precision and accuracy</title>
+      <p>
+        To estimate the average age of <em>all Canadians</em>, <m>9\,000</m> Canadian school children could be sampled.
+      </p>
+      <p>
+        The answer obtained from the sample will be <em>inaccurate</em> because the sample is not representative of <em>all</em> Canadians.
+        Since the sample is large, the answer will give a <em>precise</em> answer but to a <em>different</em> question: <q>What is the average age of Canadian school children?</q>
+      </p>
+    </example>
+
+    <p><url href="https://learningapps.org/watch?v=prpojnfzj22" visual="learningapps.org/watch?v=prpojnfzj22">Interactive activity: precision and accuracy.</url></p>
+
+  </section>
+
+
+  <section xml:id="sec-types-of-sampling">
+    <title>Types of sampling</title>
+    <idx>Sampling</idx>
+
+    <introduction>
+      <p>
+        One key to obtaining accurate estimates about the population from the sample is to ensure that the sample faithfully represents the population.
+        So, <em>how</em> is such a sample selected from the population?
+      </p>
+      <p>
+        The individuals selected for the sample can be chosen using either <em>random sampling</em> or <em>non-random sampling</em>.
+        The word <em>random</em> here has a specific meaning that is different from how it is often used in everyday use.
+        It does <em>not</em> mean <q>haphazard</q>, <q>erratically</q> or <q>picking individuals as aimlessly as I can</q>.
+      </p>
+
+      <definition xml:id="def-random">
+        <title>Random</title>
+        <statement>
+          <p><em>Random</em> means determined completely by impersonal chance.</p>
+        </statement>
+      </definition>
+    </introduction>
+
+    <subsection xml:id="sec-random-samples">
+      <title>Random sampling</title>
+      <idx><h>Sampling</h><h>random</h></idx>
+
+      <p>In a <em>random sample</em>, both of these statements are true:</p>
+      <list><title/>
+        <ol>
+          <li><p>each individual in the population can be selected.</p></li>
+          <li><p>each individual is chosen on the basis of <em>impersonal</em> chance (such as using a random number generator, or a table of random numbers).</p></li>
+        </ol>
+      </list>
+
+      <p>Some examples of random sampling methods appear in <xref ref="tab-types-of-random-sampling"/>, and are explained further in <xref ref="sec-random-sampling-methods"/>.</p>
+
+      <definition xml:id="def-random-sampling">
+        <title>Random sample</title>
+        <statement>
+          <p>In a <em>random</em> sample, each individual in the population can be selected; and each individual is chosen on the basis of <em>impersonal</em> chance.</p>
+        </statement>
+      </definition>
+
+      <warning xml:id="warn-random-external-validity">
+        <p>The results obtained from a random sample are likely to generalise to the population from which the sample is drawn; that is, <em>random samples</em> are likely to produce <em>externally valid</em> and <em>accurate</em> studies.</p>
+      </warning>
+
+      <table xml:id="tab-types-of-random-sampling">
+        <title>Comparing five types of random sampling.</title>
+        <tabular halign="left" top="medium" bottom="medium">
+          <col halign="right"/>
+          <col/>
+          <col/>
+          <col halign="right"/>
+          <row header="yes" bottom="medium">
+            <cell><em>Type</em></cell>
+            <cell><em>Stage 1</em></cell>
+            <cell><em>Stage 2</em></cell>
+            <cell><em>Ref.</em></cell>
+          </row>
+          <row>
+            <cell>Simple random</cell>
+            <cell>Individuals chosen at <em>random</em></cell>
+            <cell></cell>
+            <cell><xref ref="sec-srs"/></cell>
+          </row>
+          <row>
+            <cell>Systematic</cell>
+            <cell>Start at a <em>random</em> location</cell>
+            <cell>Take every <m>n</m>th element thereafter</cell>
+            <cell><xref ref="sec-systematic-sampling"/></cell>
+          </row>
+          <row>
+            <cell>Stratified</cell>
+            <cell>Split into a few large groups (<q>strata</q>) of similar individuals</cell>
+            <cell>Select a <em>simple random sample</em> from <em>every</em> stratum</cell>
+            <cell><xref ref="sec-stratified-sampling"/></cell>
+          </row>
+          <row>
+            <cell>Cluster</cell>
+            <cell>Split into many small groups (<q>clusters</q>); select a <em>simple random sample</em> of clusters</cell>
+            <cell>Select <em>all</em> individuals in the chosen clusters</cell>
+            <cell><xref ref="sec-cluster-sampling"/></cell>
+          </row>
+          <row>
+            <cell>Multi-stage</cell>
+            <cell>Select a <em>simple random sample</em> from the larger collection of units</cell>
+            <cell>Select a <em>simple random sample</em> from those chosen in Stage 1; etc.</cell>
+            <cell><xref ref="sec-multistage-sampling"/></cell>
+          </row>
+        </tabular>
+      </table>
+
+      <p>
+        A pot of soup can be tested randomly or non-randomly.
+        If the soup is stirred (randomised), the small spoonful of soup can be tasted to obtain an overall impression.
+        However, an <em>overall</em> impression is not obtained from a non-random sample (i.e., a non-stirred pot of soup).
+      </p>
+
+    </subsection>
+
+
+    <subsection xml:id="sec-non-random-samples">
+      <title>Non-random sampling</title>
+      <idx><h>Sampling</h><h>non-random</h></idx>
+
+      <p>A <em>non-random</em> sample is selected using personal input from the researchers. Examples include:</p>
+
+      <list><title/>
+        <ul>
+          <li><p><em>judgement samples</em>.<idx><h>Sampling</h><h>non-random</h><h>judgement</h></idx>
+            Individuals are selected based on the researchers' judgement (possibly unconsciously), perhaps because the individuals are (or may appear) agreeable, supportive, easily accessible, or helpful.
+            For example, researchers may select rats that are less aggressive, or plants that are accessible, or people that look approachable.</p></li>
+          <li><p><em>convenience samples</em>.<idx><h>Sampling</h><h>non-random</h><h>convenience</h></idx>
+            Individuals are selected because they are convenient for the researcher.
+            For example, researchers may study beaches that are nearby, or use their friends for a study.</p></li>
+          <li><p><em>voluntary response (self-selecting) samples</em>.<idx><h>Sampling</h><h>non-random</h><h>voluntary</h></idx>
+            Individuals participate if they wish to.
+            For example, researchers may ask people to volunteer to take a survey.</p></li>
+          <li><p><em>cherry-picking</em>.<idx><h>Sampling</h><h>non-random</h><h>cherry-picking</h></idx>
+            Individuals are specifically chosen to reach the conclusion that the researchers want.</p></li>
+        </ul>
+      </list>
+
+      <p>
+        In non-random sampling, the individuals <em>in</em> the study are probably different from those <em>not in</em> the study.
+        That is, <em>non-random samples are not likely to be externally valid</em>.<idx>External validity</idx>
+      </p>
+
+      <p>
+        Researchers may use a non-random sample intentionally (e.g., to deceive) which is unethical, or unintentionally (e.g., accidentally, or due to practicality (such as meeting budgets)).
+        Ethically, a random (or somewhat representative sample; <xref ref="sec-representative-samples"/>) should be used when possible.
+      </p>
+
+      <image source="Illustrations/pexels-andrea-piacquadio-3807629.jpg" width="25%">
+        <description><p>Photograph of a person at a computer.</p></description>
+      </image>
+
+      <warning xml:id="warn-non-random-not-external">
+        <p>Using a non-random sample means that the results probably do not generalise to the intended population: they probably do not produce externally valid or accurate studies.</p>
+      </warning>
+
+    </subsection>
+
+  </section>
+
+
+  <section xml:id="sec-random-sampling-methods">
+    <title>Methods of random sampling</title>
+    <idx><h>Sampling</h><h>random</h></idx>
+
+    <subsection xml:id="sec-srs">
+      <title>Simple random sampling</title>
+      <idx><h>Sampling</h><h>random</h><h>simple random</h></idx>
+
+      <p>The most straightforward idea for obtaining a random sample is a <em>simple random sample</em>.</p>
+
+      <definition xml:id="def-sampling-srs">
+        <title>Simple random sample</title>
+        <statement>
+          <p>In a <em>simple random sample</em>, <em>every</em> possible sample of a given size has the <em>same</em> chance of being selected.</p>
+        </statement>
+      </definition>
+
+      <p>
+        Selecting a simple random sample requires a list of all members of the population, called the <em>sampling frame</em>, from which to select a sample.
+        Obtaining the sampling frame is often difficult or impossible, and so finding a simple random sample is also difficult.
+        For example, finding a simple random sample of wombats would require having a list and location of all wombats.
+        This is absurd; other random sampling methods, like special ecological sampling methods (e.g., <xref ref="manly2014introduction"/>), would be used instead.
+      </p>
+
+      <definition xml:id="def-sampling-frame">
+        <title>Sampling frame</title>
+        <statement>
+          <p>The <em>sampling frame</em> is a list of <em>all</em> the individuals in the population.<idx>Sampling frame</idx></p>
+        </statement>
+      </definition>
+
+      <p>
+        Selecting a simple random sample from the <em>sampling frame</em> can be performed using <em>random numbers</em> (e.g., using random number tables, or websites like <url href="https://www.random.org" visual="www.random.org">random.org</url>).
+        Other random sampling methods avoid the need for a sampling frame, but still use randomness rather than human choice.
+      </p>
+
+      <warning xml:id="warn-book-assumes-srs">
+        <p>This book assumes simple random samples, unless otherwise noted.</p>
+      </warning>
+
+      <image source="Illustrations/pexels-startup-stock-photos-7357.jpg" width="25%">
+        <description><p>Photograph of students at computers.</p></description>
+      </image>
+
+      <example xml:id="example-typing-srs">
+        <title>Simple random sampling</title>
+        <p>Consider the letter-typing RQ again (<xref ref="example-typing"/>):</p>
+        <blockquote>
+          <p>For students in a large university course, is the average typing speed (in words per minute) the same for those aged under <m>25</m> (<q>younger</q>) and <m>25</m> or over (<q>older</q>)?</p>
+        </blockquote>
+        <p>
+          Suppose budget and time constraints mean approximately <m>40</m> students (out of <m>441</m>) can be selected for the study.
+          The <em>sampling frame</em> is the list of all students enrolled in the course.
+          Obtaining the sampling frame is feasible here; instructors have access to this information for grading.
+        </p>
+        <p>
+          A simple random sample could be found using the course enrolment list, by first placing all <m>441</m> student names into rows of a spreadsheet<idx><h>Computers and software</h><h>spreadsheets</h></idx> (ordered by name, student ID, or any way).
+          Then, using random numbers, <m>40</m> rows are selected at random (without repeating numbers) between <m>1</m> and <m>441</m> inclusive.
+          For instance, the first few random numbers might be: <c>410</c>, <c>215</c>, <c>384</c>, <c>158</c>, <c>296</c>.
+        </p>
+        <p>
+          Every student chosen using this method becomes part of the study.
+          If a student could not be contacted or did not respond, more students could be chosen at random to ensure <m>40</m> students participated.
+          By chance, the sample comprises <m>15</m> younger students and <m>25</m> older students.
+        </p>
+      </example>
+
+    </subsection>
+
+
+    <subsection xml:id="sec-systematic-sampling">
+      <title>Systematic sampling</title>
+      <idx><h>Sampling</h><h>random</h><h>systematic</h></idx>
+
+      <p>
+        In <em>systematic sampling</em>, the first case is <em>randomly</em> selected; then, more individuals are selected at regular intervals thereafter.
+        In general, we say that every <m>n</m>th individual is selected after the initial random selection.
+      </p>
+
+      <example xml:id="example-systematic-course">
+        <title>Systematic sampling</title>
+        <p>
+          For the study in <xref ref="example-typing"/>, a sample of <m>40</m> students in a course of <m>441</m> is needed.
+          To find a systematic random sample, select a random number between <m>1</m> and <m>441/40</m> (approximately <m>11</m>) as a starting point; suppose the random number selected is <m>9</m>.
+        </p>
+        <p>
+          The first student selected is the <m>9</m>th person in the student list (which may be ordered alphabetically, by student ID, or other means).
+          Thereafter, every <m>441/40</m>th person, or <m>11</m>th person, in the list is selected: people in rows <m>9</m>, <m>20</m>, <m>31</m>, <m>42</m>, and so on.
+          By chance, the sample comprises <m>17</m> younger students and <m>23</m> older students.
+        </p>
+      </example>
+
+      <warning xml:id="warn-systematic-pattern">
+        <p>
+          Care needs to be taken when using systematic samples to ensure a pattern is not hidden.
+          Consider taking a systematic sample of every <m>10</m>th residence on a long street.
+          In many countries, odd numbers are usually on one side of the street, and even numbers usually on the other side.
+          Selecting every <m>10</m>th house (for example) would include houses all on the same side of the street, and hence with similar exposure to the sun, traffic, etc.
+        </p>
+      </warning>
+
+      <example xml:id="example-systematic-quebec">
+        <title>Systematic sampling</title>
+        <p>
+          <xref ref="alary1991risk"/> studied households in Quebec to determine if their hot water systems kept their water sufficiently hot to avoid Legionellae bacteria.
+          They used a systematic random sample to select households to study (p. <m>2\,361</m>):
+        </p>
+        <blockquote>
+          <p>The first house was selected by using a random-number table. Thereafter, each fifth house that satisfied the [<ellipsis/>] criteria was eligible for the study.</p>
+        </blockquote>
+      </example>
+
+    </subsection>
+
+
+    <subsection xml:id="sec-stratified-sampling">
+      <title>Stratified sampling</title>
+      <idx><h>Sampling</h><h>random</h><h>stratified</h></idx>
+
+      <p>
+        In <em>stratified sampling</em>, the population is split into a <em>small</em> number of <em>large</em> (usually similar) groups called <em>strata</em>, then cases are selected using a <em>simple random sample</em> from <em>each</em> stratum.
+        Every individual in the population must be in one, and only one, stratum.
+      </p>
+
+      <example xml:id="example-stratified-uni">
+        <title>Stratified sampling</title>
+        <p>
+          For the typing study in <xref ref="example-typing"/>, <m>20</m> younger and <m>20</m> older students could be selected to obtain a sample of size <m>40</m>.
+          The sample is stratified by <em>age group</em> of the person.
+        </p>
+        <p>
+          Since <m>66.7</m>% of the students are younger in the population, the sample could be selected so that two-thirds of the sample of size <m>40</m> (i.e., <m>27</m> students) were younger students.
+          This is a <em>proportional</em> stratified sample.<idx><h>Sampling</h><h>proportional</h></idx>
+        </p>
+      </example>
+
+    </subsection>
+
+
+    <subsection xml:id="sec-cluster-sampling">
+      <title>Cluster sampling</title>
+      <idx><h>Sampling</h><h>random</h><h>cluster</h></idx>
+
+      <p>
+        In <em>cluster sampling</em>, the population is split into a <em>large</em> number of <em>small</em> groups called <em>clusters</em>.
+        Then, a <em>simple random sample</em> of clusters is selected, and <em>every</em> member of the chosen clusters become part of the sample.
+        Every individual in the population must be in one, and only one, cluster.
+      </p>
+
+      <example xml:id="example-cluster-typing">
+        <title>Cluster sampling</title>
+        <p>
+          For the study in <xref ref="example-typing"/>, a simple random sample of (say) three of the many small-group classes for the course could be selected, and <em>every</em> student enrolled in those selected small groups constitute the sample.
+          By chance, the chosen classes produce a sample size of <m>n = 47</m> (<m>31</m> younger; <m>16</m> older).
+        </p>
+      </example>
+
+    </subsection>
+
+
+    <subsection xml:id="sec-multistage-sampling">
+      <title>Multi-stage sampling</title>
+      <idx><h>Sampling</h><h>random</h><h>multi-stage</h></idx>
+
+      <p>
+        In <em>multi-stage sampling</em>, larger collections of individuals are selected using a <em>simple random sample</em>, then smaller collections of individuals <em>within</em> those large collections are selected using a <em>simple random sample</em>.
+        The simple random sampling continues for as many levels as necessary, until individuals are being selected (at random in each step).
+      </p>
+
+      <example xml:id="example-multistage-typing">
+        <title>Multi-stage sampling</title>
+        <p>
+          For the study in <xref ref="example-typing"/>, a <em>simple random sample</em> of ten of the many small-group classes could be selected (Stage 1), and then four students are <em>randomly</em> selected from each of these <m>10</m> selected small groups (Stage 2).
+          The sample size is <m>10\times 4 = 40</m>, comprising (by chance) <m>24</m> younger students and <m>16</m> older students.
+        </p>
+      </example>
+
+      <example xml:id="example-multistage-national">
+        <title>Multi-stage sampling</title>
+        <p>Multi-stage sampling is often used by national statistical agencies. For example, to obtain a multi-stage random sample from a country:</p>
+        <list><title/>
+          <ul>
+            <li><p><em>Stage 1</em>: randomly select some cities in the nation.</p></li>
+            <li><p><em>Stage 2</em>: randomly select some suburbs in these chosen cities.</p></li>
+            <li><p><em>Stage 3</em>: randomly select some streets in these chosen suburbs.</p></li>
+            <li><p><em>Stage 4</em>: randomly select some houses in these chosen streets.</p></li>
+          </ul>
+        </list>
+        <p>This is cheaper than simple random sampling, as data collectors can be deployed in a small number of cities (only those chosen in Stage 1).</p>
+      </example>
+
+    </subsection>
+
+
+    <subsection xml:id="sec-comparing-samples">
+      <title>Comparing the samples</title>
+
+      <p>
+        The different random sampling methods produce different samples, with different proportions of younger and older students by chance (<xref ref="tab-samples-summary"/>).
+        Of course, repeating the random sampling processes would produce different samples each time.
+        In all cases, only <em>one</em> of the countless possible samples is studied.
+      </p>
+
+      <table xml:id="tab-samples-summary">
+        <title>A summary of the various random samples selected using different random sampling methods. In the population, <m>66.7</m>% of students are younger students. Repeating any random sampling method is likely to produce a different sample each time.</title>
+        <tabular halign="center" top="medium" bottom="medium">
+          <col halign="left"/>
+          <col/>
+          <col/>
+          <col/>
+          <col/>
+          <row>
+            <cell></cell>
+            <cell colspan="3" halign="center"><em>Number of students selected</em></cell>
+            <cell></cell>
+          </row>
+          <row header="yes" bottom="medium">
+            <cell></cell>
+            <cell>Younger</cell>
+            <cell>Older</cell>
+            <cell>Total</cell>
+            <cell>Percentage younger</cell>
+          </row>
+          <row>
+            <cell><em>Simple random sample</em></cell>
+            <cell>26</cell>
+            <cell>14</cell>
+            <cell>40</cell>
+            <cell>65.0</cell>
+          </row>
+          <row>
+            <cell><em>Systematic sample</em></cell>
+            <cell>31</cell>
+            <cell>9</cell>
+            <cell>40</cell>
+            <cell>77.5</cell>
+          </row>
+          <row>
+            <cell><em>Stratified sample: equal</em></cell>
+            <cell>20</cell>
+            <cell>20</cell>
+            <cell>40</cell>
+            <cell>50.0</cell>
+          </row>
+          <row>
+            <cell><em>Stratified sample: proportional</em></cell>
+            <cell>27</cell>
+            <cell>13</cell>
+            <cell>40</cell>
+            <cell>67.5</cell>
+          </row>
+          <row>
+            <cell><em>Cluster sample</em></cell>
+            <cell>31</cell>
+            <cell>16</cell>
+            <cell>47</cell>
+            <cell>66.0</cell>
+          </row>
+          <row>
+            <cell><em>Multi-stage sample</em></cell>
+            <cell>24</cell>
+            <cell>16</cell>
+            <cell>40</cell>
+            <cell>60.0</cell>
+          </row>
+        </tabular>
+      </table>
+
+    </subsection>
+
+  </section>
+
+
+  <section xml:id="sec-representative-samples">
+    <title>Representative samples</title>
+    <idx><h>Sampling</h><h>representative</h></idx>
+
+    <p>
+      Obtaining a truly random sample is usually hard or impossible in practice.
+      Sometimes the best compromise is to select a sample sufficiently diverse so that it is likely to be <em>somewhat representative</em> of the diversity in the population.
+      Specifically, those <em>in</em> the sample are not likely to be different from those <em>not in</em> the sample, at least for the variables of interest.
+      This is often the only practical way to sample.
+    </p>
+
+    <definition xml:id="def-representative-sample">
+      <title>Representative sample</title>
+      <statement>
+        <p>
+          In a <em>representative</em> sample, those <em>in</em> the sample are not likely to be different from those <em>not in</em> the sample, at least for the variables of interest.
+          A representative sample is <em>not</em> a random sample.
+        </p>
+      </statement>
+    </definition>
+
+    <p>As always, the results from any non-random sample <em>may not generalise</em> to the intended population (but will generalise to the population which the sample <em>does</em> represent).</p>
+
+    <image source="Illustrations/pexels-thisisengineering-3912979.jpg" width="25%">
+      <description><p>Photograph of an engineer working with a prosthetic hand.</p></description>
+    </image>
+
+    <example xml:id="example-representative-prosthetics">
+      <title>Representative sample</title>
+      <p>
+        Suppose we wish to evaluate the functionality of two types of hand prosthetics.
+      </p>
+      <p>
+        If a randomly-chosen group of Alaska and Texas residents is asked for their feedback, probably (but not certainly) their views would be similar to those of all Americans.
+        No obvious reason exists for why residents of Alaska and Texas would be very different from residents in the rest of the United States, regarding their view of hand prosthetic functionality.
+      </p>
+      <p>
+        Even though the sample is not a random sample of all Americans, the results <em>may</em> generalise to all Americans (though we cannot be sure).
+        This sample <em>may</em> be representative of the population.
+      </p>
+    </example>
+
+    <image source="Illustrations/pexels-juergen-striewski-301048.jpg" width="25%">
+      <description><p>Photograph of an air conditioning unit on a building.</p></description>
+    </image>
+
+    <example xml:id="example-air-con-use">
+      <title>Non-representative samples</title>
+      <p>
+        Suppose we wish to determine the average time per day that American households use their air-conditioners for <em>cooling</em> in summer.
+      </p>
+      <p>
+        A sample of Texas residents would not be expected to represent all Americans: it would <em>over</em>-represent the average number of hours air-conditioners are used for <em>cooling</em> in summer.
+        In this case, those <em>in</em> the sample are very different to those <em>not in</em> the sample, regarding their air-conditioners usage for cooling in summer.
+      </p>
+      <p>
+        In contrast, suppose a sample of Alaskans was asked the same question.
+        This sample would not represent all Americans either (it would <em>under</em>-represent air-conditioner use).
+        Again, those <em>in</em> the sample are likely to be very different to those <em>not in</em> the sample, regarding their air-conditioners usage for <em>cooling</em> in summer.
+        This sample would not be representative of the population.
+      </p>
+    </example>
+
+    <p>Sometimes, a <em>combination</em> of sampling methods is used.<idx><h>Sampling</h><h>combination of methods</h></idx> If the combination includes a non-random sampling method, the sampling method does <em>not</em> produce a random sample, but is probably more likely to produce an externally valid sample than a completely non-random sample.</p>
+
+    <example xml:id="example-combination-sampling">
+      <title>A combination of sampling methods</title>
+      <p>
+        In a study of pathogens present on magazines in doctors' surgeries in Dublin, some suburbs can be selected at <em>random</em>, and then (within each suburb) all surgeries are contacted, and some surgeries <em>volunteer</em> to be part of the study.
+        This study does not use a random sample.
+      </p>
+    </example>
+
+    <note xml:id="note-diet-sample">
+      <p>In a study of diets of children at child-care centres, researchers used samples in 2010 and 2016, described as follows <xref ref="larson2019staff"/> (p. 336):</p>
+      <blockquote>
+        <p>In 2010, a stratified random sampling procedure was used to select representative cross-sections of providers working in licensed center-based programs and licensed providers of family home-based care from publicly available lists. [<ellipsis/>] Additional participants were also recruited in 2016 using a combination of stratified random and open, convenience-based sampling.</p>
+      </blockquote>
+    </note>
+
+    <p>
+      Sometimes, practicalities dictate how the sample is obtained, which may result in a non-random sample.
+      Even so, the impact of using a non-random sample on the conclusions should be discussed (<xref ref="ch-interpretation"/>).
+      Sometimes, simple steps can be taken to obtain a sample that is <em>more likely</em> to be representative.
+    </p>
+
+    <warning xml:id="warn-representative-best">
+      <p>
+        Random samples are often difficult to obtain, and sometimes <em>representative</em> samples are the best that can be achieved.
+        In a representative sample, those <em>in</em> the sample are not obviously different from those <em>not in</em> the sample.
+        Try to ensure that a broad cross-section of the target population appears in the sample.
+      </p>
+    </warning>
+
+    <p>
+      Even if a random or representative sample cannot be obtained, the study can still be useful.
+      The results still apply to the population represented by the sample.
+      If individuals in the sample are unlikely to be different from individuals <em>not</em> in the sample, for the variables important to the study, the results are likely to approximately apply to the population.
+    </p>
+
+    <image source="Illustrations/pexels-lina-kivaka-3395280.jpg" width="25%">
+      <description><p>Photograph of a university café.</p></description>
+    </image>
+
+    <example xml:id="example-representative-uni">
+      <title>Representative sample</title>
+      <p>
+        For the typing study in <xref ref="example-typing"/>, only selecting students who attend the gym, or only students who are at a certain café, is unlikely to be somewhat representative of the student population.
+        Instead, the researchers could approach students at different days, times and locations:
+      </p>
+      <list><title/>
+        <ul>
+          <li><p>at the café on Monday at <m>8</m>am.</p></li>
+          <li><p>at the gym on Tuesday at <m>11</m>:<m>30</m>am.</p></li>
+          <li><p>at the library on Thursdays at <m>2</m>pm.</p></li>
+        </ul>
+      </list>
+      <p>
+        <em>This is not a random sample</em>, but should contain a variety of students.
+        Ideally, <em>students would not be included more than once in the sample</em>, though this is often difficult to ensure.
+        The students <em>in</em> the sample are probably somewhat similar to those <em>not</em> in the sample in terms of average typing speeds (there is no obvious reason why they would not be), but we cannot be sure.
+      </p>
+    </example>
+
+    <p>
+      To determine if the sample is somewhat representative of the population, sometimes information about the sample and population can be compared.
+      The researchers may then be able to make some comment about whether the sample seems reasonably representative.
+      For example, the sex and age of a sample of university students may be recorded; if the proportion of females in the sample, and the average age of students in the sample, are similar to those of the whole university population, then the sample may be considered somewhat representative of the population (though we cannot be sure).
+    </p>
+
+    <image source="Illustrations/pexels-rathaphon-nanthapreecha-3846205.jpg" width="25%">
+      <description><p>Photograph of an electric vehicle charging station.</p></description>
+    </image>
+
+    <example xml:id="example-cf-sample-pop">
+      <title>Comparing samples and populations</title>
+      <p>
+        <xref ref="egbue2017mass"/> studied the adoption of electric vehicles (EVs) by Americans, using a sample of <m>121</m> people found through social media (such as Facebook) and professional engineering channels.
+        This is <em>not</em> a random sample of Americans.
+      </p>
+      <p>
+        The authors compared some characteristics of the sample with the American population from the <m>2010</m> census.
+        Compared to the US population, the sample contained a higher percentage of males, a higher percentage of people aged <m>18</m><ndash/><m>44</m>, and a higher percentage of wealthy individuals.
+      </p>
+    </example>
+
+  </section>
+
+
+  <section xml:id="sec-selection-bias">
+    <title>Sampling biases</title>
+    <idx><h>Sampling</h><h>bias</h></idx>
+
+    <p>
+      The sample may not be representative of the population for many reasons, all of which compromise how well the sample represents the population (i.e., compromises <em>external</em> validity and accuracy).
+      This is called <em>selection bias</em>.
+    </p>
+
+    <definition xml:id="def-selection-bias">
+      <title>Selection, non-response and response bias</title>
+      <statement>
+        <p><idx><h>Bias</h><h>selection</h></idx><idx><h>Bias</h><h>non-response</h></idx><idx><h>Bias</h><h>response</h></idx>
+          <em>Selection bias</em> is the tendency of a sample to over- or under-estimate a population quantity.
+        </p>
+        <p><em>Non-response bias</em> occurs when chosen participants do not respond: those responding may be different from those not responding.</p>
+        <p><em>Response bias</em> occurs when participants provide <em>incorrect or false information</em>.</p>
+      </statement>
+    </definition>
+
+    <p>
+      Selection bias is less common in studies with forward directionality, compared to studies that are non-directional or have backward directionality (<xref ref="sec-directionality"/>).
+      <em>Selection bias</em> may occur if the wrong sampling frame is used, or non-random sampling is used.
+      The sample is biased because those <em>in</em> the sample may be different from those <em>not in</em> the sample (which may not always be obvious).
+      Biased samples are less likely to produce externally valid studies.
+    </p>
+
+    <example xml:id="example-selection-bias">
+      <title>Selection bias</title>
+      <p>
+        Consider <xref ref="example-air-con-use"/>, about estimating the average time per day that air conditioners are used for cooling in summer.
+        Even a <em>random</em> sample of Alaskans produces a biased sample of Americans: the sampling frame (Alaskans) does not represent the target population (<q>Americans</q>).
+        This is <em>selection bias</em>.
+      </p>
+    </example>
+
+    <p>
+      <em>Non-response bias</em> occurs when chosen participants do not respond.<idx><h>Bias</h><h>non-response</h></idx>
+      Bias occurs because those who <em>do not</em> respond may be different from those who <em>do</em> respond.
+      Non-response bias can occur because of a poorly-designed survey, using voluntary-response sampling, chosen participants refusing to participate, participants forgetting to return completed surveys, etc.
+    </p>
+
+    <example xml:id="example-non-response-bias">
+      <title>Non-response bias</title>
+      <p>
+        Consider a study to determine the average number of hours of overtime worked by various professions.
+        People who work a large amount of overtime may be too busy to answer the survey.
+        Those who answer the survey may be likely to work less overtime than those who do not answer the survey.
+        This is an (extreme) example of <em>non-response bias</em>.
+      </p>
+    </example>
+
+    <p>
+      <em>Response bias</em> occurs when participants provide <em>incorrect or false information</em>.<idx><h>Bias</h><h>response</h></idx>
+      This may be intentional (for example, respondents lie) or non-intentional (for example, the question is poorly written (see <xref ref="sec-writing-questions"/>), personal, or misunderstood).
+    </p>
+
+    <example xml:id="example-poor-sampling">
+      <title>Poor sampling</title>
+      <p>
+        Obtaining data using a telephone survey only includes people who own a telephone, who answer the phone, who do not hang up, who volunteer to complete the survey, and who then finish the whole survey.
+        The people who participate in the survey must meet these criteria, and probably do not represent the population.
+      </p>
+      <p>
+        Obtaining data using a TV station call-in at <m>6</m>:<m>15</m>pm only includes people watching that channel, at that time, and who are sufficiently motivated to call.
+        These people must meet very specific criteria, and probably do not represent the population.
+      </p>
+      <p>
+        Randomly sampling students at your university, because it is easier than finding a random sample of all university students in your country, will only generalise to students at that university and not to students at <em>all</em> universities in your country.
+      </p>
+    </example>
+
+    <p><url href="https://learningapps.org/watch?v=pi1dizdma22" visual="learningapps.org/watch?v=pi1dizdma22">Interactive activity: sampling biases.</url></p>
+
+  </section>
+
+
+  <section xml:id="sec-chap6-summary">
+    <title>Chapter summary</title>
+
+    <p>
+      Almost always, the entire population of interest cannot be studied, so a <em>sample</em> (a subset of the population) must be studied.
+      <em>Many</em> samples are possible; only one sample is studied.
+      Samples can be obtained using <em>random</em> or <em>non-random</em> methods.
+      Conclusions made from random samples can usually be generalised to the population (that is, they are externally valid and accurate).
+    </p>
+
+    <p>
+      Random sampling methods include <em>simple random samples</em>, <em>systematic samples</em>, <em>stratified samples</em>, <em>cluster samples</em>, and <em>multi-stage samples</em>.
+      Random samples are likely to be <em>externally valid</em> and <em>accurate</em>.
+    </p>
+
+    <p>
+      Non-random sampling methods include <em>convenience samples</em>, <em>judgement samples</em>, <em>voluntary (self-selecting) samples</em>, and <em>cherry-picking</em>.
+      Random samples are often very difficult to obtain, so <em>reasonably representative</em> samples are sometimes used, where those <em>in</em> the sample are unlikely to be very different from those <em>not in</em> the sample.
+      Non-random samples <em>may not be externally valid</em> or <em>accurate</em>.
+    </p>
+
+    <p>
+      <url href="https://www.youtube.com/embed/KyuaX10l3GQ" visual="youtube.com/watch?v=KyuaX10l3GQ">Video: sampling methods.</url>
+    </p>
+
+  </section>
+
+
+  <reading-questions xml:id="reading-questions-ch06">
+    <title>Quick review questions</title>
+
+    <exercise xml:id="rq-sampling">
+      <p>Are the following statements <em>true</em> or <em>false</em>?</p>
+      <ol>
+        <li><p>Suppose students are randomly selected and sent postal surveys from their university, but some students have moved and so never receive the survey. This is <em>response</em> bias.</p></li>
+        <li><p>A <em>large</em> sample is <em>always</em> better than a <em>random</em> sample.</p></li>
+        <li><p><em>Convenience</em> sampling and <em>judgement</em> sampling are examples of non-random sampling.</p></li>
+      </ol>
+    </exercise>
+
+  </reading-questions>
+
+
+  <exercises xml:id="exercises-ch06">
+
+    <introduction>
+      <p>Answers to odd-numbered exercises are given at the end of the book.</p>
+    </introduction>
+
+    <exercise xml:id="exercise-sampling-advantage-random">
+      <p>What is the main advantage of using a <em>random</em> sample?</p>
+      <list><title/>
+        <ol marker="a">
+          <li><p>It is easier.</p></li>
+          <li><p>It is more likely to produce an experimental study.</p></li>
+          <li><p>It is more likely to produce an externally-valid study.</p></li>
+          <li><p>It is more likely to produce precise estimates.</p></li>
+        </ol>
+      </list>
+    </exercise>
+
+    <exercise xml:id="exercise-sampling-advantage-large">
+      <p>What is the main advantage of using a <em>large</em> sample?</p>
+      <list><title/>
+        <ol marker="a">
+          <li><p>It is easier.</p></li>
+          <li><p>It is more likely to produce an experimental study.</p></li>
+          <li><p>It is more likely to produce an externally-valid study.</p></li>
+          <li><p>It is more likely to produce precise estimates.</p></li>
+        </ol>
+      </list>
+    </exercise>
+
+    <exercise xml:id="exercise-sampling-over-under-a">
+      <p>
+        For the following scenarios, is the selected sample likely to <em>over</em>- or <em>under</em>-estimate the unknown population value, or estimate the value accurately?
+        Explain <em>why</em> the over- or under-estimation occurs, if relevant, and whether this is likely to be intentional or unintentional.
+      </p>
+      <ol>
+        <li><p>In a study by biologists to estimate biodiversity, researchers decide to focus only on easily accessible areas of a forest due to budget and time constraints.</p></li>
+        <li><p>A city council wishes to report the crime rate of various neighbourhoods, so employs interviewers to go door-to-door interviewing residents, between <m>8</m>am and <m>5</m>pm.</p></li>
+        <li><p>In a campaign speech, a politician reports on some large successes during her term.</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="exercise-sampling-over-under-b">
+      <p>
+        For the following scenarios, is the selected sample likely to <em>over</em>- or <em>under</em>-estimate the unknown population value, or estimate the value accurately?
+        Explain <em>why</em> the over- or under-estimation occurs, if relevant, and whether this is likely to be intentional or unintentional.
+      </p>
+      <ol>
+        <li><p>A county wants to report the number of homeless, so researchers record data from homeless shelters.</p></li>
+        <li><p>In a study of soil fertility, a junior researcher takes soil from the surface for testing.</p></li>
+        <li><p>A university has introduced a complex and time-consuming system for professors to report students suspected of cheating. When the university produces its <em>Annual Report</em>, the reported incidence of cheating is used to claim that <q>reports of cheating have dropped</q>.</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="exercise-sampling-systematic-problem">
+      <p>
+        A researcher has three months in which to collect the data for a study on car park usage at a shopping centre.
+        Suppose the researcher wants to take a systematic sample of days, and on each of the selected days records the number of cars in the car park.
+      </p>
+      <p>To select the days in which to collect data, she decides (by using random numbers) to start data collection on a Tuesday, and then every seventh day thereafter.</p>
+      <ol>
+        <li><p>What problem is evident in this sampling scheme?</p></li>
+        <li><p>What suggestions would you give to improve the sampling?</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="exercise-sampling-books">
+      <p>Suppose you need to estimate the average number of pages in physical books in a university library (with a library in each of five campuses). Describe how to select a sample of <m>200</m> books using:</p>
+      <ol>
+        <li><p>a <em>simple random sample</em> of books.</p></li>
+        <li><p>a <em>stratified sample</em> of books.</p></li>
+        <li><p>a <em>cluster sample</em> of books.</p></li>
+        <li><p>a <em>convenience sample</em> of books.</p></li>
+        <li><p>a <em>multi-stage sample</em> of books.</p></li>
+      </ol>
+      <p>Which sampling scheme would be most <em>practical</em>?</p>
+    </exercise>
+
+    <exercise xml:id="exercise-sampling-apartments">
+      <p>
+        Suppose you need a sample of residents from apartments in a large residential complex, comprising <m>30</m> floors with <m>15</m> apartments on each floor.
+        You plan to survey the residents of these apartments.
+        For each of the possible sampling schemes given below, first describe the sampling scheme, and then determine which methods are likely to give random (or representative) sample (explaining your answers).
+      </p>
+      <ol>
+        <li><p><em>Randomly</em> select five floors, then <em>randomly</em> select four apartments from each of those five floors, and interview a randomly-chosen adult living at the apartment.</p></li>
+        <li><p><em>Randomly</em> select one floor, and select the <m>15</m> apartments on that floor, then interview the oldest resident of that apartment.</p></li>
+        <li><p>Wait at the ground-floor elevator, and ask people who emerge to complete the survey.</p></li>
+        <li><p><em>Randomly</em> select five floors, then wait by the elevator on those floors and survey residents as they arrive at the elevator.</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="exercise-sampling-shopping-centre">
+      <p>
+        Suppose a researcher needs a sample of customers from a large, local shopping centre to complete a questionnaire.
+        Four sampling schemes are listed below.
+        For each, describe the type of sampling.
+        Then, determine which would be the best method (explain why), and determine which (if any) produce a random sample.
+      </p>
+      <ol>
+        <li><p>The researcher locates themselves outside the supermarket at the shopping centre one morning, and approaches every tenth person who walks past.</p></li>
+        <li><p>The researcher waits at the main entrance for <m>30\mins</m> at <m>8</m>am every morning for a week, and approaches every fifth person.</p></li>
+        <li><p>The researcher leaves a pile of survey forms at an unattended booth in the shopping centre, and a locked barrel in which to place completed surveys.</p></li>
+        <li><p>The researcher goes to the shopping centre every day for two weeks, at a different time and location each day, and approaches someone every <m>15\mins</m>.</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="exercise-sampling-schools">
+      <p>
+        <xref ref="ridgewell2009school"/> investigated how children in Brisbane travel to state schools.
+        Researchers randomly sampled four schools from a list of all Brisbane state schools, and invited every family at each of those four schools to complete a survey.
+      </p>
+      <p>What <em>type</em> of sampling method is this? How could the researchers determine if the resulting sample was approximately representative?</p>
+    </exercise>
+
+    <exercise xml:id="exercise-sampling-malaria">
+      <p>
+        A study comparing two new malaria vaccines recruited <m>200</m> Kenyans who had contracted malaria.
+        These recruits were obtained by approaching all patients with a confirmed malaria diagnosis who were admitted to hospitals.
+        Patients could volunteer for the study or not.
+        The study was then conducted to a high standard.
+        Which of the following statements are <em>true</em>?
+      </p>
+      <ol>
+        <li><p>This is a voluntary response sample.</p></li>
+        <li><p>The study is likely to have high <em>external</em> validity.</p></li>
+        <li><p>The sample size is too small for the study results to provide useful information.</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="exercise-sampling-forest">
+      <p>
+        Suppose a natural forest region is classified into two quite different zones.
+        Zone A is mostly dunes and lightly vegetated, and on the coastal side of a ridge; Zone B is more densely vegetated and on the inland side of the ridge.
+      </p>
+      <p>
+        A sample of sugar ants (<em>Camponotus app</em>) is taken from Zone A, and another sample of sugar ants from Zone B, to study the average size of the ants.
+        What is the best description of the <em>type</em> of sampling method being used?
+      </p>
+    </exercise>
+
+    <exercise xml:id="exercise-bias-online">
+      <p>A survey in 2001 concluded (<xref ref="data-Heiger-Homebuyer"/>, cited in <xref ref="bock2010stats"/>, p. 283):</p>
+      <blockquote>
+        <p>All but <m>2</m>% of the home buyers have at least one computer at home, and <m>62</m>% have two or more. Of those with a computer, <m>99</m>% are connected to the internet.</p>
+      </blockquote>
+      <p>
+        The article later reveals the survey was conducted <em>online</em> (recall the survey was conducted in 2001).
+        The target population is home buyers; however, home buyers <em>with</em> internet access were far more likely to complete the survey than home buyers <em>without</em> internet access.
+      </p>
+      <p>What type of bias is this?</p>
+    </exercise>
+
+    <exercise xml:id="exercise-not-multistage">
+      <p>
+        Researchers are studying the percentage of farms that use a specific management technique.
+        The researchers <em>randomly</em> select <m>20</m> regions around the country, then <em>randomly</em> select farms within each region, then ask farmers to volunteer to be in the study.
+      </p>
+      <p>Explain why this is <em>not</em> a multi-stage sample, and what changes are necessary for the researchers to have a multi-stage sample.</p>
+    </exercise>
+
+    <exercise xml:id="exercise-not-cluster">
+      <p>
+        Researchers are comparing the average time that experienced school teachers and first-year school teachers spend in the sun.
+        The researchers select schools by asking school principals to volunteer their schools, then record information for <em>every</em> teacher in those schools.
+      </p>
+      <p>Explain why this is <em>not</em> a cluster sample, and what changes are necessary for the researchers to have a cluster sample.</p>
+    </exercise>
+
+    <exercise xml:id="exercise-solar-sampling">
+      <p><xref ref="walters2018factors"/> asked this RQ:</p>
+      <blockquote>
+        <p>What factors are preventing the adoption of household solar technologies in Santiago?</p>
+      </blockquote>
+      <ol>
+        <li><p>For this RQ, what is the <em>Population</em>?</p></li>
+        <li><p>The study will be <em>externally valid</em> if which of these statements is true?
+          (a) The sample is representative of all households in the world.
+          (b) The sample is representative of all solar technologies.
+          (c) The sample is representative of all households in Santiago.
+          (d) The sample is representative of all households in Chile.</p></li>
+        <li><p>Suppose the researchers mail surveys to all households in Santiago, and people return the survey if they wished to. What is the <em>best</em> description of this sampling method?</p></li>
+        <li><p>Suppose the researchers randomly select five suburbs in Santiago; then ten streets within each suburb; then ten households on each street. What is the <em>best</em> description of this sampling method?</p></li>
+      </ol>
+    </exercise>
+
+  </exercises>
+
 </chapter>

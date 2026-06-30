@@ -1,5 +1,780 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <chapter xml:id="ch-04-research-design-types" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Types of research studies</title>
-  <p>Skeleton for <em>04-ResearchDesign-TypesOfDesigns.Rmd</em>. Content to be added.</p>
+  <idx>Research design</idx>
+  <idx><h>Study types</h></idx>
+
+  <objectives xml:id="objectives-ch04">
+    <introduction>
+      <p>You have learnt how to ask an RQ and understand the main principles of research design.
+      <em>In this chapter</em>, you will learn to:</p>
+    </introduction>
+    <ul>
+      <li><p>identify and describe the types of quantitative research studies.</p></li>
+      <li><p>compare and distinguish experimental and observational studies.</p></li>
+      <li><p>describe and identify the directionality in observational studies.</p></li>
+      <li><p>describe and identify true experimental and quasi-experimental studies.</p></li>
+    </ul>
+  </objectives>
+
+
+  <section xml:id="sec-intro-ch04">
+    <title>Introduction</title>
+
+    <p>
+      <xref ref="ch-02-rqs"/> introduced four types of research questions: descriptive, relational, repeated-measures and correlational.
+      This chapter discusses the types of research studies needed to answer these RQs, while <xref ref="ch-05-research-design-ethics"/> to <xref ref="ch-09-collect"/> discuss the details of designing these studies and collecting the data.
+    </p>
+
+    <p>Different types of studies can be used to collect the data needed to answer RQs:</p>
+
+    <list><title/>
+      <ul>
+        <li><p><em>descriptive</em> studies (<xref ref="sec-descriptive-studies"/>) answer descriptive RQs.</p></li>
+        <li><p><em>observational</em> studies (<xref ref="sec-observational-studies"/>) answer RQs with an explanatory variable, but <em>no intervention</em>.<idx>Intervention</idx></p></li>
+        <li><p><em>experimental</em> studies (<xref ref="sec-experimental-studies"/>) answer RQs with an explanatory variable and <em>an intervention</em>.</p></li>
+      </ul>
+    </list>
+
+    <p>Observational and experimental studies are sometimes collectively called <em>analytical studies</em>.<idx><h>Study types</h><h>analytical</h></idx></p>
+
+  </section>
+
+
+  <section xml:id="sec-descriptive-studies">
+    <title>Descriptive studies</title>
+    <idx><h>Research question</h><h>descriptive</h></idx>
+    <idx><h>Study types</h><h>descriptive</h></idx>
+
+    <definition xml:id="def-descriptive-study">
+      <title>Descriptive study</title>
+      <statement>
+        <p><em>Descriptive studies</em> answer descriptive RQs.</p>
+      </statement>
+    </definition>
+
+    <p>Descriptive studies are not explicitly studied further, as the relevant ideas are present in the discussion of observational and experimental studies.</p>
+
+    <example xml:id="example-descriptive-study">
+      <title>Descriptive study</title>
+      <p>
+        <xref ref="lee2020practice"/> studied the percentage of people in Hong Kong wearing face masks in various situations.
+        A descriptive RQ is being asked: the population is <q>residents of Hong Kong</q>, and the outcome is (for example) <q>the percentage who wear face masks when taking care of family members with fever</q>.
+        Answering this RQ requires a <em>descriptive study</em>.
+      </p>
+    </example>
+
+  </section>
+
+
+  <section xml:id="sec-observational-studies">
+    <title>Observational studies</title>
+    <idx><h>Research question</h><h>relational</h></idx>
+    <idx><h>Research question</h><h>repeated-measures</h></idx>
+    <idx><h>Research question</h><h>correlational</h></idx>
+    <idx><h>Study types</h><h>observational</h></idx>
+
+    <p>
+      <em>Observational studies</em> are used for RQs with no intervention.
+      They are commonly-used, and sometimes are the only type of research design possible.
+      Observational studies do not have an intervention, and hence have <em>conditions</em><idx>Conditions</idx> (<xref ref="def-conditions"/>) rather than <em>treatments</em>.<idx>Treatments</idx>
+    </p>
+
+    <definition xml:id="def-observational-study">
+      <title>Observational study</title>
+      <statement>
+        <p><em>Observational studies</em> study relationships <em>without</em> an intervention.</p>
+      </statement>
+    </definition>
+
+    <image source="Illustrations/pexels-andrea-piacquadio-3807629.jpg" width="25%">
+      <description><p>Photograph of a person at a computer.</p></description>
+    </image>
+
+    <example xml:id="example-obs-relational-echinacea">
+      <title>Between-individuals observational study</title>
+      <p>Consider again this one-tailed, decision-making RQ (based on the ideas in <xref ref="sec-writing-rqs"/>):</p>
+      <blockquote>
+        <p>Among Australian teenagers with a common cold, is the average duration of cold symptoms <em>shorter</em> for teens taking a daily dose of echinacea compared to teens taking no medication?</p>
+      </blockquote>
+      <p>
+        This RQ has a <em>between-individuals</em> comparison<idx><h>Comparison</h><h>within individuals</h></idx>, so is a relational RQ.
+        If the researchers <em>do not</em> impose the taking of echinacea (that is, the individuals make this decision themselves), the study is observational.
+        The two <em>conditions</em><idx>Conditions</idx> are <q>taking echinacea</q>, and <q>not taking echinacea</q> (<xref ref="fig-obs-between"/>).
+      </p>
+    </example>
+
+    <figure xml:id="fig-obs-between">
+      <caption>Observational studies with a relational RQ. The dashed lines indicate steps not under the control of the researchers.</caption>
+      <image source="generated/ObsStudiesImageBetween-1.png" width="65%">
+        <description><p>A diagram of an observational study with a relational RQ showing two conditions: echinacea and no echinacea, with dashed lines indicating steps not under researcher control.</p></description>
+      </image>
+    </figure>
+
+    <example xml:id="example-obs-within-weight">
+      <title>Within-individuals observational study</title>
+      <p>
+        <xref ref="levitsky2004freshman"/> recorded the weights of university students at the beginning of university, and then after <m>12</m> weeks from the same students.
+        The comparison is <em>within</em> individuals; this is a <em>repeated-measures</em> (paired) RQ.<idx><h>Data</h><h>paired</h></idx><idx><h>Study types</h><h>paired</h></idx>
+        Since the researchers do not impose anything on the students, there is <em>no intervention</em> (<xref ref="fig-obs-within"/>).
+      </p>
+      <p>
+        The <em>outcome</em> is the average weight.
+        The <em>response variable</em> is the weight of individuals.
+        The <em>within-individuals comparison</em><idx><h>Comparison</h><h>within individuals</h></idx> is the week of the university semester (<m>1</m> and <m>12</m>).
+      </p>
+    </example>
+
+    <figure xml:id="fig-obs-within">
+      <caption>Observational studies with a repeated-measures RQ. The dashed lines indicate steps not under the control of the researchers.</caption>
+      <image source="generated/ObsStudiesImageWithin-1.png" width="75%">
+        <description><p>A diagram of an observational study with a repeated-measures RQ, showing weight measured at weeks 1 and 12 with dashed lines indicating steps not under researcher control.</p></description>
+      </image>
+    </figure>
+
+    <example xml:id="example-obs-correlational-knee">
+      <title>Correlational observational study</title>
+      <p>
+        <xref ref="poovaragavan2023estimation"/> explored the relationship between time since death, and the concentration of sodium in synovial (knee) fluid.
+        This is a correlational RQ as groups are not being compared.
+        The time since death is the explanatory variable, and the concentration of sodium in synovial fluid is the response variable.
+        The researchers do not impose the time since death, so there is <em>no intervention</em> (<xref ref="fig-obs-correlational"/>).
+      </p>
+    </example>
+
+    <figure xml:id="fig-obs-correlational">
+      <caption>Observational studies with a correlational RQ. The dashed lines indicate steps not under the control of the researchers.</caption>
+      <image source="generated/ObsStudiesImageCorrelational-1.png" width="65%">
+        <description><p>A diagram of an observational study with a correlational RQ, showing time since death as the explanatory variable and synovial sodium as the response variable, with dashed lines indicating steps not under researcher control.</p></description>
+      </image>
+    </figure>
+
+  </section>
+
+
+  <section xml:id="sec-experimental-studies">
+    <title>Experimental studies</title>
+    <idx><h>Research question</h><h>relational</h></idx>
+    <idx><h>Research question</h><h>repeated-measures</h></idx>
+    <idx><h>Research question</h><h>correlational</h></idx>
+    <idx><h>Study types</h><h>experimental</h></idx>
+
+    <introduction>
+    <p>
+      <em>Experimental studies</em>, or <em>experiments</em>, are used for RQs with an intervention, and are commonly-used.
+      Well-designed experimental studies can establish a <em>cause-and-effect relationship</em> between the response and explanatory variables.
+      However, using experimental studies is not always possible.
+      In general, well-designed experimental studies are more likely to be internally valid than observational studies.
+      Experimental studies have an intervention, and hence <em>treatments</em> (<xref ref="def-treatments"/>).
+    </p>
+
+    <definition xml:id="def-experiment">
+      <title>Experiment</title>
+      <statement>
+        <p><em>Experimental studies</em> (or <em>experiments</em>) study relationships <em>with</em> an intervention.</p>
+      </statement>
+    </definition>
+
+    <warning xml:id="warn-exp-unit-of-analysis">
+      <p>In an <em>experimental study</em>, the unit of analysis (<xref ref="def-unit-of-analysis"/>) is the smallest collection of units of observations that can be randomly allocated to separate treatments.</p>
+    </warning>
+
+    <example xml:id="example-exp-within-400m">
+      <title>Within-individuals experimental study</title>
+      <p>Consider this RQ:</p>
+      <blockquote>
+        <p>For obese men over <m>60</m> years-of-age, what is the average increase in heart rate after walking <m>400\ms</m>?</p>
+      </blockquote>
+      <p>
+        This RQ uses a <em>within-individuals comparison</em> (before and after walking <m>400\ms</m>) so is a repeated-measures (and paired) RQ.
+        The study has an intervention if researchers impose the <m>400\ms</m> walk on the subjects (<xref ref="fig-exp-within"/>).
+        The <em>outcome</em> is the average heart rate.
+        The <em>response variable</em> is the heart rate for each individual man.
+      </p>
+    </example>
+
+    <figure xml:id="fig-exp-within">
+      <caption>Experimental studies with a repeated-measures RQ. The dashed lines indicate steps not under the control of the researchers.</caption>
+      <image source="generated/ExpStudiesImageWithin-1.png" width="85%">
+        <description><p>A diagram of an experimental study with a repeated-measures RQ, showing heart rate measured before and after a 400 m walk intervention.</p></description>
+      </image>
+    </figure>
+
+    <example xml:id="example-exp-correlational-leaf">
+      <title>Correlational experimental study</title>
+      <p>
+        <xref ref="xu2023design"/> studied leaf-drip irrigation, exploring the relationship between the water pressure and flow rate.
+        This is a correlational RQ, where the hydraulic pressure time is the explanatory variable, and the flow rate is the response variable.
+        The researchers imposed nine different values for water pressure, so there is an intervention (<xref ref="fig-exp-correlational"/>).
+      </p>
+    </example>
+
+    <figure xml:id="fig-exp-correlational">
+      <caption>Experimental studies with a correlational RQ. The dashed lines indicate steps not under the control of the researchers.</caption>
+      <image source="generated/ObsStudiesImageCorrelationalintervention-1.png" width="65%">
+        <description><p>A diagram of an experimental study with a correlational RQ, showing water pressure as the explanatory variable and flow rate as the response variable.</p></description>
+      </image>
+    </figure>
+
+    <p><em>Between</em>-individuals experimental studies can be either <em>true experiments</em> (<xref ref="sec-true-experiments"/>) or <em>quasi-experiments</em> (<xref ref="sec-quasi-experiments"/>); see <xref ref="tab-experimental-study-designs"/>.</p>
+
+    <table xml:id="tab-experimental-study-designs">
+      <title>Comparing analytical designs with a between-individuals comparison.</title>
+      <tabular halign="center" top="medium" bottom="medium">
+        <col halign="right"/>
+        <col/>
+        <col/>
+        <col halign="left"/>
+        <row header="yes" bottom="medium">
+          <cell><em>Study type</em></cell>
+          <cell><em>Individuals allocated to groups?</em></cell>
+          <cell><em>Treatments allocated to groups?</em></cell>
+          <cell><em>Reference</em></cell>
+        </row>
+        <row>
+          <cell>Observational</cell>
+          <cell>No</cell>
+          <cell>No</cell>
+          <cell><xref ref="sec-observational-studies"/></cell>
+        </row>
+        <row>
+          <cell>True experiment</cell>
+          <cell>Yes</cell>
+          <cell>Yes</cell>
+          <cell><xref ref="sec-true-experiments"/></cell>
+        </row>
+        <row>
+          <cell>Quasi-experiment</cell>
+          <cell>No</cell>
+          <cell>Yes</cell>
+          <cell><xref ref="sec-quasi-experiments"/></cell>
+        </row>
+      </tabular>
+    </table>
+    </introduction>
+
+    <subsection xml:id="sec-true-experiments">
+      <title>True experimental studies</title>
+      <idx><h>Study types</h><h>experimental</h><h>true</h></idx>
+
+      <p>
+        <em>True experiments</em> are commonly used to answer relational RQs.
+        An example of a true experiment is a <em>randomised controlled trial</em>, often used in drug trials.
+      </p>
+
+      <definition xml:id="def-true-experiment">
+        <title>True experiment</title>
+        <statement>
+          <p>In a <em>true experiment</em>, the researchers:</p>
+          <list><title/>
+            <ol>
+              <li><p>allocate treatments to groups of individuals (i.e., allocate the values of the explanatory variable to the individuals), <em>and</em></p></li>
+              <li><p>determine who or what individuals are in those groups.</p></li>
+            </ol>
+          </list>
+          <p>While the steps may not happen <em>explicitly</em>, they happen <em>conceptually</em>.</p>
+        </statement>
+      </definition>
+
+      <image source="Illustrations/pexels-andrea-piacquadio-3807629.jpg" width="25%">
+        <description><p>Photograph of a person at a computer.</p></description>
+      </image>
+
+      <example xml:id="example-true-exp-echinacea">
+        <title>True experiment</title>
+        <p>
+          The echinacea study (<xref ref="sec-writing-rqs"/>) could be designed as a <em>true experiment</em>.
+          The researchers would allocate individuals to one of two groups, and then decide which group took echinacea and which group did not (<xref ref="fig-true-exp"/>).
+        </p>
+        <p>
+          These steps may happen implicitly: researchers may allocate each person at random to one of the two groups (echinacea; no echinacea).
+          This is still a true experiment, since the researchers could decide to switch which group receives echinacea; ultimately, the decision is still made by the researchers.
+        </p>
+      </example>
+
+      <figure xml:id="fig-true-exp">
+        <caption>True experimental studies: researchers allocate individuals to groups, and treatments to groups.</caption>
+        <image source="generated/TrueExpStudiesImage-1.png" width="65%">
+          <description><p>A diagram of a true experimental study showing researchers allocating individuals to two groups (echinacea and no echinacea) and treatments to those groups.</p></description>
+        </image>
+      </figure>
+
+    </subsection>
+
+
+    <subsection xml:id="sec-quasi-experiments">
+      <title>Quasi-experimental studies</title>
+      <idx><h>Study types</h><h>experimental</h><h>quasi</h></idx>
+
+      <p>Quasi-experiments are similar to true experiments (i.e., answer relational RQs) but treatments are <em>allocated</em> to groups that <em>already exist</em> (e.g., may be naturally occurring).</p>
+
+      <definition xml:id="def-quasi-experiment">
+        <title>Quasi-experiment</title>
+        <statement>
+          <p>In a <em>quasi-experiment</em>, the researchers:</p>
+          <list><title/>
+            <ol>
+              <li><p>allocate treatments to groups of individuals (i.e., allocate the values of the explanatory variable to the individuals), but</p></li>
+              <li><p>do <em>not</em> determine who or what individuals are in those groups.</p></li>
+            </ol>
+          </list>
+        </statement>
+      </definition>
+
+      <example xml:id="example-quasi-echinacea">
+        <title>Quasi-experiments</title>
+        <p>
+          The echinacea study (<xref ref="sec-writing-rqs"/>) could be designed as a quasi-experiment.
+          The researchers could <em>find</em> two existing groups of people (say, from Suburbs A and B), then decide to allocate people in Suburb A to take echinacea, and people in Suburb B to <em>not</em> take echinacea (<xref ref="fig-quasi-exp"/>).
+        </p>
+      </example>
+
+      <figure xml:id="fig-quasi-exp">
+        <caption>Quasi-experimental studies: researchers do not allocate individuals to groups, but do allocate treatments to groups. The dashed lines indicate steps not under the control of the researchers.</caption>
+        <image source="generated/QuasiExpStudiesImage-1.png" width="65%">
+          <description><p>A diagram of a quasi-experimental study showing researchers allocating treatments to existing groups (echinacea and no echinacea), with dashed lines indicating steps not under researcher control.</p></description>
+        </image>
+      </figure>
+
+      <example xml:id="example-quasi-alcohol">
+        <title>Quasi-experiments</title>
+        <p>
+          A researcher wants to examine the effect of an alcohol awareness program (based on <xref ref="macdonald2008enough"/>) on the average amount of alcohol consumed per student in a university Orientation Week.
+          She runs the program at University A only, then compares the average amount of alcohol consumed per person at two universities (A and B).
+        </p>
+        <p>
+          This study is a <em>quasi-experiment</em> since the researcher did not (and can not) determine the groups: the students (not the researcher) would have chosen University A or University B for many reasons.
+          However, the researcher <em>did</em> decide whether to allocate the program to University A or University B.
+        </p>
+      </example>
+
+    </subsection>
+
+  </section>
+
+
+  <section xml:id="sec-compare-study-types">
+    <title>Comparing study types</title>
+    <idx><h>Study types</h><h>compared</h></idx>
+
+    <p>
+      In <em>experimental</em> studies, researchers <em>create</em> differences in the values of the explanatory variable through allocation, and then note the effect this has on the values of the response variable.
+      In <em>observational</em> studies, researchers <em>observe</em> differences in the values of the explanatory variable, and observe the values of the response variable.
+    </p>
+
+    <p>
+      Importantly, <em>only well-designed true experiments can show cause-and-effect</em>.
+      Nonetheless, well-designed observational and quasi-experimental studies can provide evidence to <em>support</em> cause-and-effect conclusions, especially when supported by other evidence.
+      Although only true experimental studies can show cause-and-effect, true experimental studies are often not possible for ethical, financial, practical and/or logistical reasons.
+    </p>
+
+    <p>The advantages and disadvantages of each study type are discussed later (<xref ref="sec-interpret-study-design"/>), after these study types are discussed in greater detail in the following chapters.</p>
+
+    <example xml:id="example-autism">
+      <title>Cause and effect</title>
+      <p>
+        Many studies report that the bacteria in the gut of people on the autism spectrum is different from the bacteria in the gut of people <em>not</em> on the autism spectrum <xref ref="kang2019long"/> <xref ref="ho2020gut"/>, and suggest the bacteria may contribute whether a person is autistic.
+        These studies were observational, so the<idx>Cause and effect</idx>
+        suggestion of a cause-and-effect relationship may be inaccurate.
+      </p>
+      <p>
+        Other studies <xref ref="yap2021autism"/> suggest that people on the autism spectrum are more likely to be <q>picky eaters</q>, which contributes to the differences in gut bacteria.
+      </p>
+    </example>
+
+  </section>
+
+
+  <section xml:id="sec-directionality">
+    <title>Directionality in research studies</title>
+    <idx><h>Study types</h><h>directionality</h></idx>
+
+    <introduction>
+    <p>
+      Analytical research studies (observational; experimental) can be classified by their <em>directionality</em> (<xref ref="tab-types-obs-studies"/>).<idx><h>Study types</h><h>analytical</h></idx>
+    </p>
+
+    <list><title/>
+      <ul>
+        <li><p><em>Forward direction</em> (<xref ref="sec-forward-studies"/>):
+          the values of the explanatory variable are obtained, and the study determines what values of the response variable occur in the future.
+          <em>All experimental studies have a forward direction.</em></p></li>
+        <li><p><em>Backward direction</em> (<xref ref="sec-backward-studies"/>):
+          the values of the response variable are obtained, then the study determines what values of the explanatory variable occurred in the past.</p></li>
+        <li><p><em>No direction</em> (<xref ref="sec-nondirectional-studies"/>):
+          the values of the response and explanatory variables are obtained at the same time.</p></li>
+      </ul>
+    </list>
+
+    <p>
+      Directionality is important for understanding cause-and-effect relationships.
+      If the explanatory variable occurs <em>before</em> the outcome is observed, a cause-and-effect relationship <em>may</em> be possible.
+      That is, studies with a forward direction are more likely to provide evidence of causality.
+    </p>
+
+    <table xml:id="tab-types-obs-studies">
+      <title>Classifying observational studies. (Experimental studies have a forward direction.)</title>
+      <tabular halign="center" top="medium" bottom="medium">
+        <col halign="right"/>
+        <col/>
+        <col/>
+        <row header="yes" bottom="medium">
+          <cell><em>Type</em></cell>
+          <cell><em>Explanatory variable</em></cell>
+          <cell><em>Response variable</em></cell>
+        </row>
+        <row>
+          <cell>Forward direction</cell>
+          <cell>When study begins</cell>
+          <cell>Determined in the future</cell>
+        </row>
+        <row>
+          <cell>Backward direction</cell>
+          <cell>Determined from the past</cell>
+          <cell>When study begins</cell>
+        </row>
+        <row>
+          <cell>No direction</cell>
+          <cell>When study begins</cell>
+          <cell>When study begins</cell>
+        </row>
+      </tabular>
+    </table>
+
+    <example xml:id="example-backward-legionella">
+      <title>Directionality</title>
+      <p>
+        In South Australia in 1988<ndash/>1989, <m>25</m> cases of legionella infections (an unusually high number) were investigated.
+        All <m>25</m> cases were gardeners.
+      </p>
+      <p>
+        <xref ref="data-oconnor-pottingmix"/> compared <m>25</m> people with legionella infections with <m>75</m> similar people without the infection, and found that recent (past) use of potting mix was associated with an increase in the risk of contracting illness.
+      </p>
+      <p>This study has a backward <em>direction</em>: people were identified with an infection, and then the researchers looked <em>back</em> at past activities.</p>
+    </example>
+
+    <p>
+      <url href="https://learningapps.org/watch?v=p3i692osc22" visual="learningapps.org/watch?v=p3i692osc22">Interactive activity: classifying research designs.</url>
+    </p>
+
+    <p>
+      Research studies are sometimes described as <q>prospective</q><idx><h>Study types</h><h>prospective</h></idx> or <q>retrospective</q>,<idx><h>Study types</h><h>retrospective</h></idx> but these terms can be misleading <xref ref="ranganathan2018study"/> and their use not recommended <xref ref="VANDENBROUCKE20141500"/>.
+    </p>
+
+    <p><em>Experimental studies always have a forward direction.</em>
+    Observational studies may have any directionality, and may be given different names accordingly.</p>
+    </introduction>
+
+    <subsection xml:id="sec-forward-studies">
+      <title>Forward-directional studies</title>
+      <idx><h>Study types</h><h>directionality</h><h>forward</h></idx>
+
+      <p>
+        All experimental studies have a forward direction, and include <em>randomised controlled trials</em> (RCTs) and <em>clinical trials</em>.<idx>Clinical trials</idx><idx>Randomised controlled trials</idx>
+      </p>
+
+      <p>
+        Observational studies with a <em>forward</em> direction are often called <em>cohort studies</em>.<idx><h>Study types</h><h>directionality</h><h>forward</h></idx><idx><h>Study types</h><h>cohort studies</h></idx>
+        Both experimental studies and cohort studies can be expensive and tricky: tracking individuals (a <em>cohort</em>) into the future is not always easy, and the ability to track some individuals into the future may be lost (<em>drop-outs</em>):<idx>Drop outs</idx> plants or animals may die, people may move or decide to no longer participate, etc.
+        Forward-directional observational studies:
+      </p>
+
+      <list><title/>
+        <ul>
+          <li><p>may add support to cause-and-effect conclusions, since the comparison occurs <em>before</em> the outcome (only well-designed experimental studies can establish cause-and-effect).</p></li>
+          <li><p>can examine many outcomes in one study, since the outcome(s) occur in the future.</p></li>
+          <li><p>can be problematic for rare outcomes, as the outcome of interest may never (or rarely) appear in the future.</p></li>
+        </ul>
+      </list>
+
+      <example xml:id="example-forward-ngt">
+        <title>Forward study</title>
+        <p>
+          <xref ref="chih2018incidence"/> studied dogs and cats who had been recommended to receive intermittent nasogastric tube (NGT) aspiration for up to <m>36\hs</m>.
+          Some pet owners did not give permission for NGT, while some did; thus, whether the animal received NGT was <em>not</em> determined by the researchers (the study is observational).
+          The researchers then observed whether the animals developed hypochloremic metabolic alkalosis (HCMA) in the next <m>36\hs</m>.
+        </p>
+        <p>
+          Since the explanatory variable (whether NGT was used) was recorded at the start of the study, and the response variable (whether HCMA was observed) was determined within the following <m>36\hs</m>, this study has a <em>forward direction</em>.
+        </p>
+      </example>
+
+    </subsection>
+
+
+    <subsection xml:id="sec-backward-studies">
+      <title>Backward-directional studies</title>
+      <idx><h>Study types</h><h>directionality</h><h>backward</h></idx>
+
+      <p>
+        Observational studies with a <em>backward</em> direction are often called <em>case-control</em> studies.<idx><h>Study types</h><h>directionality</h><h>backward</h></idx><idx><h>Study types</h><h>case-control studies</h></idx>
+        The <q>cases</q> are often individuals with a certain disease, and then the controls are those without the disease (see <xref ref="example-backward-legionella"/>).
+        Researchers find individuals with specific values of the response variable (cases and controls), and determine values of the explanatory variable from the past.
+        Case-control studies:
+      </p>
+
+      <list><title/>
+        <ul>
+          <li><p>only allow one outcome to be studied, since individuals are chosen to be in the study based on the value of the response variable of interest.</p></li>
+          <li><p>are useful for rare outcomes, as the researchers can purposely select large numbers with the rare outcome of interest.</p></li>
+          <li><p>do not effectively eliminate other explanations for the relationship between the response and explanatory variables (<em>confounding</em>; <xref ref="def-confounding"/>).</p></li>
+          <li><p>may suffer from <em>selection bias</em> (<xref ref="sec-selection-bias"/>), as researchers purposively try to locate individuals with a rare outcome.<idx><h>Bias</h><h>selection</h></idx></p></li>
+          <li><p>may suffer from <em>recall bias</em> (<xref ref="sec-biases"/>) when the individuals are people: accurately recalling the past can be unreliable.<idx><h>Bias</h><h>recall</h></idx></p></li>
+        </ul>
+      </list>
+
+      <example xml:id="example-backward-smnd">
+        <title>Backwards study</title>
+        <p>
+          <xref ref="data-Pamphlett-toxins"/> examined patients with and without sporadic motor neurone disease (<acro>smnd</acro>), and asked about <em>past</em> exposure to metals.
+        </p>
+        <p>
+          The response variable (whether the respondent had <acro>smnd</acro>) is assessed when the study begins, and whether subjects had exposure to metals (explanatory variable) is determined from the <em>past</em>.
+          This observational study has a <em>backward</em> direction.
+        </p>
+      </example>
+
+    </subsection>
+
+
+    <subsection xml:id="sec-nondirectional-studies">
+      <title>Non-directional studies</title>
+      <idx><h>Study types</h><h>directionality</h><h>non-directional</h></idx>
+
+      <p>
+        <em>Non-directional</em> observational studies are called <em>cross-sectional</em> studies.<idx><h>Study types</h><h>directionality</h><h>non-directional</h></idx><idx><h>Study types</h><h>cross-sectional studies</h></idx>
+        Cross-sectional studies:
+      </p>
+
+      <list><title/>
+        <ul>
+          <li><p>are good for finding associations between variables (and these associations may or may not be causation).</p></li>
+          <li><p>are generally quicker and cheaper to conduct than other types of studies.</p></li>
+          <li><p>are not useful for studying rare outcomes.</p></li>
+          <li><p>do not effectively eliminate other explanations for the relationship between the response and explanatory variables (<em>confounding</em>; <xref ref="def-confounding"/>).</p></li>
+        </ul>
+      </list>
+
+      <example xml:id="example-nondirectional-food">
+        <title>Non-directional study</title>
+        <p>
+          <xref ref="data-Russell2014-FoodInsecurity"/> asked older Australians their opinions of their own food security, and recorded their living arrangements.
+          Individuals' responses to both the response variable and explanatory variable were gathered at the same time.
+          This observational study is <em>non-directional</em>.
+        </p>
+      </example>
+
+    </subsection>
+
+  </section>
+
+
+  <section xml:id="sec-design-importance">
+    <title>The role of research design</title>
+
+    <p>
+      Choosing the <em>type</em> of study is only one part of research design; many other decisions must be made also.
+      The purpose of these decisions is to ensure researchers can confidently study the relationship between the response and explanatory variables (<em>internal validity</em>) in the population of interest (<em>external validity</em>) from studying one of the many possible samples.
+      This is related to the idea of <em>bias</em>.<idx>Bias</idx>
+    </p>
+
+    <definition xml:id="def-bias">
+      <title>Bias</title>
+      <statement>
+        <p><em>Bias</em> refers to any systematic misrepresentation of the target population or a parameter caused by the sampling or the study design.</p>
+      </statement>
+    </definition>
+
+    <p>
+      Various types of bias are possible, some of which are studied later.
+      Maximising internal and external validity reduces bias.
+      Bias may occur during research design, sample selection (<xref ref="sec-selection-bias"/>), data collection (<xref ref="sec-selection-bias"/>), analysis, or interpretation of results (<xref ref="ch-interpretation"/>).
+      This book only discusses some possible biases.
+    </p>
+
+    <p>Designing a study to maximise <em>internal validity</em> means:</p>
+
+    <list><title/>
+      <ul>
+        <li><p>identifying <em>what else</em> might influence the values of the response variable, apart from the explanatory variable (<xref ref="ch-03-research-design-overview"/>).</p></li>
+        <li><p>designing the study to be <em>effective</em> (<xref ref="ch-07-research-design-internal"/>).</p></li>
+      </ul>
+    </list>
+
+    <p>In general, experimental studies have better internal validity than observational studies.</p>
+
+    <p>Designing a study to maximise <em>external validity</em> means:</p>
+
+    <list><title/>
+      <ul>
+        <li><p>identifying who or what to study, since the whole population cannot be studied (<xref ref="ch-06-research-design-sampling"/>).</p></li>
+        <li><p>determining <em>how many</em> individuals to study.
+          (We need to learn more before we can answer this critical question in <xref ref="ch-estimate-sample-size"/>.)</p></li>
+      </ul>
+    </list>
+
+    <p>
+      Details of the data <em>collection</em> (<xref ref="ch-09-collect"/>) and <em>ethical</em> issues (<xref ref="ch-05-research-design-ethics"/>) also form part of the study design.
+    </p>
+
+    <p>
+      <url href="https://www.youtube.com/embed/BKorP55Aqvg" visual="youtube.com/watch?v=BKorP55Aqvg">Video: the importance of understanding study design.</url>
+    </p>
+
+  </section>
+
+
+  <section xml:id="sec-chap4-summary">
+    <title>Chapter summary</title>
+
+    <p>
+      Three types of research studies are: <em>descriptive studies</em> (for studying descriptive RQs), <em>observational studies</em> (for studying relationships <em>without</em> an intervention), and <em>experimental</em> (for studying relationships <em>with</em> an intervention).
+    </p>
+
+    <p>
+      Observational studies can be classified as having a <em>forward direction</em> (cohort studies), <em>backward direction</em> (case-control studies), or <em>no direction</em> (cross-sectional studies).
+      Experimental studies always have a forward direction.
+      Relational RQs with an intervention can be classified as <em>true experiments</em> or <em>quasi-experiments</em>.
+      Cause-and-effect conclusions can only be made from well-designed <em>true experiments</em>.
+    </p>
+
+    <p>
+      Ideally studies should be designed to be <em>internally</em> and <em>externally</em> valid.
+      In general, experimental studies have better internal validity than observational studies.
+    </p>
+
+    <p>
+      The following short videos may help explain some of these concepts:
+      <url href="https://www.youtube.com/embed/eic_LjXT4qc" visual="youtube.com/watch?v=eic_LjXT4qc">Video: observational and experimental studies.</url>
+      <url href="https://www.youtube.com/embed/2N_bkiyTiXU" visual="youtube.com/watch?v=2N_bkiyTiXU">Video: types of research studies.</url>
+    </p>
+
+  </section>
+
+
+  <reading-questions xml:id="reading-questions-ch04">
+    <title>Quick review questions</title>
+
+    <exercise xml:id="rq-research-design-types">
+      <p>Are the following statements <em>true</em> or <em>false</em>?</p>
+      <ol>
+        <li><p><xref ref="fraboni2018red"/> studied the <q>red-light running behaviour of cyclists in Italy</q>. This study is most likely to be observational.</p></li>
+        <li><p>In a true experiment, the researchers apply treatments to groups that they have determined; in a quasi-experiment, the researchers apply treatments to groups that they have not determined.</p></li>
+        <li><p>In a quasi-experiment, the researchers allocate treatments to groups that they cannot manipulate.</p></li>
+        <li><p>True experiments generally have a higher internal validity than observational studies.</p></li>
+        <li><p>Observational studies generally have a higher external validity than quasi-experimental studies.</p></li>
+      </ol>
+    </exercise>
+
+  </reading-questions>
+
+
+  <exercises xml:id="exercises-ch04">
+
+    <introduction>
+      <p>Answers to odd-numbered exercises are given at the end of the book.</p>
+    </introduction>
+
+    <exercise xml:id="exercise-types-acute-otitis">
+      <p>Consider this RQ <xref ref="data-McLinn-otitis"/>:</p>
+      <blockquote>
+        <p>In children with acute otitis media, what is the difference in the average duration of symptoms when treated with cefuroxime compared to amoxicillin?</p>
+      </blockquote>
+      <ol>
+        <li><p>Is the comparison a within- or between-individuals comparison?</p></li>
+        <li><p>Is this RQ descriptive, relational, repeated-measures or correlational?</p></li>
+        <li><p>Is there likely an intervention?</p></li>
+        <li><p>Is the RQ an estimation or decision-making RQ?</p></li>
+        <li><p>Is the study observational or experimental? If observational, what is the <em>direction</em>? If experimental, is this a quasi-experiment or true experiment?</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="exercise-types-worms">
+      <p>
+        <xref ref="data-Khair2015-Earthworms"/> studied the time needed for organic waste to turn into compost.
+        For some batches of compost, earthworms were added.
+        In other batches, earthworms were <em>not</em> added to the waste.
+        One RQ asked whether the composting times for waste with and without earthworms was the same or not.
+      </p>
+      <ol>
+        <li><p>Is the comparison a within- or between-individuals comparison?</p></li>
+        <li><p>Is this RQ descriptive, relational, repeated-measures or correlational?</p></li>
+        <li><p>Is there an intervention?</p></li>
+        <li><p>Is the RQ an estimation or decision-making RQ?</p></li>
+        <li><p>Is the study observational or experimental? If observational, what is the <em>direction</em>? If experimental, is this a quasi-experiment or true experiment?</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="exercise-design-concrete-beams">
+      <p>
+        <xref ref="gonzalez2007shear"/> studied recycled concrete beams.
+        Beams were divided into three groups, different loads were then applied to each group, then the shear strength needed to fracture the beams was measured.
+        Is this a <em>quasi-experiment</em> or a <em>true experiment</em>? Explain.
+      </p>
+    </exercise>
+
+    <exercise xml:id="exercise-design-vap">
+      <p>
+        A research study compared the use of two different education programs to reduce the percentage of patients experiencing ventilator-associated pneumonia (VAP).
+        Paramedics from two cities were chosen to participate.
+        Paramedics in City A were allocated to receive Program 1, and paramedics in the other city to receive Program 2.
+      </p>
+      <ol>
+        <li><p>Is this RQ descriptive, relational, repeated-measures or correlational?</p></li>
+        <li><p>Is the comparison a within- or between-individuals comparison?</p></li>
+        <li><p>Is there likely an intervention?</p></li>
+        <li><p>Is the study observational or experimental? If observational, what is the <em>direction</em>? If experimental, is this a quasi-experiment or true experiment?</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="exercise-design-mattresses">
+      <p>
+        <xref ref="data-Manzano2013-Matresses"/> compared <q>the effectiveness of alternating pressure air mattresses vs. overlays, to prevent pressure ulcers</q> (p. <m>2\,099</m>).
+        Patients were <em>provided</em> with alternating pressure air overlays (in 2001) or alternating pressure air mattresses (in 2006).
+        The number of pressure ulcers were recorded.
+      </p>
+      <p>This study is experimental, because the researchers <em>provided</em> the mattresses. Is this a <em>true</em> experiment or <em>quasi</em>-experiment? Explain.</p>
+    </exercise>
+
+    <exercise xml:id="exercise-design-diets">
+      <p>
+        <xref ref="data-sacks-weightloss"/> compared four weight-loss diets, using <m>811</m> overweight adults each randomly assigned to one diet.
+        The diets used comparable foods.
+        The authors state (p. 859):
+      </p>
+      <blockquote>
+        <p>The primary outcome was the change in body weight after <m>2</m> years in [<ellipsis/>] comparisons of low fat versus high fat and average protein versus high protein and in the comparison of highest and lowest carbohydrate content.</p>
+      </blockquote>
+      <ol>
+        <li><p>What is the <em>between</em>-individuals comparison?</p></li>
+        <li><p>What is the <em>within</em>-individuals comparison?</p></li>
+        <li><p>Is this study observational or experimental? Why?</p></li>
+        <li><p>Is this study a quasi-experiment or a true experiment? Why?</p></li>
+        <li><p>What are the units of analysis?</p></li>
+        <li><p>What are the units of observation?</p></li>
+        <li><p>What is the response variable?</p></li>
+        <li><p>What is the explanatory variable?</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="exercise-design-pets">
+      <p>Consider this initial RQ (based on <xref ref="friedmann1985health"/>), that clearly needs refining: <q>Are people with pets healthier?</q></p>
+      <ol>
+        <li><p>Briefly describe useful and practical definitions for P, O and C.</p></li>
+        <li><p>Briefly describe an <em>experimental</em> study to answer the RQ.</p></li>
+        <li><p>Briefly describe an <em>observational</em> study to answer the RQ.</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="exercise-design-seeds">
+      <p>Consider this initial RQ, that clearly needs refining: <q>Are seeds more likely to sprout when a seed-raising mix is used?</q></p>
+      <ol>
+        <li><p>Briefly describe useful and practical definitions for P, O and C.</p></li>
+        <li><p>Briefly describe an <em>experimental</em> study to answer the RQ.</p></li>
+        <li><p>Briefly describe an <em>observational</em> study to answer the RQ.</p></li>
+      </ol>
+    </exercise>
+
+  </exercises>
+
 </chapter>
