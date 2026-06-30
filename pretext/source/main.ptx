@@ -1,47 +1,80 @@
 <?xml version='1.0' encoding='utf-8'?>
-<!-- This is the main file of the pretext template book provided -->
-<!-- by the <c>pretext new book</c> command.  The main.ptx here always-->
-<!-- starts with <pretext> tags.  In this example, the main file -->
-<!-- just imports other .ptx files which contain content. Open   -->
-<!-- those files to see more pretext features                    -->
-
 <pretext xml:lang="en-US" xmlns:xi="http://www.w3.org/2001/XInclude">
 
-  <!-- we first include a file which contains the docinfo element: -->
   <xi:include href="./meta_docinfo.ptx" />
 
-  <!-- The <book> tags wrap all the content.  Change the @xml:id   -->
-  <!-- to some short (non-spaced) description of your book         -->
-  <book xml:id="book-id-here">
-    <!-- The book needs a title and can have a subtitle  -->
-    <title>Title</title>
-    <subtitle>Subtitle</subtitle>
+  <book xml:id="srm-textbook">
+    <title>Scientific Research and Methodology</title>
+    <subtitle>An introduction to quantitative research and statistics</subtitle>
 
-    <!-- Now we include files containing each main devision.       -->
-
-    <!-- First a frontmatter for prefaces and such. Maybe comment  -->
-    <!-- out for now and write this when the book is more complete -->
     <xi:include href="./meta_frontmatter.ptx" />
 
-    <!-- Introduction chapter -->
-    <xi:include href="./ch_intro.ptx" />
+    <!-- Chapter 1 appears before the first named Part -->
+    <xi:include href="./ch_01_introduction.ptx" />
 
-    <!-- Additional chapters will be added here as the book develops -->
+    <part xml:id="part-asking-rqs">
+      <title>Asking the Research Question</title>
+      <xi:include href="./ch_02_rqs.ptx" />
+    </part>
 
-    <!-- This chapter contains a wide variety of elements to  -->
-    <!-- illustrate what pretext can do, plus links to more help.  -->
-    <!-- We recommend keeping this handy, and commenting it out    -->
-    <!-- when you show off your own work.                          -->
-    <!-- <xi:include href="./ch_features.ptx" /> -->
-  
-    <!-- This chapter includes several features that require pregeneration   -->
-    <!-- of assets with <c>pretext generate</c> or similar. Some features require -->
-    <!-- internet access; others require local installs not automatically    -->
-    <!-- provided by the CLI. Uncomment to view this chapter, and comment    -->
-    <!-- features you don't wish to generate.                                -->
-    <!-- <xi:include href="./ch_generate.ptx" /> -->
+    <part xml:id="part-research-design">
+      <title>Research Design</title>
+      <xi:include href="./ch_03_research_design_overview.ptx" />
+      <xi:include href="./ch_04_research_design_types.ptx" />
+      <xi:include href="./ch_05_research_design_ethics.ptx" />
+      <xi:include href="./ch_06_research_design_sampling.ptx" />
+      <xi:include href="./ch_07_research_design_internal.ptx" />
+      <xi:include href="./ch_08_research_design_limitations.ptx" />
+    </part>
 
-    <!-- Finaly we place the backmatter in its own file and inlcude-->
+    <part xml:id="part-collecting-data">
+      <title>Collecting Data</title>
+      <xi:include href="./ch_09_collect.ptx" />
+    </part>
+
+    <part xml:id="part-classifying-summarising">
+      <title>Classifying and Summarising Data</title>
+      <xi:include href="./ch_10_describing_variables.ptx" />
+      <xi:include href="./ch_11_summary_quant.ptx" />
+      <xi:include href="./ch_12_summary_qual.ptx" />
+      <xi:include href="./ch_13_compare_within.ptx" />
+      <xi:include href="./ch_14_compare_quant.ptx" />
+      <xi:include href="./ch_15_compare_qual.ptx" />
+      <xi:include href="./ch_16_connections_two_quant.ptx" />
+      <xi:include href="./ch_17_summary_comments.ptx" />
+    </part>
+
+    <part xml:id="part-tools">
+      <title>Tools for Answering Research Questions</title>
+      <xi:include href="./ch_18_tools_probability.ptx" />
+      <xi:include href="./ch_19_tools_sampling_variation.ptx" />
+      <xi:include href="./ch_20_tools_distributions.ptx" />
+    </part>
+
+    <part xml:id="part-analysis">
+      <title>Analysis</title>
+      <xi:include href="./ch_21_inference_intro.ptx" />
+      <xi:include href="./ch_22_cis_one_proportion.ptx" />
+      <xi:include href="./ch_23_cis_one_mean.ptx" />
+      <xi:include href="./ch_24_cis_more.ptx" />
+      <xi:include href="./ch_25_tools_decision_making.ptx" />
+      <xi:include href="./ch_26_testing_one_proportion.ptx" />
+      <xi:include href="./ch_27_testing_one_mean.ptx" />
+      <xi:include href="./ch_28_testing_more.ptx" />
+      <xi:include href="./ch_29_cis_testing_mean_difference.ptx" />
+      <xi:include href="./ch_30_cis_testing_two_means.ptx" />
+      <xi:include href="./ch_31_cis_testing_odds_ratios.ptx" />
+      <xi:include href="./ch_32_sample_size.ptx" />
+      <xi:include href="./ch_33_correlation_regression.ptx" />
+      <xi:include href="./ch_34_testing_selecting.ptx" />
+    </part>
+
+    <part xml:id="part-reporting">
+      <title>Reporting and Reading Research</title>
+      <xi:include href="./ch_35_write.ptx" />
+      <xi:include href="./ch_36_read.ptx" />
+    </part>
+
     <xi:include href="./meta_backmatter.ptx" />
   </book>
 </pretext>

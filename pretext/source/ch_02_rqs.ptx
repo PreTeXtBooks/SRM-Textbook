@@ -1,0 +1,1884 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xml:id="ch-02-rqs" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Research questions</title>
+
+  <objectives xml:id="objectives-ch02">
+    <introduction><p>In this chapter, you will learn to:</p></introduction>
+    <ul>
+      <li><p>identify the types of research questions: descriptive, relational, repeated-measures, and correlational.</p></li>
+      <li><p>identify the population, outcome, comparison and intervention (POCI) in a research question.</p></li>
+      <li><p>distinguish between response and explanatory variables.</p></li>
+      <li><p>identify the units of observation and units of analysis.</p></li>
+      <li><p>distinguish between conceptual and operational definitions.</p></li>
+    </ul>
+  </objectives>
+
+
+  <section xml:id="sec-chap2-intro">
+    <title>Introduction</title>
+
+    <p>
+      The research question (RQ) directs all other components of the research.
+      Since quantitative research summarises and analyses data using numerical methods (like averages or percentages), the RQ must be <em>written</em> carefully so it can be <em>answered</em> effectively.
+      Four different types of RQs are studied:
+    </p>
+
+    <list><title/>
+      <ul>
+        <li><p>descriptive RQs (<xref ref="sec-rqs-descriptive"/>).</p></li>
+        <li><p>relational RQs (<xref ref="sec-rqs-relational"/>).</p></li>
+        <li><p>repeated-measures RQs (<xref ref="sec-rqs-repeated-measures"/>).</p></li>
+        <li><p>correlational RQs (<xref ref="sec-rqs-correlational"/>).</p></li>
+      </ul>
+    </list>
+
+    <p>
+      Since the RQ directs all other components of the research, writing RQs should be the first step of any research study.
+      Specifically, RQs should be asked before data are collected.
+    </p>
+
+    <warning xml:id="warn-rqs-before-data">
+      <p>RQs should be written <em>before data are collected</em>.</p>
+    </warning>
+
+  </section>
+
+
+  <section xml:id="sec-rqs-descriptive">
+    <title>Descriptive RQs</title>
+    <idx><h>Research question</h><h>descriptive</h></idx>
+
+    <p>
+      All RQs identify a large group of interest to be studied (called a <em>population</em>),<idx>Population</idx>
+      and study something <em>about</em> that population (called the <em>outcome</em>).<idx>Outcome</idx>
+    </p>
+
+    <p>The population is any broad group of interest; for example:</p>
+
+    <list><title/>
+      <ul>
+        <li><p>all German males between <m>18</m> and <m>35</m> years of age.</p></li>
+        <li><p>all bamboo flooring materials manufactured in China.</p></li>
+        <li><p>all elderly females with glaucoma in Canada.</p></li>
+        <li><p>all <em>Pinguicula grandiflora</em> growing in Europe.</p></li>
+      </ul>
+    </list>
+
+    <definition xml:id="def-population">
+      <title>Population</title>
+      <statement>
+        <p><idx>Population</idx><idx>Individuals</idx>
+          A <em>population</em> is a group of <em>individuals</em> from which the total set of observations of interest <em>could</em> be made, and to which the results will generalise.
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      Populations comprise many <em>individuals</em> (or <em>cases</em>).<idx>Individuals</idx><idx>Cases</idx>
+      If the individuals are people, individuals may also be called <em>subjects</em>.<idx>Subjects</idx>
+    </p>
+
+    <warning xml:id="warn-population-not-people">
+      <p>
+        The words <em>population</em>, <em>individuals</em> and <em>cases</em> do <em>not</em> just refer to people, though they may be commonly used that way in general conversation.
+      </p>
+    </warning>
+
+    <p>
+      Data are rarely taken from all the individuals in the population: <em>all</em> individuals are rarely accessible in practice.
+      For example, testing a new drug cannot possibly study <em>all</em> people who might use the drug (some may not even be born yet).
+      In contrast, a <em>sample</em> is a <em>subset</em> of the population from which data are obtained (<xref ref="ch-sampling"/>).
+      Countless samples are possible from any given population, but only one is studied.
+    </p>
+
+    <definition xml:id="def-sample">
+      <title>Sample</title>
+      <statement>
+        <p><idx>Sample</idx>
+          A <em>sample</em> is a subset of individuals from the population.
+          The data are collected from the sample.
+        </p>
+      </statement>
+    </definition>
+
+    <warning xml:id="warn-population-not-just-studied">
+      <p>
+        The <em>population</em> in an RQ is <em>not</em> just those studied; it is the whole group to which results could generalise.
+      </p>
+    </warning>
+
+    <example xml:id="example-samples">
+      <title>Samples</title>
+      <p>
+        A study of American college women <xref ref="data-woolf-ironstatus"/> compared iron status in highly-active and sedentary women.
+      </p>
+      <p>
+        The study compared <m>28</m> active and <m>28</m> sedentary American college women, from which data were collected.
+        The <em>population</em> was <em>all</em> active and sedentary American college women.
+        The group of <m>56</m> subjects was the <em>sample</em>.
+      </p>
+    </example>
+
+    <p>
+      Descriptive RQs study something <em>about</em> the identified population, called the <em>outcome</em>.
+      Because the RQ concerns a large group (the population), the outcome numerically describes a <em>group</em> of individuals (not single individuals).
+      The outcome is, for example, an <em>average</em><idx>Averages</idx> or <em>proportion</em><idx>Proportions</idx> summarising a group of individuals.
+    </p>
+
+    <definition xml:id="def-outcome">
+      <title>Outcome</title>
+      <statement>
+        <p><idx>Outcome</idx>
+          The <em>outcome</em> in an RQ is the result, output, consequence or effect of interest in a study, numerically summarised for a group of individuals.
+        </p>
+      </statement>
+    </definition>
+
+    <p>The outcome of interest in a population may be (for example) the</p>
+
+    <list><title/>
+      <ul>
+        <li><p><em>average</em> amount of wear after <m>1\,000\hs</m> of use.</p></li>
+        <li><p><em>proportion</em> of people whose pupils dilate.</p></li>
+        <li><p><em>average</em> weight loss after three weeks on a diet.</p></li>
+        <li><p><em>percentage</em> of seedlings that die.</p></li>
+      </ul>
+    </list>
+
+    <warning xml:id="warn-outcome-summarises-population">
+      <p><idx>Outcome</idx><idx>Population</idx><idx>Individuals</idx>
+        The <em>outcome</em> in an RQ summarises a <em>population</em>; it does not describe the <em>individuals</em> in the population.
+      </p>
+    </warning>
+
+    <p>Descriptive RQs can now be introduced.</p>
+
+    <definition xml:id="def-descriptive-rq">
+      <title>Descriptive RQ</title>
+      <statement>
+        <p><em>Descriptive RQs</em> have a population and an outcome.</p>
+      </statement>
+    </definition>
+
+    <p>
+      Some RQs ask about the <em>value</em> of some population quantity (such as: what is the average internal body temperature?); these are called <em>estimation</em> RQs.
+      Some RQs require <em>making a decision</em> about the population (such as: is the average internal body temperature the same for females and males?); these are called <em>decision-making</em> RQs.
+      Descriptive RQs have one of these forms, depending on what information is sought (<xref ref="sec-two-purposes-of-rqs"/>):
+    </p>
+
+    <list><title/>
+      <ul>
+        <li><p><em>estimation</em> RQs: Among {<em>the population</em>}, what is {<em>the outcome</em>}?<idx><h>Research question</h><h>estimation</h></idx></p></li>
+        <li><p><em>decision-making</em> RQs: Among {<em>the population</em>}, is {<em>the outcome</em>} equal to {<em>a given value</em>}?<idx><h>Research question</h><h>decision-making</h></idx></p></li>
+      </ul>
+    </list>
+
+    <warning xml:id="warn-templates-not-recipes">
+      <p>These templates are <em>not</em> <q>recipes</q>, but guidelines.</p>
+    </warning>
+
+    <p>
+      Answering <em>estimation</em> descriptive RQs is studied in <xref ref="ch-ci-one-proportion"/> and <xref ref="ch-one-mean-conf-interval"/>.
+      Answering <em>decision-making</em> descriptive RQs is studied in <xref ref="ch-test-one-proportion"/> and <xref ref="ch-test-one-mean"/>.
+    </p>
+
+    <example xml:id="example-descriptive-rq-body-temp">
+      <title>Descriptive RQ</title>
+      <p>
+        <xref ref="data-mackowiak-bodytemp"/> studied men and women aged <m>18</m> to <m>40</m>; this is the <em>population</em>.
+        The <em>outcome</em> of interest in this population is the <em>average body temperature</em>.
+        The sample comprised <m>148</m> <q>healthy men and women</q> aged <m>18</m> to <m>40</m>.
+        One descriptive RQ was:
+      </p>
+      <blockquote>
+        <p>What is the average body temperature?</p>
+      </blockquote>
+      <p>
+        This is an <em>estimation</em> RQ.
+        They also studied a <em>decision-making</em> descriptive RQ (where <m>98.6^{\circ}\text{F}</m> (or <m>37.0^{\circ}\text{C}</m>) is a commonly-accepted value for the internal body temperature):
+      </p>
+      <blockquote>
+        <p>Is the average body temperature really <m>98.6^{\circ}\text{F}</m> (<m>37.0^{\circ}\text{C}</m>)?</p>
+      </blockquote>
+    </example>
+
+  </section>
+
+
+  <section xml:id="sec-rqs-relational">
+    <title>Relational RQs</title>
+    <idx><h>Research question</h><h>relational</h></idx>
+
+    <p>
+      Studying relationships usually is more interesting than simply describing a population.
+      <em>Relational RQs</em> compare the outcome for groups of different individuals in the population, or compare two different sub-populations.
+      These comparisons are called <em>between-individuals</em> comparisons,<idx><h>Comparison</h><h>between individuals</h></idx>
+      as they compare the outcome <em>between</em> (or among) groups of <em>different</em> individuals.
+      Examples include:
+    </p>
+
+    <list><title/>
+      <ul>
+        <li><p>comparing the average amount of wear in floorboards <em>between</em> two different groups: standard wooden floorboards, and bamboo floorboards.</p></li>
+        <li><p>comparing the average heart rate <em>across</em> three groups of people: those not receiving the drug, those receiving a weekly dose, and those receiving a daily dose of the drug.</p></li>
+      </ul>
+    </list>
+
+    <definition xml:id="def-comparison-between">
+      <title>Comparison (between individuals)</title>
+      <statement>
+        <p>
+          The <em>between-individuals comparison</em> in an RQ identifies the small number of groups of different individuals for which the outcome is compared.
+        </p>
+      </statement>
+    </definition>
+
+    <example xml:id="example-between-possums">
+      <title>Between-individuals comparison</title>
+      <p>
+        <xref ref="data-Williams2022-Possums"/> compared the average weight of female and male Leadbeater's possums.
+        <q>Sex of the possum</q> is the <em>between-individuals</em> comparison; average weight is the outcome.
+      </p>
+    </example>
+
+    <p>Relational RQs can now be introduced.</p>
+
+    <definition xml:id="def-relational-rq">
+      <title>Relational RQ</title>
+      <statement>
+        <p><em>Relational RQs</em> have a population, outcome, and a <em>between</em>-individuals comparison.</p>
+      </statement>
+    </definition>
+
+    <p>Relational RQs have one of these forms, depending on what information is sought:</p>
+
+    <list><title/>
+      <ul>
+        <li><p><em>estimation</em> RQ: Among {<em>the population</em>}, what is the difference in {<em>the outcome</em>} for {<em>the groups being compared</em>}?</p></li>
+        <li><p><em>decision-making</em> RQ: Among {<em>the population</em>}, is {<em>the outcome</em>} the same for {<em>the groups being compared</em>}?</p></li>
+      </ul>
+    </list>
+
+    <example xml:id="example-relational-rq">
+      <title>Relational RQ</title>
+      <p>Consider this RQ (based on <xref ref="estevez2019influence"/>):</p>
+      <blockquote>
+        <p>Among Cubans between <m>13</m> and <m>20</m> years of age, is the average heart rate the same for females and males?</p>
+      </blockquote>
+      <p>
+        The <em>population</em> is <q>Cubans <m>13</m> and <m>20</m> years of age</q>, the <em>outcome</em> is <q><em>average</em> heart rate</q>, and the <em>between-individuals comparison</em> is between two separate groups: <q>between females and males</q>.
+        This is a <em>relational RQ</em>.
+      </p>
+      <p>
+        This is a <em>decision-making RQ</em>,<idx><h>Research question</h><h>decision-making</h></idx>
+        since it asks if the average heart rate is the same for females and males.
+        An <em>estimation</em>-type relational RQ would ask about the <em>size</em> of difference in the average heart rate between females and males.
+      </p>
+    </example>
+
+  </section>
+
+
+  <section xml:id="sec-rqs-repeated-measures">
+    <title>Repeated-measures RQs</title>
+    <idx><h>Research question</h><h>repeated-measures</h></idx>
+
+    <p>
+      Rather than comparing the outcome for groups of different individuals, <em>repeated-measures RQs</em> compare the outcome multiple times within the <em>same</em> individuals.
+    </p>
+
+    <p>
+      These comparisons are called <em>within-individuals</em> comparisons,<idx><h>Comparison</h><h>within individuals</h></idx>
+      as they compare the outcome <em>within the same individuals</em>, not across groups of <em>different</em> individuals.
+      The multiple measurements may be different points in time (e.g., the height of the same trees at one, two and five years after planting), but do not have to be time points.
+    </p>
+
+    <p>Examples include:</p>
+
+    <list><title/>
+      <ul>
+        <li><p>comparing the average strength of hind legs of horses to the forelegs of the same horses.</p></li>
+        <li><p>comparing the average thickness of the cornea in left eyes and right eyes of the same individuals.</p></li>
+        <li><p>comparing the average amount of wear in many individual floorboards after one, five and ten years of use.</p></li>
+      </ul>
+    </list>
+
+    <definition xml:id="def-comparison-within">
+      <title>Within-individuals comparison</title>
+      <statement>
+        <p>
+          The <em>within-individuals comparison</em> in the RQ identifies the small number of different, distinct situations for which the outcome is compared for each individual.
+        </p>
+      </statement>
+    </definition>
+
+    <example xml:id="example-within-between-comparison">
+      <title>Between- and within-individual comparisons</title>
+      <p>Consider comparing the strength of the dominant and non-dominant legs of professional football players.</p>
+      <p>
+        A <em>between</em>-individuals comparison would compare the average strengths of the dominant and non-dominant legs <em>between different</em> groups of footballers: one group would have their dominant-leg strength measured, and the other would have their non-dominant-leg strength measured.
+        This is a <em>between</em>-individuals comparison.
+      </p>
+      <p>
+        In contrast, the strengths of the dominant and non-dominant legs could be recorded on the <em>same</em> individuals.
+        This study examines <em>within</em>-individuals changes: the average differences between the strengths of the dominant and non-dominant legs <em>within</em> the same individuals.
+        In this study, <em>no between-individuals comparison</em> exists: different groups are not being compared.
+      </p>
+    </example>
+
+    <p>
+      Studies may use <em>both</em> within- and between-individuals comparisons (see <xref ref="sec-chamomile-tea-two-means"/>).
+      For instance, a study may examine the <em>change</em> in individuals' heart rate (the <em>within</em>-individuals comparison), for two drugs given to different groups (the <em>between</em>-groups comparison).
+    </p>
+
+    <p>Repeated-measures RQs can now be introduced.</p>
+
+    <definition xml:id="def-repeated-measures-rq">
+      <title>Repeated-measures RQ</title>
+      <statement>
+        <p><em>Repeated-measures RQs</em> have a population, outcome and a <em>within</em>-individuals comparison.</p>
+      </statement>
+    </definition>
+
+    <p>Repeated-measures RQs have one of these forms, depending on what information is sought:</p>
+
+    <list><title/>
+      <ul>
+        <li><p><em>estimation</em> RQ: Among {<em>the population</em>}, what is the change in {<em>the outcome</em>} for {<em>the alternatives being compared within individuals</em>}?</p></li>
+        <li><p><em>decision-making</em> RQ: Among {<em>the population</em>}, is {<em>there a change in the outcome</em>} for {<em>the alternatives being compared within individuals</em>}?</p></li>
+      </ul>
+    </list>
+
+    <example xml:id="example-within-relational-rq">
+      <title>Repeated-measure RQ</title>
+      <p><xref ref="rowland2017comparing"/> compared the temperature in the <em>same</em> tree hollows in summer and winter:</p>
+      <blockquote>
+        <p>For tree hollows in the Strathbogie Ranges, Australia, what is the average temperature difference between summer and winter?</p>
+      </blockquote>
+      <p>
+        The comparison is <em>within individuals</em>, as the temperature is measured for the <em>same</em> tree hollows at the two times.
+        This is a repeated-measures, estimation-type RQ.
+      </p>
+    </example>
+
+    <p>
+      Repeated-measures RQs with only two within-individual comparisons are often called <em>paired</em>.<idx><h>Data</h><h>paired</h></idx><idx><h>Study types</h><h>paired</h></idx>
+    </p>
+
+    <example xml:id="example-repeated-measures-paired">
+      <title>Paired repeated-measures study</title>
+      <p>
+        <xref ref="levitsky2004freshman"/> compared the weights of the same university students at the beginning of university, and then after <m>12</m> weeks.
+        The comparison is <em>within</em> individuals, and the study is a <em>repeated-measures</em> study.
+        Since each student has a <em>pair</em> of weight measurements, this is a <em>paired</em> study.
+      </p>
+    </example>
+
+  </section>
+
+
+  <section xml:id="sec-variables">
+    <title>Variables</title>
+    <idx>Variables</idx>
+
+    <p>
+      RQs are about <em>populations</em>.
+      However, the data to answer an RQ come from <em>individuals</em> in that population.
+      The aspects or characteristics that can <em>vary</em> are called <em>variables</em>.
+    </p>
+
+    <definition xml:id="def-variable">
+      <title>Variable</title>
+      <statement>
+        <p>A <em>variable</em> is a single aspect or characteristic, associated with the individuals, whose values can vary.</p>
+      </statement>
+    </definition>
+
+    <example xml:id="example-variables-2">
+      <title>Variables</title>
+      <p>Examples of variables include: the duration of cold symptoms; sex; tree girth; response to a survey question (Yes, Maybe, No); city of birth; hair colour.</p>
+    </example>
+
+    <p>
+      Some variables change from one individual to another individual, such as sex and height.
+      These are called <em>between</em>-individuals variables.
+      In repeated-measures studies, some variables of interest change over repeated measurements from the same individuals; these are called <em>within</em>-individuals variables.
+    </p>
+
+    <definition xml:id="def-between-within-variable">
+      <title>Between- and within-individuals variables</title>
+      <statement>
+        <p>
+          <em>Between</em>-individuals variables vary from one individual to another individual.<idx><h>Variables</h><h>between-individuals</h></idx>
+          <em>Within</em>-individuals variables vary from one recording or measurement to another <em>within</em> the same individuals.<idx><h>Variables</h><h>within-individuals</h></idx>
+        </p>
+      </statement>
+    </definition>
+
+    <warning xml:id="warn-between-variable-city">
+      <p>
+        A between-individuals variable is a single aspect that can vary from <em>individual to individual</em>.
+        While <em>your</em> city of birth does not change, <q>city of birth</q> is a variable because it varies from <em>individual</em> to <em>individual</em>.
+      </p>
+    </warning>
+
+    <example xml:id="example-within-individuals-variables">
+      <title>Within-individuals variables</title>
+      <p>
+        <xref ref="rowland2017comparing"/> compared the temperature in the <em>same</em> tree hollows in summer and winter (<xref ref="example-within-relational-rq"/>).
+        The comparison is <em>within individuals</em>: the temperature is measured for the <em>same</em> tree hollows (the <em>individuals</em>) at two different times.
+      </p>
+      <p>
+        <q>Season</q> is a within-individuals variable, as each tree hollow is studied for two different seasons.
+        <q>Temperature</q> is also a within-individuals variable, as it is measured twice for each tree hollow.
+      </p>
+    </example>
+
+    <example xml:id="example-between-possums-2">
+      <title>Between-individuals comparison</title>
+      <p>
+        <xref ref="data-Williams2022-Possums"/> compared the average weight of female and male Leadbeater's possums (<xref ref="example-between-possums"/>).
+      </p>
+      <p>
+        <q>Sex of the possum</q> is a <em>between-individuals</em> variable; it can vary from possum to possum.
+        <q>Weight</q> is also a <em>between-individuals</em> variable; it can vary from possum to possum.
+      </p>
+    </example>
+
+    <image source="Illustrations/pexels-andrea-piacquadio-3807629.jpg" width="25%">
+      <description><p>Photograph of a person with a cold.</p></description>
+    </image>
+
+    <example xml:id="example-variables">
+      <title>Variables</title>
+      <p>
+        <q>Duration of cold symptoms</q> is a between-individuals <em>variable</em>: its value can vary from individual to individual.
+        The <q><em>average</em> duration of cold symptoms</q> is the <em>outcome</em>, a numerical summary of many individuals' cold durations.
+      </p>
+    </example>
+
+    <p>
+      While many variables can be recorded, two essential variables are (<xref ref="tab-rqs-population-individuals"/>):
+    </p>
+
+    <list><title/>
+      <ul>
+        <li><p>the <em>response variable</em>, which records information to determine the outcome.<idx>Response variable</idx></p></li>
+        <li><p>the <em>explanatory variable</em>, which records information to determine the comparison.<idx>Explanatory variable</idx></p></li>
+      </ul>
+    </list>
+
+    <p>
+      Usually, one variable can be considered as perhaps influencing the value of the other variable.
+      This variable is called the <em>explanatory variable</em> (which may <em>explain</em> changes in the other variable).
+      The other is the <em>response variable</em> (whose values <em>respond</em> to changes in the explanatory variable).
+      To be able to influence the response variable, the explanatory variable must occur before (or at the same time) as the response variable.
+    </p>
+
+    <table xml:id="tab-rqs-population-individuals">
+      <title>The relationship between the population and the individuals.</title>
+      <tabular halign="center" top="medium" bottom="medium">
+        <col halign="right"/>
+        <col halign="center"/>
+        <col halign="left"/>
+        <row header="yes" bottom="medium">
+          <cell><em>Population</em></cell>
+          <cell></cell>
+          <cell><em>Individuals</em></cell>
+        </row>
+        <row>
+          <cell>Outcome</cell>
+          <cell><m>\rightarrow</m></cell>
+          <cell>Response variable</cell>
+        </row>
+        <row>
+          <cell>Comparison</cell>
+          <cell><m>\rightarrow</m></cell>
+          <cell>Explanatory variable</cell>
+        </row>
+      </tabular>
+    </table>
+
+    <p>
+      The value of the <em>response</em> variable may change in <em>response</em> to the value of the explanatory variable.
+      The value of the <em>explanatory</em> variable may <em>explain</em> changes in the value of the response variable.
+    </p>
+
+    <definition xml:id="def-explanatory-variable">
+      <title>Explanatory variable</title>
+      <statement>
+        <p>An <em>explanatory variable</em> may (partially) explain or be associated with changes in another variable of interest (the response variable).</p>
+      </statement>
+    </definition>
+
+    <definition xml:id="def-response-variable">
+      <title>Response variable</title>
+      <statement>
+        <p>A <em>response variable</em> records the result, output, consequence or effect of interest from changes in another variable (the explanatory variable).</p>
+      </statement>
+    </definition>
+
+    <warning xml:id="warn-dependent-independent-terms">
+      <p>
+        The <em>response variable</em> is sometimes called the <em>dependent variable</em>,<idx>Dependent variable</idx>
+        and the <em>explanatory variable</em> is sometimes called the <em>independent variable</em>.<idx>Independent variable</idx>
+        We avoid these terms, since the words <q>dependent</q> and <q>independent</q> have many meanings in research.
+      </p>
+    </warning>
+
+    <p>
+      The RQ cannot be answered without data for the response and explanatory variables.
+      The <em>outcome</em> is a numerical summary of the values of the response variable (<xref ref="tab-rqs-population-individuals-examples-outcome"/>) recorded from many individuals.
+      The values of the explanatory variable distinguish between the values of the <em>comparison</em> for the individuals
+      (<xref ref="tab-rqs-population-individuals-examples-comparison"/> and <xref ref="tab-rqs-population-individuals-examples-comparison-within"/>) being made.<idx>POCI</idx>
+    </p>
+
+    <table xml:id="tab-rqs-population-individuals-examples-outcome">
+      <title>Examples of the outcome and the corresponding response variable.</title>
+      <tabular halign="center" top="medium" bottom="medium">
+        <col halign="right"/>
+        <col halign="center"/>
+        <col halign="left"/>
+        <row header="yes" bottom="medium">
+          <cell><em>Outcome describing the population</em></cell>
+          <cell></cell>
+          <cell><em>Response variable in individuals</em></cell>
+        </row>
+        <row>
+          <cell><em>Average</em> increase in diastolic blood pressure, from before to after exercise</cell>
+          <cell><m>\rightarrow</m></cell>
+          <cell>Increase in diastolic blood pressure of <em>individuals</em>, from before to after exercise</cell>
+        </row>
+        <row>
+          <cell><em>Percentage</em> of seedlings that sprout</cell>
+          <cell><m>\rightarrow</m></cell>
+          <cell>Whether an <em>individual</em> seedling sprouts</cell>
+        </row>
+        <row>
+          <cell><em>Proportion</em> owning iPad</cell>
+          <cell><m>\rightarrow</m></cell>
+          <cell>Whether an <em>individual</em> owns an iPad</cell>
+        </row>
+        <row>
+          <cell><em>Average</em> cold duration</cell>
+          <cell><m>\rightarrow</m></cell>
+          <cell>Cold duration for <em>individuals</em></cell>
+        </row>
+        <row>
+          <cell><em>Percentage</em> of concrete cylinders having fissures</cell>
+          <cell><m>\rightarrow</m></cell>
+          <cell>Whether an <em>individual</em> cylinder has fissures</cell>
+        </row>
+      </tabular>
+    </table>
+
+    <table xml:id="tab-rqs-population-individuals-examples-comparison">
+      <title><em>Between-individuals</em> comparisons and the corresponding <em>between-individuals</em> explanatory variable.</title>
+      <tabular halign="center" top="medium" bottom="medium">
+        <col halign="right"/>
+        <col halign="center"/>
+        <col halign="left"/>
+        <row header="yes" bottom="medium">
+          <cell><em>Comparison being made</em></cell>
+          <cell></cell>
+          <cell><em>Explanatory variable in individuals</em></cell>
+        </row>
+        <row>
+          <cell>Between jarrah, beech, bamboo boards</cell>
+          <cell><m>\rightarrow</m></cell>
+          <cell>Type of floorboard in <em>different</em> individual homes</cell>
+        </row>
+        <row>
+          <cell>Between <m>3\kgs</m>/ha, <m>4\kgs</m>/ha fertiliser rates</cell>
+          <cell><m>\rightarrow</m></cell>
+          <cell>Application rate in <em>different</em> individual paddocks</cell>
+        </row>
+        <row>
+          <cell>Between people in 20s, 30s and 40s</cell>
+          <cell><m>\rightarrow</m></cell>
+          <cell>Age group for each <em>different</em> individual person</cell>
+        </row>
+      </tabular>
+    </table>
+
+    <table xml:id="tab-rqs-population-individuals-examples-comparison-within">
+      <title><em>Within-individuals</em> comparison and corresponding <em>within-individuals</em> explanatory variable.</title>
+      <tabular halign="center" top="medium" bottom="medium">
+        <col halign="right"/>
+        <col halign="center"/>
+        <col halign="left"/>
+        <row header="yes" bottom="medium">
+          <cell><em>Comparison being made</em></cell>
+          <cell></cell>
+          <cell><em>Explanatory variable in individuals</em></cell>
+        </row>
+        <row>
+          <cell>Before and after receiving a drug</cell>
+          <cell><m>\rightarrow</m></cell>
+          <cell>When measured on <em>each</em> individual person</cell>
+        </row>
+        <row>
+          <cell>Between left and right arms</cell>
+          <cell><m>\rightarrow</m></cell>
+          <cell>Which arm in <em>each</em> individual person is used</cell>
+        </row>
+        <row>
+          <cell>Between forelegs and hind legs</cell>
+          <cell><m>\rightarrow</m></cell>
+          <cell>Which legs are measured on <em>each</em> individual horse</cell>
+        </row>
+      </tabular>
+    </table>
+
+    <example xml:id="example-poci-playgrounds">
+      <title>Variables</title>
+      <p>Consider a study of the ground surface temperature of public playgrounds in Boston in summer.</p>
+      <p>
+        The <em>population</em> comprises all public playgrounds in Boston; each public playground is an <em>individual</em>.
+        The <em>outcome</em> is the <em>average</em> ground surface temperature in summer over many playgrounds; the <em>response variable</em> is the ground surface temperature for <em>individual</em> ground surfaces in summer.
+      </p>
+      <p>
+        The between-individuals <em>comparison</em> is between the four types of ground surfaces (rubber, soil, sand, mulch).
+        The <em>explanatory variable</em> is the type of surface for individual playgrounds.
+      </p>
+    </example>
+
+  </section>
+
+
+  <section xml:id="sec-rqs-correlational">
+    <title>Correlational RQs</title>
+    <idx><h>Research question</h><h>correlational</h></idx>
+
+    <p>
+      <em>Correlational RQs</em> are not concerned with summarising outcomes in comparison <em>groups</em>.
+      Instead, correlational RQs explore relationships between two variables measured or observed on or about the individuals.
+    </p>
+
+    <definition xml:id="def-correlational-rq">
+      <title>Correlational RQ</title>
+      <statement>
+        <p><em>Correlational RQs</em> explore the relationship between two variables.</p>
+      </statement>
+    </definition>
+
+    <p>Correlational RQs have one of these forms, depending on what information is sought:</p>
+
+    <list><title/>
+      <ul>
+        <li><p><em>estimation</em> RQ: Among {<em>the population</em>}, how strong is the relationship between {<em>the response variable</em>} and {<em>the explanatory variable</em>}?</p></li>
+        <li><p><em>decision-making</em> RQ: Among {<em>the population</em>}, is {<em>the response variable</em>} related to {<em>the explanatory variable</em>}?</p></li>
+      </ul>
+    </list>
+
+    <p>Examples include studying the relationship between:</p>
+
+    <list><title/>
+      <ul>
+        <li><p>the height of plants (response variable) and the number of hours of sunlight per day (explanatory variable).</p></li>
+        <li><p>heart rate (response variable) and the number of grams of caffeine consumed that day (explanatory variable).</p></li>
+      </ul>
+    </list>
+
+    <p>
+      Usually, one variable can be considered as the explanatory variable, and the other as the response variable (<xref ref="sec-variables"/>).
+      To be able to influence the response variable, the explanatory variable must occur before (or at the same time) as the response variable.
+      Explanatory and response variables may be either within- or between-individuals variables.
+    </p>
+
+    <example xml:id="example-correlational-runners">
+      <title>Correlational RQ</title>
+      <p>
+        Consider studying marathon runners.
+        An RQ exploring the relationship between the individuals' water intake on the day before the race and the individuals' race times would be a correlational RQ.
+        The water intake on the day before the race <em>may</em> influence the race time.
+      </p>
+      <p>The water intake on the day before the race is the explanatory variable, and the race time is the response variable.</p>
+    </example>
+
+    <example xml:id="example-correlational-pine">
+      <title>Correlational RQ</title>
+      <p>
+        The Wollemi pine was discovered by science in 1994.
+        <xref ref="offord2023home"/> studied the growth of these rare plants.
+      </p>
+      <p>
+        One correlational RQ concerned the relationship between the diameter of trees at breast height (DBH; response variable), and the pH of the soil (explanatory variable).
+        The two variables are the DBH and pH, both recorded for many trees.
+      </p>
+      <p>
+        Also studied was the relationship between the DBH for each tree at various times after the planting date (a repeated-measure RQ).
+        Each tree has the DBH measured over time, for many time points.
+        Time is the <em>within</em>-individuals comparison.
+      </p>
+    </example>
+
+    <p>In some situations, the variables are neither response nor explanatory variable; the interest is just in the association between the two variables.</p>
+
+    <example xml:id="example-research-design-fish-size">
+      <title>Correlation RQ</title>
+      <p>
+        <xref ref="gonzalez2024length"/> recorded the length and weight of <m>14\,040</m> fish for <m>39</m> demersal fish species.
+        The study has two variables (fish length; fish weight), but identifying a response variable and explanatory variable is meaningless.
+        The estimation-type correlational RQ is:
+      </p>
+      <blockquote>
+        <p>Among demersal fish, how strong is the relationship between length and weight?</p>
+      </blockquote>
+    </example>
+
+  </section>
+
+
+  <section xml:id="sec-intervention">
+    <title>Interventions</title>
+    <idx>Intervention</idx>
+
+    <p>
+      Sometimes, the explanatory variable naturally occurs without manipulation by the researchers (e.g., the height of people; the sex of oxen; the pH of forest soil).
+      Sometimes, however, the explanatory variable is manipulated by researchers (e.g., the dose of fertiliser applied; the dose of drug given); this is called an <em>intervention</em>.
+    </p>
+
+    <definition xml:id="def-intervention">
+      <title>Intervention</title>
+      <statement>
+        <p>
+          An <em>intervention</em> is present when <em>researchers</em> can manipulate (or impose) the values of the <em>explanatory variable</em> on the individuals to determine the impact on the response variable.
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      When an intervention is present, the values of the explanatory variable are <em>manipulated</em> by the researchers, and are called <em>treatments</em>.
+      When an intervention is <em>not</em> present, the values of the explanatory variable are <em>not</em> manipulated by the researchers, and are called <em>conditions</em>.
+      The <em>analysis</em> is the same whether an intervention is used or not, but the <em>interpretation</em> of the results depend on whether an intervention is used (<xref ref="sec-compare-study-types"/>).
+    </p>
+
+    <definition xml:id="def-treatments">
+      <title>Treatments</title>
+      <statement>
+        <p><idx>Treatments</idx>
+          The <em>treatments</em> are the values of the explanatory variable that the researchers can manipulate and impose upon the individuals.
+        </p>
+      </statement>
+    </definition>
+
+    <definition xml:id="def-conditions">
+      <title>Condition</title>
+      <statement>
+        <p><idx>Conditions</idx>
+          The <em>conditions</em> are the values of the explanatory variable that those in the study have or experience, but are not manipulated or imposed by the researchers.
+        </p>
+      </statement>
+    </definition>
+
+    <p>An intervention is present when the researchers:</p>
+
+    <list><title/>
+      <ul>
+        <li><p>explicitly give a dose of a new drug to patients.</p></li>
+        <li><p>explicitly apply wear-testing loads to two different flooring materials.</p></li>
+        <li><p>explicitly expose people to different stimuli.</p></li>
+        <li><p>explicitly apply different doses of fertiliser.</p></li>
+      </ul>
+    </list>
+
+    <example xml:id="example-intervention-himalaya">
+      <title>Intervention</title>
+      <p>
+        <xref ref="data-Bird2008-wholegrain"/> <em>supplied</em> one group of participants with a diet using refined flour, and <em>supplied</em> another group of participants with a diet using a new flour variety.
+        <q>Type of diet</q> is the (between-individuals) explanatory variable.
+        Since the researchers manipulate which subjects ate which flour, this study has an intervention.
+        <q>Type of diet</q> is the treatment.
+      </p>
+    </example>
+
+    <example xml:id="example-no-intervention">
+      <title>No intervention</title>
+      <p>
+        To compare the average blood pressure in female and male Scots, blood pressure was measured using a blood pressure machine (a sphygmomanometer).
+        The researchers interact with the participants to measure blood pressure, but there is <em>no</em> intervention.
+        Using the sphygmomanometer is just a way to measure blood pressure, to <em>obtain</em> the data.
+      </p>
+      <p>
+        The <em>comparison</em> is between females and males (the conditions), which cannot be manipulated or imposed on the individuals by the researchers; <em>there is no intervention</em>.
+      </p>
+    </example>
+
+    <p>
+      Often, one of the comparison groups is the <em>control group</em>.
+      The <em>control group</em> is a comparison group <em>not</em> receiving the treatment being studied, or <em>not</em> having the condition being studied, but <em>as similar as possible</em> to the other individuals in all other ways.
+      The control group is like a benchmark for detecting changes in the outcome due to the treatment or condition of interest (<xref ref="sec-placebo-effect"/>).
+      Sometimes the control group is given a <em>placebo</em>: a non-effective treatment that appears to be the real treatment.
+    </p>
+
+    <definition xml:id="def-control">
+      <title>Control</title>
+      <statement>
+        <p>
+          A <em>control</em> is an individual without the treatment or condition of interest, but as similar as possible in <em>every other way</em> to other individuals.
+          A <em>control group</em> is a group of controls.
+        </p>
+      </statement>
+    </definition>
+
+    <definition xml:id="def-placebo">
+      <title>Placebo</title>
+      <statement>
+        <p>A <em>placebo</em> is a treatment with no intended effect or active ingredient, but appears to be the real treatment.</p>
+      </statement>
+    </definition>
+
+    <example xml:id="example-control-group">
+      <title>Control group</title>
+      <p>
+        To test the effectiveness of a new medication, patients report to a doctor to receive injections of the new drug.
+        Patients assigned to the <em>control group</em> do not receive the drug.
+        The controls should also report to a doctor and receive an injection (like those receiving the drug); the injection, however, would contain no active ingredients (a placebo).
+      </p>
+    </example>
+
+    <p>
+      Together, the <alert>P</alert>opulation, <alert>O</alert>utcome, <alert>C</alert>omparison and <alert>I</alert>ntervention form the POCI acronym<idx>POCI</idx>
+      (sometimes written as PICO) to aid remembering the elements of RQs.
+      The POCI acronym is not helpful for correlational RQs.
+    </p>
+
+    <example xml:id="example-poci-women">
+      <title>POCI</title>
+      <p>
+        <xref ref="data-woolf-ironstatus"/> measured iron status in highly-active and sedentary American college women.
+      </p>
+      <p>
+        The <em>outcome</em> is the <q>average iron status</q>.
+        The between-individuals <em>comparison</em> is between highly-active and sedentary women.
+        For this comparison to be an intervention, the <em>researchers</em> would need to tell each individual woman to be highly active or sedentary.
+        This seems unlikely, so the study does not have an intervention.
+      </p>
+    </example>
+
+  </section>
+
+
+  <section xml:id="sec-two-purposes-of-rqs">
+    <title>Estimation and decision-making RQs</title>
+    <idx><h>Research question</h><h>estimation</h></idx><idx><h>Research question</h><h>decision-making</h></idx>
+
+    <p>
+      As noted earlier, RQs can be written with one of two purposes.
+      <em>Estimation RQs</em> ask how precisely an unknown <em>value</em> in the <em>population</em> is estimated by the <em>sample</em>.
+      Estimation RQs are answered using <em>confidence intervals</em>, which are discussed in <xref ref="ch-ci-one-proportion"/> to <xref ref="ch-one-mean-conf-interval"/>,
+      <xref ref="ch-analysis-paired"/> to <xref ref="ch-analysis-odds-ratio"/>, plus <xref ref="sec-correlation-testing"/> and <xref ref="sec-regression-ht"/>.
+    </p>
+
+    <p>
+      <em>Decision-making RQs</em> require a decision to be made about the unknown values in the population.
+      They are answered using <em>hypothesis tests</em>, and discussed in <xref ref="ch-test-one-proportion"/> to <xref ref="ch-test-one-mean"/>,
+      <xref ref="ch-analysis-paired"/> to <xref ref="ch-analysis-odds-ratio"/>, plus <xref ref="sec-correlation-testing"/> and <xref ref="sec-regression-ht"/>.
+    </p>
+
+    <example xml:id="example-types-of-rqs">
+      <title>Decision-making RQs</title>
+      <p>
+        <xref ref="data-Thane2004-ZincVitA"/> studied <q>British young people aged <m>4</m>--<m>18</m></q> and asked numerous RQs.
+        One <em>decision-making</em> relational RQ was:
+      </p>
+      <blockquote>
+        <p>In British young people aged <m>4</m>--<m>18</m>, is the average daily zinc intake the same for boys and girls?</p>
+      </blockquote>
+    </example>
+
+    <p>
+      Decision-making RQs have two possible answers.<idx>Decision making</idx>
+      For the example above, the average zinc intake either <em>is</em> the same for boys and girls, or <em>is not</em> the same for boys and girls, in the <em>population</em> (<xref ref="fig-zinc-rq"/>).
+      These two options are <em>hypotheses</em>: potential answers to the RQ.<idx>Hypotheses</idx>
+      However, answers are rarely clear in practice, since only one of the countless possible samples from the population is studied.
+      Instead, researchers decide <em>how strongly</em> the sample evidence supports a particular hypothesis about the <em>population</em>.<idx>Hypotheses</idx>
+    </p>
+
+    <p>
+      Evidence may <em>support</em> or <em>contradict</em> a hypothesis; evidence rarely <em>proves</em> a hypothesis (at least, without any other support, such as theoretical support).
+      Ultimately, after collecting data from a <em>sample</em>, a decision must be made about which explanation about the <em>population</em> is more consistent with the data collected.
+    </p>
+
+    <figure xml:id="fig-zinc-rq">
+      <caption>Two possible answers to the RQ (two hypotheses) about zinc intake in children.</caption>
+      <image source="generated/ZincRQ-1.png" width="100%">
+        <description><p>A diagram showing a research question box on the left asking whether the average daily zinc intake is the same for boys and girls in British young people aged 4 to 18. Two hypothesis boxes on the right show YES (the average zinc intake is the same for boys and girls) and NO (the average zinc intake is not the same for boys and girls). A data box asks which the data supports.</p></description>
+      </image>
+    </figure>
+
+    <p>
+      Decision-making RQs can be asked in different ways.<idx><h>Research question</h><h>one- and two-tailed</h></idx>
+      For the zinc-intake study above (<xref ref="fig-zinc-rq"/>), the RQ could ask (about the population):
+    </p>
+
+    <list><title/>
+      <ul>
+        <li><p>is the average zinc intake <em>the same</em> for boys and girls?</p></li>
+        <li><p>is the average zinc intake <em>different</em> for boys and girls?</p></li>
+        <li><p>is the average zinc intake <em>lower</em> for boys, compared to girls?</p></li>
+        <li><p>is the average zinc intake <em>higher</em> for boys, compared to girls?</p></li>
+      </ul>
+    </list>
+
+    <p>
+      The first two are <em>two-tailed RQs</em> (and are essentially asking the same question but in different ways): the average zinc intake could be higher for girls or higher for boys.
+      We are just interested in whether any difference is present; that is, two options are being considered.
+      The last two are <em>one-tailed RQs</em>, since they ask specifically about a difference in just one direction: boys lower than girls, or boys higher than girls.
+    </p>
+
+    <p>
+      Most RQs are two-tailed, unless a good reason exists to ask a one-tailed RQ <em>before</em> the data are collected (e.g., a drug has been developed specifically to <em>reduce</em> blood pressure).
+      RQs should be formed before the data are collected.
+    </p>
+
+    <warning xml:id="warn-two-tailed-default">
+      <p>
+        In general, RQs should be two-tailed RQs, unless a justifiable reason exists for asking a one-tailed question <em>before data are collected</em>.
+      </p>
+    </warning>
+
+  </section>
+
+
+  <section xml:id="sec-units-obs-analysis">
+    <title>Units of observation and analysis</title>
+    <idx>Units of observation</idx><idx>Units of analysis</idx>
+
+    <p>
+      <em>Units of observation</em> and <em>units of analysis</em> are different yet similar concepts that must be distinguished to properly identify a population.
+    </p>
+
+    <image source="Illustrations/pexels-moose-photos-1036627.jpg" width="25%">
+      <description><p>Photograph of a person.</p></description>
+    </image>
+
+    <p>Consider this descriptive RQ:</p>
+
+    <blockquote>
+      <p>In English <m>20</m>-something men, what is the average thickness of head-hair strands?</p>
+    </blockquote>
+
+    <p>
+      To answer this question, the thickness of individual hair strands needs to be measured.
+      The <q>things</q> from or about which measurements are taken are called <em>units of observation</em>.
+    </p>
+
+    <definition xml:id="def-unit-of-observation">
+      <title>Unit of observation</title>
+      <statement>
+        <p>The <em>unit of observation</em> is the entity that is observed, from or about which measurements are taken and data collected.</p>
+      </statement>
+    </definition>
+
+    <p>
+      For this RQ, the unit of observation is the hair strand: the thickness measurements are taken from the hair strands.
+      Suppose the thickness of <m>100</m> hair strands is recorded.
+      These <m>100</m> hair strands could be obtained in many different ways.
+      Two options are to:
+    </p>
+
+    <list><title/>
+      <ul>
+        <li><p>take <m>100</m> hair strands, all from the same man.</p></li>
+        <li><p>take one hair strand from each of <m>100</m> different men.</p></li>
+      </ul>
+    </list>
+
+    <p>
+      While each approach gives <m>100</m> measurements, these two approaches are <em>very</em> different.
+      Only one man is represented in the first scenario, so every hair strand is likely to be similar.
+      However, <m>100</m> different men are represented in the second.
+      The difference is related to the concept of <em>unit of analysis</em>.
+    </p>
+
+    <p>
+      The purpose of the study is to make conclusions about <q>men</q>: the RQ is asking about <q>men</q>.
+      Each different man provides a separate, independent measurement of hair strand thickness.
+      The <q>man</q> is the unit of analysis; each man provides a unique example of a hair strand.
+    </p>
+
+    <p>
+      The first scenario above has one unit of analysis (which provided all <m>100</m> units of observation).
+      The second scenario has <m>100</m> units of analysis (each providing one unit of observation).
+    </p>
+
+    <p>Identifying units of analysis takes care. The units of analysis:</p>
+
+    <list><title/>
+      <ul>
+        <li><p>can be single units of observation, or <em>collections</em> of units of observations (as in the hair-strand example).</p></li>
+        <li><p>are usually determined by the RQ: what is being compared or studied?</p></li>
+        <li><p>must be distinct, and separate to, each other (or nearly so).</p></li>
+      </ul>
+    </list>
+
+    <definition xml:id="def-unit-of-analysis">
+      <title>Unit of analysis</title>
+      <statement>
+        <p>
+          The <em>unit of analysis</em> is the smallest collection of units of observations (and perhaps the units of observations themselves) about which conclusions are made; the smallest distinct elements of the population for which information is analysed.
+        </p>
+      </statement>
+    </definition>
+
+    <note xml:id="note-units-sometimes-same">
+      <p>Sometimes the <em>units of analysis</em> and <em>units of observation</em> are the same.</p>
+    </note>
+
+    <p>
+      In the hair-strand study, all the hair strands from the same man have essentially <q>lived their life together</q>: they are all washed together with the same shampoo, exposed to the same amount of sunlight and exercise, share the same genetics, etc.
+      However, different men potentially use different shampoo, exercise differently, have different genetics, and so on.
+      The hair of different men tends to exhibit distinct characteristics.
+      Each man is a collection of units of observations (hair strands).
+      This study has a sample size of just two: <m>n = 2</m>.
+    </p>
+
+    <definition xml:id="def-sample-size">
+      <title>Sample size</title>
+      <statement>
+        <p>The sample size <m>n</m> is the number of units of analysis.<idx>Sample size</idx></p>
+      </statement>
+    </definition>
+
+    <example xml:id="example-units-descriptive-bread">
+      <title>Units of analysis, observation</title>
+      <p>
+        To compare the average amount of fibre in wholemeal and white bread, researchers take ten slices from one loaf of wholemeal bread, and ten slices from one loaf of white bread.
+        The amount of fibre (in grams) in each slice is determined.
+        The units of <em>observation</em> are the <q>slices</q>: the type of bread (explanatory variable) and the amount of fibre (response variable) are observed on individual slices.
+      </p>
+      <p>
+        The unit of <em>analysis</em> is the <q>loaf</q> (a collection of slices), because the RQ is comparing types of <em>bread</em>, and the slices for each type of bread are all from the same loaf.
+        Slices from the same loaf share the same baker and bakery; they were made with the same ingredients, in the same oven, baked at the same temperature, etc.
+      </p>
+    </example>
+
+    <example xml:id="example-units-descriptive">
+      <title>Units of analysis, observation</title>
+      <p>
+        The <url href="https://www.spectrumnews.org/news/statistical-errors-may-taint-many-half-mouse-studies/" visual="spectrumnews.org"><em>Spectrum</em> website</url> (accessed 18 Nov, 2022)
+        reported a study where researchers examined <q><m>10</m> neurons from each of the <m>16</m> mice</q> (November 2022).
+        The researchers treated each neuron as an independent observation, so <m>n = 16 \times 10 = 160</m>.
+      </p>
+      <p>
+        However, neurons in the brain of the same animal are <em>not</em> independent observations.
+        The unit of analysis is the mouse; the unit of observation is the neuron.
+        The actual sample size was <m>n = 16</m>; each unit of analysis has <m>10</m> units of observation.
+        A total of <m>160</m> neurons from <m>16</m> mice is very different to a study of <m>160</m> neurons from <m>160</m> genetically-different mice.
+      </p>
+    </example>
+
+    <p>
+      The units of observation and units of analysis <em>may</em> be the same, and often are the same.
+      However, they are sometimes different, and identifying these situations is <em>crucial</em>.
+      Importantly, studies compare units of analysis, not units of observation.
+    </p>
+
+    <example xml:id="example-units-descriptive-bp">
+      <title>Units of analysis, observation</title>
+      <p>
+        Suppose researchers record the diastolic blood pressure (DBP) from <m>15</m> patients aged under <m>40</m> years of age, and <m>15</m> different patients aged <m>40</m> or older.
+        The DBP is measured on every patients' right arm, so there are <m>15</m> observations for the <q>Under <m>40</m></q> group, and <m>15</m> observations for the <q><m>40</m> and over</q> group.
+      </p>
+      <p>
+        Provided the patients are not closely related, the patients are independent of each other.
+        (If all <m>15</m> observations were all from the same family, for example, this would not be true.)
+        The <q>patient</q> is the unit of analysis <em>and</em> the unit of observation.
+      </p>
+      <p>
+        Later, the researchers decide to take measurements from the left <em>and</em> right arms of every patient.
+        Thus, there are now <m>30</m> observations for the <q>Under <m>40</m></q> group, and <m>30</m> observations for the <q><m>40</m> and over</q> group.
+        However, the left and right arm measurements for each person are likely to be very similar.
+        The <q>patient</q> is the unit of analysis, and each patient provides two observations (one from each arm).
+      </p>
+      <p>In both cases, the sample size is <m>n = 30</m>: both have <m>30</m> units of analysis.</p>
+    </example>
+
+    <example xml:id="example-units-analysis-3">
+      <title>Units of analysis</title>
+      <p>
+        A study compared two physical activity (PA) programs.
+        Each of <m>44</m> children in the study, chosen from schools across the region, was allocated to one of two PA programs (with parental agreement).
+        The children's fitness was measured for every student at the end of the six-month study.
+      </p>
+      <p>
+        The <em>units of observation</em> are the students: fitness measurements are taken from each student.
+        The <em>units of analysis</em> are also the students: students using the different programs are being compared.
+        In addition, the PA program was <em>allocated</em> to each student individually, and each student has their own family routines and activities, etc. and lives separate, distinct lives.
+        Each unit of analysis (student) has one unit of observation.
+      </p>
+      <p>The study has <m>44</m> units of analysis, each with one unit of observation.</p>
+    </example>
+
+    <example xml:id="example-units-analysis-groups">
+      <title>Units of analysis</title>
+      <p>Consider comparing the percentage of females and males wearing hats at a specific beach.</p>
+      <p>
+        People in <em>groups</em> at the beach will probably not be independent: people in groups tend to behave similarly.
+        For example, a couple will often (but not always) <em>both</em> be wearing or not wearing hats; friends often behave in similar ways.
+      </p>
+      <p>
+        Hence, the researchers may decide to use data from individual people, and not groups (<q>person</q> is the unit of analysis <em>and</em> unit of observation).
+        Alternatively, the researchers may decide to use people <em>groups</em> as the <em>unit of analysis</em> (some will be groups of one), and record data from just <em>one</em> person in any group (e.g., the person closest to the researchers when the group is noticed).
+      </p>
+    </example>
+
+    <p>
+      <url href="https://learningapps.org/watch?v=pmy2wjmun22" visual="learningapps.org">Interactive activity: units of observation and analysis</url>
+    </p>
+
+  </section>
+
+
+  <section xml:id="sec-operation-definitions">
+    <title>Definitions</title>
+    <idx>Definitions</idx>
+
+    <p>
+      Research studies usually include terms that must be carefully and precisely defined, so that others know <em>exactly</em> what words and terms mean, without ambiguity.
+      Two types of definitions can be given when necessary.
+    </p>
+
+    <definition xml:id="def-conceptual-definition">
+      <title>Conceptual definition</title>
+      <statement>
+        <p><idx><h>Definitions</h><h>conceptual</h></idx>
+          A <em>conceptual definition</em> articulates precisely <em>what</em> words or phrases mean in a study.
+        </p>
+      </statement>
+    </definition>
+
+    <definition xml:id="def-operational-definition">
+      <title>Operational definition</title>
+      <statement>
+        <p><idx><h>Definitions</h><h>operational</h></idx>
+          An <em>operational definition</em> articulates exactly <em>how</em> something will be identified, measured, observed or assessed.
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      In many cases, a clear <em>operational definition</em> is needed to describe how data will be collected to ensure repeatability and consistent data collection, by removing any ambiguity about how data are obtained.
+    </p>
+
+    <image source="Illustrations/pexels-oladimeji-ajegbile-2696299.jpg" width="25%">
+      <description><p>Photograph of a student.</p></description>
+    </image>
+
+    <example xml:id="example-definitions-stress">
+      <title>Operational and conceptual definitions</title>
+      <p>
+        Consider a study examining stress in students.
+        A <em>conceptual definition</em> would describe <em>what is meant</em> by <q>stress</q> (in contrast to, say, <q>anxiety</q>).
+      </p>
+      <p>
+        An <em>operational definition</em> would describe <em>how</em> <q>stress</q> is <em>measured</em>, since stress cannot be measured directly (like height, for example).
+        <q>Stress</q> could be <em>measured</em> using a questionnaire or measuring physical characteristics, for instance.
+        Other ways of measuring stress are also possible, and all have advantages and disadvantages.
+      </p>
+    </example>
+
+    <p>
+      <url href="https://learningapps.org/watch?v=pt0rqa5t522" visual="learningapps.org">Interactive activity: conceptual and operational definitions</url>
+    </p>
+
+    <p>
+      Sometimes the definitions themselves are not important; a clear definition is simply needed.
+      To avoid confusion, commonly-accepted definitions should be used unless good reasons exist for using a different definition.
+      When a commonly-accepted definition does not exist, the definition being used should be very clearly articulated, and the reason given if necessary.
+    </p>
+
+    <example xml:id="example-definitions-flexibility">
+      <title>Operational and conceptual definitions</title>
+      <p>
+        A research article <xref ref="gillet2018shoulder"/> entitled <q>Shoulder range of motion and strength in young competitive tennis players with and without history of shoulder problems</q> provided these necessary conceptual definitions (among others):
+      </p>
+      <list><title/>
+        <ul>
+          <li><p><q>young</q>: <m>8</m>--<m>15</m> years of age.</p></li>
+          <li><p><q>competitive tennis players</q>: the best players in their age category in France, and members of a French tennis centre of excellence.</p></li>
+        </ul>
+      </list>
+      <p>An operational definition was provided for <q>Shoulder strength</q>: as measured using a hand-held dynamometer.</p>
+    </example>
+
+    <note xml:id="note-concussion-definitions">
+      <p>
+        Players, administrators and fans are wary of concussions and head injuries in sport.
+        A conference on concussion in sport developed this <em>conceptual definition</em> <xref ref="McCrory250"/>:
+      </p>
+      <blockquote>
+        <p>... a complex pathophysiological process affecting the brain, induced by biomechanical forces...</p>
+      </blockquote>
+      <image source="Illustrations/women-6905793_1920.jpeg" width="25%">
+        <description><p>Photograph of women playing sport.</p></description>
+      </image>
+      <p>However, an <em>operational definition</em> is needed to explain <em>how</em> to identify a player with concussion during a game. Rugby decided on this <em>operational definition</em> <xref ref="Raftery642"/>:</p>
+      <blockquote>
+        <p>... a concussion applies with any of the following:</p>
+        <p>1. The presence, pitch side, of any Criteria Set 1 signs or symptoms (table 1)... [this table includes symptoms such as <q>convulsion</q>, <q>clearly dazed</q>, etc.];</p>
+        <p>2. An abnormal post game, same day assessment...;</p>
+        <p>3. An abnormal <m>36</m>--<m>48\hs</m> assessment...;</p>
+        <p>4. The presence of clinical suspicion by the treating doctor at any time...</p>
+      </blockquote>
+    </note>
+
+    <example xml:id="example-definitions-water-temp">
+      <title>Operational and conceptual definitions</title>
+      <p>Consider a study requiring water temperature to be measured.</p>
+      <p>
+        An <em>operational definition</em> would explain <em>how</em> the temperature is measured: the thermometer type, how the thermometer was positioned, how long was it left in the water; and so on.
+      </p>
+      <p>
+        A <em>conceptual</em> definition would describe the scientific definition of temperature, and would not be needed (as <q>temperature</q> is a well-understood term).
+      </p>
+    </example>
+
+    <note xml:id="note-snacking-definitions">
+      <p>
+        A study of snacking in Australia <xref ref="data-Fayet2017-Snacks"/> used this conceptual definition of an <q>eating occasion</q>:
+      </p>
+      <blockquote>
+        <p>...one or more food or beverage items consumed at the same time of day...</p>
+      </blockquote>
+      <p>and a <q>snacking occasion</q> as</p>
+      <blockquote>
+        <p>...one or more food or beverage items consumed at the same time of day within a snacking time period...</p>
+      </blockquote>
+      <p>Finally then, <q>snacking</q> was defined as:</p>
+      <blockquote>
+        <p>Eating occasions that occurred during breakfast, midday and evening meals were meals and all eating occasions that occurred between these meals were classified as snacking.</p>
+      </blockquote>
+      <p>
+        These are all <em>conceptual</em> definitions, explaining what the terms <em>mean</em>.
+        An <em>operational</em> definition would explain <em>how</em> the data were obtained from the participants (e.g., using a food diary).
+      </p>
+    </note>
+
+    <note xml:id="note-stuttering-definitions">
+      <p><xref ref="data-Meline2006-InclusionExclusion"/> discusses five studies about stuttering, each using a different <em>operational</em> definition:</p>
+      <list><title/>
+        <ul>
+          <li><p>Study 1: as diagnosed by speech-language pathologist.</p></li>
+          <li><p>Study 2: within-word disfluences greater than <m>5</m> per <m>150</m> words.</p></li>
+          <li><p>Study 3: unnatural hesitation, interjections, restarted or incomplete phrases, etc.</p></li>
+          <li><p>Study 4: more than three stuttered words per minute.</p></li>
+          <li><p>Study 5: state guidelines for fluency disorders.</p></li>
+        </ul>
+      </list>
+      <p>People may be classified as stutterers by some definitions but not others, so it is important to know which definition is used.</p>
+    </note>
+
+    <note xml:id="note-pace-of-life-definitions">
+      <p>
+        A study examined the possible relationship between the <q>pace of life</q> and the incidence of heart disease <xref ref="data-levine1990-paceoflife"/> in <m>36</m> US cities.
+        The researchers used four different <em>operational</em> definitions for <q>pace of life</q> (remember the article was published in 1990!):
+      </p>
+      <list><title/>
+        <ol>
+          <li><p>The walking speed of randomly chosen pedestrians.</p></li>
+          <li><p>The speed with which bank clerks gave <q>change for two $20 bills or [gave] two $20 bills for change</q>.</p></li>
+          <li><p>The talking speed of postal clerks.</p></li>
+          <li><p>The proportion of men and women wearing a wristwatch.</p></li>
+        </ol>
+      </list>
+      <p>
+        None of these <em>perfectly</em> measure <q>pace of life</q>, of course.
+        Nonetheless, the researchers found that, compared to people on the West Coast,
+      </p>
+      <blockquote>
+        <p>... people in the Northeast walk faster, make change faster, talk faster and are more likely to wear a watch...</p>
+        <attribution><xref ref="data-levine1990-paceoflife"/>, p. 455</attribution>
+      </blockquote>
+    </note>
+
+  </section>
+
+
+  <section xml:id="sec-writing-rqs">
+    <title>Example: writing a RQ</title>
+    <idx><h>Research question</h><h>writing</h></idx>
+
+    <image source="Illustrations/pexels-andrea-piacquadio-3807629.jpg" width="25%">
+      <description><p>Photograph of a person with a cold.</p></description>
+    </image>
+
+    <p>
+      Suppose you notice some people taking echinacea (a herb) after they get a common cold.
+      You may wonder: does taking echinacea help in any way with a cold?
+      You may ask:
+    </p>
+
+    <blockquote>
+      <p>Is it better to take echinacea when you have a cold?</p>
+    </blockquote>
+
+    <p>
+      <em>This RQ is clearly poor, but is a starting point.</em>
+      This RQ can be refined by clarifying the POCI elements.<idx>POCI</idx>
+      For example, what <em>population</em> is of interest?
+      Many options exist: all residents of your country, or just adults in a specific part of your country.
+      Some of these may not be practical (i.e., when a sample cannot easily be obtained that represents the population).
+    </p>
+
+    <p>
+      What <em>outcome</em> could be used to determine echinacea's effectiveness?
+      Options include the <em>average</em> cold duration, or the <em>percentage</em> of people who take days off work due to the cold.
+    </p>
+
+    <p>
+      The initial RQ is also vague: better than <em>what</em>?
+      The outcome could be <em>compared</em> between groups (between those taking echinacea and the controls (those who do not)).
+      A within-individuals comparison seems unsuitable for this RQ.
+    </p>
+
+    <p>
+      The study could also have <em>intervention</em> or not, which has implications for how the study is conducted and how the results are interpreted.
+      If the study <em>did not have an intervention</em>, the subjects would decide for themselves how to treat their cold.
+      If the study <em>did have an intervention</em>, the use of echinacea would be imposed by the researchers.
+    </p>
+
+    <p>
+      Many terms need defining, too.
+      What is meant by <q>echinacea</q> (fresh? tablet form? as a tea?); <q>cold</q> (self-diagnosed? diagnosed by a doctor?), and so on.
+    </p>
+
+    <p>Based on the above, this RQ could be considered (based on <xref ref="data-barrett-echinacea"/>):</p>
+
+    <blockquote>
+      <p>Among Australian teenagers with a common cold, is the average duration of cold symptoms shorter for teens given a daily dose of echinacea, compared to teens taking no echinacea?</p>
+    </blockquote>
+
+    <p>
+      <url href="https://learningapps.org/watch?v=p2x991pot22" visual="learningapps.org">Interactive activity: writing research questions</url>
+    </p>
+
+    <p>
+      <url href="https://www.youtube.com/embed/rgR073gyYXk" visual="youtube.com">Video: research questions</url>
+    </p>
+
+  </section>
+
+
+  <section xml:id="sec-data-entry">
+    <title>Preparing software</title>
+    <idx><h>Computers and software</h><h>data entry</h></idx>
+    <idx><h>Computers and software</h><h>statistical</h></idx>
+    <idx><h>Computers and software</h><h>jamovi</h></idx>
+
+    <p>
+      Statistical software packages are used to store data for subsequent analyses.
+      Datasets that <em>do not</em> contain any within-individuals variables are organised so that:
+    </p>
+
+    <list><title/>
+      <ul>
+        <li><p>each <em>row</em> represents one unit of analysis.<idx>Units of analysis</idx></p></li>
+        <li><p>each <em>column</em> represents one between-individuals variable.<idx><h>Variables</h><h>between-individuals</h></idx></p></li>
+      </ul>
+    </list>
+
+    <p>An additional column of identifying information may also appear, such as the person's name, or concrete batch number.</p>
+
+    <note xml:id="note-variable-names-columns">
+      <p>
+        In statistical software, the variable <em>names</em> are not placed in a row (say, in Row 1, above the data itself), which might happen when using a spreadsheet.
+        The <em>names</em> of the variables are the names of the columns.
+      </p>
+    </note>
+
+    <example xml:id="example-software-prep">
+      <title>Preparing statistical software</title>
+      <p>
+        In <xref ref="sec-writing-rqs"/>, an RQ was asked about whether using echinacea reduced the duration of the common cold.
+      </p>
+      <p>
+        For this RQ, the two between-individuals <em>variables</em> are <q>Duration of cold symptoms</q> (response variable), and <q>Type of treatment</q> (explanatory variable).
+        The person is the unit of analysis, so the number of <em>rows</em> in the data worksheet is the sample size.
+        The data worksheet needs at least two columns (<xref ref="fig-data-prep-normal-jamovi"/>):
+      </p>
+      <list><title/>
+        <ul>
+          <li><p>one for duration of each individual's cold symptoms.</p></li>
+          <li><p>one for whether the individual received a dose of echinacea or received no medication.</p></li>
+        </ul>
+      </list>
+      <p>An additional column may record the name or ID of each individual, and more columns may record other within-individuals variables (such as age and height of the individuals).</p>
+    </example>
+
+    <figure xml:id="fig-data-prep-normal-jamovi">
+      <caption>Software prepared for data with no within-individuals variable. Each row represents an individual; each column represents a between-individuals variable.</caption>
+      <image source="DataPrep/Echinacea/DataPrep.png" width="55%">
+        <description><p>Screenshot of statistical software showing a dataset with rows for individuals and columns for variables, including duration of cold symptoms and type of treatment.</p></description>
+      </image>
+    </figure>
+
+    <p>Datasets that <em>do</em> contain within-individuals variables can be organised in <em>wide</em> or <em>long</em> format. Some analyses are easier using wide format, and some using long format.</p>
+
+    <p>In <em>wide</em> format:<idx><h>Computers and software</h><h>wide format</h></idx></p>
+
+    <list><title/>
+      <ul>
+        <li><p>each <em>row</em> represents one unit of analysis.<idx>Units of analysis</idx></p></li>
+        <li><p>each between-individuals variable is represented in a column.</p></li>
+        <li><p>each within-individuals variable is represented in <em>multiple</em> columns, one for each measurement of that variable on the individuals.</p></li>
+      </ul>
+    </list>
+
+    <p>In <em>long</em> format:<idx><h>Computers and software</h><h>long format</h></idx></p>
+
+    <list><title/>
+      <ul>
+        <li><p>each unit of analysis is represented by <em>multiple</em> rows.<idx>Units of analysis</idx></p></li>
+        <li><p>each between-individuals variable is represented in a column, and the data repeated in each row corresponding to that unit of analysis.</p></li>
+        <li><p>each within-individuals variable is represented by one column.</p></li>
+      </ul>
+    </list>
+
+    <example xml:id="example-software-prep-within">
+      <title>Long and wide data formats</title>
+      <p>
+        <xref ref="example-repeated-measures-paired"/> discussed a study where the weights of university students were recorded in both Weeks <m>1</m> and <m>12</m>.
+      </p>
+      <p>
+        In <em>wide</em> format, each <em>row</em> represents one individual (<xref ref="fig-data-prep-within-jamovi"/>, left panel).
+        In <em>long</em> format, each individual is represented by multiple rows (<xref ref="fig-data-prep-within-jamovi"/>, right panel).
+      </p>
+    </example>
+
+    <figure xml:id="fig-data-prep-within-jamovi">
+      <caption>Software prepared for data with a within-individuals variable; the same data is shown in both panels. Left: in <em>wide</em> format, with one individual per row. Right: in <em>long</em> format, with multiple rows per individual. Both include a column of identifying information.</caption>
+      <sidebyside widths="51% 45%" margins="0% 4%">
+        <image source="DataPrep/Students/WideFormat.png">
+          <description><p>Screenshot of statistical software in wide format, with one row per individual and multiple columns for the within-individuals variable.</p></description>
+        </image>
+        <image source="DataPrep/Students/LongFormat.png">
+          <description><p>Screenshot of statistical software in long format, with multiple rows per individual and one column for the within-individuals variable.</p></description>
+        </image>
+      </sidebyside>
+    </figure>
+
+  </section>
+
+
+  <section xml:id="sec-chap2-summary">
+    <title>Chapter summary</title>
+
+    <p>
+      In this chapter, you have learnt to write <em>research questions</em> for quantitative analysis.
+      All research questions (RQs) study a <em>population</em> (P).
+      Descriptive RQs study some <em>outcome</em> (O) in the population.
+      Relational RQs <em>compare</em> the outcome between different groups of individuals (a between-individuals comparison).
+      Repeated-measures RQs compare the <em>same</em> outcome when measured on the same individuals multiple times (a within-individuals comparison).
+      Some RQs also have an <em>intervention</em> (I): when the values of the comparison can be manipulated by the researchers.
+      Correlational RQs ask about the relationship between variables.
+      RQs may be <em>decision-making</em> RQs (one- or two-tailed) or <em>estimation</em> RQs.
+    </p>
+
+    <p>
+      Data comes from a sample of <em>individuals</em> in the population.
+      The <em>outcome</em> is a numerical summary of the values of the response variable from many individuals.
+      Similarly, the data concerning the comparison comes from measuring or observing the values of the <em>explanatory</em> variables from individuals.
+    </p>
+
+    <p>
+      The <em>who</em> or <em>what</em> that observations are made from are called the <em>units of observation</em>.
+      The smallest independent collections of units of observations (that is, independent examples of the population) are called the <em>units of analysis</em>.
+    </p>
+
+    <p>
+      <url href="https://www.youtube.com/embed/rgR073gyYXk" visual="youtube.com">Video: research questions summary</url>
+    </p>
+
+  </section>
+
+
+  <reading-questions xml:id="reading-questions-rqs">
+    <title>Quick review questions</title>
+
+    <exercise xml:id="rq-netball-poci">
+      <p>Consider this RQ:</p>
+      <blockquote>
+        <p>In elite female netball players, do players in defence positions have the same average number of knee injuries (per player, per season) compared to players in attacking positions?</p>
+      </blockquote>
+      <p>Are the following statements <em>true</em> or <em>false</em>?</p>
+      <ol>
+        <li><p>The <em>comparison</em> is <q>between knee injuries and other types of injuries</q>.</p></li>
+        <li><p>The <em>comparison</em> in this RQ is a <em>between</em>-individuals comparison.</p></li>
+        <li><p>The <em>outcome</em> is <q>the average number of knee injuries per player, per season</q>.</p></li>
+        <li><p>The <em>response variable</em> is <q>the average number of knee injuries per season</q>.</p></li>
+        <li><p>The <em>unit of analysis</em> is <q>the number of knee injuries</q>.</p></li>
+        <li><p>The <em>unit of observation</em> is <q>the elite netball player</q>.</p></li>
+        <li><p>This RQ is a descriptive RQ.</p></li>
+        <li><p>This RQ is an estimation-type RQ.</p></li>
+      </ol>
+    </exercise>
+
+  </reading-questions>
+
+
+  <exercises xml:id="exercises-rqs">
+
+    <introduction>
+      <p>Answers to odd-numbered exercises are given at the end of the book.</p>
+    </introduction>
+
+    <exercise xml:id="exercise-rqs-outcome-response-1">
+      <p>For the following <em>response</em> variables, what are the corresponding <em>outcomes</em>?</p>
+      <ol>
+        <li><p>Whether a vehicle crashes or not.</p></li>
+        <li><p>The height people can jump.</p></li>
+        <li><p>The number of tomatoes per plant.</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="exercise-rqs-outcome-response-2">
+      <p>For the following <em>response</em> variables, what are the corresponding <em>outcomes</em>?</p>
+      <ol>
+        <li><p>Whether a person owns a car.</p></li>
+        <li><p>The time it takes for seedlings to sprout.</p></li>
+        <li><p>The amount of caffeine in cola drinks.</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="exercise-rqs-comparison-explanatory-1">
+      <p>For the following <em>comparisons</em>, what are the corresponding <em>explanatory</em> variables?</p>
+      <ol>
+        <li><p>Between vegans and non-vegans.</p></li>
+        <li><p>Between caffeinated and decaffeinated coffee.</p></li>
+        <li><p>Between taking zero, one or two <m>7\mgs</m> iron tablets per day.</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="exercise-rqs-comparison-explanatory-2">
+      <p>For the following <em>comparisons</em>, what are the corresponding <em>explanatory</em> variables?</p>
+      <ol>
+        <li><p>Between frozen vegetables and fresh vegetables.</p></li>
+        <li><p>Between <m>91</m>-octane, <m>95</m>-octane, and ethanol-blended car fuel.</p></li>
+        <li><p>Between large cities and small cities.</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="exercise-rqs-comparison-vs-paired-1">
+      <p>For the following studies, determine whether the study is likely to use a <em>between</em>-individuals comparison or a <em>within</em>-individuals comparison. In each case, identify the outcome.</p>
+      <ol>
+        <li><p>A study to determine if a higher percentage of people at a particular city park wear hats in summer compared to winter.</p></li>
+        <li><p>A study to determine if the average yield of a specific variety of tomato plants is the same when three different fertilisers are applied.</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="exercise-rqs-comparison-vs-paired-2">
+      <p>For the following studies, determine whether the study is likely to use a <em>between</em>-individuals comparison or a <em>within</em>-individuals comparison. In each case, identify the outcome.</p>
+      <ol>
+        <li><p>A study to determine if the average balance time on right legs is the same as on left legs.</p></li>
+        <li><p>A study to determine if average cholesterol levels are the same when measured on the same people before and after a diet change.</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="exercise-rqs-dogs">
+      <p>
+        A study of Phu Quoc Ridgeback dogs (<em>Canis familiaris</em>) explored the relationship between body length and body height <xref ref="quan2017relation"/>.
+      </p>
+      <ol>
+        <li><p>What type of RQ would be asked about the dogs?</p></li>
+        <li><p>What are the response and explanatory variables?</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="exercise-rqs-typing-cor">
+      <p><xref ref="pinet2022typing"/> recorded typing speed and age for <m>1\,301</m> students.</p>
+      <ol>
+        <li><p>What type of RQ could be asked in this study?</p></li>
+        <li><p>What are the response and explanatory variables?</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="exercise-rqs-blood-pressure">
+      <p>Consider this RQ:</p>
+      <blockquote>
+        <p>Among Danish university students, is the average resting diastolic blood pressure the same for students who regularly drive to university and those who regularly ride bicycles to university?</p>
+      </blockquote>
+      <ol>
+        <li><p>For this RQ, identify the population, outcome, and comparison (if any).</p></li>
+        <li><p>For this RQ, is there an intervention? Explain.</p></li>
+        <li><p>What <em>type</em> of question is used (descriptive; relational; repeated measures; correlational)?</p></li>
+        <li><p>What is the <em>purpose</em> of the RQ: estimation or decision-making?</p></li>
+        <li><p>What <em>operational</em> and <em>conceptual definitions</em> would be needed?</p></li>
+        <li><p>What information <em>must</em> be collected from each individual to answer the RQ (i.e., the variables)?</p></li>
+        <li><p>Identify the units of analysis and the units of observation.</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="exercise-rqs-nutrition">
+      <p><xref ref="data-checkley-diarrhea"/> (p. 210) conducted:</p>
+      <blockquote>
+        <p>a <m>4</m>-year (1995--1998) field study in a Peruvian peri-urban community... to examine the relation between diarrhea and nutritional status in <m>230</m> children <m>\lt 3</m> years of age</p>
+      </blockquote>
+      <p>For this study:</p>
+      <ol>
+        <li><p>identify P, O, C and I (where relevant).</p></li>
+        <li><p>infer the primary research question.</p></li>
+        <li><p>what <em>type</em> of question is used (descriptive; relational; repeated measures; correlational)?</p></li>
+        <li><p>what is the <em>purpose</em> of the RQ: estimation or decision-making?</p></li>
+        <li><p>what <em>operational definitions</em> would be needed?</p></li>
+        <li><p>what are the <em>response</em> and <em>explanatory</em> variables?</p></li>
+        <li><p>what are the units of observation and units of analysis?</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="exercise-rqs-walking-speed">
+      <p>Consider this RQ: <q>Is the average walking speed the same when texting and talking on a mobile phone?</q></p>
+      <ol>
+        <li><p>What <em>type</em> of question is used (descriptive; relational; repeated measures; correlational)?</p></li>
+        <li><p>Is this RQ one- or two-tailed?</p></li>
+        <li><p>Is there an intervention? Explain.</p></li>
+        <li><p>What is the <em>explanatory</em> variable?</p></li>
+        <li><p>What is the <em>response</em> variable?</p></li>
+        <li><p>What is the <em>outcome</em>?</p></li>
+        <li><p>What are the units of observation and units of analysis?</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="exercise-rqs-common-cold">
+      <p>Consider this RQ, with an intervention:</p>
+      <blockquote>
+        <p>For Japanese adults with a common cold, do people who take vitamin C tablets daily have, on average, a shorter cold duration than people who do not take any vitamin C tablets?</p>
+      </blockquote>
+      <ol>
+        <li><p>Identify the population, comparison and outcome.</p></li>
+        <li><p>What is the response variable?</p></li>
+        <li><p>What is the explanatory variable?</p></li>
+        <li><p>What type of RQ is this: estimation or decision-making?</p></li>
+        <li><p>Is the RQ one-tailed or two-tailed?</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="exercise-rqs-animals">
+      <p>
+        Animals in an experiment are divided into pens (three animals per pen), and feed is allocated to each pen <xref ref="sterndale2017increasing"/>.
+        Animals in different pens receive different feed; animals in the same pen receive the same feed.
+        The weight gain of each animal is recorded.
+      </p>
+      <ol>
+        <li><p>What is the <em>unit of observation</em>? Why?</p></li>
+        <li><p>What is the <em>unit of analysis</em>? Why?</p></li>
+        <li><p>Identify the between-individuals comparison.</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="exercise-rqs-blue-gum">
+      <p>
+        A research study was comparing the average length of Blue Gum eucalypt leaves in two areas of Queensland.
+        A student takes <m>40</m> leaves from each of ten trees in Area A, and <m>40</m> leaves from each of ten trees in Area B.
+      </p>
+      <p>Are the following statements <em>true</em> or <em>false</em>?</p>
+      <ol>
+        <li><p>The unit of analysis is the individual leaf.</p></li>
+        <li><p>The unit of observation is the individual leaf.</p></li>
+        <li><p>The unit of analysis is the tree.</p></li>
+      </ol>
+      <p>What is the size of the sample in the study?</p>
+    </exercise>
+
+    <exercise xml:id="exercise-project-rq-2">
+      <p>Consider this actual student RQ from a university:</p>
+      <blockquote>
+        <p>Among <m>10</m> Australian adults, does the time taken to read a passage of text change when different fonts are used?</p>
+      </blockquote>
+      <p>Critique the RQ, and write a better RQ (if necessary).</p>
+    </exercise>
+
+    <exercise xml:id="exercise-project-rq-3">
+      <p>Consider this actual student RQ from a university:</p>
+      <blockquote>
+        <p>Of students that study at (a University), do males have a larger lung capacity than females?</p>
+      </blockquote>
+      <p>Critique the RQ, and write a better RQ (if necessary).</p>
+    </exercise>
+
+    <exercise xml:id="exercise-rqs-nose-hair">
+      <p>
+        <xref ref="gs2023pullout"/> examined the strength needed to pull out nose-hairs.
+        Fifty nose-hairs were pulled from one author's nose, and <m>50</m> nose hairs pulled from the other author's nose, and the average pull-out strengths for each man compared.
+      </p>
+      <ol>
+        <li><p>What are the units of analysis and units of observation?</p></li>
+        <li><p>What is the sample size in this study?</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="exercise-rqs-environments">
+      <p>
+        <xref ref="huang2020trees"/> placed different people into one of three different virtual-reality (VR) environments: trees, grass or concrete.
+        Stress levels were measured using <q>skin conductance level</q> (SCL) for each individual, before and after exposure to the VR environment.
+      </p>
+      <ol>
+        <li><p>Identify the <em>between</em>-individuals comparisons.</p></li>
+        <li><p>Identify the <em>within</em>-individuals comparisons.</p></li>
+        <li>
+          <p>Is their definition for SCL (p. 2) <em>conceptual</em> or <em>operational</em>?</p>
+          <blockquote>
+            <p>SCLs are an unbiased measure of sympathetic activity via the electric impulses on the skin's surface and sweat glands, which are innervated only by the sympathetic nervous system...</p>
+          </blockquote>
+        </li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="exercise-poci-accelerometer">
+      <p>Consider this two-tailed RQ (based on <xref ref="tudor2015comparison"/>):</p>
+      <blockquote>
+        <p>For American adults, is the average number of recorded steps per day the same when recorded using both a waist accelerometer, and a wrist accelerometer?</p>
+      </blockquote>
+      <ol>
+        <li><p>Identify the population and the individuals.</p></li>
+        <li><p>Identify the outcome.</p></li>
+        <li><p>Identify the response and explanatory variables.</p></li>
+        <li><p>Determine if the comparison is <em>between</em>- or <em>within</em>-individuals.</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="exercise-rqs-types-zinc">
+      <p>
+        Studies can incorporate many types of RQs.
+        For example, <xref ref="data-Thane2004-ZincVitA"/> studied <q>British young people aged <m>4</m>--<m>18</m></q> and answered numerous RQs, including:
+      </p>
+      <list><title/>
+        <ul>
+          <li><p>what is the average zinc intake of the children?</p></li>
+          <li><p>does the average zinc intake meet recommended dietary guidelines?</p></li>
+          <li><p>what is the strength of the association between plasma zinc and retinol concentrations?</p></li>
+          <li><p>is the average zinc intake the same for boys and girls?</p></li>
+        </ul>
+      </list>
+      <p>For each RQ, classify these RQs as descriptive, relational, repeated-measures, or correlational RQs. Then, classify them as estimation or decision-making RQs. Does the study have an intervention?</p>
+    </exercise>
+
+    <exercise xml:id="exercise-rqs-comparison-connection-caloric">
+      <p>
+        <xref ref="CaloricIntake"/> studied the relationship between daily sodium excretion and whether people had been diagnosed with diabetes or not, in Israeli adults.
+        The study also explored the strength of the relationship between the daily sodium excretion and the systolic blood pressure.
+      </p>
+      <p>Classify the two RQs as descriptive, relational, repeated-measures, or correlational RQs. Then, classify them as estimation or decision-making RQs. Does the study have an intervention?</p>
+    </exercise>
+
+    <exercise xml:id="exercise-interventional-rq-within">
+      <p>
+        <xref ref="ghasemi2019effectiveness"/> studied the incidence of musculoskeletal disorders in Iranian bus drivers.
+        They introduced a program that aimed to provide relief for the drivers.
+        Each bus driver was evaluated both before and after the intervention.
+      </p>
+      <p>Classify the RQ as descriptive, relational, repeated-measures, or correlational RQs. Then, classify the RQ as estimation or decision-making RQs. Does the study have an intervention?</p>
+    </exercise>
+
+    <exercise xml:id="exercise-what-are-units-analysis-a">
+      <p>
+        To determine the average length of the legs of emus, <m>27</m> emus from various zoos were studied.
+        For each emu, the length of the left and right leg were recorded, resulting in <m>54</m> measurements.
+      </p>
+      <p>What is the sample size for this study? Explain.</p>
+    </exercise>
+
+    <exercise xml:id="exercise-what-are-units-analysis-b">
+      <p>
+        A study compared the percentage of females and males that wear closed-in shoes to the supermarket.
+        For each person they observed, the type of shoe on each person's left and right foot (as either closed-in; not closed-in) was recorded.
+        This approach resulted in <m>310</m> observations.
+      </p>
+      <p>What is the sample size for this study? Explain.</p>
+    </exercise>
+
+    <exercise xml:id="exercise-units-analysis">
+      <p>
+        A study compares the wear on two brands of car tyres.
+        Four tyres of Brand A are allocated to each of Cars 1--5, and four tyres of Brand B are allocated to each of Cars 6--10.
+        After <m>12</m> months, the amount of wear is recorded on each tyre, and the two brands compared.
+      </p>
+      <p>What are the units of analysis, the units of observation and the sample size?</p>
+    </exercise>
+
+    <exercise xml:id="exercise-units-analysis-2">
+      <p>
+        <xref ref="parsons2018unit"/> discuss a scenario where six subjects with colorectal cancer underwent therapy.
+        Another six similar subjects did not receive the therapy.
+        The size of all the subjects' removed lymph nodes were then measured.
+        Each subject's specimen (p. 6):
+      </p>
+      <blockquote>
+        <p>was divided into two sub-samples after collection [...] processed and analysed at two occasions, by different members of the laboratory team [...] Three slices per sub-sample were collected for each subject.</p>
+      </blockquote>
+      <p>How many units of analysis and the units of observation are present?</p>
+    </exercise>
+
+    <exercise xml:id="exercise-units-analysis-bamboo">
+      <p>
+        Bamboo is a fast-growing, strong grass often used for green building practices.
+        A small research study explored the hardness of bamboo when used as flooring material.
+      </p>
+      <p>
+        The <em>Janka hardness</em><fn>The force required to embed an <m>11.28\mms</m> steel ball into wood to half the diameter of the ball.</fn>
+        of bamboo flooring provided by Bamboo Flooring Australia Pty Ltd was measured by the Queensland Department of Primary Industries <xref ref="data-Gerber-BambooFlooring"/>.
+        Five floorboards were taken, and two hardness measurements were taken on <em>each</em> board (units not given, but probably kilonewtons; <xref ref="tab-janka-boards"/>).
+      </p>
+      <ol>
+        <li><p>What is the unit of analysis: the test, the board, each measurement, kilonewtons, or something else? Explain your answer.</p></li>
+        <li><p>How many units of analysis are there?</p></li>
+        <li><p>How many units of observation are there?</p></li>
+        <li><p>Comment on the amount of variation <em>between</em> the boards compared to the amount of variation <em>within</em> boards.</p></li>
+        <li><p>Suppose the measurements were taken from <m>10</m> <em>different</em> places on the <em>same</em> board (rather than from five different boards). How many units of analysis are there now? Explain your answer.</p></li>
+      </ol>
+
+      <table xml:id="tab-janka-boards">
+        <title>Two Janka hardness measurements from five different bamboo boards.</title>
+        <tabular halign="center" top="medium" bottom="medium">
+          <col/>
+          <col/>
+          <col/>
+          <col/>
+          <col/>
+          <col/>
+          <row header="yes" bottom="medium">
+            <cell></cell>
+            <cell><em>Board 1</em></cell>
+            <cell><em>Board 2</em></cell>
+            <cell><em>Board 3</em></cell>
+            <cell><em>Board 4</em></cell>
+            <cell><em>Board 5</em></cell>
+          </row>
+          <row>
+            <cell>Measurement 1</cell>
+            <cell>10.5</cell>
+            <cell>8.0</cell>
+            <cell>11.5</cell>
+            <cell>10.3</cell>
+            <cell>10.2</cell>
+          </row>
+          <row>
+            <cell>Measurement 2</cell>
+            <cell>7.5</cell>
+            <cell>8.0</cell>
+            <cell>11.2</cell>
+            <cell>9.9</cell>
+            <cell>9.3</cell>
+          </row>
+        </tabular>
+      </table>
+
+    </exercise>
+
+    <exercise xml:id="exercise-poor-rqs">
+      <p>Critique the following research questions, outlining how and why they can be improved (if at all).</p>
+      <ol>
+        <li><p>Among domestic water tanks used in south-east Queensland, are lead concentrations in water in concrete tanks higher than in poly tanks?</p></li>
+        <li><p>Are lower-limb amputees more likely to die?</p></li>
+        <li><p>Is the amount of salt the same for home brand as for non-home brand beans?</p></li>
+        <li><p>Among zoo animals, is the weight of adult elephants greater than juvenile kangaroos (joeys)?</p></li>
+        <li><p>Is the average reaction time related to gender?</p></li>
+      </ol>
+      <p>What terms might need defining for each RQ?</p>
+    </exercise>
+
+  </exercises>
+
+</chapter>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<appendix xml:id="app-datasets" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Datasets</title>
+  <p>Skeleton for <em>50-App-DataSets.Rmd</em>. Content to be added.</p>
+  <p>All datasets are real and available in the <em>SRMData</em> R package.</p>
+</appendix>

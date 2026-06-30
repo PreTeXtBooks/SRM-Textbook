@@ -1,0 +1,639 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Source: 01-Introduction.Rmd -->
+<chapter xml:id="ch-01-introduction" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Research: an introduction</title>
+
+  <objectives xml:id="objectives-ch01">
+    <introduction>
+      <p>In this chapter, you will learn to:</p>
+    </introduction>
+    <ul>
+      <li><p>identify quantitative and qualitative research.</p></li>
+      <li><p>identify the steps in the quantitative research process.</p></li>
+    </ul>
+  </objectives>
+
+
+  <!-- ============================================================ -->
+  <section xml:id="sec-how-do-we-know">
+    <title>Introduction: how we know what we know</title>
+
+    <p>
+      Scientists once believed that all life regularly and commonly
+      <url href="http://en.wikipedia.org/wiki/Spontaneous_generation">arose spontaneously</url>
+      from non-living matter.
+      <em>Recipes</em> even existed; for example, <xref ref="data-VanHelmont-Transformations"/> gave this
+      <url href="https://www.mnn.com/green-tech/research-innovations/stories/how-to-make-a-mouse-the-bizarre-recipes-borne-of-spontaneous">recipe</url>
+      for making a mouse <xref ref="pasteur1922generations"/>:
+    </p>
+
+    <image source="Illustrations/animal-1238239_1920.jpg" width="30%">
+      <description><p>Illustration of a mouse.</p></description>
+    </image>
+
+    <blockquote>
+      <p>
+        If a soiled shirt is placed in the opening of a vessel containing grains of wheat,
+        the reaction of the leaven in the shirt with fumes from the wheat will, after
+        approximately twenty-one days, transform the wheat into mice.
+      </p>
+    </blockquote>
+
+    <p>
+      This was called <sq>spontaneous generation</sq> (or <sq>abiogenesis</sq>).
+      This theory is clearly incorrect, so how did the idea emerge?
+      How was it disproven?
+      Through <em>observation</em> and <em>research</em>.
+    </p>
+
+    <p>
+      Spontaneous generation was consistent with <em>observations</em>: following the above recipe
+      <em>did</em> produce mice.
+      However, the hypothesis<idx>Hypotheses</idx> (<sq>possible explanation</sq>) of spontaneous
+      generation was rejected when later evidence, in better-designed research studies,
+      contradicted the hypothesis.
+      A new hypothesis<idx>Hypotheses</idx> was proposed to explain the appearance of the mice,
+      which was tested against the evidence, and so on.
+      Briefly, this is the <em>evidence-based, scientific process</em>.<idx>Scientific process</idx>
+    </p>
+
+    <p>As a more recent example, the dangers of smoking were still being debated into the 1990s:</p>
+
+    <blockquote>
+      <p>
+        <ellipsis/> a causal role for smoking [has] not been proved beyond reasonable doubt.
+      </p>
+      <attribution><xref ref="eysenck1991were"/>, p. 429</attribution>
+    </blockquote>
+
+    <p>
+      All scientific knowledge emerges in a similar way: observations lead to questions and
+      hypotheses, which are tested against <em>evidence</em>.
+      If the evidence <em>contradicts</em> the hypothesis, the hypothesis is rejected.
+      If the evidence is <em>consistent</em> with the hypothesis, the hypothesis is
+      <em>temporarily</em> accepted (until any contradictory evidence emerges, if ever).
+    </p>
+
+    <p>
+      Hypotheses not contradicted by large amounts of evidence, over a long time, are sometimes
+      called <em>laws</em> or <em>theories</em> (such as the <sq>Law of conservation of
+      energy</sq>).
+      Theories and laws can be disproven if contradictory evidence emerges.
+      Knowledge in all scientific disciplines is accumulated using a similar evidence-based
+      process.
+    </p>
+  </section>
+
+
+  <!-- ============================================================ -->
+  <section xml:id="sec-evidence-based-research">
+    <title>Evidence-based research</title>
+    <idx>Evidence-based research</idx>
+
+    <p>
+      Every discipline changes, develops, improves, and adapts<mdash/>usually through
+      <em>research</em>.
+      Your discipline is not the same as it was ten years ago; it will change in the next ten
+      years.
+      Scientists, engineers and health practitioners need to know how to understand and adapt to
+      this change.
+    </p>
+
+    <p>
+      Remaining current in your discipline requires understanding research, even if you will not
+      be researching yourself.
+      You still need to know the language, tools, concepts and ideas of research, and you need to
+      be able to critique research.
+      Research is the foundation of science.
+    </p>
+
+    <!-- LearningApps interactive activity (iframe in Rmd source; link provided here) -->
+    <p>
+      <url href="https://learningapps.org/watch?v=ppa1cz56222"
+           visual="learningapps.org/watch?v=ppa1cz56222">Interactive activity (LearningApps)</url>
+    </p>
+
+    <p>
+      Science seeks <em>evidence-based answers</em>:<idx>Evidence-based research</idx> reaching
+      conclusions based on <em>evidence</em>, rather than hunches, feelings, intuition, hopes, or
+      tradition.
+      The <em>evidence</em> comes from analysing <em>data</em>.<idx>Data</idx>
+    </p>
+
+    <definition xml:id="def-data">
+      <title>Data</title>
+      <idx>Data</idx><idx>Dataset</idx>
+      <statement>
+        <p>
+          <em>Data</em> refers to information (observations or measurements), such as numbers,
+          labels, recordings, videos, text, etc.
+        </p>
+        <p>
+          A <em>dataset</em> refers to an organised and structured collection of data.
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      Research involves asking research questions, designing studies to collect data, analysing
+      data, and accurately reporting the results.
+      This book covers all these components.
+    </p>
+  </section>
+
+
+  <!-- ============================================================ -->
+  <section xml:id="sec-types-of-research">
+    <title>Quantitative, qualitative, and mixed-methods research</title>
+
+    <p>
+      Research can be broadly classified as <em>qualitative</em> or <em>quantitative</em>.
+      These are different yet complementary approaches to answering research questions
+      (<xref ref="tab-types-of-research"/>).<idx><h>Research</h><h>qualitative</h></idx><idx><h>Research</h><h>quantitative</h></idx>
+      Both methods have advantages and disadvantages, and can be used together (called
+      <em>mixed-methods</em> research).<idx><h>Research</h><h>mixed-methods</h></idx>
+      The decision to use qualitative, quantitative or mixed-methods approaches depends on the
+      purpose of the research.
+    </p>
+
+    <!-- R code that generates this table in the Rmd source (chunk "TypesOfResearch"):
+         Data rows 3-12 of the ResearchTypes array (reordered columns: Qualitative | Aspect | Quantitative)
+         HTML version also shows icon row (row 1); LaTeX version uses rows 3-12 only. -->
+    <table xml:id="tab-types-of-research">
+      <title>Concisely comparing qualitative and quantitative research.</title>
+      <tabular halign="center" top="medium" bottom="medium">
+        <col halign="right"/>
+        <col halign="center"/>
+        <col halign="left"/>
+        <row header="yes" bottom="minor">
+          <cell><em>Qualitative</em></cell>
+          <cell><em>Aspect</em></cell>
+          <cell><em>Quantitative</em></cell>
+        </row>
+        <row>
+          <cell>Feelings, opinions</cell>
+          <cell>What</cell>
+          <cell>Measured or observed data</cell>
+        </row>
+        <row>
+          <cell>Suggest hypotheses, explore, depth</cell>
+          <cell>Why</cell>
+          <cell>Make objective conclusions</cell>
+        </row>
+        <row>
+          <cell>Non-random samples</cell>
+          <cell>Studied</cell>
+          <cell>Representative samples; random samples</cell>
+        </row>
+        <row>
+          <cell>Very detailed; for specific groups</cell>
+          <cell>Conclusions</cell>
+          <cell>General</cell>
+        </row>
+        <row>
+          <cell>Words, audio, video, pictures, <ellipsis/></cell>
+          <cell>Data</cell>
+          <cell>Numbers, measurements, counts, <ellipsis/></cell>
+        </row>
+        <row>
+          <cell>Usually small samples are studied</cell>
+          <cell>Size</cell>
+          <cell>Often large samples are studied</cell>
+        </row>
+        <row>
+          <cell>Often time-consuming</cell>
+          <cell>Time</cell>
+          <cell>Usually more efficient</cell>
+        </row>
+        <row>
+          <cell>Rarely generalisable</cell>
+          <cell>Applicability</cell>
+          <cell>Often generalisable</cell>
+        </row>
+        <row>
+          <cell>Thematic analysis, content analysis, etc.</cell>
+          <cell>Analysis</cell>
+          <cell>Numerical summaries, test hypotheses, etc.</cell>
+        </row>
+        <row>
+          <cell>Interviews, focus groups</cell>
+          <cell>Examples</cell>
+          <cell>Experiments, closed surveys, lab. studies</cell>
+        </row>
+      </tabular>
+    </table>
+
+    <p>
+      Briefly, <em>qualitative research</em> leads to a deeper understanding, usually for a very
+      specific group.
+      Meanings, motivations, opinions or themes often emerge from qualitative research.
+      In contrast, <em>quantitative research</em> summarises and analyses data usually from large
+      groups, using <em>numerical</em> methods, such as averages and percentages.
+      In quantitative research, typically information about a large group of interest (a
+      <em>population</em>)<idx>Population</idx> is found from a subset of the population (a
+      <em>sample</em>).<idx>Sample</idx>
+    </p>
+
+    <definition xml:id="def-quantitative-research">
+      <title>Quantitative research</title>
+      <statement>
+        <p>
+          <em>Quantitative research</em> summarises and analyses data using numerical methods,
+          such as averages, proportions and percentages.
+        </p>
+      </statement>
+    </definition>
+
+    <warning xml:id="warn-quantitative-focus">
+      <p>This book is about <em>quantitative</em> research.</p>
+    </warning>
+
+    <example xml:id="example-broad-types-of-research">
+      <title>Types of research</title>
+
+      <image source="Illustrations/pexels-rathaphon-nanthapreecha-3846205.jpg" width="30%">
+        <description><p>Photograph of an electric taxi.</p></description>
+      </image>
+
+      <p>
+        <xref ref="oliveira2020wireless"/> used mixed-methods research to study the adoption of
+        electric taxis in Nottingham (UK).
+      </p>
+      <p>
+        In the <em>quantitative</em> component of the study, taxis were tracked for over
+        <m>32\,000\kms</m> and <m>9\,764\hs</m>.
+        The researchers determined where taxis often stopped (as potential charging locations).
+        The Trent Street taxi rank (near the main train station) was the most-used stop with an
+        average wait time of <m>20\mins</m>;
+        Milton St (<m>17\mins</m>) and Wheeler gate (<m>10\mins</m>) also recorded high average
+        stop-times.
+        Numerical information about speeds was also obtained.
+      </p>
+      <p>
+        In the <em>qualitative</em> component of the study, nine taxis drivers participated in
+        interviews and focus groups.
+        This allowed the researchers to (p. 6)
+      </p>
+      <blockquote>
+        <p>
+          <ellipsis/>explore themes and motivations in a way that was not possible with the
+          initial quantitative analysis.
+        </p>
+      </blockquote>
+      <p>
+        Participants' responses were classified as <em>barriers</em> (safety; costs; speeds) or
+        <em>facilitators</em> (opportunities to charge regularly; convenient locations) to the
+        proposed charging locations.
+      </p>
+    </example>
+
+    <example xml:id="example-quant-research-legionella">
+      <title>Quantitative research</title>
+      <p>
+        During 1988/1989, an unusually high number of <em>Legionella longbeachae</em> infections
+        were observed in South Australians.
+        The researchers <xref ref="data-oconnor-pottingmix"/> wanted to identify the source to
+        prevent further infections.
+      </p>
+      <p>
+        The researchers noticed that many of those infected were gardeners who had recently
+        handled potting mix, so they hypothesised that the infection was associated with using
+        potting mix.
+        They designed a study to test this hypothesis, then collected data from <m>100</m> people
+        (<m>25</m> <em>with</em> the infection, and <m>75</m> people of similar age and sex
+        <em>without</em> the
+        infection).<idx><h>Study types</h><h>case-control studies</h></idx>
+      </p>
+      <p>
+        The researchers classified and summarised the data, then analysed the data to reach an
+        evidence-based conclusion: potting mix was partially, but not solely, responsible for the
+        infections.
+        The researchers communicated their recommendations to
+        <url href="https://www.worksafe.qld.gov.au/safety-and-prevention/hazards/hazardous-exposures/biological-hazards/legionella-risks-from-work-with-potting-mix-and-compost">reduce the risks of people contracting the infection in the future</url>.
+      </p>
+    </example>
+
+    <!-- HTML-only tip box from Rmd (wrapped in knitr::is_latex_output() conditional).
+         The Rmd version uses webex::mcq() dropdowns; the static text is reproduced here. -->
+    <note xml:id="note-six-steps-order">
+      <title>The six steps of research</title>
+      <p>
+        This book explains the <em>six steps of research</em>.
+        Arrange these steps into the common order, using these terms:
+        <em>Design</em>;
+        <em>Classify and summarise</em>;
+        <em>Analyse</em>;
+        <em>Ask</em>;
+        <em>Collect</em>;
+        <em>Report</em>.
+      </p>
+      <p><em>Step 1</em>: _________ the question.</p>
+      <p><em>Step 2</em>: _________ the study.</p>
+      <p><em>Step 3</em>: _________ the data.</p>
+      <p><em>Step 4</em>: _________ the data.</p>
+      <p><em>Step 5</em>: _________ the data.</p>
+      <p><em>Step 6</em>: _________ the results.</p>
+    </note>
+  </section>
+
+
+  <!-- ============================================================ -->
+  <section xml:id="sec-six-steps-of-research">
+    <title>The steps in research</title>
+    <idx><h>Research</h><h>six steps</h></idx>
+
+    <p>
+      The research process (for both qualitative and quantitative research) ideally follows the
+      process summarised in <xref ref="fig-six-steps"/>, but this is not always possible or
+      practical.
+      The process is not always linear: researchers may jump from step to step as necessary, and
+      research often leads to new research questions (RQs) so that the process restarts.
+      Each step is important.<idx><h>Research</h><h>six steps</h></idx>
+    </p>
+
+    <!-- R code chunk "SixSteps" (fig.width=3.5, fig.height=1.8, out.width="45%"):
+         SixSteps(upDirectory = FALSE)  # NOTE ASPECT RATIO: 0.514
+         Pre-generate and place at pretext/assets/generated/SixSteps-1.png -->
+    <figure xml:id="fig-six-steps">
+      <caption>The six basic steps in research.</caption>
+      <image source="generated/SixSteps-1.png" width="45%">
+        <description>
+          <p>
+            A diagram showing the six basic steps in the quantitative research process,
+            arranged in a cycle: Ask, Design, Collect, Classify and summarise, Analyse, Report.
+          </p>
+        </description>
+      </image>
+    </figure>
+
+    <list>
+      <title/>
+      <ul>
+        <li>
+          <p>
+            <em>Asking</em> the RQ (<xref ref="ch-02-rqs"/>).
+            Research begins with a research question to answer.
+          </p>
+        </li>
+        <li>
+          <p>
+            <em>Designing</em> the study
+            (<xref ref="ch-03-research-design-overview"/> to <xref ref="ch-08-research-design-limitations"/>).
+            Evidence-based research uses data to answer the RQ.
+            A study is designed to obtain that data: determining who or what to study; finding
+            those to study; deciding what information to obtain; and ensuring data are obtained
+            ethically.
+          </p>
+        </li>
+        <li>
+          <p>
+            <em>Collecting</em> the data (<xref ref="ch-09-collect"/>).
+            The data collection process must be ethical, reproducible and clearly documented.
+          </p>
+        </li>
+        <li>
+          <p>
+            <em>Classifying</em> and <em>summarising</em> the data
+            (<xref ref="ch-10-describing-variables"/> to <xref ref="ch-17-summary-comments"/>).
+            Before analysis, the data must be classified and summarised to inform the analysis.
+            (A computer is useful.)
+          </p>
+        </li>
+        <li>
+          <p>
+            <em>Analysing</em> the data
+            (<xref ref="ch-18-tools-probability"/> to <xref ref="ch-34-testing-selecting"/>).
+            Analysis refers to using the data to find an answer to the research question.
+            (A computer is useful.)
+          </p>
+        </li>
+        <li>
+          <p>
+            <em>Reporting</em> the results
+            (<xref ref="ch-35-write"/> and <xref ref="ch-36-read"/>).
+            Communicating the results appropriately, accurately and ethically is important,
+            including identifying any limitations of the research.
+          </p>
+        </li>
+      </ul>
+    </list>
+  </section>
+
+
+  <!-- ============================================================ -->
+  <section xml:id="sec-software-in-research">
+    <title>Using computers in research</title>
+    <idx><h>Computers and software</h><h>in research</h></idx>
+
+    <p>
+      <em>Statistical</em> software (such as Python, jamovi, R, SAS, SPSS, Stata, etc.) is
+      useful for summarising and analysing
+      data.<idx><h>Computers and software</h><h>statistical</h></idx>
+      Statistical software:
+    </p>
+
+    <list>
+      <title/>
+      <ul>
+        <li><p>is designed for working with large datasets.</p></li>
+        <li>
+          <p>
+            encourages reproducible research
+            (<xref ref="sec-reproducible-research"/>).<idx><h>Research</h><h>reproducibility</h></idx>
+          </p>
+        </li>
+        <li><p>allows high-precision formatting and graphics.</p></li>
+        <li><p>is powerful; with some programming skills, almost anything is possible.</p></li>
+        <li><p>is specifically designed for analysing and working with data.</p></li>
+      </ul>
+    </list>
+
+    <note xml:id="note-jamovi">
+      <title>Software</title>
+      <idx><h>Computers and software</h><h>jamovi</h></idx>
+      <p>
+        This book sometimes shows output from jamovi <xref ref="Software-jamovi"/>, but using
+        jamovi is <em>not</em> essential for understanding this book.
+      </p>
+    </note>
+
+    <p>
+      Using spreadsheets<idx><h>Computers and software</h><h>spreadsheets</h></idx> for storing
+      and analysing data requires care.
+      Expensive and dangerous errors have been made due to using spreadsheets
+      <xref ref="altarawneh2017pilot"/>.
+      Some challenges with using spreadsheets include that:
+    </p>
+
+    <list>
+      <title/>
+      <ul>
+        <li>
+          <p>
+            spreadsheets may <em>change data</em> (e.g., reformatting entries as dates) when not
+            appropriate <xref ref="ziemann2016gene"/>.
+          </p>
+        </li>
+        <li>
+          <p>
+            spreadsheets may include <em>formulas with errors</em> that are difficult to locate
+            and hence fix <xref ref="panko2016we"/> <xref ref="Retraction-London-Excel"/>.
+          </p>
+        </li>
+        <li>
+          <p>
+            spreadsheets <em>do not leave a record</em> of how the data were analysed or
+            prepared.
+            Keeping a record of the analysis, preparation of variables, and other operations with
+            the data is good scientific practice (<em>reproducible research</em>; see
+            <xref ref="sec-reproducible-research"/>) <xref ref="simons2019reproducible"/>.
+          </p>
+        </li>
+        <li>
+          <p>
+            spreadsheets often produce poor graphs <xref ref="su2008s"/>.
+          </p>
+        </li>
+      </ul>
+    </list>
+
+    <p>
+      Problems with spreadsheets, as with any software, are often due to human error, but
+      <em>spreadsheets make errors hard to find and hence hard to fix</em>.
+      Spreadsheets are useful for data collection and basic data manipulation, but are not
+      designed for scientific analysis.
+      Be careful using spreadsheets for research and analysis.
+    </p>
+  </section>
+
+
+  <!-- ============================================================ -->
+  <exercises xml:id="exercises-intro">
+    <title>Exercises</title>
+    <introduction>
+      <p>
+        <xref ref="app-answers">Answers to odd-numbered exercises</xref> are given at the end
+        of the book.
+      </p>
+    </introduction>
+
+    <exercise xml:id="exercise-rqs-type-tourniquet">
+      <statement>
+        <p>
+          Consider this RQ: <sq>For three different junctional tourniquets, which is the
+          quickest, on average, to apply?</sq>
+        </p>
+        <ol>
+          <li><p>What data would be likely be needed to answer this research question?</p></li>
+          <li>
+            <p>
+              Is this RQ likely to be answered using a <em>quantitative</em> or
+              <em>qualitative</em> research study? Explain.
+            </p>
+          </li>
+        </ol>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="exercise-rqs-type-mangroves">
+      <statement>
+        <p>
+          Consider this RQ: <sq>Why do people dump rubbish in mangroves?</sq>
+        </p>
+        <ol>
+          <li><p>What data would be likely be needed to answer this research question?</p></li>
+          <li>
+            <p>
+              Is this RQ likely to be answered using a <em>quantitative</em> or
+              <em>qualitative</em> research study? Explain.
+            </p>
+          </li>
+        </ol>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="exercise-rqs-type-side-effects">
+      <statement>
+        <p>
+          Consider this RQ: <sq>What percentage of Egyptians experience side effects from a
+          specific medication?</sq>
+        </p>
+        <ol>
+          <li><p>What data would be likely be needed to answer this research question?</p></li>
+          <li>
+            <p>
+              Is this RQ likely to be answered using a <em>quantitative</em> or
+              <em>qualitative</em> research study? Explain.
+            </p>
+          </li>
+        </ol>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="exercise-rqs-type-solar-panels">
+      <statement>
+        <p>
+          Consider this RQ: <sq>What is the average number of rooftop solar panels on domestic
+          homes in a certain city?</sq>
+        </p>
+        <ol>
+          <li><p>What data would be likely be needed to answer this research question?</p></li>
+          <li>
+            <p>
+              Is this RQ likely to be answered using a <em>quantitative</em> or
+              <em>qualitative</em> research study? Explain.
+            </p>
+          </li>
+        </ol>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="exercise-rqs-type-greenery">
+      <statement>
+        <p>
+          <xref ref="frost2023encouraging"/> conducted a study to better understand the views
+          of adults regarding planting greenery in front gardens.
+          To do so, they conducted (p. 80):
+        </p>
+        <blockquote>
+          <p>
+            <ellipsis/> five online focus groups with <m>20</m> participants aged
+            <m>20</m><ndash/><m>64</m> in England<ellipsis/>[then] audio recorded each focus
+            group, transcribed it verbatim and analysed transcripts using thematic analysis.
+          </p>
+        </blockquote>
+        <p>
+          What type of research study is this: qualitative, quantitative or mixed-methods?
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="exercise-rqs-type-green-hydrogen">
+      <statement>
+        <p>
+          <xref ref="haussermann2023social"/> studied Germany's transition to green energy,
+          and (p. 1):
+        </p>
+        <blockquote>
+          <p>
+            <ellipsis/> investigated social acceptance of green hydrogen at an early stage in
+            its implementation, before wider rollout.
+          </p>
+        </blockquote>
+        <p>To do so, they used (p. 1):</p>
+        <blockquote>
+          <p>
+            <ellipsis/> semi-structured interviews (<m>n = 24</m>) and two participatory
+            workshops (<m>n = 51</m>) in a selected region in central Germany serve alongside
+            a representative survey (<m>n = 2\,054</m>)<ellipsis/>
+          </p>
+        </blockquote>
+        <p>
+          What type of research study is this: qualitative, quantitative or mixed-methods?
+        </p>
+      </statement>
+    </exercise>
+
+  </exercises>
+
+</chapter>

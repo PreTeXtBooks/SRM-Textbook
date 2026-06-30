@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <backmatter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="meta-back">
+
+  <xi:include href="./ch_app_datasets.ptx" />
+  <xi:include href="./ch_app_tables.ptx" />
+  <xi:include href="./ch_app_symbols.ptx" />
+  <xi:include href="./ch_app_glossary.ptx" />
+  <xi:include href="./ch_app_answers.ptx" />
+
+  <references xml:id="references">
+    <title>References</title>
+    <!-- Bibliography entries from ReferenceList.bib will be added here -->
+  </references>
+
   <index>
     <title>Index</title>
     <index-list/>
   </index>
+
 </backmatter>

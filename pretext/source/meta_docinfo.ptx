@@ -1,5 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <docinfo xmlns:xi="http://www.w3.org/2001/XInclude">
-  <document-id>tidy-text-mining</document-id>
   <math-package latex-name="cancel" mathjax-name="cancel"/>
+  <!-- Unit macros from index.Rmd — used throughout all chapters -->
+  <macros>
+    \newcommand{\cms}{\,\text{cm}}
+    \newcommand{\dLs}{\,\text{dL}}
+    \newcommand{\xdLs}{\text{dL}}
+    \newcommand{\fmols}{\,\text{fmol}}
+    \newcommand{\gs}{\,\text{g}}
+    \newcommand{\hs}{\,\text{h}}
+    \newcommand{\xhs}{\text{h}}
+    \newcommand{\has}{\,\text{ha}}
+    \newcommand{\xhas}{\text{ha}}
+    \newcommand{\kgs}{\,\text{kg}}
+    \newcommand{\kms}{\,\text{km}}
+    \newcommand{\kWhs}{\,\text{kWh}}
+    \newcommand{\lbs}{\,\text{lb}}
+    \newcommand{\Ls}{\,\text{L}}
+    \newcommand{\xLs}{\text{L}}
+    \newcommand{\mgs}{\,\text{mg}}
+    \newcommand{\microgs}{\,\mu\text{g}}
+    \newcommand{\millis}{\,\text{ms}}
+    \newcommand{\mins}{\,\text{mins}}
+    \newcommand{\mJs}{\,\text{mJ}}
+    \newcommand{\mmols}{\,\text{mmol}}
+    \newcommand{\mLs}{\,\text{mL}}
+    \newcommand{\mms}{\,\text{mm}}
+    \newcommand{\ms}{\,\text{m}}
+    \newcommand{\xms}{\text{m}}
+    \newcommand{\ozs}{\,\text{oz}}
+    \newcommand{\secs}{\,\text{s}}
+    \newcommand{\xsecs}{\text{s}}
+    \newcommand{\ppms}{\,\text{ppm}}
+    \newcommand{\ys}{\,\text{y}}
+    \newcommand{\vs}{\,\text{V}}
+  </macros>
 </docinfo>

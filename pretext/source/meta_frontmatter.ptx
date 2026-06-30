@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <frontmatter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="meta-front">
+
   <bibinfo>
     <author>
-      <personname>NAME</personname>
-      <website>
-      </website>
+      <personname>Peter K. Dunn</personname>
+      <affiliation>
+        <institution>University of the Sunshine Coast</institution>
+        <location>Sippy Downs, Australia</location>
+      </affiliation>
     </author>
-    <author>
-      <personname>NAME</personname>
-      <website>
-      </website>
-    </author>
-    <date>
-      <today/>
-    </date>
+    <date><today/></date>
+    <copyright>
+      <year>2024</year>
+      <holder>Peter K. Dunn</holder>
+      <shortlicense>
+        CC BY-NC-SA 4.0. A printed copy is available from CRC Press (2025).
+      </shortlicense>
+    </copyright>
   </bibinfo>
 
   <titlepage>
@@ -22,7 +25,60 @@
 
   <abstract>
     <p>
-      ABSTRACT
+      This book introduces quantitative research in the scientific and health
+      disciplines, with an emphasis on introductory statistics.
+      The research process is broken into six steps which provide the framework
+      for the content. The book targets first-year undergraduate students in
+      science, health, and engineering. Statistical output is from jamovi
+      (free to download and use).
     </p>
   </abstract>
+
+  <preface xml:id="preface">
+    <title>Preface</title>
+    <p>
+      This book introduces quantitative research in the scientific and health
+      disciplines, with an emphasis on introductory statistics.
+      Unlike many introductory statistics textbooks, this textbook gives context
+      to the statistics by first covering the basics of the research design
+      process; it connects the research question with the means to answer that
+      question. The research process is broken into six steps, which provide the
+      framework for the content.
+    </p>
+    <p>
+      The book is designed for teaching at first-year undergraduate level, with
+      examples mostly drawn from science, health and engineering.
+      Many real journal articles are used throughout the text.
+      Almost every dataset used in this book is real and available in the
+      <em>SRMData</em> R package.
+      Software output is from jamovi, but no knowledge of jamovi is required.
+      (jamovi is free to download and use.)
+    </p>
+    <p>
+      <em>Learning Outcomes.</em>
+      In this book, you will learn to:
+      develop quantitative research questions and testable hypotheses;
+      design quantitative studies to answer simple quantitative research questions;
+      select and produce appropriate graphical, numerical and statistical analyses;
+      select, apply and interpret the results of the correct statistical technique
+      to analyse data;
+      comprehend, apply and communicate in the language of research and statistics;
+      and demonstrate professional integrity in planning, interpreting and reporting
+      the results of quantitative studies.
+    </p>
+    <p>
+      <em>About the author.</em>
+      Peter K. Dunn is a Professor at the University of the Sunshine Coast,
+      Sippy Downs, Australia.
+    </p>
+    <p>
+      <em>How to cite:</em>
+      Peter K. Dunn (2024).
+      <em>Scientific Research and Methodology: An introduction to quantitative
+      research in science and health</em>.
+      <url href="https://peterkdunn.github.io/SRM-Textbook/"
+           visual="peterkdunn.github.io/SRM-Textbook/"/>
+    </p>
+  </preface>
+
 </frontmatter>
