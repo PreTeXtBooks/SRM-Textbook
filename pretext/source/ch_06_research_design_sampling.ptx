@@ -84,7 +84,7 @@
 
     <p>
       The first issue is studied in this chapter.
-      The second issue is studied later (<xref ref="ch-estimate-sample-size"/>), after learning about the implications of studying samples rather than populations.
+      The second issue is studied later (<xref ref="ch-32-sample-size"/>), after learning about the implications of studying samples rather than populations.
     </p>
 
     <p>
@@ -692,7 +692,7 @@
 
     <p>
       Sometimes, practicalities dictate how the sample is obtained, which may result in a non-random sample.
-      Even so, the impact of using a non-random sample on the conclusions should be discussed (<xref ref="ch-interpretation"/>).
+      Even so, the impact of using a non-random sample on the conclusions should be discussed (<xref ref="ch-08-research-design-limitations"/>).
       Sometimes, simple steps can be taken to obtain a sample that is <em>more likely</em> to be representative.
     </p>
 

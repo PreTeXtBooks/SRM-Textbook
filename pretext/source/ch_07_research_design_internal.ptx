@@ -2,4 +2,12 @@
 <chapter xml:id="ch-07-research-design-internal" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Internal validity</title>
   <p>Skeleton for <em>07-ResearchDesign-Internal.Rmd</em>. Content to be added.</p>
+  <section xml:id="sec-managing-confounding">
+    <title>Managing confounding</title>
+    <p>Content to be added.</p>
+  </section>
+  <section xml:id="sec-placebo-effect">
+    <title>Placebo effect, controls, objective data, and blinding</title>
+    <p>Content to be added.</p>
+  </section>
 </chapter>

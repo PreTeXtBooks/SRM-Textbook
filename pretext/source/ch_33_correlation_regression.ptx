@@ -2,4 +2,12 @@
 <chapter xml:id="ch-33-correlation-regression" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Correlation and regression: CIs and tests</title>
   <p>Skeleton for <em>33-CorrelationRegression.Rmd</em>. Content to be added.</p>
+  <section xml:id="sec-correlation-testing">
+    <title>Correlation: hypothesis test</title>
+    <p>Content to be added.</p>
+  </section>
+  <section xml:id="sec-regression-ht">
+    <title>Regression: <m>t</m>-tests for regression parameters</title>
+    <p>Content to be added.</p>
+  </section>
 </chapter>

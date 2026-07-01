@@ -2,4 +2,12 @@
 <chapter xml:id="ch-09-collect" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Collecting data</title>
   <p>Skeleton for <em>09-Collect.Rmd</em>. Content to be added.</p>
+  <section xml:id="sec-writing-questions">
+    <title>Writing questions</title>
+    <p>Content to be added.</p>
+  </section>
+  <section xml:id="sec-biases">
+    <title>Challenges using questionnaires</title>
+    <p>Content to be added.</p>
+  </section>
 </chapter>

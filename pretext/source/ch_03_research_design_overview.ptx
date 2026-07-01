@@ -31,7 +31,7 @@
 
     <p>
       Being able to generalise about the population of interest from studying a sample is called <em>external validity</em>.<idx>External validity</idx>
-      <xref ref="ch-sampling"/> discusses how to select a suitable sample to study to enhance external validity.
+      <xref ref="ch-06-research-design-sampling"/> discusses how to select a suitable sample to study to enhance external validity.
     </p>
 
     <definition xml:id="def-external-validity">
@@ -66,8 +66,8 @@
     <p>
       Studies with <em>low</em> internal validity leave open other possibilities, apart from changes in the value of the explanatory variable, to explain changes in the value of the response variable.
       Ideally, all studies should be designed to be <em>internally valid</em> as far as possible.
-      Internal validity is studied in more detail in <xref ref="ch-design-internal"/>.
-      Different research studies (<xref ref="ch-research-design"/>) differ in the extent to which they can achieve internal validity.
+      Internal validity is studied in more detail in <xref ref="ch-07-research-design-internal"/>.
+      Different research studies (<xref ref="ch-04-research-design-types"/>) differ in the extent to which they can achieve internal validity.
     </p>
 
   </section>
@@ -147,7 +147,7 @@
 
     <p>
       Internal validity is one of the most important properties of scientific studies, and is relevant for reasoning about evidence more generally.
-      Designing studies to maximise internal validity is the focus of <xref ref="ch-design-internal"/>.
+      Designing studies to maximise internal validity is the focus of <xref ref="ch-07-research-design-internal"/>.
     </p>
 
     <note xml:id="note-design-first-time">

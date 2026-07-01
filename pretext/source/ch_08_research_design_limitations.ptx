@@ -2,4 +2,8 @@
 <chapter xml:id="ch-08-research-design-limitations" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Research design limitations</title>
   <p>Skeleton for <em>08-ResearchDesign-Limitations.Rmd</em>. Content to be added.</p>
+  <section xml:id="sec-interpret-study-design">
+    <title>Limitations related to internal validity</title>
+    <p>Content to be added.</p>
+  </section>
 </chapter>
