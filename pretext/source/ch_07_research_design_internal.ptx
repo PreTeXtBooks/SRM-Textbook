@@ -82,6 +82,36 @@
     <p>
       Any difference in faecal weight detected between the two groups may not be due to the diets (Table <xref ref="tab-confounding-groups"/>): the study has very poor internal validity, due to poor research design.
     </p>
+    <table xml:id="tab-confounding-groups">
+      <title>Comparing Groups A and B: extreme confounding.</title>
+      <tabular halign="center" top="medium" bottom="medium">
+        <row header="yes" bottom="medium">
+          <cell></cell>
+          <cell><em>Group A</em></cell>
+          <cell><em>Group B</em></cell>
+        </row>
+        <row>
+          <cell><em>Sex</em></cell>
+          <cell>Women</cell>
+          <cell>Men</cell>
+        </row>
+        <row>
+          <cell><em>Age</em></cell>
+          <cell>Younger (in general)</cell>
+          <cell>Older (in general)</cell>
+        </row>
+        <row>
+          <cell><em>Cereal</em></cell>
+          <cell><em>Himalaya 292</em></cell>
+          <cell>Refined</cell>
+        </row>
+        <row>
+          <cell><em>Fitness</em></cell>
+          <cell>Very fit (in general)</cell>
+          <cell>Less fit (in general)</cell>
+        </row>
+      </tabular>
+    </table>
     <p>
       Sex, age and overall health are <em>confounding variables</em> (Def. <xref ref="def-confounding-variable"/>): they are associated with the type of diet (explanatory variable) <em>and</em> faecal weight (response variable).<idx><h>Variables</h><h>confounding</h></idx> For example, the age of the subject may be associated with faecal weight (older people tend to eat less, and eat differently, than younger people), and the research design means older people are more likely to be consuming the refined cereal. This is an extreme case of <em>confounding</em> (Fig. <xref ref="fig-confounding-diagram"/>); usually, confounding is more subtle (and more difficult to detect) than in this example.
     </p>
@@ -255,13 +285,35 @@
         In the <em>Himalaya 292</em> study, individuals were randomly allocated to the diets (p. <m>1 033</m>), which manages confounding due to age and other potential confounding variables also.
       </p>
     </example>
-    <p>
-      (ref:RandomAllocationHimalaya) Random allocation can occur in two places for the <em>Himalaya</em> study.
-    </p>
     <example>
       <p>
         An experiment to study the effect of using ginkgo to enhance memory <xref ref="data-Solomon2002-ginkgo"/> compared two groups: one using ginkgo (<m>n = 111</m>), and one using a fake, non-active supplement (<m>n = 108</m>). The authors randomly allocated participants to each group, then compared the two groups to ensure that no obvious differences initially existed between the groups that might explain differences in the response variable (Table <xref ref="tab-ginkgo-demographics"/>).
       </p>
+      <table xml:id="tab-ginkgo-demographics">
+        <title>Comparing the two groups in the ginkgo-memory study.</title>
+        <tabular halign="center" top="medium" bottom="medium">
+          <row header="yes" bottom="medium">
+            <cell>Characteristic</cell>
+            <cell>Group A (ginkgo)</cell>
+            <cell>Group B (Fake)</cell>
+          </row>
+          <row>
+            <cell>Average age (in years)</cell>
+            <cell><m>68.7</m></cell>
+            <cell><m>69.9</m></cell>
+          </row>
+          <row>
+            <cell>Men (number; percentage)</cell>
+            <cell>46 (41%)</cell>
+            <cell>45 (42%)</cell>
+          </row>
+          <row>
+            <cell>Average years of education</cell>
+            <cell><m>14.4</m></cell>
+            <cell><m>14.0</m></cell>
+          </row>
+        </tabular>
+      </table>
       <p>
         Two groups are similar in terms of age, education and gender distribution. Any difference in outcome between the groups is probably due to the treatment.
       </p>
@@ -270,16 +322,25 @@
       <p>
         Researchers explored the use of dominant and non-dominant hands for chest compression in student paramedics using an experimental study <xref ref="cross2019impact"/>. Students were randomly divided into two groups: DHOS (dominant hand on chest) and NDHOC (non-dominant hand on chest). The two groups were then compared:
       </p>
-      <p>
-        | <mdash/><mdash/><mdash/><mdash/><mdash/><mdash/><mdash/><mdash/><mdash/>-:+:<mdash/><mdash/><mdash/><mdash/><mdash/><mdash/><mdash/><mdash/><mdash/><ndash/>:+:<mdash/><mdash/><mdash/><mdash/><mdash/><ndash/>:+:<mdash/><mdash/><mdash/><mdash/><mdash/>-:
-      </p>
       <table>
-        <tabular halign="left" top="medium" bottom="medium">
+        <tabular halign="center" top="medium" bottom="medium">
           <row header="yes" bottom="medium">
+            <cell>Demographic</cell>
+            <cell>All participants (<m>n = 75</m>)</cell>
+            <cell>DHOC (<m>n = 37</m>)</cell>
+            <cell>NDHOC (<m>n = 38</m>)</cell>
+          </row>
+          <row>
             <cell>Average age (years)</cell>
             <cell><m>23.4</m></cell>
             <cell><m>22.5</m></cell>
             <cell><m>24.3</m></cell>
+          </row>
+          <row>
+            <cell>Gender: percentage Female</cell>
+            <cell><m>51</m>%</cell>
+            <cell><m>53</m>%</cell>
+            <cell><m>47</m>%</cell>
           </row>
         </tabular>
       </table>
@@ -301,6 +362,31 @@
       <p>
         An observational study compared the iron levels of active and sedentary women aged <m>18</m> to <m>35</m> <xref ref="data-woolf-ironstatus"/>. The active women (<m>n = 28</m>) and sedentary women (<m>n = 28</m>) were compared on a variety of characteristics (Table <xref ref="tab-sedentary-demographics"/>). The active women were similar to the sedentary women on these characteristics, but were (in general) slightly younger, slightly heavier, and slightly more likely to use hormonal contraceptives.
       </p>
+      <table xml:id="tab-sedentary-demographics">
+        <title>The demographic information for those in the study of iron levels in women.</title>
+        <tabular halign="center" top="medium" bottom="medium">
+          <row header="yes" bottom="medium">
+            <cell>Characteristic</cell>
+            <cell>Active women</cell>
+            <cell>Sedentary women</cell>
+          </row>
+          <row>
+            <cell>Average age (in years)</cell>
+            <cell><m>20</m></cell>
+            <cell><m>24</m></cell>
+          </row>
+          <row>
+            <cell>Average weight (in kg)</cell>
+            <cell><m>68</m></cell>
+            <cell><m>62</m></cell>
+          </row>
+          <row>
+            <cell>Percentage using hormonal contraceptives</cell>
+            <cell><m>13</m></cell>
+            <cell><m>11</m></cell>
+          </row>
+        </tabular>
+      </table>
     </example>
     <example>
       <p>
@@ -460,7 +546,7 @@
     <example xml:id="example-clever-hans">
       <title>Observer effect</title>
       <p>
-        was a horse that seemed to perform simple mental arithmetic. By using an experiment where the people interacting with the horse were blinded, Carl Stumpf realised that the horse was responding to involuntary (and unconscious) cues from the trainer.
+        <url href="https://en.wikipedia.org/wiki/Clever_Hans">Clever Hans</url> was a horse that seemed to perform simple mental arithmetic. By using an experiment where the people interacting with the horse were blinded, Carl Stumpf realised that the horse was responding to involuntary (and unconscious) cues from the trainer.
       </p>
       <p>
         The same effect has been observed in narcotic sniffer dogs <xref ref="bambauer2012defending"/>, who may respond to their handlers' unconscious cues.
@@ -680,10 +766,14 @@
     </p>
     <ul>
       <li><p>To evaluate <em>external validity</em> to determine if the sample is representative of the population (Sect. <xref ref="sec-representative-samples"/>), by comparing the sample and population.</p></li>
-      <li><p>To improve <em>internal validity</em>, by helping to manage confounding:</p></li>
-      <li><p>by avoiding lurking variables (Sect. <xref ref="sec-extraneous-variables"/>).</p></li>
-      <li><p>by determining if the comparison groups are similar (Sect. <xref ref="sec-managing-confounding"/>).</p></li>
-      <li><p>by using the information in analysis (Sect. <xref ref="sec-managing-confounding"/>).</p></li>
+      <li>
+        <p>To improve <em>internal validity</em>, by helping to manage confounding:</p>
+        <ul>
+          <li><p>by avoiding lurking variables (Sect. <xref ref="sec-extraneous-variables"/>).</p></li>
+          <li><p>by determining if the comparison groups are similar (Sect. <xref ref="sec-managing-confounding"/>).</p></li>
+          <li><p>by using the information in analysis (Sect. <xref ref="sec-managing-confounding"/>).</p></li>
+        </ul>
+      </li>
     </ul>
     <warning>
       <p>
@@ -778,9 +868,6 @@
     <p>
       Often, however, not all of these strategies can be used. For instance, people usually know they are involved in an experimental study, so the Hawthorne effect may impact conclusions. In these cases, the possible impacts should be minimised as far as possible, and then the likely impact on the conclusions discussed. The impact of these issues are often reported as <em>limitations</em><idx>Limitations</idx> (Chap. <xref ref="sec-interpretation"/>).
     </p>
-    <p>
-      (ref:DesignConsiderations-Caption) Design considerations for designing studies. Note: lurking variables become confounding variables when recorded in the study, and so can be managed as confounding variables. The arrows indicate the main design strategies to (perhaps partially) manage the indicated potential bias. Not all strategies are possible for every study.
-    </p>
     <example xml:id="example-design-example">
       <title>Research design</title>
       <p>
@@ -797,32 +884,40 @@
 
   <reading-questions xml:id="sec-chap7-quick-review">
     <title>Quick review questions</title>
+    <exercise>
+      <p>
+        <xref ref="doosti2016development"/> wanted to determine the relationship between the depth of bruising on apples and the impact force. The researchers purposefully hit apples with three different <em>forces</em> (<m>200</m>, <m>700</m> and <m>1200</m> mJ/s) to inflict bruises on the apples. The researchers then recorded the <em>depth</em> of the bruising. The study was conducted separately for three different <em>regions</em> of the apple (lower; middle; upper), and each apple was only used once.
+      </p>
+      <p>
+        Are the following statements <em>true</em> or <em>false</em>?
+      </p>
+      <ol>
+        <li><p>The <em>response variable</em> is 'the depth of bruising'. [True]</p></li>
+        <li><p>The <em>explanatory variable</em> is 'the force used on the apples'. [True]</p></li>
+        <li><p>The variable 'location of the bruising' would be classified as a confounding variable. [False; extraneous]</p></li>
+        <li><p>The researchers could minimise the effects of confounding by incorporating potential confounding variables in the analysis. [True]</p></li>
+        <li><p>The researchers could use random allocation of the treatments to the apples to minimise confounding. [True]</p></li>
+        <li><p>The <em>carryover</em> effect is likely to be a big problem in this study. [False]</p></li>
+        <li><p>The <em>Hawthorne</em> effect is likely to be a big problem in this study. [False]</p></li>
+        <li><p>The <em>placebo</em> effect is likely to be a big problem in this study. [False]</p></li>
+        <li><p>The <em>observer</em> effect is likely to be a big problem in this study. [False]</p></li>
+      </ol>
+    </exercise>
   </reading-questions>
 
   <exercises xml:id="sec-designing-experiments-exercises">
     <introduction>
       <p>Answers to odd-numbered exercises are given at the end of the book.</p>
     </introduction>
-    <p>
-      [Answers to odd-numbered exercises] are given at the end of the book.
-    </p>
     <exercise xml:id="exercise-design-true-false">
       <p>
         Are the following statements <em>true</em> or <em>false</em>?
       </p>
       <ol>
         <li><p>Experimental studies <em>must</em> use random samples.</p></li>
-      </ol>
-      <ol>
         <li><p>An experimental study <em>must</em> blind the researchers.</p></li>
-      </ol>
-      <ol>
         <li><p>Only observational studies can manage the observer effect.</p></li>
-      </ol>
-      <ol>
         <li><p>Experimental studies <em>must</em> use a control group.</p></li>
-      </ol>
-      <ol>
         <li><p>Using random samples is important in observational studies as a way to manage confounding.</p></li>
       </ol>
     </exercise>
@@ -832,17 +927,9 @@
       </p>
       <ol>
         <li><p>Observational studies cannot have a control group.</p></li>
-      </ol>
-      <ol>
         <li><p>Only experimental studies can use random allocation to avoid confounding.</p></li>
-      </ol>
-      <ol>
         <li><p>An experimental study <em>must</em> blind the participants.</p></li>
-      </ol>
-      <ol>
         <li><p>Only experimental studies can use random sampling.</p></li>
-      </ol>
-      <ol>
         <li><p>In experimental studies, the treatments <em>must</em> be allocated by the researchers.</p></li>
       </ol>
     </exercise>
@@ -854,11 +941,6 @@
         <li><p>Blinding the individuals</p></li>
         <li><p>Using a control group.</p></li>
         <li><p>Using special methods of analysis.</p></li>
-      </ul>
-      <p>
-        \
-      </p>
-      <ul>
         <li><p>Randomly allocating treatments to groups.</p></li>
         <li><p>Blinding the researchers.</p></li>
         <li><p>Using random samples.</p></li>
@@ -872,11 +954,6 @@
         <li><p>Blinding the individuals</p></li>
         <li><p>Using a control group.</p></li>
         <li><p>Using special methods of analysis.</p></li>
-      </ul>
-      <p>
-        \
-      </p>
-      <ul>
         <li><p>Randomly allocating treatments to groups.</p></li>
         <li><p>Blinding the researchers.</p></li>
         <li><p>Using random samples.</p></li>
@@ -910,45 +987,31 @@
     </exercise>
     <exercise xml:id="exercise-design-exp-weight-loss">
       <p>
-        Consider a study comparing the average weight loss for patients who are <em>instructed</em> to do about <m>30</m> of exercise a day (Group A), to patients who are instructed to do about <m>60</m> of exercise a day (Group B). Which of the following statements are true?
+        Consider a study comparing the average weight loss for patients who are <em>instructed</em> to do about <m>30</m> mins of exercise a day (Group A), to patients who are instructed to do about <m>60</m> mins of exercise a day (Group B). Which of the following statements are true?
       </p>
       <ol>
         <li><p>This is an experimental study.</p></li>
-      </ol>
-      <ol>
         <li><p>The extraneous variable is the amount of exercise per day (in h).</p></li>
-      </ol>
-      <ol>
         <li><p>The response variable is the weight loss for each person.</p></li>
-      </ol>
-      <ol>
-        <li><p>The explanatory variable is whether the patient performs about <m>30</m> or <m>60</m> of exercise per day.</p></li>
-      </ol>
-      <ol>
+        <li><p>The explanatory variable is whether the patient performs about <m>30</m> or <m>60</m> mins of exercise per day.</p></li>
         <li><p>The response variable is the <em>average</em> weight loss.</p></li>
-      </ol>
-      <ol>
         <li><p>The explanatory variable is the number of minutes of exercise the patient does per day.</p></li>
-      </ol>
-      <ol>
         <li><p>Age is likely to be a lurking variable.</p></li>
-      </ol>
-      <ol>
         <li><p>Age is likely to be an extraneous variable.</p></li>
-      </ol>
-      <ol>
         <li><p>Age is likely to be a confounding variable.</p></li>
-      </ol>
-      <ol>
-        <li><p>Which (if any) of the following are possible <em>confounding</em> variables?</p></li>
-        <li><p>The sex of the patients.</p></li>
-        <li><p>The initial weight of the patients.</p></li>
-        <li><p>The names of the patients.</p></li>
+        <li>
+          <p>Which (if any) of the following are possible <em>confounding</em> variables?</p>
+          <ul>
+            <li><p>The sex of the patients.</p></li>
+            <li><p>The initial weight of the patients.</p></li>
+            <li><p>The names of the patients.</p></li>
+          </ul>
+        </li>
       </ol>
     </exercise>
     <exercise xml:id="exercise-research-smoking-alfresco">
       <p>
-        <xref ref="data-Stafford2010-Alfresco"/> studied smoking in alfresco restaurants in two cities in Western Australia. The concentration of particulate matter with a diameter smaller than or equal to <m>2.5</m> (per cubic metre of air) was recorded (PM~<m>2.5</m>~) from <m>12</m> and <m>16</m> pubs. The researchers were interested in the relationship between PM~<m>2.5</m>~ and the number of smokers. They also recorded the wind strength (calm; light breeze; windy) and the amount of cover (fully open; overhead cover only; overhead cover and enclosed sides).
+        <xref ref="data-Stafford2010-Alfresco"/> studied smoking in alfresco restaurants in two cities in Western Australia. The concentration of particulate matter with a diameter smaller than or equal to <m>2.5</m> (per cubic metre of air) was recorded (PM<sub>2.5</sub>) from <m>12</m> cafés and <m>16</m> pubs. The researchers were interested in the relationship between PM<sub>2.5</sub> and the number of smokers. They also recorded the wind strength (calm; light breeze; windy) and the amount of cover (fully open; overhead cover only; overhead cover and enclosed sides).
       </p>
       <ol>
         <li><p>Is this an experimental or observational study?</p></li>
@@ -979,18 +1042,20 @@
       </p>
       <ol>
         <li><p>Is this an experimental or observational study?</p></li>
-        <li><p>What would be the control group?</p></li>
-      </ol>
-      <p>
-        a. The group receiving Treatment A. b. A group of paramedics who do not have PTSD. c. The group receiving Treatment B. d. A group of paramedics not involved in the study. e. A group of people with PTSD who are not paramedics. f. A group receiving a pill that looks just like Treatment A and B, but has no effective ingredient.
-      </p>
-      <ol>
-        <li><p>The patients did not know which treatment they received.</p></li>
-      </ol>
-      <p>
-        What is this called?
-      </p>
-      <ol>
+        <li>
+          <p>What would be the control group?</p>
+          <ol marker="a.">
+            <li><p>The group receiving Treatment A.</p></li>
+            <li><p>A group of paramedics who do not have PTSD.</p></li>
+            <li><p>The group receiving Treatment B.</p></li>
+            <li><p>A group of paramedics not involved in the study.</p></li>
+            <li><p>A group of people with PTSD who are not paramedics.</p></li>
+            <li><p>A group receiving a pill that looks just like Treatment A and B, but has no effective ingredient.</p></li>
+          </ol>
+        </li>
+        <li>
+          <p>The patients did not know which treatment they received. What is this called?</p>
+        </li>
         <li><p>What is the purpose of blinding the participants?</p></li>
       </ol>
     </exercise>
@@ -1042,6 +1107,14 @@
       <p>
         <xref ref="greier2021objective"/> studied <m>36</m> Austrian eighth-grade students, recording the time spent performing moderate-to-vigorous physical activity (<span style="font-variant:small-caps;">mvpa</span>). For each student, the time spent in <span style="font-variant:small-caps;">mvpa</span> was recorded in two ways: (a) using a wrist-worn accelerometer, worn for seven days; and (b) self-reported using a questionnaire at the end of the week.
       </p>
+      <p>
+        <span style="font-variant:small-caps;">Mvpa</span> reported in the questionnaire was more than double the time measured using the accelerometer; thus, <m>88.9</m>% of students met PA recommendations based on self-report, but only <m>22.2</m>% did so based on the accelerometer data.
+      </p>
+      <ol>
+        <li><p>Which method recorded <em>subjective</em> data? Which method recorded <em>objective</em> data?</p></li>
+        <li><p>Explain the discrepancies in the results from the methods, using the language of this chapter.</p></li>
+        <li><p>Which method would be more likely to be recording accurate information? Why?</p></li>
+      </ol>
     </exercise>
     <exercise xml:id="exercise-research-taste-of-water2">
       <p>
@@ -1090,7 +1163,7 @@
     </exercise>
     <exercise xml:id="exercise-research-design-formwork">
       <p>
-        <em>Formwork</em> is used in construction with reinforced concrete, and can be labour intensive. <xref ref="mine2015observational"/> examined the relationship between the floor area of the building (in m^<m>2</m>^ per storey) and the number of hours of labour needed for constructing the formwork (in person-mins per storey). The researchers also recorded the average age of the workers (in years); the average years of experience of the workers (in years); and the storey height (in meters) for each of <m>n = 15</m> multi-storey buildings in the study.
+        <em>Formwork</em> is used in construction with reinforced concrete, and can be labour intensive. <xref ref="mine2015observational"/> examined the relationship between the floor area of the building (in m<sup>2</sup> per storey) and the number of hours of labour needed for constructing the formwork (in person-mins per storey). The researchers also recorded the average age of the workers (in years); the average years of experience of the workers (in years); and the storey height (in meters) for each of <m>n = 15</m> multi-storey buildings in the study.
       </p>
       <p>
         Two observers recorded the labour time by observing workers from the start to the end of the work.
@@ -1098,22 +1171,19 @@
       <ol>
         <li><p>What is the <em>explanatory variable</em>?</p></li>
         <li><p>What is the <em>response variable</em>?</p></li>
-        <li><p>What <em>type</em> of description is appropriate for the variable 'age of the workers'?</p></li>
-      </ol>
-      <p>
-        a. A confounding variable, since it is likely to be related to the explanatory variable only. b. A confounding variable, since it is likely to be related to the response variable only. c. An extraneous variable, because it is likely to be related to the response variable only. d. A lurking variable, since we don't know how it might be related to the response and explanatory variables.
-      </p>
-      <ol>
+        <li>
+          <p>What <em>type</em> of description is appropriate for the variable 'age of the workers'?</p>
+          <ol marker="a.">
+            <li><p>A confounding variable, since it is likely to be related to the explanatory variable only.</p></li>
+            <li><p>A confounding variable, since it is likely to be related to the response variable only.</p></li>
+            <li><p>An extraneous variable, because it is likely to be related to the response variable only.</p></li>
+            <li><p>A lurking variable, since we don't know how it might be related to the response and explanatory variables.</p></li>
+          </ol>
+        </li>
         <li><p>What is the most likely way to manage confounding in this study?</p></li>
         <li><p>True or false: the <em>carryover</em> effect is likely to be a big problem in this study.</p></li>
-      </ol>
-      <ol>
         <li><p>True or false: the <em>Hawthorne</em> effect is likely to be a big problem in this study.</p></li>
-      </ol>
-      <ol>
         <li><p>True or false: the <em>placebo</em> effect is likely to be a big problem in this study.</p></li>
-      </ol>
-      <ol>
         <li><p>True or false: <em>observer</em> effect is likely to be a big problem in this study.</p></li>
       </ol>
     </exercise>
