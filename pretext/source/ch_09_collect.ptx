@@ -54,7 +54,7 @@
     <example xml:id="example-protocol-example">
       <title>Protocol</title>
       <p>
-        <xref ref="data-Romanchik2018-cookies"/> made cookies using green peas in place of margarine (to increase the nutritional value of cookies). They assessed the acceptance of these cookies to college students.
+        <xref ref="data-Romanchik2018-cookies"/> made cookies using puréed green peas in place of margarine (to increase the nutritional value of cookies). They assessed the acceptance of these cookies to college students.
       </p>
       <p>
         The protocol discussed <em>how the individuals were chosen</em> (p. 4):
@@ -72,7 +72,7 @@
         <li><p>tasters sat at individual tables, so they could not be influenced by other tasters.</p></li>
         <li><p>cookies were presented individually, on individual plates.</p></li>
         <li><p>the cookies were presented in a randomised order (fat substituted with green pea puree at <m>25</m>%, <m>0</m>%, <m>50</m>%, <m>100</m>% and <m>75</m>%).</p></li>
-        <li><p>between tastes, tasters 'cleansed their palates' by drinking distilled water at <m>25</m>^o^C.</p></li>
+        <li><p>between tastes, tasters 'cleansed their palates' by drinking distilled water at <m>25^{\circ}\text{C}</m>.</p></li>
         <li><p>the tasters recorded (p. 5):</p></li>
       </ul>
       <blockquote>
@@ -239,6 +239,9 @@
         This is a poor question, because a respondent does not know which option to select for an answer of '<m>5</m>'. The options are not <em>mutually exclusive</em>.
       </p>
     </example>
+    <p>
+      The following (humourous) video shows how questions can be manipulated by those not wanting to be ethical: <url href="https://www.youtube.com/watch?v=G0ZZJXw4MTA" visual="youtube.com/watch?v=G0ZZJXw4MTA">Video: Yes Prime Minister on manipulative questioning</url>.
+    </p>
   </subsection>
 
   <subsection xml:id="sec-biases">
@@ -292,6 +295,12 @@
         The first question requires open-ended, text-based answers (<c>Sources</c>).<idx><h>Questionnaire</h><h>questions!open-ended</h></idx> For the second (closed) question, students could select <em>multiple</em> options, so each option needs one column in the data worksheet (<c>WhereSeas</c> to <c>WhereGroundwater</c>).<idx><h>Questionnaire</h><h>questions!open-ended</h></idx><idx><h>Questionnaire</h><h>questions!closed</h></idx> The third (closed) question required students to select <em>one</em> option from a given list, so one column (<c>Danger</c>) is needed to record responses. As usual (Sect. <xref ref="sec-data-entry"/>), each row represents one unit of analysis (student).
       </p>
     </example>
+    <figure xml:id="fig-microplasticsjamovi">
+      <caption>The data worksheet for some example data, for the microplastics study.</caption>
+      <image source="DataPrep/Microplastics/MicroplasticsSetup.png" width="100%">
+        <description><p>Screenshot of a data worksheet showing columns for Sources (open-ended text), WhereSeas through WhereGroundwater (binary closed options), and Danger (single-select closed option), with one row per student.</p></description>
+      </image>
+    </figure>
     <idx>Research design|)</idx>
   </subsection>
   </section>
@@ -305,21 +314,55 @@
 
   <reading-questions xml:id="sec-chap10-quick-review">
     <title>Quick review questions</title>
+    <exercise>
+      <p>What is the biggest problem with this question: 'Do you have bromodosis?'</p>
+      <ol>
+        <li><p>It is double-barrelled.</p></li>
+        <li><p>It is a leading question.</p></li>
+        <li><p>It uses language that may not be understood. [Correct]</p></li>
+        <li><p>It is ambiguous.</p></li>
+      </ol>
+    </exercise>
+    <exercise>
+      <p>What is the biggest problem with this question: 'Do you spend too much time connected to the internet?'</p>
+      <ol>
+        <li><p>It is double-barrelled.</p></li>
+        <li><p>It is a leading question.</p></li>
+        <li><p>It uses language that may not be understood.</p></li>
+        <li><p>It is ambiguous. [Correct]</p></li>
+      </ol>
+    </exercise>
+    <exercise>
+      <p>What is the biggest problem with this question: 'Do you eat fruits and vegetables?'</p>
+      <ol>
+        <li><p>It is double-barrelled. [Correct]</p></li>
+        <li><p>It is a leading question.</p></li>
+        <li><p>It uses language that may not be understood.</p></li>
+        <li><p>It is ambiguous.</p></li>
+      </ol>
+    </exercise>
+    <exercise>
+      <p><em>True</em> or <em>false</em>: A well-defined protocol allows the researchers to make the study externally valid. [False]</p>
+    </exercise>
+    <exercise>
+      <p><em>True</em> or <em>false</em>: This question is likely to be a <em>leading</em> question: 'Do you support a ban on drinks sold in unrecyclable plastic bottles?' [True]</p>
+    </exercise>
   </reading-questions>
 
   <exercises xml:id="sec-collection-exercises">
     <introduction>
       <p>Answers to odd-numbered exercises are given at the end of the book.</p>
     </introduction>
-    <p>
-      [Answers to odd-numbered exercises] are given at the end of the book.
-    </p>
     <exercise xml:id="exercise-collect-survey-questions1">
       <p>
         What is the problem with this question?
       </p>
       <blockquote>
-        <p>What is your age? (Select one option) - Under <m>18</m>. - Over <m>18</m>.</p>
+        <p>What is your age? (Select one option)</p>
+        <ul>
+          <li><p>Under <m>18</m>.</p></li>
+          <li><p>Over <m>18</m>.</p></li>
+        </ul>
       </blockquote>
     </exercise>
     <exercise xml:id="exercise-collect-survey-questions1b">
@@ -327,7 +370,13 @@
         What is the problem with this question?
       </p>
       <blockquote>
-        <p>How many children do you have? (Select one option) - None. - <m>1</m> or <m>2</m>. - <m>2</m> or <m>3</m>. - More than <m>4</m>.</p>
+        <p>How many children do you have? (Select one option)</p>
+        <ul>
+          <li><p>None.</p></li>
+          <li><p><m>1</m> or <m>2</m>.</p></li>
+          <li><p><m>2</m> or <m>3</m>.</p></li>
+          <li><p>More than <m>4</m>.</p></li>
+        </ul>
       </blockquote>
     </exercise>
     <exercise xml:id="exercise-collect-survey-questions2">
@@ -367,19 +416,31 @@
         <xref ref="moron2021children"/> studied primary-school children's knowledge of their natural environment. They were asked three questions:
       </p>
       <ol>
-        <li><p>Do you usually visit Guadaira Park?</p></li>
-        <li><p>No, I don’t like parks.</p></li>
-        <li><p>No, I don’t usually visit it.</p></li>
-        <li><p>Yes, once per week.</p></li>
-        <li><p>Yes, more than once a week</p></li>
-        <li><p>How many times have you visited nature (the beach, countryside, mountains, etc.) in the last month?</p></li>
-        <li><p>Never.</p></li>
-        <li><p>Once.</p></li>
-        <li><p>Two to three times.</p></li>
-        <li><p>More than three times.</p></li>
-        <li><p>Which is your favourite natural place?</p></li>
-        <li><p>Write a story.</p></li>
-        <li><p>Draw a picture.</p></li>
+        <li>
+          <p>Do you usually visit Guadaira Park?</p>
+          <ul>
+            <li><p>No, I don't like parks.</p></li>
+            <li><p>No, I don't usually visit it.</p></li>
+            <li><p>Yes, once per week.</p></li>
+            <li><p>Yes, more than once a week.</p></li>
+          </ul>
+        </li>
+        <li>
+          <p>How many times have you visited nature (the beach, countryside, mountains, etc.) in the last month?</p>
+          <ul>
+            <li><p>Never.</p></li>
+            <li><p>Once.</p></li>
+            <li><p>Two to three times.</p></li>
+            <li><p>More than three times.</p></li>
+          </ul>
+        </li>
+        <li>
+          <p>Which is your favourite natural place?</p>
+          <ul>
+            <li><p>Write a story.</p></li>
+            <li><p>Draw a picture.</p></li>
+          </ul>
+        </li>
       </ol>
       <p>
         Which questions are <em>open</em> and which are <em>closed</em>? Which questions will produce <em>qualitative</em> data? Critique the questions.
