@@ -436,4 +436,16 @@
       </p>
     </exercise>
   </exercises>
+
+  <section xml:id="sec-ch27-supplementary-figures">
+    <title>Supplementary figures</title>
+    <figure xml:id="fig-body-tempjamovi">
+      <caption>Jamovi output showing descriptive statistics for the body temperature data.</caption>
+      <image source="fig-body-tempjamovi.png" width="80%"/>
+    </figure>
+    <figure xml:id="fig-body-temp-testjamovi">
+      <caption>Jamovi output showing hypothesis test results for the body temperature data.</caption>
+      <image source="fig-body-temp-testjamovi.png" width="80%"/>
+    </figure>
+  </section>
 </chapter>

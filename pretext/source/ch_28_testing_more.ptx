@@ -16,7 +16,7 @@
   <section xml:id="sec-chap28-intro">
     <title>Introduction</title>
     <p>
-      In Chaps. <xref ref="sec-test-one-proportion"/> and <xref ref="sec-test-one-mean"/>, hypothesis tests for one proportion and one mean were studied. Later chapters discuss hypothesis tests in other contexts, too. However, the general approach to hypothesis testing is the same for <em>any</em> hypothesis test. This chapter discusses some general ideas in hypothesis testing:
+      In Chaps. <xref ref="sec-test-one-proportion"/> and <xref ref="ch-27-testing-one-mean"/>, hypothesis tests for one proportion and one mean were studied. Later chapters discuss hypothesis tests in other contexts, too. However, the general approach to hypothesis testing is the same for <em>any</em> hypothesis test. This chapter discusses some general ideas in hypothesis testing:
     </p>
     <ul>
       <li><p>stating the <em>assumptions</em> and forming hypotheses (Sect. <xref ref="sec-about-hypotheses"/>).</p></li>
@@ -55,7 +55,7 @@
     <title>Null hypotheses</title>
     <idx><h>Hypotheses</h><h>null</h></idx>
     <p>
-      Statistical hypotheses <em>are always about a parameter</em>. Hypothesising, for example, that the <em>sample</em> mean body temperature (in Chap. <xref ref="sec-test-one-mean"/>) is equal to <m>37.0</m>^o^C is silly: the <em>sample</em> mean clearly is <m>36.8052</m>^o^C for the sample taken, and its value will vary from sample to sample anyway. The RQ is about the unknown <em>population</em>: the <alert>P</alert> in <alert>P</alert>OCI stands for <alert>P</alert>opulation.<idx>POCI</idx>
+      Statistical hypotheses <em>are always about a parameter</em>. Hypothesising, for example, that the <em>sample</em> mean body temperature (in Chap. <xref ref="ch-27-testing-one-mean"/>) is equal to <m>37.0</m>^o^C is silly: the <em>sample</em> mean clearly is <m>36.8052</m>^o^C for the sample taken, and its value will vary from sample to sample anyway. The RQ is about the unknown <em>population</em>: the <alert>P</alert> in <alert>P</alert>OCI stands for <alert>P</alert>opulation.<idx>POCI</idx>
     </p>
     <p>
       The <em>null hypothesis</em> <m>H_0</m> proposes that <em>sampling variation</em> is why the value of the statistic (such as the sample mean) is not the same as the assumed value of the parameter (such as the population mean). Every sample is different, and the observed data is from just one of the many possible samples. The value of the <em>statistic</em> will vary from sample to sample; the statistic may not be equal to the <em>parameter</em>, just because of the random sample obtained and sampling variation.
@@ -75,7 +75,7 @@
       The null hypothesis always assumes the discrepancy between the statistic and the assumed value of the parameter is due to sampling variation. This may mean, for example:
     </p>
     <ul>
-      <li><p>there is <em>no change</em> in the value of the parameter compared to an established or accepted value (for descriptive RQs), such as in the body-temperature example in Chap. <xref ref="sec-test-one-mean"/>.</p></li>
+      <li><p>there is <em>no change</em> in the value of the parameter compared to an established or accepted value (for descriptive RQs), such as in the body-temperature example in Chap. <xref ref="ch-27-testing-one-mean"/>.</p></li>
       <li><p>there is <em>no change</em> in the value of the parameter for the units of analysis (i.e., for repeated-measures RQs).</p></li>
       <li><p>there is <em>no difference</em> between the value of the parameter in two (or more) groups (i.e., for relational RQs).</p></li>
       <li><p>there is <em>no relationship</em> between the variables, as measured by some parameter (for correlational RQs).</p></li>
@@ -118,7 +118,7 @@
     <example xml:id="example-alt-hypothesis-body-temp">
       <title>Alternative hypotheses</title>
       <p>
-        For the body-temperature study (Chap. <xref ref="sec-test-one-mean"/>), the alternative hypothesis is <em>two-tailed</em> (i.e., <m>H_1</m>: <m> 37.0</m>): the RQ asks if the population mean is <m>37.0</m>^o^C or <em>not</em>. Two possibilities are considered: that <m></m> could be either larger <em>or</em> smaller than <m>37.0</m>.
+        For the body-temperature study (Chap. <xref ref="ch-27-testing-one-mean"/>), the alternative hypothesis is <em>two-tailed</em> (i.e., <m>H_1</m>: <m> 37.0</m>): the RQ asks if the population mean is <m>37.0</m>^o^C or <em>not</em>. Two possibilities are considered: that <m></m> could be either larger <em>or</em> smaller than <m>37.0</m>.
       </p>
       <p>
         A <em>one-tailed alternative hypothesis</em> would be appropriate if the RQ asked 'Is the <em>population</em> mean internal body temperature <em>greater</em> than <m>37.0</m>^o^C?' (i.e., <m>H_1</m>: <m> &gt; 37.0</m>), or 'Is the <em>population</em> mean internal body temperature <em>smaller</em> than <m>37.0</m>^o^C?' (i.e., <m>H_1</m>: <m> &lt; 37.0</m>). One-tailed RQs such as these would only be asked if there were good scientific reasons to suspect a difference in one direction specifically.
@@ -329,7 +329,7 @@
     <example xml:id="example-type-i-type-ii">
       <title>Type I errors</title>
       <p>
-        For the body-temperature example (Chap. <xref ref="sec-test-one-mean"/>), the conclusion was that the sample provided very strong evidence that the population mean body temperature was <em>not</em> <m>37.0</m>^o^C. However, in truth, the mean internal body may not have changed, and is still <m>37.0</m>^o^C; that is, the null hypothesis actually is true, but we incorrectly decided it was probably not true.
+        For the body-temperature example (Chap. <xref ref="ch-27-testing-one-mean"/>), the conclusion was that the sample provided very strong evidence that the population mean body temperature was <em>not</em> <m>37.0</m>^o^C. However, in truth, the mean internal body may not have changed, and is still <m>37.0</m>^o^C; that is, the null hypothesis actually is true, but we incorrectly decided it was probably not true.
       </p>
       <p>
         This would be a Type I error: we <em>incorrectly</em> concluded that the evidence supported the alternative hypothesis. Of course, since the value of <m></m> is unknown, we do not know if we have made a Type I error or not.
@@ -364,7 +364,7 @@
     <example xml:id="example-no-evidence-of-a-difference">
       <title>No evidence of a difference</title>
       <p>
-        Suppose, when we tested if the mean internal body temperature remained <m>37.0</m>^o^C (Chap. <xref ref="sec-test-one-mean"/>), that we found <em>no evidence</em> that the temperature had changed. This <em>does not</em> provide evidence that the mean internal body temperature is <m>37.0</m>^o^C. It just means that the sample provided no evidence to change our initial <em>assumption</em> that the mean internal body temperature is <m>37.0</m>^o^C.
+        Suppose, when we tested if the mean internal body temperature remained <m>37.0</m>^o^C (Chap. <xref ref="ch-27-testing-one-mean"/>), that we found <em>no evidence</em> that the temperature had changed. This <em>does not</em> provide evidence that the mean internal body temperature is <m>37.0</m>^o^C. It just means that the sample provided no evidence to change our initial <em>assumption</em> that the mean internal body temperature is <m>37.0</m>^o^C.
       </p>
     </example>
   </section>
@@ -485,7 +485,7 @@
     </exercise>
     <exercise xml:id="exercise-more-about-tests-interpreting-hypotheses">
       <p>
-        Consider the study to determine if the mean body temperature (Chap. <xref ref="sec-test-one-mean"/>) was <m>37.0</m>^o^C, where <m>\bar{x} = 36.8052</m>^o^C. Explain <em>why</em> each of these sets of hypotheses are incorrect.
+        Consider the study to determine if the mean body temperature (Chap. <xref ref="ch-27-testing-one-mean"/>) was <m>37.0</m>^o^C, where <m>\bar{x} = 36.8052</m>^o^C. Explain <em>why</em> each of these sets of hypotheses are incorrect.
       </p>
       <ol>
         <li><p><m>H_0</m>: <m>\bar{x} = 37.0</m>; <m>H_1</m>: <m>\bar{x} 37.0</m>.</p></li>
@@ -568,7 +568,7 @@
     </exercise>
     <exercise xml:id="exercise-more-about-tests-consistency2">
       <p>
-        The study of body temperatures (Chap. <xref ref="sec-test-one-mean"/>) also compared the mean internal body temperatures for females and males <xref ref="data-mackowiak-bodytemp"/>. The study concludes that there is moderate evidence of a difference between the mean temperatures of females and males.
+        The study of body temperatures (Chap. <xref ref="ch-27-testing-one-mean"/>) also compared the mean internal body temperatures for females and males <xref ref="data-mackowiak-bodytemp"/>. The study concludes that there is moderate evidence of a difference between the mean temperatures of females and males.
       </p>
       <p>
         Which of these statements is <em>consistent</em> with this conclusion?
@@ -584,4 +584,19 @@
       </p>
     </exercise>
   </exercises>
+
+  <section xml:id="sec-ch28-supplementary-tables">
+    <title>Supplementary tables</title>
+    <table xml:id="tab-pvalues-interpretation">
+      <title>Guidelines for interpreting P-values as evidence</title>
+      <tabular>
+        <row header="yes"><cell>P-value range</cell><cell>Strength of evidence against H<sub>0</sub></cell></row>
+        <row><cell>P > 0.10</cell><cell>Weak or no evidence</cell></row>
+        <row><cell>0.05 &lt; P ≤ 0.10</cell><cell>Moderate evidence</cell></row>
+        <row><cell>0.01 &lt; P ≤ 0.05</cell><cell>Strong evidence</cell></row>
+        <row><cell>0.001 &lt; P ≤ 0.01</cell><cell>Very strong evidence</cell></row>
+        <row><cell>P ≤ 0.001</cell><cell>Extremely strong evidence</cell></row>
+      </tabular>
+    </table>
+  </section>
 </chapter>

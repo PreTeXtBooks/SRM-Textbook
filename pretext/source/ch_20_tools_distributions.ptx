@@ -144,7 +144,7 @@
           <p>
             Again, the percentages only depend on how many standard deviations (<m></m>) the value (<m>x</m>) is from the mean (<m></m>). The number of standard deviations that an observation is from the mean is called a <em><m>z</m>-score</em>. A <m>z</m>-score is computed using
           </p>
-          <me>z = \frac{ x - \mu}{\sigma},</me>
+          <men xml:id="eq-zscores">z = \frac{x - \mu}{\sigma}</men>
           <p>
             where <m></m> is the standard deviation quantifying the variation in the <m>x</m>-values. Converting values to <m>z</m>-scores is called <em>standardising</em>.
           </p>
@@ -406,5 +406,83 @@
         </example>
       </statement>
     </definition>
+  </section>
+
+  <section xml:id="sec-approx-probs">
+    <title>Approximating areas (percentages) using the 68--95--99.7 rule</title>
+    <p>
+      The 68--95--99.7 rule can be used to <em>approximate</em> areas (percentages) under a normal distribution.
+      A <m>z</m>-score converts an observation to standard deviations from the mean (Equation <xref ref="eq-zscores"/>).
+      When the <m>z</m>-score corresponds to one, two, or three standard deviations from the mean,
+      the 68--95--99.7 rule gives approximate areas directly.
+    </p>
+    <figure xml:id="fig-empirical-rule-diagram">
+      <caption>The 68--95--99.7 rule illustrated for a normal distribution.</caption>
+      <image source="fig-empirical-rule-diagram.png" width="80%"/>
+    </figure>
+    <figure xml:id="fig-hts-empirical">
+      <caption>Heights of adult Australian females and the empirical rule.</caption>
+      <image source="fig-hts-empirical.png" width="80%"/>
+    </figure>
+    <figure xml:id="fig-match-diagrams">
+      <caption>Matching normal distribution diagrams to z-scores.</caption>
+      <image source="fig-match-diagrams.png" width="80%"/>
+    </figure>
+    <figure xml:id="fig-two-d-dotchart">
+      <caption>Two-sided dotchart for approximating probabilities.</caption>
+      <image source="fig-two-d-dotchart.png" width="80%"/>
+    </figure>
+    <figure xml:id="fig-hts-exer1">
+      <caption>Heights exercise diagram 1.</caption>
+      <image source="fig-hts-exer1.png" width="80%"/>
+    </figure>
+    <figure xml:id="fig-hts-exer3">
+      <caption>Heights exercise diagram 3.</caption>
+      <image source="fig-hts-exer3.png" width="80%"/>
+    </figure>
+    <figure xml:id="fig-empirical-rule-hts">
+      <caption>The empirical rule applied to heights of adult Australian females.</caption>
+      <image source="fig-empirical-rule-hts.png" width="80%"/>
+    </figure>
+  </section>
+
+  <section xml:id="sec-exact-areas-using-tables">
+    <title>Exact areas (percentages) using tables</title>
+    <p>
+      More precise <m>z</m>-table areas can be found using printed tables (Appendix <xref ref="sec-z-tables-neg"/>
+      and <xref ref="sec-z-tables-pos"/>) or online tables (Appendix <xref ref="sec-z-tables-online"/>).
+      The tables give the area to the <em>left</em> of a given <m>z</m>-score.
+    </p>
+    <figure xml:id="fig-tables-example-la-te-x">
+      <caption>A <m>z</m>-score table for negative values of <m>z</m>.</caption>
+      <image source="fig-tables-example-latex.png" width="80%"/>
+    </figure>
+    <figure xml:id="fig-tables-example-la-te-x-backwards">
+      <caption>Working backwards from areas in a <m>z</m>-score table.</caption>
+      <image source="fig-tables-example-latex-backwards.png" width="80%"/>
+    </figure>
+    <figure xml:id="fig-working-with-z">
+      <caption>Working with <m>z</m>-scores and tables.</caption>
+      <image source="fig-working-with-z.png" width="80%"/>
+    </figure>
+  </section>
+
+  <section xml:id="sec-z-score-forestry">
+    <title>Examples using <m>z</m>-scores</title>
+    <p>
+      These examples illustrate using <m>z</m>-scores and normal distribution tables in forestry and related applications.
+    </p>
+    <figure xml:id="fig-zdbh1">
+      <caption>Normal distribution for forestry DBH data (left tail).</caption>
+      <image source="fig-zdbh1.png" width="80%"/>
+    </figure>
+    <figure xml:id="fig-zdbh3">
+      <caption>Normal distribution for forestry DBH data (right tail).</caption>
+      <image source="fig-zdbh3.png" width="80%"/>
+    </figure>
+    <figure xml:id="fig-dbh-backwards">
+      <caption>Working backwards: finding the DBH value corresponding to a given area.</caption>
+      <image source="fig-dbh-backwards.png" width="80%"/>
+    </figure>
   </section>
 </chapter>

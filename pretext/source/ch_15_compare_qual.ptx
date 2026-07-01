@@ -581,4 +581,17 @@
       </p>
     </exercise>
   </exercises>
+
+  <section xml:id="sec-ch15-supplementary-tables">
+    <title>Supplementary tables</title>
+    <table xml:id="tab-ks-small">
+      <title>Outcomes for two kidney stone treatments on small stones</title>
+      <tabular>
+        <row header="yes"><cell>Treatment</cell><cell>Success</cell><cell>Failure</cell><cell>Total</cell></row>
+        <row><cell>Treatment A</cell><cell>81</cell><cell>6</cell><cell>87</cell></row>
+        <row><cell>Treatment B</cell><cell>234</cell><cell>36</cell><cell>270</cell></row>
+        <row><cell>Total</cell><cell>315</cell><cell>42</cell><cell>357</cell></row>
+      </tabular>
+    </table>
+  </section>
 </chapter>

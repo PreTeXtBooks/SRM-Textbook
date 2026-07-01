@@ -87,7 +87,7 @@
       </p>
     </example>
     <p>
-      Determining the sample size to use in a study is a trade-off between the advantages of increasing precision, and the challenges of cost, time, and remaining ethical (Chap. <xref ref="sec-ethics"/>). In addition, <em>how</em> the sample is obtained is important: random samples give more <em>accurate</em> samples (Sect. <xref ref="sec-precision-accuracy"/>) than non-random samples. That is, the sample size is not the only issue to consider; <em>how</em> the sample is obtained (i.e., random; non-random) is also important.
+      Determining the sample size to use in a study is a trade-off between the advantages of increasing precision, and the challenges of cost, time, and remaining ethical (Chap. <xref ref="ch-05-research-design-ethics"/>). In addition, <em>how</em> the sample is obtained is important: random samples give more <em>accurate</em> samples (Sect. <xref ref="sec-precision-accuracy"/>) than non-random samples. That is, the sample size is not the only issue to consider; <em>how</em> the sample is obtained (i.e., random; non-random) is also important.
     </p>
     <p>
       For these reasons, researchers usually identify a margin of error that is meaningful (i.e., of practical importance)<idx>Practical importance</idx> in the context of their study, to help identify an appropruarte sample size.

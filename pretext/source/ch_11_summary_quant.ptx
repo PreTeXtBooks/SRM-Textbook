@@ -1346,4 +1346,34 @@
       </p>
     </exercise>
   </exercises>
+
+  <section xml:id="sec-ch11-supplementary-figures">
+    <title>Supplementary figures and tables</title>
+    <figure xml:id="fig-sd-outliers">
+      <caption>Identifying outliers using the standard deviation rule for the gorilla chest-beating data.</caption>
+      <image source="fig-sd-outliers.png" width="80%"/>
+    </figure>
+    <table xml:id="tab-baby-boom-table">
+      <title>Frequency table for baby-boom birth weights</title>
+      <tabular>
+        <row header="yes"><cell>Weight interval (kg)</cell><cell>Frequency</cell><cell>Percentage</cell></row>
+        <row><cell>1.0 to 2.5</cell><cell>—</cell><cell>—</cell></row>
+        <row><cell>2.5 to 3.0</cell><cell>—</cell><cell>—</cell></row>
+        <row><cell>3.0 to 3.5</cell><cell>—</cell><cell>—</cell></row>
+        <row><cell>3.5 to 4.0</cell><cell>—</cell><cell>—</cell></row>
+        <row><cell>4.0 to 4.5</cell><cell>—</cell><cell>—</cell></row>
+      </tabular>
+    </table>
+    <table xml:id="tab-cyclone-frequency-table">
+      <title>Frequency table for annual tropical cyclone counts</title>
+      <tabular>
+        <row header="yes"><cell>Cyclones per year</cell><cell>Frequency</cell><cell>Percentage</cell></row>
+        <row><cell>0–2</cell><cell>—</cell><cell>—</cell></row>
+        <row><cell>3–4</cell><cell>—</cell><cell>—</cell></row>
+        <row><cell>5–6</cell><cell>—</cell><cell>—</cell></row>
+        <row><cell>7–8</cell><cell>—</cell><cell>—</cell></row>
+        <row><cell>9+</cell><cell>—</cell><cell>—</cell></row>
+      </tabular>
+    </table>
+  </section>
 </chapter>

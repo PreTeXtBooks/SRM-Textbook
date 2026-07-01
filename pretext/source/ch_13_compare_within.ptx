@@ -246,4 +246,12 @@
       </ol>
     </exercise>
   </exercises>
+
+  <section xml:id="sec-ch13-supplementary-figures">
+    <title>Supplementary figures</title>
+    <figure xml:id="fig-running-rm">
+      <caption>Case-profile plot of vertical oscillation (VO) measurements for 150 runners across five measurement methods.</caption>
+      <image source="fig-running-rm.png" width="80%"/>
+    </figure>
+  </section>
 </chapter>

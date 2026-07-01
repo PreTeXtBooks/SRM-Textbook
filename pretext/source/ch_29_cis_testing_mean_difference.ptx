@@ -22,7 +22,7 @@
       The six-minute walk test (6MWT) measures how far subjects can walk in six minutes, and is used as a simple, low-cost evaluation of fitness and other health-related measures. The recommended setting for the test is usually a walkway of at least <m>30</m>. <xref ref="saiphoklang2022comparison"/> measured the 6MWT distance when the same subjects used <em>both</em> <m>20</m> and <m>30</m> walkways.
     </p>
     <p>
-      The comparison is <em>within</em> individuals (Sect. <xref ref="sec-r-qs-repeated-measures"/>);<idx><h>Comparison</h><h>within individuals</h></idx> this is a <em>repeated-measures</em> study. Each subject has a <em>pair</em> of 6MWT measurements, and the study produced <em>paired data</em>
+      The comparison is <em>within</em> individuals (Sect. <xref ref="sec-rqs-repeated-measures"/>);<idx><h>Comparison</h><h>within individuals</h></idx> this is a <em>repeated-measures</em> study. Each subject has a <em>pair</em> of 6MWT measurements, and the study produced <em>paired data</em>
     </p>
     <p>
       the topic of this chapter.<idx><h>Data</h><h>paired</h></idx><idx><h>Study types</h><h>paired</h></idx>
@@ -225,7 +225,7 @@
       This hypothesis says that the mean change in the population is <em>greater than</em> zero, because of the wording of the RQ, and because of how the differences were defined. If the differences were defined in the opposite way (as 'the <m>20</m> distance minus the <m>30</m> distance') then the alternative hypothesis would be <m>\mu_d &lt; 0</m>, which has the same <em>meaning</em>.
     </p>
     <p>
-      The sampling distribution, as described in Sect. <xref ref="def-def-sampling-distribution-dbar"/>, still applies, where <m>\mu_d</m> is assumed to be the value given in <m>H_0</m> (see Fig. <xref ref="fig-smwt-sampling-dist-ht"/>):
+      The sampling distribution, as described in Sect. <xref ref="def-sampling-distribution-dbar"/>, still applies, where <m>\mu_d</m> is assumed to be the value given in <m>H_0</m> (see Fig. <xref ref="fig-smwt-sampling-dist-ht"/>):
     </p>
     <ul>
       <li><p>an approximate normal distribution,</p></li>
@@ -345,5 +345,17 @@
     <p>
       The value of the test statistic (i.e., the <m>t</m>-score) is
     </p>
+  </section>
+
+  <section xml:id="sec-ch29-supplementary-figures">
+    <title>Supplementary figures</title>
+    <figure xml:id="fig-compare-paired-boxplots-histogram">
+      <caption>Left: boxplot comparing 6MWT distances for 20 m and 30 m walkways. Right: histogram of differences in 6MWT distances.</caption>
+      <image source="fig-compare-paired-boxplots-histogram.png" width="80%"/>
+    </figure>
+    <figure xml:id="fig-smwt-numerical-output">
+      <caption>Jamovi output showing summary statistics and hypothesis test results for the 6MWT data.</caption>
+      <image source="fig-smwt-numerical-output.png" width="80%"/>
+    </figure>
   </section>
 </chapter>

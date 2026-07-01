@@ -199,7 +199,7 @@
           Let's pretend for the moment that the population proportion of even rolls on a die is <em>unknown</em> (simply to demonstrate ideas). An <em>estimate</em> of the population proportion of even rolls could be found by rolling a die <m>n = 25</m> times, and computing <m>\hat{p}</m> (an estimate of <m>p</m>). Suppose <m>11</m> of the <m>n = 25</m> rolls produce an even number, so <m>\hat{p} = 11/25 = 0.44</m>. The best estimate of <m>p</m> is therefore <m>\hat{p} = 0.44</m>. We might expect the (unknown) value of <m>p</m> to be a little smaller than this estimate <m>\hat{p}</m>, or a little larger.
         </p>
         <p>
-          Using Def. <xref ref="def-def-sampling-distribution-phat"/>, the sample proportions vary with an approximate normal distribution around <m>p</m> (whose value is unknown), with a standard deviation (the standard error) of
+          Using Def. <xref ref="def-sampling-distribution-phat"/>, the sample proportions vary with an approximate normal distribution around <m>p</m> (whose value is unknown), with a standard deviation (the standard error) of
         </p>
         <me>\text{s.e.}(\hat{p}) = \sqrt{\frac{ 0.44 \times (1 - 0.44)}{25}} = 0.09927739.</me>
         <p>
@@ -221,5 +221,53 @@
         </p>
       </statement>
     </definition>
+  </section>
+
+  <section xml:id="sec-c-ip-knownp">
+    <title>Sampling intervals for <m>\hat{p}</m></title>
+    <p>
+      When <m>p</m> is known, a <em>sampling interval</em> can be constructed to capture most possible
+      values of <m>\hat{p}</m>. Using the 68--95--99.7 rule, an approximate 95% sampling interval is
+    </p>
+    <men xml:id="eq-std-error-pknown-ci">s.e.(\hat{p}) = \sqrt{\frac{p(1-p)}{n}}</men>
+    <figure xml:id="fig-normal-die-theory-ci">
+      <caption>The normal distribution describing how the sample proportion varies for rolling a fair die 25 times.</caption>
+      <image source="fig-normal-die-theory-ci.png" width="80%"/>
+    </figure>
+    <figure xml:id="fig-c-irelationships-ci">
+      <caption>The relationship between confidence level and interval width.</caption>
+      <image source="fig-c-irelationships-ci.png" width="80%"/>
+    </figure>
+    <figure xml:id="fig-c-irelationships-si">
+      <caption>The relationship between sample size and interval width.</caption>
+      <image source="fig-c-irelationships-si.png" width="80%"/>
+    </figure>
+  </section>
+
+  <section xml:id="sec-sampling-distribution-unknownp">
+    <title>Sampling distribution for <m>\hat{p}</m>: for <m>p</m> unknown</title>
+    <idx><h>Sampling distribution</h><h>one proportion (unknown p)</h></idx>
+    <definition xml:id="def-sampling-distribution-phat-unknown">
+      <title>Sampling distribution of a sample proportion with <m>p</m> unknown</title>
+      <statement>
+        <p>
+          When the value of <m>p</m> is <em>unknown</em>, the <em>sampling distribution of the sample
+          proportion</em> is (when certain conditions are met; Sect. <xref ref="sec-validity-proportions"/>)
+          described by an approximate normal distribution centred around the sampling mean whose value is
+          <m>p</m>, with standard error
+          <m>s.e.(\hat{p}) = \sqrt{\hat{p}(1-\hat{p})/n}</m>.
+        </p>
+      </statement>
+    </definition>
+  </section>
+
+  <section xml:id="sec-validity-proportions">
+    <title>Statistical validity conditions</title>
+    <idx>Statistical validity (for inference)!one proportion</idx>
+    <p>
+      The <em>statistical validity conditions</em> for a CI for a single proportion is that both
+      <m>n\hat{p}</m> and <m>n(1-\hat{p})</m> exceed five. When these conditions are met, the
+      normal approximation is adequate.
+    </p>
   </section>
 </chapter>

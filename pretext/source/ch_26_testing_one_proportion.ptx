@@ -319,8 +319,48 @@
       </statement>
     </definition>
     <p>
-      Note that a different value for <m>s.e.(\hat{p})</m> is required to produce the CI (see Def. <xref ref="def-def-sampling-distribution-phat"/>).
+      Note that a different value for <m>s.e.(\hat{p})</m> is required to produce the CI (see Def. <xref ref="def-sampling-distribution-phat"/>).
     </p>
+  </section>
+
+  <section xml:id="sec-testp-obs-decision-pvalues">
+    <title>Decision: using <m>P</m>-values</title>
+    <idx>P-values</idx>
+    <p>
+      Evidence against the null hypothesis is evaluated using a <m>P</m>-value. A <m>P</m>-value
+      refers to the area more extreme than the calculated test statistic in the sampling distribution.
+    </p>
+    <figure xml:id="fig-decision-flow-dice">
+      <caption>Decision flow using P-values for the die-rolling example.</caption>
+      <image source="fig-decision-flow-dice.png" width="80%"/>
+    </figure>
+    <figure xml:id="fig-normal-die-theory-ht">
+      <caption>The normal distribution describing how the sample proportion varies for rolling a fair die 50 times.</caption>
+      <image source="fig-normal-die-theory-ht.png" width="80%"/>
+    </figure>
+    <subsection xml:id="sec-one-prop-test-p6895997">
+      <title>Approximating <m>P</m>-values using the 68<ndash/>95<ndash/>99.7 rule</title>
+      <idx>68–95–99.7 rule</idx>
+      <p>
+        The 68<ndash/>95<ndash/>99.7 rule can be used to determine approximate <m>P</m>-values.
+        See Sect. <xref ref="sec-approx-probs"/> for background.
+      </p>
+      <figure xml:id="fig-one-prop-test-p">
+        <caption>Approximating P-values using the 68–95–99.7 rule for <m>z = 1</m> (left) and <m>z = -2</m> (right).</caption>
+        <image source="fig-one-prop-test-p.png" width="80%"/>
+      </figure>
+    </subsection>
+    <subsection xml:id="sec-one-prop-test-p-tables">
+      <title>More precise <m>P</m>-values using tables</title>
+      <idx><h>P-values</h><h>using tables</h></idx>
+      <p>
+        More precise <m>P</m>-values can be found using the tables in Sect. <xref ref="sec-exact-areas-using-tables"/>.
+      </p>
+      <figure xml:id="fig-one-prop-test-p2">
+        <caption>More precise P-values for <m>z = 1.2</m> (left) and <m>z = -1.9</m> (right).</caption>
+        <image source="fig-one-prop-test-p2.png" width="80%"/>
+      </figure>
+    </subsection>
   </section>
 
   <section xml:id="sec-one-prop-test-communicate">
@@ -481,7 +521,7 @@
       <p><em>Very</em> strong evidence exists in the sample (<m>P &lt; 0.0001</m>; <m>z = 4.325</m>) that the interactions were not won equally by each species (<m>\hat{p} = 0.8222</m> won by green-backed tits; approx. <m>95</m>% CI: <m>0.708</m> to <m>0.936</m>; <m>n = 45</m>) in the population.</p>
     </blockquote>
     <p>
-      Note that a different value for <m>s.e.(\hat{p})</m> is required to produce the CI (see Def. <xref ref="def-def-sampling-distribution-phat"/>).
+      Note that a different value for <m>s.e.(\hat{p})</m> is required to produce the CI (see Def. <xref ref="def-sampling-distribution-phat"/>).
     </p>
   </section>
 

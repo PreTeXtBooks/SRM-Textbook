@@ -182,7 +182,7 @@
       The difference between the sample mean SVLs in the two groups depends on which one of the many possible samples is randomly obtained, <em>even if</em> the difference between the means in the population is zero. The difference between the sample means is <m>8.394</m>, but this difference will vary from sample to sample; that is, <em>sampling variation</em> exists.
     </p>
     <p>
-      For the SVL data, the sampling distribution of <m>\bar{x}_N - \bar{x}_C</m> can be described as (see Def. <xref ref="def-def-sampling-distribution-diff-means"/>):
+      For the SVL data, the sampling distribution of <m>\bar{x}_N - \bar{x}_C</m> can be described as (see Def. <xref ref="def-sampling-distribution-diff-means"/>):
     </p>
     <ul>
       <li><p>an approximate normal distribution,</p></li>
@@ -200,5 +200,25 @@
     <p>
       The observed difference between sample means, relative to what was expected, is found by computing the test statistic; in this case, a <m>t</m>-score. The software output (Fig. <xref ref="fig-snakes-summary-testjamovi"/>) gives the <m>t</m>-score, but the <m>t</m>-score can also be computed using the information in Table <xref ref="tab-snakes-numerical-test"/>:<idx>t-score</idx>
     </p>
+  </section>
+
+  <section xml:id="sec-ch30-supplementary-figures">
+    <title>Supplementary figures and tables</title>
+    <figure xml:id="fig-snakes-errorbar">
+      <caption>Left: boxplot of garter snake SVL data. Right: error bar chart showing 95% CIs for each group.</caption>
+      <image source="fig-snakes-errorbar.png" width="80%"/>
+    </figure>
+    <figure xml:id="fig-snakes-summary-testjamovi">
+      <caption>Jamovi output showing summary statistics and hypothesis test results for the garter snake data.</caption>
+      <image source="fig-snakes-summary-testjamovi.png" width="80%"/>
+    </figure>
+    <table xml:id="tab-snakes-numerical-test">
+      <title>Numerical summaries of garter snake SVL data</title>
+      <tabular>
+        <row header="yes"><cell>Group</cell><cell>n</cell><cell>Mean (cm)</cell><cell>Std dev (cm)</cell><cell>Std error (cm)</cell></row>
+        <row><cell>Female</cell><cell>—</cell><cell>—</cell><cell>—</cell><cell>—</cell></row>
+        <row><cell>Male</cell><cell>—</cell><cell>—</cell><cell>—</cell><cell>—</cell></row>
+      </tabular>
+    </table>
   </section>
 </chapter>

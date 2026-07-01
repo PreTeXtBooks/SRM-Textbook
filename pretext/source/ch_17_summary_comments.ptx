@@ -291,4 +291,12 @@
       </p>
     </exercise>
   </exercises>
+
+  <section xml:id="sec-ch17-supplementary-figures">
+    <title>Supplementary figures</title>
+    <figure xml:id="fig-histos-temp">
+      <caption>Histograms of body temperature data (left: starting from minimum value; right: starting from 0°C).</caption>
+      <image source="fig-histos-temp.png" width="80%"/>
+    </figure>
+  </section>
 </chapter>

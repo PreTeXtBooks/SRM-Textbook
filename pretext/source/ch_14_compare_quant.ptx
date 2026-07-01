@@ -336,4 +336,12 @@
       </ol>
     </exercise>
   </exercises>
+
+  <section xml:id="sec-ch14-supplementary-figures">
+    <title>Supplementary figures</title>
+    <figure xml:id="fig-gorillas-double-stem">
+      <caption>Back-to-back stemplot comparing chest-beating rates of younger and older gorillas.</caption>
+      <image source="fig-gorillas-double-stem.png" width="80%"/>
+    </figure>
+  </section>
 </chapter>

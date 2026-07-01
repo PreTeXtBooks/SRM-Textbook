@@ -82,7 +82,7 @@
   <section xml:id="sec-ethics-when-writing">
     <title>Ethics when writing</title>
     <p>
-      As always, ethical practice is important (Sect. <xref ref="sec-ethics"/>)<idx>Ethics</idx>, including when writing about research. Some relevant issues are given below.
+      As always, ethical practice is important (Sect. <xref ref="ch-05-research-design-ethics"/>)<idx>Ethics</idx>, including when writing about research. Some relevant issues are given below.
     </p>
     <ul>
       <li><p><em>Producing reproducible research</em>. When possible, research should be <em>reproducible</em> (Sect. <xref ref="sec-reproducible-research"/>).<idx><h>Research</h><h>reproducibility</h></idx> This includes describing the protocol,<idx>Protocol</idx> and making available any data (when possible; sometime this is not ethical or permitted) and any instructions or code used to analyse the data.</p></li>
@@ -347,7 +347,7 @@
       <li><p><em>Odds</em>:<idx>Odds</idx><idx>Probability</idx> In research, 'odds' has a specific meaning (Sect. <xref ref="sec-qual-odds"/>) and is not the same as probability. In general usage, 'probability' and 'odds' are often used interchangeably.</p></li>
       <li><p><em>Population</em>:<idx>Population</idx> In research, the 'population' refers to a larger group of interest (Def. <xref ref="def-population"/>). In general usage, 'population' often refers to groups of people specifically.</p></li>
       <li><p><em>Random</em>:<idx>Random</idx> In research, 'random' has a specific meaning: based on impersonal chance. In general usage, it often means 'haphazard' or 'without structure'.</p></li>
-      <li><p><em>Regression</em>:<idx>Regression</idx> In research, 'regression' refers to the mathematical (often linear) relationship between two quantitative variables (Chap. <xref ref="sec-correlation-regression"/>).</p></li>
+      <li><p><em>Regression</em>:<idx>Regression</idx> In research, 'regression' refers to the mathematical (often linear) relationship between two quantitative variables (Chap. <xref ref="ch-33-correlation-regression"/>).</p></li>
       <li><p><em>Sample</em>: <idx>Sample</idx> In research, we usually have '<em>one</em> sample of <m>30</m> hyenas'; in some disciplines, this could be described as 'taking <m>30</m> samples of hyenas'.</p></li>
       <li><p><em>Significant</em>:<idx>Statistical significance</idx><idx><h>P-values</h><h>one-tailed</h></idx> In research, 'significance' is usually understood to refer to 'statistical significance' (Sect. <xref ref="sec-about-pvalues"/>). If this is <em>not</em> the meaning you intend to convey, consider using the word 'substantial' or similar.</p></li>
       <li><p><em>Variable</em>:<idx>Variables</idx> In research, a 'variable' is a characteristic that can vary from individual to individual (Def. <xref ref="def-variable"/>).</p></li>

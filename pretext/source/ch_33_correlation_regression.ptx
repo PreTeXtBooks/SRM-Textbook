@@ -312,4 +312,24 @@
     </p>
   </subsection>
   </section>
+
+  <section xml:id="sec-ch33-supplementary-figures">
+    <title>Supplementary figures</title>
+    <figure xml:id="fig-borers-rise-run">
+      <caption>Scatterplot of sorghum yield vs borer infestation with estimated regression line.</caption>
+      <image source="fig-borers-rise-run.png" width="80%"/>
+    </figure>
+    <figure xml:id="fig-borers-scatterjamovi2">
+      <caption>Left: scatterplot of sorghum yield vs borer infestation. Right: Jamovi output showing correlation and CI.</caption>
+      <image source="fig-borers-scatterjamovi2.png" width="80%"/>
+    </figure>
+    <figure xml:id="fig-on-icyclones">
+      <caption>Scatterplot of number of cyclones vs ONI index.</caption>
+      <image source="fig-on-icyclones.png" width="80%"/>
+    </figure>
+    <figure xml:id="fig-on-icyclones-correlation">
+      <caption>Left: scatterplot of cyclones vs ONI. Right: Jamovi output for correlation test.</caption>
+      <image source="fig-on-icyclones-correlation.png" width="80%"/>
+    </figure>
+  </section>
 </chapter>

@@ -108,7 +108,7 @@
           In practice, we do not know the value of <m></m>. After all, that's why we take a sample: to <em>estimate</em> the value of the unknown population mean. Suppose, then, we did not know the value of <m></m> (the parameter) for the die-rolling situation, but we have an <em>estimate</em>: the value of <m>\bar{x}</m>, the sample mean (the statistic). The value of <m>\bar{x}</m> may be a bit smaller than <m></m>, or a bit larger than <m></m> (but we don't know which, since we do not know the value of <m></m>). In other words, the values of <m></m> that may have produced the observed value <m>\bar{x}</m> may be less than the value of <m>\bar{x}</m>, or greater than the value of <m>\bar{x}</m>.
         </p>
         <p>
-          Since the values of <m>\bar{x}</m> vary from sample to sample (<em>sampling variation</em>) with an approximate normal distribution (Def. <xref ref="def-def-sampling-distribution-xbar-ci"/>), the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule could be used to construct an approximate <m>95</m>% interval for the plausible values of <m></m> that may have produced the observed values of the sample mean.<idx>68–95–99.7 rule</idx> This is a <em>confidence interval</em> (or a CI).
+          Since the values of <m>\bar{x}</m> vary from sample to sample (<em>sampling variation</em>) with an approximate normal distribution (Def. <xref ref="def-sampling-distribution-xbar-ci"/>), the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule could be used to construct an approximate <m>95</m>% interval for the plausible values of <m></m> that may have produced the observed values of the sample mean.<idx>68–95–99.7 rule</idx> This is a <em>confidence interval</em> (or a CI).
         </p>
         <p>
           A CI for the population mean is an interval surrounding a sample mean. In general, a CI for <m></m> is
@@ -159,5 +159,25 @@
         </p>
       </statement>
     </definition>
+  </section>
+
+  <section xml:id="sec-cadmium-in-peanuts">
+    <title>Example: cadmium in peanuts</title>
+    <idx><h>Examples</h><h>cadmium in peanuts</h></idx>
+    <p>
+      <xref ref="data-Blair2017-Peanuts"/> evaluated concentrations of pesticides and heavy metals in
+      the U.S. peanut crop. They found the sample mean cadmium concentration was
+      <m>\bar{x} = 0.076</m> ppm with a standard deviation of <m>s = 0.0460</m> ppm,
+      from a sample of <m>290</m> peanuts.
+    </p>
+    <p>
+      The parameter is <m>\mu</m>, the population mean cadmium concentration in peanuts.
+      The approximate 95% CI for the population mean cadmium concentration is from
+      <m>0.0714</m> to <m>0.0822</m> ppm.
+    </p>
+    <p>
+      The sample mean cadmium concentration of peanuts is 0.0768 ppm (<m>n = 290</m>),
+      with an approximate 95% CI from 0.0714 to 0.0822 ppm.
+    </p>
   </section>
 </chapter>

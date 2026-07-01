@@ -160,4 +160,25 @@
       For the student-eating data, the standard errors of the sample proportions for each group are computed using Equation <xref ref="eq-stderrorphat"/> as
     </p>
   </section>
+
+  <section xml:id="sec-ch31-supplementary-figures">
+    <title>Supplementary figures and tables</title>
+    <table xml:id="tab-meals-data-table">
+      <title>Two-way contingency table for meals data</title>
+      <tabular>
+        <row header="yes"><cell>Living situation</cell><cell>Most meals off-campus</cell><cell>Not most off-campus</cell><cell>Total</cell></row>
+        <row><cell>With parents</cell><cell>2</cell><cell>50</cell><cell>52</cell></row>
+        <row><cell>Not with parents</cell><cell>24</cell><cell>81</cell><cell>105</cell></row>
+        <row><cell>Total</cell><cell>26</cell><cell>131</cell><cell>157</cell></row>
+      </tabular>
+    </table>
+    <figure xml:id="fig-eating-graphs">
+      <caption>Bar charts comparing the proportion of students eating most meals off-campus by living situation.</caption>
+      <image source="fig-eating-graphs.png" width="80%"/>
+    </figure>
+    <figure xml:id="fig-eating-software">
+      <caption>Jamovi output showing odds ratio analysis for the meals data.</caption>
+      <image source="fig-eating-software.png" width="80%"/>
+    </figure>
+  </section>
 </chapter>

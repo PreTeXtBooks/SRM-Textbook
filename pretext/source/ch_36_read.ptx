@@ -184,7 +184,7 @@
       <li><p>Correlations were computed between the five response variables.</p></li>
     </ul>
     <p>
-      The correlations between stride width and the other variables were negative; all other correlations were positive. Since the relationships were non-linear, Spearman correlations<idx><h>Correlation coefficient</h><h>Spearman</h></idx> were used rather than the Pearson correlations studied in Chap. <xref ref="sec-correlation-regression"/>. All the corresponding <m>P</m>-values were less than <m>0.05</m> apart from the correlation between stride width and cadence.
+      The correlations between stride width and the other variables were negative; all other correlations were positive. Since the relationships were non-linear, Spearman correlations<idx><h>Correlation coefficient</h><h>Spearman</h></idx> were used rather than the Pearson correlations studied in Chap. <xref ref="ch-33-correlation-regression"/>. All the corresponding <m>P</m>-values were less than <m>0.05</m> apart from the correlation between stride width and cadence.
     </p>
     <ul>
       <li><p>The following comparisons were made for each response variable:</p></li>
@@ -676,4 +676,18 @@
       </ol>
     </exercise>
   </exercises>
+
+  <section xml:id="sec-ch36-supplementary-tables">
+    <title>Supplementary tables</title>
+    <table xml:id="tab-hearing-loss-table">
+      <title>Mean HLQ scores by frequency of music and earphone use</title>
+      <tabular>
+        <row header="yes"><cell>Use category</cell><cell>n</cell><cell>Mean HLQ</cell><cell>95% CI</cell><cell>P-value</cell></row>
+        <row><cell>Music: never/rarely</cell><cell>—</cell><cell>—</cell><cell>—</cell><cell rowspan="2">—</cell></row>
+        <row><cell>Music: often/always</cell><cell>—</cell><cell>—</cell><cell>—</cell></row>
+        <row><cell>Earphones: never/rarely</cell><cell>—</cell><cell>—</cell><cell>—</cell><cell rowspan="2">—</cell></row>
+        <row><cell>Earphones: often/always</cell><cell>—</cell><cell>—</cell><cell>—</cell></row>
+      </tabular>
+    </table>
+  </section>
 </chapter>

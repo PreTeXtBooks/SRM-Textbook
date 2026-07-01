@@ -24,7 +24,7 @@
     </p>
     <ul>
       <li><p><em>confidence intervals</em> answer estimation RQs, where the interest is in how precisely a <em>statistic</em> estimates a <em>parameter</em> (Chaps. <xref ref="sec-ci-one-proportion"/> to <xref ref="sec-one-mean-conf-interval"/>; <xref ref="sec-analysis-paired"/> to <xref ref="sec-analysis-odds-ratio"/>; Sect. <xref ref="sec-regression-ci"/>).<idx>Confidence intervals</idx></p></li>
-      <li><p><em>hypothesis tests</em> answer decision-making RQs, where <em>decisions</em> are required about a <em>parameter</em> based on the value of the <em>statistic</em> (Chaps. <xref ref="sec-test-one-proportion"/> to <xref ref="sec-test-one-mean"/>; <xref ref="sec-analysis-paired"/> to <xref ref="sec-analysis-odds-ratio"/>; Sects. <xref ref="sec-correlation-testing"/> and <xref ref="sec-regression-ht"/>.)<idx>Hypothesis testing</idx></p></li>
+      <li><p><em>hypothesis tests</em> answer decision-making RQs, where <em>decisions</em> are required about a <em>parameter</em> based on the value of the <em>statistic</em> (Chaps. <xref ref="sec-test-one-proportion"/> to <xref ref="ch-27-testing-one-mean"/>; <xref ref="sec-analysis-paired"/> to <xref ref="sec-analysis-odds-ratio"/>; Sects. <xref ref="sec-correlation-testing"/> and <xref ref="sec-regression-ht"/>.)<idx>Hypothesis testing</idx></p></li>
     </ul>
     <p>
       Different scenarios require different confidence intervals and hypothesis tests; those discussed in this book are shown in Table <xref ref="tab-overview-table"/>.
@@ -39,7 +39,7 @@
       (ref:CI-OneMean) Chap. <xref ref="sec-one-mean-conf-interval"/>
     </p>
     <p>
-      (ref:HT-OneMean) Chap. <xref ref="sec-test-one-mean"/>
+      (ref:HT-OneMean) Chap. <xref ref="ch-27-testing-one-mean"/>
     </p>
     <p>
       (ref:CI-TwoMeans) Chap. <xref ref="sec-analysis-two-means"/>
