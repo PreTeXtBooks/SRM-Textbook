@@ -34,6 +34,47 @@
         <xref ref="wright2021chest"/> recorded the number of chest-beats by gorillas (Table <xref ref="tab-gorilla-data-table"/>), for gorillas under <m>20</m> years old ('younger') and <m>20</m> years and over ('older'). A summary of the data can be tabulated as in Table <xref ref="tab-gorilla-table"/>. Notice that no standard deviation or sample size is provided for the <em>difference</em>; these make no sense.
       </p>
     </example>
+
+    <table xml:id="tab-gorilla-data-table">
+      <title>The chest-beating rate of gorillas (in beats per <m>10</m> h).</title>
+      <tabular halign="center">
+        <col/><col/><col/><col/><col/><col/><col/><col/><col/><col/><col/><col/><col/>
+        <row header="yes">
+          <cell colspan="7"><em>Younger</em></cell>
+          <cell colspan="6"><em>Older</em></cell>
+        </row>
+        <row>
+          <cell>0.7</cell><cell>1.3</cell><cell>1.5</cell><cell>1.7</cell><cell>1.8</cell><cell>3.0</cell><cell>4.4</cell>
+          <cell>0.0</cell><cell>0.2</cell><cell>0.4</cell><cell>0.8</cell><cell>1.1</cell><cell>4.0</cell>
+        </row>
+        <row>
+          <cell>0.9</cell><cell>1.5</cell><cell>1.5</cell><cell>1.7</cell><cell>2.6</cell><cell>4.1</cell><cell>4.4</cell>
+          <cell>0.1</cell><cell>0.3</cell><cell>0.6</cell><cell>0.9</cell><cell>1.6</cell><cell><mdash/></cell>
+        </row>
+      </tabular>
+    </table>
+
+    <table xml:id="tab-gorilla-table">
+      <title>A numerical summary of the gorillas data.</title>
+      <tabular halign="center">
+        <col/><col/><col/><col/>
+        <row header="yes">
+          <cell></cell>
+          <cell><em>Mean</em> (beats per 10 h)</cell>
+          <cell><em>Standard deviation</em> (beats per 10 h)</cell>
+          <cell><em>Sample size</em></cell>
+        </row>
+        <row>
+          <cell>Younger</cell><cell>2.22</cell><cell>1.270</cell><cell>14</cell>
+        </row>
+        <row>
+          <cell>Older</cell><cell>0.91</cell><cell>1.131</cell><cell>11</cell>
+        </row>
+        <row>
+          <cell><em>Difference</em></cell><cell><em>1.31</em></cell><cell><mdash/></cell><cell><mdash/></cell>
+        </row>
+      </tabular>
+    </table>
   </section>
 
   <section xml:id="sec-graph-one-qual-one-quant">
@@ -53,88 +94,108 @@
       These situations have one quantitative variable being compared in different groups (defined by <em>one qualitative variable</em>).
     </p>
 
-  <subsection xml:id="sec-back-to-back-stem">
-    <title>Back-to-back stemplot</title>
-    <idx><h>Graphs</h><h>back-to-back stemplot</h></idx>
-    <p>
-      Back-to-back stemplots are two stemplots (Sect. <xref ref="sec-stem-and-leaf-plots"/>) sharing the same stems; one group has the leaves emerging left-to-right from the stem, and the second group has the leaves emerging right-to-left from the stem. Back-to-back stemplots can only be used when <em>two</em> groups are being compared. Again, one advantage of using stemplots over other plots is that the original data are retained. Disadvantages are that only two groups can be compared, and not all data work well with stemplots.
-    </p>
-    <example xml:id="example-gorilla-data">
-      <title>Back-to-back stemplots</title>
+    <subsection xml:id="sec-back-to-back-stem">
+      <title>Back-to-back stemplot</title>
+      <idx><h>Graphs</h><h>back-to-back stemplot</h></idx>
       <p>
-        A back-to-back stemplot for comparing the chest-beating rate of gorillas (Fig. <xref ref="fig-gorillas-double-stem"/>) has the leaves for younger gorillas right-to-left, and the leaves for older gorillas left-to-right, sharing the same stems. The younger gorillas have a faster chest-beating rate in general. One older gorilla has a much faster rate than the other older gorillas (a potential outlier).
+        Back-to-back stemplots are two stemplots (Sect. <xref ref="sec-stem-and-leaf-plots"/>) sharing the same stems; one group has the leaves emerging left-to-right from the stem, and the second group has the leaves emerging right-to-left from the stem. Back-to-back stemplots can only be used when <em>two</em> groups are being compared. Again, one advantage of using stemplots over other plots is that the original data are retained. Disadvantages are that only two groups can be compared, and not all data work well with stemplots.
       </p>
-    </example>
-  </subsection>
+      <example xml:id="example-gorilla-data">
+        <title>Back-to-back stemplots</title>
+        <p>
+          A back-to-back stemplot for comparing the chest-beating rate of gorillas (Fig. <xref ref="fig-gorillas-double-stem"/>) has the leaves for younger gorillas right-to-left, and the leaves for older gorillas left-to-right, sharing the same stems. The younger gorillas have a faster chest-beating rate in general. One older gorilla has a much faster rate than the other older gorillas (a potential outlier).
+        </p>
+      </example>
+      <figure xml:id="fig-gorillas-double-stem">
+        <caption>Back-to-back stemplot comparing chest-beating rates of younger and older gorillas.</caption>
+        <image source="placeholder.jpeg" width="80%"/>
+      </figure>
+    </subsection>
 
-  <subsection xml:id="sec-two-d-dot">
-    <title>2-D dot charts</title>
-    <idx><h>Graphs</h><h>dot chart!comparing quantitative data</h></idx>
-    <idx><h>Graphs</h><h>dot chart!two-dimensional</h></idx>
-    <p>
-      A two-dimensional (2-D) dot chart places a dot for each observation, separated for each level of the qualitative variable (also see Sect. <xref ref="sec-dot-charts-one-qual"/>). Any number of groups can be compared.
-    </p>
-    <warning>
+    <subsection xml:id="sec-two-d-dot">
+      <title>2-D dot charts</title>
+      <idx><h>Graphs</h><h>dot chart!comparing quantitative data</h></idx>
+      <idx><h>Graphs</h><h>dot chart!two-dimensional</h></idx>
       <p>
-        The axis displaying the counts (or percentages) <em>need not start from zero</em>, since the distance from the axis to the these numbers <em>do not</em> visually imply any quantity of interest. Rather, how the dots <em>compare</em> in the groups is the main feature of interest.
+        A two-dimensional (2-D) dot chart places a dot for each observation, separated for each level of the qualitative variable (also see Sect. <xref ref="sec-dot-charts-one-qual"/>). Any number of groups can be compared.
       </p>
-    </warning>
-    <example xml:id="example-dotchart2d-gorillas">
-      <title>Boxplots</title>
-      <p>
-        For the chest-beating data seen in Example <xref ref="example-gorilla-data"/>, a dot chart is shown in Fig. <xref ref="fig-two-d-dotchart"/>. Many observations are the same, so some points would be <em>overplotted</em><idx>Overplotting</idx> if points were not <em>stacked</em><idx><h>Overplotting</h><h>stacking</h></idx> (left panel), or <em>jittered</em><idx><h>Overplotting</h><h>jittering</h></idx> (right panel).
-      </p>
-    </example>
-  </subsection>
+      <warning>
+        <p>
+          The axis displaying the counts (or percentages) <em>need not start from zero</em>, since the distance from the axis to the these numbers <em>do not</em> visually imply any quantity of interest. Rather, how the dots <em>compare</em> in the groups is the main feature of interest.
+        </p>
+      </warning>
+      <example xml:id="example-dotchart2d-gorillas">
+        <title>2-D dot charts</title>
+        <p>
+          For the chest-beating data seen in Example <xref ref="example-gorilla-data"/>, a dot chart is shown in Fig. <xref ref="fig-two-d-dotchart"/>. Many observations are the same, so some points would be <em>overplotted</em><idx>Overplotting</idx> if points were not <em>stacked</em><idx><h>Overplotting</h><h>stacking</h></idx> (left panel), or <em>jittered</em><idx><h>Overplotting</h><h>jittering</h></idx> (right panel).
+        </p>
+      </example>
+      <figure xml:id="fig-two-d-dotchart">
+        <caption>2-D dot chart for the chest-beating data: stacked (left) and jittered (right).</caption>
+        <image source="placeholder.jpeg" width="80%"/>
+      </figure>
+    </subsection>
 
-  <subsection xml:id="sec-boxplot">
-    <title>Boxplots</title>
-    <idx><h>Graphs</h><h>boxplot</h></idx>
-    <p>
-      A boxplot is a picture of the quantiles (Sect. <xref ref="sec-variation-iqr"/>) for each group, drawn side-by-side on the same plot (and so are sometimes called <em>parallel</em> boxplots or <em>side-by-side</em> boxplots). Any number of groups can be compared using a boxplot. Sometimes, the mean of each groups is added to the boxplot using, for example, a solid dot.
-    </p>
-    <p>
-      The distribution for each group is summarised by five numbers: the minimum value; the first quartile (<m>Q_1</m>); the median (<m>Q_2</m>); the third quartile (<m>Q_3</m>); and the maximum value. Outliers, identified using the IQR rule (Sect. <xref ref="sec-outliers-iq-rrule"/>), are usually shown too. The values of <m>Q_1</m>, the median, and <m>Q_3</m> for each group can be used to compare the distributions. Different software may use different rules for computing quartiles, and hence may produce slightly different boxplots.
-    </p>
-    <warning>
-      <p>
-        The axis displaying these five numbers <em>need not start from zero</em>, since the distance from the axis to the these numbers <em>do not</em> visually imply any quantity of interest. Rather, the boxes display the values of these five numbers for each group <em>relative</em> to each other, which is of interest.
-      </p>
-    </warning>
-    <warning>
-      <p>
-        Boxplots summarise data with only five numbers (sometimes called the five-number summary)<idx>Five-number summary</idx>, so details of the distributions are lost. For this reason, boxplots are excellent for <em>comparing</em> distributions, but histograms are better for displaying the distribution of a single quantitative variable.
-      </p>
-    </warning>
-    <example xml:id="example-boxplot-gorillas">
+    <subsection xml:id="sec-boxplot">
       <title>Boxplots</title>
+      <idx><h>Graphs</h><h>boxplot</h></idx>
       <p>
-        The boxplot for the chest-beating data (Example <xref ref="example-gorilla-data"/>) is shown in Fig. <xref ref="fig-boxplot-gorillas"/>. No outliers are identified for younger gorillas; one large outlier is identified for the older gorillas. The boxplot shows a distinct difference between the chest-beating rates of older and younger gorillas.
+        A boxplot is a picture of the quantiles (Sect. <xref ref="sec-variation-iqr"/>) for each group, drawn side-by-side on the same plot (and so are sometimes called <em>parallel</em> boxplots or <em>side-by-side</em> boxplots). Any number of groups can be compared using a boxplot. Sometimes, the mean of each groups is added to the boxplot using, for example, a solid dot.
       </p>
-    </example>
-    <p>
-      The detail of the boxplots are explained in Fig. <xref ref="fig-boxplot-gorillas-explain"/>. Firstly, focus on just the boxplot for the <em>younger</em> gorillas (i.e., the left box).<idx>Quartiles</idx> Boxplots have five horizontal lines.
-    </p>
-    <ol>
-      <li><p><em>Top line</em>: the <em>fastest</em> chest-beating rate (largest value) is $$ per <m>10</m>.</p></li>
-      <li><p><em>Second line from top</em>: <m>75</m>% of observations are smaller than about $$ per <m>10</m>, represented by the line at the top of the central box. This is the <em>third quartile</em> (<m>Q_3</m>).</p></li>
-      <li><p><em>Middle line</em>: <m>50</m>% of observations are smaller than about $$ per <m>10</m>, represented by the line inside the central box. This is the median value, the <em>second quartile</em> (<m>Q_2</m>).</p></li>
-      <li><p><em>Second line from bottom</em>: <m>25</m>% of observations are smaller than about $$ per <m>10</m>, represented by the line at the bottom of the central box. This is the <em>first quartile</em> (<m>Q_1</m>).</p></li>
-      <li><p><em>Bottom line</em>: the <em>slowest</em> chest-beating rate (smallest value) is $$ per <m>10</m>.</p></li>
-    </ol>
-    <p>
-      The box for the <em>older</em> gorillas (Fig. <xref ref="fig-boxplot-gorillas"/>, right box) is slightly different: one observation is identified with a point, <em>above</em> the top line. Computer software identifies this observation as an <em>extreme outlier</em> using the IQR rule (Sect. <xref ref="sec-outliers-iq-rrule"/>), and has plotted this point separately.
-    </p>
-    <p>
-      The values of <m>Q_1</m>, the median and <m>Q_3</m> are all substantially larger for the younger gorillas, suggesting that younger gorillas have, in general, faster chest-beating rates.
-    </p>
-    <example xml:id="example-boxplots-horizontal">
-      <title>Boxplots</title>
       <p>
-        Boxplots can be plotted horizontally too, which leaves space for long labels of the qualitative variable. In Fig. <xref ref="fig-cement-build-boxplot"/> (based on <xref ref="data-Silva2016-rootcanal"/>), the three dental cements are very different regarding their push-out forces.
+        The distribution for each group is summarised by five numbers: the minimum value; the first quartile (<m>Q_1</m>); the median (<m>Q_2</m>); the third quartile (<m>Q_3</m>); and the maximum value. Outliers, identified using the IQR rule (Sect. <xref ref="sec-outliers-iq-rrule"/>), are usually shown too. The values of <m>Q_1</m>, the median, and <m>Q_3</m> for each group can be used to compare the distributions. Different software may use different rules for computing quartiles, and hence may produce slightly different boxplots.
       </p>
-    </example>
-  </subsection>
+      <warning>
+        <p>
+          The axis displaying these five numbers <em>need not start from zero</em>, since the distance from the axis to the these numbers <em>do not</em> visually imply any quantity of interest. Rather, the boxes display the values of these five numbers for each group <em>relative</em> to each other, which is of interest.
+        </p>
+      </warning>
+      <warning>
+        <p>
+          Boxplots summarise data with only five numbers (sometimes called the five-number summary)<idx>Five-number summary</idx>, so details of the distributions are lost. For this reason, boxplots are excellent for <em>comparing</em> distributions, but histograms are better for displaying the distribution of a single quantitative variable.
+        </p>
+      </warning>
+      <example xml:id="example-boxplot-gorillas">
+        <title>Boxplots</title>
+        <p>
+          The boxplot for the chest-beating data (Example <xref ref="example-gorilla-data"/>) is shown in Fig. <xref ref="fig-boxplot-gorillas"/>. No outliers are identified for younger gorillas; one large outlier is identified for the older gorillas. The boxplot shows a distinct difference between the chest-beating rates of older and younger gorillas.
+        </p>
+      </example>
+      <figure xml:id="fig-boxplot-gorillas">
+        <caption>The boxplot for the chest-beating data.</caption>
+        <image source="placeholder.jpeg" width="50%"/>
+      </figure>
+      <p>
+        The detail of the boxplots are explained in Fig. <xref ref="fig-boxplot-gorillas-explain"/>. Firstly, focus on just the boxplot for the <em>younger</em> gorillas (i.e., the left box).<idx>Quartiles</idx> Boxplots have five horizontal lines.
+      </p>
+      <ol>
+        <li><p><em>Top line</em>: the <em>fastest</em> chest-beating rate (largest value) is <m>4.4</m> per <m>10</m> h.</p></li>
+        <li><p><em>Second line from top</em>: <m>75</m>% of observations are smaller than about <m>2.9</m> per <m>10</m> h, represented by the line at the top of the central box. This is the <em>third quartile</em> (<m>Q_3</m>).</p></li>
+        <li><p><em>Middle line</em>: <m>50</m>% of observations are smaller than about <m>1.7</m> per <m>10</m> h, represented by the line inside the central box. This is the median value, the <em>second quartile</em> (<m>Q_2</m>).</p></li>
+        <li><p><em>Second line from bottom</em>: <m>25</m>% of observations are smaller than about <m>1.5</m> per <m>10</m> h, represented by the line at the bottom of the central box. This is the <em>first quartile</em> (<m>Q_1</m>).</p></li>
+        <li><p><em>Bottom line</em>: the <em>slowest</em> chest-beating rate (smallest value) is <m>0.7</m> per <m>10</m> h.</p></li>
+      </ol>
+      <figure xml:id="fig-boxplot-gorillas-explain">
+        <caption>Explaining the boxplots for the chest-beating data.</caption>
+        <image source="placeholder.jpeg" width="100%"/>
+      </figure>
+      <p>
+        The box for the <em>older</em> gorillas (Fig. <xref ref="fig-boxplot-gorillas"/>, right box) is slightly different: one observation is identified with a point, <em>above</em> the top line. Computer software identifies this observation as an <em>extreme outlier</em> using the IQR rule (Sect. <xref ref="sec-outliers-iq-rrule"/>), and has plotted this point separately.
+      </p>
+      <p>
+        The values of <m>Q_1</m>, the median and <m>Q_3</m> are all substantially larger for the younger gorillas, suggesting that younger gorillas have, in general, faster chest-beating rates.
+      </p>
+      <example xml:id="example-boxplots-horizontal">
+        <title>Boxplots</title>
+        <p>
+          Boxplots can be plotted horizontally too, which leaves space for long labels of the qualitative variable. In Fig. <xref ref="fig-cement-build-boxplot"/> (based on <xref ref="data-Silva2016-rootcanal"/>), the three dental cements are very different regarding their push-out forces.
+        </p>
+      </example>
+      <figure xml:id="fig-cement-build-boxplot">
+        <caption>Comparing three push-out values for three dental cements.</caption>
+        <image source="placeholder.jpeg" width="85%"/>
+      </figure>
+    </subsection>
   </section>
 
   <section xml:id="sec-water-access-compare-quant">
@@ -145,6 +206,69 @@
     <p>
       The graphs (Fig. <xref ref="fig-water-access-compare-quant-figs"/>) and summary (Table <xref ref="tab-water-access-compare-quant-tabs"/>) show that households in which diarrhoea was found in the last two weeks in children had older household coordinators, more people in the household, and more children under <m>5</m> years of age in the household. These may be expected: older female coordinators probably have more children, hence more children in the household under <m>5</m>, and so more children (and so people) are in the household in general.
     </p>
+    <figure xml:id="fig-water-access-compare-quant-figs">
+      <caption>Three plots for the water access data in 85 households (59 household reported no diarrhoea in children under 5 years of age; 26 reported diarrhoea in children under 5 years of age).</caption>
+      <image source="placeholder.jpeg" width="100%"/>
+    </figure>
+    <table xml:id="tab-water-access-compare-quant-tabs">
+      <title>A summary of the quantitative variables in the water-access study, according to whether diarrhoea had been observed in the last two weeks in children under <m>5</m> years of age.</title>
+      <tabular halign="center">
+        <col/><col/><col/><col/><col/><col/>
+        <row header="yes">
+          <cell></cell>
+          <cell><em><m>n</m></em></cell>
+          <cell><em>Mean</em></cell>
+          <cell><em>Median</em></cell>
+          <cell><em>Std dev.</em></cell>
+          <cell><em>IQR</em></cell>
+        </row>
+        <row>
+          <cell colspan="6"><em>Woman coordinator's age (in years)</em></cell>
+        </row>
+        <row>
+          <cell>All households with children</cell><cell>85</cell><cell>40.2</cell><cell>37.0</cell><cell>13.90</cell><cell>28.50</cell>
+        </row>
+        <row>
+          <cell>Incidents of diarrhoea</cell><cell>26</cell><cell>45.0</cell><cell>46.5</cell><cell>14.04</cell><cell>31.00</cell>
+        </row>
+        <row>
+          <cell>No incidents of diarrhoea</cell><cell>59</cell><cell>38.1</cell><cell>35.0</cell><cell>13.44</cell><cell>24.00</cell>
+        </row>
+        <row>
+          <cell><em>Difference</em></cell><cell><mdash/></cell><cell><em>6.9</em></cell><cell><mdash/></cell><cell><mdash/></cell><cell><mdash/></cell>
+        </row>
+        <row>
+          <cell colspan="6"><em>Household size</em></cell>
+        </row>
+        <row>
+          <cell>All households with children</cell><cell>85</cell><cell>8.4</cell><cell>7.0</cell><cell>4.93</cell><cell>6.00</cell>
+        </row>
+        <row>
+          <cell>Incidents of diarrhoea</cell><cell>26</cell><cell>10.5</cell><cell>8.5</cell><cell>6.51</cell><cell>8.00</cell>
+        </row>
+        <row>
+          <cell>No incidents of diarrhoea</cell><cell>59</cell><cell>7.5</cell><cell>6.0</cell><cell>3.78</cell><cell>5.00</cell>
+        </row>
+        <row>
+          <cell><em>Difference</em></cell><cell><mdash/></cell><cell><em>3.0</em></cell><cell><mdash/></cell><cell><mdash/></cell><cell><mdash/></cell>
+        </row>
+        <row>
+          <cell colspan="6"><em>Children under 5 in household</em></cell>
+        </row>
+        <row>
+          <cell>All households with children</cell><cell>85</cell><cell>2.2</cell><cell>2.0</cell><cell>1.56</cell><cell>2.00</cell>
+        </row>
+        <row>
+          <cell>Incidents of diarrhoea</cell><cell>26</cell><cell>2.8</cell><cell>2.0</cell><cell>2.01</cell><cell>2.00</cell>
+        </row>
+        <row>
+          <cell>No incidents of diarrhoea</cell><cell>59</cell><cell>1.9</cell><cell>2.0</cell><cell>1.26</cell><cell>1.00</cell>
+        </row>
+        <row>
+          <cell><em>Difference</em></cell><cell><mdash/></cell><cell><em>0.9</em></cell><cell><mdash/></cell><cell><mdash/></cell><cell><mdash/></cell>
+        </row>
+      </tabular>
+    </table>
   </section>
 
   <section xml:id="sec-chap14-summary">
@@ -156,15 +280,29 @@
 
   <reading-questions xml:id="sec-chap14-quick-review">
     <title>Quick review questions</title>
+    <p>Are the following statements <em>true</em> or <em>false</em>?</p>
+    <exercise xml:id="rq-ch14-1">
+      <statement><p>A boxplot is an appropriate graph for comparing a quantitative variable in two <em>or more</em> groups.</p></statement>
+      <answer><p>True.</p></answer>
+    </exercise>
+    <exercise xml:id="rq-ch14-2">
+      <statement><p>A back-to-back stemplot is an appropriate graph for comparing a quantitative variable in two <em>or more</em> groups.</p></statement>
+      <answer><p>False; only compares two groups.</p></answer>
+    </exercise>
+    <exercise xml:id="rq-ch14-3">
+      <statement><p>A case-profile plot is an appropriate graph for comparing a quantitative variable in two <em>or more</em> groups.</p></statement>
+      <answer><p>False; a case-profile plot is appropriate for <em>within</em>-individual changes.</p></answer>
+    </exercise>
+    <exercise xml:id="rq-ch14-4">
+      <statement><p>When comparing a quantitative variable in two groups, the difference between the two sample sizes should be included.</p></statement>
+      <answer><p>False; difference between sample sizes is meaningless.</p></answer>
+    </exercise>
   </reading-questions>
 
   <exercises xml:id="sec-compare-quant-data-exercises">
     <introduction>
       <p>Answers to odd-numbered exercises are given at the end of the book.</p>
     </introduction>
-    <p>
-      [Answers to odd-numbered exercises] are given at the end of the book.
-    </p>
     <exercise xml:id="exercise-boxplots-project-costs">
       <p>
         <xref ref="data-Hale2009-ProjectDelivery"/> studied two different engineering project delivery methods (Fig. <xref ref="fig-ai-sfemalesport-eng"/>, left panel): Design/Build and Design/Bid/Build. The grey, horizontal line is where the projected costs are the same as the actual cost.
@@ -185,12 +323,21 @@
         <li><p>What is the IQR for each sport (approximately)?</p></li>
       </ol>
     </exercise>
+    <figure xml:id="fig-ai-sfemalesport-eng">
+      <caption>Left: cost increases for two different building project delivery methods: Design/Build and Design/Bid/Build (the grey, horizontal line is where the projected costs are the same as the actual cost). Right: the heights of female basketball and netball players attending the AIS.</caption>
+      <image source="placeholder.jpeg" width="90%"/>
+    </figure>
     <exercise xml:id="exercise-numerical-quant-matching-histograms-and-boxplots">
+      <p>Consider the histograms and boxplots in Fig. <xref ref="fig-match-histo-box"/>.</p>
       <ol>
         <li><p>Match the histogram with the corresponding boxplot.</p></li>
         <li><p>For which datasets would the mean and standard deviation be the appropriate numerical summary? For which datasets would the median and IQR be the appropriate numerical summary?</p></li>
       </ol>
     </exercise>
+    <figure xml:id="fig-match-histo-box">
+      <caption>Match the histogram with the boxplot.</caption>
+      <image source="placeholder.jpeg" width="100%"/>
+    </figure>
     <exercise xml:id="exercise-numerical-jellyfish">
       <p>
         <xref ref="others-lunn-cida"/> <xref ref="data-hand-handbook"/> compared the dimensions of jellyfish at two sites at Hawkesbury River, NSW (Dangar Island; Salamander Bay) to determine the difference between the jellyfish at each site. A histogram of the breadth of jellyfish at Dangar Island Bay is shown in Fig. <xref ref="fig-jellyfish-hist"/> (left panel).
@@ -203,9 +350,13 @@
         <li><p>Which box in the boxplot represents the Dangar Island jellyfish (in Fig. <xref ref="fig-jellyfish-hist"/>, left panel)?</p></li>
       </ol>
     </exercise>
+    <figure xml:id="fig-jellyfish-hist">
+      <caption>Left: a histogram of the breadth of jellyfish at Dangar Island. Right: a boxplot of the breadth of jellyfish at two sites.</caption>
+      <image source="placeholder.jpeg" width="90%"/>
+    </figure>
     <exercise xml:id="exercise-numerical-quant-construction-worker-productivity">
       <p>
-        <xref ref="data-Gatti2013-WorkforceStrain"/> studied the productivity of construction workers, recording (among other variables) the rate at which concrete panels could be installed by workers. Data for three different female workers in the study are shown in Table <xref ref="tab-panels-table"/>, gathered over four installation periods of <m>50</m> each.
+        <xref ref="data-Gatti2013-WorkforceStrain"/> studied the productivity of construction workers, recording (among other variables) the rate at which concrete panels could be installed by workers. Data for three different female workers in the study are shown in Table <xref ref="tab-panels-table"/>, gathered over four installation periods of <m>50</m> min each.
       </p>
       <ol>
         <li><p>Compute the IQR for each worker.</p></li>
@@ -214,6 +365,24 @@
         <li><p>What do you learn about the workers?</p></li>
       </ol>
     </exercise>
+    <table xml:id="tab-panels-table">
+      <title>The productivity of three workers installing concrete panels (in panels per minute).</title>
+      <tabular halign="center">
+        <col/><col/><col/><col/>
+        <row header="yes">
+          <cell></cell>
+          <cell><em>Worker 1</em></cell>
+          <cell><em>Worker 2</em></cell>
+          <cell><em>Worker 3</em></cell>
+        </row>
+        <row><cell>Mean</cell><cell>1.24</cell><cell>1.73</cell><cell>1.36</cell></row>
+        <row><cell>Minimum</cell><cell>0.59</cell><cell>1.13</cell><cell>0.86</cell></row>
+        <row><cell>1st quartile</cell><cell>0.88</cell><cell>1.51</cell><cell>1.16</cell></row>
+        <row><cell>Median</cell><cell>1.35</cell><cell>1.70</cell><cell>1.38</cell></row>
+        <row><cell>3rd quartile</cell><cell>1.49</cell><cell>1.91</cell><cell>1.58</cell></row>
+        <row><cell>Maximum</cell><cell>1.88</cell><cell>3.00</cell><cell>2.17</cell></row>
+      </tabular>
+    </table>
     <exercise xml:id="exercise-green-building">
       <p>
         In a study of the temperature in offices, <xref ref="data-Paul2008-Comfort"/> compared the temperature in three offices (during working hours) at Charles Sturt University (Australia; CSU); the data are summarised in Table <xref ref="tab-office-temps"/>.
@@ -225,6 +394,24 @@
         <li><p>What do you learn about the offices?</p></li>
       </ol>
     </exercise>
+    <table xml:id="tab-office-temps">
+      <title>A summary of the temperature (in degrees C) in three offices at CSU during working hours. Office A is on the ground floor; Offices B and C are on the top floor.</title>
+      <tabular halign="center">
+        <col/><col/><col/><col/>
+        <row header="yes">
+          <cell></cell>
+          <cell><em>Office A</em></cell>
+          <cell><em>Office B</em></cell>
+          <cell><em>Office C</em></cell>
+        </row>
+        <row><cell>Mean</cell><cell>24.1</cell><cell>25.3</cell><cell>25.7</cell></row>
+        <row><cell>Minimum</cell><cell>16.4</cell><cell>15.9</cell><cell>20.1</cell></row>
+        <row><cell><m>Q_1</m></cell><cell>22.8</cell><cell>23.8</cell><cell>24.6</cell></row>
+        <row><cell>Median</cell><cell>24.4</cell><cell>25.5</cell><cell>26.1</cell></row>
+        <row><cell><m>Q_3</m></cell><cell>25.5</cell><cell>26.9</cell><cell>27.2</cell></row>
+        <row><cell>Maximum</cell><cell>27.4</cell><cell>31.0</cell><cell>30.3</cell></row>
+      </tabular>
+    </table>
     <exercise xml:id="exercise-compare-quant-exercises-nhanes">
       <p>
         [<em>Dataset</em>: <c>NHANES</c>] Consider this RQ:
@@ -240,9 +427,10 @@
         <li><p>Use the software output (Fig. <xref ref="fig-nhanes-two-sample"/>)<idx><h>Software output</h><h>comparing two means</h></idx> to construct an appropriate table showing the numerical summary relevant to the RQ.</p></li>
       </ol>
     </exercise>
-    <p>
-      (ref:NHANESSoftware) Software output for the <span style="font-variant:small-caps;">nhanes</span> data.
-    </p>
+    <figure xml:id="fig-nhanes-two-sample">
+      <caption>Software output for the <span style="font-variant:small-caps;">nhanes</span> data.</caption>
+      <image source="NHANES-DirectHDL-Smoke-Descriptives.png" width="100%"/>
+    </figure>
     <exercise xml:id="exercise-face-plant-summary">
       <p>
         [<em>Dataset</em>: <c>ForwardFall</c>] <xref ref="data-Wojcik-ForwardFall"/> compared the lean-forward angle in younger and older women. An elaborate set-up was constructed to measure this angle, using a harness. Consider the RQ:
@@ -258,9 +446,31 @@
         <li><p>Construct an appropriate numerical summary from the software output (Fig. <xref ref="fig-fall-foward-t-testjamovi"/>).</p></li>
       </ol>
     </exercise>
+    <table xml:id="tab-face-plant">
+      <title>Lean-forward angles (in degrees) for older women (<m>n = 5</m>) and younger women (<m>n = 10</m>).</title>
+      <tabular halign="center">
+        <col/><col/><col/><col/><col/><col/><col/><col/><col/><col/>
+        <row header="yes">
+          <cell colspan="5"><em>Younger women</em></cell>
+          <cell colspan="5"><em>Older women</em></cell>
+        </row>
+        <row>
+          <cell>29</cell><cell>34</cell><cell>33</cell><cell>27</cell><cell>28</cell>
+          <cell>18</cell><cell>15</cell><cell>23</cell><cell>13</cell><cell>12</cell>
+        </row>
+        <row>
+          <cell>32</cell><cell>31</cell><cell>34</cell><cell>32</cell><cell>27</cell>
+          <cell><mdash/></cell><cell><mdash/></cell><cell><mdash/></cell><cell><mdash/></cell><cell><mdash/></cell>
+        </row>
+      </tabular>
+    </table>
+    <figure xml:id="fig-fall-foward-t-testjamovi">
+      <caption>Software output for the lean-forward angles data.</caption>
+      <image source="FallForward-Descriptives.png" width="95%"/>
+    </figure>
     <exercise xml:id="exercise-quant-compare-speed-signage">
       <p>
-        [<em>Dataset</em>: <c>Speed</c>] <xref ref="ma2019impacts"/> studied adding additional signage to reduce vehicle speeds on freeway exit ramps. At one site (Ningxuan Freeway), speeds were recorded for <m>38</m> vehicles before the extra signage was added, and then for <m>41</m> different vehicles after the extra signage was added
+        [<em>Dataset</em>: <c>Speed</c>] <xref ref="ma2019impacts"/> studied adding additional signage to reduce vehicle speeds on freeway exit ramps. At one site (Ningxuan Freeway), speeds were recorded for <m>38</m> vehicles before the extra signage was added, and then for <m>41</m> different vehicles after the extra signage was added.
       </p>
       <p>
         The researchers are hoping that the addition of extra signage will <em>reduce</em> the mean speed of the vehicles. The RQ is:
@@ -273,15 +483,16 @@
         <li><p>Produce a boxplot of the data (use a computer if necessary).</p></li>
       </ol>
     </exercise>
+    <figure xml:id="fig-speedjamovi-ci">
+      <caption>Software output for the speed data.</caption>
+      <image source="Speed-Descriptives.png" width="100%"/>
+    </figure>
     <exercise xml:id="exercise-compare-quant-deceleration">
       <p>
         [<em>Dataset</em>: <c>Deceleration</c>] <xref ref="ma2019impacts"/> studied adding additional signage to reduce vehicle speeds on freeway exit ramps. At one site (Ningxuan Freeway), speeds were recorded at various points on the freeway exit for <m>38</m> vehicles before the extra signage was added, and then for <m>41</m> vehicles after the extra signage was added.
       </p>
       <p>
-        From this data, the <em>deceleration</em> of each vehicle was determined
-      </p>
-      <p>
-        as the vehicle left the <m>120</m>.h^<m>-1</m>^ speed zone and approached the <m>80</m>.h^<m>-1</m>^ speed zone. The RQ is:
+        From this data, the <em>deceleration</em> of each vehicle was determined as the vehicle left the <m>120</m> km.h<m>^{-1}</m> speed zone and approached the <m>80</m> km.h<m>^{-1}</m> speed zone. The RQ is:
       </p>
       <blockquote>
         <p>At this freeway exit, what is the difference between the mean vehicle deceleration, comparing the times before the extra signage is added and after extra signage is added?</p>
@@ -295,6 +506,10 @@
         <li><p>What does a <em>negative</em> deceleration value represent?</p></li>
       </ol>
     </exercise>
+    <figure xml:id="fig-decelerationjamovi-ci">
+      <caption>Software output for the deceleration data.</caption>
+      <image source="Deceleration-Descriptives.png" width="100%"/>
+    </figure>
     <exercise xml:id="exercise-quant-compare-typing">
       <p>
         [<em>Dataset</em>: <c>Typing</c>] The <c>Typing</c> dataset contains information about the typing speed and accuracy for students, from an online typing test <xref ref="pinet2022typing"/>. The four variables are: typing speed (<c>mTS</c>), typing accuracy (<c>mAcc</c>), age (<c>Age</c>), and sex (<c>Sex</c>) for <m>1 301</m> students.
@@ -323,10 +538,7 @@
         <p>For female Mexican garter snakes, is the mean snout<ndash/>vent length (SVL) different for those in regions with crayfish and without crayfish?</p>
       </blockquote>
       <p>
-        Two different groups of snakes are studied (so the study uses a between-individuals comparison<idx><h>Comparison</h><h>between individuals</h></idx>). (The data are shown
-      </p>
-      <p>
-        Boxplots of the data are shown in Fig. <xref ref="fig-boxplot-crayfish"/>.
+        Two different groups of snakes are studied (so the study uses a between-individuals comparison<idx><h>Comparison</h><h>between individuals</h></idx>). Boxplots of the data are shown in Fig. <xref ref="fig-boxplot-crayfish"/>.
       </p>
       <ol>
         <li><p>Describe the boxplot displaying the SVL for the two regions, for <em>all</em> crayfish (left panel). Compare the means for the two regions.</p></li>
@@ -335,13 +547,10 @@
         <li><p>How would you describe the variable 'Sex of the snake': extraneous, confounding, lurking, response or explanatory?</p></li>
       </ol>
     </exercise>
+    <figure xml:id="fig-boxplot-crayfish">
+      <caption>The snout<ndash/>vent length (SVL) for Mexican garter snakes, living in crayfish or non-crayfish regions. The solid dots represent the means.</caption>
+      <image source="placeholder.jpeg" width="100%"/>
+    </figure>
   </exercises>
 
-  <section xml:id="sec-ch14-supplementary-figures">
-    <title>Supplementary figures</title>
-    <figure xml:id="fig-gorillas-double-stem">
-      <caption>Back-to-back stemplot comparing chest-beating rates of younger and older gorillas.</caption>
-      <image source="fig-gorillas-double-stem.png" width="80%"/>
-    </figure>
-  </section>
 </chapter>
