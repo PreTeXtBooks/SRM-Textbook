@@ -1,5 +1,335 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Source: 33-CorrelationRegression.Rmd -->
 <chapter xml:id="ch-33-correlation-regression" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Correlation and regression: CIs and tests</title>
-  <p>Skeleton for <em>33-CorrelationRegression.Rmd</em>. Content to be added.</p>
+  <objectives xml:id="objectives-ch33">
+    <introduction>
+      <p>So far, you have learnt about the research process, including analysing data using confidence intervals and conducting hypothesis tests. <alert>In this chapter</alert>, you will learn to:</p>
+    </introduction>
+    <ul>
+      <li><p>produce confidence intervals for correlation coefficients.</p></li>
+      <li><p>conduct hypothesis tests for correlation coefficients.</p></li>
+      <li><p>produce and interpret linear regression equations.</p></li>
+      <li><p>conduct hypothesis tests for the slope of a regression line.</p></li>
+      <li><p>produce confidence intervals for the slope of a regression line.</p></li>
+      <li><p>determine whether the conditions for using these methods apply in a given situation.</p></li>
+    </ul>
+  </objectives>
+
+  <section xml:id="sec-cor-reg-intro">
+    <title>Introduction: sorghum yield and borers</title>
+    <idx>Correlation</idx>
+    <p>
+      So far, RQs about single variables (descriptive RQs) and RQs for comparisons (relational and repeated-measures RQs) have been studied. In this chapter, the relationship between two quantitative variables is studied (correlational RQs) <em>when that relationship is approximately linear</em>. The strength of the relationship (correlation) and the nature of that relationship (regression) are discussed.
+    </p>
+    <p>
+      For this chapter, consider this (one-tailed) RQ:
+    </p>
+    <blockquote>
+      <p>In sorghum crops (AG1090 hybrid) in Brazil, is a larger sugarcane borer infestation associated with smaller yields?</p>
+    </blockquote>
+    <p>
+      <xref ref="da2024potential"/> recorded the borer infestation in sorghum crops, for <m>n = 24</m> crops over three years <xref ref="da2024potentialDATA"/>, shown in
+    </p>
+    <p>
+      The data comprises two quantitative variables (Fig. <xref ref="fig-borers-scatterjamovi2"/>, left panel).<idx><h>Graphs</h><h>scatterplot</h></idx>
+    </p>
+    <p>
+      Knowing the amount of infestation provides some information about the yield: a moderate relationship between the variables seems evident. The relationship also seems somewhat <em>linear</em>. The <em>Pearson correlation coefficient</em> (Fig. <xref ref="fig-borers-scatterjamovi2"/>, right panel)<idx>Correlation coefficient (Pearson)</idx> is <m>r = -0.934</m>, so <m>R^2 = (-0.934)^2 = 87.2</m>%. This means that the unexplained variation in yield reduces by <m>78.8</m>% by knowing the amount of infestation.
+    </p>
+    <warning>
+      <p>
+        Recall that the <em>sample</em> correlation coefficient is denoted by <m>r</m>, and the <em>population</em> correlation coefficient is denoted by <m></m>.
+      </p>
+    </warning>
+  </section>
+
+  <section xml:id="sec-correlation-ci-test">
+    <title>Correlation: CIs and tests for </title>
+
+  <subsection xml:id="sec-correlation-ci">
+    <title>Correlation: CIs for </title>
+    <idx><h>Confidence intervals</h><h>correlation coefficient|(</h></idx>
+    <p>
+      The sorghum data in
+    </p>
+    <p>
+      is only one of the countless possible samples of sorghum crops that could have been studied. The value of <m>r</m> (an estimate of <m></m>, the <em>parameter</em>) will vary from sample to sample; that is, the value of <m>r</m> has a sampling distribution, and sampling variation exists.<idx>Sampling variation</idx> The sampling distribution of <m>r</m>, however, does <em>not</em> have a normal distribution, so CIs for <m></m> will be taken directly from software output (Fig. <xref ref="fig-borers-scatterjamovi2"/>, right panel). For the sorghum data, the <m>95</m>% CI for <m></m> is from <m>-0.971</m> to <m>-0.851</m>. This CI is not symmetrical: the value of <m>r</m> is not halfway between these limits. We write:
+    </p>
+    <blockquote>
+      <p>For soghum crops, the correlation coefficient between yield and infestation percentage is <m>-0.934</m>, with a <m>95</m>% CI from <m>-0.971</m> to <m>-0.851</m> (<m>n = 24</m>).</p>
+    </blockquote>
+    <p>
+      In other words, a population with a correlation coefficient <m></m> between <m>-0.971</m> and <m>-0.851</m> could reasonably have produced a sample correlation coefficient of <m>r = -0.934</m> from a sample of size <m>n = 24</m>.
+    </p>
+    <example xml:id="example-cyclone-correlation-ci">
+      <title>Correlation</title>
+      <p>
+        The relationship between the number of cyclones <m>y</m> in the Australian region each year from 1969 to 2005, and a unitless climatological index called the <em>Ocean Index</em> (ONI, <m>x</m>), averaged over October, November and December, is shown in Fig. <xref ref="fig-on-icyclones-correlation"/> (left panel) <xref ref="mypapers-dunnsmyth-glms"/>.
+      </p>
+      <p>
+        The relationship has a <em>negative</em> direction, so the value of <m>r</m> is <em>negative</em>. From the software output, <m>r = -0.683</m> with a <m>95</m>% CI from <m>-0.824</m> to <m>-0.460</m>.
+      </p>
+    </example>
+    <idx><h>Confidence intervals</h><h>correlation coefficient|)</h></idx>
+  </subsection>
+
+  <subsection xml:id="sec-correlation-testing">
+    <title>Correlation: hypothesis test for </title>
+    <idx><h>Hypothesis testing</h><h>correlation coefficient|(</h></idx>
+    <p>
+      A hypothesis test can also be conducted regarding <m></m>, the Pearson correlation coefficient in the <em>population</em>.<idx>Correlation</idx> The null hypothesis is, as always, the 'no difference, no change, no relationship' position which is, in this context:
+    </p>
+    <ul>
+      <li><p><m>H_0</m>: <m> = 0</m>.</p></li>
+    </ul>
+    <p>
+      Clearly, the <em>sample</em> correlation coefficient <m>r</m> for the data is not zero, and the RQ is effectively asking if sampling variation is the reason for this discrepancy between <m>r</m> and the parameter <m></m>.
+    </p>
+    <p>
+      Since the RQ (in Sect. <xref ref="sec-cor-reg-intro"/>) is one-tailed (negative direction), the alternative hypothesis is:
+    </p>
+    <ul>
+      <li><p><m>H_1</m>: <m> &lt; 0</m> (<em>one-tailed</em> test, based on the RQ).</p></li>
+    </ul>
+    <p>
+      As usual, initially <em>assume</em> that <m> = 0</m> (from <m>H_0</m>), then describe what values of <m>r</m> could be <em>expected</em> using the <em>sampling distribution</em>, under that assumption, across all possible samples. Then the <em>observed</em> value of <m>r</m> is compared to the values expected through sampling variation to determine if the value of <m>r</m> supports or contradicts the assumption.
+    </p>
+    <p>
+      For a correlation coefficient, the sampling distribution of <m>r</m> does not have a normal distribution.<fn>For those interested: the value of <m>r</m> only varies between <m>-1</m> and <m>1</m>, so cannot have a normal distribution. A transformation of <m>r</m> <em>does</em> exist that has an approximate normal distribution and <em>standard error</em>.</fn> However, the output (Fig. <xref ref="fig-borers-scatterjamovi2"/>, right panel)<idx><h>Software output</h><h>correlation</h></idx> contains the relevant two-tailed <m>P</m>-value for the test: less than <m>0.001</m>. Hence, the one-tailed <m>P</m>-value for the test is less than <m>0.0005</m>. <em>Very strong evidence</em> exists to support <m>H_1</m> (that the correlation in the population is negative).
+    </p>
+    <p>
+      We write:
+    </p>
+    <blockquote>
+      <p>The sample presents very strong evidence (one-tailed <m>P &lt; 0.0005</m>) that the sorghum yield has a negative association with borer infestation percentage (<m>r = -0.934</m> with <m>95</m>% CI from <m>-0.971</m> to <m>-0.851</m>; <m>n = 24</m>) in the population.</p>
+    </blockquote>
+    <p>
+      Notice the three features of writing conclusions again: an answer to the RQ, evidence to support the conclusion, and some sample summary information.
+    </p>
+    <note>
+      <p>
+        If the evidence suggests that the correlation coefficient is <em>not zero</em> (in the population), this does <em>not</em> necessarily mean a <em>strong</em> correlation exists. The correlation may be weak in the population (as estimated by the value of <m>r</m>), but evidence exists that the correlation is <em>not zero</em> in the <em>population</em>.
+      </p>
+      <p>
+        That is, the test is about statistical significance, not practical importance.<idx>Practical importance</idx>
+      </p>
+    </note>
+    <example xml:id="example-cyclone-correlation-test">
+      <title>Correlation</title>
+      <p>
+        The relationship between the number of cyclones <m>y</m> in the Australian region each year from 1969 to 2005, and the ONI <m>x</m> is shown in Fig. <xref ref="fig-on-icyclones-correlation"/> (left panel). To test for a relationship, use
+      </p>
+      <me>\text{$H_0$: $\rho = 0$} \qquad\text{ against}\qquad \text{$H_0$: $\rho \ne 0$};</me>
+      <p>
+        software reports that <m>P &lt; 0.0001</m> (Fig. <xref ref="fig-on-icyclones-correlation"/>, right panel). There is very strong evidence of a relationship between the number of cyclones in the Australian region and the ONI (averaged over October, November and December).
+      </p>
+    </example>
+    <idx><h>Hypothesis testing</h><h>correlation coefficient|)</h></idx>
+  </subsection>
+  </section>
+
+  <section xml:id="sec-regression-ch33">
+    <title>Regression</title>
+
+  <subsection xml:id="sec-chap35-intro">
+    <title>Introducting regression</title>
+    <p>
+      <em>Correlation</em> measures the <em>strength</em> and <em>direction</em> of the <em>linear</em> relationship between two quantitative variables <m>x</m> (an explanatory variable) and <m>y</m> (a response variable). Sometimes, however, <em>describing</em> the nature of the relationship is useful. This is called <em>regression</em>.
+    </p>
+    <p>
+      The regression relationship is described mathematically using an <em>equation</em>, and allows us to:
+    </p>
+    <ol>
+      <li><p><em>Predict</em> the mean value of <m>y</m> from a given value of <m>x</m> (Sect. <xref ref="sec-regression-for-prediction"/>).</p></li>
+      <li><p><em>Understand</em> the relationship between <m>x</m> and <m>y</m> (Sect. <xref ref="sec-regression-for-understanding"/>).</p></li>
+    </ol>
+    <p>
+      An example of a <em>linear</em> regression equation, describing the linear relationship between the observed values of an explanatory variable <m>x</m> and the observed values of a response variable <m>y</m>, is<idx>Linear equations</idx> The notation <m>\hat{y}</m> refers to the mean of all the <m>y</m>-values that could be observed for some given value of <m>x</m>. That is, for some value of <m>x</m>, many different values of <m>y</m> could be observed, and <m>\hat{y}</m> is the value that regression equation predicts as the <em>mean</em> of all those possible values. This equation describes the connection between the values of <m>x</m> and the corresponding average values of <m>y</m>.
+    </p>
+    <warning>
+      <p>
+        <m>y</m> refers to the values of the response variable <em>observed</em> from individuals. <m>\hat{y}</m> refers to <em>predicted mean</em> value of <m>y</m> for given values of <m>x</m>.
+      </p>
+    </warning>
+    <aside>
+      <p>
+        <m>\hat{y}</m> is pronounced as 'why-hat'; the 'caret' above the <m>y</m> is called a 'hat'.
+      </p>
+    </aside>
+    <p>
+      More generally, the equation of a straight line is
+    </p>
+    <me>\hat{y} = b_0 + (b_1 \times x), \qquad\text{usually written}\qquad \hat{y} = b_0 + b_1 x,</me>
+    <p>
+      where the values of <m>b_0</m> and <m>b_1</m> are unknown, and estimated from sample data. Notice that <m>b_1</m> is the number multiplied by <m>x</m>. In Equation <xref ref="eq-example-regression-eqn"/>, <m>b_0 = -4</m> and <m>b_1 = 2</m>.
+    </p>
+    <example xml:id="example-regression-girls-ht">
+      <title>Regression equations</title>
+      <p>
+        A report on the growth of Australian children <xref ref="data-AustralianGirls"/> found an approximate linear relationship between the age (in years) <m>x</m> and height (in cm) <m>y</m> of girls aged between four and seven. The regression equation was approximately
+      </p>
+      <me>\hat{y} = 73 + 7x.</me>
+      <p>
+        The regression equation is the same if written as
+      </p>
+      <me>\hat{y} = 7x + 73.</me>
+      <p>
+        In both cases, <m>b_0 = 73</m> and <m>b_1 = 7</m>. This regression equation describes the connection between ages <m>x</m> and heights <m>y</m> for girls aged between four and seven.
+      </p>
+    </example>
+  </subsection>
+
+  <subsection xml:id="sec-regression-equations-review">
+    <title>Reviewing linear equations</title>
+    <idx>Linear equations</idx>
+    <idx>Regression</idx>
+    <p>
+      To introduce, or revise, the idea of a linear equation, consider the (artificial) data in
+    </p>
+    <p>
+      with an explanatory variable <m>x</m> and a response variable <m>y</m>.<idx>Response variable</idx><idx>Explanatory variable</idx><idx><h>Graphs</h><h>scatterplot</h></idx> In the graph, a sensible line is drawn on the graph that seems to capture the relationship between <m>x</m> and <m>y</m>. (You may have drawn a slightly different, but similar, line.) The line describes the predicted mean values of <m>y</m> (i.e., values of <m>\hat{y}</m>) for various values of <m>x</m>. The relationship is <em>positive</em> and <em>linear</em>.
+    </p>
+    <p>
+      A <em>regression equation</em> specifies the line.<idx><h>Regression</h><h>equation</h></idx> In the regression equation <m>\hat{y} = b_0 + b_1 x</m>, the numbers <m>b_0</m> and <m>b_1</m> are called <em>regression coefficients</em>,<idx><h>Regression</h><h>coefficients</h></idx> where
+    </p>
+    <ul>
+      <li><p><m>b_0</m> is the <em>intercept</em> (or the <em><m>y</m>-intercept</em>),<idx><h>Regression</h><h>equation!intercept</h></idx><idx><h>Linear equations</h><h>intercept</h></idx> whose value corresponds to the <em>predicted</em> mean value of <m>y</m> when <m>x = 0</m>.</p></li>
+      <li><p><m>b_1</m> is the <em>slope</em>,<idx><h>Regression</h><h>equation!slope</h></idx><idx><h>Linear equations</h><h>slope</h></idx> whose value measures how much the value of <m>\hat{y}</m> changes, on average, when the value of <m>x</m> <em>increases</em> by <m>1</m>.</p></li>
+    </ul>
+    <p>
+      We will use software to find the values of <m>b_0</m> and <m>b_1</m> (as the formulas are tedious to use). However, a rough approximation of the values of <m>b_0</m> and <m>b_1</m> can be obtained using the rough straight line drawn on the scatterplot
+    </p>
+    <p>
+      A rough approximation of the value of the <em>intercept</em> <m>b_0</m> is the value of <m>\hat{y}</m> when <m>x = 0</m>, from the drawn line. When <m>x = 0</m>, the regression line suggests the value of <m>\hat{y}</m> is about <m>2</m> ; that is, the value of <m>b_0</m> is approximately <m>2</m>.
+    </p>
+    <p>
+      A rough approximation of the <em>slope</em> <m>b_1</m> is found using<idx><h>Regression</h><h>equation!rise over run|(</h></idx> from the drawn line. This approximation of the slope is the <em>change</em> in the value of <m>\hat{y}</m> (the 'rise') divided by the corresponding <em>increase</em> in the value of <m>x</m> (the 'run').
+    </p>
+    <p>
+      Consider what happens in
+    </p>
+    <p>
+      when the value of <m>x</m> increases from <m>1</m> to <m>5</m> (a <em>run</em> of <m>5 - 1 = 4</m>). The corresponding value of <m>y</m> changes from about <m>5</m> to about <m>17</m>, a <em>rise</em> of <m>17 - 5 = 12</m>. So, using Equation <xref ref="eq-rise-over-run"/>,
+    </p>
+    <me>\frac{\text{rise}}{\text{run}}    = \frac{17 - 5}{5 - 1}    = \frac{12}{4}    = 3.</me>
+    <p>
+      The value of <m>b_1</m> is about <m>3</m>. When using rise-over-run, better guesses for <m>b_1</m> are found when using one value of <m>x</m> near the left-side of the scatterplot, and another value of <m>x</m> near the right-side of the scatterplot, but any two values can be used (try using <m>x = 0</m> and <m>x = 3</m>).
+    </p>
+    <p>
+      Combing the rough guesses for <m>b_0</m> and <m>b_1</m>, the regression line is approximately <m>\hat{y} = 2 + (3 x)</m>, usually written
+    </p>
+    <me>\hat{y} = 2 + 3x.</me>
+    <warning>
+      <p>
+        The regression equation has <m>\hat{y}</m> (not <m>y</m>) on the left-hand side. That is, the equation <em>predicts</em> the <em>mean</em> values of <m>y</m>, which may not be equal to any of the observed values (which are denoted by <m>y</m>).
+      </p>
+      <p>
+        A 'good' regression equation would produce predicted values <m>\hat{y}</m> close to the observed values <m>y</m>; that is, the line passes close to each point on the scatterplot.<idx><h>Graphs</h><h>scatterplot</h></idx>
+      </p>
+    </warning>
+    <p>
+      The <em>intercept</em> <m>b_0</m> has the same measurement units as the response variable.<idx><h>Regression</h><h>equation!intercept</h></idx> The measurement units for the <em>slope</em> <m>b_1</m> is the 'measurement units of the response variable', per 'measurement units of the explanatory variable'.<idx><h>Regression</h><h>equation!intercept</h></idx>
+    </p>
+    <example xml:id="example-measurement-units-of-regression-parameters">
+      <title>Measurement units of regression parameters</title>
+      <p>
+        In Example <xref ref="example-regression-girls-ht"/>, the regression line for the relationship between the age of Australian girls <m>x</m> (in years) and their height (in cm) <m>y</m> was <m>\hat{y} = 73 + 7x</m> (for girls aged between four and seven years).
+      </p>
+      <p>
+        In the equation, the intercept is <m>b_0 = 73</m> and the slope is <m>b_1 = 73</m>/y (the growth <em>rate</em>).
+      </p>
+    </example>
+    <example xml:id="example-a-rough-approximation-of-the-regression-equation">
+      <title>A rough approximation of the regression equation</title>
+      <p>
+        For the sorghum data, a rough estimate of the regression line can be drawn on a scatterplot to estimate <m>b_0</m> and <m>b_1</m> (Fig. <xref ref="fig-borers-rise-run"/>). The estimate of <m>b_0</m> (the value of <m>\hat{y}</m> when <m>x = 0</m>) is roughly <m>4 800.^{-1}</m>.
+      </p>
+      <p>
+        The estimate of <m>b_1</m> can be found using the rise-over-run idea. When <m>x = 0</m>, the value of <m>\hat{y}</m> (according to the drawn line) is about <m>4 800</m>. At the other extreme of the plot, where <m>x = 40</m>, the value of <m>\hat{y}</m> is about <m>1 000</m>. (Any two points on the line can be used, but using two points at each end gives better guesses of the slope.) So, as <m>x</m> increases from <m>0</m> to about <m>40</m>, the value of <m>\hat{y}</m> <em>reduces</em> from about <m>4 800</m> to about <m>1 000</m>, a change of about <m>-3 800</m>. That is, for a 'run' of <m>40 - 0 = 40</m>, the 'rise' is <m>4 800 - 1 000 = -3 800</m> (i.e., a drop of <m>3 800</m>), and so a rough estimate of the slope is <m>-3 800/40 = -95</m>.<idx><h>Linear equations</h><h>rise over run</h></idx> (The relationship is <em>negative</em>, so the slope is <em>negative</em>.)
+      </p>
+      <p>
+        The rough guess of the regression line is therefore
+      </p>
+      <me>\hat{y} = 4\,800 - 95x,</me>
+      <p>
+        where <m>x</m> is the infestation percentage, and <m>y</m> is yield (in <m>.^{-1}</m>). The rough guess of the intercept <m>b_0</m> is <m>4 800.^{-1}</m>, while the rough guess of the slope <m>b_1</m> is <m>-95.^{-1}/\%</m>.
+      </p>
+    </example>
+    <example xml:id="example-cyclone-regression-guesses">
+      <title>Estimating regression parameters</title>
+      <p>
+        The relationship between the number of cyclones <m>y</m> in the Australian region each year from 1969 to 2005, and the ONI <m>x</m> is shown in Fig. <xref ref="fig-on-icyclones-correlation"/> (left panel).
+      </p>
+      <p>
+        To make a guess of the regression coefficients, a sensible line can be drawn through the data (Fig. <xref ref="fig-on-icyclones"/>). When the value of <m>x</m> is zero, the predicted value of <m>y</m> is about <m>12</m>, so <m>b_0</m> is about <m>12</m> cyclones. Recall: the intercept is the predicted value of <m>y</m> when <m>x = 0</m>, which is <em>not</em> at the left of the graph in Fig. <xref ref="fig-on-icyclones"/>.
+      </p>
+      <p>
+        To approximate the value of <m>b_1</m>, use the rise-over-run idea.<idx><h>Linear equations</h><h>rise over run</h></idx> When <m>x = -2</m>, the predicted mean value of <m>y</m> is about <m>17</m>; when <m>x = 2</m>, the predicted mean value of <m>y</m> is about <m>8</m>. The value of <m>x</m> increases by <m>2 - (-2) = 4</m>, while the value of <m>\hat{y}</m> changes by <m>7.5 - 17 = -9.5</m> (a <em>decrease</em> of about <m>9.5</m>). Hence, <m>b_1</m> is approximately <m>-9.5/4 = -2.375</m> cyclones per unit change in ONI. (You may get a slightly different value from a slightly different line.)
+      </p>
+      <p>
+        The relationship has a <em>negative</em> direction, so the slope must be <em>negative</em>. The regression line is approximately <m>\hat{y} = 12 - 2.375x</m>.
+      </p>
+    </example>
+    <p>
+      The<idx><h>Regression</h><h>equation!rise over run|)</h></idx> above method gives a crude approximation to the values of the intercept <m>b_0</m> and the slope <m>b_1</m>. In practice, <em>many</em> reasonable lines could be drawn through a scatterplot of data, each giving slightly different rough guesses for <m>b_0</m> and <m>b_1</m>. However, one of those lines is the 'best' line in some sense,<fn>For those interested: the 'line of best fit' is the line for which the sum of the <em>squared</em> vertical distances between the observations <m>y</m> and the predicted values <m>\hat{y}</m> (i.e, the regression line) is as small as possible.</fn> and is sometimes called the 'line of best fit'.<idx><h>Regression</h><h>equation!line of best fit</h></idx>
+    </p>
+  </subsection>
+
+  <subsection xml:id="sec-regression-software">
+    <title>Regression: finding equations using software</title>
+    <idx><h>Regression</h><h>equation!using software</h></idx>
+    <idx><h>Software output</h><h>regression</h></idx>
+    <p>
+      Software is almost always used to find the estimates for the intercept <m>b_0</m> and slope <m>b_1</m>, as the formulas are complicated and tedious to use. For the sorghum data (Fig. <xref ref="fig-borers-scatterjamovi2"/>), the relevant software output is shown in Fig. <xref ref="fig-borers-regression"/>.
+    </p>
+    <p>
+      In the output, the values of <m>b_0</m> and <m>b_1</m> are in the column labelled <c>Estimate</c>; the value of the sample <m>y</m>-intercept is <m>b_0 = 4 814.1.^{-1}</m>, and the value of the sample <em>slope</em> is <m>b_1 = -101.4.^{-1}/\%</m>. These are the values of the two <em>regression coefficients</em>.<idx><h>Regression</h><h>coefficients</h></idx> The regression equation is, after rounding: These are close to the values obtained using the rough method in Sect. <xref ref="sec-regression-equations-review"/> (which gave <m>b_0 = 4 800</m> and <m>b_1 = -95</m> approximately).
+    </p>
+    <note>
+      <p>
+        The <em>sign</em> of the slope <m>b_1</m> and the <em>sign</em> of correlation coefficient <m>r</m> are always the same. For example, if the slope is negative, the correlation coefficient will be negative. However, the <em>value</em> of the slope cannot be deduced solely from the value of the correlation coefficient, nor can the <em>value</em> of the correlation coefficient be deduced solely from the value of the slope.
+      </p>
+    </note>
+    <idx><h>Software output</h><h>correlation</h></idx>
+    <example xml:id="example-regression-coefficients">
+      <title>Regression coefficients</title>
+      <p>
+        The regression equation for the cyclone data (Fig. <xref ref="fig-on-icyclones"/>) is found from the software output (Fig. <xref ref="fig-cyclones-regressionjamovi-ci"/>) as
+      </p>
+      <me>\hat{y} = 12.1 - 2.23x,</me>
+      <p>
+        where <m>x</m> is the ONI (averaged over October, November, December) and <m>y</m> is the number of cyclones; that is, <m>b_0 = 12.1</m> cyclones and <m>b_1 = -2.23</m> cyclones per unit change in ONI. These values are close to the approximations made in Example <xref ref="example-cyclone-regression-guesses"/> (<m>b_0 = 12</m> and <m>b_1 = -2.375</m> respectively).
+      </p>
+    </example>
+  </subsection>
+
+  <subsection xml:id="sec-regression-for-prediction">
+    <title>Regression: making predictions</title>
+    <idx><h>Regression</h><h>equation!making predictions</h></idx>
+    <p>
+      Regression equations can be used to make <em>predictions</em> of the mean value of <m>y</m> for a given value of <m>x</m>. For example, the regression equation for the sorghum data in Equation <xref ref="eq-borers-regression-eqn"/> can be used to make <em>predictions</em> of the mean yield for a given infestation percentage. For example, the equation can be used to predict the <em>average</em> yield of crops with an infestation percentage of <m>30\%</m>. Since <m>x</m> represents the infestation percentage, use <m>x = 30</m> in the regression equation:
+    </p>
+  </subsection>
+  </section>
+
+  <section xml:id="sec-ch33-supplementary-figures">
+    <title>Supplementary figures</title>
+    <figure xml:id="fig-borers-rise-run">
+      <caption>Scatterplot of sorghum yield vs borer infestation with estimated regression line.</caption>
+      <image source="fig-borers-rise-run.png" width="80%"/>
+    </figure>
+    <figure xml:id="fig-borers-scatterjamovi2">
+      <caption>Left: scatterplot of sorghum yield vs borer infestation. Right: Jamovi output showing correlation and CI.</caption>
+      <image source="fig-borers-scatterjamovi2.png" width="80%"/>
+    </figure>
+    <figure xml:id="fig-on-icyclones">
+      <caption>Scatterplot of number of cyclones vs ONI index.</caption>
+      <image source="fig-on-icyclones.png" width="80%"/>
+    </figure>
+    <figure xml:id="fig-on-icyclones-correlation">
+      <caption>Left: scatterplot of cyclones vs ONI. Right: Jamovi output for correlation test.</caption>
+      <image source="fig-on-icyclones-correlation.png" width="80%"/>
+    </figure>
+  </section>
 </chapter>

@@ -1,5 +1,514 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Source: 35-Write.Rmd -->
 <chapter xml:id="ch-35-write" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Reporting and writing research</title>
-  <p>Skeleton for <em>35-Write.Rmd</em>. Content to be added.</p>
+  <title>(PART) Reporting and reading research</title>
+  <objectives xml:id="objectives-ch35">
+    <introduction>
+      <p>So far, you have learnt the about the process of research: asking an RQ, designing a study, collecting data, describing and summarising the data, and analysing the data. <alert>In this chapter</alert>, you will learn to:</p>
+    </introduction>
+    <ul>
+      <li><p>report research effectively and clearly.</p></li>
+      <li><p>appropriately structure research writing.</p></li>
+    </ul>
+  </objectives>
+
+  <section xml:id="sec-chap37-intro">
+    <title>Introduction</title>
+    <image source="Illustrations/pexels-ivan-samkov-4240494.jpg" width="25%">
+      <description><p>Image.</p></description>
+    </image>
+    <p>
+      Research needs to be effectively communicated and shared, so the results can be used, evaluated and built on by others. The purpose of writing about research is to effectively and clearly communicate.
+    </p>
+    <p>
+      Research may be shared using face-to-face or online presentations (Sect. <xref ref="sec-preparing-presentations"/>) or written documents (Sect. <xref ref="sec-writing-documents"/>). The style and expectations vary widely between these two formats, between disciplines, and even between journals in the same discipline. Hence, this chapter gives general comments about writing, rather than specific requirements. Formal guidelines for writing about research exist, for both <em>experimental</em><idx><h>Study types</h><h>experimental</h></idx> <xref ref="hopewell2022update"/> and <em>observational</em><idx><h>Study types</h><h>observational</h></idx> studies <xref ref="von2007strengthening"/>, though we will not discuss these specifically. Since different disciplines and journals have their own styles, read articles from your discipline or target journal for examples of the required style and formatting.
+    </p>
+  </section>
+
+  <section xml:id="sec-writing-general-tips">
+    <title>General writing advice</title>
+    <p>
+      The purpose of writing about research is to effectively and clearly communicate the research. With this in mind, some general advice is given below.
+    </p>
+    <ul>
+      <li><p><em>Write carefully and precisely</em>. Use simple, clear but technically-correct language. Use the [Glossary] if necessary. Carefully choose every word you use to ensure it conveys the correct and intended meaning. <xref ref="oppenheimer2006consequences"/> concluded, from experiments<idx><h>Study types</h><h>experimental</h></idx>, that students often believe that using fancy words makes them appear smarter. However, he recommended students 'write clearly and simply if you can, and you'll be more likely to be thought of as intelligent' (p. 153).</p></li>
+      <li><p><em>Use correct spelling, grammar, punctuation and formatting.</em> Use (but do not rely upon) a spell checker and grammar checker; use a dictionary. Specifically:</p></li>
+      <li><p>do <em>not</em> confuse similar words (there/their/they're; your/you're; affect/effect; chose/choose; etc.).</p></li>
+      <li><p>capitalise correctly.</p></li>
+      <li><p>use apostrophes correctly. For example, <em>it's</em> is only ever an abbreviation for <em>it is</em>.</p></li>
+      <li><p><em>Be inclusive</em>. Unless specifically referring to men or women, use inclusive language (e.g., 'fire-fighter', not 'fireman'; 'nurse' rather than 'male nurse').</p></li>
+      <li><p><em>Take care using comparative terms.</em> For example, writing 'this treatment is <em>better</em>' must be clarified. Better than <em>what</em>? And 'better' in what sense: cost? ease of use? patient outcomes?</p></li>
+      <li><p><em>Use terminology consistently.</em> Different words may be used for the same concept in research and statistics. Use the term that is common in your discipline; most of all, be consistent.</p></li>
+      <li><p><em>Be clear, concise and complete</em>. Place material in an Appendix (Sect. <xref ref="sec-writing-other"/>) if it will interrupt the flow of the narrative. Often, this material can be made available online if too lengthy in printed form.</p></li>
+      <li><p><em>Ensure pronouns clearly identify the nouns they refer to.</em> For example, consider this sentence: 'When the weeds and crops were sprayed, its growth rate reduced by <m>80</m>%'. The word <em>its</em> may refers to the growth rate of the weeds, the crops, or both.</p></li>
+      <li><p><em>Ensure verbs and nouns agree</em>. Both the nouns and verbs in a sentence should be singular or plural. For example, 'the rats <em>was</em> weighed' should be 'the rats <em>were</em> weighed'. Usually, 'data' is considered plural ('datum' is the singular; 'dataset' is also singular), so write 'the data <em>were</em> right skewed' rather than 'the data <em>was</em> right skewed' (but the latter use is becoming more common). In any case, be consistent.</p></li>
+      <li><p><em>Avoid leaps of logic, and reaching conclusions unsupported by the evidence</em>. Ensure your conclusions are consistent with the evidence in the study. For example, a student project found that the proportion of provisional drivers (those yet to get a full licence) was <em>higher</em> in the free university car park, compared to paid car parks. They concluded that provisional drivers seek to 'save money by parking in free car parks'. This <em>may</em> be true, but is not supported by the evidence. The evidence simply shows a difference in proportions, but does not explain <em>why</em>.</p></li>
+      <li><p><em>Present the facts in an unbiased manner, and avoid promoting personal opinions</em>. For example, do not describe results as 'exciting'. Because academic writing generally shuns personal opinions, writing in third person ('the fertiliser was applied') is usually (but not always) preferred over writing in first person ('I applied the fertiliser').</p></li>
+    </ul>
+    <p>
+      Writing well is difficult; editing can be painful; revising is time-consuming. Revise your document carefully as many times as necessary; having someone else read and comment on your writing can be useful.
+    </p>
+    <warning>
+      <p>
+        Many authors have stated
+      </p>
+      <blockquote>
+        <p>Don't write so that you <em>can</em> be understood; write so that you <em>can't</em> be misunderstood.</p>
+      </blockquote>
+      <p>
+        Be unambiguous: say what you mean, and mean what you say.
+      </p>
+    </warning>
+    <example xml:id="example-write-well">
+      <title>Write what you mean</title>
+      <p>
+        A student project at my university asked:
+      </p>
+      <blockquote>
+        <p>Are dark-coloured car owners more likely to park undercover?</p>
+      </blockquote>
+      <p>
+        They actually meant:
+      </p>
+      <blockquote>
+        <p>Are drivers of dark-coloured cars more likely to park undercover?</p>
+      </blockquote>
+      <p>
+        Don't just be understood; avoid being <em>mis</em>understood!
+      </p>
+    </example>
+  </section>
+
+  <section xml:id="sec-ethics-when-writing">
+    <title>Ethics when writing</title>
+    <p>
+      As always, ethical practice is important (Sect. <xref ref="ch-05-research-design-ethics"/>)<idx>Ethics</idx>, including when writing about research. Some relevant issues are given below.
+    </p>
+    <ul>
+      <li><p><em>Producing reproducible research</em>. When possible, research should be <em>reproducible</em> (Sect. <xref ref="sec-reproducible-research"/>).<idx><h>Research</h><h>reproducibility</h></idx> This includes describing the protocol,<idx>Protocol</idx> and making available any data (when possible; sometime this is not ethical or permitted) and any instructions or code used to analyse the data.</p></li>
+      <li><p><em>Authorship</em>. Ensure everyone who has made an intellectual contribution is listed as an author. <xref ref="brand2015beyond"/> suggests authorship be considered for those involved with:</p></li>
+    </ul>
+    <p>
+      \
+    </p>
+    <ul>
+      <li><p>conceptualisation.</p></li>
+      <li><p>methodology.</p></li>
+      <li><p>software.</p></li>
+      <li><p>data analysis.</p></li>
+      <li><p>investigation.</p></li>
+      <li><p>resourcing.</p></li>
+      <li><p>data curation.</p></li>
+    </ul>
+    <p>
+      \
+    </p>
+    <ul>
+      <li><p>creating images or taking photographs.</p></li>
+      <li><p>writing, including writing drafts, reviewing and editing.</p></li>
+      <li><p>visualization.</p></li>
+      <li><p>supervision.</p></li>
+      <li><p>project administration.</p></li>
+      <li><p>funding acquisition.</p></li>
+    </ul>
+    <ul>
+      <li><p><em>Acknowledgements</em>. An optional <em>Acknowledgements</em> section is used to acknowledge research funding bodies, and people who supported the research. Avoid writing 'The authors would like to thank...'; instead, thank them: 'We thank...'. Reviewers of the article, when appropriate (who are almost always volunteers), are usually thanked also.</p></li>
+      <li><p><em>Use of artificial intelligence (AI)</em>.<idx>Artificial intelligence</idx> Any use of AI in the study should be disclosed. This includes using AI <em>during</em> the research (e.g., generating figures or research design) or when writing <em>about</em> the research. The description should indicate where AI was used, which AI systems (such as ChatGPT) were used, and how they were used. AI also may make mistakes, so any material generated using AI should be verified by the authors.</p></li>
+      <li><p><em>Plagiarism</em>.<idx>Plagiarism</idx> Writing about research almost always refers to, and builds on, others' work: to formulate the research question, to establish ideas and to explain the background of the research. However, <em>plagiarism</em> (using other people's words and ideas without acknowledgement) <em>must</em> be avoided. All sources used when writing research should be acknowledged. Plagiarism is a serious offence: it is theft of intellectual property. <em>Do not plagiarise</em>; use quotes if necessary and cite the work of others as needed. Plagiarism applies to words, text, images, photographs, ideas, etc.</p></li>
+    </ul>
+    <example xml:id="example-plagiarism-eg">
+      <title>Plagiarism</title>
+      <p>
+        <xref ref="shamim2014development"/> published an article to discourage plagiarism. Later, the
+      </p>
+      <p>
+        because parts of the article were plagiarised.
+      </p>
+    </example>
+  </section>
+
+  <section xml:id="sec-preparing-presentations">
+    <title>Preparing presentations</title>
+    <p>
+      <em>Presentations</em> are often used to share progress reports of research, or give an overview of completed research. They are used at conferences, workshops, and progress meetings, and may be given to peers, stakeholders, funding bodies, small groups of other researchers, or work teams. Presentations should be adapted to suit the time allocated and the audience: a conference presentation to your research peers should be different from a presentation to a progress meeting.
+    </p>
+    <p>
+      Presentations are mostly a <em>verbal</em> (speaking) and <em>visual</em> (preparing slides) medium.
+    </p>
+    <p>
+      As a <em>verbal</em> medium, speak slowly, clearly, loudly, and with expression. Use eye contact, and practice beforehand. Ensure you keep to your allocated time. Ensure technical or unusual words are pronounced correctly; aids to correct pronunciation of many unfamiliar terms have been given in this book.
+    </p>
+    <p>
+      As a <em>visual</em> medium, presentations usually omit technical details and give the audience an overview of the major points and processes; sharing tedious technical details is unlikely to produce an engaging presentation. Presentations usually focus on the <em>why</em> and the <em>what</em> of the research. Presentations may encourage audience members to learn more by reading your written documents (Sect. <xref ref="sec-writing-documents"/>).
+    </p>
+    <p>
+      Presentations also tend to use graphs, images, short sentences, and minimal text. Presentation software encourages the use of fancy fonts, transitions and animations, but these are usually more distracting than informative; avoid. Ensure your fonts and colours are readable from a distance (especially in tables and graphs).
+    </p>
+    <p>
+      Using bullet points on slides, while common, is not necessary; short sentences are fine. Slides should <em>not</em> contain information that you simply <em>read</em> to the audience; a good presenter adds important details around the structure provided by information on the slides. The slides <em>guide</em>, but do not have to <em>tell</em>, the story of your research.
+    </p>
+  </section>
+
+  <section xml:id="sec-writing-documents">
+    <title>Writing articles</title>
+    <p>
+      Written documents are more likely to be formally written and prepared than presentations. Unlike presentations, written documents tend to provide details of <em>how</em> the research was conducted. Written documents may be journal articles, progress reports, reports to stakeholders, or funding applications; these are all referred to as 'articles' in what follows, for brevity.
+    </p>
+    <warning>
+      <p>
+        Journal articles, and most other written documents too, should contain sufficient details so that other professionals can repeat the study (Chap. <xref ref="sec-protocols"/>); i.e., the research should, as far as possible, be reproducible (Sect. <xref ref="sec-reproducible-research"/>).<idx><h>Research</h><h>reproducibility</h></idx>
+      </p>
+    </warning>
+    <p>
+      Articles usually have a more formal structure than presentations. Sometimes the acronym AIMRaD<idx>AIMRaD</idx> is used to remember these sections:
+    </p>
+    <ul>
+      <li><p>_<alert>A</alert>bstract_.</p></li>
+      <li><p>_<alert>I</alert>ntroduction_.</p></li>
+      <li><p>_<alert>M</alert>ethods_.</p></li>
+      <li><p>_<alert>R</alert>esults_.</p></li>
+      <li><p>_<alert>D</alert>iscussion_ (or <em>Summary</em>, or <em>Conclusions</em>).</p></li>
+    </ul>
+    <p>
+      These components capture the six-step research process used in this book (Fig. <xref ref="fig-report-structure"/>).
+    </p>
+    <p>
+      (ref:Structure) The connection between the article and the steps studied. The <em>Abstract</em> briefly covers all aspects of the study, and the <em>Discussion</em> explains what has been learnt through the process, and discusses the results.
+    </p>
+
+  <subsection xml:id="sec-writing-titles">
+    <title>Article titles</title>
+    <p>
+      Titles are important: poor titles can discourage a reader from reading an article. A title should clearly describe the main purpose of the article. Sometimes this is achieved by posing questions in the title ('Do warning lights and sirens reduce ambulance response times?'; <xref ref="data-Brown2000-WarningLights"/>) or providing answers in the title ('No harm from five year ingestion of oats in coeliac disease'; <xref ref="data-Janatuinen2002-Coeliac"/>).
+    </p>
+    <p>
+      As far as possible, avoid overly-specific technical language and uncommon abbreviations in the title.
+    </p>
+  </subsection>
+
+  <subsection xml:id="sec-writing-abstract">
+    <title>Abstract</title>
+    <p>
+      The <em>Abstract</em> (or <em>Summary</em>, or <em>Overview</em>) is a short section at the start of an article summarising the <em>whole</em> article, including the results; it is <em>not</em> an introduction. The <em>Abstract</em> is the most important part of any article: it is the only part that many people will read. Some journals require a <em>structured abstract</em>, with specific sub-headings (for example, <em>Introduction</em>, <em>Methods</em>, <em>Results</em>, and <em>Conclusion</em> (or <em>Discussion</em>)).
+    </p>
+  </subsection>
+
+  <subsection xml:id="sec-writing-introduction">
+    <title>Introduction</title>
+    <p>
+      The purpose of the <em>Introduction</em> is to:
+    </p>
+    <ul>
+      <li><p>show how the research fills a gap in existing knowledge, by discussing existing literature (sometimes the <em>Literature review</em> forms a separate section).</p></li>
+      <li><p>gain the interest of readers, and encourage them to read more of the article.</p></li>
+      <li><p>establish the context and background.</p></li>
+      <li><p>define the language, acronyms and definitions used in the study.</p></li>
+      <li><p>introduce the theoretical groundwork of the subject.</p></li>
+      <li><p>state the purpose of the article: why it was written, and what the authors hope to learn.</p></li>
+      <li><p>summarise the structure of what follows.</p></li>
+    </ul>
+  </subsection>
+
+  <subsection xml:id="sec-writing-methods">
+    <title>Methods</title>
+    <p>
+      The <em>Methods</em> section (sometimes called <em>Materials and Methods</em> or similar) explains how the data were obtained. This includes:
+    </p>
+    <ul>
+      <li><p>how the <em>sample</em> was identified and located.</p></li>
+      <li><p>how the data were <em>collected</em> from the individuals (the data collection <em>protocol</em>).<idx>Protocol</idx></p></li>
+      <li><p>how the study was designed to maximise external and internal validity, and manage confounding.</p></li>
+      <li><p>how the data were <em>analysed</em>, including the software<idx>Computers and software</idx> (and version number) used, and the statistical methods used.</p></li>
+      <li><p>what specialised equipment was used (pencils, rulers, paper, etc. are not listed).</p></li>
+    </ul>
+  </subsection>
+
+  <subsection xml:id="sec-writing-results">
+    <title>Results</title>
+    <p>
+      The <em>Results</em> summarise the conclusions from the analysis, especially regarding the initial RQ. The <em>Results</em> section:
+    </p>
+    <ul>
+      <li><p>shows all the relevant findings from the research.</p></li>
+      <li><p>presents a summary of the data: the number of observations, the number of missing values, and a verbal description of important variables.</p></li>
+      <li><p>presents tabular, numerical and/or graphical summaries of the data and relationships of importance.</p></li>
+      <li><p>gives a brief verbal interpretation of these summaries.</p></li>
+      <li><p>gives the results from any hypothesis tests and CIs.</p></li>
+      <li><p>identifies trends, consistencies, anomalies, etc.</p></li>
+      <li><p>does <em>not</em> provide interpretations or explanations of the results (that is the purpose of the <em>Discussion</em>).</p></li>
+    </ul>
+    <p>
+      Unless the dataset is small, the data itself is usually not given (though may appear in an Appendix or online).
+    </p>
+    <warning>
+      <p>
+        Cutting-and-pasting software output into reports is rarely acceptable, except for carefully-prepared graphs (Chap. <xref ref="sec-summarise-comments"/>; Sect. <xref ref="sec-writing-graphs-tables"/>).
+      </p>
+    </warning>
+  </subsection>
+
+  <subsection xml:id="sec-writing-discussion">
+    <title>Discussion</title>
+    <p>
+      No new information should be presented in this section. This section:
+    </p>
+    <ul>
+      <li><p>summarises the results.</p></li>
+      <li><p>gives a short evaluation of the results.</p></li>
+      <li><p>answers the stated RQ (i.e., makes a conclusion).</p></li>
+      <li><p>discusses limitations (Chap. <xref ref="sec-interpretation"/>), strengths, weaknesses, problems, challenges.</p></li>
+      <li><p>tries to anticipate and respond to potential questions about the research.</p></li>
+    </ul>
+    <p>
+      Readers should reach the conclusions based on the <em>evidence</em> presented. Sometimes, articles have separate <em>Conclusion</em> and <em>Discussion</em> sections; sometimes they are combined.
+    </p>
+  </subsection>
+
+  <subsection xml:id="sec-referencing">
+    <title>Referencing</title>
+    <idx>Plagiarism</idx>
+    <p>
+      The <em>References</em> (or <em>Bibliography</em>) section gives the full citations of any work referenced, in the required format (such as APA, Harvard, etc.). Most journals have strict guidelines for how references should be listed and formatted (which must be followed).
+    </p>
+  </subsection>
+
+  <subsection xml:id="sec-writing-other">
+    <title>Appendices</title>
+    <p>
+      Sometimes an <em>Appendix</em> is included, which contains important material that would otherwise break the flow of the article's narrative. The <em>Appendix</em> may include large tables, data, images, discussions of technical details, mathematical development, and so on. Sometimes, this material is placed online.
+    </p>
+  </subsection>
+  </section>
+
+  <section xml:id="sec-write-specific-advice">
+    <title>Specific advice</title>
+
+  <subsection xml:id="sec-writing-graphs-tables">
+    <title>Constructing tables, graphs and images</title>
+    <idx><h>Tables</h><h>preparing</h></idx>
+    <idx><h>Graphs</h><h>preparing</h></idx>
+    <idx><h>Software output</h><h>graphs</h></idx>
+    <idx><h>Graphs</h><h>using software</h></idx>
+    <p>
+      Good figures and tables take time and care to prepare (Chap. <xref ref="sec-summarise-comments"/>). Their purpose should always be to <em>display information in the simplest, clearest possible way</em>, and to highlight the important information. In general, tables, graphs and images:
+    </p>
+    <ul>
+      <li><p><em>should</em> be discussed (not just presented) and referred to in the text.</p></li>
+      <li><p><em>should</em> be clear and uncluttered.</p></li>
+      <li><p><em>should</em> include units of measurement (such as kg or inches) where appropriate.</p></li>
+      <li><p><em>should</em> be able to be understood without reference to the article, as far as possible.</p></li>
+      <li><p><em>should</em> use easy-to-read fonts and colours: for example, ensure the font size is sufficiently large when placed in the article at the final size.</p></li>
+      <li><p><em>should</em> avoid using different colours, line types or fonts unless these have a purpose (i.e., to differentiate between groups in the study); if they are used, their purpose should be explained (e.g., using a figure legend or caption).</p></li>
+      <li><p><em>should not</em> include <em>chart junk</em> (unnecessary additions), such as artificial third dimensions for graphs (Sect. <xref ref="sec-graphs-constructing"/>) and unnecessary lines in tables.</p></li>
+    </ul>
+    <p>
+      Figures and images typically have captions <em>below</em>, while tables typically have captions <em>above</em>. The source of images (e.g., the photographer) should be acknowledged (as ethical practice),<idx>Ethics</idx> when appropriate. Tables should use very few horizontal lines, and no vertical lines.
+    </p>
+  </subsection>
+
+  <subsection xml:id="sec-presenting-numbers-sub35">
+    <title>Presenting numbers</title>
+    <p>
+      Any numbers presented should be rounded appropriately. Software may report more decimal places (or more significant figures) than necessary. When appropriate, ensure units of measurement<idx>Units of measurement</idx> are given.
+    </p>
+    <p>
+      Be consistent and careful with decimal numbers. Some journals require numbers to be written with a leading zero (e.g., <m>P = 0.024</m>), and some do not (e.g., <m>P = .024</m>). Counts are usually written in words when fewer than ten (or sometimes twelve), and otherwise presented using digits. However, usually numbers are written in full when starting a sentence ('Thirty-seven people volunteered').
+    </p>
+    <warning>
+      <p>
+        Numbers taken from software output may need to be sensibly rounded before being included in a report (including in tables and graphs), and units of measurement<idx>Units of measurement</idx> added.
+      </p>
+    </warning>
+  </subsection>
+
+  <subsection xml:id="sec-lexical-ambiguity">
+    <title>Lexically ambiguous words</title>
+    <image source="Illustrations/writing-828911_1920.jpg" width="25%">
+      <description><p>Image.</p></description>
+    </image>
+    <p>
+      Readers should not be able to misinterpret your meaning, so write <em>carefully</em> and <em>precisely</em>. One potential source of confusion is words with a different meaning in research compared to every-day use or in other disciplines (called <em>lexical ambiguity</em>; <xref ref="dunn2016learning"/>). Some specific words where care is needed are given below.
+    </p>
+    <ul>
+      <li><p><em>Average</em>:<idx>Averages</idx><idx><h>Mean</h><h>of a sample</h></idx><idx><h>Median</h><h>of a sample</h></idx></p></li>
+    </ul>
+    <p>
+      struct Use the specific word 'mean' or 'median' when that is what you intend.
+    </p>
+    <ul>
+      <li><p><em>Confidence</em>:<idx>Confidence intervals</idx> In research, 'confidence' is usually used in the phrase 'confidence interval' (Sect. <xref ref="sec-ci-interpretation"/>). Take care when using 'confidence' in other contexts to avoid confusion.</p></li>
+      <li><p><em>Control</em>:<idx>Control</idx> In research, a 'control' is usually used in the context of a control group (Def. <xref ref="def-control"/>), but may have other meanings in other disciplines.</p></li>
+      <li><p><em>Correlation</em>:<idx>Correlation</idx> In research, correlation describes the (often linear) relationship between two <em>quantitative</em> variables (Sect. <xref ref="sec-corr-coefficients"/>). In general usage, 'correlation' may mean any 'association' between any two variables.</p></li>
+      <li><p><em>Estimate</em>:<idx>Estimate</idx> In research, 'estimating' means to <em>calculate</em> an estimate for an unknown population parameter using sample information. In general usage, 'estimate' often means to make an educated guess.</p></li>
+      <li><p><em>Experiment</em>:<idx><h>Study types</h><h>experimental</h></idx> In research, an experiment is a specific type of research study (Sect. <xref ref="sec-experimental-studies"/>). The word 'study' can be used to talk about research more generally.</p></li>
+      <li><p><em>Independent</em>:<idx>Independence</idx> This word has many different uses in statistics and research, in science, and in general usage. The word 'independent' in this book refers to events that do not impact each other in a probabilistic sense (Sect. <xref ref="sec-independence"/>).</p></li>
+      <li><p><em>Intervention</em>:<idx>Intervention</idx> In research, an 'intervention' (Sect. <xref ref="sec-intervention"/>) is specifically when the researchers can manipulate the comparison.</p></li>
+      <li><p><em>Normal</em>:<idx>Normal distribution</idx> In research, 'normal' often refers to the 'normal distribution' (Chap. <xref ref="sec-normal-distribution"/>). If this is <em>not</em> the meaning you intend to convey, consider using the word 'usual' or similar.</p></li>
+      <li><p><em>Odds</em>:<idx>Odds</idx><idx>Probability</idx> In research, 'odds' has a specific meaning (Sect. <xref ref="sec-qual-odds"/>) and is not the same as probability. In general usage, 'probability' and 'odds' are often used interchangeably.</p></li>
+      <li><p><em>Population</em>:<idx>Population</idx> In research, the 'population' refers to a larger group of interest (Def. <xref ref="def-population"/>). In general usage, 'population' often refers to groups of people specifically.</p></li>
+      <li><p><em>Random</em>:<idx>Random</idx> In research, 'random' has a specific meaning: based on impersonal chance. In general usage, it often means 'haphazard' or 'without structure'.</p></li>
+      <li><p><em>Regression</em>:<idx>Regression</idx> In research, 'regression' refers to the mathematical (often linear) relationship between two quantitative variables (Chap. <xref ref="ch-33-correlation-regression"/>).</p></li>
+      <li><p><em>Sample</em>: <idx>Sample</idx> In research, we usually have '<em>one</em> sample of <m>30</m> hyenas'; in some disciplines, this could be described as 'taking <m>30</m> samples of hyenas'.</p></li>
+      <li><p><em>Significant</em>:<idx>Statistical significance</idx><idx><h>P-values</h><h>one-tailed</h></idx> In research, 'significance' is usually understood to refer to 'statistical significance' (Sect. <xref ref="sec-about-pvalues"/>). If this is <em>not</em> the meaning you intend to convey, consider using the word 'substantial' or similar.</p></li>
+      <li><p><em>Variable</em>:<idx>Variables</idx> In research, a 'variable' is a characteristic that can vary from individual to individual (Def. <xref ref="def-variable"/>).</p></li>
+    </ul>
+    <p>
+      Some <em>symbols</em> may also have different meanings in other disciplines. Ensure the meaning of symbols and notation is clearly defined.
+    </p>
+  </subsection>
+  </section>
+
+  <section xml:id="sec-chapter-summary-ch35">
+    <title>Chapter summary</title>
+    <p>
+      Communicating research is a vital step in the research process. Writing clearly is important.
+    </p>
+    <p>
+      Presentations are a verbal and visual medium, and usually focus on the major points and conclusions rather than the <em>how</em>.
+    </p>
+    <p>
+      Written documents are usually formal, and include details of <em>what</em> was done. They should be written carefully and precisely, using the appropriate technically-correct words. Use short sentences for easier reading and omit unnecessary words.
+    </p>
+    <p>
+      Remember: 'Don’t write so that you <em>can</em> be understood; write so that you <em>can't</em> be misunderstood'.
+    </p>
+  </section>
+
+  <reading-questions xml:id="sec-chap40-quick-review">
+    <title>Quick review questions</title>
+  </reading-questions>
+
+  <exercises xml:id="sec-write-exercises">
+    <introduction>
+      <p>Answers to odd-numbered exercises are given at the end of the book.</p>
+    </introduction>
+    <p>
+      [Answers to odd-numbered exercises] are given at the end of the book.
+    </p>
+    <exercise xml:id="exercise-write-word-choice">
+      <ol>
+        <li><p>Select the correct word to use to complete this sentence: <em>to</em>, <em>too</em> or <em>two</em>? 'Liquid fertiliser was applied [______] pots each morning at 9am.'</p></li>
+        <li><p>Select the correct word to use to complete this sentence: <em>its</em> or <em>it's</em>? 'Each kangaroo was observed for signs that [______] tracking device caused discomfort.'</p></li>
+        <li><p>What are the problems with this sentence? 'We took <m>50</m> samples of students; the average age of the <m>50</m> students was <m>26.2</m>.'</p></li>
+        <li><p>What is the problem with this text? 'The subjects are not blinded. Because the subjects would clearly know they were in a study.'</p></li>
+      </ol>
+    </exercise>
+    <exercise xml:id="exercise-write-word-choice2">
+      <ol>
+        <li><p>Select the correct word to use to complete this sentence: <em>there</em>, <em>their</em> or <em>they're</em>? 'The subjects were told to eat [______] snacks at about 8am.'</p></li>
+        <li><p>What is the problem with this text? 'The sample of pedestrians were all taken on a Thursday.'</p></li>
+        <li><p>Select the correct word to use to complete this sentence: <em>affect</em> or <em>effect</em>? 'The [______] of the diet was to increase the blood pressure.'</p></li>
+        <li><p>What is the problem with this sentence? 'The new formulation produces better concrete'.</p></li>
+      </ol>
+    </exercise>
+    <exercise xml:id="exercise-write-ambiguous">
+      <ol>
+        <li><p>Explain how this sentence can be misinterpreted, and write an improved version: 'There was one rat in the cage that was male.'</p></li>
+        <li><p>Explain how this sentence can be misinterpreted, and write an improved version: 'The research assistant recorded the pH of the lake water in the beaker after removing weeds.'</p></li>
+      </ol>
+    </exercise>
+    <exercise xml:id="exercise-write-ambiguous2">
+      <ol>
+        <li><p>Explain how this sentence can be misinterpreted, and write an improved version: 'Fertiliser was applied to one of the fields that was in liquid form.'</p></li>
+        <li><p>Explain how this sentence can be misinterpreted, and write an improved version: 'The new diet lost more weight, on average, than the traditional diet.'</p></li>
+      </ol>
+    </exercise>
+    <exercise xml:id="exercise-write-ambiguous3">
+      <ol>
+        <li><p>Explain how this statement can be improved:</p></li>
+      </ol>
+      <p>
+        'A significant change in the weight gain of the pigs is expected to be found'.
+      </p>
+      <ol>
+        <li><p>Explain how this statement can be improved:</p></li>
+      </ol>
+      <p>
+        'The data is summarised in Table 2.'
+      </p>
+    </exercise>
+    <exercise xml:id="exercise-write-ambiguous4">
+      <ol>
+        <li><p>Explain how this statement can be improved:</p></li>
+      </ol>
+      <p>
+        'There is a correlation between sex of the person and chance of contracting the disease'.
+      </p>
+      <ol>
+        <li><p>Explain how this statement can be improved:</p></li>
+      </ol>
+      <p>
+        'The group were asked to sign a consent form.'
+      </p>
+    </exercise>
+    <exercise xml:id="exercise-write-exercises-decimals">
+      <p>
+        <xref ref="oyerinde2019investigation"/> state (p. 1):
+      </p>
+      <blockquote>
+        <p>The regression correlation coefficients of <m>0.999996066</m> and <m>0.999653453</m> were obtained for the temperatures and speeds respectively [as associated with the time the engine had been running].</p>
+      </blockquote>
+      <p>
+        What is the problem with this statement?
+      </p>
+    </exercise>
+    <exercise xml:id="exercise-write-exercises-likely-to-die">
+      <p>
+        <xref ref="david2007patients"/> published an article entitled 'Are patients with self-inflicted injuries more likely to die?' What is the problem with this title?
+      </p>
+    </exercise>
+    <exercise xml:id="exercise-write-exercises-student1">
+      <p>
+        In a student project, students compared the mean reading speed for people when reading text displayed in one of two different fonts. Their RQ was:
+      </p>
+      <blockquote>
+        <p>Which font allows [<ellipsis/>] students to read a pangram the fastest, between a default and what is considered to be a 'easy to read' font.</p>
+      </blockquote>
+      <p>
+        (A pangram is a sentence that uses every letter of the alphabet at least once.) In their <em>Abstract</em>, the conclusion was given as:
+      </p>
+      <blockquote>
+        <p>The Georgia font [<ellipsis/>] is therefore the faster of the two.</p>
+      </blockquote>
+      <ol>
+        <li><p>Explain why this is a poorly-worded RQ.</p></li>
+      </ol>
+      <p>
+        Rewrite the RQ.
+      </p>
+      <ol>
+        <li><p>Explain what is wrong with the conclusion.</p></li>
+      </ol>
+      <p>
+        Rewrite the statement.
+      </p>
+    </exercise>
+    <exercise xml:id="exercise-write-exercises-student2">
+      <p>
+        In a student project, the heights that students could jump vertically were compared, starting from a squat or standing position. Every student in the study performed both jumps. Critique the <em>numerical summary</em> produced by the research team (Table <xref ref="tab-write-exercises-project2"/>).
+      </p>
+    </exercise>
+    <exercise xml:id="exercise-write-exercises-student3">
+      <p>
+        The aim of a student project was 'to determine if the proportion of males and females that use disposable (coffee) cups on campus is the same'. The two variables observed on each person in the study were (a) whether the person used a disposable cup, and (b) the sex of the person. In reporting the results in their <em>Abstract</em>, the students state:
+      </p>
+      <blockquote>
+        <p>Based on the sample results, the <m>95</m>% confidence interval for the population mean number of disposable cups used by males and females is between <m>0.690</m> and <m>1.625</m>. Meaning that the population mean is likely to fall between those two intervals.</p>
+      </blockquote>
+      <p>
+        Critique this statement.
+      </p>
+    </exercise>
+    <exercise xml:id="exercise-write-exercises-student4">
+      <p>
+        The aim of a student project was 'to determine if the average hang time is different between two types of paper plane designs'. The two variables in the study were: design type (Basic Dart; Hunting Flight), and the hang time of the flight of the plane (in seconds). In reporting the results in their <em>Abstract</em>, the students state:
+      </p>
+      <blockquote>
+        <p>Very strong evidence proving a difference (<m>P = .000</m>) between the Basic Dart mean hang time (<m>881.84 140.73</m>) and the Hunting Flight mean hang time (<m>1504.19 699.86</m>). <m>95</m>% CI for the means of The Basic Dart (<m>829.29</m> <ndash/> <m>934.39</m>) and the Hunting Flight (<m>1242.86</m> <ndash/> <m>1765.52</m>).</p>
+      </blockquote>
+      <p>
+        Critique this statement.
+      </p>
+    </exercise>
+  </exercises>
 </chapter>

@@ -1,5 +1,451 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Source: 27-Testing-OneMean.Rmd -->
 <chapter xml:id="ch-27-testing-one-mean" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Hypothesis tests: one mean</title>
-  <p>Skeleton for <em>27-Testing-OneMean.Rmd</em>. Content to be added.</p>
+  <objectives xml:id="objectives-ch27">
+    <introduction>
+      <p>You have learnt to ask an RQ, design a study, classify and summarise the data, construct confidence intervals, and perform a hypothesis test for one proportion. <alert>In this chapter</alert>, you will learn to:</p>
+    </introduction>
+    <ul>
+      <li><p>identify situations where conducting a test for a mean is appropriate.</p></li>
+      <li><p>conduct hypothesis tests for one sample mean, using a <m>t</m>-test.</p></li>
+      <li><p>determine whether the conditions for using these methods apply in a given situation.</p></li>
+    </ul>
+  </objectives>
+
+  <section xml:id="sec-body-temperature">
+    <title>Introduction: body temperatures</title>
+    <idx><h>Hypothesis testing</h><h>one mean|(</h></idx>
+    <image source="Illustrations/pexels-anna-shvets-3987141.jpg" width="25%">
+      <description><p>Image.</p></description>
+    </image>
+    <p>
+      The average internal body temperature is commonly believed to be <m>37.0</m>^o^C (<m>98.6</m>^o^F). This value is based on data over <m>150</m> years old <xref ref="data-Wunderlich-BodyTemp"/>. Since then, the methods for measuring internal body temperature have changed substantially:
+    </p>
+    <blockquote>
+      <p>Thermometers used by Wunderlich were cumbersome, had to be read in situ, and, when used for axillary measurements [i.e., under the armpit]... required <m>15</m> to <m>20</m> to equilibrate. Today's thermometers are smaller and more reliable and equilibrate more rapidly. In addition, the mouth and rectum have replaced the axilla [armpit] as the preferred sites for monitoring body temperature.</p>
+      <attribution><xref ref="data-mackowiak-bodytemp"/>, p. 1579</attribution>
+    </blockquote>
+    <p>
+      For this reason, the reported internal body temperature (recorded by newer instruments, in different locations) may have changed since the 1860s. Therefore, we could ask:
+    </p>
+    <blockquote>
+      <p>Is the <em>population</em> mean internal body temperature equal to <m>37.0</m>^o^C?</p>
+    </blockquote>
+    <p>
+      A <em>decision</em> is sought about the value of the <em>population</em> mean body temperature. Presumably, the intended population is all people, though the population, in practice, may depend on what population is represented by the available data.
+    </p>
+    <p>
+      The population mean internal body temperature will never be known: the internal body temperature of every person alive would need to be measured, and even those not yet born. A <em>sample</em> must be studied.
+    </p>
+    <p>
+      Define the parameter as <m></m>, the population mean internal body temperature (in ^o^C). A <em>sample</em> of people can be used to determine if evidence exists that the <em>population</em> mean internal body temperature is not <m>37.0</m>^o^C,<idx><h>Mean</h><h>of a population</h></idx> using the decision-making process (Sect. <xref ref="sec-decision-making"/>).
+    </p>
+  </section>
+
+  <section xml:id="sec-testp-obs-decision-hypotheses">
+    <title>Assumptions: hypotheses</title>
+    <p>
+      <alert>Step 1</alert> of the decision-making process is to <em>assume</em> a value for the parameter. The established claim is that the population mean internal body temperature is <m>37.0</m>^o^C, so we assume this value. This assumption becomes the null hypothesis:
+    </p>
+    <me>\text{$H_0$: } \mu = 37.0.</me>
+    <p>
+      If the <em>sample</em> mean is not <m>37.0</m>^o^C, this hypothesis proposes that the discrepancy is due to sampling variation.
+    </p>
+    <p>
+      The RQ asks if the <em>population</em> mean internal body temperate <m></m> is <em>equal</em> to <m>37.0</m>^o^C, or if it has <em>changed</em>. The RQ does not specifically ask if <m></m> is smaller than <m>37.0</m>^o^C, or larger than <m>37.0</m>^o^C. This means the alternative hypothesis is two-tailed:
+    </p>
+    <me>\text{$H_1$: } \mu \ne 37.0.</me>
+  </section>
+
+  <section xml:id="sec-sampling-dist-sample-mean-ht">
+    <title>Expectations: sampling distribution for </title>
+    <idx><h>Sampling distribution</h><h>one mean</h></idx>
+    <p>
+      <alert>Step 2</alert> of the decision-making process is to describe what values of the statistic (in this case, the sample mean <m>\bar{x}</m>) can be expected if the value of <m></m> is assumed to be <m>37.0</m> (the value specified in <m>H_0</m>). In other words, the <em>sampling distribution</em> of <m>\bar{x}</m> needs to be described.
+    </p>
+    <p>
+      The sample mean <em>varies</em> from sample to sample, and varies with a normal distribution (whose standard deviation is called the <em>standard error</em>) under certain conditions (given in Sect. <xref ref="sec-validity-sample-mean-test"/>). The sampling distribution of <m>\bar{x}</m> was described in Sect. <xref ref="sec-sampling-dist-sample-mean"/>, and repeated below.
+    </p>
+    <definition xml:id="def-sampling-distribution-xbar-ht">
+      <title>Sampling distribution of a sample mean</title>
+      <statement>
+        <p>
+          When the <em>population</em> standard deviation is unknown, the <em>sampling distribution of the sample mean</em> is (when certain conditions are met; Sect. <xref ref="sec-validity-sample-mean"/>) described by:
+        </p>
+        <ul>
+          <li><p>an approximate normal distribution,</p></li>
+          <li><p>centred around a sampling mean whose value is <m></m>,</p></li>
+          <li><p>with a standard deviation (called the <em>standard error of the mean</em>), denoted <m>s.e.(\bar{x})</m>, whose value is</p></li>
+        </ul>
+        <p>
+          where <m>n</m> is the size of the sample, and <m>s</m> is the sample standard deviation of the observations.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      The mean of this sampling distribution<mdash/>the <em>sampling mean</em><mdash/>has the value <m></m>. The standard deviation of this sampling distribution is called the <em>standard error of the sample means</em>, denoted <m>s.e.(\bar{x})</m>. When the <em>population</em> standard deviation <m></m> is <em>unknown</em>, the value of the standard error happens to be (see Equation <xref ref="eq-stderrorxbar-ht"/>)
+    </p>
+    <me>\text{s.e.}(\bar{x}) = \frac{s}{\sqrt{n}}.</me>
+    <p>
+      <xref ref="data-mackowiak-bodytemp"/> gathered body-temperature data for <m>n = 130</m> people, collated by <xref ref="data-Shoemaker1996-Temperature"/>
+    </p>
+    <p>
+      The data all come from
+    </p>
+    <blockquote>
+      <p>... volunteers participating in Shigella vaccine trials conducted at the University of Maryland Center for Vaccine Development, Baltimore...</p>
+      <attribution><xref ref="data-mackowiak-bodytemp"/>, p. 1578</attribution>
+    </blockquote>
+    <p>
+      Hence, the population for the study (and RQ) should be redefined accordingly. From software output (Fig. <xref ref="fig-body-tempjamovi"/>), the <em>sample</em> mean is <m>\bar{x} = 36.8052</m>^o^C<idx><h>Mean</h><h>of a sample</h></idx> and the <em>sample</em> standard deviation is <m>s = 0.4073</m>^o^C. Using this value of <m>s</m>, the sampling distribution of <m>\bar{x}</m> can be described, if <m></m> really was <m>37.0</m>:
+    </p>
+    <ul>
+      <li><p>an approximate normal distribution,</p></li>
+      <li><p>with a sampling mean whose value is <m> = 37.0</m> (from <m>H_0</m>),</p></li>
+      <li><p>with a standard deviation of <m>s.e.(\bar{x}) = s/\sqrt{n} = 0.4073/\sqrt{130} = 0.0357</m> (as in the output).</p></li>
+    </ul>
+    <p>
+      A picture of this sampling distribution (Fig. <xref ref="fig-body-temp-sampling-dist"/>) shows how the sample mean varies when <m>n = 130</m>, for all possible samples when <m> = 37.0</m>. For example, the value of <m>\bar{x}</m> will be <em>larger</em> than <m>37.0357</m>^o^C about <m>16</m>% of the time (using the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule) if <m></m> really is <m>37.0</m>.
+    </p>
+  </section>
+
+  <section xml:id="sec-tscores">
+    <title>Observations: t-score</title>
+    <idx>t-score</idx>
+    <p>
+      <alert>Step 3</alert> of the decision-making process is to evaluate the observations. Locating <m>\bar{x} = 36.8052</m> on the sampling distribution (Fig. <xref ref="fig-body-temp-sampling-dist-t"/>) shows that this observed sample mean is, relatively speaking, <em>extremely</em> low: a sample mean this low is very unlikely to occur in any sample of <m>n = 130</m> when <m> = 37.0</m>. How many standard deviations is <m>\bar{x}</m> away from <m> = 37.0</m>? Compute:
+    </p>
+    <me>\frac{\text{statistic} - \text{mean of the distribution}}{\text{std dev. of the distribution}}   =   \frac{36.8052 - 37.0}{0.035724} = -5.453.</me>
+    <p>
+      This is like a <m>z</m>-score: it measures the number of standard deviations that the value is from the mean. However, it is not a <m>z</m>-score; it is a <m>t</m>-score. Both <m>t</m>- and <m>z</m>-scores measure <em>the number of standard deviations that a value is from the mean</em>. Here the value is a <m>t</m>-score, because the <em>population</em> standard deviation <m></m> is unknown, and the <em>sample</em> standard deviation is used instead to compute <m>s.e.(\bar{x})</m>.
+    </p>
+    <note>
+      <p>
+        Like <m>z</m>-scores, <m>t</m>-scores measure the number of standard deviations that a value is from the mean of the distribution.
+      </p>
+    </note>
+    <p>
+      The calculation is therefore:
+    </p>
+    <me>t = \frac{36.8052 - 37.0}{0.035724} = -5.453.</me>
+    <p>
+      The observed sample mean is <em>more than five standard deviations below the population mean</em>, which is highly unusual based on the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule (Fig. <xref ref="fig-body-temp-sampling-dist-t"/>). This is very persuasive evidence that <m></m> is not <m>37.0</m>.
+    </p>
+    <p>
+      In general, when the sampling distribution has an approximate normal distribution and the <em>sample</em> standard deviation is used to compute the standard error, the <m>t</m>-score is
+    </p>
+  </section>
+
+  <section xml:id="sec-pvalues">
+    <title>Decision: P-value</title>
+    <p>
+      As seen in Sect. <xref ref="sec-testp-obs-decision-pvalues"/>, a <m>P</m>-value quantifies how unusual the observed sample statistic is, after assuming <m>H_0</m> is true. Since <m>t</m>-scores and <m>z</m>-scores are very similar, the <m>P</m>-value can be <em>approximated</em> using the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule and a diagram, or <em>approximated</em> using <m>z</m>-tables ( Usually, however, software is used to compute the <m>P</m>-value.<idx><h>Software output</h><h>one mean</h></idx> <m>t</m>-scores and <m>z</m>-scores with the same value produce almost the same <m>P</m>-values, except for small sample sizes.
+    </p>
+    <p>
+      Both methods produce approximate <m>P</m>-values only, since the approximations are based on using <m>z</m>-scores rather than <m>t</m>-scores. Usually, software is used to determine precise <m>P</m>-values for <m>t</m>-scores (Fig. <xref ref="fig-body-temp-testjamovi"/>).<idx><h>Software output</h><h>one mean</h></idx> The output (under the heading <c>p</c>) shows that the <m>P</m>-value is indeed very small: less than <m>0.001</m> (written <m>P &lt; 0.001</m>).
+    </p>
+    <note>
+      <p>
+        Some software reports a <m>P</m>-value of <c>0.000</c>, which really means that the <m>P</m>-value is zero to three decimal places. Since <m>P</m>-values can never be exactly zero, we should write <m>P &lt; 0.001</m>: that is, the <m>P</m>-value is <em>smaller</em> than <m>0.001</m>.
+      </p>
+    </note>
+    <p>
+      This <m>P</m>-value means that, if <m> = 37.0</m>, a sample mean as low as <m>36.8052</m> would be <em>very</em> unusual to observe (from a sample size of <m>n = 130</m>). And yet, we did. Using the decision-making process, this implies that the initial assumption (i.e., <m>H_0</m>) is contradicted by the data: we observed something extremely unlikely if <m> = 37.0</m>. That is, there is very persuasive evidence that the <em>population</em> mean body temperature is <em>not</em> <m>37.0</m>^o^C.
+    </p>
+    <warning>
+      <p>
+        For <em>one-tailed tests</em>, the <m>P</m>-value is <em>half</em> the value of the two-tailed <m>P</m>-value.
+      </p>
+    </warning>
+    <p>
+      As seen in Sect. <xref ref="sec-testp-obs-decision-pvalues"/>, <m>P</m>-values measure the probability of observing the sample statistic (or something more extreme), assuming the population parameter is the value given in <m>H_0</m>. For the body-temperature data then, where <m>P &lt; 0.001</m>, the <m>P</m>-value is <em>very</em> small, so <em>very strong evidence</em> exists that the population mean body temperature is not <m>37.0</m>^o^C.
+    </p>
+  </section>
+
+  <section xml:id="sec-writing-conclusions-ch27">
+    <title>Writing conclusions</title>
+    <p>
+      Communicating the results of any hypothesis test requires an <em>answer to the RQ</em>, a summary of the <em>evidence</em> used to reach that conclusion (such as the <m>t</m>-score and <m>P</m>-value, stating if the <m>P</m>-value is one- or two-tailed), and some <em>sample summary information</em> (including a CI). For the body-temperature example, write:
+    </p>
+    <blockquote>
+      <p>The sample provides very strong evidence (<m>t = -5.45</m>; two-tailed <m>P &lt; 0.001</m>) that the population mean body temperature is <em>not</em> <m>37.0</m>^o^C (<m>\bar{x} = 36.81</m>; <m>95</m>% CI: <m>36.73</m> to <m>36.88</m>^o^C; <m>n = 130</m>).</p>
+    </blockquote>
+    <p>
+      This statement contains the three components.
+    </p>
+    <ol>
+      <li><p>The <em>answer to the RQ</em>: the sample provides very strong evidence that the population mean body temperature is not <m>37.0</m>^o^C. The alternative hypothesis is two-tailed, so the conclusion is that the population mean body temperature is <em>not equal to</em> <m>37.0</m>^o^C.</p></li>
+      <li><p>The <em>evidence</em> used to reach the conclusion: <m>t = -5.45</m>; two-tailed <m>P &lt; 0.001</m>.</p></li>
+      <li><p>Some <em>sample summary information</em>: the sample mean (with the CI) and the sample size.</p></li>
+    </ol>
+    <p>
+      The test is about the <em>mean</em> internal body temperature; <em>individuals</em> have internal body temperatures ranging from <m>35.722</m>^o^C to <m>38.222</m>^o^C.<idx>Range</idx>
+    </p>
+    <p>
+      The difference between the value of <m>37.0</m>^o^C and the sample mean of <m>36.81</m>^o^C is small in absolute terms, and is probably of little practical importance for most applications.<idx>Practical importance</idx> Notice that the CI does <em>not</em> include the value of <m> = 37.0</m>.
+    </p>
+  </section>
+
+  <section xml:id="sec-test-summary">
+    <title>Process overview</title>
+    <p>
+      Let's recap the decision-making process for this body temperatures (Fig. <xref ref="fig-decision-flow-temps"/>) example:
+    </p>
+    <ol>
+      <li><p><em>Assumption</em>. Write the <em>null hypothesis</em> about the parameter (based on the RQ): <m>H_0</m>: <m> = 37.0</m>. In addition, write the <em>alternative hypothesis</em>: <m>H_1</m>: <m> 37.0</m>. (This alternative hypothesis is two-tailed.)</p></li>
+      <li><p><em>Expectation</em>. The <em>sampling distribution</em> describes what to expect from the statistic <em>if</em> the null hypothesis is true. The sampling distribution is an approximate normal distribution.</p></li>
+      <li><p><em>Observation</em>. Compute the <m>t</m>-score: <m>t = -5.45</m>. The <m>t</m>-score can be computed by software, or using the general equation in Equation <xref ref="eq-tscore"/>.</p></li>
+      <li><p><em>Decision</em>. Determine if the data are <em>consistent</em> with the assumption, by computing the <m>P</m>-value. Here, the <m>P</m>-value is much smaller than <m>0.001</m>. The <m>P</m>-value can be computed by software, or approximated using the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule. The <em>conclusion</em> is that there is very strong evidence that <m></m> is not <m>37.0</m>.</p></li>
+    </ol>
+  </section>
+
+  <section xml:id="sec-validity-sample-mean-test">
+    <title>Statistical validity conditions</title>
+    <idx><h>Statistical validity (for inference)</h><h>one mean</h></idx>
+    <p>
+      All hypothesis tests have underlying conditions to be met so that the results are statistically valid. For a test of one mean, this means that the sampling distribution must have an approximate normal distribution so that <m>P</m>-values can be found.
+    </p>
+    <p>
+      The test for a single mean is <em>statistically valid</em> if <em>either</em> of these is true:
+    </p>
+    <ul>
+      <li><p>when <m>n 25</m>. (If the distribution of the data is highly skewed, the sample size may need to be larger.)</p></li>
+      <li><p>when <m>n &lt; 25</m>, <em>and</em> the sample data come from a <em>population</em> with a normal distribution.</p></li>
+    </ul>
+    <p>
+      The sample size of <m>25</m> is a rough figure; some books give other values (such as <m>30</m>).
+    </p>
+    <p>
+      This condition ensures that the <em>distribution of the sample means has an approximate normal distribution</em> (so that, for example, the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule can be used). Provided the sample size is larger than about <m>25</m>, this will be approximately true <em>even if</em> the distribution of the individuals in the population does not have a normal distribution. That is, when <m>n 25</m> the sample means generally have an approximate normal distribution, even if the data themselves do not have a normal distribution. The units of analysis are also assumed to be <em>independent</em> (e.g., from a simple random sample).
+    </p>
+    <p>
+      If the statistical validity conditions are not met, other similar options include a sign test<idx>Sign test</idx> or a Wilcoxon signed-rank test<idx>Wilcoxon signed ranks test</idx> <xref ref="conover2003practical"/>, or using resampling methods <xref ref="efron2021computer"/>.
+    </p>
+    <example xml:id="example-statistical-validity-temps">
+      <title>Statistical validity</title>
+      <p>
+        The hypothesis test regarding body temperature is statistically valid since the sample size is larger than <m>25</m> (<m>n = 130</m>). (The data, as displayed in Fig. <xref ref="fig-body-temp-hist"/>, do <em>not</em> need to come from a population with a normal distribution.)
+      </p>
+    </example>
+    <idx><h>Hypothesis testing</h><h>one mean|)</h></idx>
+  </section>
+
+  <section xml:id="sec-i-qstudents">
+    <title>Example: student IQs</title>
+    <p>
+      Standard IQ scores are designed to have a mean in the general population of <m> = 100</m>. Researchers at Griffith University (GU) asked:
+    </p>
+    <blockquote>
+      <p>For students at Griffith University, is the mean IQ higher than <m>100</m>?</p>
+    </blockquote>
+    <p>
+      The parameter is <m></m>, the population mean IQ for students at GU.
+    </p>
+    <p>
+      To answer this RQ, <xref ref="reilly2022gender"/> studied <m>n = 224</m> students at Griffith University (GU), finding a sample mean IQ of <m>111.19</m> and a standard deviation of <m>14.21</m>. Is this evidence that GU students have a <em>higher</em> mean IQ than the general population? The hypotheses are:
+    </p>
+    <me>\text{$H_0$: $\mu = 100 \qquad \text{and} \qquad H_1$: $\mu > 100$.}</me>
+    <p>
+      This test is <em>one-tailed</em>, since the RQ asks if the mean IQ of GU students is <em>greater</em> than <m>100</m>, the one-tailed <m>P</m>-value will be in the tail corresponding to <em>larger</em> IQ scores (i.e., to the right of the mean). (Writing <m>H_0</m>: <m> 100</m> is also correct (and equivalent), though the test still proceeds as though <m> = 100</m>, the largest option permitted by <m>\le100</m>.)
+    </p>
+    <p>
+      We do not have the original data, but the summary information is sufficient: <m>\bar{x} = 111.19</m> with <m>s = 14.21</m> from a sample of size <m>n = 224</m>. The <em>sample</em> mean is higher than <m>100</m>, but since sample means vary, the difference may be just due to sampling variation. The sample means vary with a normal distribution, with mean <m>100</m> and a standard deviation of
+    </p>
+    <me>\text{s.e.}(\bar{x}) = \frac{s}{\sqrt{n}} = \frac{14.21}{\sqrt{224}} = 0.94945.</me>
+    <p>
+      The <m>t</m>-score is
+    </p>
+    <me>t = \frac{\bar{x} - \mu}{\text{s.e.}(\bar{x})} = \frac{111.19 - 100}{0.94945} = 11.786.</me>
+    <p>
+      This <m>t</m>-score is <em>huge</em>: a sample mean as large as <m>111.19</m> would be highly unlikely to occur in any sample of size <m>n = 224</m>, simply by sampling variation, if the population mean really was <m>100</m>. Since the alternative hypothesis is <em>one-tailed</em>, and <m> &gt; 100</m> specifically, the <m>P</m>-value is the area in the right-side tail of the distribution only (Fig. <xref ref="fig-iq-sampling-distribution"/>); it will be extremely small. This is very persuasive evidence to support the alternative hypothesis.
+    </p>
+    <p>
+      We conclude:
+    </p>
+    <blockquote>
+      <p>Very strong evidence exists in the sample (<m>t = 11.78</m>; one-tailed <m>P &lt; 0.001</m>) that the population mean IQ in students at Griffith University is greater than <m>100</m> (mean <m>111.19</m>; <m>95</m>% CI: <m>109.29</m> to <m>113.09</m>; <m>n = 224</m>).</p>
+    </blockquote>
+    <p>
+      The test is about the <em>mean</em> IQ; <em>individual</em> students may have IQs less than <m>100</m>.
+    </p>
+    <p>
+      Since the sample size is much larger than <m>25</m>, this conclusion is <em>statistically valid</em>. The sample is not a random sample from the population of all GU students (the students are mostly first-year, undergraduate psychological science students). However, these students may be somewhat representative of all GU students. In any case, the results probably apply to first-year, undergraduate psychological science students at GU.
+    </p>
+    <p>
+      The difference between the general population IQ of <m>100</m> and the sample mean IQ of GU students is only small: about <m>11</m> IQ units (less than one standard deviation). Possibly, this difference has very little practical importance,<idx>Practical importance</idx> even though the statistical evidence suggests that the difference cannot be explained by chance.
+    </p>
+    <p>
+      IQ scores are designed to have a standard deviation of <m> = 15</m> in the general population. If this applies for university students too (and we do not know if it does), the standard error is <m>s.e.(\bar{x}) = /\sqrt{n} = 15/\sqrt{130} = 1.0022</m>, and the test-statistic is then a <m>z</m>-score:
+    </p>
+    <me>z = \frac{\bar{x} - \mu}{\text{s.e.}(\bar{x})} = \frac{111.19 - 100}{1.0022} = 11.87.</me>
+    <p>
+      The conclusions do not change: the <m>P</m>-value is still extremely small.
+    </p>
+  </section>
+
+  <section xml:id="sec-chap27-summary">
+    <title>Chapter summary</title>
+    <p>
+      These steps are used to test a hypothesis about a population mean <m></m>.
+    </p>
+    <ul>
+      <li><p>Write the null hypothesis (<m>H_0</m>) and the alternative hypothesis (<m>H_1</m>); initially <em>assume</em> the value of <m></m> in the null hypothesis to be true.</p></li>
+      <li><p>Describe the <em>sampling distribution</em>, which describes what to <em>expect</em> from the sample mean based on this assumption: under certain statistical validity conditions, the sample mean varies with:</p></li>
+      <li><p>an approximate normal distribution,</p></li>
+      <li><p>with sampling mean whose value is the value of <m></m> (from <m>H_0</m>), and</p></li>
+      <li><p>having a standard deviation of <m> s.e.(\bar{x}) =\frac{s}{\sqrt{n}}</m>.</p></li>
+      <li><p>Compute the value of the <em>test statistic</em>:</p></li>
+    </ul>
+    <me>t = \frac{ \bar{x} - \mu}{\text{s.e.}(\bar{x})},</me>
+    <p>
+      where <m></m> is the hypothesised value given in the null hypothesis.
+    </p>
+    <ul>
+      <li><p>The <m>t</m>-value is like a <m>z</m>-score, and so an approximate <em><m>P</m>-value</em> can be estimated using the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule or tables, or found using software. Use the <m>P</m>-value to make a decision, and write a conclusion.</p></li>
+      <li><p>Check the statistical validity conditions.</p></li>
+    </ul>
+  </section>
+
+  <reading-questions xml:id="sec-chap32-quick-review">
+    <title>Quick review questions</title>
+  </reading-questions>
+
+  <exercises xml:id="sec-test-one-mean-answer-exercises">
+    <introduction>
+      <p>Answers to odd-numbered exercises are given at the end of the book.</p>
+    </introduction>
+    <p>
+      [Answers to odd-numbered exercises] are given at the end of the book.
+    </p>
+    <exercise xml:id="exercise-one-t-speed">
+      <p>
+        <xref ref="azwari2021evaluating"/> studied driving speeds in Malaysia, and recorded the speeds of vehicles on various roads. One RQ was whether the mean speed of cars on one particular road was the posted speed limit of <m>90.^{-1}</m>, or whether it was <em>higher</em>.
+      </p>
+      <p>
+        The researchers recorded the speed of <m>n = 400</m> vehicles on this road, and found the mean and standard deviation of the speeds of individual vehicles were <m>\bar{x} = 96.56</m> and <m>s = 13.874.^{-1}</m>.
+      </p>
+      <ol>
+        <li><p>Define the parameter of interest.</p></li>
+        <li><p>Write the statistical hypotheses.</p></li>
+        <li><p>Compute the standard error of the sample mean.</p></li>
+        <li><p>Sketch the sampling distribution of the sample mean for <m>n = 400</m>.</p></li>
+        <li><p>Compute the test statistic, a <m>t</m>-score.</p></li>
+        <li><p>Determine the <m>P</m>-value, and write a conclusion.</p></li>
+        <li><p>Is the test statistically valid?</p></li>
+      </ol>
+    </exercise>
+    <exercise xml:id="exercise-test-one-mean-exercises-slalom">
+      <p>
+        A competitive slalom competitor completed <m>n = 30</m> attempts on a <m>38.8</m> kayak slalom course to assess the accuracy of a GPS tracking system <xref ref="macdermidValidityReliabilityGlobal2022"/>. The trials produced a mean distance, recorded by the GPS, as <m>36.54</m> with a standard deviation of <m>2.07</m>.
+      </p>
+      <ol>
+        <li><p>Define the parameter of interest.</p></li>
+        <li><p>Write the statistical hypotheses.</p></li>
+        <li><p>Compute the standard error of the sample mean.</p></li>
+        <li><p>Sketch the sampling distribution of the sample mean for <m>n = 30</m>.</p></li>
+        <li><p>Compute the test statistic, a <m>t</m>-score.</p></li>
+        <li><p>Determine the <m>P</m>-value, and write a conclusion.</p></li>
+        <li><p>Is the test statistically valid?</p></li>
+      </ol>
+    </exercise>
+    <exercise xml:id="exercise-test-one-mean-exercises-automated-vehicles">
+      <p>
+        <xref ref="data-greenlee2018-vehicles"/> conducted a study of human<ndash/>automation interaction with automated vehicles. They were interested in whether the average mental demand of 'drivers' of automated vehicles was <em>higher</em> than the average mental demand for ordinary tasks.
+      </p>
+      <p>
+        In the study, the <m>n = 22</m> participants 'drove' (in a simulator) an automated vehicle for <m>40</m>. While driving, the drivers monitored the road for hazards. The researchers assessed the 'mental demand' placed on these drivers, where scores over <m>50</m> 'typically indicate substantial levels of workload' (p. 471). For the sample, the mean score was <m>84.00</m> with a standard deviation of <m>22.05</m>.
+      </p>
+      <p>
+        Is there evidence of a 'substantial workload' associated with monitoring roadways while 'driving' automated vehicles?
+      </p>
+    </exercise>
+    <exercise xml:id="exercise-test-one-mean-water-temp">
+      <p>
+        Health departments recommend that hot water be stored at <m>60</m>^o^C or higher, to kill <em>legionella</em>
+      </p>
+      <p>
+        <xref ref="alary1991risk"/> studied <m>n = 178</m> Quebec homes with electric water heaters to see if the mean water temperature was less than <m>60</m>^o^C (i.e., at risk).
+      </p>
+      <p>
+        The mean temperature was <m>56.6</m>^o^C, with a standard error of <m>0.4</m>^o^C. Is there evidence the mean water temperature in Quebec is too low to kill <em>legionella</em> bacteria?
+      </p>
+    </exercise>
+    <exercise xml:id="exercise-test-one-mean-exercises-cherry-ripes">
+      <p>
+        [<em>Dataset</em>: <c>CherryRipe</c>] A <em>Cherry Ripe</em> is a popular Australian chocolate bar. In 2017, 2018 and 2019, I sampled some <em>Cherry Ripe</em> Fun Size bars. The packaging claimed that the Fun Size bars weigh <m>14</m> (on average).
+      </p>
+      <ol>
+        <li><p>Use the software output (Fig. <xref ref="fig-cherry-ripes201720182019"/>) to determine if the mean weight is <m>14</m> or not.</p></li>
+        <li><p>Explain the difference in the meaning of <c>SD</c> and <c>SE</c> in this context.</p></li>
+      </ol>
+    </exercise>
+    <p>
+      (ref:CherryRipesOutputHT) Software output for the <em>Cherry Ripes</em> data.
+    </p>
+    <exercise xml:id="exercise-test-one-mean-blood-loss">
+      <p>
+        (This study was also seen in Exercise <xref ref="sec-exr:ci-one-mean-blood-loss"/>.) <xref ref="data-Williams2007-BloodLoss"/> asked <m>n = 199</m> paramedics to estimate the amount of blood on four different surfaces. When the actual amount of blood spilt on concrete was <m> 1000</m>, the mean guess was <m>846.4</m> (with <m>s = 651.1</m>).
+      </p>
+      <p>
+        Is there evidence that the mean guess is <m>1 000</m> (the true amount)? Is this test statistically valid?
+      </p>
+    </exercise>
+    <exercise xml:id="exercise-test-one-mean-exercises-sleep">
+      <p>
+        <xref ref="lin2021sleep"/> compared the average sleep times of Taiwanese pre-school children to the recommendation (of <em>at least</em> <m>10</m> per night). Using the summary of the data for weekend sleep-times (Table <xref ref="tab-sleeping-summary"/>), do girls get <em>less than</em> <m>10</m> of sleep per night, on average? Do boys?
+      </p>
+    </exercise>
+    <exercise xml:id="exercise-test-one-mean-quality-control">
+      <p>
+        [<em>Dataset</em>: <c>LHconc</c>] <xref ref="feng2017application"/> assessed the accuracy of two instruments from a clinical laboratory, by comparing the reported luteotropichormone (LH) concentrations to known, pre-determined values using <m>n = 36</m> samples. Use hypothesis tests to determine how the instruments perform, for both high- and mid-level LH concentrations (using the information in
+      </p>
+    </exercise>
+    <exercise xml:id="exercise-pizzas-ht">
+      <p>
+        [<em>Dataset</em>: <c>PizzaSize</c>] (This study was also seen in Exercise <xref ref="sec-exr:ci-pizzas"/>.) In 2011, <em>Eagle Boys Pizza</em> ran a campaign that claimed that <em>Eagle Boys</em> pizzas were 'Real size <m>12</m>-inch large pizzas' <xref ref="mypapers-Dunn-PizzaSize"/>. <em>Eagle Boys</em> made the data from the campaign publicly available. Using the summary of the diameters of a sample of <m>125</m> of their large pizzas (Fig. <xref ref="fig-pizza-software-h-tjamovi"/>), test the company's claim:
+      </p>
+      <blockquote>
+        <p>For <em>Eagle Boys</em>' pizzas, is mean diameter actually <m>12</m> inches, or not?</p>
+      </blockquote>
+      <ol>
+        <li><p>What is the parameter of interest?</p></li>
+        <li><p>Write down the values of <m>\bar{x}</m> and <m>s</m>.</p></li>
+        <li><p>Determine the value of the standard error of the mean.</p></li>
+        <li><p>Write the hypotheses to test if the mean pizza diameter is <m>12</m> inches.</p></li>
+        <li><p>Is the alternative hypothesis one- or two-tailed? Why?</p></li>
+        <li><p>Draw the normal distribution that shows how the <em>sample mean pizza diameter</em> would vary by chance, <em>even if</em> the population mean diameter was <m>12</m> inches.</p></li>
+        <li><p>Compute the <m>t</m>-score for testing the hypotheses.</p></li>
+        <li><p>What is the approximate <m>P</m>-value using the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule?</p></li>
+        <li><p>Write a conclusion: do pizzas have a mean diameter of <m>12</m> inches, as claimed?</p></li>
+        <li><p>Is it reasonable to assume the <em>statistical</em> validity conditions are satisfied?</p></li>
+      </ol>
+    </exercise>
+    <p>
+      (ref:EBSummaryHTCaption) Summary statistics for the diameter of <em>Eagle Boys</em> large pizzas.
+    </p>
+    <exercise xml:id="exercise-one-mean-ht-exercise-sleep-time">
+      <p>
+        <xref ref="saxvig2021sleep"/> studied the length of sleep each night for a 'large and representative sample of Norwegian adolescents' (p. 1) aged <m>16</m> and <m>17</m> years of age. The recommendation is for adolescents to have at least <m>8</m> of sleep each night.
+      </p>
+      <p>
+        In the sample of <m>n = 3 972</m> individuals, the mean amount of sleep on schools days was <m>6</m> <m>43</m> (i.e., <m>403</m>), with a standard deviation of <m>87</m>. On non-school days, the mean amount of sleep was <m>8</m> <m>38</m> (i.e., <m>518</m>), with a standard deviation of <m>98</m>.
+      </p>
+      <p>
+        Do Norwegian adolescents appear to meet the guidelines of having '<em>at least</em> <m>8</m>' sleep each night on school days? On non-school days?
+      </p>
+    </exercise>
+  </exercises>
+
+  <section xml:id="sec-ch27-supplementary-figures">
+    <title>Supplementary figures</title>
+    <figure xml:id="fig-body-tempjamovi">
+      <caption>Jamovi output showing descriptive statistics for the body temperature data.</caption>
+      <image source="fig-body-tempjamovi.png" width="80%"/>
+    </figure>
+    <figure xml:id="fig-body-temp-testjamovi">
+      <caption>Jamovi output showing hypothesis test results for the body temperature data.</caption>
+      <image source="fig-body-temp-testjamovi.png" width="80%"/>
+    </figure>
+  </section>
 </chapter>

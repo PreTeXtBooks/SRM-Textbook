@@ -1,5 +1,361 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Source: 29-CIsTesting-MeanDifference.Rmd -->
 <chapter xml:id="ch-29-cis-testing-mean-difference" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Mean differences (paired data): CIs and tests</title>
-  <p>Skeleton for <em>29-CIsTesting-MeanDifference.Rmd</em>. Content to be added.</p>
+    <idx><h>Research question</h><h>relational</h></idx>
+    <idx>Mean difference</idx>
+  <objectives xml:id="objectives-ch29">
+    <introduction>
+      <p>You have learnt to ask an RQ, design a study, classify and summarise the data, construct confidence intervals, and conduct hypothesis tests. <alert>In this chapter</alert>, you will learn to:</p>
+    </introduction>
+    <ul>
+      <li><p>identify situations where mean differences are appropriate.</p></li>
+      <li><p>construct confidence intervals for a mean difference.</p></li>
+      <li><p>conduct hypothesis tests for the mean difference with paired data.</p></li>
+      <li><p>determine whether the conditions for using these methods apply in a given situation.</p></li>
+    </ul>
+  </objectives>
+
+  <section xml:id="sec-paired-intro">
+    <title>Introduction: six-minute walk test</title>
+    <p>
+      The six-minute walk test (6MWT) measures how far subjects can walk in six minutes, and is used as a simple, low-cost evaluation of fitness and other health-related measures. The recommended setting for the test is usually a walkway of at least <m>30</m>. <xref ref="saiphoklang2022comparison"/> measured the 6MWT distance when the same subjects used <em>both</em> <m>20</m> and <m>30</m> walkways.
+    </p>
+    <p>
+      The comparison is <em>within</em> individuals (Sect. <xref ref="sec-rqs-repeated-measures"/>);<idx><h>Comparison</h><h>within individuals</h></idx> this is a <em>repeated-measures</em> study. Each subject has a <em>pair</em> of 6MWT measurements, and the study produced <em>paired data</em>
+    </p>
+    <p>
+      the topic of this chapter.<idx><h>Data</h><h>paired</h></idx><idx><h>Study types</h><h>paired</h></idx>
+    </p>
+    <warning>
+      <p>
+        Some differences are <em>negative</em>. This does <em>not</em> mean a negative distance. Since the differences are computed as the <m>30</m> distance minus the <m>20</m> distance, a negative difference means the <m>20</m> distance is a larger value than the <m>30</m> distance.
+      </p>
+    </warning>
+  </section>
+
+  <section xml:id="sec-paired-data">
+    <title>Paired data</title>
+    <idx><h>Data</h><h>paired</h></idx>
+    <p>
+      The data
+    </p>
+    <p>
+      are <em>paired</em>.<idx><h>Data</h><h>paired</h></idx> Computing the <em>differences</em> or <em>changes</em> between the pairs of observations makes sense, since the values for each pair belong to the same unit of analysis (the same person, in this case).
+    </p>
+    <p>
+      Pairing data, when appropriate, is useful because individuals can vary substantially, and pairing means that extraneous variables<idx><h>Variables</h><h>extraneous</h></idx> (potentially, <em>confounding</em> variables)<idx><h>Variables</h><h>confounding</h></idx> are held constant for those paired observations. For example, each pair of measurements in
+    </p>
+    <p>
+      are recorded for the same person, so both measurements are recorded for someone of the same age, same sex, and with the same physical attributes.
+    </p>
+    <p>
+      Pairing is a form of blocking<idx>Blocking</idx> (Sect. <xref ref="sec-managing-confounding"/>). Pairing is a good design strategy when the individuals in the pair are the same, or are very similar, for many extraneous variables. (For example, the pair may comprise two different people, of the same sex, with similar age, height and weight.) Pairing often involves taking two measurements from the <em>same</em> individuals, as in
+    </p>
+    <definition xml:id="def-paired-data">
+      <title>Paired data</title>
+      <statement>
+        <p>
+          <em>Paired data</em> occurs when the outcome is compared for two different, distinct situations for each unit of analysis.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      Paired studies appear in many situations; for example, when:
+    </p>
+    <ul>
+      <li><p>heart rate is measured for each twin in a pair (the twin-pair is the 'individual'), one of whom exercises regularly and one who does not. Pairing the twins is reasonable, given the shared genetics (and probably childhood environments also).</p></li>
+    </ul>
+    <p>
+      The <em>difference</em> between the hearts rates of the twins can be recorded for each pair.
+    </p>
+    <ul>
+      <li><p>the body temperature of dogs (the 'individuals') is measured using <em>both</em> rectal and ear thermometers for each dog. The <em>difference</em> between the two recorded temperatures from the thermometers for each dog is recorded.</p></li>
+      <li><p>blood pressure is recorded from some individuals (Group A) after receiving Drug A, and from another group of individuals (Group B) after receiving Drug B. Each person in Group A is matched with someone in Group B of the same sex, similar age and similar weight (e.g., in one of the pairs, both individuals are male, about <m>30</m> years-of-age, and weighing about <m>95</m>). The <em>difference</em> between the blood pressure measurements for the individual in Group A and the matched person in Group B is recorded for each pair.</p></li>
+      <li><p>the number of campers is recorded at many national parks (the 'individuals') on the first weekend in summer, and on the first weekend in winter. The <em>difference</em> in camper numbers for each national park between these time points is recorded.</p></li>
+    </ul>
+    <p>
+      Many of these examples can be extended to beyond two measurements. For instance, temperatures can be compared on each dog using three different types of thermometers. In this chapter, only <em>pairs</em> of measurements are studied, and only for quantitative variables.
+    </p>
+  </section>
+
+  <section xml:id="sec-summarising-paired-ci">
+    <title>Summarising the data</title>
+    <p>
+      For the 6MWT study, the distance is measured for the same subjects for two different walkway distances. Each subject receives two measurements, and the <em>difference</em> between the distances walked for each individual is computed.<idx>Mean difference</idx>
+    </p>
+    <p>
+      Since the data are paired, an appropriate graph is a histogram of the differences (Sect. <xref ref="sec-histo-diff-plot"/>); specifically, <m>30</m> distance minus the <m>20</m> distance. A boxplot comparing 6MWT distance for both walkway lengths (that is, <em>not</em> pairing the data) shows the distribution of distances, and the median distances, are very similar (Fig. <xref ref="fig-compare-paired-boxplots-histogram"/>, left panel). Any difference in individuals' 6MWT distances is difficult to see and detect. In addition, linking the <m>20</m> and <m>30</m> distances that belong together for each individual patient is not possible.
+    </p>
+    <p>
+      However, using a histogram of the differences<idx><h>Graphs</h><h>histogram of differences</h></idx> makes the individuals' differences easier to see (Fig. <xref ref="fig-compare-paired-boxplots-histogram"/>, right panel). The histogram also makes it easy to see that some subjects walked further with a <m>20</m> walkway, and some further for a <m>30</m> walkway. Individually graphing the distances for both walkway distances may also be useful too (e.g., using two histograms), but a graph of the differences is <em>crucial</em>, as the RQ is about those differences. A case-profile plot (Sect. <xref ref="sec-case-profile-plot"/>) is also appropriate, but is difficult to read for these data because sample size is large (a line is needed for each of the <m>50</m> units of analysis).
+    </p>
+    <p>
+      (ref:WalkwayPlots) Plots of the 6MWT data. Left: graphing the data <em>incorrectly</em> as unpaired. Right: a histogram of 6MWT distances changes (<m>30</m> walkway distance <em>minus</em> <m>20</m> walkway distance; the vertical grey line represents no change in distance).
+    </p>
+    <p>
+      The 6MWT distances for each walkway length can be summarised individually (the first two rows of Table <xref ref="tab-smwt-summary"/>) using the methods of Chap. <xref ref="sec-one-mean-conf-interval"/>, using software (Fig. <xref ref="fig-smwt-numerical-output"/>). All statistics are slightly different for the two walkway distances; in particular, the mean <m>30</m> walkway distance is slightly larger. However, since the RQ is about the difference between the distances, a numerical summary of the <em>differences</em> is essential (third row of Table <xref ref="tab-smwt-summary"/>, based on Fig. <xref ref="fig-smwt-numerical-output"/>). Notice that the third row of information is computed from the values in the <alert>Diff.</alert> column in
+    </p>
+    <p>
+      not by (for instance) finding the difference between the standard deviations in the first two rows.
+    </p>
+    <p>
+      The differences (i.e., the <alert>Diff.</alert> column in
+    </p>
+    <p>
+      can be treated like a single sample of data (Table <xref ref="tab-paired-notation"/>), with the notation adapted accordingly:
+    </p>
+    <ul>
+      <li><p><m>\mu_d</m>: the mean <em>difference</em> in the <em>population</em> (in m).</p></li>
+      <li><p><m>\bar{d}</m>: the mean <em>difference</em> in the <em>sample</em> (in m).</p></li>
+      <li><p><m>s_d</m>: the <em>sample</em> standard deviation of the <em>differences</em> (in m).</p></li>
+      <li><p><m>n</m>: the number of <em>differences</em>.</p></li>
+    </ul>
+  </section>
+
+  <section xml:id="sec-mean-diff-ci">
+    <title>Confidence intervals for _d</title>
+    <idx><h>Sampling distribution</h><h>paired quantitative data</h></idx>
+    <idx><h>Confidence intervals</h><h>paired quantitative data|(</h></idx>
+    <idx><h>Sampling distribution</h><h>mean difference</h></idx>
+    <idx><h>Confidence intervals</h><h>mean difference|(</h></idx>
+    <p>
+      The data in
+    </p>
+    <p>
+      can be used to answer this repeated-measures, estimation RQ:
+    </p>
+    <blockquote>
+      <p>For Thai patients with chronic obstructive pulmonary disease, what is the mean difference between the 6MWT distance when subjects use a <m>20</m> walkway and a <m>30</m> walkway?</p>
+    </blockquote>
+    <p>
+      Every possible sample of <m>n = 50</m> subjects comprises different people, and hence produces different 6MWT distances for <m>20</m> and <m>30</m> walkways. For this reason, the 6MWT distance summaries in Table <xref ref="tab-smwt-summary"/> include standard errors. Since the 6MWT distance varies from sample to sample for each person, the <em>differences</em> between the distances for each person varies from sample to sample too, and also have a <em>sampling distribution</em>.
+    </p>
+    <definition xml:id="def-sampling-distribution-dbar">
+      <title>Sampling distribution of a sample mean difference</title>
+      <statement>
+        <p>
+          The <em>sampling distribution of a sample mean difference</em> is (when certain conditions are met; Sect. <xref ref="sec-validity-sample-mean-diff"/>) described by:
+        </p>
+        <ul>
+          <li><p>an approximate normal distribution,</p></li>
+          <li><p>centred around the <em>sampling mean</em> whose value is the population mean <em>difference</em> <m>\mu_d</m>,</p></li>
+          <li><p>with a standard deviation, called the standard error of the difference, of</p></li>
+        </ul>
+        <p>
+          <m>.e.(\bar{d}) = \frac{s_d}{\sqrt{n}}</m>,
+        </p>
+        <p>
+          where <m>n</m> is the number of differences, and <m>s_d</m> is the standard deviation of the individual differences in the sample.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      For the 6MWT data, the sample mean differences <m>\bar{d}</m> are described by (Fig. <xref ref="fig-smwt-sampling-dist"/>):
+    </p>
+    <ul>
+      <li><p>approximate normal distribution,</p></li>
+      <li><p>with a sampling mean whose value is <m>\mu_{{d}}</m>,</p></li>
+      <li><p>with a <em>standard error</em> of</p></li>
+    </ul>
+    <p>
+      The CI for the mean difference has the same form as for a single mean (Chap. <xref ref="sec-one-mean-conf-interval"/>). The <m>95</m>% confidence interval (CI) for <m>\mu_d</m> is
+    </p>
+    <me>\bar{d} \pm \big(\text{multiplier} \times\text{s.e.}(\bar{d})\big).</me>
+    <p>
+      As usual when the sampling distribution has an approximate normal distribution, an approximate <m>95</m>% CI uses the approximate multiplier of <m>2</m> (from the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule). This is the same as the CI for <m>\bar{x}</m> if the differences are treated as the data.
+    </p>
+    <p>
+      For the 6MWT data, the approximate <m>95</m>% CI is:
+    </p>
+    <me>22.03 \pm (2 \times 3.117),</me>
+    <p>
+      or <m>22.03 6.234</m> (so the <em>margin of error</em> is <m>6.234</m>). Equivalently, the CI is from <m>22.03 - 6.234 = 15.796</m>, up to <m>22.03 + 6.234 = 28.264</m>. We write:
+    </p>
+    <blockquote>
+      <p>The mean difference in the 6MWT distances when using a <m>20</m> and <m>30</m> walkway is <m>22.03</m> (<m>s.e. = 3.117</m>; <m>n = 50</m>), with an approximate <m>95</m>% CI from <m>15.80</m> to <m>28.26</m>, further for a <m>30</m> walkway.</p>
+    </blockquote>
+    <p>
+      The CI means that the reasonable values for the population mean difference in 6MTW distances are between <m>15.80</m> and <m>28.26</m>. Alternatively, we are <m>95</m>% confident that the population mean difference between the 6MWT distances is between <m>15.80</m> and <m>28.26</m> (further for <m>30</m> walkway). A difference of this magnitude probably has practical importance.<idx>Practical importance</idx> Also notice that the <em>direction</em> of the difference is given: 'further for <m>30</m> walkway'.
+    </p>
+    <p>
+      Statistical software<idx><h>Software output</h><h>mean differences</h></idx> produces <em>exact</em> <m>95</m>% CIs, which may be slightly different from the <em>approximate</em> <m>95</m>% CI (recall: the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule gives <em>approximate</em> multipliers). For the 6MWT data, the <em>approximate</em> and <em>exact</em> <m>95</m>% CIs are the same to one decimal place (Fig. <xref ref="fig-smwt-numerical-output"/>). We write:
+    </p>
+    <blockquote>
+      <p>The mean difference in the 6MWT distances when using a <m>20</m> and <m>30</m> walkway is <m>22.03</m> (<m>s.e. = 3.117</m>; <m>n = 50</m>), with a <m>95</m>% CI from <m>15.76</m> to <m>28.29</m> further for a <m>30</m> walkway.</p>
+    </blockquote>
+    <idx><h>Confidence intervals</h><h>paired quantitative data|)</h></idx>
+    <idx><h>Confidence intervals</h><h>mean difference|)</h></idx>
+  </section>
+
+  <section xml:id="sec-mean-diff-test">
+    <title>Hypothesis tests for _d: t-test</title>
+    <idx><h>Sampling distribution</h><h>paired quantitative data</h></idx>
+    <idx><h>Hypothesis testing</h><h>paired quantitative data|(</h></idx>
+    <idx><h>Sampling distribution</h><h>mean difference</h></idx>
+    <idx><h>Hypothesis testing</h><h>mean difference|(</h></idx>
+    <p>
+      The data in
+    </p>
+    <p>
+      can be used to answer this repeated-measures, decision-making RQ:
+    </p>
+    <blockquote>
+      <p>For Thai patients with chronic obstructive pulmonary disease, is there a mean increase in 6MWT distance using a <m>30</m> walkway compared to a <m>20</m> walkway?</p>
+    </blockquote>
+    <p>
+      In Sect. <xref ref="sec-paired-intro"/>, the differences were defined as the <m>30</m> distance minus the <m>20</m> distance, which is consistent with the wording in this RQ. This RQ asks if the mean walking distance is, in general, a smaller value when subjects use a <m>20</m> walkway compared to a <m>30</m> walkway (that is how <em>positive</em> differences eventuate). The <em>parameter</em> is the <em>population mean difference</em> in 6MWT, <m>\mu_d</m>. Note that the RQ is worded as one-tailed.
+    </p>
+    <p>
+      The <em>null</em> hypothesis is that 'there is <em>no mean change</em> in 6MWT, in the population':
+    </p>
+    <ul>
+      <li><p><m>H_0</m>: <m>\mu_d = 0</m>.</p></li>
+    </ul>
+    <p>
+      This hypothesis, which we initially <em>assume</em> to be true, postulates that the mean reduction may not be zero in the sample, due to sampling variation.
+    </p>
+    <p>
+      Since the RQ asks specifically if the mean distance is <em>smaller</em> for a <m>20</m> walkway, the alternative hypothesis is <em>one-tailed</em> (Sect. <xref ref="sec-about-hypotheses"/>). According to how the differences have been defined, the alternative hypothesis is:
+    </p>
+    <ul>
+      <li><p><m>H_1</m>: <m>\mu_d &gt; 0</m> (i.e., one-tailed).</p></li>
+    </ul>
+    <p>
+      This hypothesis says that the mean change in the population is <em>greater than</em> zero, because of the wording of the RQ, and because of how the differences were defined. If the differences were defined in the opposite way (as 'the <m>20</m> distance minus the <m>30</m> distance') then the alternative hypothesis would be <m>\mu_d &lt; 0</m>, which has the same <em>meaning</em>.
+    </p>
+    <p>
+      The sampling distribution, as described in Sect. <xref ref="def-sampling-distribution-dbar"/>, still applies, where <m>\mu_d</m> is assumed to be the value given in <m>H_0</m> (see Fig. <xref ref="fig-smwt-sampling-dist-ht"/>):
+    </p>
+    <ul>
+      <li><p>an approximate normal distribution,</p></li>
+      <li><p>centred around the <em>sampling mean</em> whose value is the population mean <em>difference</em> <m>\mu_d = 0</m> (from <m>H_0</m>),</p></li>
+      <li><p>with a standard deviation of <m>.e.(\bar{d}) = 3.117</m> (from Equation <xref ref="eq-std-error-differences"/>).</p></li>
+    </ul>
+    <p>
+      The sample mean difference can be located on the sampling distribution by computing the <m>t</m>-score:<idx><h>Hypothesis testing</h><h>mean difference</h></idx><idx>t-score</idx>
+    </p>
+    <me>t = \frac{\bar{d} - \mu_{d}}{\text{s.e.}(\bar{d})} = \frac{22.026 - 0}{3.117} = 7.07,</me>
+    <p>
+      following the ideas in Equation <xref ref="eq-tscore"/>. Software displays the same <m>t</m>-score (Fig. <xref ref="fig-smwt-numerical-output"/>). This is a <em>huge</em> <m>t</m>-score.
+    </p>
+    <p>
+      A <m>P</m>-value determines if the sample data are consistent with the assumption (Table <xref ref="tab-pvalues-interpretation"/>). Since <m>t = 7.07</m>, and since <m>t</m>-scores are like <m>z</m>-scores, the <em>one</em>-tailed <m>P</m>-value will be very small (based on the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule).<idx>68–95–99.7 rule</idx> Software (Fig. <xref ref="fig-smwt-numerical-output"/>) reports that the <em>two</em>-tailed <m>P</m>-value is less than <m>0.0001</m>. Hence, the <em>one</em>-tailed <m>P</m>-value is less than <m>0.0001/2 = 0.00005</m>.
+    </p>
+    <warning>
+      <p>
+        The software clarifies <em>how</em> the differences have been computed. At the left of the output (Fig. <xref ref="fig-smwt-numerical-output"/>), the order implies the differences are found as <c>Dist30</c> (the <m>30</m> walk distance) minus <c>Dist20</c> (the <m>20</m> walk distance), the same as our definition.
+      </p>
+    </warning>
+    <p>
+      <iframe src="https://learningapps.org/watch?v=pj3pt56fk22" style="border:0px;width:100%;height:500px" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
+    </p>
+    <p>
+      The one-tailed <m>P</m>-value is less than <m>0.00005</m>, suggesting very strong evidence (Table <xref ref="tab-pvalues-interpretation"/>) to support <m>H_1</m>. A conclusion requires an <em>answer to the RQ</em>, a summary of the <em>evidence</em> leading to that conclusion, and some <em>summary statistics</em>:
+    </p>
+    <blockquote>
+      <p>Very strong evidence exists in the sample (paired <m>t = 7.07</m>; one-tailed <m>P &lt; 0.0005</m>) of a mean reduction in 6MWT for a <m>20</m> walkway compared to a <m>30</m> walkway (mean reduction: <m>22.03</m>; <m>95</m>% CI: <m>15.76</m> to <m>28.29</m>; <m>n = 50</m>).</p>
+    </blockquote>
+    <p>
+      Note that the direction of the difference is provided.
+    </p>
+    <warning>
+      <p>
+        Saying 'there is evidence of a difference' is insufficient. You must state <em>which</em> measurement is, on average, higher (that is, what the differences <em>mean</em>).
+      </p>
+    </warning>
+    <idx><h>Hypothesis testing</h><h>paired quantitative data|)</h></idx>
+    <idx><h>Hypothesis testing</h><h>mean difference|)</h></idx>
+  </section>
+
+  <section xml:id="sec-validity-sample-mean-diff">
+    <title>Statistical validity conditions</title>
+    <idx><h>Sampling distribution</h><h>mean difference</h></idx>
+    <idx><h>Statistical validity (for inference)</h><h>mean differences</h></idx>
+    <idx><h>Sampling distribution</h><h>paired quantitative data</h></idx>
+    <p>
+      As with any CI and hypothesis test, these results apply under certain conditions. The conditions under which the results are statistically valid for paired data are similar to those for one sample mean, rephrased for differences.
+    </p>
+    <p>
+      The CI and test for a mean difference is <em>statistically valid</em> if <em>either</em> of these is true:
+    </p>
+    <ul>
+      <li><p>when <m>n 25</m>. (If the distribution of the differences is highly skewed, the sample size may need to be larger.)</p></li>
+      <li><p>when <m>n &lt; 25</m>, <em>and</em> the sample data come from a <em>population</em> with a normal distribution.</p></li>
+    </ul>
+    <p>
+      The sample size of <m>25</m> is a rough figure; some books give other values (such as <m>30</m>).
+    </p>
+    <p>
+      This condition ensures that the <em>distribution of the sample mean differences has an approximate normal distribution</em> (so that, for example, the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule can be used). Provided the sample size is larger than about <m>25</m>, this will be approximately true <em>even if</em> the distribution of the differences in the population does not have a normal distribution. That is, when <m>n 25</m> the sample mean differences generally have an approximate normal distribution, even if the differences themselves don't have a normal distribution. The units of analysis are also assumed to be <em>independent</em> (e.g., from a simple random sample).
+    </p>
+    <p>
+      If the statistical validity conditions are not met, other methods (e.g., non-parametric methods<idx>Non-parametric statistics</idx> <xref ref="conover2003practical"/>; resampling methods<idx>Resampling methods</idx> <xref ref="efron2021computer"/>) may be used. For paired qualitative data, McNemar's test can be used <xref ref="conover2003practical"/>.
+    </p>
+    <example xml:id="example-statistical-validity-weight-gain">
+      <title>Statistical validity</title>
+      <p>
+        For the 6MWT data, the sample size is <m>n = 50</m>, so the results are statistically valid. Neither the differences <em>in the population</em>, nor the distances <em>in the population</em> for the individual walkway lengths, need to follow a normal distribution.
+      </p>
+    </example>
+  </section>
+
+  <section xml:id="sec-paired-invasive-plants">
+    <title>Example: invasive plants</title>
+    <p>
+      Skypilot is an alpine wildflower native to the Colorado Rocky Mountains (USA). In recent years, a willow shrub (<em>Salix</em>) has been encroaching on skypilot territory and, because willow often flowers early, <xref ref="kettenbach2017shrub"/> studied whether the willow may 'negatively affect pollination regimes of resident alpine wildflower species' (p. <m>6 965</m>).
+    </p>
+    <p>
+      Data for both species was collected at <m>n = 25</m> different sites, so the data are <em>paired</em> by site (Sect. <xref ref="sec-paired-intro"/>).<idx><h>Data</h><h>paired</h></idx> The data are shown in
+    </p>
+    <p>
+      The parameter is <m>\mu_d</m>, the population mean <em>difference</em> in day of first flowering for skypilot, less the day of first flowering for willow. A <em>positive</em> value for the difference means that the skypilot values are larger, and hence that willow flowered first. The RQ is:
+    </p>
+    <blockquote>
+      <p>In the Colorado Rocky Mountains, is there a mean difference between first-flowering day for the native skypilot and encroaching willow?</p>
+    </blockquote>
+    <p>
+      The hypotheses are
+    </p>
+    <me>\text{$H_0$: $\mu_d = 0$}\quad\text{and}\quad\text{$H_1$: $\mu_d\ne 0$},</me>
+    <p>
+      where the alternative hypothesis is two-tailed, and <m>\mu_d</m> is the mean difference between first-flowering day for the native skypilot and encroaching willow.
+    </p>
+    <note>
+      <p>
+        Explaining <em>how</em> the differences are computed is important. The differences here are skypilot minus willow first-flowering days.
+      </p>
+      <p>
+        However, the differences could be computed as willow minus skypilot first-flowering days. <em>Either is fine</em>, as long as you remain consistent. The <em>meaning</em> of any conclusions will be the same.
+      </p>
+    </note>
+    <p>
+      The data are summarised graphically in Fig. <xref ref="fig-flowering-plots"/> and numerically (Table <xref ref="tab-flowering-summary-ht"/>, after rounding) using software output (Fig. <xref ref="fig-floweringjamovi-ht"/>).
+    </p>
+    <p>
+      The standard error of the mean difference is <m>s.e.(\bar{d}) = 0.9396</m> (Fig. <xref ref="fig-floweringjamovi-ht"/> or Table <xref ref="tab-flowering-summary-ht"/>). The sampling distribution for <m>\bar{d}</m> has a normal distribution, centred around <m>\mu_d</m> with a standard deviation of <m>s.e.(\bar{d}) = 0.9396</m>.
+    </p>
+    <p>
+      The approximate <m>95</m>% CI for the mean difference is
+    </p>
+    <me>1.36 \pm ( 2\times 0.9396),</me>
+    <p>
+      or from <m>-0.52</m> to <m>3.24</m> days. The exact <m>95</m>% CI (Fig. <xref ref="fig-floweringjamovi-ht"/>) is <m>-0.58</m> to <m>3.30</m> days; the difference is because the approximate CI uses the <em>approximate</em> multiplier of <m>2</m> from the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule.
+    </p>
+    <p>
+      The value of the test statistic (i.e., the <m>t</m>-score) is
+    </p>
+  </section>
+
+  <section xml:id="sec-ch29-supplementary-figures">
+    <title>Supplementary figures</title>
+    <figure xml:id="fig-compare-paired-boxplots-histogram">
+      <caption>Left: boxplot comparing 6MWT distances for 20 m and 30 m walkways. Right: histogram of differences in 6MWT distances.</caption>
+      <image source="fig-compare-paired-boxplots-histogram.png" width="80%"/>
+    </figure>
+    <figure xml:id="fig-smwt-numerical-output">
+      <caption>Jamovi output showing summary statistics and hypothesis test results for the 6MWT data.</caption>
+      <image source="fig-smwt-numerical-output.png" width="80%"/>
+    </figure>
+  </section>
 </chapter>

@@ -1,5 +1,331 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Source: 25-Tools-DecisionMaking.Rmd -->
 <chapter xml:id="ch-25-tools-decision-making" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Making decisions</title>
-  <p>Skeleton for <em>25-Tools-DecisionMaking.Rmd</em>. Content to be added.</p>
+  <objectives xml:id="objectives-ch25">
+    <introduction>
+      <p>So far, you have learnt to ask an RQ, design a study, describe and summarise the data, and form confidence intervals. <alert>In this chapter</alert>, you will learn how decisions are made in science, so you can answer RQs. You will learn to:</p>
+    </introduction>
+    <ul>
+      <li><p>state the two broad reasons that might explain the difference between the values of the statistic and parameter.</p></li>
+      <li><p>explain how decisions are made in research.</p></li>
+    </ul>
+  </objectives>
+
+  <section xml:id="sec-need-for-decision-making">
+    <title>Introduction: drawing cards</title>
+    <idx>Decision making</idx>
+    <p>
+      Suppose I produce a pack of cards, and shuffle them well. The event of interest is 'the number of red cards when I draw <m>25</m> cards from the pack, with replacement'. ('With replacement' means that, after drawing a card, I place the card back into the pack, and reshuffle before drawing a new card; each draw is then from an identical, complete pack of <m>52</m> cards.) The pack of cards can be considered the <em>population</em>. In a standard pack, the proportion of red cards is <m>p = 0.5</m> for each draw, because sampling is with replacement. <m>\hat{p}</m> is the proportion of red cards in the <em>sample</em> of <m>n = 25</m> cards.
+    </p>
+    <p>
+      Suppose the sample of <m>25</m> cards produces <m>\hat{p} = 1</m>; that is, <em>all</em> <m>n = 25</m> cards in the sample are red cards
+    </p>
+    <p>
+      What should you conclude? How likely is it that this would happen by chance from a fair pack? Is this evidence that the pack of cards is somehow unfair, poorly shuffled, or manipulated?
+    </p>
+    <p>
+      Of course, the sample of <m>25</m> cards is just one of <em>countless</em> possible samples that could have been chosen to study. Different samples comprise different cards, and the sample proportion depends on which cards are drawn for the studied sample. This leads to one of the most important observations about sampling.
+    </p>
+    <warning>
+      <p>
+        Studying a sample leads to the following observations:
+      </p>
+      <ul>
+        <li><p>every sample is likely to be different.</p></li>
+        <li><p>we observe just one of the many possible samples.</p></li>
+        <li><p>every sample is likely to yield a different value for the sample statistic.</p></li>
+        <li><p>we observe just one of the many possible values for the statistic.</p></li>
+      </ul>
+      <p>
+        Since many values for the sample are possible, the possible values of the statistic vary (this is called <em>sampling variation</em>)<idx>Sampling variation</idx> and have a <em>distribution</em> (this is called a <em>sampling distribution</em>).<idx>Sampling distribution</idx>
+      </p>
+    </warning>
+    <p>
+      In research, decisions need to be made about parameters, based on just one of many possible values of the statistic. Sensible decisions <em>can</em> be made (and <em>are</em> made) about parameters based on statistics. To do this though, the process of <em>how</em> decisions are made needs to be articulated, which is the purpose of this chapter.
+    </p>
+    <p>
+      In the cards example, obtaining <m>25</m> reds cards out of <m>25</m> (i.e., <m>\hat{p} = 1</m>) seems very unlikely from a fair pack; you would probably conclude that the pack is somehow unfair, or that I was cheating somehow. But importantly, <em>how</em> did you reach that decision? Your unconscious decision-making process may have followed these steps.<idx>Decision making</idx>
+    </p>
+    <ol>
+      <li><p>You <em>assumed</em>, quite reasonably, that I used a standard, well-shuffled pack of cards, where half the cards are red and half the cards are black. That is, you assumed the <em>population proportion</em> of red cards really was <m>p = 0.5</m>.</p></li>
+      <li><p>Based on that assumption, you <em>expected</em> about half the cards in the sample of <m>25</m> to be red (i.e., expected <m>\hat{p}</m> to be about <m>0.5</m>). You wouldn't necessarily have expected <em>exactly</em> half red cards (because of sampling variation), but you expected the value of <m>\hat{p}</m> to be close to <m>0.5</m>.</p></li>
+      <li><p>You then <em>observed</em> that <em>all</em> <m>25</m> cards were red. That is, you observed <m>\hat{p} = 1</m>... which seems rather high.</p></li>
+      <li><p>You were expecting <m>\hat{p} = 0.5</m> approximately, but instead observed <m>\hat{p} = 1</m>. What you observed ('all red cards') was not at all like what you were expecting ('about half red cards'); the sample <em>contradicts</em> what you were expecting (from a fair pack). This suggests your assumption of a fair pack is probably wrong.</p></li>
+    </ol>
+    <p>
+      Of course, finding <m>25</m> red cards in a row is <em>possible</em>... just <em>extremely unlikely</em>. For this reason, you would probably conclude that this is persuasive evidence that the pack is not fair.
+    </p>
+  </section>
+
+  <section xml:id="sec-making-decisions:-hypotheses-ch25">
+    <title>Making decisions: hypotheses</title>
+    <p>
+      Two reasons could explain why the value of the <em>sample</em> proportion of red cards in <m>25</m> cards (<m>\hat{p} = 1</m>) is not exactly equal to the value of the population proportion (<m>p = 0.5</m>).
+    </p>
+    <ol>
+      <li><p><em>The __population__ proportion of red cards really is <m>p = 0.5</m></em>, and the value of the <em>sample</em> proportion <m>\hat{p}</m> is not equal to <m>0.5</m> only due to <em>sampling variation</em>. That is, we just happen to have<mdash/>by chance<mdash/>one of those samples where the the value of <m>\hat{p}</m> is very large and not equal to <m>p</m>.</p></li>
+      <li><p><em>The __population__ proportion of red cards really isn't <m>p = 0.5</m></em>, and this is simply reflected in the observed sample proportion.</p></li>
+    </ol>
+    <p>
+      These two possible explanations ('statistical hypotheses') have special names.<idx><h>Hypotheses</h><h>statistical</h></idx>
+    </p>
+    <ol>
+      <li><p>The first explanation is the <em>null hypothesis</em>, denoted <m>H_0</m>.<idx>Parameter</idx><idx><h>Hypotheses</h><h>null</h></idx> This hypothesis proposes that <em>the population proportion is <m>0.5</m></em>; the value of the sample proportion is <em>not</em> <m>0.5</m> due to <em>sampling variation</em>.</p></li>
+      <li><p>The second explanation is the <em>alternative hypothesis</em>, denoted <m>H_1</m>.<idx><h>Hypotheses</h><h>alternative</h></idx> This hypothesis proposes that the population proportion is really not <m>0.5</m> at all, which is reflected in the value of the sample proportion.</p></li>
+    </ol>
+    <p>
+      <em>How</em> do we decide which of these explanations is supported by the data?<idx>Evidence-based research</idx>
+    </p>
+    <p>
+      The usual approach to decision-making in science begins by assuming the null hypothesis (the sampling-variation explanation) is true. Then the data are examined to see if persuasive evidence exists to change our mind (and support the alternative hypothesis). Remember: conclusions drawn about the <em>population</em> from the <em>sample</em> can never be certain, since the sample studied is just one of many possible samples that could have been taken (and every sample is likely to be different).
+    </p>
+    <warning>
+      <p>
+        The onus is on the data to refute the null hypothesis. That is, the null hypothesis is retained unless persuasive evidence suggests otherwise.
+      </p>
+    </warning>
+  </section>
+
+  <section xml:id="sec-decision-making">
+    <title>Making decisions: the process</title>
+    <p>
+      The ideas in Sect. <xref ref="sec-need-for-decision-making"/> suggest a formal process of decision-making in research
+    </p>
+    <ol>
+      <li><p><em>Make an assumption about the value of the parameter</em>. By doing so, we assume that <em>sampling variation</em> explains any discrepancy between the value of the observed statistic and this assumed value of the parameter.</p></li>
+      <li><p><em>Define the expectations of the statistic</em>. Based on the assumption made about the parameter, describe what values of the <em>statistic</em> might reasonably be observed from all the possible samples from the population (due to sampling variation).</p></li>
+      <li><p><em>Evaluate the observations</em>. Take a sample (one of the many possible samples), and compute the observed sample statistic from these data; then compare this to what was expected.</p></li>
+      <li><p><em>Make a decision</em>:</p></li>
+      <li><p>if the observed value of the <em>sample statistic</em> is <em>unlikely</em> to have been observed by chance, the statistic (i.e., the evidence) <em>contradicts</em> the assumption about the <em>parameter</em>, so the assumption is probably (but not certainly) <em>wrong</em>.</p></li>
+      <li><p>if the observed value of the <em>sample statistic</em> could easily be explained by chance, the statistic (i.e., the evidence) is <em>consistent with</em> the assumption about the <em>parameter</em>, so the assumption may be (but is not certainly) <em>correct</em>.</p></li>
+    </ol>
+    <image source="Illustrations/pexels-ketut-subiyanto-4546136.jpg" width="25%">
+      <description><p>Image.</p></description>
+    </image>
+    <p>
+      This approach is similar to how we unconsciously make decisions every day. For example, suppose I ask my son to brush his teeth <xref ref="data-Budgett-RandomizationTest"/>. Later, I wish to decide if he really did. The decision-making process may proceed as follows.
+    </p>
+    <ol>
+      <li><p><em>Assumption</em>: I <em>assume</em> my son brushed his teeth (because I asked him to).</p></li>
+      <li><p><em>Expectation</em>: based on my assumption, I would <em>expect</em> to find his toothbrush is damp.</p></li>
+      <li><p><em>Observation</em>: when I check later, I observe a <em>dry</em> toothbrush, which is unexpected.</p></li>
+      <li><p><em>Decision</em>: the evidence <em>contradicts</em> what I expected to find based on my assumption, so my assumption is probably <em>false</em>: he probably <em>didn't</em> brush his teeth.</p></li>
+    </ol>
+    <p>
+      I may have made the wrong decision: he may have brushed his teeth, then dried his toothbrush with a hair dryer. However, based on the evidence, he likely has not brushed his teeth.
+    </p>
+    <p>
+      The situation may have ended differently: when I check later, suppose I observe a <em>damp</em> toothbrush. Then, the evidence seems <em>consistent</em> with what I expected if he brushed his teeth (my assumption), so my assumption is probably <em>true</em>; he probably did brush his teeth. Again, I may be wrong: he may have rinsed his toothbrush under a tap. Nonetheless, I don't have evidence that he didn't brush his teeth.
+    </p>
+    <p>
+      Similar logic underlies most decision-making in science.<fn>Other ways exist to make decisions, such as using prior knowledge. For example, if my son had a reputation for wetting his toothbrush under the tap instead of brushing his teeth, that information can be incorporated into the decision-making. This is called a <em>Bayesian approach</em>.</fn>
+    </p>
+  </section>
+
+  <section xml:id="sec-making-decisions-in-research">
+    <title>Making decisions: the steps</title>
+    <idx><h>Decision making</h><h>steps</h></idx>
+    <p>
+      Let's think about each step in the decision-making process
+    </p>
+    <p>
+      individually:
+    </p>
+    <ul>
+      <li><p>making an <em>assumption</em> about the parameter (Sect. <xref ref="sec-assumption"/>).</p></li>
+      <li><p>describing the <em>expectations</em> of the statistic (Sect. <xref ref="sec-expectation-of"/>).</p></li>
+      <li><p>taking the sample <em>observations</em> (Sect. <xref ref="sec-observation"/>).</p></li>
+      <li><p>making a <em>decision</em> (Sect. <xref ref="sec-make-decision"/>).</p></li>
+    </ul>
+
+  <subsection xml:id="sec-assumption">
+    <title>Making an assumption about the parameter</title>
+    <idx><h>Decision making</h><h>assumption</h></idx>
+    <image source="Pics/iconmonstr-delivery-6-240.png" width="25%">
+      <description><p>Image.</p></description>
+    </image>
+    <p>
+      The initial assumption is that sampling variation explains any discrepancy between the values of the parameter and the statistic. This assumption about the value of the parameter is called the <em>null hypothesis</em>,<idx><h>Hypotheses</h><h>null</h></idx> denoted <m>H_0</m>.
+    </p>
+    <p>
+      The null hypothesis is always that sampling variation explains the difference between the observed value of the statistic and the assumed value of the parameter. Depending on the RQ and the context, this may mean:
+    </p>
+    <ul>
+      <li><p>the parameter value has not changed (e.g., for descriptive or repeated-measures RQs).<idx><h>Research question</h><h>descriptive</h></idx><idx><h>Research question</h><h>repeated-measures</h></idx> The value of the statistic might show a change, but only due to sampling variation.</p></li>
+      <li><p>the value of some parameter is the same in all the groups being compared (e.g., for relational RQs).<idx><h>Research question</h><h>relational</h></idx> The values of the statistic are not exactly the same due to sampling variation.</p></li>
+      <li><p>there is no relationship between the variables, as measured by some parameter (e.g., for correlational RQs).<idx><h>Research question</h><h>correlational</h></idx> The value of the statistic is not exactly this value due to sampling variation.</p></li>
+    </ul>
+    <p>
+      In other words, the null hypothesis is the 'no change, no difference, no relationship' position.
+    </p>
+    <p>
+      Using this idea, a reasonable assumption can be made about the parameter.<idx>Parameter</idx> For example, when comparing the mean of two groups, we would initially assume <em>no difference</em> between the <em>population</em> means: any difference between the <em>sample</em> means would be attributed to sampling variation.
+    </p>
+    <image source="Illustrations/pexels-ketut-subiyanto-4546136.jpg" width="25%">
+      <description><p>Image.</p></description>
+    </image>
+    <example xml:id="example-assumptions">
+      <title>Assumptions about the population</title>
+      <p>
+        Many dental associations recommend brushing teeth for two minutes. <xref ref="data-Macgregor1979-BrushingDurationKids"/> recorded the toothbrushing time for <m>85</m> uninstructed schoolchildren from England to assess compliance with these guidelines.
+      </p>
+      <p>
+        We initially <em>assume</em> the <em>population</em> mean toothbrushing time is two minutes (<m>H_0</m>: <m> = 2</m>). If the <em>sample</em> mean is not two minutes, the null hypothesis explains this discrepancy as sampling variation. A sample can then be obtained to determine if the sample mean is consistent with, or contradicts, this assumption.
+      </p>
+    </example>
+  </subsection>
+
+  <subsection xml:id="sec-expectation-of">
+    <title>Describing the expectations of the statistic</title>
+    <idx><h>Decision making</h><h>expectation</h></idx>
+    <idx>Statistic</idx>
+    <image source="Pics/iconmonstr-christmas-42-240.png" width="25%">
+      <description><p>Image.</p></description>
+    </image>
+    <p>
+      Based on the assumed value for the parameter, we then determine <em>what values to expect from the statistic</em> from all the possible samples we could select (of which we only select one). Since many samples are possible, and every sample is likely to be different (sampling variation), the observed value of the statistic depends on which one of the countless possible samples we obtain. To know what values of the statistic are expected, the <em>sampling distribution</em> needs to be described.
+    </p>
+    <p>
+      Think about the cards in Sect. <xref ref="sec-need-for-decision-making"/>. In a fair pack, <em>half</em> the cards are red in the <em>population</em> (the pack of cards), so the population proportion is assumed to be <m>p = 0.5</m>. In a <em>sample</em> of <m>25</m> cards, what values could be reasonably expected for the <em>sample</em> proportion <m>\hat{p}</m> of red cards (the statistic)? If samples of size <m>n = 25</m> were repeatedly taken from a fair pack with <m>p = 0.5</m>, the sample proportion of red cards would vary from hand to hand, of course. But <em>how</em> would <m>\hat{p}</m> vary from sample to sample?
+    </p>
+    <p>
+      Suppose we simulated only ten hands of <m>n = 25</m> cards each, using a computer;
+    </p>
+    <p>
+      Naturally, the value of <m>\hat{p}</m> varies.
+    </p>
+    <p>
+      The distribution of the sample statistic is called the <em>sampling distribution</em> (Sect. <xref ref="sec-sampling-variation-intro"/>). The sampling distribution for <m>\hat{p}</m> is given in Sect. <xref ref="sec-sampling-distribution-knownp"/> when the value of <m>p</m> is known (as assumed here): an approximate normal distribution, with mean <m>p = 0.5</m>, and a standard deviation (the <em>standard error</em>) of
+    </p>
+    <me>\text{s.e.}(\hat{p})   =   \sqrt{\frac{p\times(1 - p)}{n} }   =   \sqrt{\frac{0.5\times(1 - 0.5)}{25} }   =   0.1.</me>
+    <p>
+      A picture of this sampling distribution can be drawn (Fig. <xref ref="fig-sampling-dist-cards"/>). Values of <m>\hat{p}</m> larger than <m>0.8</m> or smaller than <m>0.2</m> would appear very unlikely.
+    </p>
+  </subsection>
+
+  <subsection xml:id="sec-observation">
+    <title>Evaluating the sample observations</title>
+    <idx><h>Decision making</h><h>observations</h></idx>
+    <p>
+      While many samples are possible, we only observe <em>one</em> of those countless possible samples. From our sample of <m>25</m> cards, all cards are red
+    </p>
+    <p>
+      and so the value of the statistic is <m>\hat{p} = 25/25 = 1</m>. Assuming <m>p = 0.5</m>, is this value of <m>\hat{p}</m> unusual, or not unusual? From Fig. <xref ref="fig-sampling-dist-cards"/>, the value <m>\hat{p} = 1</m> is <em>very</em> unusual: it would not be expected in a sample of <m>25</m> cards.
+    </p>
+  </subsection>
+
+  <subsection xml:id="sec-make-decision">
+    <title>Making a conclusion</title>
+    <idx><h>Decision making</h><h>decision</h></idx>
+    <image source="Pics/iconmonstr-shipping-box-7-240.png" width="25%">
+      <description><p>Image.</p></description>
+    </image>
+    <p>
+      Observing <m>25</m> red cards out of <m>25</m> cards from a fair pack is highly unusual, so the chance that our specific, randomly-chosen sample produced <m>\hat{p} = 1</m> is incredibly unlikely. So you could reasonably conclude that finding <m>\hat{p} = 1</m> almost never occurs, <em>if the assumption of a fair pack was true</em>.
+    </p>
+    <p>
+      But since we <em>did</em> find <m>\hat{p} = 1</m>, the assumption of a fair pack is probably wrong. That is, there is persuasive evidence that the assumption is wrong, and that the pack of cards is not fair.<idx>Evidence-based research</idx> The decision-making process is shown in Fig. <xref ref="fig-decision-flow-cards"/>.
+    </p>
+    <p>
+      What if we had observed <m>18</m> red cards in a hand of <m>25</m> cards, a sample proportion of <m>\hat{p} = 18/25 = 0.72</m>? The conclusion is not quite so obvious then: Fig. <xref ref="fig-sampling-dist-cards"/> shows that <m>\hat{p} = 0.72</m> is unlikely, but <m>\hat{p} = 0.72</m> (and even larger values) certainly do occur.
+    </p>
+    <p>
+      What if <m>15</m> red cards were found in the <m>25</m> (i.e., <m>\hat{p} = 0.6</m>)? Figure <xref ref="fig-sampling-dist-cards"/> shows that <m>\hat{p} = 0.6</m> could reasonably be observed, since there are many possible samples that lead to <m>\hat{p} = 0.6</m>, or even larger values. This would not seem unusual at all, and is certainly not persuasive evidence to change our mind. Many of the possible samples produce values of <m>\hat{p}</m> near <m>0.6</m>.
+    </p>
+    <p>
+      This process of decision-making is similar to the process used in research. This process will be studied in coming chapters.
+    </p>
+  </subsection>
+  </section>
+
+  <section xml:id="sec-tools-decision-making-example">
+    <title>Example: brushing teeth</title>
+    <p>
+      Many dental associations recommend brushing teeth for two minutes (i.e., for <m>120</m>). <xref ref="data-Macgregor1979-BrushingDurationKids"/> recorded the toothbrushing time for <m>85</m> uninstructed schoolchildren from England to assess compliance with these guidelines. Of course, every possible sample of <m>85</m> children in England will include different children, and so produce various sample mean brushing times <m>\bar{x}</m>. Even if the <em>population</em> mean toothbrushing time really was <m>120</m> (i.e., <m> = 120</m>), the <em>sample</em> mean probably wouldn't be exactly <m>120</m>, because of this sampling variation.
+    </p>
+    <p>
+      To begin, <em>assume</em> the population mean toothbrushing time is <m> = 120</m>; that is, <m>H_0</m> is <m> = 120</m>. <em>If</em> this is true, we then could describe what values of the sample statistic <m>\bar{x}</m> could be <em>expected</em> from all possible samples by describing the sampling distribution of <m>\bar{x}</m>: how sample means are likely to vary for samples of size <m>85</m> when <m> = 120</m>.
+    </p>
+    <p>
+      The study found the mean time spent brushing was <m>60.3</m>, with a standard deviation of <m>23.8</m>. Using the ideas in Chap. <xref ref="sec-one-mean-conf-interval"/>, and in Sect. <xref ref="sec-sampling-dist-sample-mean"/> specifically, the sampling distribution of <m>\bar{x}</m> has an approximate normal distribution, with mean <m> = 120</m> (from <m>H_0</m>) and a standard deviation of <m>s.e.(\bar{x}) = 23.8/\sqrt{85} = 2.58</m> (shown in Fig. <xref ref="fig-sampling-dist-brushing"/>).
+    </p>
+    <p>
+      A sample mean of <m>\bar{x} = 60.3</m> seems incredibly unlikely if <m> = 120</m>. This suggests that the sample evidence <em>contradicts</em> the assumption that <m> = 120</m>, and so the mean toothbrushing time in the population is very unlikely to be <m>120</m>.
+    </p>
+  </section>
+
+  <section xml:id="sec-tools-decision-making-summary">
+    <title>Chapter summary</title>
+    <p>
+      Making decisions about parameters based on a statistic is challenging: only one of the many possible samples is observed. Since every sample is likely to be different, different values of the sample statistic are possible. In this chapter, though, a process for making decisions has been studied
+    </p>
+    <p>
+      Decisions are often made by making an <em>assumption</em> about the parameter, which leads to an <em>expectation</em> of what values of the statistic are reasonably possible. We can then make <em>observations</em> about our sample, and then make a <em>decision</em> about whether the sample data support or contradict the initial assumption.
+    </p>
+  </section>
+
+  <reading-questions xml:id="sec-tools-decision-making-quick-review">
+    <title>Quick review questions</title>
+  </reading-questions>
+
+  <exercises xml:id="sec-making-decisions-exercises">
+    <introduction>
+      <p>Answers to odd-numbered exercises are given at the end of the book.</p>
+    </introduction>
+    <p>
+      [Answers to odd-numbered exercises] are given at the end of the book.
+    </p>
+    <exercise xml:id="exercise-making-decisions-dice">
+      <p>
+        While playing a die-based game, your opponent rolls a
+      </p>
+      <p>
+        ten times in a row.
+      </p>
+      <ol>
+        <li><p>Do you think there is a problem with the die?</p></li>
+        <li><p>Explain how you came to this decision.</p></li>
+      </ol>
+    </exercise>
+    <exercise xml:id="exercise-making-decisions-coin">
+      <p>
+        A friend tosses a coin, and obtains two times in a row.
+      </p>
+      <ol>
+        <li><p>Do you think there is a problem with the coin?</p></li>
+        <li><p>Explain how you came to this decision.</p></li>
+      </ol>
+    </exercise>
+    <exercise xml:id="exercise-making-decisions-jury-service">
+      <p>
+        Since my wife and I have been married, I have been called to jury service four times. The latest notice reads: 'Your name has been selected at random from the electoral roll'.
+      </p>
+      <p>
+        In the same time, my wife has <em>never</em> been called to jury service. Do you think the selection process really is 'at random'? Explain.
+      </p>
+    </exercise>
+    <exercise xml:id="exercise-making-decisions-claim">
+      <p>
+        In a 2012 advertisement, an Australian pizza company claimed that their <m>12</m>-inch pizzas were 'real <m>12</m>-inch pizzas' <xref ref="mypapers-Dunn-PizzaSize"/>.
+      </p>
+      <ol>
+        <li><p>What is a reasonable assumption to make to test this claim?</p></li>
+        <li><p>The claim is supported by a sample of <m>125</m> pizzas, which gave the sample mean pizza diameter as <m>\bar{x} = 11.48</m> inches. What are the two reasons why the sample mean is not exactly <m>12</m>-inches?</p></li>
+        <li><p>Does the claim appear to be supported by, or contradicted by, the data? Explain.</p></li>
+        <li><p>Would your conclusion change if the sample mean was <m>\bar{x} = 11.25</m> inches? Explain.</p></li>
+        <li><p>Does your answer depend on the sample size? For example, is observing a sample mean of <m>11.25</m> inches from a sample of size <m>n = 10</m> equivalent to observing a sample mean of <m>11.25</m> inches from a sample of size <m>n = 125</m>? Explain.</p></li>
+      </ol>
+    </exercise>
+    <exercise xml:id="exercise-making-decisions-older">
+      <p>
+        Suppose that <m>36</m>% of all students at a certain large university are aged over <m>30</m>. A student takes a sample of <m>n = 40</m> students from the School of Arts to determine if students in that school are somehow different from the general university population in terms of age.
+      </p>
+      <ol>
+        <li><p>What is the null hypothesis?</p></li>
+        <li><p>If the student researcher finds <m>13</m> students in the sample aged over <m>30</m>, does this present persuasive evidence to change your mind? Explain.</p></li>
+        <li><p>If the student researcher finds three students in the sample aged over <m>30</m>, does this present persuasive evidence to change your mind? Explain.</p></li>
+      </ol>
+    </exercise>
+  </exercises>
 </chapter>

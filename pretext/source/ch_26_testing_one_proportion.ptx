@@ -1,5 +1,703 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Source: 26-Testing-OneProportion.Rmd -->
 <chapter xml:id="ch-26-testing-one-proportion" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Hypothesis tests: one proportion</title>
-  <p>Skeleton for <em>26-Testing-OneProportion.Rmd</em>. Content to be added.</p>
+  <objectives xml:id="objectives-ch26">
+    <introduction>
+      <p>So far, you have learnt to ask an RQ, design a study, classify and summarise the data, and form confidence intervals. <alert>In this chapter</alert>, you will learn to:</p>
+    </introduction>
+    <ul>
+      <li><p>identify situations where conducting a test for a proportion is appropriate.</p></li>
+      <li><p>conduct hypothesis tests for one sample proportion, using a <m>z</m>-test.</p></li>
+      <li><p>determine whether the conditions for using these methods apply in a given situation.</p></li>
+    </ul>
+  </objectives>
+
+  <section xml:id="sec-proportion-test-intro">
+    <title>Introduction: rolling dice</title>
+    <idx><h>Hypothesis testing</h><h>one proportion|(</h></idx>
+    <image source="OtherImages/SmiffyDice-Rotated.png" width="25%">
+      <description><p>Image.</p></description>
+    </image>
+    <p>
+      When in a toy store<idx>Toy store</idx> one day (for my children, of course), I saw 'loaded dice'<idx>Loaded dice</idx> for sale
+    </p>
+    <p>
+      The packaging claimed one loaded &amp; one normal. I bought two sets! However, there was no indication as to <em>which</em> die was the loaded die. How could I determine which of the dice was loaded? That is, how could I make a <em>decision</em> about which die was loaded?
+    </p>
+    <p>
+      For a die that is <em>not</em> loaded, the population proportion of rolling any face of the die is <m>p = 1/6</m>. So, for example, the population proportion of rolls that show a
+    </p>
+    <p>
+      is <m>p = 1/6</m>, using the classical approach to probability.<idx><h>Probability</h><h>classical approach</h></idx> In any <em>sample</em> of rolls, however, the proportion of rolls showing a
+    </p>
+    <p>
+      would vary due to sampling variation, but would be approximately <m>\hat{p} = 1/6</m> with a fair die.
+    </p>
+    <p>
+      Suppose I rolled one die a certain number of times (say, <m>n = 50</m> times), then determined the value of the sample proportion <m>\hat{p}</m>, the sample proportion of rolls that show a . It is unlikely that the value of <m>\hat{p}</m> will be <em>exactly</em> <m>1/6</m> (the population proportion). If the observed value of <m>\hat{p}</m> was not exactly <m>1/6</m>, two possible reasons could explain this discrepancy between the value of the statistic and the assumed value of the parameter (Chap. <xref ref="sec-making-decisions"/>):
+    </p>
+    <ul>
+      <li><p>I was rolling the <em>fair</em> die (with <m>p = 1/6</m>), and the discrepancy between the values of the <em>population</em> and <em>sample</em> proportions was simply due to sampling variation.</p></li>
+      <li><p>I was rolling the <em>loaded</em> die (with <m>p 1/6</m>), and the discrepancy between the values of the <em>population</em> and <em>sample</em> proportion simply reflected this.</p></li>
+    </ul>
+    <p>
+      If I observed an unusually small or unusually large sample proportion of rolls that showed a
+    </p>
+    <p>
+      I would suspect that I had the loaded die: I was observing something unusual if I had rolled the fair die. This is exactly the decision-making process seen in Chap. <xref ref="sec-making-decisions"/>.
+    </p>
+    <p>
+      More formally then, the decision-making process (Chap. <xref ref="sec-making-decisions"/>) could proceed as follows.
+    </p>
+    <ul>
+      <li><p>Make an <em>assumption</em> about the parameter: assume I have a fair die, so that <m>p = 1/6</m>, where <m>p</m> is the population proportion of rolls that show a</p></li>
+      <li><p>Describe the <em>expectations</em> of the statistic: describe what value of the <em>sample</em> proportion <m>\hat{p}</m> could reasonably be expected from a fair die in <m>50</m> rolls.</p></li>
+      <li><p>Evaluate the sample <em>observations</em>: roll the die <m>50</m> times to find a value of <m>\hat{p}</m> and compare to what was expected.</p></li>
+      <li><p>Make a <em>decision</em> based on what is observed in the sample.</p></li>
+    </ul>
+    <p>
+      Using this decision-making process (Fig. <xref ref="fig-decision-flow-dice"/>), I could decide if the die I had rolled seemed to be the fair die (based on rolling a
+    </p>
+    <p>
+      the die may be loaded in a different way, of course). For one specific die, I am asking the decision-making RQ:
+    </p>
+    <blockquote>
+      <p>For this die, is the population proportion of rolls that show a</p>
+    </blockquote>
+    <p>
+      equal to <m>1/6</m>?
+    </p>
+    <p>
+      Answering a decision-making RQ such as this requires a <em>hypothesis test</em>.
+    </p>
+    <note>
+      <p>
+        <m>p</m> refers to the <em>population</em> proportion, and <m>\hat{p}</m> refers to a <em>sample</em> proportion.
+      </p>
+    </note>
+  </section>
+
+  <section xml:id="sec-sampling-distribution-knownp-ht">
+    <title>Rolling dice: the sampling distribution of </title>
+    <idx><h>Sampling distribution</h><h>one proportion (for testing)</h></idx>
+    <image source="Illustrations/pexels-skitterphoto-705171.jpg" width="25%">
+      <description><p>Image.</p></description>
+    </image>
+    <p>
+      When a fair, six-sided die is rolled <m>50</m> times, what proportion of the rolls will produce a
+    </p>
+    <p>
+      That is, what will be the value of the <em>sample proportion</em> <m>\hat{p}</m>? Of course, no-one knows, because the sample proportion will not be the same for every sample of <m>50</m> rolls. The sample proportion <em>varies</em> from sample to sample: <em>sampling variation</em> exists and is described by the <em>sampling distribution</em>.
+    </p>
+    <warning>
+      <p>
+        Remember: studying a sample leads to the following observations:
+      </p>
+      <ul>
+        <li><p>every sample is likely to be different.</p></li>
+        <li><p>we observe just one of the many possible samples.</p></li>
+        <li><p>every sample is likely to yield a different value for the statistic.</p></li>
+        <li><p>we observe just one of the many possible values for the statistic.</p></li>
+      </ul>
+      <p>
+        Since many values for the sample proportion are possible, the values of the sample proportion vary (called <em>sampling variation</em>) and have a <em>distribution</em> (called a <em>sampling distribution</em>).
+      </p>
+    </warning>
+    <p>
+      The sampling distribution of <m>\hat{p}</m> was described in Def. <xref ref="def-sampling-dist-prop-ci"/> (and repeated in Def. <xref ref="def-sampling-dist-prop-ht"/> below). The sample proportions are described by
+    </p>
+    <ul>
+      <li><p>an approximate normal distribution,</p></li>
+      <li><p>centred around the <em>sampling mean</em>, with a value of <m>p = 1/6</m> (assumed, from <m>H_0</m>),</p></li>
+      <li><p>with a standard deviation, called the <em>standard error</em> <m>s.e.(\hat{p})</m>, of</p></li>
+    </ul>
+    <p>
+      (ref:DieRollSamplingDist) The proportion of rolls that show a <m>\hat{p}</m>, is not the same for every sample of <m>50</m> rolls; it varies around a mean of <m>p = 1/6</m> (shown by the dot). The solid line is the normal distribution used to model the sampling distribution. The sampling distribution is an approximate normal distribution; it shows a model of how the proportion of rolls showing a varies, when a die is rolled <m>50</m> times.
+    </p>
+    <definition xml:id="def-sampling-dist-prop-ht">
+      <title>Sampling distribution of a sample proportion with $p$ known</title>
+      <statement>
+        <p>
+          For a known value of <m>p</m>, the <em>sampling distribution of the sample proportion</em> is (when certain conditions are met; Sect. <xref ref="sec-validity-proportions"/>) described by
+        </p>
+        <definition xml:id="def-sampling-dist-prop-ht">
+          <title>Sampling distribution of a sample proportion with the population proportion known</title>
+          <statement>
+            <p>
+              For a known value of <m>p</m>, the <em>sampling distribution of the sample proportion</em> is (when certain conditions are met; Sect. <xref ref="sec-validity-proportions"/>) described by
+            </p>
+            <ul>
+              <li><p>an approximate normal distribution,</p></li>
+              <li><p>centred around the sampling mean whose value is <m>p</m>,</p></li>
+              <li><p>with a standard deviation (called the <em>standard error</em> of <m>\hat{p}</m>), denoted <m>s.e.(\hat{p})</m>, whose value is</p></li>
+            </ul>
+            <p>
+              where <m>n</m> is the size of the sample used to compute <m>\hat{p}</m>, and <m>p</m> is the population proportion.
+            </p>
+          </statement>
+        </definition>
+        <p>
+          A picture of this normal distribution can be drawn (Fig. <xref ref="fig-normal-die-theory-ht"/>); the standard error is the standard deviation of the normal distribution in Fig. <xref ref="fig-normal-die-theory-ht"/>. While we still don't know <em>exactly</em> what values of <m>\hat{p}</m> the next set of <m>n = 50</m> rolls will produce, we have some idea of <em>how</em> the sample proportion varies in samples of <m>50</m> rolls. For instance, values of <m>\hat{p}</m> greater than about <m>0.35</m> are unlikely to be observed from a fair die (with <m>p = 1/6</m>).
+        </p>
+        <p>
+          (ref:DieRollStdError) The sampling distribution is an approximate normal distribution; it shows a model of how the proportion of rolls showing a varies, when a die is rolled <m>50</m> times. The cross represents the observed sample proportion, <m>\hat{p} = 0.38</m>.
+        </p>
+        <p><em>Rolling dice: making a decision</em></p>
+        <p>
+          Figure <xref ref="fig-normal-die-theory-ht"/> shows what values of the sample proportion <m>\hat{p}</m> are expected when a fair die is rolled. Step 3 of the decision-making process (Fig. <xref ref="fig-decision-flow-dice"/>) is to roll the die.
+        </p>
+        <p>
+          When I rolled the die, a
+        </p>
+        <p>
+          appeared <m>19</m> times in my <m>50</m> rolls, a sample proportion of
+        </p>
+        <me>\hat{p} = \frac{19}{50} = 0.38.</me>
+        <p>
+          In this unusual or unexpected? Locating this value of <m>\hat{p}</m> on the sampling distribution in Fig. <xref ref="fig-normal-die-theory-ht"/> shows that a sample proportion of <m>\hat{p} = 0.38</m> is <em>highly</em> unusual from a fair die with <m>p = 1/6</m>. More specifically, since the sampling distribution has a normal distribution, a <m>z</m>-score can be computed:
+        </p>
+        <me>z   = \frac{\text{statistic} - \text{mean of the distribution}}{\text{std dev. of the distribution}}   = \frac{0.38 - (1/6)}{0.05270}   = 4.05,</me>
+        <p>
+          which is a <em>very</em> large <m>z</m>-score (based on the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule).<idx>68–95–99.7 rule</idx> Using a fair die, observing <m>\hat{p} = 0.38</m> would almost never occur. But I <em>did</em> observe <m>\hat{p} = 0.38</m>, which suggests that the die I was rolling was <em>not</em> the fair die.
+        </p>
+        <p>
+          I concluded that the die I was rolling was loaded (that is, <m>p 1/6</m>). I may be incorrect (after all, it is not <em>impossible</em> to observe <m>\hat{p} = 0.38</m>), but the evidence is certainly persuasive. Using the decision-making process, a decision has been made about the die.
+        </p>
+        <p>
+          The process described above is called <em>hypothesis testing</em>.<idx>Hypothesis testing</idx> Hypothesis testing is used to make decisions about a population after observing just one of the countless possible samples. Formally, the hypothesis test above proceeds as described in the following sections.
+        </p>
+        <p><em>Assumptions: hypotheses</em></p>
+        <p>
+          <idx>z-score</idx>
+        </p>
+        <p>
+          <alert>Step 1</alert> in the decision-making process is to make an assumption about the parameter. For the die example, the parameter is <m>p</m>, the population proportion of rolls that show a
+        </p>
+        <p>
+          The assumption is that <m>p = 1/6</m>. This is called the <em>null hypothesis</em>,<idx><h>Hypotheses</h><h>null</h></idx> denoted by <m>H_0</m>:
+        </p>
+        <me>\text{$H_0$: } p = 1/6.</me>
+        <p>
+          The null hypothesis states the value of <m>p</m> is <m>1/6</m>; in other words, if the sample proportion <m>\hat{p}</m> is not equal to <m>1/6</m>, the discrepancy is explained by sampling variation. The null hypothesis is always the 'sampling variation' explanation for the discrepancy between the values of the statistic and the parameter (Sect. <xref ref="sec-assumption"/>).
+        </p>
+        <p>
+          The other explanation for why the value of the sample proportion <m>\hat{p}</m> is not equal to <m>1/6</m> is called the <em>alternative hypothesis</em> (denoted <m>H_1</m>),<idx><h>Hypotheses</h><h>alternative</h></idx> that the population proportion is <em>not</em> <m>1/6</m>, and this is the cause of the discrepancy between the values of the statistic and the parameter:
+        </p>
+        <me>\text{$H_1$: } p \ne 1/6.</me>
+        <p>
+          These two hypotheses offer different explanations for the discrepancy between the values of the population proportion (the parameter) and the sample proportion (the statistic). The null hypothesis <m>H_0</m> states that <m>p = 1/6</m> and the discrepancy is due to sampling variation. The alternative hypothesis <m>H_1</m> states that <m>p 1/6</m>, which explains the discrepancy.
+        </p>
+        <p>
+          Here, the RQ here is open to the value of <m>p</m> being smaller <em>or</em> larger than <m>1/6</m>; that is, two possibilities are considered. Hence, we write <m>p 1/6</m>, which is called a <em>two-tailed</em> alternative hypothesis. Alternative hypotheses like <m>p &gt; 1/6</m> (the population proportion is <em>larger</em> than <m>1/6</m>) or <m>p &lt; 1/6</m> (the population proportion is <em>smaller</em> than <m>1/6</m>) are <em>one-tailed</em> hypothesis.
+        </p>
+        <warning>
+          <p>
+            The form of the alternative hypothesis (either one- or two-tailed) depends on what the research question asks, <em>not the data</em>.
+          </p>
+        </warning>
+        <p><em>Expectations: sampling distribution for <m></m></em></p>
+        <p>
+          <alert>Step 2</alert> in the decision-making process is to describe what values of the statistic (i.e., <m>\hat{p}</m>) could be expected under the assumption about the parameter (i.e., <em>when the null hypothesis is true</em>). Hypothesis testing <em>always</em> begins by assuming the null hypothesis is true.
+        </p>
+        <warning>
+          <p>
+            The decision-making process begins by assuming the <em>null hypothesis</em> is true. Thus, <em>the onus is on the data to refute the null hypothesis, the initial assumption</em>.
+          </p>
+          <p>
+            That is, the null hypothesis is retained unless persuasive evidence emerges to change our mind.
+          </p>
+        </warning>
+        <p>
+          Effectively, this step requires describing the sampling distribution of the statistic. For the die example, the sampling distribution for <m>\hat{p}</m> is (see Def. <xref ref="def-sampling-dist-prop-ht"/>):
+        </p>
+        <ul>
+          <li><p>an approximate normal distribution,</p></li>
+          <li><p>centred around the sampling mean whose value is <m>p = 1/6</m>,</p></li>
+          <li><p>with a standard deviation, whose value is <m>s.e.(\hat{p}) = 0.05270<ellipsis/></m></p></li>
+        </ul>
+        <p>
+          Drawing the picture of the sampling distribution (like Fig. <xref ref="fig-normal-die-theory-ht"/>) using this information is not necessary, but may be helpful.
+        </p>
+        <p><em>Observations: <m>z</m>-score</em></p>
+        <p>
+          <alert>Step 3</alert> in the decision-making process is to evaluate the observations. As noted above, a
+        </p>
+        <p>
+          was observed in <m>19</m> of the <m>50</m> rolls, so <m>\hat{p} = 0.38</m>. Since the sampling distribution has a normal distribution, the corresponding <m>z</m>-score was computed as <m>z = 4.05</m>, which very large.
+        </p>
+        <p>
+          In hypothesis testing, the <m>z</m>-score is called the <em>test statistic</em>.<idx>Test statistic</idx><idx>z-score</idx> The test statistic measures how far, in relative terms, the sample proportion is from the assumed value of the parameter.
+        </p>
+        <p><em>Decision: <m>P</m>-value</em></p>
+        <p>
+          <alert>Step 4</alert> of the decision-making process is to use the information to make a decision: is the sample statistic <em>consistent</em> with what was expected under the assumption that <m>p = 1/6</m>, or does it <em>contradict</em> what was expected?
+        </p>
+        <p>
+          For the die example, the decision is reasonably easy: <m>z = 4.05</m> is <em>very</em> large and <em>very</em> unlikely to be observed if <m>p = 1/6</m>. This means the sample evidence <em>contradicts</em> what was expected if the assumption was true: persuasive evidence exists that the die is loaded.
+        </p>
+        <p>
+          More generally, evidence is evaluated using a <m>P</m>-value.<idx>P-values</idx> <m>P</m>-values refer to the area <em>more extreme</em> than the calculated test statistic in the sampling distribution.
+        </p>
+        <p>
+          For this situation, where the sampling distribution has a normal distribution, <m>P</m>-values refer to the area <em>more extreme</em> than the calculated <m>z</m>-score (the statistic)<idx>Statistic</idx> in the normal distribution; that is, the area in the <em>tails</em> of the distribution (see Fig. <xref ref="fig-one-prop-test-p"/>). This is a way to measure how unusual the calculated <m>z</m>-score is.
+        </p>
+        <p>
+          For <em>two-tailed</em> alternative hypotheses, the <m>P</m>-value is the combined area in the lower and upper tails that correspond to the positive <em>and</em> negative values of the test statistic. For <em>one-tailed</em> alternative hypotheses, the <m>P</m>-value is the area in one tail only. Clearly, since the <m>P</m>-value is a probability, its value is always between <m>0</m> and <m>1</m>.
+        </p>
+        <p>
+          Since the sampling distribution has a normal distribution in this example, <m>P</m>-values can be approximated using the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule and a diagram (Sect. <xref ref="sec-approx-probs"/>; Sect. <xref ref="sec-one-prop-test-p6895997"/>), or more precisely using the <m>z</m>-tables
+        </p>
+        <p>
+          (Sect. <xref ref="sec-z-score-forestry"/>; Sect. <xref ref="sec-one-prop-test-p-tables"/>). <m>P</m>-values are also reported by software for most statistical tests.
+        </p>
+        <p><em>Approximating <m>P</m>-values using the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule</em></p>
+        <p>
+          <idx>68–95–99.7 rule</idx><idx><h>P-values</h><h>estimating using 68–95–99.7 rule</h></idx>
+        </p>
+        <p>
+          The <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule can be used to determine <em>approximate</em> <m>P</m>-values. To demonstrate, suppose the computed <m>z</m>-score was <m>z = 1</m>. Then, the two-tailed <m>P</m>-value is the shaded tail-area in Fig. <xref ref="fig-one-prop-test-p"/> (top left panel): about <m>32</m>%, based on the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule. The two-tailed <m>P</m>-value would be the same if <m>z = -1</m> (as both tails are of interest). The <em>one-tailed</em> <m>P</m>-value would be the area in one-tail (Fig. <xref ref="fig-one-prop-test-p"/>, bottom left panel): about <m>16</m>%, based on the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule.
+        </p>
+        <p>
+          As another example, suppose the calculated <m>z</m>-score was <m>z = -2</m>. Then, the two-tailed <m>P</m>-value is the shaded area shown in Fig. <xref ref="fig-one-prop-test-p"/> (top right panel): about <m>5</m>%, based on the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule. The two-tailed <m>P</m>-value would be the same if <m>z = 2</m>. The <em>one-tailed</em> <m>P</m>-value would be the area in one tail only (Fig. <xref ref="fig-one-prop-test-p"/>, bottom right panel): about <m>2.5</m>%, based on the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule.
+        </p>
+        <p>
+          Of course, calculated <m>z</m>-scores are unlikely to be exactly <m>z = 1</m> or <m>z = -2</m>. Suppose the <m>z</m>-score is a little <em>larger</em> than <m>z = 1</m>; say <m>z = 1.2</m>. Then, the two-tailed area will be a little <em>smaller</em> than the tail area when <m>z = 1</m> (Fig. <xref ref="fig-one-prop-test-p2"/>, left panel). The two-tailed <m>P</m>-value is a little <em>smaller</em> than <m>0.32</m>.
+        </p>
+        <p>
+          Similarly, suppose the <m>z</m>-score is not quite equal to <m>z = -2</m>; say <m>z = -1.9</m>. Then, the two-tailed area will be a little <em>larger</em> than the tail area when <m>z = -2</m> (Fig. <xref ref="fig-one-prop-test-p2"/>, right panel). The two-tailed <m>P</m>-value is a little <em>larger</em> than <m>0.05</m>.
+        </p>
+        <p><em>More precise <m>P</m>-values using tables</em></p>
+        <p>
+          <idx><h>P-values</h><h>using tables</h></idx>
+        </p>
+        <p>
+          Using the tables of areas under normal distributions (), more precise <m>P</m>-values can be found using the ideas from Sect. <xref ref="sec-exact-areas-using-tables"/>. For instance (see Fig. <xref ref="fig-one-prop-test-p2"/>):
+        </p>
+        <ul>
+          <li><p>for <m>z = 1.2</m>: the area to the <em>left</em> of <m>z = -1.2</m> is <m>0.1151</m>, and the area to the <em>right</em> of <m>z = 1.2</m> is <m>0.1151</m>, so the <em>two-tailed</em> <m>P</m>-value is <m>0.1151 + 0.1151 = 0.2302</m>. This is a little smaller than <m>0.32</m>, as estimated above.</p></li>
+          <li><p>for <m>z = 1.9</m>: the area to the <em>left</em> of <m>z = -1.9</m> is <m>0.0287</m>, and the area to the <em>right</em> of <m>z = 1.9</m> is <m>0.0287</m>, so the <em>two-tailed</em> <m>P</m>-value is <m>0.0287 + 0.0287 = 0.0574</m>. This is a little larger than <m>0.05</m>, as estimated above.</p></li>
+        </ul>
+        <p>
+          In this die-rolling example, where <m>z = 4.05</m>, the tail area is <em>very</em> small (using ), and zero to four decimal places. <m>P</m>-values are never exactly zero, so we write <m>P &lt; 0.0001</m> (that is, the <m>P</m>-value is <em>less than</em> <m>0.0001</m>).
+        </p>
+        <p>
+          <m>P</m>-values tells us the probability of observing the sample statistic (or a value even more extreme), assuming the null hypothesis is true. In the die-rolling example, the <m>P</m>-value is the probability of observing the value of <m>\hat{p} = 0.38</m> (or a more extreme value), just through sampling variation if <m>p = 1/6</m>. Then
+        </p>
+        <ul>
+          <li><p>'big' <m>P</m>-values mean the sample statistic (i.e., <m>\hat{p}</m>) could reasonably have occurred through sampling variation in one of the many possible samples, if the assumption made about the parameter (stated in <m>H_0</m>) was true; the data <em>do not</em> contradict the assumption in <m>H_0</m>. There <em>is no</em> persuasive evidence to support the alternative hypothesis.</p></li>
+          <li><p>'small' <m>P</m>-values mean the sample statistic (i.e., <m>\hat{p}</m>) is <em>unlikely</em> to have occurred through sampling variation in one of the many possible samples, if the assumption made about the parameter (stated in <m>H_0</m>) was true; the data <em>do</em> contradict the assumption in <m>H_0</m>. There <em>is</em> persuasive evidence to support the alternative hypothesis.</p></li>
+        </ul>
+        <p>
+          What is meant by 'small' and 'big' in this context? What represents persuasive evidence to support the alternative hypothesis? A <m>P</m>-value smaller than <m>5</m>% (or <m>0.05</m>) is usually considered 'small', and persuasive evidence to support the alternative hypothesis. In contrast, a <m>P</m>-value larger than <m>5</m>% (or <m>0.05</m>) is usually considered 'big', and <em>not</em> persuasive evidence to support the alternative hypothesis.
+        </p>
+        <warning>
+          <p>
+            The value of <m>0.05</m> given here is <em>arbitrary</em>, and in some disciplines the distinction is made when <m>P = 0.01</m> or <m>P = 0.10</m> instead.
+          </p>
+        </warning>
+        <p>
+          Rather than having an arbitrary boundary between 'big' and 'small', a more sensible approach is to qualify the strength of the evidence that supports the alternative hypotheses (discussed further in Sect. <xref ref="sec-about-pvalues"/>).
+        </p>
+        <p>
+          In this die-rolling example, where the <m>P</m>-value is <em>very</em> small, the data contradict the null hypothesis that <m>p = 1/6</m>: the evidence supports the alternative hypothesis that <m>p 1/6</m>. This suggests that the die is very likely <em>not</em> fair.
+        </p>
+        <warning>
+          <p>
+            <em>Be careful interpreting the results!</em> We cannot be <em>sure</em> that the die is unfair. <em>A small <m>P</m>-value is not proof that the die is loaded.</em> The die may be fair but, due to sampling variation, the sample we observed may simply have produced an unusually high proportion of rolls that show a
+          </p>
+          <p>
+            by chance.
+          </p>
+          <p>
+            The result is interpreted as 'there is strong evidence that the die is unfair'. Remember: <em>the onus is on the data to refute the null hypothesis, the initial assumption</em>.
+          </p>
+        </warning>
+        <p>
+          In the die example, suppose we found the two-tailed <m>P</m>-value as <m>0.26</m>. This is 'large' (i.e., much larger than <m>0.05</m>). Then the observed value of <m>\hat{p}</m> could easily be explained by chance, and is <em>not</em> persuasive evidence to support the alternative hypothesis (that the die is unfair). There is no persuasive evidence that <m>p</m> is not <m>1/6</m>.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      Note that a different value for <m>s.e.(\hat{p})</m> is required to produce the CI (see Def. <xref ref="def-sampling-distribution-phat"/>).
+    </p>
+  </section>
+
+  <section xml:id="sec-testp-obs-decision-pvalues">
+    <title>Decision: using <m>P</m>-values</title>
+    <idx>P-values</idx>
+    <p>
+      Evidence against the null hypothesis is evaluated using a <m>P</m>-value. A <m>P</m>-value
+      refers to the area more extreme than the calculated test statistic in the sampling distribution.
+    </p>
+    <figure xml:id="fig-decision-flow-dice">
+      <caption>Decision flow using P-values for the die-rolling example.</caption>
+      <image source="fig-decision-flow-dice.png" width="80%"/>
+    </figure>
+    <figure xml:id="fig-normal-die-theory-ht">
+      <caption>The normal distribution describing how the sample proportion varies for rolling a fair die 50 times.</caption>
+      <image source="fig-normal-die-theory-ht.png" width="80%"/>
+    </figure>
+    <subsection xml:id="sec-one-prop-test-p6895997">
+      <title>Approximating <m>P</m>-values using the 68<ndash/>95<ndash/>99.7 rule</title>
+      <idx>68–95–99.7 rule</idx>
+      <p>
+        The 68<ndash/>95<ndash/>99.7 rule can be used to determine approximate <m>P</m>-values.
+        See Sect. <xref ref="sec-approx-probs"/> for background.
+      </p>
+      <figure xml:id="fig-one-prop-test-p">
+        <caption>Approximating P-values using the 68–95–99.7 rule for <m>z = 1</m> (left) and <m>z = -2</m> (right).</caption>
+        <image source="fig-one-prop-test-p.png" width="80%"/>
+      </figure>
+    </subsection>
+    <subsection xml:id="sec-one-prop-test-p-tables">
+      <title>More precise <m>P</m>-values using tables</title>
+      <idx><h>P-values</h><h>using tables</h></idx>
+      <p>
+        More precise <m>P</m>-values can be found using the tables in Sect. <xref ref="sec-exact-areas-using-tables"/>.
+      </p>
+      <figure xml:id="fig-one-prop-test-p2">
+        <caption>More precise P-values for <m>z = 1.2</m> (left) and <m>z = -1.9</m> (right).</caption>
+        <image source="fig-one-prop-test-p2.png" width="80%"/>
+      </figure>
+    </subsection>
+  </section>
+
+  <section xml:id="sec-one-prop-test-communicate">
+    <title>Writing conclusions</title>
+    <p>
+      In general, communicating the results of any hypothesis test requires:
+    </p>
+    <ul>
+      <li><p>an answer to the RQ, worded in terms of how much evidence exists to support the <em>alternative</em> hypothesis.</p></li>
+      <li><p>a summary of the evidence used to reach that conclusion (such as the <m>z</m>-score and <m>P</m>-value, including if the <m>P</m>-value is one- or two-tailed).</p></li>
+      <li><p>sample summary information (see Chap. <xref ref="sec-ci-one-proportion"/>), summarising the data used to make the decision (which usually includes a CI for the parameter).</p></li>
+    </ul>
+    <p>
+      So for the die-rolling example, write:
+    </p>
+    <blockquote>
+      <p>The sample provides strong evidence (<m>z = 4.05</m>; two-tailed <m>P &lt; 0.001</m>) that the proportion of rolls that show a</p>
+    </blockquote>
+    <p>
+      is not <m>1/6</m> (<m>\hat{p} = 0.38</m>; approx. <m>95</m>% CI: <m>0.243</m> to <m>0.517</m>; <m>n = 50</m> rolls) in the population.
+    </p>
+    <p>
+      This statement includes the three necessary components:
+    </p>
+    <ul>
+      <li><p>an answer to the RQ: 'The sample provides very strong evidence... that the population proportion is not <m>1/6</m>'.</p></li>
+      <li><p>the evidence used to reach the conclusion: '<m>z = 4.05</m>; two-tailed <m>P &lt; 0.001</m>'.</p></li>
+      <li><p>sample summary information (including a CI).</p></li>
+    </ul>
+    <warning>
+      <p>
+        Since the <em>null</em> hypothesis is initially assumed to be true, <em>the onus is on the evidence to refute the null hypothesis</em>. That is, we retain the null hypothesis unless there is persuasive evidence to stop doing so. Hence, conclusions are worded in terms of how strongly the evidence (i.e., sample data) supports the alternative hypothesis.
+      </p>
+      <p>
+        The alternative hypothesis <em>may</em> or <em>may not</em> be true, but we report how strongly the evidence (data) supports the alternative hypothesis. Conclusions are <em>not</em> worded in terms of how much evidence supports the null hypothesis.
+      </p>
+    </warning>
+  </section>
+
+  <section xml:id="sec-one-prop-test-overview">
+    <title>Process overview</title>
+    <p>
+      Let's recap the decision-making process, in this context of rolling a (Fig. <xref ref="fig-decision-flow-die-roll"/>):
+    </p>
+    <ol>
+      <li><p><em>Assumption</em>. Write the <em>null hypothesis</em> and <em>alternative hypothesis</em> about the <em>parameter</em> (based on the RQ), where <m>p</m> is the population proportion of rolls that are a</p></li>
+    </ol>
+    <p>
+      :
+    </p>
+    <ul>
+      <li><p><m>H_0</m>: <m>p = 1/6</m> (i.e., sampling variation explains the discrepancy between <m>p</m> and <m>\hat{p}</m>).</p></li>
+      <li><p><m>H_1</m>: <m>p 1/6</m> (this is a two-tailed alternative hypothesis).</p></li>
+      <li><p><em>Expectation</em>.</p></li>
+    </ul>
+    <p>
+      The sampling distribution describes what values to reasonably expect from the sample statistic across all possible samples, <em>if</em> the null hypothesis is true. In this situation, the sampling distribution has an approximate normal distribution.
+    </p>
+    <ol>
+      <li><p><em>Observation</em>. Compute the <m>z</m>-score (<m>z = 4.05</m>), a measure of the discrepancy between the assumed population value, and the observed sample value. This is a very large value.</p></li>
+      <li><p><em>Decision</em>. Determine if the data are consistent with the assumption, by computing the <m>P</m>-value. Here, the two-tailed <m>P</m>-value is (much) less than <m>0.0001</m>, so strong evidence exists that <m>p</m> is <em>not</em> <m>1/6</m>.</p></li>
+    </ol>
+  </section>
+
+  <section xml:id="sec-validity-proportions-test">
+    <title>Statistical validity conditions</title>
+    <idx><h>Statistical validity (for inference)</h><h>one proportion</h></idx>
+    <p>
+      The hypothesis test conducted in this chapter assumes the sampling distribution is approximately a normal distribution (and so, for example, the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule can be applied). This is only true if certain conditions are met.
+    </p>
+    <p>
+      The <em>statistical validity conditions</em> for a test for a single proportion is that the <em>expected</em> number of individuals in the group of interest (i.e, <m>n p</m>) and in the group <em>not</em> of interest (i.e., <m>n (1 - p)</m>) both exceed five; that is:
+    </p>
+    <ul>
+      <li><p>both <m>n p &gt; 5</m> <em>and</em> <m>n (1 - p) &gt; 5</m>.</p></li>
+    </ul>
+    <p>
+      The value of <m>5</m> here is a rough figure; some books give other values (such as <m>10</m>). This condition ensures that the <em>sampling distribution of the sample proportions has an approximate normal distribution</em> (so that, for example, the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule can be used). The units of analysis are also assumed to be <em>independent</em> (e.g., from a simple random sample). For a test for one proportions, these conditions are similar to those for the CI for one proportion (Sect. <xref ref="sec-ci-one-proportion"/>).
+    </p>
+    <p>
+      If the statistical validity conditions are not met, other similar options include using a binomial test<idx>Non-parametric statistics</idx> <xref ref="conover2003practical"/>.
+    </p>
+    <example xml:id="example-statistical-validity-dice">
+      <title>Statistical validity</title>
+      <p>
+        The hypothesis test regarding the dice is statistically valid. Firstly, <m>n p = 50 (1/6) = 8.666<ellipsis/></m> (i.e., expect about <m>8.7</m> rolls to show a , and <m>n (1 - p) = 41.666<ellipsis/></m> (i.e., expect about <m>41.7</m> rolls to <em>not</em> show a . <em>Both</em> comfortably exceed five, so the normal distribution will be a good approximation for the sampling distribution. This is what we observe from a computer simulation (Fig. <xref ref="fig-stat-validp"/>, left panel).
+      </p>
+    </example>
+    <example xml:id="example-statistical-validity-dice2">
+      <title>Statistical validity</title>
+      <p>
+        Suppose the die was rolled <m>10</m> times rather than <m>50</m> times. Then, <m>n p = 10 (1/6) = 1.666<ellipsis/></m> and <m>n (1 - p) = 10 (1 - 1/6) = 8.333<ellipsis/></m>. These do not <em>both</em> exceed five, so the normal distribution may be a poor approximation for the sampling distribution.
+      </p>
+      <p>
+        This is what we observe from simulating the situation (Fig. <xref ref="fig-stat-validp"/>, right panel). The normal model is poor: the simulation shows that the sample proportions are not even symmetrically distributed.
+      </p>
+    </example>
+    <p>
+      (ref:StatValidp) The sampling distributions for two situations for rolling a die. Left: for sets of 50 rolls, the sampling distribution does have an approximate normal distribution. Right: for sets of <m>10</m> rolls, the sampling distribution does not have a normal distribution. The solid lines show the approximate normal distributions, and the histograms show the simulated distribution of the sample proportions over many sets of rolls. The solid dots are the value <m>p = 1/6</m>, the population proportion of rolls that show a <idx><h>Hypothesis testing</h><h>one proportion|)</h></idx>
+    </p>
+  </section>
+
+  <section xml:id="sec-one-proportiontest-roll-other-die">
+    <title>Example: rolling the other die</title>
+    <p>
+      In <m>50</m> rolls of the <em>other</em> die, I found a
+    </p>
+    <p>
+      on <m>7</m> rolls, so that <m>\hat{p} = 7/50 = 0.14</m>. To determine if this die appears loaded, the hypotheses are the same as before:
+    </p>
+    <me>\text{$H_0$: } p = 1/6  \qquad\text{and}\qquad  \text{$H_1$: } p \ne 1/6.</me>
+    <p>
+      Following the procedures above (check!) and using the same hypotheses, <m>z = -0.506</m> and (using tables) the two-tailed <m>P</m>-value is <m>2 0.3061 = 0.6122</m>. This means that the sample result was not unusual if <m>p = 1/6</m>, and is certainly not persuasive evidence to support the alternative hypothesis. There is <em>no evidence</em> to suggest the second die is loaded.
+    </p>
+    <p>
+      This all implies the first die was the loaded die. Now I need to decide how to distinguish the two dice so I can tell which is which<ellipsis/>
+    </p>
+    <warning>
+      <p>
+        <em>A large <m>P</m>-value does not prove that the die is fair!</em> It only means that the proportions of rolls that produce a
+      </p>
+      <p>
+        is not unusual... but perhaps the die is loaded in some other way (i.e., to produce more-than-expected rolls of a
+      </p>
+      <p>
+        <em>A large <m>P</m>-value does not necessarily mean that the die is fair!</em> The die may indeed be loaded to produce a larger-than-expected numbers of rolls that show a
+      </p>
+      <p>
+        but (due to sampling variation) the sample we observed simply did not provide evidence to make that conclusion.
+      </p>
+      <p>
+        The result is interpreted in terms of how much evidence exists to support the alternative hypothesis. The onus is on the data (i.e., evidence) to refute the assumption made in the null hypothesis.
+      </p>
+    </warning>
+  </section>
+
+  <section xml:id="sec-one-proportiontest-birds">
+    <title>Example: dominance of birds</title>
+    <p>
+      <xref ref="barve2017elevational"/> compared two types of birds (male green-backed tits; male cinereous tits) to see which was more behaviourally dominant over winter. If the species were equally-dominant, then about <m>50</m>% of the interactions would be won by each species. If we define <m>p</m> as the proportion of interactions won by green-backed tits, then we would expect <m>p = 0.50</m>. However, in the <m>45</m> interactions observed between the two species, green-backed tits won <m>37</m> interactions (i.e., <m>\hat{p} = 37/45 = 0.82222</m>). A discrepancy exists between the sample proportion (<m>\hat{p} = 0.8222</m>) and the expected population proportion <m>p = 0.50</m>.
+    </p>
+    <p>
+      Of course, different sample of <m>45</m> interactions would produce different values of <m>\hat{p}</m>. To test if the population proportion of interaction wins could be equally shared, the hypotheses are:
+    </p>
+    <me>\text{$H_0$: } p = 0.5\quad\text{and}\quad\text{$H_1$: } p \ne 0.5 \text{ (two-tailed)}.</me>
+    <p>
+      The test is statistically valid, since both <m>n p = 45 0.5 = 22.5</m> and <m>n (1 - p) = 22.5</m> exceed five. The <em>standard error</em> is
+    </p>
+    <me>\text{s.e.}(\hat{p})    = \sqrt{\frac{p \times (1 - p)}{n}}    = \sqrt{\frac{0.50 \times (1 - 0.50)}{45}}    = 0.0745356...</me>
+    <p>
+      Then, the value of the <em>test statistic</em> is:
+    </p>
+    <me>z    = \frac{\hat{p} - p}{\text{s.e.}(\hat{p})}    = \frac{0.82222 - 0.50}{0.0745356}    = 4.322.</me>
+    <p>
+      This is a <em>very</em> large <m>z</m>-score, so the <m>P</m>-value will be very small, using the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule, or using tables. This is persuasive evidence to support the alternative hypothesis. We write:
+    </p>
+    <blockquote>
+      <p><em>Very</em> strong evidence exists in the sample (<m>P &lt; 0.0001</m>; <m>z = 4.325</m>) that the interactions were not won equally by each species (<m>\hat{p} = 0.8222</m> won by green-backed tits; approx. <m>95</m>% CI: <m>0.708</m> to <m>0.936</m>; <m>n = 45</m>) in the population.</p>
+    </blockquote>
+    <p>
+      Note that a different value for <m>s.e.(\hat{p})</m> is required to produce the CI (see Def. <xref ref="def-sampling-distribution-phat"/>).
+    </p>
+  </section>
+
+  <section xml:id="sec-chap28summary">
+    <title>Chapter summary</title>
+    <p>
+      These steps are used to test a hypothesis about a population proportion <m>p</m>.
+    </p>
+    <ul>
+      <li><p>Write the null hypothesis (<m>H_0</m>; the sampling variation explanation) and the alternative hypothesis (<m>H_1</m>); initially <em>assume</em> the value of <m>p</m> in the null hypothesis to be true.</p></li>
+      <li><p>Describe the <em>sampling distribution</em>, which describes what to <em>expect</em> from the sample statistic across all possible samples, based on this assumption: under certain statistical validity conditions, the sample mean varies with:</p></li>
+      <li><p>an approximate normal distribution,</p></li>
+      <li><p>with sampling mean, whose value is the value of <m>p</m>,</p></li>
+      <li><p>with a standard deviation of <m> s.e.(\hat{p}) = \sqrt{\frac{p (1 - p)}{n}}</m>, where <m>p</m> is the hypothesised value given in the null hypothesis, and <m>n</m> is the sample size.</p></li>
+      <li><p>Compute the value of the <em>test statistic</em>:</p></li>
+    </ul>
+    <me>z = \frac{ \hat{p} - p}{\text{s.e.}(\hat{p})}.</me>
+    <ul>
+      <li><p>Compute an approximate <em><m>P</m>-value</em> using the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule, or using tables. Use the <m>P</m>-value to make a decision, and write a conclusion.</p></li>
+      <li><p>Check the statistical validity conditions.</p></li>
+    </ul>
+  </section>
+
+  <reading-questions xml:id="sec-chap31-quick-review">
+    <title>Quick review questions</title>
+  </reading-questions>
+
+  <exercises xml:id="sec-one-proportion-test-exercises">
+    <introduction>
+      <p>Answers to odd-numbered exercises are given at the end of the book.</p>
+    </introduction>
+    <p>
+      [Answers to odd-numbered exercises] are given at the end of the book.
+    </p>
+    <exercise xml:id="exercise-sep-p-why1">
+      <p>
+        Explain <em>why</em> the standard error is computed using <m>p</m> for hypothesis testing, but using <m>\hat{p}</m> for CIs.
+      </p>
+    </exercise>
+    <exercise xml:id="exercise-sep-p-why2">
+      <p>
+        Explain why describing the sampling distribution is difficult if we <em>assume</em> <m>p 1/6</m>.
+      </p>
+    </exercise>
+    <exercise xml:id="exercise-one-proportion-test-explain-a">
+      <p>
+        In the die example, the observed proportion is <m>0.38</m>. Could we simply state that the proportion clearly is not <m>1/6 = 0.1666</m>? Explain.
+      </p>
+    </exercise>
+    <exercise xml:id="exercise-one-proportion-test-explain-b">
+      <p>
+        Explain why we compute <m>s.e.(\hat{p})</m> and not <m>s.e.(p)</m>.
+      </p>
+    </exercise>
+    <exercise xml:id="exercise-one-proportion-test-exercises-dodgy-a">
+      <p>
+        What is wrong with the following statement, after testing <m>H_0</m>: <m>p = 0.25</m>:
+      </p>
+      <blockquote>
+        <p>There is very strong evidence that the sample proportion is greater than <m>0.25</m>.</p>
+      </blockquote>
+    </exercise>
+    <exercise xml:id="exercise-one-proportion-test-exercises-dodgy-b">
+      <p>
+        Explain what is wrong with this statement from <xref ref="davis2024higher"/>, that appears under their Table 2:
+      </p>
+      <blockquote>
+        <p>One proportion <m>z</m>-test with <m>H_0 = 0.076</m>, the proportion of UDT in our sample...</p>
+      </blockquote>
+    </exercise>
+    <exercise xml:id="exercise-one-proportion-test-exercises-placebos">
+      <p>
+        The study of herbal medicines is complicated, as <em>blinding</em> subjects<idx><h>Blinding</h><h>individuals</h></idx> is difficult: placebos<idx>Placebo</idx> are often easily identifiable by eye, by taste, or by smell.
+      </p>
+      <p>
+        <xref ref="loyeung2018experimental"/> studied if subjects could identify potential placebos at a <em>better</em> rate than just guessing. The <m>81</m> subjects were each presented with a choice of five different supplements, four of which were placebos. Subjects were asked to select which one was the legitimate herbal supplement based on the <em>taste</em>; <m>50</m> subjects correctly selected the true herbal supplement.
+      </p>
+      <ol>
+        <li><p>If the subjects were selecting the true herbal supplement randomly, what proportion of subjects would be expected to select the correct supplement as the true herbal medicine?</p></li>
+        <li><p>Write the hypotheses for addressing the aims of the study.</p></li>
+        <li><p>Is this a one- or two-tailed test? Explain.</p></li>
+        <li><p>Sketch the <em>sampling distribution</em> of the sample proportion, assuming <m>H_0</m> is correct, for <m>n = 81</m>.</p></li>
+        <li><p>Is there evidence that people can identify the true supplement by taste?</p></li>
+        <li><p>Are the statistical validity conditions satisfied?</p></li>
+      </ol>
+    </exercise>
+    <exercise xml:id="exercise-p-one-prop-test-measles">
+      <p>
+        <xref ref="kim2004sero"/> studied the measles-rubella vaccination-rates in Korea, comparing the proportion of children susceptible to measles with the <em>World Health Organization</em> target proportion (for children aged <m>5</m> to <m>9</m> years old: <m>10</m>%).
+      </p>
+      <p>
+        The aim was to test if the proportion of Korean children susceptible to measles in the <em>population</em> was <m>10</m>% or <em>lower</em> (i.e., better). In the study, <m>55</m> children out of <m>972</m> were susceptible to measles.
+      </p>
+      <ol>
+        <li><p>Compute the sample proportion <m>\hat{p}</m> of children susceptible to measles.</p></li>
+        <li><p>Write the hypotheses for the test. Is the test one- or two-tailed?</p></li>
+        <li><p>Compute the standard error for the test.</p></li>
+        <li><p>Compute the <m>z</m>-score and determine the <m>P</m>-value.</p></li>
+        <li><p>Write a conclusion.</p></li>
+        <li><p>Are the statistical validity conditions satisfied?</p></li>
+      </ol>
+    </exercise>
+    <exercise xml:id="exercise-one-proportion-test-turtle-sex">
+      <p>
+        <xref ref="streeting2022optimising"/> studied western saw-shelled turtles. When eggs were incubated at <m>27</m>^o^C, they observed that <m>29</m> males and <m>44</m> females hatched. Are the proportions of male and female turtles that hatch at this temperature equal?
+      </p>
+    </exercise>
+    <exercise xml:id="exercise-one-proportion-test-exercises-epl">
+      <p>
+        [<em>Dataset</em>: <c>PremierL</c>] In the 2019/2020 English Premier League (EPL), the home team won <m>91</m> games, and the away team won <m>67</m> games. (Another <m>50</m> games were draws.)
+      </p>
+      <p>
+        Use the <m>n = 158</m> games with a result to determine if there is evidence that the home team wins more often than <m>50</m>% (i.e., that there is a home-side advantage).
+      </p>
+    </exercise>
+    <exercise xml:id="exercise-one-proportion-test-exercises-pedal-machines">
+      <p>
+        <xref ref="maeda2013introducing"/> introduced pedal machines on the first floor of the Joyner Library for use by students at East Carolina University (ECU) to increase activity in library users. At ECU, <m>60.2</m>% of all students were females (i.e., in the population). Students were observed using the machine on <m>589</m> occasions, of which <m>295</m> times were by females
+      </p>
+      <p>
+        Is there evidence that the proportion of female users of the machines was <em>lower</em> than the overall female proportion at the university? What would you conclude?
+      </p>
+    </exercise>
+    <exercise xml:id="exercise-one-proportion-test-exercises-casinos">
+      <p>
+        <xref ref="koenen1995analysis"/> found that <m>88</m> of the <m>357</m> visitors to Las Vegas casinos in 1995 were smokers. At the time, <m>25.5</m>% of the general US population were smokers (based on data from the US <em>National Center for Health Statistics</em>). Is the proportion of smokers among casino-goers the same as for the general US population?
+      </p>
+    </exercise>
+    <exercise xml:id="exercise-one-proportion-breadfruit-pasta">
+      <p>
+        <xref ref="nochera2019development"/> developed gluten-free pasta made from breadfruit. In the study sample, <m>57</m> of the <m>71</m> participants stated that they liked the pasta. Do the researchers have sufficient evidence to claim that the 'majority of people like breadfruit pasta'?
+      </p>
+    </exercise>
+    <exercise xml:id="exercise-one-proportion-test-exercises-cts">
+      <p>
+        Carpal Tunnel Syndrome (CTS) is a painful condition in the wrists. <xref ref="boltuch2020palmaris"/> were interested in whether 'a relationship exists between the palmaris tendon [and] carpal tunnel syndrome (CTS)' (p. 493). The palmaris longus (PL) tendon is visually absent in about <m>15</m>% of the population. The researchers found PL was visually absent in <m>33</m> of <m>516</m> CTS wrists in their sample. Is there evidence to suggest that rate of PL absence is <em>different</em> in CTS cases, compared to the general population?
+      </p>
+    </exercise>
+    <exercise xml:id="exercise-one-proportion-test-exercises-borers">
+      <p>
+        <xref ref="siegfried2014estimating"/> studied resistance of some commercial corn varieties to the European corn borer. Borers were collected from corn in Iowa and Nebraska.
+      </p>
+      <p>
+        Researchers aimed to estimate the frequency of resistance to the toxin in the corn. By mating borers collected from the field with various resistant laboratory individuals, they could determine what proportion of resistant individuals to expect in the second generation offspring. In one study of <m>n = 172</m> second-generation individuals, <m>24</m> were found to be resistant. The theoretical expectation was that <m>1</m>-in-<m>16</m> of the second-generation borers would be resistant if the field borers were resistant. Perform a hypothesis test to determine if the data suggest that the field borers were resistant (that is, if the population proportion is <m>1/16</m>) as expected.
+      </p>
+    </exercise>
+    <exercise xml:id="exercise-one-proportion-test-exercises-le-dlights">
+      <p>
+        <xref ref="davidovic2019drivers"/> studied street-light preferences of drivers. Drivers were asked to conduct a series of manoeuvres under <m>3 000</m>K LED light and then under <m>4 000</m>K LED lights. They were then asked to decide which street light they preferred. Out of the <m>52</m> subjects, <m>29</m> preferred the <m>3 000</m>K LED lights. Is there evidence that the choice between the two street lights is random, or is there evidence of a preference for one over the other?
+      </p>
+    </exercise>
+    <exercise xml:id="exercise-one-proportion-test-exercises-coin-spin">
+      <p>
+        The euro was introduced as a currency on 01 January 1999. According to a report by the , students in Poland spun a Belgian one-euro coin <m>250</m> times, and found <m>140</m> heads (as reported by <xref ref="data-Gelman2002-DiceCoins"/>). This resulted in an 'accusation of bias' in the <em>New Scientist</em> article. However, every set of <m>250</m> spins can produce a different proportion of heads, so perhaps the results is just due to randomness. Does this sample of <m>250</m> spins suggest that the one-euro Belgian coin is biased?
+      </p>
+    </exercise>
+    <exercise xml:id="exercise-one-proportion-test-exercises-births">
+      <p>
+        As noted in Sect. <xref ref="sec-prob-rel-freq"/>, the
+      </p>
+      <p>
+        stated that:
+      </p>
+      <blockquote>
+        <p>The sex ratio for all births registered in Australia generally fluctuates around <m>105.5</m> male births per <m>100</m> female births.</p>
+      </blockquote>
+      <p>
+        (This statistic does not use births registered as 'other' or 'not stated'.)
+      </p>
+      <ol>
+        <li><p>The value of <m>105.5</m> is effectively a population odds ratio of male-to-female births. Show that this is equivalent to the population proportion of male births as <m>0.51338</m> (not including 'other' or 'not stated').</p></li>
+        <li><p>In 2021, there were <m>148 636</m> male births and <m>140 944</m> female births. Compute the <em>sample</em> proportion of male births in 2021 (to five decimal places).</p></li>
+      </ol>
+      <ol>
+        <li><p>Conduct a test to determine if the 2021 data appear different to the long-term proportion.</p></li>
+      </ol>
+    </exercise>
+  </exercises>
 </chapter>

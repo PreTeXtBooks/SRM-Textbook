@@ -1,5 +1,183 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Source: 23-CIs-OneMean.Rmd -->
 <chapter xml:id="ch-23-cis-one-mean" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Confidence intervals: one mean</title>
-  <p>Skeleton for <em>23-CIs-OneMean.Rmd</em>. Content to be added.</p>
+  <objectives xml:id="objectives-ch23">
+    <introduction>
+      <p>So far, you have learnt to ask an RQ, design a study, classify and summarise the data, and construct a confidence interval for one proportion. You have also been introduced to confidence intervals. <alert>In this chapter</alert>, you will learn to</p>
+    </introduction>
+    <ul>
+      <li><p>identify situations where estimating a mean is appropriate.</p></li>
+      <li><p>form confidence intervals for one mean.</p></li>
+      <li><p>determine whether the conditions for using the confidence intervals apply in a given situation.</p></li>
+    </ul>
+  </objectives>
+
+  <section xml:id="sec-ci-one-mean-intro">
+    <title>Introduction</title>
+    <idx><h>Confidence intervals</h><h>one mean|(</h></idx>
+    <image source="Illustrations/pexels-skitterphoto-705171.jpg" width="25%">
+      <description><p>Image.</p></description>
+    </image>
+    <p>
+      Consider rolling a fair, six-sided die <m>n = 25</m> times. Suppose we are interested in the <em>mean</em> of the numbers that are rolled. Since every face of the die is equally likely to appear on any one roll, the population mean of all possible rolls is <m> = 3.5</m> (in the middle of the numbers on the faces of the die, so this is also the <em>median</em>).
+    </p>
+    <p>
+      What will be the sample mean of the numbers in the <m>25</m> rolls? We don't know, as the sample mean varies from sample to sample (<em>sampling variation</em>).
+    </p>
+    <warning>
+      <p>
+        Remember: studying a sample leads to the following observations:
+      </p>
+      <ul>
+        <li><p>every sample is likely to be different.</p></li>
+        <li><p>we observe just one of the many possible samples.</p></li>
+        <li><p>every sample is likely to yield a different value for the statistic.</p></li>
+        <li><p>we observe just one of the many possible values for the statistic.</p></li>
+      </ul>
+      <p>
+        Since many values for the sample mean are possible, the values of the sample mean vary (called <em>sampling variation</em>) and have a <em>distribution</em> (called a <em>sampling distribution</em>).
+      </p>
+    </warning>
+  </section>
+
+  <section xml:id="sec-sampling-dist-sample-mean-sigma-known">
+    <title>Sampling distribution for : for  known</title>
+    <idx><h>Sampling distribution</h><h>one mean (\sigma known)</h></idx>
+    <p>
+      Suppose thousands of people made one set of <m>25</m> rolls each, and computed the mean for their sample.<idx><h>Mean</h><h>of a sample</h></idx> Then, every person would have a sample mean for their sample, and we could produce a histogram of all these sample means
+    </p>
+    <p>
+      The mean for any single sample of <m>n = 25</m> rolls will sometimes be higher than <m> = 3.5</m>, and sometimes lower than <m> = 3.5</m>, but often close to <m>3.5</m>. Sample means larger than <m>4.5</m>, or smaller than <m>2.5</m>, would occur rarely.
+    </p>
+    <p>
+      the sample means vary with an approximate normal distribution (as with the sample proportions). This normal distribution does <em>not</em> describe the data; it describes how the <em>values of the sample means vary across all possible samples</em>. Under certain conditions (Sect. <xref ref="sec-validity-sample-mean"/>), the values of the sample mean vary with a normal distribution, and this normal distribution has a mean and a standard deviation.
+    </p>
+    <p>
+      The mean of this sampling distribution (the <em>sampling mean</em>) has the value <m></m>. The standard deviation of this sampling distribution (the <em>standard error of the sample means</em>) is denoted <m>s.e.(\bar{x})</m>. When the <em>population</em> standard deviation <m></m> is <em>known</em>, the value of the standard error happens to be
+    </p>
+    <me>\text{s.e.}(\bar{x}) = \frac{\sigma}{\sqrt{n}}.</me>
+    <p>
+      In summary, the values of the sample means have a <em>sampling distribution</em> described by:
+    </p>
+    <ul>
+      <li><p>an approximate normal distribution,</p></li>
+      <li><p>with a sampling mean whose value is <m></m>, and</p></li>
+      <li><p>a standard deviation, called the standard error, of <m>s.e.(\bar{x}) = /\sqrt{n}</m>.</p></li>
+    </ul>
+    <p>
+      However, since the <em>population</em> standard deviation is rarely ever known, we will focus on the case where the value of <m></m> is unknown (and estimated by the <em>sample</em> standard deviation, <m>s</m>).
+    </p>
+  </section>
+
+  <section xml:id="sec-sampling-dist-sample-mean">
+    <title>Sampling distribution for : for  unknown</title>
+    <idx><h>Sampling distribution</h><h>one mean</h></idx>
+    <p>
+      Since the value of the population standard deviation <m></m> is almost never known, the sample standard deviation <m>s</m> is used to estimate of the standard error of the mean: <m>s.e.(\bar{x}) = s/\sqrt{n}</m>. With this information, the <em>sampling distribution of the sample mean</em> can be described.
+    </p>
+    <definition xml:id="def-sampling-distribution-xbar-ci">
+      <title>Sampling distribution of a sample mean for $\sigma$ unknown</title>
+      <statement>
+        <p>
+          When the <em>population</em> standard deviation is unknown, the <em>sampling distribution of the sample mean</em> is (when certain conditions are met; Sect. <xref ref="sec-validity-sample-mean"/>) described by:
+        </p>
+        <definition xml:id="def-sampling-distribution-xbar-ci">
+          <title>Sampling distribution of a sample mean for the population standard deviation unknown</title>
+          <statement>
+            <p>
+              When the <em>population</em> standard deviation is unknown, the <em>sampling distribution of the sample mean</em> is (when certain conditions are met; Sect. <xref ref="sec-validity-sample-mean"/>) described by:
+            </p>
+            <ul>
+              <li><p>an approximate normal distribution,</p></li>
+              <li><p>centred around a sampling mean whose value is <m></m>,</p></li>
+              <li><p>with a standard deviation (called the <em>standard error of the mean</em>), denoted <m>s.e.(\bar{x})</m>, whose value is</p></li>
+            </ul>
+            <p>
+              where <m>n</m> is the size of the sample, and <m>s</m> is the sample standard deviation of the observations.
+            </p>
+          </statement>
+        </definition>
+        <warning>
+          <p>
+            A mean or a median may be appropriate for describing the <em>data</em>. However, the <em>sampling distribution</em> for the sample mean (under certain conditions) has a <em>normal distribution</em>. Hence, the mean is appropriate for describing the sampling distribution, even if not for describing the data.
+          </p>
+        </warning>
+        <p><em>Confidence intervals for <m></m></em></p>
+        <p>
+          In practice, we do not know the value of <m></m>. After all, that's why we take a sample: to <em>estimate</em> the value of the unknown population mean. Suppose, then, we did not know the value of <m></m> (the parameter) for the die-rolling situation, but we have an <em>estimate</em>: the value of <m>\bar{x}</m>, the sample mean (the statistic). The value of <m>\bar{x}</m> may be a bit smaller than <m></m>, or a bit larger than <m></m> (but we don't know which, since we do not know the value of <m></m>). In other words, the values of <m></m> that may have produced the observed value <m>\bar{x}</m> may be less than the value of <m>\bar{x}</m>, or greater than the value of <m>\bar{x}</m>.
+        </p>
+        <p>
+          Since the values of <m>\bar{x}</m> vary from sample to sample (<em>sampling variation</em>) with an approximate normal distribution (Def. <xref ref="def-sampling-distribution-xbar-ci"/>), the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule could be used to construct an approximate <m>95</m>% interval for the plausible values of <m></m> that may have produced the observed values of the sample mean.<idx>68–95–99.7 rule</idx> This is a <em>confidence interval</em> (or a CI).
+        </p>
+        <p>
+          A CI for the population mean is an interval surrounding a sample mean. In general, a CI for <m></m> is
+        </p>
+        <me>\bar{x} \pm \overbrace{\big(\text{multiplier}\times\text{s.e.}(\bar{x})\big)}^{\text{The `margin of error'}}.</me>
+        <p>
+          For an approximate <m>95</m>% CI, the multiplier is about <m>2</m> (since about <m>95</m>% of values are within two standard deviations of the mean, from the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule).
+        </p>
+        <definition xml:id="def-confidence-intervalmu">
+          <title>Confidence interval for $\mu$</title>
+          <statement>
+            <p>
+              A <em>confidence interval</em> (CI) for the unknown value of the population mean <m></m> is where <m>\big( multiplier s.e.(\hat{p}))</m> is the <em>margin of error</em>, and <m>s.e.(\bar{x})</m> is the <em>standard error</em> of <m>\bar{x}</m> (see Equation <xref ref="eq-stderrorxbar-ci"/>), where <m>\bar{x}</m> is the sample mean, and <m>n</m> is the sample size. For an <em>approximate</em> <m>95</m>% CI, the multiplier is <m>2</m>.
+            </p>
+          </statement>
+        </definition>
+        <definition xml:id="def-confidence-intervalmu">
+          <title>Confidence interval for the population mean</title>
+          <statement>
+            <p>
+              A <em>confidence interval</em> (CI) for the unknown value of the population mean <m></m> is where <m>\big( multiplier s.e.(\hat{p}))</m> is the <em>margin of error</em>, and <m>s.e.(\bar{x})</m> is the <em>standard error</em> of <m>\bar{x}</m> (see Equation <xref ref="eq-stderrorxbar-ci"/>), where <m>\bar{x}</m> is the sample mean, and <m>n</m> is the sample size. For an <em>approximate</em> <m>95</m>% CI, the multiplier is <m>2</m>.
+            </p>
+          </statement>
+        </definition>
+        <p>
+          CIs are often <m>95</m>% CIs, but any level of confidence can be used (with the appropriate multiplier). In this book, a multiplier of <m>2</m> is used when <em>approximate</em> <m>95</m>% CIs are created manually, and otherwise software is used.<idx>Software output</idx> Commonly, CIs are computed at <m>90</m>%, <m>95</m>% and <m>99</m>% confidence levels.
+        </p>
+        <note>
+          <p>
+            In Chap. <xref ref="sec-ci-one-proportion"/>, the multiplier was a <m>z</m>-score, and approximate values for the multiplier were found using the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule.
+          </p>
+          <p>
+            However, when computing the CI for a sample mean, the multiplier is <em>not</em> a <m>z</m>-score. The multiplier would be a <m>z</m>-score if the value of the <em>population</em> standard deviation was known (e.g., the situation in Sect. <xref ref="sec-sampling-dist-sample-mean-sigma-known"/>). When <m></m> is unknown (almost always), and the <em>sample</em> standard deviation is used instead, the multiplier is a <m>t</m>-score (Sect. <xref ref="sec-tscores"/>).<idx>t-score</idx>
+          </p>
+          <p>
+            The values of <m>t</m>- and <m>z</m>-multipliers are <em>very</em> similar, and (except for small sample sizes) using an approximate multiplier of <m>2</m> is reasonable for computing <em>approximate</em> <m>95</m>% CIs in either case.
+          </p>
+        </note>
+        <p>
+          Pretend for the moment that the value of <m></m> was unknown, and we tossed a die <m>25</m> times, and found <m>\bar{x} = 3.2</m> and <m>s = 2.5</m>. Then,
+        </p>
+        <me>\text{s.e.}(\bar{x}) = \frac{s}{\sqrt{n}} = \frac{2.5}{\sqrt{25}} = 0.5.</me>
+        <p>
+          Hence, the sample means vary with an approximate normal distribution, centred around the unknown value of <m></m>, with a standard deviation of <m>s.e.(\bar{x}) = 0.5</m> (Fig. <xref ref="fig-dice-mean-normal"/>).
+        </p>
+        <p>
+          Our estimate of <m>\bar{x} = 3.2</m> may be a bit smaller than the value of <m></m>, or a bit larger than the value of <m></m>; that is, the value of <m></m> is <m>\bar{x}</m>, give-or-take a bit. A range of <m></m> values that are likely to straddle <m>\bar{x}</m> is given by a CI. An <em>approximate</em> <m>95</m>% CI is (using Equation <xref ref="eq-c-imu"/>) from
+        </p>
+      </statement>
+    </definition>
+  </section>
+
+  <section xml:id="sec-cadmium-in-peanuts">
+    <title>Example: cadmium in peanuts</title>
+    <idx><h>Examples</h><h>cadmium in peanuts</h></idx>
+    <p>
+      <xref ref="data-Blair2017-Peanuts"/> evaluated concentrations of pesticides and heavy metals in
+      the U.S. peanut crop. They found the sample mean cadmium concentration was
+      <m>\bar{x} = 0.076</m> ppm with a standard deviation of <m>s = 0.0460</m> ppm,
+      from a sample of <m>290</m> peanuts.
+    </p>
+    <p>
+      The parameter is <m>\mu</m>, the population mean cadmium concentration in peanuts.
+      The approximate 95% CI for the population mean cadmium concentration is from
+      <m>0.0714</m> to <m>0.0822</m> ppm.
+    </p>
+    <p>
+      The sample mean cadmium concentration of peanuts is 0.0768 ppm (<m>n = 290</m>),
+      with an approximate 95% CI from 0.0714 to 0.0822 ppm.
+    </p>
+  </section>
 </chapter>

@@ -1,5 +1,138 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Source: 34-Testing-Selecting.Rmd -->
 <chapter xml:id="ch-34-testing-selecting" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Selecting an analysis</title>
-  <p>Skeleton for <em>34-Testing-Selecting.Rmd</em>. Content to be added.</p>
+    <idx><h>Hypothesis testing</h><h>selecting</h></idx>
+    <idx><h>Confidence intervals</h><h>selecting</h></idx>
+  <objectives xml:id="objectives-ch34">
+    <introduction>
+      <p>So far, you have learnt about the research process, including analysing data using confidence intervals and conducting hypothesis tests. <alert>In this chapter</alert>, you will learn to:</p>
+    </introduction>
+    <ul>
+      <li><p>select the correct analysis.</p></li>
+    </ul>
+  </objectives>
+
+  <section xml:id="sec-about-selecting-analysis">
+    <title>About selecting an appropriate analysis</title>
+    <p>
+      Selecting the correct CI or hypothesis test can be challenging, and this book only describes a few possible scenarios. For the situations studied in this book, identifying the <em>type</em> of RQ (e.g., descriptive or correlational), and the <em>number</em> and <em>type</em> of variables (qualitative or quantitative) is important (Table <xref ref="tab-inference-test-ci2"/>). <em>Appendix <xref ref="sec-statistics-and-parameters"/></em> may also prove useful.
+    </p>
+    <example xml:id="example-selecting-an-analysis">
+      <title>Selecting an analysis</title>
+      <p>
+        <xref ref="bjornsson2021effect"/> studied whether the 'presence of a prehospital physician improves survival from cardiac arrest' (p. 227). They studied 471 cardiac arrests: <m>200</m> treated by prehospital physicians (2004 to 2007), and <m>271</m> treated by emergency medical technicians (2008 to 2014).
+      </p>
+      <p>
+        For each cardiac admission (the unit of analysis), two variables are recorded. <em>Whether a prehospital physician is present</em> (the explanatory variable) is qualitative with two levels (Yes; No). <em>Whether a patient survived</em> (the response variable) is qualitative with two levels (Yes; No). They compared the survival proportions for the two scenarios; this is a <em>relational RQ</em>.
+      </p>
+      <p>
+        To study the <em>proportion</em> of survivors for each scenario, a <m>z</m>-test for the difference between proportions (and corresponding CI) would be used. Alternatively, a <m>^2</m>-test for comparing the odds of survival (and a CI for the OR) could also be used.
+      </p>
+    </example>
+    <example xml:id="example-selecting-an-analysis">
+      <title>Selecting an analysis</title>
+      <p>
+        <xref ref="lyons2023female"/> studied the relationship between the ball release speed (BRS) and the height of female cricket players, and BRS and arm length. Since they are exploring the relationship between two <em>pairs of quantitative variables</em>, both RQs are correlational RQs.
+      </p>
+      <p>
+        If the relationships are approximately linear (determined by examining the two scatterplots), a test for correlations (and corresponding CI) would be used, for one each relationship to be studied. Alternatively, a linear regression model could be fitted (one for each relationship), and a test for the <em>slope</em> of the fitted regression equation (and corresponding CI) could be conducted.
+      </p>
+    </example>
+    <example xml:id="example-selecting-an-analysis">
+      <title>Selecting an analysis</title>
+      <p>
+        <xref ref="hitt2023lead"/> studied the impact of soil lead levels in New Orleans (USA) neighbourhoods on northern mockingbirds (p. 2):
+      </p>
+      <blockquote>
+        <p>We tested the hypothesis that nestling mockingbird lead levels in blood and feathers differ with respect to neighborhood soil lead levels...</p>
+      </blockquote>
+      <p>
+        They compared the mean lead concentration in blood, for birds in neighbourhoods with <em>low</em> and with <em>high</em> lead levels. They also compared the mean lead concentration in feathers, for birds in neighbourhoods with <em>low</em> and <em>high</em> lead levels. These are both <em>relational RQs</em>.
+      </p>
+      <p>
+        For each bird (the unit of analysis), three variables were recorded. The <em>lead levels</em> (the explanatory variable) is qualitative with two levels: high lead-level neighbourhoods, and low lead-level neighbourhoods. The <em>blood lead concentrations</em> (one response variable) is quantitative (continuous). The <em>lead concentrations in feathers</em> (another response variable) is quantitative (continuous).
+      </p>
+      <p>
+        To study the difference between the mean lead concentrations in the two groups, a two-sample <m>t</m>-test for the difference between the means (and the corresponding CI) is needed (provided the statistical validity assumptions are met). One test is needed for comparing blood lead concentrations, and another for comparing concentrations in feathers.
+      </p>
+    </example>
+  </section>
+
+  <exercises xml:id="sec-select-test-exercises">
+    <introduction>
+      <p>Answers to odd-numbered exercises are given at the end of the book.</p>
+    </introduction>
+    <p>
+      [Answers to odd-numbered exercises] are given at the end of the book.
+    </p>
+    <exercise xml:id="exercise-sampling-distribution-a">
+      <p>
+        Identify which of these statistics <em>do not</em> have a sampling distribution well-modelled by a normal distribution. Explain your answer.
+      </p>
+      <ol>
+        <li><p>The difference between two sample means <m>\bar{x}_1 - \bar{x}_2</m>, with samples of size <m>n_1 = 55</m> and <m>n_2 = 61</m>, but slightly right-skewed distributions of the data for each sample.</p></li>
+        <li><p>The sample slope in a regression equation <m>b_1</m>, with an approximate linear relationship between the variables, approximately constant variation in the values of <m>y</m>, and <m>n = 24</m>.</p></li>
+        <li><p>The sample OR, with both samples of size <m>n = 43</m>.</p></li>
+      </ol>
+    </exercise>
+    <exercise xml:id="exercise-sampling-distribution-b">
+      <p>
+        Identify which of these statistics <em>do not</em> have a sampling distribution well-modelled by a normal distribution. Explain your answer.
+      </p>
+      <ol>
+        <li><p>The sample mean of a set of differences <m>\bar{d}</m>, with a sample of <m>n = 32</m> difference, but the distribution of the differences are slightly right-skewed.</p></li>
+        <li><p>The sample correlation coefficient <m>r</m>, with an approximate linear relationship between the variables, approximately constant variation in the values of <m>y</m>, and <m>n = 29</m>.</p></li>
+        <li><p>The sample proportion <m>\hat{p}</m>, with <m>n = 26</m> and <m>\hat{p} = 0.154</m>.</p></li>
+      </ol>
+    </exercise>
+    <exercise xml:id="exercise-method1">
+      <p>
+        Suppose researchers compare the mean number of hours of exercise per week for the same British office workers, both in summer and in winter, to study the mean change.
+      </p>
+      <p>
+        What methods would be a suitable for creating a summary and performing analyses?
+      </p>
+    </exercise>
+    <exercise xml:id="exercise-method2">
+      <p>
+        <xref ref="castro2019sun"/> estimated the difference between the mean number of hours of sunlight exposure per day for physical education teachers and non-physical education teachers in Spain.
+      </p>
+      <p>
+        What methods would be a suitable for creating a summary and performing analyses?
+      </p>
+    </exercise>
+    <exercise xml:id="exercise-method3">
+      <p>
+        Suppose researchers wanted to study the proportion of koalas that live in regions with tree canopies of different heights (classified as Class 1 (highest canopy height) to Class 4 (lowest canopy height)) in the 'core' areas (areas of intensive use and feeding) and non-core areas (based on <xref ref="mitchell2023remote"/>).
+      </p>
+      <p>
+        What methods would be a suitable for creating a summary and performing analyses?
+      </p>
+    </exercise>
+    <exercise xml:id="exercise-method4">
+      <p>
+        <xref ref="data-Chen2018-crocodiles"/> studied the relationship between the mass and the length of crocodile eggs.
+      </p>
+      <p>
+        What methods would be a suitable for creating a summary and performing analyses?
+      </p>
+    </exercise>
+    <exercise xml:id="exercise-method5">
+      <p>
+        <xref ref="meadley2021comparison"/> studied the <em>relationship</em> between maximal aerobic capacity (VO~2peak~) while swimming, and the maximal aerobic capacity while running, in helicopter rescue paramedics.
+      </p>
+      <p>
+        What methods would be a suitable for creating a summary and performing analyses?
+      </p>
+    </exercise>
+    <exercise xml:id="exercise-method6">
+      <p>
+        Suppose researchers are wanting to <em>estimate</em> the difference between the mean number of hours spent on social media for Indian people aged over <m>30</m>, to people aged <m>30</m> and under.
+      </p>
+      <p>
+        What methods would be a suitable for creating a summary and performing analyses?
+      </p>
+    </exercise>
+  </exercises>
 </chapter>

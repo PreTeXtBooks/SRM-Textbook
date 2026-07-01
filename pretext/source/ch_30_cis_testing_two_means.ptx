@@ -1,5 +1,224 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Source: 30-CIsTesting-TwoMeans.Rmd -->
 <chapter xml:id="ch-30-cis-testing-two-means" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Comparing two means: CIs and tests</title>
-  <p>Skeleton for <em>30-CIsTesting-TwoMeans.Rmd</em>. Content to be added.</p>
+    <idx>Difference between means</idx>
+  <objectives xml:id="objectives-ch30">
+    <introduction>
+      <p>You have learnt to ask an RQ, design a study, classify and summarise the data, construct confidence intervals, and conduct hypothesis tests. <alert>In this chapter</alert>, you will learn to:</p>
+    </introduction>
+    <ul>
+      <li><p>identify situations where comparing two means is appropriate.</p></li>
+      <li><p>construct confidence intervals for the difference between two means.</p></li>
+      <li><p>conduct hypothesis tests for comparing two means.</p></li>
+      <li><p>determine whether the conditions for using these methods apply in a given situation.</p></li>
+    </ul>
+  </objectives>
+
+  <section xml:id="sec-two-means-ht-intro">
+    <title>Introduction: garter snakes</title>
+    <p>
+      Some Mexican garter snakes (<em>Thamnophis melanogaster</em>) live in habitats with no crayfish, while some live in habitats with crayfish and hence use crayfish as a food source. <xref ref="manjarrez2017morphological"/> were interested in whether the snakes in these two regions were different:
+    </p>
+    <blockquote>
+      <p>For female Mexican garter snakes, is the mean snout<ndash/>vent length (SVL) different for those in regions with crayfish and without crayfish?</p>
+    </blockquote>
+    <p>
+      Two different groups of snakes are studied, so this is a relational RQ (the study uses a between-individuals comparison<idx><h>Comparison</h><h>between individuals</h></idx>) with no intervention, and the data are shown
+    </p>
+  </section>
+
+  <section xml:id="sec-error-bar-charts">
+    <title>Summarising the data and error bar charts</title>
+    <p>
+      A numerical summary <em>must</em> summarise the difference between the means, because the RQ is about this difference. Both groups should be summarised too.<idx><h>Mean</h><h>difference between</h></idx> The information can be found using software (Fig. <xref ref="fig-snakes-summary-testjamovi"/>),<idx><h>Software output</h><h>comparing two means</h></idx> and compiled into a table (Table <xref ref="tab-snakes-numerical-test"/>). The appropriate summary for graphically summarising the <em>data</em> is (for example) a boxplot (Fig. <xref ref="fig-snakes-errorbar"/>, left panel).<idx><h>Graphs</h><h>boxplot</h></idx>
+    </p>
+    <warning>
+      <p>
+        No sample size or standard deviation is provided for the differences in Table <xref ref="tab-snakes-numerical-test"/>; these make no sense in the context of comparing two means.
+      </p>
+    </warning>
+    <p>
+      Since two groups are being compared, subscripts are used to distinguish between the statistics for the two groups; say, Groups <m>1</m> and <m>2</m> in general (Table <xref ref="tab-ind-sample-notation-ht"/>). Using this notation, the <em>parameter</em> in the RQ is the difference between population means: <m>\mu_1 - \mu_2</m>. As usual, the population values are unknown, so this is estimated using the statistic <m>\bar{x}_1 - \bar{x}_2</m>.
+    </p>
+    <p>
+      For the garter-snakes data, define the differences as the mean for females snakes living in non-crayfish regions (<m>N</m>), <em>minus</em> the mean for female snakes in crayfish regions (<m>C</m>): <m>\mu_N - \mu_C</m>. This is the <em>parameter</em>. By this definition, the differences refer to how much larger (on average) the SVL is for snakes living in non-crayfish regions.
+    </p>
+    <warning>
+      <p>
+        Here the difference is computed as the mean SVL for snakes living in non-crayfish regions, <em>minus</em> the mean SVL for snakes living in crayfish regions. Computing the difference as the mean SVL for snakes in crayfish regions, <em>minus</em> non-crayfish regions is also correct.
+      </p>
+      <p>
+        You need to be clear about how the difference is computed, and be consistent throughout. The <em>meaning</em> of the conclusions will be the same whichever direction is used.
+      </p>
+    </warning>
+    <p>
+      A useful way to compare the means of two (or more) groups is to display the CIs for the means of the groups being compared in an <em>error bar chart</em>.<idx><h>Graphs</h><h>error bar charts</h></idx> Error bars charts display the expected variation <em>in the sample means</em> from sample to sample, while boxplots display the variation <em>in the individual observations</em>. For the garter-snakes data, the error bar chart (Fig. <xref ref="fig-snakes-errorbar"/>, right panel) shows the <m>95</m>% CI for each group; the mean appears as a dot.
+    </p>
+    <p>
+      The two CIs for the SVL are (using information from the bottom table in Fig. <xref ref="fig-snakes-summary-testjamovi"/>):
+    </p>
+    <ul>
+      <li><p>[34mm][l]{Crayfish regions:} <m>34.171 (2 2.112)</m>, or from <m>29.94</m> to <m>38.40</m>.</p></li>
+      <li><p>[34mm][l]{Non-crayfish regions:} <m>42.566 (2 1.216)</m>, or from <m>40.13</m> to <m>45.00</m>.</p></li>
+    </ul>
+    <p>
+      However, the error bar chart, and these CIs, do not give a CI for the <em>difference</em> between the two means, as relevant to the RQ.
+    </p>
+    <example xml:id="example-error-bar-charts2">
+      <title>Error bar charts</title>
+      <p>
+        <xref ref="data-ForestBiomass2017"/> studied the foliage biomass of small-leaved lime trees from three sources: coppices; natural; planted. Three graphical summaries are shown in Fig. <xref ref="fig-lime-trees-box-errorbar"/>: a boxplot (showing the variation in <em>individual</em> trees; left), an error bar chart (showing the variation in the <em>sample means</em>; centre) on the same vertical scale as the boxplot, and the same error bar chart using a more appropriate scale for the error bar plot (right).
+      </p>
+    </example>
+  </section>
+
+  <section xml:id="sec-ci-diff-between-means">
+    <title>Confidence intervals for  _1 - _2</title>
+    <idx><h>Sampling distribution</h><h>comparing two means</h></idx>
+    <idx><h>Confidence intervals</h><h>comparing two means|(</h></idx>
+    <p>
+      Each sample will comprise different snakes, and give different SVLs. The sample means for each group will differ from sample to sample, and the <em>difference</em> between the sample means will be different for each sample also. The <em>difference</em> between the sample means varies from sample to sample, and so has a sampling distribution and a standard error.
+    </p>
+    <definition xml:id="def-sampling-distribution-diff-means">
+      <title>Sampling distribution for the difference between two sample means</title>
+      <statement>
+        <p>
+          The <em>sampling distribution of the difference between two sample means</em> <m>\bar{x}_1</m> and <m>\bar{x}_2</m> is (when the appropriate conditions are met; Sect. <xref ref="sec-validity-two-means"/>) described by:
+        </p>
+        <ul>
+          <li><p>an approximate normal distribution,</p></li>
+          <li><p>centred around a sampling mean whose value is <m>{\mu_1} - {\mu_2}</m>, the difference between the <em>population</em> means,</p></li>
+          <li><p>with a standard deviation, called the standard error of the difference between the means, of <m>.e.(\bar{x}_1 - \bar{x}_2)</m>.</p></li>
+        </ul>
+        <p>
+          The standard error for the difference between the means is found using
+        </p>
+        <me>\text{s.e.}(\bar{x}_1 - \bar{x}_2) = \sqrt{ \text{s.e.}(\bar{x}_1)^2 + \text{s.e.}(\bar{x}_2)^2},</me>
+        <p>
+          though this value will often be <em>given</em> (e.g., on computer output) rather than needing to be computed.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      For the garter-snakes data, the differences between the sample means will have:
+    </p>
+    <ul>
+      <li><p>an approximate normal distribution,</p></li>
+      <li><p>centred around the sampling mean whose value is <m>\mu_N - \mu_C</m>,</p></li>
+      <li><p>with a standard deviation, called the <em>standard error</em> of the difference, of <m>s.e.(\bar{x}_P - \bar{x}_C) = 2.437</m>.</p></li>
+    </ul>
+    <p>
+      The standard error of the difference between the means was computed using
+    </p>
+    <me>\text{s.e.}(\bar{x}_N - \bar{x}_C)   = \sqrt{ \text{s.e.}(\bar{x}_N)^2 + \text{s.e.}(\bar{x}_C)^2}   = \sqrt{ 1.216^2 + 2.1112^2 } = 2.437,</me>
+    <p>
+      the same value shown in the <em>second row</em> of the software output (Fig. <xref ref="fig-snakes-summary-testjamovi"/>).
+    </p>
+    <p>
+      The sampling distribution describes how the values of <m>\bar{x}_N - \bar{x}_C</m> vary from sample to sample. Then, finding a <m>95</m>% CI for the difference between the mean SVLs is similar to the process used in Chap. <xref ref="sec-one-mean-conf-interval"/>, since the sampling distribution has an approximate normal distribution:
+    </p>
+    <me>\text{statistic} \pm \big(\text{multiplier} \times\text{s.e.}(\text{statistic})\big).</me>
+    <p>
+      When the statistic is <m>\bar{x}_P - \bar{x}_C</m>, the approximate <m>95</m>% CI is
+    </p>
+    <me>(\bar{x}_N - \bar{x}_C) \pm \big(2 \times \text{s.e.}(\bar{x}_N - \bar{x}_C)\big).</me>
+    <p>
+      So, in this case, the approximate <m>95</m>% CI is
+    </p>
+    <me>8.394 \pm (2 \times 2.437)</me>
+    <p>
+      or <m>8.394 4.874</m>, after rounding appropriately. We write:
+    </p>
+    <blockquote>
+      <p>The difference between mean SVLs is <m>8.39</m>, shorter for those living in a crayfish region (mean: <m>34.17</m>; s.e.: <m>2.112</m>; <m>n = 35</m>) compared to those <em>not</em> living in a crayfish region (mean: <m>42.57</m>; s.e.: <m>1.216</m>; <m>n = 41</m>), with an <em>approximate</em> <m>95</m>% CI for the difference between mean SVLs from <m>3.52</m> to <m>13.27</m>.</p>
+    </blockquote>
+    <p>
+      The plausible values for the difference between the two population means SVLs are between <m>3.52</m> to <m>13.27</m> (shorter for those living in crayfish regions).
+    </p>
+    <warning>
+      <p>
+        Giving the CI alone is insufficient; the <em>direction</em> in which the differences were calculated must be given, so readers know which group had the higher mean.
+      </p>
+    </warning>
+    <p>
+      Output from software often shows two CIs for the difference between the two means (Fig. <xref ref="fig-snakes-summary-testjamovi"/>). <em>We will use the results from Welch's test (the second row)</em>,<idx>Welch's test</idx> as this row of output is more general, and makes fewer assumptions, than the results in the first row. The information in the second row makes fewer assumptions, and is more widely applicable.
+    </p>
+    <warning>
+      <p>
+        Most software gives <em>two</em> CIs: one assuming the standard deviations in the two groups are the same (Student's), and another <em>not</em> assuming the standard deviations in the two groups are the same (Welch's).
+      </p>
+      <p>
+        We will use the information that does <em>not</em> assume the standard deviations in the two groups are the same. In the software output in Fig. <xref ref="fig-snakes-summary-testjamovi"/>, this is the second row of the top table (labelled 'Welch's <m>t</m>'). (The information in both rows are often similar anyway.)
+      </p>
+    </warning>
+    <p>
+      From the output, the <m>95</m>% CI for the difference is from <m>3.51</m> to <m>13.28</m>. The <em>approximate</em> CI and the <em>exact</em> (from software) CIs are only slightly different, as the samples sizes are not too small. (Recall: the <m>t</m>-multiplier of <m>2</m> is an approximation, based on the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule.) <idx><h>Confidence intervals</h><h>comparing two means|)</h></idx>
+    </p>
+  </section>
+
+  <section xml:id="sec-hypothesis-tests-for-$\mu-1-\mu-2$:-$t$-test-ch30">
+    <title>Hypothesis tests for _1 - _2: t-test</title>
+    <idx><h>Hypothesis testing</h><h>comparing two means|(</h></idx>
+    <p>
+      A hypothesis test can be used to decide if the SVL is different for the two regions. The parameter for the test is <m>\mu_N - \mu_C</m>.
+    </p>
+    <p>
+      As always, the null hypothesis is the default 'no difference, no change, no relationship' position; any difference between the parameter and statistic is due to sampling variation (Sect. <xref ref="sec-about-hypotheses"/>). Hence, the null hypothesis is 'no difference' between the population mean SVL of the two groups:
+    </p>
+    <ul>
+      <li><p><m>H_0</m>: <m>\mu_N - \mu_C = 0</m> (equivalent to <m>\mu_N = \mu_C</m>).</p></li>
+    </ul>
+    <p>
+      From the RQ, the alternative hypothesis is <em>two</em>-tailed:
+    </p>
+    <ul>
+      <li><p><m>H_1</m>: <m>\mu_N - \mu_C 0</m> (equivalent to <m>\mu_N \mu_C</m>).</p></li>
+    </ul>
+    <p>
+      The alternative hypothesis proposes that any difference between the <em>sample</em> means is because a difference really exists between the <em>population means</em>. The alternative hypothesis is two-tailed, based on the RQ.
+    </p>
+    <p>
+      The difference between the sample mean SVLs in the two groups depends on which one of the many possible samples is randomly obtained, <em>even if</em> the difference between the means in the population is zero. The difference between the sample means is <m>8.394</m>, but this difference will vary from sample to sample; that is, <em>sampling variation</em> exists.
+    </p>
+    <p>
+      For the SVL data, the sampling distribution of <m>\bar{x}_N - \bar{x}_C</m> can be described as (see Def. <xref ref="def-sampling-distribution-diff-means"/>):
+    </p>
+    <ul>
+      <li><p>an approximate normal distribution,</p></li>
+      <li><p>centred around the sampling mean whose value is <m>{\mu_{N}} - {\mu_{C}} = 0</m>, the difference between the population means (from <m>H_0</m>),</p></li>
+      <li><p>with a standard deviation of <m>s.e.(\bar{x}_N - \bar{x}_C) = 2.4368</m>.</p></li>
+    </ul>
+    <note>
+      <p>
+        Most software gives <em>two</em> hypothesis test results: one assuming the standard deviations in the two groups are the same, and another <em>not</em> assuming the standard deviations in the two groups are the same.
+      </p>
+      <p>
+        We will use the information that does <em>not</em> assume the standard deviations in the two groups are the same. In the software output in Fig. <xref ref="fig-snakes-summary-testjamovi"/>, this is the second row of the bottom table (labelled 'Welch's <m>t</m>'). (The information in both rows are often similar anyway.)
+      </p>
+    </note>
+    <p>
+      The observed difference between sample means, relative to what was expected, is found by computing the test statistic; in this case, a <m>t</m>-score. The software output (Fig. <xref ref="fig-snakes-summary-testjamovi"/>) gives the <m>t</m>-score, but the <m>t</m>-score can also be computed using the information in Table <xref ref="tab-snakes-numerical-test"/>:<idx>t-score</idx>
+    </p>
+  </section>
+
+  <section xml:id="sec-ch30-supplementary-figures">
+    <title>Supplementary figures and tables</title>
+    <figure xml:id="fig-snakes-errorbar">
+      <caption>Left: boxplot of garter snake SVL data. Right: error bar chart showing 95% CIs for each group.</caption>
+      <image source="fig-snakes-errorbar.png" width="80%"/>
+    </figure>
+    <figure xml:id="fig-snakes-summary-testjamovi">
+      <caption>Jamovi output showing summary statistics and hypothesis test results for the garter snake data.</caption>
+      <image source="fig-snakes-summary-testjamovi.png" width="80%"/>
+    </figure>
+    <table xml:id="tab-snakes-numerical-test">
+      <title>Numerical summaries of garter snake SVL data</title>
+      <tabular>
+        <row header="yes"><cell>Group</cell><cell>n</cell><cell>Mean (cm)</cell><cell>Std dev (cm)</cell><cell>Std error (cm)</cell></row>
+        <row><cell>Female</cell><cell>—</cell><cell>—</cell><cell>—</cell><cell>—</cell></row>
+        <row><cell>Male</cell><cell>—</cell><cell>—</cell><cell>—</cell><cell>—</cell></row>
+      </tabular>
+    </table>
+  </section>
 </chapter>

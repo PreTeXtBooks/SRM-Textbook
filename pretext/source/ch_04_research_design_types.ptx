@@ -588,7 +588,7 @@
     <p>
       Various types of bias are possible, some of which are studied later.
       Maximising internal and external validity reduces bias.
-      Bias may occur during research design, sample selection (<xref ref="sec-selection-bias"/>), data collection (<xref ref="sec-selection-bias"/>), analysis, or interpretation of results (<xref ref="ch-interpretation"/>).
+      Bias may occur during research design, sample selection (<xref ref="sec-selection-bias"/>), data collection (<xref ref="sec-selection-bias"/>), analysis, or interpretation of results (<xref ref="ch-08-research-design-limitations"/>).
       This book only discusses some possible biases.
     </p>
 
@@ -609,7 +609,7 @@
       <ul>
         <li><p>identifying who or what to study, since the whole population cannot be studied (<xref ref="ch-06-research-design-sampling"/>).</p></li>
         <li><p>determining <em>how many</em> individuals to study.
-          (We need to learn more before we can answer this critical question in <xref ref="ch-estimate-sample-size"/>.)</p></li>
+          (We need to learn more before we can answer this critical question in <xref ref="ch-32-sample-size"/>.)</p></li>
       </ul>
     </list>
 

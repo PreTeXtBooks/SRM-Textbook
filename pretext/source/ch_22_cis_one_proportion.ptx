@@ -1,5 +1,273 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Source: 22-CIs-OneProportion.Rmd -->
 <chapter xml:id="ch-22-cis-one-proportion" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Confidence intervals: one proportion</title>
-  <p>Skeleton for <em>22-CIs-OneProportion.Rmd</em>. Content to be added.</p>
+  <objectives xml:id="objectives-ch22">
+    <introduction>
+      <p>So far, you have learnt to ask an RQ, design a study, describe and summarise the data, and model sampling variation. <alert>In this chapter</alert>, you will learn to construct <em>confidence intervals</em> for one proportion. You will learn to:</p>
+    </introduction>
+    <ul>
+      <li><p>identify situations where estimating a proportion is appropriate.</p></li>
+      <li><p>form confidence intervals for one proportion.</p></li>
+      <li><p>determine whether the conditions for using the confidence intervals apply in a given situation.</p></li>
+    </ul>
+  </objectives>
+
+  <section xml:id="sec-ci-one-p-intro">
+    <title>Introduction</title>
+    <image source="Illustrations/pexels-skitterphoto-705171.jpg" width="25%">
+      <description><p>Image.</p></description>
+    </image>
+    <p>
+      Suppose a fair, six-sided die is rolled <m>25</m> times. What proportion of the rolls will produce an even number? That is, what will be the value of the <em>sample proportion</em> of numbers that are even? Of course, no-one knows, because the proportion of rolls that will be even will not be the same for every sample of <m>25</m> rolls. The value of the sample proportion (the statistic) <em>varies</em> from sample to sample: <em>sampling variation</em> exists.
+    </p>
+  </section>
+
+  <section xml:id="sec-sampling-distribution-knownp">
+    <title>Sampling distribution for : for p known</title>
+    <idx><h>Sampling distribution</h><h>one proportion (known\ p)</h></idx>
+    <p>
+      As seen in Chap. <xref ref="sec-sampling-variation"/>, sample statistics often vary with a normal distribution (whose standard deviation is called the <em>standard error</em>). However, being more specific about the details of the normal distribution (such as the values of its mean and standard deviation) is useful.
+    </p>
+    <warning>
+      <p>
+        Remember: studying a sample leads to the following observations:
+      </p>
+      <ul>
+        <li><p>every sample is likely to be different.</p></li>
+        <li><p>we observe just one of the many possible samples.</p></li>
+        <li><p>every sample is likely to yield a different value for the statistic.</p></li>
+        <li><p>we observe just one of the many possible values for the statistic.</p></li>
+      </ul>
+      <p>
+        Since many values for the sample proportion are possible, the values of the sample proportion vary (called <em>sampling variation</em>) and have a <em>distribution</em> (called a <em>sampling distribution</em>).
+      </p>
+    </warning>
+    <p>
+      To better understand the sampling distribution for the proportion of even numbers in <m>25</m> rolls of a die, statistical theory could be used, or thousands of repetitions of a sample of <m>25</m> rolls could be performed, or a computer could <em>simulate</em> many samples of <m>25</m> rolls (like we did for a roulette wheel in Sect. <xref ref="sec-sampling-distribution-proportions"/>).
+    </p>
+    <p>
+      Here, the <em>population proportion</em> of even rolls is <m>p = 0.5</m> (using the classical approach to probability: three of the six faces of the die are even). Each sample of <m>n = 25</m> rolls produces a <em>sample</em> proportion, denoted by <m>\hat{p}</m>, which varies from sample to sample.
+    </p>
+    <note>
+      <p>
+        <m>p</m> refers to the <em>population</em> proportion, and <m>\hat{p}</m> refers to a <em>sample</em> proportion.
+      </p>
+    </note>
+    <p>
+      The sample proportions would be expected to vary around <m>p = 0.5</m> (the <em>population proportion</em>): some values of <m>\hat{p}</m> larger than <m>p</m>, and some smaller than <m>p</m>. The value of the sample proportion in <m>25</m> rolls could be <em>very</em> small or <em>very</em> high by chance, but we wouldn't expect to see that very often. The sample proportions exhibit sampling variation, and the <em>amount</em> of sampling variation is quantified using a <em>standard error</em>.
+    </p>
+    <p>
+      Suppose a fair die was rolled <m>25</m> times, and this random procedure<idx>Random procedure</idx> was repeated <em>thousands</em> of times, and the proportion of even rolls was recorded for every one of those thousands of sets of <m>25</m> rolls. These thousands of sample proportions <m>\hat{p}</m> (one from every sample of <m>n = 25</m> rolls) could be shown using a
+    </p>
+    <p>
+      The shape of the histogram is roughly a normal distribution. The sampling distribution for <m>\hat{p}</m> will always have an approximately normal distribution when certain conditions are met: see Sect. <xref ref="sec-validity-proportions"/>. The mean of this distribution is called the <em>sampling mean</em>, and the standard deviation for this sampling distribution is called the <em>standard error</em>, denoted <m>s.e.(\hat{p})</m> (see Fig. <xref ref="fig-normal-die-theory-ci"/>).
+    </p>
+    <p>
+      More specifically, the <em>values</em> of the mean and standard deviation of the normal distribution
+    </p>
+    <p>
+      can be determined:
+    </p>
+    <ul>
+      <li><p>the <em>sampling mean</em> has the value of <m>p = 0.5</m> (i.e., the average value of <m>\hat{p}</m> is <m>0.5</m>).</p></li>
+      <li><p>the standard deviation, called the <em>standard error</em> <m>s.e.(\hat{p})</m>, has the value $$. (The source of this number will be revealed soon, in Equation <xref ref="eq-std-error-example-die-ci"/>.)</p></li>
+    </ul>
+    <p>
+      This distribution is the <em>sampling distribution</em>, whose standard deviation is called a <em>standard error</em>. A picture of this normal distribution can be drawn (Fig. <xref ref="fig-normal-die-theory-ci"/>). While we still don't know <em>exactly</em> what the next roll will produce, we have some idea of <em>how</em> the sample proportion varies in samples of <m>25</m> rolls. For instance, values of <m>\hat{p}</m> less than <m>0.2</m>, or greater than <m>0.8</m> are unlikely to be observed from a fair die (with <m>p = 0.5</m>) in <m>25</m> rolls.
+    </p>
+    <p>
+      More generally, the sampling distribution of <m>\hat{p}</m> is described as follows.
+    </p>
+    <definition xml:id="def-sampling-dist-prop-ci">
+      <title>Sampling distribution of a sample proportion with $p$ known</title>
+      <statement>
+        <p>
+          When the value of <m>p</m> is <em>known</em>, the <em>sampling distribution of the sample proportion</em> is (when certain conditions are met; Sect. <xref ref="sec-validity-proportions"/>) described by
+        </p>
+        <definition xml:id="def-sampling-dist-prop-ci">
+          <title>Sampling distribution of a sample proportion with population proportion known</title>
+          <statement>
+            <p>
+              When the value of <m>p</m> is <em>known</em>, the <em>sampling distribution of the sample proportion</em> is (when certain conditions are met; Sect. <xref ref="sec-validity-proportions"/>) described by
+            </p>
+            <ul>
+              <li><p>an approximate normal distribution,</p></li>
+              <li><p>centred around the sampling mean whose value is <m>p</m>,</p></li>
+              <li><p>with a standard deviation (called the <em>standard error</em> of <m>\hat{p}</m>), whose value is</p></li>
+            </ul>
+            <p>
+              where <m>n</m> is the size of the sample used to compute <m>\hat{p}</m>, and <m>p</m> is the population proportion.
+            </p>
+          </statement>
+        </definition>
+        <warning>
+          <p>
+            The parameter <m>p</m> and the statistic <m>\hat{p}</m> are both <em>proportions</em>. However, the <em>average value</em> of the sample proportions from all possible samples can be described by a <em>sampling mean</em>, whose value is <m>p</m>. The sampling mean of the sampling distribution is the 'average' value of all possible sample proportions, <m>\hat{p}</m>.
+          </p>
+        </warning>
+        <p>
+          For the die example, where <m>n = 25</m> rolls and <m>p = 0.5</m>, using Equation <xref ref="eq-std-error-pknown-ci"/> gives: This standard error is the standard deviation of the normal distribution in
+        </p>
+        <p>
+          In practice the value of <m>p</m> is almost always unknown. This situation is studied from Sect. <xref ref="sec-sampling-distribution-unknownp"/> onwards.
+        </p>
+        <p><em>Sampling intervals for <m></m></em></p>
+        <p>
+          <idx>Sampling interval</idx>
+        </p>
+        <p>
+          Since the possible values of the sample proportions <m>\hat{p}</m> can be described by an approximate <em>normal distribution</em>, the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule (Def. <xref ref="def-empirical-rule"/>) applies.<idx>68–95–99.7 rule</idx>
+        </p>
+        <p>
+          For example, in Fig. <xref ref="fig-normal-die-theory-ci"/> (where the sampling mean is <m>0.5</m> and the standard error is <m>0.1</m>), about <m>68</m>% of the time a sample of <m>25</m> rolls will have a value of <m>\hat{p}</m> between <m>0.5</m> give-or-take <em>one</em> standard deviation (that is, give-or-take $$).
+        </p>
+        <p>
+          So, about <m>68</m>% of the time, the proportion of even rolls in a sample of <m>25</m> rolls will lie between <m>0.5 - = </m> and <m>0.5 + = </m>. Similarly, about <m>95</m>% of the time, the proportion of even rolls will be between <m>0.5</m> give-or-take <m>(2</m>), or between <me> and </me>.
+        </p>
+        <p>
+          These intervals tell us what values of <m>\hat{p}</m> are likely to be observed in samples of size <m>25</m>. Most of the time (i.e., approximately <m>95</m>% of the time), the value of <m>\hat{p}</m> is expected to be between <m>0.30</m> and <m>0.70</m> (Fig. <xref ref="fig-c-irelationships-si"/>).
+        </p>
+        <p>
+          Formally, the sample proportion <m>\hat{p}</m> is likely to lie within the interval
+        </p>
+        <me>p \pm \big(\text{multiplier} \times \text{s.e.}(\hat{p})\big),</me>
+        <p>
+          where <m>s.e.(\hat{p})</m> is the <em>standard error of the sample proportion</em> (calculated using Equation <xref ref="eq-std-error-pknown-ci"/>). The <em>multiplier</em> is a <m>z</m>-score, whose value depends on how confident we wish to be that the interval contains the value of <m>\hat{p}</m>. For a <m>95</m>% interval, the multiplier is <em>approximately</em> <m>2</m>, based on the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule: approximately <m>95</m>% of observations are within <em>two</em> standard deviations of the value of <m>p</m> (the mean of the normal distribution in Fig. <xref ref="fig-normal-die-theory-ci"/>). That is, the <em>approximate</em> <m>95</m>% sampling interval is:
+        </p>
+        <me>p \pm (2 \times \text{s.e.}(\hat{p}) ).</me>
+        <p>
+          An exact value for the multiplier (i.e., a <m>z</m>-score) can be found using
+        </p>
+        <p>
+          <em>Any</em> level of confidence can be used (but different multipliers are then needed). This interval is called a <em>sampling interval</em>.
+        </p>
+        <warning>
+          <p>
+            The symbol '<m></m>' means 'plus or minus', or (colloquially) 'give-or-take'.
+          </p>
+        </warning>
+        <p><em>Sampling distribution for <m></m>: for <m>p</m> unknown</em></p>
+        <p>
+          <idx><h>Sampling distribution</h><h>one proportion (for a CI)</h></idx>
+        </p>
+        <p>
+          In the die example (Sects. <xref ref="sec-sampling-distribution-knownp"/> and <xref ref="sec-c-ip-knownp"/>), the value of <m>p</m> was known. However, usually the value of <m>p</m> (the <em>parameter</em>) is <em>unknown</em>; after all, the reason for taking a sample is to <em>estimate</em> the unknown value of <m>p</m>. When the value of <m>p</m> is unknown, the standard error is computed using the best available estimate of <m>p</m>, which is <m>\hat{p}</m>.
+        </p>
+        <definition xml:id="def-sampling-distribution-phat">
+          <title>Sampling distribution of a sample proportion with $p$ unknown</title>
+          <statement>
+            <p>
+              When the value of <m>p</m> is <em>unknown</em>, the <em>sampling distribution of the sample proportion</em> is (when certain conditions are met; Sect. <xref ref="sec-validity-proportions"/>) described by
+            </p>
+            <ul>
+              <li><p>an approximate normal distribution,</p></li>
+              <li><p>centred around the sampling mean, whose value is <m>p</m>,</p></li>
+              <li><p>with a standard deviation (called the <em>standard error</em> of <m>\hat{p}</m>) whose value is</p></li>
+            </ul>
+            <p>
+              where <m>n</m> is the size of the sample used to compute <m>\hat{p}</m>, and <m>\hat{p}</m> is the sample proportion. In general, the approximation gets better as the sample size gets larger.
+            </p>
+          </statement>
+        </definition>
+        <definition xml:id="def-sampling-distribution-phat">
+          <title>Sampling distribution of a sample proportion with population proportion unknown</title>
+          <statement>
+            <p>
+              When the value of <m>p</m> is <em>unknown</em>, the <em>sampling distribution of the sample proportion</em> is (when certain conditions are met; Sect. <xref ref="sec-validity-proportions"/>) described by
+            </p>
+            <ul>
+              <li><p>an approximate normal distribution,</p></li>
+              <li><p>centred around the sampling mean, whose value is <m>p</m>,</p></li>
+              <li><p>with a standard deviation (called the <em>standard error</em> of <m>\hat{p}</m>) whose value is</p></li>
+            </ul>
+            <p>
+              where <m>n</m> is the size of the sample used to compute <m>\hat{p}</m>, and <m>\hat{p}</m> is the sample proportion. In general, the approximation gets better as the sample size gets larger.
+            </p>
+          </statement>
+        </definition>
+        <warning>
+          <p>
+            When computing the standard error for a proportion, take care! Make sure you use a <em>proportion</em> in the formula, not a <em>percentage</em> (i.e., <m>0.5</m> rather than <m>50</m>%). Also: don't forget to take the square root.
+          </p>
+        </warning>
+        <p><em>Confidence intervals for <m>p</m></em></p>
+        <p>
+          <idx><h>Confidence intervals</h><h>one proportion|(</h></idx>
+        </p>
+        <p>
+          Let's pretend for the moment that the population proportion of even rolls on a die is <em>unknown</em> (simply to demonstrate ideas). An <em>estimate</em> of the population proportion of even rolls could be found by rolling a die <m>n = 25</m> times, and computing <m>\hat{p}</m> (an estimate of <m>p</m>). Suppose <m>11</m> of the <m>n = 25</m> rolls produce an even number, so <m>\hat{p} = 11/25 = 0.44</m>. The best estimate of <m>p</m> is therefore <m>\hat{p} = 0.44</m>. We might expect the (unknown) value of <m>p</m> to be a little smaller than this estimate <m>\hat{p}</m>, or a little larger.
+        </p>
+        <p>
+          Using Def. <xref ref="def-sampling-distribution-phat"/>, the sample proportions vary with an approximate normal distribution around <m>p</m> (whose value is unknown), with a standard deviation (the standard error) of
+        </p>
+        <me>\text{s.e.}(\hat{p}) = \sqrt{\frac{ 0.44 \times (1 - 0.44)}{25}} = 0.09927739.</me>
+        <p>
+          Previously, the sampling distribution was used to construct a sampling interval that was likely to contain the unknown value of <m>\hat{p}</m>. However, here the value of <m>\hat{p}</m> is known, so an interval is created that is likely to contain the unknown value of <m>p</m> that produced the observed value of <m>\hat{p}</m> (Fig. <xref ref="fig-c-irelationships-ci"/>).
+        </p>
+        <p>
+          The unknown value of <m>p</m> could be a little smaller or a little larger than the value of <m>\hat{p}</m>; the interval is the value of <m>\hat{p}</m>, give-or-take a little. More formally:
+        </p>
+        <me>\hat{p} \pm \big(\text{multiplier}\times\text{s.e.}(\hat{p})\big)</me>
+        <p>
+          for a suitable multiplier. This interval for <m>p</m> is called a <em>confidence interval</em> (or a CI). The multiplier is a <m>z</m>-score, and the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m><idx>68–95–99.7 rule</idx> rule gives approximate values for the multipliers. The give-or-take amount, called the <em>margin of error</em>, is <m>\left(multiplier.e.(\hat{p}))</m>.<idx>Margin of error</idx>
+        </p>
+        <p>
+          Using the approximate multiplier of <m>2</m> (from the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule), the approximate <m>95</m>% CI is
+        </p>
+        <me>0.44 \pm (2 \times 0.099277), \quad\text{or $0.44\pm 0.1986$};</me>
+        <p>
+          that is, the margin of error is <m>0.1986</m>. Computing the two values, the interval is from
+        </p>
+      </statement>
+    </definition>
+  </section>
+
+  <section xml:id="sec-c-ip-knownp">
+    <title>Sampling intervals for <m>\hat{p}</m></title>
+    <p>
+      When <m>p</m> is known, a <em>sampling interval</em> can be constructed to capture most possible
+      values of <m>\hat{p}</m>. Using the 68--95--99.7 rule, an approximate 95% sampling interval is
+    </p>
+    <men xml:id="eq-std-error-pknown-ci">s.e.(\hat{p}) = \sqrt{\frac{p(1-p)}{n}}</men>
+    <figure xml:id="fig-normal-die-theory-ci">
+      <caption>The normal distribution describing how the sample proportion varies for rolling a fair die 25 times.</caption>
+      <image source="fig-normal-die-theory-ci.png" width="80%"/>
+    </figure>
+    <figure xml:id="fig-c-irelationships-ci">
+      <caption>The relationship between confidence level and interval width.</caption>
+      <image source="fig-c-irelationships-ci.png" width="80%"/>
+    </figure>
+    <figure xml:id="fig-c-irelationships-si">
+      <caption>The relationship between sample size and interval width.</caption>
+      <image source="fig-c-irelationships-si.png" width="80%"/>
+    </figure>
+  </section>
+
+  <section xml:id="sec-sampling-distribution-unknownp">
+    <title>Sampling distribution for <m>\hat{p}</m>: for <m>p</m> unknown</title>
+    <idx><h>Sampling distribution</h><h>one proportion (unknown p)</h></idx>
+    <definition xml:id="def-sampling-distribution-phat-unknown">
+      <title>Sampling distribution of a sample proportion with <m>p</m> unknown</title>
+      <statement>
+        <p>
+          When the value of <m>p</m> is <em>unknown</em>, the <em>sampling distribution of the sample
+          proportion</em> is (when certain conditions are met; Sect. <xref ref="sec-validity-proportions"/>)
+          described by an approximate normal distribution centred around the sampling mean whose value is
+          <m>p</m>, with standard error
+          <m>s.e.(\hat{p}) = \sqrt{\hat{p}(1-\hat{p})/n}</m>.
+        </p>
+      </statement>
+    </definition>
+  </section>
+
+  <section xml:id="sec-validity-proportions">
+    <title>Statistical validity conditions</title>
+    <idx>Statistical validity (for inference)!one proportion</idx>
+    <p>
+      The <em>statistical validity conditions</em> for a CI for a single proportion is that both
+      <m>n\hat{p}</m> and <m>n(1-\hat{p})</m> exceed five. When these conditions are met, the
+      normal approximation is adequate.
+    </p>
+  </section>
 </chapter>

@@ -1,5 +1,302 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Source: 17-SummaryComments.Rmd -->
 <chapter xml:id="ch-17-summary-comments" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>More details about tables and graphs</title>
-  <p>Skeleton for <em>17-SummaryComments.Rmd</em>. Content to be added.</p>
+  <objectives xml:id="objectives-ch17">
+    <introduction>
+      <p>So far, you have learnt to ask an RQ, design a study, collect the data, describe the data, and summarise data. <alert>In this chapter</alert>, you will learn to:</p>
+    </introduction>
+    <ul>
+      <li><p>construct clear and informative graphs.</p></li>
+      <li><p>construct clear and informative tables.</p></li>
+    </ul>
+  </objectives>
+
+  <section xml:id="sec-more-tables-graphs-intro">
+    <title>Introduction</title>
+    <p>
+      A summary of the data is important for understanding the data, and for planning the direction of the analysis. In this chapter, we make some general comments for constructing graphs and tables. Always remember:
+    </p>
+    <warning>
+      <p>
+        The purpose of a graph and a table is to display the information in the clearest, simplest possible way, to facilitate understanding the message(s) in the data.
+      </p>
+    </warning>
+  </section>
+
+  <section xml:id="sec-graphs-constructing">
+    <title>More details about preparing graphs</title>
+    <idx><h>Graphs</h><h>preparing</h></idx>
+    <idx><h>Software output</h><h>graphs</h></idx>
+    <idx><h>Graphs</h><h>using software</h></idx>
+    <p>
+      Helping readers to understand the data is the goal of producing a graph. You should be able to sketch graphs by hand, but <em>usually software is used to produce graphs</em>.<idx>Computers and software</idx> Using a computer makes it easy to try different graphs, to change features of graphs, and to produce the best graph possible. When creating graphs, ensure you:
+    </p>
+    <ul>
+      <li><p><em>do</em> make graphs clear and well-labelled.</p></li>
+      <li><p><em>do</em> add informative titles and axis labels.</p></li>
+      <li><p><em>do</em> add units of measurement where necessary.</p></li>
+      <li><p><em>do</em> add informative captions <em>below</em> the figure.</p></li>
+      <li><p><em>do</em> add units of measurement and axis labels where appropriate.</p></li>
+      <li><p><em>do</em> make sure text and details are easy to read.</p></li>
+      <li><p><em>do</em> ensure the axis scales are appropriate.</p></li>
+      <li><p><em>do</em> add any necessary explanations.</p></li>
+      <li><p><em>do</em> make it easy for readers to easily make the important comparisons, as far as possible.</p></li>
+      <li><p><em>do not</em> add artificial third dimensions, or other 'chart junk' <xref ref="su2008s"/>; see Sect. <xref ref="sec-third-dimensions"/>.</p></li>
+      <li><p><em>do not</em> add optical illusions, such as an artificial third dimension.</p></li>
+      <li><p><em>do not</em> use distracting colours and fonts; only use different colours and fonts if necessary, and explain that purpose if it is not clear.</p></li>
+      <li><p><em>do not</em> make errors.</p></li>
+    </ul>
+    <p>
+      Some specific problems to be aware of are discussed in the subsections that follows.
+    </p>
+
+  <subsection xml:id="sec-third-dimensions">
+    <title>Avoid unnecessary third dimensions</title>
+    <p>
+      Graphs should focus on clear communication. One barrier to clear communication is using an unnecessary third dimension. This is poor: such graphs can be misleading and hard to read <xref ref="siegrist1996use"/>.
+    </p>
+    <example xml:id="example-bar2d3d">
+      <title>Two- and three-dimensional plots</title>
+      <p>
+        In the <span style="font-variant:small-caps;">nhanes</span> study <xref ref="data-NHANES3-Data"/>, the age and sex of each participant were recorded. Using Fig. <xref ref="fig-bar3d2d"/> (left panel), can you easily determine if more females or more males are present in each age group?
+      </p>
+      <p>
+        The artificial third dimension makes determining the heights of the bars hard. In contrast, a side-by-side bar graph (Fig. <xref ref="fig-bar3d2d"/>, right panel) makes it clear whether each age group has more females or more males.<idx><h>Graphs</h><h>side-by-side bar chart</h></idx>
+      </p>
+    </example>
+    <p>
+      (ref:NHANES) Two plots of the <span style="font-variant:small-caps;">nhanes</span> participants, divided by age group and sex. Left: a three-dimensional bar chart. Right: a side-by-side bar chart.
+    </p>
+  </subsection>
+
+  <subsection xml:id="sec-overplotting">
+    <title>Avoid overplotting</title>
+    <p>
+      Some plots, such as dot charts and scatterplots, may suffer from <em>overplotting</em>:<idx>Overplotting</idx> when multiple observations have the same (or nearly the same) values, and these cannot be distinguished on the graph. Overplotting can especially be a problem when plotting <em>discrete</em> quantitative data. In many cases (such as dot charts), points can be <em>jittered</em><idx><h>Overplotting</h><h>jittering</h></idx> by adding a small amount of randomness to the observations, or <em>stacked</em>; see Example <xref ref="example-dotchart2d-gorillas"/>.<idx><h>Overplotting</h><h>stacking</h></idx> Jittering is the best option for scatterplots. Overplotted points can change readers' impression of the data, since some observations are obscured and are effectively 'lost' to the reader.
+    </p>
+  </subsection>
+
+  <subsection xml:id="sec-truncating-axes">
+    <title>Take care when truncating axes</title>
+    <p>
+      One common optical illusion occurs when the frequency (or percentage) axis does not start at zero. This is a problem in graphs where the distance represented visually implies the frequency of those observations, as with the count (or percentage) axis in bar charts, dot charts, or histograms. This is <em>not</em> a problem in, for example, boxplots and scatterplots, where the distance of points from zero do not visually imply any quantity of interest.
+    </p>
+    <p>
+      Sometimes, the axes may be truncated intentionally so the differences are easier to see. In these cases, the reader should be alerted that the axes have been truncated for this reason.
+    </p>
+    <example xml:id="example-vertical-truncation-ok">
+      <title>Truncating is not appropriate</title>
+      <p>
+        Consider data recording the number of lung cancer cases in Fredericia in various age groups <xref ref="data-andersen-1977"/>.
+      </p>
+      <p>
+        The graph is visually misleading when the graph does not start at a count of zero, since the height of the bars from the axis visually implies the frequency of those observations.
+      </p>
+    </example>
+    <example xml:id="example-vertical-truncation">
+      <title>Truncating is appropriate</title>
+      <p>
+        Consider data recording the body temperature of <m>n = 130</m> people (<xref ref="data-mackowiak-bodytemp"/>, <xref ref="data-Shoemaker1996-Temperature"/>). A histogram of the data (Fig. <xref ref="fig-histos-temp"/>, left panel) clearly shows the distribution of body temperatures.
+      </p>
+      <p>
+        The vertical axis, displaying the counts, must start at zero since the bar heights visually imply a quantity of interest. However, the horizontal axis starts at <m>35.5</m>^o^C, which does not create any problems as the <em>distances</em> from a temperature of <m>0</m>^o^C do not visually imply any quantity of interest.<idx><h>Graphs</h><h>histogram</h></idx>
+      </p>
+      <p>
+        In contrast, starting the horizontal axis at a temperature of <m>0</m>^o^C (Fig. <xref ref="fig-histos-temp"/>, right panel) makes any details in the histogram difficult to see; the histogram is pointless.
+      </p>
+    </example>
+  </subsection>
+
+  <subsection xml:id="sec-pie-chart-problems">
+    <title>Take care when using pie charts</title>
+    <idx><h>Graphs</h><h>bar chart</h></idx>
+    <idx><h>Graphs</h><h>pie chart</h></idx>
+    <p>
+      As noted in Sect. <xref ref="sec-pie-charts"/>, pie charts may be hard to read: humans compare <em>lengths</em> (bar and dot charts) better than <em>angles</em> (pie charts) <xref ref="data-Friel-Graphs"/>. Pie charts are also difficult to use with levels having zero or small counts.
+    </p>
+    <example xml:id="example-pie-small-counts">
+      <title>Pie charts with small counts</title>
+      <p>
+        <xref ref="data-Solomon2002-ginkgo"/> studied the use of ginkgo for memory enhancement. Caregivers blinded<idx>Blinding</idx> to the treatment (ginkgo or placebo)<idx>Placebo</idx> reported the impact on subjects' memory. The bar chart (Fig. <xref ref="fig-pie-small-counts"/>, left panel), for subjects on the placebo, shows that four of the available categories had zero responses, and one had a very small number of responses (two). The pie chart (right) make the small category difficult to see, and the categories with zero counts impossible to see.
+      </p>
+    </example>
+  </subsection>
+  </section>
+
+  <section xml:id="sec-tables-constructing">
+    <title>More details about preparing tables</title>
+    <idx><h>Tables</h><h>preparing</h></idx>
+    <p>
+      A computer is helpful for constructing tables. Using a computer also makes it easy to try different orientations or layouts. As with graphs, the purpose of tables is to help readers understand the data. When creating numerical summary tables, ensure you:
+    </p>
+    <ul>
+      <li><p><em>do</em> make tables clear and well-labelled.</p></li>
+      <li><p><em>do</em> use clear and informative row and column labels (as necessary).</p></li>
+      <li><p><em>do</em> add units of measurement where necessary.</p></li>
+      <li><p><em>do</em> add informative captions <em>above</em> the table.</p></li>
+      <li><p><em>do</em> add units of measurement and value labels where appropriate.</p></li>
+      <li><p><em>do</em> make sure text and details are easy to read.</p></li>
+      <li><p><em>do</em> round numbers appropriately (don't necessarily use all figures provided by software).</p></li>
+      <li><p><em>do</em> align numbers in the table by decimal point if possible, for easier reading and comparing.</p></li>
+      <li><p><em>do</em> construct the table to allow readers to easily make the important comparisons, as far as possible (space restriction may take precedence, for example).</p></li>
+      <li><p><em>do not</em> use distracting colours and fonts; only use different colours and fonts if necessary, and explain that purpose if it is not clear.</p></li>
+      <li><p><em>do not</em> use vertical lines (in general), and use <em>very few</em> horizontal lines. Horizontal lines can be used to group columns (for example, see Table <xref ref="tab-water-access-summary-comments-table"/>).</p></li>
+    </ul>
+  </section>
+
+  <section xml:id="sec-water-acess-summary">
+    <title>Example: water access</title>
+    <p>
+      <xref ref="lopez2022farmers"/> recorded data about access to water in three rural communities in Cameroon (see Sects. <xref ref="sec-water-access-qual"/> and <xref ref="sec-water-access-quant"/>). The study could be used to determine associations to the incidence of diarrhoea in young children (<m>85</m> households had children under <m>5</m> years of age). Relationships between the incidence of diarrhoea and some other variables appear in Figs. <xref ref="fig-water-access-qual-compare"/> and <xref ref="fig-water-access-compare-quant-figs"/>. A summary table of information can also be constructed (Table <xref ref="tab-water-access-summary-comments-table"/>).
+    </p>
+    <p>
+      In this table, note that:
+    </p>
+    <ul>
+      <li><p>quantitative and qualitative variables are summarised differently, but appropriately.</p></li>
+      <li><p>units of measurements are given where appropriate (i.e., only for age).</p></li>
+      <li><p>numbers in columns are aligned for easier reading and comparing.</p></li>
+    </ul>
+    <p>
+      The table summarises the <em>sample</em>, but RQs are about the <em>population</em>. For example, one relational RQ could be:
+    </p>
+    <blockquote>
+      <p>Is the percentage of households with children under <m>5</m> years of age having diarrhoea the same for households that do and do not keep livestock?</p>
+    </blockquote>
+    <p>
+      Since the observed sample is one of countless possible samples that may have been selected, answering RQs about the population is not straightforward. In the observed sample, <m>85.0</m>% of households that <em>did not</em> keep livestock reported diarrhoea in children under <m>5</m>, while <m>64.6</m>% of households that <em>did</em> keep livestock reported diarrhoea in children under <m>5</m>. That is, a difference is seen <em>in the sample</em>; but RQs ask about the <em>population</em>.
+    </p>
+    <p>
+      Broadly, two possible reasons could explain why the <em>sample</em> percentages of households reporting diarrhoea in children are different:
+    </p>
+    <ol>
+      <li><p><em>The <alert>population</alert> percentages are the same</em>.</p></li>
+    </ol>
+    <p>
+      The <em>sample</em> percentages are <em>different</em> simply because of the households selected in this particular sample. Another sample, with different households, might produce different sample percentages. <em>Sampling variation explains the difference in the sample percentages</em>.
+    </p>
+    <ol>
+      <li><p><em>The <alert>population</alert> percentages are different</em>.</p></li>
+    </ol>
+    <p>
+      The difference between the <em>sample</em> percentages reflects this difference between the <em>population</em> percentages.
+    </p>
+    <p>
+      The difficulty is knowing which of these reasons ('hypotheses')<idx>Hypotheses</idx> is the most likely explanation for the difference between the sample percentages. This question is of prime importance as it answers the RQ. Tools for answering these questions are considered later in this book.
+    </p>
+  </section>
+
+  <reading-questions xml:id="sec-summary-comments-quick-review">
+    <title>Quick review questions</title>
+  </reading-questions>
+
+  <exercises xml:id="sec-summarise-comments-exercises">
+    <introduction>
+      <p>Answers to odd-numbered exercises are given at the end of the book.</p>
+    </introduction>
+    <p>
+      [Answers to odd-numbered exercises] are given at the end of the book.
+    </p>
+    <exercise xml:id="exercise-graphs123">
+      <p>
+        What would be the best graph for displaying the data for these situations?
+      </p>
+      <ol>
+        <li><p>Researchers record the pH of water and the temperature of the water, in various creeks in the north island of New Zealand, to explore the relationship between pH and temperature.</p></li>
+        <li><p>Researchers measure the difference between each swimmers' fastest <m>100</m> time and their fastest <m>200</m> time.</p></li>
+      </ol>
+      <p>
+        The researchers were interested in the average time <em>difference</em>.
+      </p>
+      <ol>
+        <li><p>A research study examined the way in which students usually came to university (bus; private car; carpooling; etc.) and their program of study.</p></li>
+      </ol>
+    </exercise>
+    <exercise xml:id="exercise-graphs456">
+      <p>
+        What would be the best graph for displaying the data for these situations?
+      </p>
+      <ol>
+        <li><p>Researchers record the number of times a specific recycling bin is used each day at a shopping centre, over many days.</p></li>
+        <li><p>Researchers measure the difference between heart rate before and two hours after drinking a cup of coffee.</p></li>
+      </ol>
+      <p>
+        The researchers were interested in the average increase in heart rate.
+      </p>
+      <ol>
+        <li><p>A research study recorded the diet of students (vegan; vegetarian; other) and the cost of groceries in the previous week, for many students.</p></li>
+      </ol>
+      <p>
+        The researchers were exploring if there was any relationship between diet and cost of groceries.
+      </p>
+    </exercise>
+    <exercise xml:id="exercise-graphs-lime-trees">
+      <p>
+        <xref ref="data-ForestBiomass2017"/> recorded these variables for <m>385</m> lime trees in Russia: the foliage biomass (in kg; the response variable); the tree diameter (in cm; the explanatory variable); the age of the tree (in years); and the origin of the tree (one of Coppice, Natural, or Planted).
+      </p>
+      <p>
+        The purpose of the study is to estimate the foliage biomass from the tree diameter, in the presence of some extraneous variables. What graphs would be useful?
+      </p>
+    </exercise>
+    <exercise xml:id="exercise-graph-nitrogen-in-soil">
+      <p>
+        <xref ref="data-Lane2002-GLMsoilscience"/> recorded the soil nitrogen after applying different fertiliser doses. The researchers recorded:
+      </p>
+      <ul>
+        <li><p>the fertiliser dose, in kilograms of nitrogen per hectare;</p></li>
+        <li><p>the soil nitrogen, in kilograms of nitrogen per hectare; and</p></li>
+        <li><p>the fertiliser source; one of 'inorganic' or 'organic'.</p></li>
+      </ul>
+      <p>
+        What graphs would be useful for understanding the data?
+      </p>
+    </exercise>
+    <exercise xml:id="exercise-graph-noisy-miners">
+      <p>
+        <xref ref="data-Maron-eucthreshold"/> counted the number of noisy miners (an Australian bird) and eucalyptus trees in random quadrats. Critique the graph (not given by <xref ref="data-Maron-eucthreshold"/>!) of the data (Fig. <xref ref="fig-miner-crab-plot"/>, left panel).
+      </p>
+    </exercise>
+    <exercise xml:id="exercise-graph-horseshoe-crabs">
+      <p>
+        <xref ref="data-brockmann-crabs"/> recorded, among other variables, the colour of the carapace ('Light medium', 'Medium', 'Dark medium' or 'Dark') and the condition of the carapace ('Both OK', 'One OK', 'None OK') of <m>n = 173</m> female horseshoe crabs. Critique the scatterplot (Fig. <xref ref="fig-miner-crab-plot"/>, right panel) used to explore the data.
+      </p>
+    </exercise>
+    <exercise xml:id="exercise-graphs-madrs">
+      <p>
+        <xref ref="data-Danielsson2014-Depression"/> examined the change in <span style="font-variant:small-caps;">madrs</span> (a <em>quantitative</em> scale measuring level of depression) and treatment group (whether each person was treated using: exercise; body awareness; or advice).
+      </p>
+      <ol>
+        <li><p>What is the response variable?</p></li>
+        <li><p>What is the explanatory variable?</p></li>
+        <li><p>What graphs would be useful for exploring the data and the relationships of interest?</p></li>
+      </ol>
+    </exercise>
+    <exercise xml:id="exercise-graphs-skew-bar">
+      <p>
+        A study of high-performance athletes at the <em>Australian Institute of Sport</em> (AIS) <xref ref="data-Telford1991-sexsportsize"/> recorded numerous variables about athletes. A plot for the sports played by the athletes is shown in Fig. <xref ref="fig-ais-sport-barchart"/>. How would you describe the data: left skewed, right skewed, approximately symmetrical? Or something else?
+      </p>
+    </exercise>
+    <exercise xml:id="exercise-graphs-typing">
+      <p>
+        [<em>Dataset</em>: <c>Typing</c>] The <c>Typing</c> dataset <xref ref="pinet2022typing"/> contains four variables: typing speed (<c>mTS</c>), typing accuracy (<c>mAcc</c>), age (<c>Age</c>), and sex (<c>Sex</c>) for <m>1 301</m> students. Produce graphs necessary for understanding the data, making sure to explain what they reveal.
+      </p>
+      <p>
+        Does the mean typing speed or mean accuracy appear to differ by the age or sex of the student? What other questions could be useful to ask about the data?
+      </p>
+    </exercise>
+    <exercise xml:id="exercise-write-exercises-nhanes">
+      <p>
+        [<em>Dataset</em>: <c>NHANES</c>] Consider the <span style="font-variant:small-caps;">nhanes</span> data. In preparing a paper about this study, suppose Fig. <xref ref="fig-results-plot"/> and Tables <xref ref="tab-results-table"/> were produced. Critique these.
+      </p>
+    </exercise>
+  </exercises>
+
+  <section xml:id="sec-ch17-supplementary-figures">
+    <title>Supplementary figures</title>
+    <figure xml:id="fig-histos-temp">
+      <caption>Histograms of body temperature data (left: starting from minimum value; right: starting from 0°C).</caption>
+      <image source="fig-histos-temp.png" width="80%"/>
+    </figure>
+  </section>
 </chapter>

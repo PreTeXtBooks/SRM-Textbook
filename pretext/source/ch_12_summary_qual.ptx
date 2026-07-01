@@ -1,5 +1,814 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Source: 12-SummaryQual.Rmd -->
 <chapter xml:id="ch-12-summary-qual" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Summarising qualitative data</title>
-  <p>Skeleton for <em>12-SummaryQual.Rmd</em>. Content to be added.</p>
+    <idx><h>Qualitative data</h><h>summarising|(</h></idx>
+  <objectives xml:id="objectives-ch12">
+    <introduction>
+      <p>So far, you have learnt to ask an RQ, design a study, collect the data, classify the data, and summarise quantitative data <alert>In this chapter</alert>, you will learn to:</p>
+    </introduction>
+    <ul>
+      <li><p>summarise qualitative data using the appropriate graphs.</p></li>
+      <li><p>summarise qualitative data using, for example, medians, proportions and odds.</p></li>
+    </ul>
+  </objectives>
+
+  <section xml:id="sec-summary-qual-intro">
+    <title>Introduction</title>
+    <p>
+      Many quantitative research studies involve qualitative variables. Except for very small amounts of data, understanding the data is difficult without a summary. As with quantitative data, qualitative data can be understood by knowing how often values of the variables appear. This is called the <em>distribution</em> of the data (Def. <xref ref="def-distribution"/>).<idx><h>Distribution</h><h>qualitative data</h></idx>
+    </p>
+    <p>
+      The distribution can be displayed using a frequency table (Sect. <xref ref="sec-qualitative-tables"/>) or a graph (Sect. <xref ref="sec-qualitative-graphs"/>). Qualitative data can be summarised by finding modes or, for ordinal qualitative data, using medians (Sect. <xref ref="sec-summarise-data-qualitative"/>). The distribution of qualitative data can be summarised numerically by computing proportions, percentages (Sect. <xref ref="sec-qualitative-proportions-percentages"/>) or odds (Sect. <xref ref="sec-qual-odds"/>).
+    </p>
+  </section>
+
+  <section xml:id="sec-qualitative-tables">
+    <title>Frequency tables for qualitative data</title>
+    <idx><h>Qualitative data</h><h>frequency table</h></idx>
+    <p>
+      Qualitative data are typically collated in a <em>frequency table</em>.<idx><h>Frequency table</h><h>qualitative data</h></idx> The rows (or the columns) should list the <em>levels</em> of the variable, and these should be <em>exhaustive</em> (cover all levels) and <em>mutually exclusive</em> (observations belong to only one level).<idx><h>Qualitative data</h><h>levels</h></idx> The number of observations or the percentage of observations (or both) are then given for each level.
+    </p>
+    <p>
+      For <em>nominal</em> data, the levels of the variables can be displayed in alphabetical order, in order of size, in order of personal preference, or in any other order: use the order most likely to be useful to readers. For <em>ordinal</em> data, the natural order of the levels should almost always be used.
+    </p>
+    <example xml:id="example-a-vstudy">
+      <title>Opinions of AV vehicles</title>
+      <p>
+        <xref ref="pyrialakou2020perceptions"/> surveyed <m>400</m> residents of Phoenix (Arizona) about their opinions of autonomous vehicles (AVs). Demographic information (Table <xref ref="tab-a-vtable1"/>) and respondents' opinions of sharing roads with AVs (Table <xref ref="tab-a-vtable2"/>) were recorded.
+      </p>
+      <p>
+        The gender of the respondent is <em>nominal</em> (two levels), while the age group is <em>ordinal</em> (six levels). The levels are shown in the rows. The three questions about safety (Table <xref ref="tab-a-vtable2"/>) all yield <em>ordinal</em> responses (five levels, in columns).
+      </p>
+    </example>
+    <table xml:id="tab-a-vtable1">
+      <title>Demographic information for the AV data for <m>400</m> respondents.</title>
+      <tabular halign="center" top="medium" bottom="medium">
+        <row header="yes" bottom="medium">
+          <cell></cell>
+          <cell><em>Number</em></cell>
+          <cell><em>Percentage</em></cell>
+        </row>
+        <row>
+          <cell colspan="3"><em>Gender</em></cell>
+        </row>
+        <row>
+          <cell>Female</cell><cell><m>204</m></cell><cell><m>51</m></cell>
+        </row>
+        <row>
+          <cell>Male</cell><cell><m>196</m></cell><cell><m>49</m></cell>
+        </row>
+        <row>
+          <cell colspan="3"><em>Age group</em></cell>
+        </row>
+        <row>
+          <cell><m>18</m> to <m>24</m></cell><cell><m>52</m></cell><cell><m>13</m></cell>
+        </row>
+        <row>
+          <cell><m>25</m> to <m>34</m></cell><cell><m>76</m></cell><cell><m>19</m></cell>
+        </row>
+        <row>
+          <cell><m>35</m> to <m>44</m></cell><cell><m>76</m></cell><cell><m>19</m></cell>
+        </row>
+        <row>
+          <cell><m>45</m> to <m>54</m></cell><cell><m>72</m></cell><cell><m>18</m></cell>
+        </row>
+        <row>
+          <cell><m>55</m> to <m>64</m></cell><cell><m>56</m></cell><cell><m>14</m></cell>
+        </row>
+        <row>
+          <cell><m>65+</m></cell><cell><m>68</m></cell><cell><m>17</m></cell>
+        </row>
+      </tabular>
+    </table>
+    <table xml:id="tab-a-vtable2">
+      <title>Responses to three scenarios for the AV data for <m>400</m> respondents (rows sum to <m>n = 400</m>).</title>
+      <tabular halign="center" top="medium" bottom="medium">
+        <row header="yes" bottom="medium">
+          <cell></cell>
+          <cell colspan="2"><em>Unsafe</em></cell>
+          <cell colspan="2"><em>Somewhat unsafe</em></cell>
+          <cell colspan="2"><em>Neutral</em></cell>
+          <cell colspan="2"><em>Somewhat safe</em></cell>
+          <cell colspan="2"><em>Safe</em></cell>
+        </row>
+        <row header="yes" bottom="medium">
+          <cell></cell>
+          <cell><em><m>n</m></em></cell><cell><em>%</em></cell>
+          <cell><em><m>n</m></em></cell><cell><em>%</em></cell>
+          <cell><em><m>n</m></em></cell><cell><em>%</em></cell>
+          <cell><em><m>n</m></em></cell><cell><em>%</em></cell>
+          <cell><em><m>n</m></em></cell><cell><em>%</em></cell>
+        </row>
+        <row>
+          <cell>Driving near an AV</cell>
+          <cell><m>58</m></cell><cell><m>15</m></cell>
+          <cell><m>79</m></cell><cell><m>20</m></cell>
+          <cell><m>96</m></cell><cell><m>24</m></cell>
+          <cell><m>97</m></cell><cell><m>24</m></cell>
+          <cell><m>70</m></cell><cell><m>18</m></cell>
+        </row>
+        <row>
+          <cell>Cycling near an AV</cell>
+          <cell><m>77</m></cell><cell><m>19</m></cell>
+          <cell><m>104</m></cell><cell><m>26</m></cell>
+          <cell><m>87</m></cell><cell><m>22</m></cell>
+          <cell><m>76</m></cell><cell><m>19</m></cell>
+          <cell><m>56</m></cell><cell><m>14</m></cell>
+        </row>
+        <row>
+          <cell>Walking near an AV</cell>
+          <cell><m>63</m></cell><cell><m>16</m></cell>
+          <cell><m>86</m></cell><cell><m>22</m></cell>
+          <cell><m>103</m></cell><cell><m>26</m></cell>
+          <cell><m>82</m></cell><cell><m>21</m></cell>
+          <cell><m>66</m></cell><cell><m>17</m></cell>
+        </row>
+      </tabular>
+    </table>
+  </section>
+
+  <section xml:id="sec-qualitative-graphs">
+    <title>Graphs for qualitative data</title>
+    <idx><h>Qualitative data</h><h>graphs|(</h></idx>
+    <idx><h>Graphs</h><h>qualitative data</h></idx>
+    <idx><h>Software output</h><h>graphs</h></idx>
+    <p>
+      Three options for graphing qualitative data include:
+    </p>
+    <ul>
+      <li><p><em>dot charts</em> (Sect. <xref ref="sec-dot-charts-one-qual"/>), which are usually a good choice.</p></li>
+      <li><p><em>bar charts</em> (Sect, <xref ref="sec-bar-charts"/>), which are usually a good choice.</p></li>
+      <li><p><em>pie charts</em> (Sect. <xref ref="sec-pie-charts"/>), which are only useful in special circumstances, and can be hard to interpret.</p></li>
+    </ul>
+    <p>
+      Sometimes these graphs are used for <em>discrete</em> quantitative data with a small number of possible options.
+    </p>
+    <warning>
+      <p>
+        The purpose of a graph is to display the information in the clearest, simplest possible way, to facilitate understanding the message(s) in the data.
+      </p>
+    </warning>
+
+  <subsection xml:id="sec-dot-charts-one-qual">
+    <title>Dot charts (qualitative data)</title>
+    <idx><h>Graphs</h><h>dot chart!one qualitative variable</h></idx>
+    <p>
+      Dot charts indicate the counts (or corresponding percentages) in each level using dots (or some other symbol). The levels can be on the horizontal or vertical axis, and the counts or percentages on the other. Placing the levels on the vertical axis often makes for easier reading, and space for long labels.
+    </p>
+    <example xml:id="example-dot-plots-qual">
+      <title>Dot plots</title>
+      <p>
+        For the AV study in Example <xref ref="example-a-vstudy"/>, a dot chart of the age group of respondents is shown in Fig. <xref ref="fig-av-dot-bar-pie"/> (top left panel).
+      </p>
+    </example>
+    <p>
+      For dot charts:
+    </p>
+    <ul>
+      <li><p>place the qualitative variable on the horizontal or vertical axis (and label with the levels of the variable).</p></li>
+      <li><p>use counts or percentages on the other axis.</p></li>
+      <li><p>for nominal data, <em>think about the most helpful order</em> for the levels.</p></li>
+    </ul>
+    <warning>
+      <p>
+        The axis displaying the counts (or percentages) should <em>start from zero</em>, since the distance of the dots from the axis visually implies the frequency of those observations (see Example <xref ref="example-vertical-truncation"/>).
+      </p>
+    </warning>
+  </subsection>
+
+  <subsection xml:id="sec-bar-charts">
+    <title>Bar charts</title>
+    <idx><h>Graphs</h><h>bar chart</h></idx>
+    <p>
+      Bar charts use bars to represent the number (or percentage) of observations in each level. As with dot charts, the levels can be on the horizontal or vertical axis, but placing the level names on the vertical axis often makes for easier reading, and room for long labels.
+    </p>
+    <example xml:id="example-barchart-qual">
+      <title>Bar charts</title>
+      <p>
+        For the AV study in Example <xref ref="example-a-vstudy"/>, a bar chart of the age group of respondents is shown in Fig. <xref ref="fig-av-dot-bar-pie"/> (top right panel).
+      </p>
+    </example>
+    <p>
+      For bar charts:
+    </p>
+    <ul>
+      <li><p>place the qualitative variable on the horizontal or vertical axis (and label with the levels of the variable).</p></li>
+      <li><p>use counts or percentages on the other axis.</p></li>
+      <li><p>for nominal data, levels can be ordered any way: <em>think about the most helpful order</em>.</p></li>
+      <li><p>bars have gaps between bars, as the bars represent distinct categories.</p></li>
+    </ul>
+    <p>
+      In contrast to bar charts, bars in histograms are butted together (except when an interval has a zero count), as the variable-axis usually represents a continuous numerical scale.
+    </p>
+    <warning>
+      <p>
+        The axis displaying the counts (or percentages) should <em>start from zero</em>, since the height of the bars visually implies the frequency of those observations (see Example <xref ref="example-vertical-truncation"/>).
+      </p>
+    </warning>
+  </subsection>
+
+  <subsection xml:id="sec-pie-charts">
+    <title>Pie charts</title>
+    <idx><h>Graphs</h><h>pie chart</h></idx>
+    <p>
+      In pie charts, a circle is divided into segments proportional to the number in each level of the qualitative variable.
+    </p>
+    <example xml:id="example-pie-charts-qual">
+      <title>Pie charts</title>
+      <p>
+        For the AV study in Example <xref ref="example-a-vstudy"/>, a pie chart of the age group of respondents is shown in Fig. <xref ref="fig-av-dot-bar-pie"/> (bottom left panel).
+      </p>
+    </example>
+    <p>
+      Using pie charts may present challenges (see Sect. <xref ref="sec-pie-chart-problems"/>):
+    </p>
+    <ul>
+      <li><p>pie charts only work when graphing parts of a whole.</p></li>
+      <li><p>pie charts only work when <em>all</em> options are present ('exhaustive').</p></li>
+      <li><p>pie charts are difficult to use with levels having zero or small counts (see Example <xref ref="fig-pie-small-counts"/>).</p></li>
+      <li><p>pie charts are difficult to interpret when many categories are present.</p></li>
+      <li><p>pie charts are hard to read, as humans compare <em>lengths</em> (bar and dot charts) better than <em>angles</em> (pie charts) <xref ref="data-Friel-Graphs"/>.</p></li>
+    </ul>
+    <example xml:id="example-pie-unsuitable">
+      <title>Pie chart unsuitable</title>
+      <p>
+        Consider studying the percentage of people who use Firefox, Chrome, and Safari as web browsers. A pie chart is <em>not suitable</em> for displaying the data, as people can use more than one of these browsers (i.e., the options are not <em>mutually exclusive</em>) nor <em>exhaustive</em> (i.e., other options exist).
+      </p>
+    </example>
+  </subsection>
+
+  <subsection xml:id="sec-compare-bar-pie">
+    <title>Comparing dot, bar and pie charts</title>
+    <idx><h>Graphs</h><h>bar chart!compared to other graphs</h></idx>
+    <idx><h>Graphs</h><h>pie chart!compared to other graphs</h></idx>
+    <idx><h>Graphs</h><h>dot chart!compared to other graphs</h></idx>
+    <p>
+      In the pie chart (Fig. <xref ref="fig-av-dot-bar-pie"/>, bottom left panel), determining <em>which</em> age groups have the fewest and most respondents is hard. The equivalent bar chart or dot chart makes the comparison easy. The <em>tilted</em> pie chart makes this comparison even harder (Fig. <xref ref="fig-av-dot-bar-pie"/>, bottom right panel).
+    </p>
+    <p>
+      Recall that the <em>purpose of a graph is to display the information in the clearest, simplest possible way, to facilitate understanding the message(s) in the data</em>. A pie chart often makes the message hard to see <xref ref="siegrist1996use"/>.<idx><h>Graphs</h><h>pie chart!warnings</h></idx> <idx><h>Qualitative data</h><h>graphs|)</h></idx>
+    </p>
+    <figure xml:id="fig-av-dot-bar-pie">
+      <caption>The age group of respondents in the AV study. All graphs present the same data.</caption>
+      <description><p>Four panels showing the age group of AV study respondents: top left is a dot chart, top right is a bar chart, bottom left is a pie chart, and bottom right is a tilted (3D) pie chart.</p></description>
+    </figure>
+    <p>
+      <url href="https://learningapps.org/watch?v=pf4om4k5t22" visual="learningapps.org/watch?v=pf4om4k5t22">Interactive activity: dot charts, bar charts and pie charts.</url>
+    </p>
+  </subsection>
+  </section>
+
+  <section xml:id="sec-qualitative-proportions-percentages">
+    <title>Numerical summary: proportions and percentages</title>
+    <idx>Proportions</idx>
+    <idx>Percentages</idx>
+    <p>
+      Qualitative data can be summarised numerically by using the <em>proportion</em> or <em>percentage</em> of individuals in each level. These can be given instead of, or with, the counts (Tables <xref ref="tab-a-vtable1"/> and <xref ref="tab-a-vtable2"/>).
+    </p>
+    <definition xml:id="def-proportion">
+      <title>Proportion</title>
+      <statement>
+        <p>
+          A <em>proportion</em> is a fraction out of a total, and is a number between <m>0</m> and <m>1</m>.
+        </p>
+      </statement>
+    </definition>
+    <definition xml:id="def-percentage">
+      <title>Percentages</title>
+      <statement>
+        <p>
+          A <em>percentage</em> is a proportion, multiplied by <m>100</m>. In this context, percentages are numbers between <m>0</m>% and <m>100</m>%.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      <em>Population</em> proportions are almost always unknown. Instead, the <em>population</em> proportion (the parameter), denoted <m>p</m>, is estimated by a <em>sample</em> proportion (a statistic), denoted by <m>\hat{p}</m>.<idx>Estimate</idx>
+    </p>
+    <aside>
+      <p>
+        The symbol <m>\hat{p}</m> is pronounced 'pee-hat', and refers to a <em>sample</em> proportion. The caret above the <m>p</m> is called a 'hat'.
+      </p>
+    </aside>
+    <warning>
+      <p>
+        As always, only one possible sample is studied. <em>Statistics</em> are estimates of <em>parameters</em>, and the value of the <em>statistic</em> is not the same for every possible <em>sample</em>.
+      </p>
+    </warning>
+    <example xml:id="example-av-proportions-percentages">
+      <title>Proportions and percentages</title>
+      <p>
+        Consider the AV data in Table <xref ref="tab-a-vtable1"/>, summarising results from a sample of <m>n = 400</m> respondents. The <em>sample proportion</em> of respondents aged <m>25</m> to <m>34</m> is <m>76 \div 400</m>, or <m>0.19</m>. The <em>sample percentage</em> of respondents aged <m>25</m> to <m>34</m> is <m>0.19 \times 100</m>, or <m>19</m>%, as in the table.
+      </p>
+    </example>
+  </section>
+
+  <section xml:id="sec-qual-odds">
+    <title>Numerical summary: odds</title>
+    <idx>Odds</idx>
+    <p>
+      For the AV data in Table <xref ref="tab-a-vtable1"/>, the number of females is slightly larger than the number of males. Specifically, the <em>ratio</em> of females to males is <m>204 \div 196 = 1.04</m>; that is, there are <m>1.04</m> <em>times</em> as many females as males. This value of <m>1.04</m> is the <em>odds</em> that a respondent is female in the sample. An alternative interpretation is that there are <m>1.04 \times 100 = 104</m> females for every <m>100</m> males in the sample.
+    </p>
+    <p>
+      While proportions and percentages are computed as the number of results of interest divided by the <em>total number</em>, the <em>odds</em> are computed as the number of results of interest divided by <em>the remaining number</em> (Fig. <xref ref="fig-prop-odds"/>).
+    </p>
+    <definition xml:id="def-odds">
+      <title>Odds</title>
+      <statement>
+        <p>
+          The <em>odds</em> are the number (or proportion, or percentage) of results of interest, divided by the remaining number (or proportion, or percentage) of results:
+        </p>
+        <me>\text{Odds} = \frac{\text{Number of results of interest}}{\text{Remaining number of results}}</me>
+        <p>
+          or (equivalently)
+        </p>
+        <me>\text{Odds}           =             \frac{\text{Proportion of results of interest}}                  {\text{Remaining proportion of results}}           =             \frac{\text{Percentage of results of interest}}                  {\text{Remaining percentage of results}}.</me>
+        <p>
+          The <em>odds</em> are how many <em>times</em> the result of interest <em>occurs</em> compared to the number of times the results of interest does <em>not occur</em>.
+        </p>
+      </statement>
+    </definition>
+    <figure xml:id="fig-prop-odds">
+      <caption>Proportions (left) are the number of interest divided by the total number. Odds (right) are the number of interest divided by the rest.</caption>
+      <description><p>A diagram comparing proportions and odds: the left side shows a fraction with the count of interest over the total, the right side shows the count of interest over the remaining count.</p></description>
+    </figure>
+    <example xml:id="example-av-odds-male">
+      <title>Interpreting odds</title>
+      <p>
+        The AV data (Table <xref ref="tab-a-vtable1"/>) includes <m>204</m> females and <m>196</m> males. The <em>odds</em> that a respondent is female is <m>1.04</m>. The odds are greater than one, as there are more females than males. Alternatively, there are <m>104</m> females for every <m>100</m> males.
+      </p>
+      <p>
+        The <em>odds</em> that a respondent is male is <m>196/204 = 0.96</m>; there are <m>0.96</m> <em>times</em> the number of males as females. The odds are less than one, as there are fewer males than females. Alternatively, there are <m>96</m> males for every <m>100</m> females.
+      </p>
+    </example>
+    <p>
+      When interpreting odds:
+    </p>
+    <ul>
+      <li><p>odds <em>greater</em> than <m>1</m> mean the result of interest is <em>more</em> likely to happen than not.</p></li>
+      <li><p>odds <em>equal to</em> <m>1</m> mean the result of interest is <em>equally likely</em> to happen as not.</p></li>
+      <li><p>odds <em>less</em> than <m>1</m> mean the result of interest is <em>less</em> likely to happen than not.</p></li>
+    </ul>
+    <example xml:id="example-av-odds">
+      <title>Odds and percentages</title>
+      <p>
+        Consider the AV data in Table <xref ref="tab-a-vtable1"/>, summarising results from a sample of <m>n = 400</m> respondents.
+      </p>
+      <p>
+        The percentage of respondents aged <m>18</m> to <m>24</m> is <m>52/400 \times 100 = 13</m>%. The <em>odds</em> that a respondent is aged <m>18</m> to <m>24</m> is <m>52/(400 - 52) = 0.15</m>. This means the number of respondents aged <m>18</m> to <m>24</m> is <m>0.15</m> times (i.e., less then) the number of respondents aged over <m>24</m>.
+      </p>
+      <p>
+        The <em>odds</em> that a respondent is aged <m>18</m> to <m>54</m> is <m>(52 + 76 + 76 + 72)/(56 + 68) = 2.23</m>. This means the number of respondents aged <m>18</m> to <m>54</m> is <m>2.23</m> times (i.e., greater than) the number of respondents aged <m>55</m> or over.
+      </p>
+    </example>
+    <p>
+      The <em>population</em> odds (the parameter) are almost always unknown, and are estimated by the <em>sample</em> odds (the statistic). No symbol is commonly used to denote odds.
+    </p>
+    <p>
+      Take care: proportions and odds are similar, but are different ways of numerically summarising quantitative data (Fig. <xref ref="fig-prop-odds"/>).
+    </p>
+  </section>
+
+  <section xml:id="sec-summarise-data-qualitative">
+    <title>Describing the distribution: modes and medians</title>
+    <idx><h>Qualitative data</h><h>distribution</h></idx>
+    <p>
+      Graphs are constructed to help readers understand the data, so any important features in the graph should be described. One simple way is to identify the level (or levels) with the <em>most</em> observations. This is called the <em>mode</em>.<idx>Mode</idx>
+    </p>
+    <definition xml:id="def-mode">
+      <title>Mode</title>
+      <statement>
+        <p>
+          A <em>mode</em> is the level (or levels) of a qualitative variable with the most observations.
+        </p>
+      </statement>
+    </definition>
+    <example xml:id="example-ordinal-modes">
+      <title>Modes</title>
+      <p>
+        Consider the data in Tables <xref ref="tab-a-vtable1"/> and <xref ref="tab-a-vtable2"/>:
+      </p>
+      <ul>
+        <li><p>the <em>mode</em> for gender is 'Female' (with <m>204</m> respondents, or <m>51</m>%).</p></li>
+        <li><p>the <em>mode</em> age groups are <m>25</m> to <m>34</m> and <m>35</m> to <m>44</m> (each with <m>19</m> respondents, or <m>4.8</m>%).</p></li>
+        <li><p>the <em>modal</em> response to the question about <em>driving</em> near AVs is 'Somewhat safe'.</p></li>
+        <li><p>the <em>modal</em> response to the question about <em>cycling</em> near AVs is 'Somewhat unsafe'.</p></li>
+        <li><p>the <em>modal</em> response to the question about <em>walking</em> near AVs is 'Neutral'.</p></li>
+      </ul>
+    </example>
+    <p>
+      <em>Medians</em><idx><h>Median</h><h>qualitative ordinal data</h></idx> can be found for <em>ordinal</em> data (but <em>not</em> nominal data), since ordinal data have levels with a natural order. The <em>median</em> is the level in which the middle response is located, when the levels from all individuals are placed in order. The sample median estimates the unknown <em>population</em> median.
+    </p>
+    <warning>
+      <p>
+        Medians can be used to summarise <em>quantitative data</em> and <em>ordinal</em> data, but <em>never</em> nominal data.
+      </p>
+    </warning>
+    <example xml:id="example-ordinal-medians">
+      <title>Medians</title>
+      <p>
+        Consider the data in Tables <xref ref="tab-a-vtable1"/> and <xref ref="tab-a-vtable2"/>. 'Gender' is <em>nominal</em> qualitative, so medians are not appropriate. However, the other variables are <em>ordinal</em>, so medians could be used to describe each variable. Since <m>n = 400</m>, the median response will be halfway between the location of the <m>200</m>th and <m>201</m>st response when ordered:
+      </p>
+      <ul>
+        <li><p>the <em>median</em> age group is <m>35</m> to <m>44</m>.</p></li>
+        <li><p>the <em>median</em> response to the driving-near-AVs question is 'Neutral'.</p></li>
+        <li><p>the <em>median</em> response to the cycling-near-AVs question is 'Neutral'.</p></li>
+        <li><p>the <em>median</em> response to the walking-near-AVs question is 'Neutral'.</p></li>
+      </ul>
+      <p>
+        For each variable, ordered observations <m>200</m> and <m>201</m> both fall into the indicated level.
+      </p>
+    </example>
+    <p>
+      Importantly, all these numerical quantities are computed from a sample (i.e., are statistics; Def. <xref ref="def-statistic"/>), even though the whole population is of interest (i.e., the parameter; Def. <xref ref="def-parameter"/>).
+    </p>
+    <p>
+      Means (Sect. <xref ref="sec-mean"/>) are generally not suitable for numerically summarising qualitative data. However, <em>ordinal</em> data <em>may be</em> numerically summarised like quantitative data in <em>rare and very special circumstances</em>. Means may be appropriate if both of these are true:
+    </p>
+    <ul>
+      <li><p>the levels are considered equally spaced.</p></li>
+      <li><p>assigning a number to each level is appropriate (for example, using a mid-point for numerical age groups).</p></li>
+    </ul>
+    <p>
+      We will not consider means for ordinal data further.
+    </p>
+  </section>
+
+  <section xml:id="sec-qual-summary-table">
+    <title>Numerical summary tables</title>
+    <idx><h>Qualitative data</h><h>summary tables</h></idx>
+    <p>
+      Qualitative variables should be summarised in a table. The table should include, as a minimum, numbers and/or percentages for each level. While useful in other contexts (see Chap. <xref ref="sec-compare-qual-data"/>), odds are usually not given in the summary table. Examples are shown in Tables <xref ref="tab-a-vtable1"/> and <xref ref="tab-a-vtable2"/>, and in the next section.
+    </p>
+  </section>
+
+  <section xml:id="sec-water-access-qual">
+    <title>Example: water access</title>
+    <p>
+      <xref ref="lopez2022farmers"/> recorded data about access to water for three rural communities in Cameroon (see Sect. <xref ref="sec-water-access-quant"/>). Numerous qualitative variables are recorded; some are displayed in Fig. <xref ref="fig-water-acess-qual"/>, and summarised in Table <xref ref="tab-water-access-qual"/>. Notice that the levels<idx>Levels</idx> of the two ordinal variables are displayed in their natural order.
+    </p>
+    <p>
+      The distance to the nearest water source is usually less than <m>1</m> km, and the wait is often over <m>15</m> mins. The most common water source (i,e., the mode) is a bore (<m>68.6</m>%). The median (and mode) distance to the water source was <m>100</m> to <m>1000</m> m; the median wait time was <m>5</m> to <m>15</m> mins (the mode wait time was under <m>5</m> mins).
+    </p>
+    <figure xml:id="fig-water-acess-qual">
+      <caption>The distance to the water source (left), the wait time at the water source (centre), and the water sources (right) for the water-access study.</caption>
+      <description><p>Three dot charts showing qualitative variables from the water-access study: distance to water source, queue wait time at water source, and type of water source.</p></description>
+    </figure>
+    <table xml:id="tab-water-access-qual">
+      <title>Summarising some qualitative data in the water-access study. Ordinal variables (left) and nominal variable (right).</title>
+      <tabular halign="center" top="medium" bottom="medium">
+        <row header="yes" bottom="medium">
+          <cell></cell>
+          <cell><em>Number</em></cell>
+          <cell><em>%</em></cell>
+          <cell><em>Odds</em></cell>
+        </row>
+        <row>
+          <cell colspan="4"><em>Distance to water source (<m>n = 121</m>)</em></cell>
+        </row>
+        <row>
+          <cell>Under <m>100</m> m</cell><cell><m>55</m></cell><cell><m>45.5</m></cell><cell><m>0.83</m></cell>
+        </row>
+        <row>
+          <cell><m>100</m> m to <m>1000</m> m</cell><cell><m>57</m></cell><cell><m>47.1</m></cell><cell><m>0.89</m></cell>
+        </row>
+        <row>
+          <cell>Over <m>1000</m> m</cell><cell><m>9</m></cell><cell><m>7.4</m></cell><cell><m>0.08</m></cell>
+        </row>
+        <row>
+          <cell colspan="4"><em>Wait time at water source (<m>n = 120</m>)</em></cell>
+        </row>
+        <row>
+          <cell>Under <m>5</m> mins</cell><cell><m>50</m></cell><cell><m>41.7</m></cell><cell><m>0.71</m></cell>
+        </row>
+        <row>
+          <cell><m>5</m> to <m>15</m> mins</cell><cell><m>28</m></cell><cell><m>23.3</m></cell><cell><m>0.30</m></cell>
+        </row>
+        <row>
+          <cell>Over <m>15</m> mins</cell><cell><m>42</m></cell><cell><m>35.0</m></cell><cell><m>0.54</m></cell>
+        </row>
+        <row>
+          <cell colspan="4"><em>Water source (<m>n = 121</m>)</em></cell>
+        </row>
+        <row>
+          <cell>Bore</cell><cell><m>83</m></cell><cell><m>68.6</m></cell><cell><m>2.18</m></cell>
+        </row>
+        <row>
+          <cell>River</cell><cell><m>15</m></cell><cell><m>12.4</m></cell><cell><m>0.14</m></cell>
+        </row>
+        <row>
+          <cell>Tap</cell><cell><m>7</m></cell><cell><m>5.8</m></cell><cell><m>0.06</m></cell>
+        </row>
+        <row>
+          <cell>Well</cell><cell><m>16</m></cell><cell><m>13.2</m></cell><cell><m>0.15</m></cell>
+        </row>
+      </tabular>
+    </table>
+    <idx><h>Qualitative data</h><h>summarising|)</h></idx>
+  </section>
+
+  <section xml:id="sec-summary-qual-summary">
+    <title>Chapter summary</title>
+    <p>
+      Qualitative data can be graphed with a dot chart, bar chart or (in special circumstances) pie chart. Qualitative data can be described using the mode or (for <em>ordinal</em> data only) a median. Qualitative data can be numerically summarised using <em>proportions</em>, <em>percentages</em> or <em>odds</em>.
+    </p>
+  </section>
+
+  <reading-questions xml:id="sec-summary-qual-quick-review">
+    <title>Quick review questions</title>
+    <introduction>
+      <p>Are the following statements <em>true</em> or <em>false</em>?</p>
+    </introduction>
+    <exercise xml:id="rq-ch12-1">
+      <statement><p>Nominal data can be summarised using a median.</p></statement>
+      <answer><p>False.</p></answer>
+    </exercise>
+    <exercise xml:id="rq-ch12-2">
+      <statement><p>Ordinal data can be summarised using a mode.</p></statement>
+      <answer><p>True.</p></answer>
+    </exercise>
+    <exercise xml:id="rq-ch12-3">
+      <statement><p>Odds are the ratio of how often a result of interest occurs, to how often it does <em>not</em> occur.</p></statement>
+      <answer><p>True.</p></answer>
+    </exercise>
+    <exercise xml:id="rq-ch12-4">
+      <statement><p>Proportions and percentages are the same.</p></statement>
+      <answer><p>False. Percentages are proportions multiplied by <m>100</m>, so similar (but different).</p></answer>
+    </exercise>
+  </reading-questions>
+
+  <exercises xml:id="sec-summarise-qual-data-exercises">
+    <introduction>
+      <p>Answers to odd-numbered exercises are given at the end of the book.</p>
+    </introduction>
+    <exercise xml:id="exercise-spider-monkeys">
+      <p>
+        A study of spider monkeys <xref ref="data-Chapman1990-SpiderMonkeys"/> examined the types of social groups present (Table <xref ref="tab-spider-monkeys"/>).
+      </p>
+      <ol>
+        <li><p>Construct a suitable plot, and explain what the data reveal.</p></li>
+        <li><p>Determine, if appropriate, the median and mode social group.</p></li>
+      </ol>
+      <table xml:id="tab-spider-monkeys">
+        <title>Social groups in spider monkeys.</title>
+        <tabular halign="center" top="medium" bottom="medium">
+          <row header="yes" bottom="medium">
+            <cell><em>Social group</em></cell>
+            <cell><em>Percentage</em></cell>
+          </row>
+          <row><cell>Solitary</cell><cell><m>8</m></cell></row>
+          <row><cell>All males</cell><cell><m>3</m></cell></row>
+          <row><cell>Female + no young</cell><cell><m>2</m></cell></row>
+          <row><cell>Mixed young</cell><cell><m>15</m></cell></row>
+          <row><cell>Mixed + no young</cell><cell><m>1</m></cell></row>
+          <row><cell>One female + offspring</cell><cell><m>23</m></cell></row>
+          <row><cell>Many females + offspring</cell><cell><m>48</m></cell></row>
+        </tabular>
+      </table>
+    </exercise>
+    <exercise xml:id="exercise-qual-summary">
+      <p>
+        <xref ref="czarniecka2021consumer"/> studied how Poles prepared and consumed coffee using a sample of <m>1\,500</m> Poles. Some data are shown in Table <xref ref="tab-coffee-poles"/>.
+      </p>
+      <ol>
+        <li><p>Classify the variables as quantitative, nominal or ordinal.</p></li>
+        <li><p>Sketch appropriate graphs for the three variables.</p></li>
+        <li><p>Summarise the three variables.</p></li>
+        <li><p>Where appropriate, compute the median and mode for each variable.</p></li>
+      </ol>
+      <table xml:id="tab-coffee-poles">
+        <title>Location of coffee consumption, brewing temperature and brewing time, from <m>1\,500</m> Poles.</title>
+        <tabular halign="center" top="medium" bottom="medium">
+          <row header="yes" bottom="medium">
+            <cell></cell>
+            <cell><em><m>n</m></em></cell>
+          </row>
+          <row>
+            <cell colspan="2"><em>Where consumed</em></cell>
+          </row>
+          <row><cell>Home</cell><cell><m>1432</m></cell></row>
+          <row><cell>Canteen</cell><cell><m>687</m></cell></row>
+          <row><cell>Cafe</cell><cell><m>922</m></cell></row>
+          <row><cell>Others' homes</cell><cell><m>994</m></cell></row>
+          <row><cell>Work</cell><cell><m>1196</m></cell></row>
+          <row>
+            <cell colspan="2"><em>Brewing temperature</em></cell>
+          </row>
+          <row><cell><m>100^{\circ}\text{C}</m></cell><cell><m>748</m></cell></row>
+          <row><cell><m>98^{\circ}\text{C}</m></cell><cell><m>269</m></cell></row>
+          <row><cell><m>93^{\circ}\text{C}</m></cell><cell><m>453</m></cell></row>
+          <row><cell>Unknown</cell><cell><m>30</m></cell></row>
+          <row>
+            <cell colspan="2"><em>Brewing time</em></cell>
+          </row>
+          <row><cell>Under <m>3</m> mins</cell><cell><m>226</m></cell></row>
+          <row><cell>About <m>3</m> mins</cell><cell><m>267</m></cell></row>
+          <row><cell>About <m>4</m> mins</cell><cell><m>114</m></cell></row>
+          <row><cell>About <m>5</m> mins</cell><cell><m>82</m></cell></row>
+          <row><cell>About <m>6</m> mins</cell><cell><m>30</m></cell></row>
+          <row><cell>Unknown</cell><cell><m>781</m></cell></row>
+        </tabular>
+      </table>
+    </exercise>
+    <exercise xml:id="exercise-graphs-cars">
+      <p>
+        <xref ref="henderson1981building"/> recorded the number of cylinders in many models of cars: eleven cars had four cylinders, seven cars had six cylinders, and fourteen cars had eight cylinders. The <em>number</em> of cylinders is quantitative discrete, but with so few different values, the data could be plotted with a graph used for qualitative data. For these data:
+      </p>
+      <ol>
+        <li><p>Produce a dot chart.</p></li>
+        <li><p>Produce a histogram.</p></li>
+        <li><p>Produce a bar chart.</p></li>
+        <li><p>Produce a pie chart.</p></li>
+      </ol>
+      <p>
+        What graph do you think is best? Why?
+      </p>
+    </exercise>
+    <exercise xml:id="exercise-graph-survey-data">
+      <p>
+        A <url href="https://www.nielsen.com/us/en/insights/news/2018/smart-speaking-my-language-despite-their-vast-capabilities-smart-speakers-all-about-the-music.print.html">survey of voice assistants</url>
+        (such as Amazon Echo; Google Home; etc.) conducted by
+        <url href="https://www.nielsen.com/au/en.html">Nielsen</url>
+        asked respondents to indicate how they used their voice assistant. The options were:
+      </p>
+      <ul>
+        <li><p>listening to music;</p></li>
+        <li><p>listen to news;</p></li>
+        <li><p>use alarms, timer;</p></li>
+        <li><p>search for real-time information (e.g., traffic; weather);</p></li>
+        <li><p>search for factual information (e.g., trivia; history);</p></li>
+        <li><p>chat with voice assistant for fun.</p></li>
+      </ul>
+      <p>
+        Respondents could select all options that applied. What would be the best graph for displaying respondents answers? Would a pie chart be suitable? Explain your answer.
+      </p>
+    </exercise>
+    <exercise xml:id="exercise-ordinal-medians">
+      <p>
+        <xref ref="gkebski2019impact"/> studied the taste of bread with varying salt and fibre content. Information was recorded from <m>300</m> subjects, including the subjects' responses to the statement 'Rolls with lower salt content taste worse than regular ones', on a five-point ordinal scale from 'Strongly Agree' to 'Strongly Disagree'; see Table <xref ref="tab-bread"/>.
+      </p>
+      <ol>
+        <li><p>Identify the variables, then classify them as nominal or ordinal.</p></li>
+        <li><p>For which variables is a mode an appropriate summary (if any)?</p></li>
+        <li><p>For which variables is a median an appropriate summary (if any)?</p></li>
+        <li><p>Compute the above statistics where appropriate.</p></li>
+        <li><p>Compute and interpret the odds of a respondent coming from a city background.</p></li>
+        <li><p>Compute and interpret the odds of a respondent agreeing <em>or</em> strongly agreeing with the statement.</p></li>
+        <li><p>Compute and interpret the odds of a respondent being male.</p></li>
+      </ol>
+      <table xml:id="tab-bread">
+        <title>The bread-tasting data (<m>n = 300</m>).</title>
+        <tabular halign="center" top="medium" bottom="medium">
+          <row header="yes" bottom="medium">
+            <cell></cell>
+            <cell><em>Number</em></cell>
+            <cell><em>Percentage</em></cell>
+          </row>
+          <row>
+            <cell colspan="3"><em>Gender</em></cell>
+          </row>
+          <row><cell>Female</cell><cell><m>150</m></cell><cell><m>50</m></cell></row>
+          <row><cell>Male</cell><cell><m>150</m></cell><cell><m>50</m></cell></row>
+          <row>
+            <cell colspan="3"><em>Place of residence</em></cell>
+          </row>
+          <row><cell>Rural</cell><cell><m>49</m></cell><cell><m>16</m></cell></row>
+          <row><cell>City up to <m>20\,000</m> residents</cell><cell><m>38</m></cell><cell><m>13</m></cell></row>
+          <row><cell>City <m>20\,000</m> to <m>100\,000</m> residents</cell><cell><m>83</m></cell><cell><m>28</m></cell></row>
+          <row><cell>City more than <m>100\,000</m> residents</cell><cell><m>130</m></cell><cell><m>43</m></cell></row>
+          <row>
+            <cell colspan="3"><em>Response to statement</em></cell>
+          </row>
+          <row><cell>Strongly agree</cell><cell><m>30</m></cell><cell><m>10</m></cell></row>
+          <row><cell>Agree</cell><cell><m>84</m></cell><cell><m>28</m></cell></row>
+          <row><cell>Neutral</cell><cell><m>78</m></cell><cell><m>26</m></cell></row>
+          <row><cell>Disagree</cell><cell><m>66</m></cell><cell><m>22</m></cell></row>
+          <row><cell>Strongly disagree</cell><cell><m>42</m></cell><cell><m>14</m></cell></row>
+        </tabular>
+      </table>
+    </exercise>
+    <exercise xml:id="exercise-reclaimed-water">
+      <p>
+        <xref ref="lopez2022farmers"/> asked <m>231</m> farmers what they considered to be the advantages and disadvantages of using reclaimed water on the farm. The responses are shown in Table <xref ref="tab-reclaimed-water"/> (not all farmers responded).
+      </p>
+      <ol>
+        <li><p>Produce two bar charts to display the data.</p></li>
+        <li><p>Produce two dot charts to display the data.</p></li>
+        <li><p>Produce two pie charts to display the data.</p></li>
+        <li><p>Determine the mode for both the advantages and disadvantages.</p></li>
+        <li><p>Compute the percentages for both the advantages and disadvantages.</p></li>
+        <li><p>Compute the odds of a farmer stating 'high price' as a disadvantage, among <em>all</em> farmers.</p></li>
+        <li><p>Compute the odds of a farmer stating 'high price' as a disadvantage, among farmers who listed a disadvantage.</p></li>
+        <li><p>What is the difference in the meaning of the last two statements?</p></li>
+      </ol>
+      <table xml:id="tab-reclaimed-water">
+        <title>The advantages and disadvantages of using reclaimed water, reported by <m>231</m> farmers. (Not all farmers responded.)</title>
+        <tabular halign="center" top="medium" bottom="medium">
+          <row header="yes" bottom="medium">
+            <cell></cell>
+            <cell><em>No. farmers</em></cell>
+          </row>
+          <row>
+            <cell colspan="2"><em>Advantages</em></cell>
+          </row>
+          <row><cell>Water reutilization</cell><cell><m>15</m></cell></row>
+          <row><cell>Availability</cell><cell><m>27</m></cell></row>
+          <row><cell>Sustainability</cell><cell><m>16</m></cell></row>
+          <row>
+            <cell colspan="2"><em>Disadvantages</em></cell>
+          </row>
+          <row><cell>High price</cell><cell><m>40</m></cell></row>
+          <row><cell>Growing conductivity</cell><cell><m>12</m></cell></row>
+          <row><cell>Lack of proper filtering</cell><cell><m>21</m></cell></row>
+        </tabular>
+      </table>
+    </exercise>
+    <exercise xml:id="exercise-student-transport">
+      <p>
+        <xref ref="henning2020modelling"/> studied <m>284</m> university students in Joinville, Brazil, tabulating how students got to campus (Table <xref ref="tab-transport-table"/>; each student could select one option only).
+      </p>
+      <ol>
+        <li><p>What is the mode type of active transport? What about motorised transport?</p></li>
+        <li><p>What is the mode type of transport overall?</p></li>
+        <li><p>Are medians appropriate? If so, compute the median for active transport types, and motorised transport types.</p></li>
+        <li><p>Compute the proportions for each option, out of the total sample.</p></li>
+        <li><p>Compute the odds that a randomly-chosen student uses motorised transport to get to campus. Explain what this means.</p></li>
+        <li><p>Compute the odds that a student walks to campus. Explain what this means.</p></li>
+        <li><p>Construct appropriate plots to display the data.</p></li>
+      </ol>
+      <table xml:id="tab-transport-table">
+        <title>Modes of transport for students getting to campus.</title>
+        <tabular halign="center" top="medium" bottom="medium">
+          <row header="yes" bottom="medium">
+            <cell></cell>
+            <cell><em>Number</em></cell>
+          </row>
+          <row>
+            <cell colspan="2"><em>Active</em></cell>
+          </row>
+          <row><cell>Bicycle</cell><cell><m>29</m></cell></row>
+          <row><cell>Walking</cell><cell><m>35</m></cell></row>
+          <row>
+            <cell colspan="2"><em>Motorised</em></cell>
+          </row>
+          <row><cell>Car</cell><cell><m>70</m></cell></row>
+          <row><cell>Bus</cell><cell><m>117</m></cell></row>
+          <row><cell>Other</cell><cell><m>33</m></cell></row>
+        </tabular>
+      </table>
+    </exercise>
+    <exercise xml:id="exercise-qual-sum-baby-boom">
+      <p>
+        [<em>Dataset</em>: <c>BabyBoom</c>] The dataset shows the gender of <m>44</m> babies born in a hospital on one day <xref ref="mypapers-Dunn-dataset-1999"/><xref ref="data-Steele-BabyBoom"/>. The data are given in the order in which the births occurred.
+      </p>
+      <ol>
+        <li><p>What is the mode sex?</p></li>
+        <li><p>If appropriate, compute the median sex.</p></li>
+        <li><p>Compute the percentages for each sex.</p></li>
+        <li><p>Compute the odds that a randomly-chosen baby from the sample is female. Explain what this means.</p></li>
+        <li><p>Construct appropriate plots to display sex of the baby.</p></li>
+      </ol>
+    </exercise>
+    <exercise xml:id="exercise-fe-vplots">
+      <p>
+        [<em>Dataset</em>: <c>LungCap</c>] <xref ref="data-Tager-FEV"/> studied the lung volume of <m>654</m> children in East Boston in the 1970s (Table <xref ref="tab-lung-cap-tab"/>).
+      </p>
+      <ol>
+        <li><p>Construct suitable plots for all variables.</p></li>
+        <li><p>For each qualitative variable, determine the mode.</p></li>
+        <li><p>For each qualitative variable, compute the percentage and odds of one of the levels occurring in the data.</p></li>
+        <li><p>Compute appropriate statistics for each quantitative variable.</p></li>
+      </ol>
+      <table xml:id="tab-lung-cap-tab">
+        <title>The lung volume (FEV) for youth in East Boston in the 1970s; the first six observations in the dataset (<m>n = 654</m>).</title>
+        <tabular halign="center" top="medium" bottom="medium">
+          <row header="yes" bottom="medium">
+            <cell><em>Age</em></cell>
+            <cell><em>FEV</em></cell>
+            <cell><em>Height</em></cell>
+            <cell><em>Gender</em></cell>
+            <cell><em>Smoking</em></cell>
+          </row>
+          <row><cell><m>3</m></cell><cell><m>1.072</m></cell><cell><m>46</m></cell><cell>F</cell><cell>No</cell></row>
+          <row><cell><m>4</m></cell><cell><m>0.839</m></cell><cell><m>48</m></cell><cell>F</cell><cell>No</cell></row>
+          <row><cell><m>4</m></cell><cell><m>1.102</m></cell><cell><m>48</m></cell><cell>F</cell><cell>No</cell></row>
+          <row><cell><m>4</m></cell><cell><m>1.389</m></cell><cell><m>48</m></cell><cell>F</cell><cell>No</cell></row>
+          <row><cell><m>4</m></cell><cell><m>1.577</m></cell><cell><m>49</m></cell><cell>F</cell><cell>No</cell></row>
+          <row><cell><m>4</m></cell><cell><m>1.418</m></cell><cell><m>49</m></cell><cell>F</cell><cell>No</cell></row>
+          <row><cell><m>\vdots</m></cell><cell><m>\vdots</m></cell><cell><m>\vdots</m></cell><cell><m>\vdots</m></cell><cell><m>\vdots</m></cell></row>
+        </tabular>
+      </table>
+    </exercise>
+    <exercise xml:id="exercise-summarise-uni-orthoses">
+      <p>
+        <xref ref="swinnen2018influence"/> studied the influence of using ankle-foot orthoses in children with cerebral palsy. The data in Table <xref ref="tab-describe-ankle-foot"/> give the data for the <m>15</m> subjects. (<sc>Gmfcs</sc> is the <url href="https://en.wikipedia.org/wiki/Gross_Motor_Function_Classification_System">Gross Motor Function Classification System</url> used to describe the impact of cerebral palsy on their motor function; where <em>lower</em> levels mean <em>better</em> functionality.)
+      </p>
+      <ol>
+        <li><p>Construct suitable plots for all variables.</p></li>
+        <li><p>For each qualitative variable, determine the mode.</p></li>
+        <li><p>For each qualitative variable, compute the percentage and odds of one of the levels occurring in the data.</p></li>
+        <li><p>Compute appropriate statistics for each quantitative variable.</p></li>
+      </ol>
+    </exercise>
+  </exercises>
 </chapter>
