@@ -1,5 +1,390 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Source: 16-Connections-Two-Quant.Rmd -->
 <chapter xml:id="ch-16-connections-two-quant" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Correlations between quantitative variables</title>
-  <p>Skeleton for <em>16-Connections-Two-Quant.Rmd</em>. Content to be added.</p>
+    <idx><h>Quantitative data</h><h>correlation</h></idx>
+  <objectives xml:id="objectives-ch16">
+    <introduction>
+      <p>So far, you have learnt to ask an RQ, design a study, collect the data, describe the data, and summarise data. <alert>In this chapter</alert>, you will learn to:</p>
+    </introduction>
+    <ul>
+      <li><p>describe the relationships between two quantitative variables.</p></li>
+      <li><p>compute and interpret correlation coefficients and <m>R^2</m>.</p></li>
+    </ul>
+  </objectives>
+
+  <section xml:id="sec-two-quant-intro">
+    <title>Introduction</title>
+    <p>
+      Correlational RQs ask about the relationship between two quantitative variables.<idx><h>Research question</h><h>correlational</h></idx> Scatterplots are useful for this purpose, and the relationship is usually described numerically using a correlation coefficient or <m>R^2</m>.
+    </p>
+  </section>
+
+  <section xml:id="sec-scatterplots">
+    <title>Graphs for the relationship</title>
+    <idx><h>Quantitative data</h><h>correlation!graphs</h></idx>
+    <idx><h>Graphs</h><h>scatterplot</h></idx>
+    <idx><h>Software output</h><h>graphs</h></idx>
+    <image source="Illustrations/diana-parkhouse-Qf4eZXC3t2Y-unsplash.jpg" width="25%">
+      <description><p>Image.</p></description>
+    </image>
+    <p>
+      Scatterplots display the relationship between <em>two quantitative variables</em>. Conventionally, and when appropriate, the response variable (denoted <m>y</m>) is shown on the vertical axis, and the explanatory variable (denoted <m>x</m>) is shown on the horizontal axis.<idx>Response variable</idx><idx>Explanatory variable</idx> Two quantitative variables are measured on each individual, and a point is placed on the scatterplot for each individual (unit of analysis) to indicate the values of the two variables. In some cases, which variable is denoted <m>x</m> and which is <m>y</m> is not important (e.g., see Exercise <xref ref="sec-exr:cor-test-dogs"/>.)
+    </p>
+    <p>
+      As with any graph, describing the message in the graph is important, because the purpose of a graph is to display the information in the clearest, simplest possible way.
+    </p>
+    <example xml:id="example-red-deer">
+      <title>Red-deer data</title>
+      <p>
+        <xref ref="data-Holgate1965-StraightLine"/> examined the relationship between the age of <m>n = 78</m> male red deer and the weight of their molars. The data
+      </p>
+      <p>
+        comprises two <em>quantitative</em> variables, and both measurements are made on the same individuals (i.e., male red deer).
+      </p>
+      <p>
+        The scatterplot (Fig. <xref ref="fig-red-deer-scatter"/>) shows one dot for each deer (individual). The response variable is the molar weight, which is on the vertical axis and denoted <m>y</m>. The explanatory variable is the deer age, which is on the horizontal axis and denoted <m>x</m>.
+      </p>
+      <p>
+        For instance, one deer is just over <m>4</m> years of age (so <m>x</m> has a value a bit larger than <m>4</m>), and has a molar weight of <m>2.42</m> (so that <m>y = 2.42</m>). This is the first deer listed in
+      </p>
+    </example>
+    <p>
+      (ref:RedDeerPlotIndicate)
+    </p>
+  </section>
+
+  <section xml:id="sec-understanding-scatterplots">
+    <title>Describing scatterplots</title>
+    <idx><h>Graphs</h><h>scatterplot</h></idx>
+    <p>
+      The purpose of a graph is to facilitate understanding of the data. For a scatterplot, the <em>form</em>, <em>direction</em>, and <em>variation in the relationship</em> (or the <em>strength of the relationship</em>) are described.
+    </p>
+    <ol>
+      <li><p><em>Form</em>: the overall <em>form</em> or structure of the relationship (e.g., linear; curved upwards; etc.).<idx><h>Graphs</h><h>scatterplot!form</h></idx></p></li>
+      <li><p><em>Direction</em>: the <em>direction</em> of the relationship (sometimes not relevant if the relationship is non-linear):<idx><h>Graphs</h><h>scatterplot!direction</h></idx></p></li>
+      <li><p>a <em>positive</em> association exists if <em>high</em> values of one variable accompany <em>high</em> values of the other variable, in general.</p></li>
+      <li><p>a <em>negative</em> association exists if <em>high</em> values of one variable accompany <em>low</em> values of the other variable, in general.</p></li>
+      <li><p><em>Variation</em>: the amount of <em>variation</em> in the relationship.<idx><h>Graphs</h><h>scatterplot!variation</h></idx><idx><h>Graphs</h><h>scatterplot!strength</h></idx> A small amount of variation in the response variable for given values of the explanatory variable means the relationship is strong; a lot of variation in the response variable for given values of the explanatory variable means the relationship is weak. Describing the variation can be difficult; an objective, numerical way to do so is explained in Sect. <xref ref="sec-correlation-r2"/>.</p></li>
+    </ol>
+    <p>
+      Anything unusual or noteworthy should also be discussed. These features explain the <em>type</em> of relationship (<em>form</em>; <em>direction</em>), and the <em>strength</em> of that relationship (<em>variation</em>). Examples are shown in
+    </p>
+    <warning>
+      <p>
+        The axes do not need to <em>start from zero</em>, since the distance of the dots from the axes visually do not imply any quantity of interest.
+      </p>
+    </warning>
+  </section>
+
+  <section xml:id="sec-correlation-r2">
+    <title>Numerical summary: correlation coefficient and R^2</title>
+
+  <subsection xml:id="sec-corr-coefficients">
+    <title>Correlation coefficients</title>
+    <idx><h>Graphs</h><h>scatterplot!form</h></idx>
+    <idx>Correlation</idx>
+    <idx>Correlation coefficient (Pearson)</idx>
+    <p>
+      In general, summarising the relationship between two quantitative variables is difficult, because the possible relationships vary greatly (consider
+    </p>
+    <p>
+      However, if we focus only on approximately <em>linear</em> relationships, the best way to numerically summarise the relationship between the variables is to use a <em>correlation coefficient</em>. Both quantitative variables can also be numerically summarised individually.
+    </p>
+    <definition xml:id="def-correlation-coefficient">
+      <title>Correlation coefficient</title>
+      <statement>
+        <p>
+          The Pearson correlation coefficient measures the <em>strength</em> and <em>direction</em> of the <em>linear</em> relationship between two quantitative variables. Its value is always between <m>-1</m> and <m>+1</m>.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      Pearson correlation coefficients only apply if both of these are true:
+    </p>
+    <ul>
+      <li><p>the form is approximately <em>linear</em>.</p></li>
+      <li><p>the variation in the values of <m>y</m> is reasonably constant for all values of <m>x</m>.</p></li>
+    </ul>
+    <p>
+      Hence, checking the scatterplot first is important.
+    </p>
+    <p>
+      Only the <em>Pearson</em> correlation coefficient is discussed in this book (and usually referred to as the 'correlation coefficient'), but other correlation coefficients also exist (such as the <em>Spearman</em><idx><h>Correlation coefficient</h><h>Spearman</h></idx> or <em>Kendall</em> correlation coefficients)<idx><h>Correlation coefficient</h><h>Kendall</h></idx>, which may be used for increasing-only or decreasing-only <em>non-linear</em> relationships).
+    </p>
+    <warning>
+      <p>
+        The Pearson correlation coefficient only makes sense if the relationship is approximately linear.
+      </p>
+    </warning>
+    <p>
+      In the <em>population</em>, the unknown value of the correlation coefficient is denoted <m></m> ('rho'); in the <em>sample</em>, the value of the correlation coefficient is denoted <m>r</m>. As usual, <m>r</m> (the <em>statistic</em>) is an estimate of <m></m> (the <em>parameter</em>), and the value of <m>r</m> is likely to be different in every sample (that is, <em>sampling variation</em> exists).
+    </p>
+    <aside>
+    </aside>
+    <p>
+      The values of <m></m> and <m>r</m> are <em>always</em> between <m>-1</m> and <m>+1</m>. The <em>sign</em> indicates whether the relationship has a positive or negative linear association, and the <em>value</em> of the correlation coefficient describes the <em>strength</em> of the relationship, as follows.
+    </p>
+    <ul>
+      <li><p><m>r = -1</m> indicates a <em>perfect, negative</em> relationship.<idx><h>Correlation coefficient (Pearson)</h><h>positive</h></idx> By 'perfect', we mean that each value of <m>x</m> always produces the same value of <m>y</m>; the negative value means <em>larger</em> values of <m>y</m> are associated with <em>smaller</em> values of <m>x</m>.</p></li>
+      <li><p>values of <m>r</m> between <m>-1</m> and <m>0</m> indicates a <em>negative</em> relationship.<idx><h>Correlation coefficient (Pearson)</h><h>negative</h></idx> Each value of <m>x</m> produces a range of values of <m>y</m>, and <em>larger</em> values of <m>y</m> are associated with <em>smaller</em> values of <m>x</m> (in general).</p></li>
+      <li><p><m>r = 0</m> indicates <em>no linear relationship</em> between the variables:<idx><h>Correlation coefficient (Pearson)</h><h>zero</h></idx> knowing how the value of <m>x</m> changes tells us nothing about how the corresponding value of <m>y</m> changes. The best prediction of <m>y</m> for <em>any</em> value of <m>x</m> would be the mean of <m>y</m>; i.e., the value of <m>\bar{y}</m>.</p></li>
+      <li><p>values of <m>r</m> between <m>0</m> and <m>+1</m> indicates a <em>positive</em> relationship. Each value of <m>x</m> produces a range of values of <m>y</m>, and <em>larger</em> values of <m>y</m> are associated with <em>larger</em> values of <m>x</m> (in general).</p></li>
+      <li><p><m>r = +1</m> indicates a <em>perfect, positive</em> relationship. By 'perfect', we mean that each value of <m>x</m> always produces the same value of <m>y</m>; the positive value means <em>larger</em> values of <m>y</m> are associated with <em>larger</em> values of <m>x</m>.</p></li>
+    </ul>
+    <p>
+      Almost all values of <m>r</m> seen in practice are between the extremes of <m>r = -1</m> and <m>r = +1</m>. Guessing the values of the correlation coefficient from a scatterplot is very difficult.
+    </p>
+    <example xml:id="example-corr-coef-for-examples">
+      <title>Correlation coefficients</title>
+      <p>
+        Numerous example scatterplots were shown in Sect. <xref ref="sec-understanding-scatterplots"/>. A correlation coefficient is not relevant for
+      </p>
+      <p>
+        as those relationships are not linear. For the others:
+      </p>
+      <ul>
+        <li><p><em>Plot A</em>: the correlation coefficient is <em>positive</em>, and reasonably close to one.</p></li>
+        <li><p><em>Plot B</em>: the correlation coefficient is <em>negative</em>, but not near <m>-1</m>.</p></li>
+        <li><p><em>Plot F</em>: the correlation coefficient is close to zero.</p></li>
+      </ul>
+    </example>
+    <example xml:id="example-correlations">
+      <title>Correlation coefficients</title>
+      <p>
+        <xref ref="leuchtenberger2022effects"/> and <xref ref="Nishizaki2022SanddollarData"/> explored the relationship between water temperature and fertilisation rates for sand dollars (Fig. <xref ref="fig-sanddollars-plot"/>). The correlation coefficient is <m>r = -0.71</m> (left panel), which might suggest that <em>higher</em> temperatures result in <em>lower</em> fertilisation rates. However, a <em>curved</em> relationship is apparent (right panel), and so the relationship is more complex: the fertilisation rate increases up to about <m>18</m>^o^C, and then starts falling again.
+      </p>
+      <p>
+        A Pearson correlation coefficient is not suitable for describing the relationship.
+      </p>
+    </example>
+    <p>
+      Formulas exist to compute the value of <m>r</m>, but are tedious to use manually. We will use software output to obtain values of <m>r</m>.<idx><h>Software output</h><h>correlation</h></idx>
+    </p>
+    <example xml:id="example-correlations-deer">
+      <title>Correlation coefficients</title>
+      <p>
+        For the red-deer data
+      </p>
+      <p>
+        the relationship is approximately linear, and the software output (Fig. <xref ref="fig-red-deer-correlationjamovi"/>) shows that <m>r = -0.584</m>. The value of <m>r</m> is <em>negative</em> because, in general, <em>older</em> deer (<m>x</m>) are associated with <em>smaller</em> weight molars (<m>y</m>). The relationship may be described as 'moderately strong' perhaps.
+      </p>
+    </example>
+    <example xml:id="example-lung-cap-cor">
+      <title>Correlation coefficients</title>
+      <p>
+        <xref ref="data-Tager-FEV"/> studied the lung capacity (forced expiratory volume; FEV) of children in Boston <xref ref="BIB-data-FEV"/>. The scatterplot in Fig. <xref ref="fig-fe-vscatter"/> is not linear, so a correlation coefficient is inappropriate.
+      </p>
+    </example>
+    <note>
+      <p>
+        The web page [http://guessthecorrelation.com](http://guessthecorrelation.com) makes a game out of trying to guess the correlation coefficient from a scatterplot. It's very difficult!
+      </p>
+    </note>
+    <idx><h>Software output</h><h>correlation</h></idx>
+  </subsection>
+
+  <subsection xml:id="sec-rsquared">
+    <title>R-squared (R^2)</title>
+    <idx>R^2</idx>
+    <p>
+      While <m>r</m> describes the strength and direction of the linear relationship, knowing exactly what the value <em>means</em> is tricky. Interpretation is easier using <m>R^2</m>: the square of the value of <m>r</m>.
+    </p>
+    <p>
+      The value of <m>R^2</m> is how much the unexplained variation in the values of <m>y</m> is reduced (usually expressed as a percentage) due to using the extra information in the values of <m>x</m>.
+    </p>
+    <aside>
+      <p>
+        <m>R^2</m> is pronounced '<m>r</m>-squared'.
+      </p>
+    </aside>
+    <p>
+      The value of <m>R^2</m> is <em>never</em> negative, and is usually multiplied by <m>100</m> and expressed as a percentage.
+    </p>
+    <note>
+      <p>
+        The value of <m>R^2</m> is never negative! However, you need to be careful using your calculator. On most calculators, entering <c>-0.5^2</c> returns an answer of <c>-0.25</c>. The calculator interprets your input as meaning <c>-(0.5^2)</c>.
+      </p>
+      <p>
+        Use brackets; <c>(-0.5)^2</c> gives the correct answer of <c>0.25</c> (or <m>25</m>%).
+      </p>
+    </note>
+    <p>
+      For the red-deer data
+    </p>
+    <p>
+      the value of <m>R^2</m> is <m>R^2 = (-0.584)^2 = 0.341</m>, usually written as a percentage: <m>34.1</m>%. The value of <m>R^2</m> is positive, even though the value of <m>r</m> is negative.
+    </p>
+    <p>
+      This means a reduction of about <m>34.1</m>% in the unexplained variation of the molar weights, due to using the information in the age of the deer (see Example <xref ref="example-reduction-r2"/>). The rest of the variation in molar weights is due to chance, and to extraneous variables such as weight, diet, amount of exercise, genetics, etc.
+    </p>
+    <p>
+      <m>R^2</m> measures the reduction in the unexplained variation in values of <m>y</m> because the value of <m>x</m> is known. If the values of <m>x</m> were unknown, the best summary of the <m>y</m>-values is the mean of the <m>y</m>-values (i.e., <m>\bar{y}</m>). However, if a relationship exists between the values of <m>x</m> and <m>y</m> then better estimates of the value of <m>y</m> could be made by knowing the value of <m>x</m>. That means that less variation should be left unexplained.
+    </p>
+    <p>
+      When expressed as a percentage, <m>R^2</m> measures how much the unexplained variation reduces due to our knowledge of the linear relationship. If <m>R</m>-squared is zero, then the amount of unexplained variation has not reduced at all, and exploring the relationship between <m>x</m> and <m>y</m> has no value.
+    </p>
+    <p>
+      <idx><h>R^2</h><h>meaning</h></idx> For the red-deer data, the unexplained variation in the values of <m>y</m> (molar weight), without knowing anything about the age of the deer, is the variation in the <em>distances from the mean</em> to each observation (Fig. <xref ref="fig-red-deer-r2"/>, left panels). Effectively, the unexplained variation is the standard deviation of the molar weights (<m>s = 0.7263</m>).
+    </p>
+    <p>
+      If the age of the deer (<m>x</m>) is used, the unexplained variation in the values of <m>y</m> is now the variation in the <em>distances from the line explaining the relationship</em> to each observation (Fig. <xref ref="fig-red-deer-r2"/>, right panels). The distances are shorter, in general, showing a decrease in the <em>unexplained</em> variation. Effectively, the unexplained variation is the standard deviation of the distances from the line to the observations (<m>s = 0.5895</m>).
+    </p>
+    <p>
+      Hence, the reduction in the <em>square</em> of the standard deviations is <m>(0.7263^2 - 0.5895^2)/0.7263^2 = 0.341</m>, or <m>34.1</m>\%. This is the value of <m>R^2</m>.
+    </p>
+  </subsection>
+  </section>
+
+  <section xml:id="sec-connection-summary-tables">
+    <title>Numerical summary tables</title>
+    <idx><h>Quantitative data</h><h>correlation!summary tables</h></idx>
+    <idx><h>Summary table</h><h>correlations</h></idx>
+    <p>
+      In general, numerically summarising the relationship between two quantitative variables is difficult because of the many types of possible relationships (Sect. <xref ref="sec-understanding-scatterplots"/>). However, for <em>linear</em> relationships, both quantitative variables can be summarised, and the correlation coefficient can be given (Table <xref ref="tab-rd-summary-table"/>).
+    </p>
+  </section>
+
+  <section xml:id="sec-scatterplots-removal-efficiency">
+    <title>Example: removal efficiency</title>
+    <image source="Illustrations/pexels-lisa-fotios-3264779.jpg" width="25%">
+      <description><p>Image.</p></description>
+    </image>
+    <p>
+      In wastewater treatment facilities, air from biofiltration is passed through a membrane and dissolved in water, and is transformed into harmless by-products. The removal efficiency <m>y</m> (in %) may depend on the inlet temperature (in ^o^C; <m>x</m>). <xref ref="chitwood2001treatment"/> asked:
+    </p>
+    <blockquote>
+      <p>In treating biofiltation wastewater, is the removal efficiency linearly associated with the inlet temperature?</p>
+    </blockquote>
+    <p>
+      A scatterplot of <m>n = 32</m> observations <xref ref="DevoreBerk2007"/> suggests an approximately linear relationship (Fig. <xref ref="fig-scatterplot-removal-efficiency"/>, left panel). The direction is positive: larger inlet temperatures are associated with a larger removal efficiency, in general. The variation is always hard to describe in words, but is perhaps 'reasonably small'.
+    </p>
+    <p>
+      A more precise way to measure the strength of the linear association is to use the correlation coefficient. Using software output (Fig. <xref ref="fig-scatterplot-removal-efficiency"/>, right panel), <m>r = 0.891</m>, and so <m>R^2 = (0.891)^2 = 79.4</m>%. This means that about <m>79.4</m>% of the variation in removal efficiency can be explained by knowing the inlet temperature.
+    </p>
+  </section>
+
+  <section xml:id="sec-two-quant-summary">
+    <title>Chapter summary</title>
+    <p>
+      A <em>scatterplot</em> displays the relationship between two quantitative variables (the response denoted <m>y</m>; the explanatory denoted <m>x</m>). The relationship is described by the <em>form</em> (linear, or otherwise), the <em>direction</em> of the relationship (sometimes not relevant if the graph is not linear), and the <em>variation</em> in the relationship (or the <em>strength</em> of the relationship).
+    </p>
+    <p>
+      Linear relationships are measured numerically using the correlation coefficient and <m>R^2</m>. <em>Correlation coefficients</em> (denoted <m>r</m> in the sample; <m></m> in the population) are always between <m>-1</m> and <m>+1</m>. <em>Positive</em> values denote <em>positive</em> relationships between the two variables: as the values of one variable get larger, the values of the other tend to get larger too. <em>Negative</em> values denote <em>negative</em> relationships between the two variables: as the values of one variable get larger, the values of the other tend to get <em>smaller</em>. Values close to <m>-1</m> or <m>+1</m> are very strong relationships; values near zero shows very little linear relationship between the values of the two variables.
+    </p>
+    <p>
+      Sometimes, <m>R^2</m> is used to describe the relationship: it measures how much the unexplained variation in the values of <m>y</m> is reduced due to using the extra information in the values of <m>x</m>.
+    </p>
+  </section>
+
+  <reading-questions xml:id="sec-two-quant-quick-review">
+    <title>Quick review questions</title>
+  </reading-questions>
+
+  <exercises xml:id="sec-two-quant-exercises">
+    <introduction>
+      <p>Answers to odd-numbered exercises are given at the end of the book.</p>
+    </introduction>
+    <p>
+      [Answers to odd-numbered exercises] are given at the end of the book.
+    </p>
+    <exercise xml:id="exercise-correlation-exercise-draw-neg-r">
+      <p>
+        Draw a scatterplot with:
+      </p>
+      <ol>
+        <li><p>a negative correlation coefficient, with <m>r</m> very close to (but not equal to) <m>-1</m>.</p></li>
+        <li><p>a positive correlation coefficient, with <m>r</m> very close to (but not equal to) <m>+1</m>.</p></li>
+        <li><p>a correlation coefficient very close to <m>0</m>.</p></li>
+      </ol>
+    </exercise>
+    <exercise xml:id="exercise-match-correlations">
+      <p>
+        Estimate the correlation coefficients from scatterplots in Fig. <xref ref="fig-match-scatter"/>, when appropriate. (You can only give very rough estimates!)
+      </p>
+    </exercise>
+    <exercise xml:id="exercise-two-quant-exercises-peas">
+      <p>
+        [<em>Dataset</em>: <c>Peas</c>] <xref ref="hacisalihoglu2021characterization"/> studied the nutritional content of peas (<em>Pisum sativum</em>), and measured the quantities of various minerals. In these plots, it does not matter which of the pair of variables is used on the horizontal axis and which is used on the vertical axis. From Fig. <xref ref="fig-peas-scatter"/> (<em>left</em> panel), estimate the value of <m>r</m>.
+      </p>
+    </exercise>
+    <exercise xml:id="exercise-two-quant-exercises-peas2">
+      <p>
+        [<em>Dataset</em>: <c>Peas</c>] <xref ref="hacisalihoglu2021characterization"/> studied of the nutritional content of peas (<em>Pisum sativum</em>), and measured the quantities of various minerals. In these plots, it does not matter which of the pair of variables is used on the horizontal axis and which is used on the vertical axis. From Fig. <xref ref="fig-peas-scatter"/> (<em>right</em> panel), estimate the value of <m>r</m>.
+      </p>
+    </exercise>
+    <exercise xml:id="exercise-two-quant-exercises-lime-trees">
+      <p>
+        [<em>Dataset</em>: <c>Lime</c>] <xref ref="data-ForestBiomass2017"/> measured the diameter and the age of <m>385</m> small-leaved lime trees (Fig. <xref ref="fig-lime-trees-scatter"/>).
+      </p>
+      <ol>
+        <li><p>What does each point on the scatterplot represent?</p></li>
+        <li><p>Describe the scatterplot.</p></li>
+        <li><p>Would a correlation coefficient be appropriate? Explain.</p></li>
+      </ol>
+    </exercise>
+    <exercise xml:id="exercise-two-quant-exercises-bone-quality">
+      <p>
+        [<em>Dataset</em>: <c>BoneQuality</c>] <xref ref="kim2022similarities"/> measured numerous data from <m>969</m> South Korean subjects, including <m>517</m> females. A scatterplot of the height and age for females is shown in Fig. <xref ref="fig-height-age-scatter"/>.
+      </p>
+      <ol>
+        <li><p>What does each point on the scatterplot represent?</p></li>
+        <li><p>Describe the relationship.</p></li>
+        <li><p>Would a correlation coefficient be appropriate? Explain.</p></li>
+        <li><p>Does the scatterplot suggest that people become less tall, on average, as they age? Explain.</p></li>
+      </ol>
+    </exercise>
+    <exercise xml:id="exercise-two-quant-exercises-softdrink">
+      <p>
+        [<em>Dataset</em>: <c>SDrink</c>] <xref ref="others-Montgomery-regressionanalysis"/> examined the time taken to deliver soft drinks to vending machines.
+      </p>
+      <ol>
+        <li><p>Describe the relationship (Fig. <xref ref="fig-mandible-gestation-plot"/>, left panel).</p></li>
+        <li><p>What does each point represent?</p></li>
+        <li><p>Would a correlation coefficient be appropriate? Explain.</p></li>
+      </ol>
+    </exercise>
+    <exercise xml:id="exercise-two-quant-exercises-mandible">
+      <p>
+        [<em>Dataset</em>: <c>Mandible</c>] <xref ref="data-royston-mandible"/> examined the mandible length and gestational age for <m>167</m> foetuses from the <m>12</m>th week of gestation onward. Describe the relationship (Fig. <xref ref="fig-mandible-gestation-plot"/>, right panel).
+      </p>
+    </exercise>
+    <exercise xml:id="exercise-two-quant-exercises-gorillas">
+      <p>
+        [<em>Dataset</em>: <c>Gorillas</c>] <xref ref="wright2021chest"/> recorded the chest-beating rate of <m>25</m> gorillas, and the gorillas' size (measured by the breadth of the gorillas' backs). Describe the relationship (Fig. <xref ref="fig-gorilla-windmill-plot"/>, left panel).
+      </p>
+    </exercise>
+    <exercise xml:id="exercise-two-quant-exercises-windmill">
+      <p>
+        [<em>Dataset</em>: <c>Windmill</c>] <xref ref="data-joglekar-lackoffit"/> examined the relationship between direct current (DC) generated by a windmill and wind speed <xref ref="data-hand-handbook"/>. Describe the relationship (Fig. <xref ref="fig-gorilla-windmill-plot"/>, right panel).
+      </p>
+    </exercise>
+    <exercise xml:id="exercise-soil-cn">
+      <p>
+        [<em>Dataset</em>: <c>SoilCN</c>] <xref ref="lambie2021microbial"/> recorded the percentage carbon (C) and the percentage nitrogen (N) in <m>28</m> irrigated farming plots (Fig. <xref ref="fig-irrigated-cn-students"/>, left panel).
+      </p>
+      <ol>
+        <li><p>Describe the relationship.</p></li>
+        <li><p>Does it matter which variable is <m>x</m> and which is <m>y</m>? Explain.</p></li>
+        <li><p>What does each point represent?</p></li>
+      </ol>
+    </exercise>
+    <exercise xml:id="exercise-student-wts">
+      <p>
+        [<em>Dataset</em>: <c>StudentWt</c>] The weights of students starting at university (Week 1) and in Week 12 are shown in Fig <xref ref="fig-irrigated-cn-students"/> (right panel).
+      </p>
+      <ol>
+        <li><p>Describe the relationship.</p></li>
+        <li><p>What does each point represent?</p></li>
+      </ol>
+    </exercise>
+    <exercise xml:id="exercise-two-quant-exercises-oni">
+      <p>
+        [<em>Dataset</em>: <c>Cyclones</c>] The relationship <xref ref="mypapers-dunnsmyth-glms"/> between the number of cyclones <m>y</m> in the Australian region each year from 1969 to 2005, and a climatological index called the <em>Ocean Index</em> (ONI, <m>x</m>), is shown in Fig. <xref ref="fig-on-icyclones-ci"/>.
+      </p>
+      <p>
+        From software, <m>r = -0.682</m>. What is the value of <m>R^2</m>? What does it mean?
+      </p>
+    </exercise>
+  </exercises>
 </chapter>

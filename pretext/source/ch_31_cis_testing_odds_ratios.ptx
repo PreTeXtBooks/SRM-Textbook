@@ -1,5 +1,163 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Source: 31-CIsTesting-OddsRatios.Rmd -->
 <chapter xml:id="ch-31-cis-testing-odds-ratios" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Comparing two odds or proportions: CIs and tests</title>
-  <p>Skeleton for <em>31-CIsTesting-OddsRatios.Rmd</em>. Content to be added.</p>
+  <objectives xml:id="objectives-ch31">
+    <introduction>
+      <p>You have learnt to ask an RQ, design a study, classify and summarise the data, construct confidence intervals, and conduct hypothesis tests. <alert>In this chapter</alert>, you will learn to:</p>
+    </introduction>
+    <ul>
+      <li><p>identify situations where comparing proportions or odds is appropriate.</p></li>
+      <li><p>form confidence intervals for the difference between two proportions.</p></li>
+      <li><p>form confidence intervals for odds ratios.</p></li>
+      <li><p>conduct hypothesis tests for comparing two proportions.</p></li>
+      <li><p>conduct hypothesis tests for comparing two odds.</p></li>
+      <li><p>determine whether the conditions for using these methods apply in a given situation.</p></li>
+    </ul>
+  </objectives>
+
+  <section xml:id="sec-meals-on-campus">
+    <title>Introduction: meals on-campus</title>
+    <image source="Illustrations/pexels-startup-stock-photos-7096.jpg" width="25%">
+      <description><p>Image.</p></description>
+    </image>
+    <p>
+      <xref ref="data-Mann12017-UniStudents"/> examined the relationship between where university students usually ate, and where the student lived, for students from two Canadian universities. The researchers cross-classified the <m>n = 183</m> students (the units of analysis) according to two <em>qualitative</em> variables:
+    </p>
+    <ul>
+      <li><p>where the student lived, <em>with</em> their parents or <em>not with</em> their parents.</p></li>
+      <li><p>where the student ate most meals, <em>off</em>-campus or <em>on</em>-campus.</p></li>
+    </ul>
+    <p>
+      Both variables are qualitative, so means are not appropriate for summarising the data. The data can be compiled into a two-way table of counts<idx><h>Tables</h><h>two-way</h></idx> (Table <xref ref="tab-meals-data-table"/>), also called a <em>contingency table</em>.<idx>Two-way tables</idx> Both qualitative variables have two levels, so this is a <m>2 2</m> table. Every cell in the <m>2 2</m> table contains different students, so the comparison is <em>between</em> individuals.
+    </p>
+    <warning>
+      <p>
+        The study has one sample of students, classified according to two variables (i.e., each student is placed into one of the four cells in the <m>2 2</m> table).
+      </p>
+    </warning>
+    <p>
+      The <em>proportion</em> of students who eat most meals off-campus can be compared between those who live with their parents and those who do <em>not</em> live with their parents. Then, the parameter is the difference between the population proportions in each group.
+    </p>
+    <p>
+      Alternatively, the <em>odds</em> of students who eat most meals off-campus can be compared between those who live with their parents and those who do <em>not</em> live with their parents. Then, the parameter is the comparison of the odds in both groups, the <em>odds ratio</em> (OR);<idx>Odds ratio</idx> specifically, the OR of eating most meals off-campus, comparing those living with parents to those not living with parents.
+    </p>
+    <note>
+      <p>
+        The table can be constructed with either variable as the rows. However, software commonly compares <em>rows</em>, so it makes sense to place the groups to be compared (i.e., the levels of the explanatory variable) in the rows of the table.
+      </p>
+    </note>
+  </section>
+
+  <section xml:id="sec-ci-odds-ratios-summaries">
+    <title>Summarising data</title>
+    <idx>Odds</idx>
+    <idx>Difference between proportions</idx>
+    <idx>Odds ratio</idx>
+    <p>
+      Since two groups are being compared, subscripts are used to distinguish between the two groups; say, Groups <m>1</m> and <m>2</m> in general (Table <xref ref="tab-orht"/>). For this example, we use <m>N</m> to refer to students <em>not</em> living with their parents, and <m>L</m> for students living with their parents.
+    </p>
+    <p>
+      The parameter is either a difference between two population proportions, or a population OR. For example, the parameter could be the difference between population proportion of students eating most meals <em>off</em>-campus, comparing students living with their parents, to students <em>not</em> living with their parents. Alternatively (and equivalently), the parameter could be the population OR of eating most meals <em>off</em>-campus, comparing students living with their parents, to students <em>not</em> living with their parents.
+    </p>
+    <warning>
+      <p>
+        Since software commonly compares <em>rows</em> (for example, see the text under the bottom table in Fig. <xref ref="fig-eating-software"/>), it makes sense to place the groups to be compared (i.e., the explanatory variable) in the rows of the table.
+      </p>
+      <p>
+        Then, the difference between the two proportions are usually calculated as the Row 1 proportion minus the Row 2 proportion. Similarly, the odds then can be interpreted as<idx><h>Odds ratio</h><h>interpreting</h></idx><idx><h>Software output</h><h>comparing two odds (odds ratio)</h></idx> comparing Column 1 counts to Column 2 counts, and the <em>odds ratio</em> as comparing the Row 1 odds to the Row 2 odds.
+      </p>
+    </warning>
+    <p>
+      The RQ and the hypotheses can be written as comparing <em>proportions</em> (Sect. <xref ref="sec-compare-two-proportions"/>), comparing <em>odds</em> (Sect. <xref ref="sec-compare-two-odds"/>), or about <em>ORs</em>. With two qualitative variables, an appropriate numerical summary includes the odds and proportions (or percentages) for the outcome for both comparison groups, and the sample sizes (Table <xref ref="tab-eating-numerical-summary"/>).
+    </p>
+    <p>
+      To compare the <em>proportions</em>, define the sample proportion of students eating most meals off-campus as <m>\hat{p}</m>, and write <m>\hat{p}_L</m> for the proportion living with parents and <m>\hat{p}_N</m> for the proportion <em>not</em> living with parents. Then,
+    </p>
+    <me>\hat{p}_L = \frac{52}{52 + 2} = 0.96296   \quad\text{and}\quad   \hat{p}_N = \frac{105}{105 + 24} = 0.813953.</me>
+    <p>
+      The <em>difference</em> between the two proportions is
+    </p>
+    <me>\hat{p}_L - \hat{p}_N = 0.9630 - 0.8140 =  0.1490,</me>
+    <p>
+      (as in the software output: Fig. <xref ref="fig-eating-software"/>). By this definition, the difference is how much greater the proportion eating most meals off-campus is for students <em>living</em> with their parents, compared to students <em>not living</em> with their parents.
+    </p>
+    <note>
+      <p>
+        Be clear about how differences are defined! Differences could be computed as:
+      </p>
+      <ul>
+        <li><p>the proportion eating most meals off-campus for those living with their parents, <em>minus</em> the proportion <em>not</em> living with their parents.</p></li>
+      </ul>
+      <p>
+        This measures how much greater the proportion is for those living with their parents; or
+      </p>
+      <ul>
+        <li><p>the proportion eating most meals off-campus for those <em>not</em> living with their parents, <em>minus</em> the proportion living with their parents.</p></li>
+      </ul>
+      <p>
+        This measures how much greater the proportion is for those <em>not</em> living with their parents.
+      </p>
+      <p>
+        Either is fine, provided you are <em>consistent</em>, and <em>clear</em> about how the differences are computed. The <em>meaning</em> of any conclusions will be the same.
+      </p>
+    </note>
+    <p>
+      To compare the <em>odds</em>, first see that the odds of eating most meals <em>off-campus</em> is:
+    </p>
+    <ul>
+      <li><p><m>52 2 = 26</m> for students <em>living with their parents</em> (Row 1 of Table <xref ref="tab-meals-data-table"/>).</p></li>
+      <li><p><m>105 24 = 4.375</m> for students <em>not living with their parents</em> (Row 2 of Table <xref ref="tab-meals-data-table"/>).</p></li>
+    </ul>
+    <p>
+      (Notice the numbers in the <em>second</em> column are always on the bottom of the fraction.) So the <em>OR</em> of eating most meals <em>off-campus</em> (the <em>first</em> column), comparing students living with parents to students <em>not</em> living with parents (<em>second</em> column), is <m>26 4.375 = 5.943</m> (as in the software output: Fig. <xref ref="fig-eating-graphs"/>).
+    </p>
+    <p>
+      The numerical summary (Table <xref ref="tab-eating-numerical-summary"/>) shows the proportion and odds of eating most meals off-campus, comparing students living at home and those not living at home.
+    </p>
+    <warning>
+      <p>
+        The OR can be interpreted in <em>either</em> of these ways (i.e., both are correct):<idx><h>Odds ratio</h><h>interpreting</h></idx><idx><h>Software output</h><h>comparing two odds (odds ratio)</h></idx>
+      </p>
+      <ul>
+        <li><p>the <em>odds</em> compare Row 1 counts to Row 2 counts, for both columns. The <em>OR</em> then compares the Column 1 odds to the Column 2 odds.</p></li>
+        <li><p>the <em>odds</em> compare Column 1 counts to Column 2 counts. The <em>OR</em> then compares the Row 1 odds to the Row 2 odds.</p></li>
+      </ul>
+      <p>
+        Odds and ORs are computed with the <em>first row</em> and <em>first column</em> values on the <em>top</em> of the fraction. Since the explanatory variable is usually in the rows, the second is usually the most useful. In this case, both of the above approaches produces an OR of <m>5.943</m>.
+      </p>
+    </warning>
+    <p>
+      An appropriate graph is a side-by-side bar chart<idx><h>Graphs</h><h>side-by-side bar chart</h></idx> or a stacked bar chart<idx><h>Graphs</h><h>stacked bar chart</h></idx> (Fig. <xref ref="fig-eating-graphs"/>). The side-by-side bar is useful for comparing odds. For instance, in the two left-most bars in Fig. <xref ref="fig-eating-graphs"/> (left panel), the first bar is <m>26</m> times as high as the second bar (and <m>26</m> is the odds); in the two right-most bars, the first bar is <m>4.375</m> times as high as the second bar (and <m>4.375</m> is the odds). A stacked bar chart is useful for comparing proportions.
+    </p>
+  </section>
+
+  <section xml:id="sec-ci-compare-proportions">
+    <title>Confidence intervals for comparing proportions</title>
+    <idx><h>Confidence intervals</h><h>comparing two proportions|(</h></idx>
+    <idx><h>Sampling distribution</h><h>comparing two proportions</h></idx>
+    <idx>Difference between proportions</idx>
+    <p>
+      The sample proportions for each group will vary from sample to sample, and the <em>difference</em> between the sample proportions will be different for each sample. Hence, the <em>difference</em> between the two sample proportions has a sampling distribution and <em>standard error</em>. Under certain conditions (Sect. <xref ref="sec-validity-chi-sq"/>), this sampling distribution has a normal distribution.
+    </p>
+    <definition xml:id="def-sampling-distribution-diff-proportions">
+      <title>Sampling distribution for the difference between two sample proportions for a CI</title>
+      <statement>
+        <p>
+          When constructing a CI, the <em>sampling distribution of the difference between two sample proportions</em> <m>\hat{p}_1</m> and <m>\hat{p}_2</m> is (when the appropriate conditions are met; Sect. <xref ref="sec-validity-chi-sq"/>) described by:
+        </p>
+        <ul>
+          <li><p>an approximate normal distribution,</p></li>
+          <li><p>centred around a sampling mean whose value is <m>{p_1} - {p_2}</m>, the difference between the <em>population</em> proportions,</p></li>
+          <li><p>with a standard deviation, called the standard error of the difference between the proportions, of <m>.e.(\hat{p}_1 - \hat{p}_2)</m>.</p></li>
+        </ul>
+        <p>
+          The standard error for the difference between the proportions is found using though this value will often be <em>given</em> (e.g., on computer output).
+        </p>
+      </statement>
+    </definition>
+    <p>
+      For the student-eating data, the standard errors of the sample proportions for each group are computed using Equation <xref ref="eq-stderrorphat"/> as
+    </p>
+  </section>
 </chapter>

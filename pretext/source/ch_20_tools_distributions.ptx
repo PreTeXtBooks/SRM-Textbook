@@ -1,5 +1,410 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Source: 20-Tools-DistributionsAndModels.Rmd -->
 <chapter xml:id="ch-20-tools-distributions" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Models and normal distributions</title>
-  <p>Skeleton for <em>20-Tools-DistributionsAndModels.Rmd</em>. Content to be added.</p>
+  <objectives xml:id="objectives-ch20">
+    <introduction>
+      <p>So far, you have learnt to ask an RQ, design a study, describe and summarise the data, and understand sampling variation. <alert>In this chapter</alert>, you will learn to:</p>
+    </introduction>
+    <ul>
+      <li><p>describe and draw normal distributions.</p></li>
+      <li><p>use <m>z</m>-scores to compute probabilities related to normal distributions.</p></li>
+      <li><p>work 'backwards' from probabilities for normal distributions.</p></li>
+    </ul>
+  </objectives>
+
+  <section xml:id="sec-distributions-models-intro">
+    <title>Introduction</title>
+    <p>
+      As seen in Chap. <xref ref="sec-sampling-variation"/>, many different samples could be drawn from a population, and the value of the statistic varies from sample to sample. The challenge of research is that only one of these countless possible samples is observed. The distribution of possible values of the statistic that could be observed from all possible samples is a <em>sampling distribution</em>.
+    </p>
+    <warning>
+      <p>
+        Remember: studying a sample leads to the following observations:
+      </p>
+      <ul>
+        <li><p>every sample is likely to be different.</p></li>
+        <li><p>we observe just one of the many possible samples.</p></li>
+        <li><p>every sample is likely to yield a different value for the statistic.</p></li>
+        <li><p>we observe just one of the many possible values for the statistic.</p></li>
+      </ul>
+      <p>
+        Since many values for the statistic are possible, the possible values of the statistic vary (called <em>sampling variation</em>) and have a <em>distribution</em> (called a <em>sampling distribution</em>).
+      </p>
+    </warning>
+    <p>
+      As seen in Chap. <xref ref="sec-sampling-variation"/>, sampling distributions often have a <em>normal distribution</em> (or bell-shaped distribution).<idx>Distributions</idx><idx>Normal distribution</idx> That is, the normal distribution<idx>Model</idx> is often used to describe the <em>sampling distribution</em>.<idx>Sampling distribution</idx> We now study normal distributions, as they appear in many places in research.
+    </p>
+  </section>
+
+  <section xml:id="sec-distributions-example">
+    <title>Normal distributions: examples</title>
+    <idx><h>Normal distribution</h><h>examples for data</h></idx>
+    <p>
+      In Chap. <xref ref="sec-sampling-variation"/>, we saw that the proportion of odd spins in <m>15</m> spins of a roulette wheel could vary; similarly, the mean spin from <m>15</m> spins could vary (Fig. <xref ref="fig-roulette-wheel-hist-prop-mean"/>). In both cases, these sampling distributions had a rough <em>normal distribution</em> shape. This is true for larger numbers of spins also (Figs. <xref ref="fig-roulette-wheel-hist"/> and <xref ref="fig-roulette-wheel-histx"/>).
+    </p>
+    <p>
+      The <em>histograms</em> in Fig. <xref ref="fig-roulette-wheel-hist-prop-mean"/> are based on results from a limited number of simulations. The solid lines shown in Fig. <xref ref="fig-roulette-wheel-hist-prop-mean"/> are actual <em>normal distributions</em>, and represent how the histogram might appear theoretically if we used an infinite number of simulations. The normal distributions are <em>models</em><idx>Model</idx> for what might occur in the <em>population</em>, so normal distributions are also called <em>normal models</em>. Since the models represent <em>populations</em>, the mean of the model is denoted <m></m> and the standard deviation is denoted <m></m>.
+    </p>
+    <p>
+      A <em>model</em><idx>Model</idx> is a theoretical or ideal concept. A model skeleton isn't <m>100</m>% accurate and certainly not exactly like <em>your</em> skeleton; nonetheless, it suitably approximates reality. None of us probably have a skeleton <em>exactly</em> like the model, but the model is still useful and helpful. Likewise, a sampling distribution may not have <em>exactly</em> a normal shape, but the model is still useful and helpful. The model is a way of describing a <em>theoretical</em> distribution in the population. A model is a simple (but not overly simple) approximation to reality.
+    </p>
+    <p>
+      The histograms in Fig. <xref ref="fig-roulette-wheel-hist-prop-mean"/> are not <em>exactly</em> normal distributions, but are very close to normal distributions, and certainly close enough for most purposes. Many, but not all, sampling distributions have approximate normal distributions.
+    </p>
+    <p>
+      Sampling distributions represent theoretical distributions of sample <em>statistics</em>, not the distribution of sample <em>data</em>. When the sampling distribution is a normal distribution, the mean of the distribution is called the <em>sampling mean</em> and the standard deviation is called the <em>standard error</em>.
+    </p>
+    <p>
+      Apart from their use in modelling theoretical sampling distributions, some quantitative variables have approximate normal distributions too, when the distribution of the data in the <em>population</em> can be approximately modelled by a normal distribution.
+    </p>
+    <p>
+      “`{example NormalExamples, name="Normal distributions of data"} Some quantitative variables have approximate normal distributions. Figure <xref ref="fig-histogram-dbp-possums"/> (left panel) shows the diastolic blood pressure of <m>398</m> Americans <xref ref="data-Willems1997-CHD"/><xref ref="data-Schorling1997-smoking"/>. Figure <xref ref="fig-histogram-dbp-possums"/> (right panel) shows the weight of <m>83</m> male Leadbeater's possums <xref ref="data-Williams2022-Possums"/>.
+    </p>
+    <p>
+      “`
+    </p>
+  </section>
+
+  <section xml:id="sec-normal-distribution">
+    <title>Normal distributions and the 68--95--99.7 rule</title>
+    <p>
+      Normal distributions have a shape that is symmetric about the mean, with a bell shape. Half the values are greater than the mean, and half the values are less than the mean. The total probability represented by a normal distribution is one (or <m>100</m>%). For example, every sample will produce a sample proportion between <m>0</m> and <m>1</m> and so is represented somewhere in Fig. <xref ref="fig-roulette-wheel-hist-prop-mean"/> (left panel); every American has a diastolic blood pressure and so is represented somewhere in Fig. <xref ref="fig-histogram-dbp-possums"/> (left panel); every male Leadbeater's possum has a weight and so is represented somewhere in Fig. <xref ref="fig-histogram-dbp-possums"/> (right panel).
+    </p>
+    <p>
+      In theory, no upper limit or lower limit exists for a variable modelled using a normal distribution. In practice, this is rarely true, but usually never presents a problem. Consider the normal distributions in Fig. <xref ref="fig-histogram-dbp-possums"/>, for example. The normal distribution shown for the diastolic blood pressure (left panel) has no lower or upper limit in theory, but all practical values of diastolic blood pressure are captured by that part of the normal distribution shown. The normal distribution implies almost no-one has a diastolic blood pressure below <m>40</m> Hg or above <m>130</m> Hg.
+    </p>
+    <p>
+      One of the most important properties of normal distributions is the <em>68<ndash/>95<ndash/>99.7 rule</em> (sometimes called the <em>empirical rule</em>).
+    </p>
+    <definition xml:id="def-empirical-rule">
+      <title>The $68$--$95$--$99.7$ rule</title>
+      <statement>
+        <p>
+          For any quantity modelled by a normal distribution:<idx>68–95–99.7 rule</idx>
+        </p>
+        <definition xml:id="def-empirical-rule">
+          <title>The 68--95--99.7 rule</title>
+          <statement>
+            <p>
+              For any quantity modelled by a normal distribution:<idx>68–95–99.7 rule</idx>
+            </p>
+            <ul>
+              <li><p><em>approximately</em> <m>68</m>% of values lie within <m>1</m> standard deviation of the mean.</p></li>
+              <li><p><em>approximately</em> <m>95</m>% of values lie within <m>2</m> standard deviations of the mean.</p></li>
+              <li><p><em>approximately</em> <m>99.7</m>% of values lie within <m>3</m> standard deviations of the mean.</p></li>
+            </ul>
+            <p>
+              These properties are true for <em>all</em> normal distributions, whatever the quantity, whatever the value of the mean, and whatever the value of the standard deviation (Fig. <xref ref="fig-empirical-rule-diagram"/>).
+            </p>
+          </statement>
+        </definition>
+        <example xml:id="example-heights-females">
+          <title>Heights of females</title>
+          <p>
+            Suppose the heights of Australian adult females in the population can be <em>modelled</em> with a normal distribution having a mean of <m> = 162</m>, and a standard deviation of <m> = 7</m>, and follow a normal distribution (Fig. <xref ref="fig-empirical-rule-hts"/>).
+          </p>
+          <p>
+            Using the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule, approximately <m>68</m>% of Australian women will be between <m>162 - 7 = 155</m> and <m>162 + 7 = 169</m> tall using this model. Similarly, approximately <m>95</m>% of Australian women will be between <m>162 - (2 7) = 148</m> and <m>162 + (2 7) = 176</m> tall.
+          </p>
+        </example>
+        <p>
+          These regions under the normal curve are probabilities, are often called areas, and are sometimes expressed as percentages.
+        </p>
+        <p><em>Standardising (<m>z</m>-scores)</em></p>
+        <p>
+          <idx>z-score|(</idx>
+        </p>
+        <p>
+          Since the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule (Def. <xref ref="def-empirical-rule"/>) applies for all normal distributions, the percentages in the rule only depend on how many standard deviations (<m></m>) a value (<m>x</m>) is from the mean (<m></m>). This information can be used to learn more about how values are distributed in a normal distribution.
+        </p>
+        <p>
+          For example, suppose heights of Australian adult females can be modelled with a normal distribution having a mean of <m> = 162</m>, and a standard deviation of <m> = 7</m> (Example <xref ref="example-heights-females"/>). Using this model, the proportion of Australian adult women <em>taller</em> than <m>169</m> can be determined.
+        </p>
+        <p>
+          From a picture (Fig. <xref ref="fig-hts-exer1"/>, left panel), <m>162 + 7 = 169</m> is one standard deviation <em>above</em> the mean. Since <m>68</m>% of values are within one standard deviation of the mean, <m>32</m>% are outside that range (some shorter; some taller). Hence, <m>16</m>% are taller than one standard deviation above the mean, so the answer is about <m>16</m>%. (Another <m>16</m>% are shorter than one standard deviation <em>below</em> the mean, or less than <m>162 - 7 = 155</m> in height.)
+        </p>
+        <p>
+          Again, the percentages only depend on how many standard deviations (<m></m>) the value (<m>x</m>) is from the mean (<m></m>), and not the actual values of <m></m> and <m></m>.
+        </p>
+        <example xml:id="example-heights-exer2">
+          <title>The $68$--$95$--$99.7$ rule</title>
+          <p>
+            Consider again the heights of Australian adult females. Using this model, what proportion are <em>shorter</em> than <m>148</m>?
+          </p>
+          <example xml:id="example-heights-exer2">
+            <title>The 68-95-99.7 rule</title>
+            <p>
+              Consider again the heights of Australian adult females. Using this model, what proportion are <em>shorter</em> than <m>148</m>?
+            </p>
+            <p>
+              Again, drawing a picture is helpful (Fig. <xref ref="fig-hts-exer1"/>, right panel). Since <m>162 - (2 7) = 148</m>, <m>148</m> is two standard deviations <em>below</em> the mean. Since <m>95</m>% of values are within two standard deviation of the mean, <m>5</m>% are outside that range (half smaller, half larger; see Fig. <xref ref="fig-hts-exer1"/>, right panel), so that <m>2.5</m>% are <em>shorter</em> than <m>148</m>. (Another <m>2.5</m>% are <em>taller</em> than <m>162 + 14 = 176</m>.)
+            </p>
+          </example>
+          <p>
+            Again, the percentages only depend on how many standard deviations (<m></m>) the value (<m>x</m>) is from the mean (<m></m>). The number of standard deviations that an observation is from the mean is called a <em><m>z</m>-score</em>. A <m>z</m>-score is computed using
+          </p>
+          <me>z = \frac{ x - \mu}{\sigma},</me>
+          <p>
+            where <m></m> is the standard deviation quantifying the variation in the <m>x</m>-values. Converting values to <m>z</m>-scores is called <em>standardising</em>.
+          </p>
+          <definition xml:id="def-z-score">
+            <title>$z$-score</title>
+            <statement>
+              <p>
+                A <em><m>z</m>-score</em> measures how many standard deviations a value <m>x</m> is from the mean. In symbols: where <m></m> is the mean of the distribution, and <m></m> is the standard deviation of the distribution (measuring the variation in the <m>x</m>-values).
+              </p>
+            </statement>
+          </definition>
+          <definition xml:id="def-z-score">
+            <title>z-score</title>
+            <statement>
+              <p>
+                A <em><m>z</m>-score</em> measures how many standard deviations a value <m>x</m> is from the mean. In symbols: where <m></m> is the mean of the distribution, and <m></m> is the standard deviation of the distribution (measuring the variation in the <m>x</m>-values).
+              </p>
+            </statement>
+          </definition>
+          <p>
+            The <m>z</m>-score is also called the <em>standardised value</em> or <em>standard score</em>. Note that:
+          </p>
+          <ul>
+            <li><p><m>z</m>-scores are negative for observations <em>below</em> the mean.</p></li>
+            <li><p><m>z</m>-scores are positive for observations <em>above</em> the mean.</p></li>
+            <li><p><m>z</m>-scores have no units (that is, not measured in kg, or cm, etc.).</p></li>
+          </ul>
+          <example xml:id="example-heights-exer3">
+            <title>$z$-scores</title>
+            <p>
+              Consider the model for the heights of Australian adult females again. From earlier, the <m>z</m>-score for a height of <m>169</m> is
+            </p>
+            <me>z = \frac{x-\mu}{\sigma} = \frac{169 - 162}{7} = 1,</me>
+            <p>
+              one standard deviation <em>above</em> the mean. Similarly, the <m>z</m>-score for a height of <m>148</m> is
+            </p>
+            <me>z = \frac{x-\mu}{\sigma} = \frac{148 - 162}{7} = -2,</me>
+            <p>
+              two standard deviations <em>below</em> the mean.
+            </p>
+            <example xml:id="example-heights-exer3">
+              <title>z-scores</title>
+              <p>
+                Consider the model for the heights of Australian adult females again. From earlier, the <m>z</m>-score for a height of <m>169</m> is
+              </p>
+              <me>z = \frac{x-\mu}{\sigma} = \frac{169 - 162}{7} = 1,</me>
+              <p>
+                one standard deviation <em>above</em> the mean. Similarly, the <m>z</m>-score for a height of <m>148</m> is
+              </p>
+              <me>z = \frac{x-\mu}{\sigma} = \frac{148 - 162}{7} = -2,</me>
+              <p>
+                two standard deviations <em>below</em> the mean.
+              </p>
+            </example>
+            <example xml:id="example-empirical-rule-z">
+              <title>The $68$--$95$--$99.7$ rule</title>
+              <p>
+                Consider the model for the heights of Australian adult females: a normal distribution, mean <m> = 162</m>, standard deviation <m> = 7</m> (Fig. <xref ref="fig-hts-empirical"/>). Using this model:
+              </p>
+              <ul>
+                <li><p>a height of <m>162</m> is zero standard deviations from the mean: <m>z = 0</m>.</p></li>
+                <li><p><m>155</m> is one standard deviation <em>below</em> the mean: <m>z = -1</m>.</p></li>
+                <li><p><m>169</m> is one standard deviation <em>above</em> the mean: <m>z = 1</m>.</p></li>
+                <li><p><m>148</m> and <m>176</m> correspond to <m>z = -2</m> and <m>z = 2</m> respectively.</p></li>
+                <li><p><m>141</m> and <m>183</m> correspond to <m>z = -3</m> and <m>z = 3</m> respectively.</p></li>
+              </ul>
+            </example>
+            <example xml:id="example-empirical-rule-z">
+              <title>The 68-95-99.7 rule</title>
+              <p>
+                Consider the model for the heights of Australian adult females: a normal distribution, mean <m> = 162</m>, standard deviation <m> = 7</m> (Fig. <xref ref="fig-hts-empirical"/>). Using this model:
+              </p>
+              <ul>
+                <li><p>a height of <m>162</m> is zero standard deviations from the mean: <m>z = 0</m>.</p></li>
+                <li><p><m>155</m> is one standard deviation <em>below</em> the mean: <m>z = -1</m>.</p></li>
+                <li><p><m>169</m> is one standard deviation <em>above</em> the mean: <m>z = 1</m>.</p></li>
+                <li><p><m>148</m> and <m>176</m> correspond to <m>z = -2</m> and <m>z = 2</m> respectively.</p></li>
+                <li><p><m>141</m> and <m>183</m> correspond to <m>z = -3</m> and <m>z = 3</m> respectively.</p></li>
+              </ul>
+            </example>
+            <p><em>Approximating areas (percentages) using the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule</em></p>
+            <p>
+              <idx><h>Normal distribution</h><h>approximating percentages|(</h></idx>
+            </p>
+            <p>
+              As seen above, the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule can be used to approximate percentages under normal distributions. The rule can even be used for values that do not exactly align with <m>1</m>, <m>2</m> or <m>3</m> standard deviations from the mean.
+            </p>
+            <p>
+              Suppose again that heights of Australian adult females can be modelled with a normal distribution with a mean of <m> = 162</m>, and a standard deviation of <m> = 7</m> (Fig. <xref ref="fig-hts-empirical"/>). To find the proportion of women <em>shorter</em> than <m>145</m>, first draw the situation (Fig. <xref ref="fig-hts-exer3"/>). Proceeding as before, we ask 'How many standard deviations from the mean is <m>145</m>?' Using Equation <xref ref="eq-zscores"/>, <m>145</m> corresponds to a <m>z</m>-score of which is about <m>2.43</m> standard deviations <em>below</em> the mean.
+            </p>
+            <p>
+              What percentage of observations are less than this <m>z</m>-score? This case is not covered by the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule, though the rule can be used to make <em>rough estimates</em>.
+            </p>
+            <p>
+              About <m>2.5</m>% of observations are less than <m>2</m> standard deviations below the mean; that is, about <m>2.5</m>% of women are shorter than <m>148</m>. So the percentage of females shorter than <m>145</m> (that is, even shorter than <m>148</m>, and so further into the tail of the distribution) will be <em>smaller</em> than <m>2.5</m>%. While we don't know the probability exactly, it will be smaller than <m>2.5</m>%.
+            </p>
+            <p>
+              Percentages found this way are very approximate, but often sufficient. However, more accurate percentages are found using tables compiled for this very purpose
+            </p>
+            <p>
+              We now learn to use these tables. <idx><h>Normal distribution</h><h>approximating percentages|)</h></idx>
+            </p>
+            <p><em>Exact areas (percentages) using tables</em></p>
+            <p>
+              <idx><h>Normal distribution</h><h>using tables|(</h></idx>
+            </p>
+            <p>
+              Areas under normal distributions can be found using online tables, or hard copy tables., for any <m>z</m>-score. The online tables are easier to use,
+            </p>
+            <p>
+              The tables
+            </p>
+            <p>
+              work with <m>z</m>-scores to two decimal places, so consider the <m>z</m>-score from Sect. <xref ref="sec-approx-probs"/> as <m>z = -2.43</m>.
+            </p>
+            <p>
+              Using Appendix <xref ref="sec-z-tables-neg"/>, find <m>-2.4</m> in the <em>left</em> margin of the table (Fig. <xref ref="fig-tables-example-la-te-x"/>), and find the second decimal place (in this case, <m>3</m>) in the <em>top</em> margin of the table: where these intersect is the area (or probability) <em>less than</em> the <m>z</m>-score of <m>-2.43</m>; that is, the probability of finding a <m>z</m>-score less than <m>z = -2.43</m> is <m>0.0075</m>, or about <m>0.75</m>\%.
+            </p>
+            <p>
+              The online tables can be found in Appendix <xref ref="sec-z-tables-online"/>. In the tables, enter the <m>z</m>-score in the the box <c>z.score</c>: then, the probability of finding a <m>z</m>-score <alert>less than</alert> (i.e., to the left of) this value is shown. The tables give the area as <m>0.0075</m>.
+            </p>
+            <warning>
+              <p>
+                The tables always give the area to the <alert>left</alert> of the <m>z</m>-score that is looked up.
+              </p>
+            </warning>
+            <warning>
+              <p>
+                Our tables always give the area to the <em>left</em> of the <m>z</m>-score.
+              </p>
+            </warning>
+            <p>
+              Either the hard-copy or online tables gives an answer of <m>0.75</m>%. This is consistent with the rough answer using the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule: a value less than <m>2.5</m>%. <idx><h>Normal distribution</h><h>using tables|)</h></idx>
+            </p>
+            <p><em>Examples using <m>z</m>-scores</em></p>
+            <p>
+              The general approach to computing probabilities from normal distributions is:
+            </p>
+            <ul>
+              <li><p><em>draw a diagram</em>, and mark on the value(s) of interest.</p></li>
+              <li><p><em>shade</em> the required region of interest.</p></li>
+              <li><p><em>compute</em> the <m>z</m>-score(s) using Equation <xref ref="eq-zscores"/>.</p></li>
+              <li><p><em>use</em> the tables in to compute corresponding areas (percentages).</p></li>
+              <li><p><em>deduce</em> the answer.</p></li>
+            </ul>
+            <p>
+              This approach can be used to answer more complicated questions involving normal distributions.
+            </p>
+            <example xml:id="example-normal-trees">
+              <title>Normal distributions</title>
+              <p>
+                Mechanised forest harvesting systems were simulated by <xref ref="data-Aedo1997-softwood"/>, and the diameters of a specific type of tree were modelled using:
+              </p>
+              <ul>
+                <li><p>a normal distribution, with</p></li>
+                <li><p>a mean of <m> = 8.8</m> inches, and</p></li>
+                <li><p>a standard deviation of <m> = 2.7</m> inches.</p></li>
+              </ul>
+              <p>
+                Using this model, what is the probability that a randomly-chosen tree has a diameter <em>greater</em> than <m>5</m> inches?
+              </p>
+              <p>
+                Following the steps identified earlier:
+              </p>
+              <ul>
+                <li><p><em>draw</em> the appropriate normal curve, and mark on <m>5</m> inches (Fig. <xref ref="fig-zdbh1"/>, left panel).</p></li>
+                <li><p><em>shade</em> the region 'greater than <m>5</m> inches' (Fig. <xref ref="fig-zdbh1"/>, centre panel).</p></li>
+                <li><p><em>compute</em> the <m>z</m>-score using Equation <xref ref="eq-zscores"/>: <m> z = (5 - 8.8)/2.7 = -1.41</m> to two decimal places.</p></li>
+                <li><p><em>use</em> tables: the probability of a tree diameter <em>shorter</em> than <m>5</m> inches is <m>0.0793</m>. (Remember: the tables always give area <em>less</em> than the value of <m>z</m>.)</p></li>
+                <li><p><em>deduce</em> the answer (Fig. <xref ref="fig-zdbh1"/>, right panel): since the <em>total</em> area under the normal distribution is one (or <m>100</m>%), the probability of a tree diameter <em>greater</em> than <m>5</m> inches is <m>1 - 0.0793 = 0.9207</m>, or about <m>92</m>%.</p></li>
+              </ul>
+              <p>
+                A randomly-chosen tree has a probability of <m>92</m>% of having a diameter <em>greater</em> than <m>5</m> inches.
+              </p>
+            </example>
+            <warning>
+              <p>
+                Our normal-distribution tables <em>always</em> provide area to the <em>left</em> of the <m>z</m>-score. Drawing a picture of the situation is important: it helps visualise getting the area requested from the area the tables provide. Remember: the <em>total</em> area under the normal distribution is one (or <m>100</m>%).
+              </p>
+            </warning>
+            <example xml:id="example-normal-trees-diagrams">
+              <title>Normal distributions</title>
+              <p>
+                These scenarios can be displayed on a diagram as shown in Fig. <xref ref="fig-match-diagrams"/> (recall <m> = 8.8</m> inches).
+              </p>
+              <ol>
+                <li><p>Tree diameters between <m>3</m> and <m>5</m> inches: Diagram A.</p></li>
+                <li><p>Tree diameters greater than <m>11</m> inches: Diagram B.</p></li>
+                <li><p>Tree diameters between <m>5</m> and <m>11</m> inches: Diagram C.</p></li>
+                <li><p>Tree diameters less than <m>11</m> inches: Diagram D.</p></li>
+              </ol>
+            </example>
+            <example xml:id="example-normal-trees2">
+              <title>Normal distributions</title>
+              <p>
+                Using the model for tree diameters in Example <xref ref="example-normal-trees"/>, what is the probability that a tree has a diameter <em>between</em> <m>5</m> and <m>11</m> inches?
+              </p>
+              <p>
+                First, <em>draw</em> the situation, and <em>shade</em> 'between <m>5</m> and <m>10</m> inches' (Fig. <xref ref="fig-match-diagrams"/>, Diagram C). Then, <em>compute</em> the <m>z</m>-scores for <em>both</em> tree diameters:
+              </p>
+              <ul>
+                <li><p>[17mm][l]{For <m>5</m> inches:} <m> z = (5 - 8.8)/2.7 = -1.41</m> (i.e., below the mean).</p></li>
+                <li><p>[17mm][l]{For <m>11</m> inches:} <m> z = (11 - 8.8)/2.7 = 0.81</m> (i.e., above the mean).</p></li>
+              </ul>
+              <p>
+                can then be used to find the area to the <em>left</em> of <m>z = -1.41</m> (which is <m>0.0793</m>), and also to find the area to the <em>left</em> of <m>z = 0.81</m> (which is <m>0.791</m>). However, neither of these provide the area <em>between</em> <m>z = -1.41</m> and <m>z = 0.81</m>.
+              </p>
+              <p>
+                Looking carefully at the areas from the tables and the area sought, the required area is the <em>area</em> between the two <m>z</m>-scores (Fig. <xref ref="fig-zdbh3"/>):
+              </p>
+              <p>
+                The probability that a tree has a diameter between <m>5</m> and <m>11</m> inches is about <m>0.7117</m>, or about <m>71</m>%.
+              </p>
+            </example>
+            <p>
+              <idx>z-score|)</idx>
+            </p>
+            <p><em>Unstandardising: working backwards</em></p>
+            <p>
+              <idx><h>Normal distribution</h><h>using tables backwards</h></idx><idx>Unstandardising formula</idx>
+            </p>
+            <p>
+              Using the model for tree diameters in Example <xref ref="example-normal-trees"/> again, different types of questions can be asked too. Suppose we needed to identify the diameters of the <em>smallest</em> <m>3</m>% of trees.
+            </p>
+            <p>
+              This is a different type of problem than before; previously, the <em>tree diameter</em> was known, so a <m>z</m>-score could be computed, and hence a probability (Fig. <xref ref="fig-working-with-z"/>). However, here the <em>probability</em> is known, and a tree diameter is sought. That is, working 'backwards' is necessary (Fig. <xref ref="fig-working-with-z"/>), so the <m>z</m>-tables need to be used 'backwards' too.
+            </p>
+            <p>
+              Drawing a rough diagram of the situation again is very helpful (Fig. <xref ref="fig-dbh-backwards"/>). We can only mark the approximate location of the required score, but this is sufficient. Then, tables must be used to determine the corresponding <m>z</m>-score. Since the required value will be smaller than the mean, the <m>z</m>-score will be negative (to the <em>left</em> of the mean).
+            </p>
+            <p>
+              As before (Sect. <xref ref="sec-exact-areas-using-tables"/>), online tables or hard copy tables can be used (and again the online tables are easier to use).
+            </p>
+            <p>
+              When the <m>z</m>-scores (in the <em>margins</em> of the tables in Appendices <xref ref="sec-z-tables-neg"/> and <xref ref="sec-z-tables-pos"/>) were known, the <em>areas</em> were found in the <em>body</em> of the table. If the area, or probability (in the <em>body</em> of the table) is known, the corresponding <m>z</m>-score can be found (in the <em>margins</em> of the table). Using the hard copy tables (Fig. <xref ref="fig-tables-example-la-te-x-backwards"/>), locate the area of <m>0.0300</m> (or as close as possible) in the <em>body</em> of the table, then read the <m>z</m>-score from the margins of the table.
+            </p>
+            <p>
+              Using hard copy tables, the closest value in the <em>body</em> of the table to <m>0.0300</m> (or <m>3</m>%) is <m>0.0301</m>. This corresponds to a <m>z</m>-score of <m>z = -1.88</m> (from the <em>margins</em> of the table). Sometimes, the exact area can be found in the body of the table, but often the closest value in the body of the table must be used. (The online tables give a slightly more precise value of <m>z = -1.881</m>.)
+            </p>
+            <p>
+              The online tables are found in Appendix <xref ref="sec-z-tables-online"/>. In the tables, enter the area to the <alert>left</alert> of the required unknown value in the box <c>Area.to.left</c>: the <m>z</m>-score with this probability to the left is shown.
+            </p>
+            <p>
+              Using online tables, <m>z</m>-score of <m>z = -1.881</m>. (The hard-copy tables are less precise, and give <m>z = -1.88</m>.)
+            </p>
+            <warning>
+              <p>
+                Our tables always give the area to the <em>left</em> of the <m>z</m>-score.
+              </p>
+            </warning>
+            <p>
+              Using either the hard-copy or online tables, the appropriate <m>z</m>-value is about <m>-1.88</m> standard deviations <em>below</em> the mean; that is, <m>z = -1.88</m> (Fig. <xref ref="fig-dbh-backwards"/>). The <m>z</m>-score can be converted to an observation value <m>x</m> using the <em>unstandardising</em> formula:<fn>This is found by re-arranging Equation <xref ref="eq-zscores"/>.</fn>
+            </p>
+            <me>x = \mu + z\sigma.</me>
+            <p>
+              Using this unstandardising formula:
+            </p>
+          </example>
+        </example>
+      </statement>
+    </definition>
+  </section>
 </chapter>

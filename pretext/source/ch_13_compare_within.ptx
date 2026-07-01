@@ -1,5 +1,249 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Source: 13-CompareWithin.Rmd -->
 <chapter xml:id="ch-13-compare-within" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Comparing quantitative data within individuals</title>
-  <p>Skeleton for <em>13-CompareWithin.Rmd</em>. Content to be added.</p>
+  <idx><h>Quantitative data</h><h>changes within individuals</h></idx>
+  <objectives xml:id="objectives-ch13">
+    <introduction>
+      <p>So far, you have learnt to ask an RQ, design a study, collect the data, describe the data and summarise the data. <alert>In this chapter</alert>, you will learn to:</p>
+    </introduction>
+    <ul>
+      <li><p>summarise within-individual changes in quantitative data using appropriate graphs.</p></li>
+      <li><p>summarise within-individual changes using summary tables.</p></li>
+    </ul>
+  </objectives>
+
+  <section xml:id="sec-introduction-ch13">
+    <title>Introduction</title>
+    <p>
+      Sometimes the same quantitative variable is measured on each individual more than once (i.e., <em>within</em>-individual changes for each unit of analysis) but only a small number of times. Examples of this type of data include:
+    </p>
+    <ul>
+      <li><p>measurements of weekly household water consumption for many households, <em>before</em> and <em>after</em> installing water-saving devices.</p></li>
+      <li><p>blood pressure recorded for people at <m>8</m>am, <m>1</m>pm and <m>8</m>pm each day.</p></li>
+    </ul>
+    <p>
+      In both cases, the same variable is measured multiple times for each individual. This chapter studies summarising within-individuals changes in <em>quantitative</em> variables.
+    </p>
+  </section>
+
+  <section xml:id="sec-within-summary-tables">
+    <title>Numerical summary: mean differences</title>
+    <p>
+      <idx><h>Quantitative data</h><h>changes within individuals</h><h>summary tables</h></idx><idx><h>Summary table</h><h>mean difference</h></idx><idx>Mean difference</idx>
+    </p>
+    <p>
+      When each individual has <em>two</em> observations, the difference between the observations can be computed for each individual. Then, the appropriate numerical summary is to summarise these <em>differences</em> over all individuals; for example, using the <em>mean</em> of these <em>differences</em>.
+    </p>
+    <p>
+      When <em>more than two</em> observations are made for each individual, the changes from the first observation (the <em>reference level</em>)<idx>Reference level</idx> may be computed (e.g., if the first observation is pre-intervention, or a benchmark, observation); for example, using the <em>mean change</em> (see Sect. <xref ref="sec-pain-relieving-tape"/>).
+    </p>
+    <example xml:id="example-within-individual-comparison">
+      <title>Within-individual comparisons</title>
+      <p>
+        <xref ref="data-Lothian2006-Whey"/> studied children with atopic asthma, and measured the immunogoblin E concentrations (IgE) before and after an intervention for each child (Table <xref ref="tab-ig-e-changes"/>), plus the <em>reduction</em> in IgE for each child. The child is the <em>individual</em>.<idx>Individuals</idx>
+      </p>
+      <p>
+        For the IgE data, the numerical summary table is shown in Table <xref ref="tab-ig-e-table"/>. The direction of the difference is implied by the word '<em>reduction</em>'.
+      </p>
+    </example>
+    <warning>
+      <p>
+        In the numerical summary table, the information for the differences is <em>not</em> found by subtracting the information in one row from the other. In Table <xref ref="tab-ig-e-table"/>, for example, the number of differences is not <m>11 - 11 = 0</m>; the standard deviation of the differences is <em>not</em> <m>1615.53 - 1354.4 = 261.13</m>.<m>^{-1}</m>. These statistics are computed from the differences (i.e., the <alert>Reductions</alert> in Table <xref ref="tab-ig-e-changes"/>).
+      </p>
+    </warning>
+  </section>
+
+  <section xml:id="sec-graphs-for-the-differences-ch13">
+    <title>Graphs for the differences</title>
+    <p>
+      <idx><h>Quantitative data</h><h>changes within individuals</h><h>graphs</h></idx><idx><h>Graphs</h><h>changes within individuals</h></idx><idx><h>Software output</h><h>graphs</h></idx>
+    </p>
+    <p>
+      For within-individual changes for a <em>quantitative</em> variable, options for plotting include:
+    </p>
+    <ul>
+      <li><p><em>histograms of differences</em> (Sect. <xref ref="sec-histo-diff-plot"/>), which are useful for changes in <em>pairs</em> of measurements or observations for each individual.</p></li>
+      <li><p><em>case-profile plots</em> (Sect. <xref ref="sec-case-profile-plot"/>), which are useful when the same individuals are measured or observed a small number of times.</p></li>
+    </ul>
+
+  <subsection xml:id="sec-histo-diff-plot">
+    <title>Histogram of differences</title>
+    <idx><h>Graphs</h><h>histogram of  differences</h></idx>
+    <p>
+      Sometimes the same variable is measured on each unit of analysis twice, when the <em>changes</em> (or <em>differences</em>) for each individual can be produced, and a histogram of the changes or differences can be constructed. The direction of the differences should be clear (e.g., first measurement minus second, or second measurement minus first).
+    </p>
+    <p>
+      Issues relevant for constructing histograms (Sect. <xref ref="sec-histograms"/>), such as bin widths and boundary values, also apply here.
+    </p>
+    <warning>
+      <p>
+        The axis displaying the counts (or percentages) should <em>start from zero</em>, since the height of the bars visually implies the frequency of those differences (see Example <xref ref="example-vertical-truncation"/>).
+      </p>
+    </warning>
+    <example xml:id="example-case-profile-hist-diff-plots">
+      <title>Within-individual comparisons</title>
+      <p>
+        For the IgE data (Table <xref ref="tab-ig-e-changes"/>), the <em>reduction</em> in IgE for each child can be shown using a histogram
+      </p>
+    </example>
+  </subsection>
+
+  <subsection xml:id="sec-case-profile-plot">
+    <title>Case-profile plots</title>
+    <idx><h>Graphs</h><h>case-profile plot</h></idx>
+    <p>
+      Sometimes the variable is measured or recorded more than twice, and so a single set of differences cannot be produced. In these cases, the values for each individual can be plotted using a case-profile plot: the measurements are shown on one axis (usually the vertical), and the various points at which measurements are taken are shown on the other axis. A case-profile plot is still useful for paired data, of course.
+    </p>
+    <warning>
+      <p>
+        The axis displaying the counts (or percentages) <em>need not start from zero</em>, since the distance from the axis to the lines <em>do not</em> visually imply any quantity of interest. Rather, the <em>relative changes</em> represented by the lines display the quantity of interest.
+      </p>
+    </warning>
+    <example xml:id="example-case-profile-plots">
+      <title>Case-profile plot</title>
+      <p>
+        For the IgE data (Table <xref ref="tab-ig-e-changes"/>), the measurements of IgE for each child at both times can be shown in a case-profile plot
+      </p>
+      <p>
+        Each line corresponds to a unit of analysis (i.e., a child).
+      </p>
+    </example>
+    <example xml:id="example-case-profile-running">
+      <title>Case-profile plot</title>
+      <p>
+        Runners use wearable devices to measure many performance indicators, including vertical oscillation (VO). VO contributes to running economy and injury risk, so reliable VO measurements are crucial. <xref ref="smith2022validity"/> compared four devices, and obtained data from video analysis for <m>n = 150</m> athletes; that is, each participant had the same runs measured using five methods. The case-profile plot (Fig. <xref ref="fig-running-rm"/>) shows the means for each method using a solid point; each line represents one runner. NOVA and Footpod give smaller VO measurements in general.
+      </p>
+    </example>
+    <p>
+      As in Example <xref ref="example-case-profile-running"/>, the case-profile plot is hard to read with large numbers of individuals, and so sometimes the mean (or median, as appropriate) is shown, with some measure of the variation of the observations (Fig. <xref ref="fig-running-rm"/> shows the minimum and maximum values for each method, for instance).<idx>Range</idx>
+    </p>
+  </subsection>
+  </section>
+
+  <section xml:id="sec-compare-within-invasive-plants">
+    <title>Example: invasive plants</title>
+    <p>
+      Skypilot (<em>Polemonium viscosum</em>) is a native alpine wildflower growing in the Colorado Rocky Mountains (USA). In recent years, a willow shrub (<em>Salix</em>) has been encroaching on skypilot territory and, because willow often flowers early, researchers <xref ref="kettenbach2017shrub"/> are concerned that the willow may 'negatively affect pollination regimes of resident alpine wildflower species' (p. <m>6 965</m>). One RQ was:
+    </p>
+    <blockquote>
+      <p>In the Colorado Rocky Mountains, what is the mean difference between first-flowering day for the native skypilot and the encroaching willow?</p>
+    </blockquote>
+    <p>
+      Data for both species was collected at <m>25</m> different sites
+    </p>
+    <p>
+      The site is the <em>individual</em>; the data are <em>paired</em> (Sect. <xref ref="sec-paired-intro"/>), a form of blocking<idx>Blocking</idx> (Sect. <xref ref="sec-managing-confounding"/>). The 'first-flowering day' is the number of days since the start of the year (e.g., January 12 is 'day 12') when flowers were first observed.
+    </p>
+    <p>
+      Since the data are available, the data should be summarised graphically (Fig. <xref ref="fig-flowering-plots"/>) and numerically (Table <xref ref="tab-flowering-summary"/>), using software output (Fig. <xref ref="fig-floweringjamovi"/>).<idx><h>Software output</h><h>mean differences</h></idx>
+    </p>
+  </section>
+
+  <section xml:id="sec-pain-relieving-tape">
+    <title>Example: pain-relieving tape</title>
+    <p>
+      <xref ref="naugle2021effect"/> studied the effect of using Kinesio Tape to alleviate pain in athletes. Pain was measured by applying a slow constant rate of pressure on the left arm, and subjects pressed a button when the sensation moved from pressure to pain. The pressure at which this occurred was recorded. This was repeated <m>5</m> before applying the tape, <m>5</m> after applying the tape, and again <m>15</m><ndash/><m>20</m> after applying the tape.
+    </p>
+    <p>
+      Figure <xref ref="fig-tape-repeated"/> shows the reported pain for <m>16</m> subjects. A summary table is shown in Table <xref ref="tab-tape-table"/>. The pain thresholds are increasing slightly as time progresses.
+    </p>
+  </section>
+
+  <section xml:id="sec-chap13-summary">
+    <title>Chapter summary</title>
+    <p>
+      Quantitative data measured within individuals can be summarised using a histogram of differences when the variable is measured or observed twice, or a case-profile plot (with two or more measurement or observations per individual). A summary table should show the numerical summaries for the quantitative variable at each measurement or observation and for appropriate changes.
+    </p>
+  </section>
+
+  <reading-questions xml:id="sec-chap13-quick-review">
+    <title>Quick review questions</title>
+  </reading-questions>
+
+  <exercises xml:id="sec-summarise-within-exercises">
+    <introduction>
+      <p>Answers to odd-numbered exercises are given at the end of the book.</p>
+    </introduction>
+    <p>
+      [Answers to odd-numbered exercises] are given at the end of the book.
+    </p>
+    <exercise xml:id="exercise-compare-within-insulation">
+      <p>
+        [<em>Dataset</em>: <c>Insulation</c>] The <em>Electricity Council</em> in Bristol wanted to determine if a certain type of wall-cavity insulation reduced average energy consumption in winter <xref ref="data-OpenUni-insulationBA"/><xref ref="data-hand-handbook"/>:
+      </p>
+      <blockquote>
+        <p>In Bristol homes, what is the <em>mean reduction</em> in energy consumption after adding home insulation?</p>
+      </blockquote>
+      <ol>
+        <li><p>What are the individuals (units of analysis)?</p></li>
+        <li><p>Explain why this study uses a within-individuals comparison.</p></li>
+        <li><p>Use the collected data</p></li>
+      </ol>
+      <p>
+        to sketch a case-profile plot.
+      </p>
+      <ol>
+        <li><p>Use the data to sketch a histogram of the differences.</p></li>
+        <li><p>Use software or a calculator to prepare a summary table.</p></li>
+      </ol>
+    </exercise>
+    <exercise xml:id="exercise-compare-within-exercises-captopril">
+      <p>
+        [<em>Dataset</em>: <c>Captopril</c>] In a study of hypertension <xref ref="data-hand-handbook"/><xref ref="data-macgregor-essential"/>, <m>15</m> patients were given a drug (Captopril) and their systolic blood pressure measured (in mm Hg) immediately before and two hours after being given the drug (Table <xref ref="tab-ci-captopril-data"/>).
+      </p>
+      <ol>
+        <li><p>Explain why this study uses a within-individuals comparison.</p></li>
+        <li><p>Construct a histogram of the differences.</p></li>
+        <li><p>Construct a case-profile plot for the data.</p></li>
+      </ol>
+    </exercise>
+    <exercise xml:id="exercise-compare-within-pain-relief">
+      <p>
+        [<em>Dataset</em>: <c>PainRelief</c>] <xref ref="augustino2023dataset"/> measured the reported pain of new mothers in Dodoma (Tanzania) at four times: near giving birth, then <m>20</m>, <m>40</m> and <m>60</m> after giving birth. Mothers were administered either paracetamol or a cold pack as pain relief. Pain was recorded using a 'numeric rating scale represented by the horizontal line marked from zero to ten', where higher scores mean greater pain.
+      </p>
+      <p>
+        Since the number of individuals is large (<m>n = 912</m>), use the summary data in Table <xref ref="tab-pain-relief-table"/> to sketch a plot of the means and the range, like that in Figure <xref ref="fig-tape-repeated"/>.
+      </p>
+    </exercise>
+    <exercise xml:id="exercise-compare-within-stress-surgery-ci">
+      <p>
+        [<em>Dataset</em>: <c>Stress</c>] The concentration of beta-endorphins in the blood is a sign of stress. One study (<xref ref="data-hand-handbook"/>, Dataset 232; <xref ref="hoaglin2011exploring"/>) measured the beta-endorphin concentration for <m>19</m> patients about to undergo surgery.
+      </p>
+      <p>
+        Each patient had their beta-endorphin concentrations measured <m>12</m><ndash/><m>14</m> before surgery, and also <m>10</m> before surgery. A numerical summary (from software output) is in Table <xref ref="tab-stress-table"/>.<idx><h>Software output</h><h>mean differences</h></idx>
+      </p>
+      <ol>
+        <li><p>Explain why this study uses a within-individuals comparison.</p></li>
+        <li><p>Explain why the standard deviation for the <em>increase</em> is not the difference between the two individuals time-point standard deviations.</p></li>
+        <li><p>Using the data file and software, construct a histogram of the differences.</p></li>
+        <li><p>Using the data file and software, construct a case-profile plot for the data.</p></li>
+      </ol>
+    </exercise>
+    <exercise xml:id="exercise-compare-within-running">
+      <p>
+        [<em>Dataset</em>: <c>Running</c>] Create a summary table for the data in Example <xref ref="example-case-profile-running"/>.
+      </p>
+    </exercise>
+    <exercise xml:id="exercise-compare-within-wc-tennis">
+      <p>
+        [<em>Dataset</em>: <c>WCTennis</c>] <xref ref="alberca2022sprint"/> recorded the push-time for French wheelchair tennis players, while holding and not holding a racquet (Table <xref ref="tab-wc-tennis"/>; <xref ref="alberca2022sprintDATA"/>).
+      </p>
+      <ol>
+        <li><p>What do the differences mean (as given in the table)?</p></li>
+        <li><p>Create a plot of the data.</p></li>
+        <li><p>Create a numerical summary table for the data.</p></li>
+      </ol>
+    </exercise>
+    <exercise xml:id="exercise-compare-within-jumping">
+      <p>
+        [<em>Dataset</em>: <c>Jumping</c>] <xref ref="hebert2023effect"/> recorded double-legged jumping distance for <m>80</m> healthy people, when they wore shoes and were barefoot
+      </p>
+      <ol>
+        <li><p>What do the differences mean (as given in the table)?</p></li>
+        <li><p>Create a plot of the data.</p></li>
+        <li><p>Create a numerical summary table for the data.</p></li>
+      </ol>
+    </exercise>
+  </exercises>
 </chapter>

@@ -1,5 +1,587 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Source: 28-Testing-More.Rmd -->
 <chapter xml:id="ch-28-testing-more" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>More details about hypothesis testing</title>
-  <p>Skeleton for <em>28-Testing-More.Rmd</em>. Content to be added.</p>
+  <objectives xml:id="objectives-ch28">
+    <introduction>
+      <p>You have learnt to ask an RQ, design a study, classify and summarise the data, construct confidence intervals, and conduct hypothesis tests. <alert>In this chapter</alert>, you will learn more about <em>hypothesis tests</em>. You will learn to:</p>
+    </introduction>
+    <ul>
+      <li><p>understand the process of hypothesis testing.</p></li>
+      <li><p>communicate the results of hypothesis tests.</p></li>
+      <li><p>interpret <m>P</m>-values.</p></li>
+    </ul>
+  </objectives>
+
+  <section xml:id="sec-chap28-intro">
+    <title>Introduction</title>
+    <p>
+      In Chaps. <xref ref="sec-test-one-proportion"/> and <xref ref="sec-test-one-mean"/>, hypothesis tests for one proportion and one mean were studied. Later chapters discuss hypothesis tests in other contexts, too. However, the general approach to hypothesis testing is the same for <em>any</em> hypothesis test. This chapter discusses some general ideas in hypothesis testing:
+    </p>
+    <ul>
+      <li><p>stating the <em>assumptions</em> and forming hypotheses (Sect. <xref ref="sec-about-hypotheses"/>).</p></li>
+      <li><p>describing the <em>expectations</em> of the statistic using the sampling distribution (Sect. <xref ref="sec-sampling-distributions-expectation"/>).</p></li>
+      <li><p>evaluating <em>observations</em> and the test statistic (Sect. <xref ref="sec-test-statistic"/>).</p></li>
+      <li><p>quantifying the <em>consistency</em> between the values of the statistic and parameter using <m>P</m>-values (Sect. <xref ref="sec-about-finding-pvalues"/>).</p></li>
+      <li><p>interpreting <m>P</m>-values (Sect. <xref ref="sec-about-pvalues"/>).</p></li>
+      <li><p>how conclusions can go wrong (Sect. <xref ref="sec-type-errors"/>).</p></li>
+      <li><p>wording <em>conclusions</em> (Sect. <xref ref="sec-wording-conclusion"/>).</p></li>
+      <li><p>practical importance and statistical significance (Sect. <xref ref="sec-practical-significance"/>).</p></li>
+      <li><p>statistical validity in hypothesis testing (Sect. <xref ref="sec-validity-h-ts"/>).</p></li>
+    </ul>
+  </section>
+
+  <section xml:id="sec-about-hypotheses">
+    <title>More details about hypotheses and assumptions</title>
+    <p>
+      Two <em>statistical</em> hypotheses are stated about the population parameter: the null hypothesis <m>H_0</m>, and the alternative hypothesis <m>H_1</m>. The null hypothesis is assumed to be true, and retained unless persuasive evidence exists to change our mind.
+    </p>
+    <note>
+      <p>
+        The word <em>hypothesis</em> means 'a possible explanation'.<idx>Hypotheses</idx>
+      </p>
+      <p>
+        <em>Scientific hypotheses</em><idx><h>Hypotheses</h><h>scientific</h></idx> refer to potential <em>scientific</em> explanations that can be tested by collecting data. For example, an engineer may hypothesise that replacing sand with glass in the manufacture of concrete will produce desirable characteristics <xref ref="devaraj2021exploring"/>. Scientific hypotheses lead to research questions.
+      </p>
+      <p>
+        <em>Statistical hypotheses</em><idx><h>Hypotheses</h><h>statistical</h></idx> refer to statements made about a parameter that may explain the value of a sample statistic. The statistical hypotheses are the foundation of the logic of hypothesis testing. One of the statistical hypotheses usually align with the scientific hypothesis.
+      </p>
+      <p>
+        This book discusses forming <em>statistical hypotheses</em>.
+      </p>
+    </note>
+
+  <subsection xml:id="sec-hypothesis-null">
+    <title>Null hypotheses</title>
+    <idx><h>Hypotheses</h><h>null</h></idx>
+    <p>
+      Statistical hypotheses <em>are always about a parameter</em>. Hypothesising, for example, that the <em>sample</em> mean body temperature (in Chap. <xref ref="sec-test-one-mean"/>) is equal to <m>37.0</m>^o^C is silly: the <em>sample</em> mean clearly is <m>36.8052</m>^o^C for the sample taken, and its value will vary from sample to sample anyway. The RQ is about the unknown <em>population</em>: the <alert>P</alert> in <alert>P</alert>OCI stands for <alert>P</alert>opulation.<idx>POCI</idx>
+    </p>
+    <p>
+      The <em>null hypothesis</em> <m>H_0</m> proposes that <em>sampling variation</em> is why the value of the statistic (such as the sample mean) is not the same as the assumed value of the parameter (such as the population mean). Every sample is different, and the observed data is from just one of the many possible samples. The value of the <em>statistic</em> will vary from sample to sample; the statistic may not be equal to the <em>parameter</em>, just because of the random sample obtained and sampling variation.
+    </p>
+    <definition xml:id="def-null-hypothesis">
+      <title>Null hypothesis</title>
+      <statement>
+        <p>
+          The <em>null hypothesis</em> proposes that <em>sampling variation</em> explains the discrepancy between the proposed value of the parameter, and the observed value of the statistic.<idx>Sampling variation</idx>
+        </p>
+      </statement>
+    </definition>
+    <p>
+      Null hypotheses always contain an 'equals', because (as part of the decision-making process) a specific value must be assumed for the parameter, so we can describe what we might expect from the sample. For example: the population mean <em>equals</em> <m>100</m>, is <em>less than or equal to</em> <m>100</m> (<m>\le100</m>), or is <em>more than or equal to</em> <m>100</m> (<m>\ge100</m>).
+    </p>
+    <p>
+      The null hypothesis always assumes the discrepancy between the statistic and the assumed value of the parameter is due to sampling variation. This may mean, for example:
+    </p>
+    <ul>
+      <li><p>there is <em>no change</em> in the value of the parameter compared to an established or accepted value (for descriptive RQs), such as in the body-temperature example in Chap. <xref ref="sec-test-one-mean"/>.</p></li>
+      <li><p>there is <em>no change</em> in the value of the parameter for the units of analysis (i.e., for repeated-measures RQs).</p></li>
+      <li><p>there is <em>no difference</em> between the value of the parameter in two (or more) groups (i.e., for relational RQs).</p></li>
+      <li><p>there is <em>no relationship</em> between the variables, as measured by some parameter (for correlational RQs).</p></li>
+    </ul>
+    <warning>
+      <p>
+        The <em>null hypothesis</em> always has the form 'no difference, no change, no relationship' regarding the population parameter. It is the 'sampling variation' explanation for the discrepancy between the value of the parameter and the value of the statistic.
+      </p>
+    </warning>
+    <warning>
+      <p>
+        Defining the parameter carefully is important!
+      </p>
+    </warning>
+  </subsection>
+
+  <subsection xml:id="sec-hypothesis-alternative">
+    <title>Alternative hypotheses</title>
+    <idx><h>Hypotheses</h><h>alternative</h></idx>
+    <p>
+      The alternative hypothesis <m>H_1</m> (or <m>H_a</m>) offers another possible reason why the value of the statistic (such as the sample proportion) is not the same as the proposed value of the parameter (such as the population proportion): the value of the parameter really is not the value claimed in the null hypothesis.
+    </p>
+    <definition xml:id="def-alt-hypothesis">
+      <title>Alternative hypothesis</title>
+      <statement>
+        <p>
+          The <em>alternative hypothesis</em> proposes that the discrepancy between the proposed value of the parameter and the observed value of the statistic cannot be explained by <em>sampling variation</em>. It proposes that the value of the parameter is not the value claimed in the null hypothesis.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      Alternative hypotheses can be <em>one-tailed</em> or <em>two-tailed</em>.<idx><h>Hypotheses</h><h>one-tailed</h></idx><idx><h>Hypotheses</h><h>two-tailed</h></idx> A <em>two</em>-tailed alternative hypothesis means, for example, that the population mean could be either smaller <em>or</em> larger than what is claimed. A <em>one</em>-tailed alternative hypothesis admits only one of those two possibilities. Most (but certainly not all) hypothesis tests are two-tailed.
+    </p>
+    <p>
+      The decision about whether the alternative hypothesis is one- or two-tailed depends on what the RQ asks (<em>not</em> by looking at the data). <em>The RQ and hypotheses should (in principle) be formed before the data are obtained</em>, or at least before looking at the data if the data are already collected.
+    </p>
+    <p>
+      The idea of hypothesis testing is the same whether the alternative hypothesis is one- or two-tailed: based on the data and the statistic, a decision is to be made about whether the data provides persuasive evidence to support the alternative hypothesis.
+    </p>
+    <example xml:id="example-alt-hypothesis-body-temp">
+      <title>Alternative hypotheses</title>
+      <p>
+        For the body-temperature study (Chap. <xref ref="sec-test-one-mean"/>), the alternative hypothesis is <em>two-tailed</em> (i.e., <m>H_1</m>: <m> 37.0</m>): the RQ asks if the population mean is <m>37.0</m>^o^C or <em>not</em>. Two possibilities are considered: that <m></m> could be either larger <em>or</em> smaller than <m>37.0</m>.
+      </p>
+      <p>
+        A <em>one-tailed alternative hypothesis</em> would be appropriate if the RQ asked 'Is the <em>population</em> mean internal body temperature <em>greater</em> than <m>37.0</m>^o^C?' (i.e., <m>H_1</m>: <m> &gt; 37.0</m>), or 'Is the <em>population</em> mean internal body temperature <em>smaller</em> than <m>37.0</m>^o^C?' (i.e., <m>H_1</m>: <m> &lt; 37.0</m>). One-tailed RQs such as these would only be asked if there were good scientific reasons to suspect a difference in one direction specifically.
+      </p>
+    </example>
+    <warning>
+      <p>
+        Important points about forming hypotheses:
+      </p>
+      <ul>
+        <li><p>hypotheses always concern a <em>population</em> parameter.</p></li>
+        <li><p>hypotheses emerge from the RQ (not the data).</p></li>
+        <li><p>null hypothesis always have the form 'no difference, no change, no relationship' (i.e., sampling variation explains the discrepancy between the values of the parameter and statistic).</p></li>
+        <li><p>null hypotheses always contain an 'equals'.</p></li>
+        <li><p>alternative hypotheses may be one- or two-tailed, depending on the RQ.</p></li>
+      </ul>
+    </warning>
+  </subsection>
+  </section>
+
+  <section xml:id="sec-sampling-distributions-expectation">
+    <title>More details about sampling distributions and expectations</title>
+    <idx>Sampling distribution</idx>
+    <p>
+      The <em>sampling distribution</em> describes, approximately, how the value of the statistic (such as <m>\hat{p}</m> or <m>\bar{x}</m>) varies across all possible samples, when <m>H_0</m> is true; it describes the <em>sampling distribution</em>.<idx>Sampling variation</idx><idx>Sampling distribution</idx> Some sampling distributions have an approximate normal distribution.<idx>Normal distribution</idx>
+    </p>
+    <p>
+      When the sampling distribution is described by a normal distribution, the <em>mean</em> of the normal distribution (the sampling mean) is the parameter value given in the <em>assumption</em> (<m>H_0</m>), and the <em>standard deviation</em> of the normal distribution is called the <em>standard error</em>.<idx>Standard error</idx> However, <em>not all sampling distributions are normal distributions</em>.
+    </p>
+    <p>
+      The variation in the sampling distribution (as measured by the standard error) depends on the sample size. For example, suppose <m>p</m> is defined as the probability of rolling a
+    </p>
+    <p>
+      on a die. In one roll, finding a sample proportion of <m>\hat{p} = 1</m>, is not unreasonable. However, in <m>20 000</m> rolls, a sample proportion of <m>\hat{p} = 1</m> would be <em>incredibly</em> unlikely for a fair die.
+    </p>
+  </section>
+
+  <section xml:id="sec-test-statistic">
+    <title>More details about observations and the test statistic</title>
+    <p>
+      The sampling distribution describes what values the statistic can take over all possible samples of a given size. When the sampling distribution has an approximate normal distribution, the observed value of the <em>test statistic</em><idx>Test statistic</idx> is
+    </p>
+    <me>\text{test statistic} =    \frac{\text{value of sample statistic} - \text{centre of the sampling distribution}}         {\text{standard deviation of the sampling distribution (i.e., standard error)}}.</me>
+    <p>
+      The 'standard deviation of the sampling distribution' is called the standard error of the statistic. This is called a '<em>test statistic</em>', since the calculation is based on sample data (so it is a <em>statistic</em>) and used in a hypothesis <em>test</em>. This test statistic may be a <m>z</m>-score or a <m>t</m>-score. Other test statistics, when the sampling distribution is not described by a normal distribution, are used too (as in Chap. <xref ref="sec-analysis-odds-ratio"/>).
+    </p>
+    <note>
+      <p>
+        <idx>t-score</idx><idx>z-score</idx> For sampling distributions with an approximate normal distribution, a <m>t</m>-score and <m>z</m>-score both measure the number of standard deviations that a value is from the mean:
+      </p>
+      <me>\frac{\text{a value that varies} - \text{mean of the distribution}}         {\text{standard deviation of the distribution}}.</me>
+      <p>
+        Then:
+      </p>
+      <ul>
+        <li><p>if the quantity that varies is an <em>individual</em> observation <m>x</m>, the measure of variation is the standard deviation of the individual observations.</p></li>
+        <li><p>if the quantity that varies is a <em>sample statistic</em>, the measure of variation is a <em>standard error</em>, which measures the variation in a sample statistic.</p></li>
+      </ul>
+      <p>
+        <em>When conducting hypothesis tests about means</em>, the test statistic is a <m>t</m>-score if the measure of variation uses a <em>sample</em> standard deviation.
+      </p>
+    </note>
+  </section>
+
+  <section xml:id="sec-about-finding-pvalues">
+    <title>More details about finding P-values</title>
+    <idx>P-values</idx>
+    <p>
+      When the sampling distribution has an approximate normal distribution, <m>P</m>-values can be <em>approximated</em> (using the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule or tables), as demonstrated in Sect. <xref ref="sec-testp-obs-decision-pvalues"/>. The <m>P</m>-value is the area <em>more extreme</em> than the calculated <m>z</m>- or <m>t</m>-score (i.e., in the <em>tails</em> of the distribution). The <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule can be used to approximate this tail area (when the sampling distribution has an approximate normal distribution).
+    </p>
+    <warning>
+      <p>
+        A lower-case <m>p</m> or upper-case <m>P</m> can be used to denote a <m>P</m>-value. We use an upper-case <m>P</m>, since we use <m>p</m> to denote a population proportion.
+      </p>
+    </warning>
+    <p>
+      For <em>two-tailed</em> tests, the <m>P</m>-value is the <em>combined</em> area in the left and right tails.<idx><h>Hypotheses</h><h>one-tailed</h></idx><idx><h>Hypotheses</h><h>two-tailed</h></idx><idx><h>P-values</h><h>one-tailed</h></idx><idx><h>P-values</h><h>two-tailed</h></idx> For <em>one-tailed</em> tests, the <m>P</m>-value is the area in just the left or right tail (as appropriate, according to the alternative hypothesis; see Sect. <xref ref="sec-i-qstudents"/>).
+    </p>
+    <warning>
+      <p>
+        If the sampling distribution has an approximate normal distribution, the one-tailed <m>P</m>-value is half the value of the two-tailed <m>P</m>-value.
+      </p>
+    </warning>
+    <note>
+      <p>
+        Some software always reports two-tailed <m>P</m>-values.<idx><h>Computers and software</h><h>statistical</h></idx>
+      </p>
+    </note>
+    <p>
+      More accurate approximations of the <m>P</m>-value can be found using tables. Precise <m>P</m>-values are found using the <m>P</m>-values from software output.
+    </p>
+  </section>
+
+  <section xml:id="sec-about-pvalues">
+    <title>More details about interpreting P-values</title>
+    <idx><h>P-values</h><h>interpretation</h></idx>
+    <idx><h>Hypothesis testing</h><h>interpretation</h></idx>
+    <p>
+      Understanding <m>P</m>-values requires care.
+    </p>
+    <definition xml:id="def-pvalue">
+      <title>$P$-value</title>
+      <statement>
+        <p>
+          A <m>P</m>-value is the likelihood of observing the sample statistic (or something more extreme) over repeated sampling, under the assumption that the null hypothesis about the population parameter is true.
+        </p>
+      </statement>
+    </definition>
+    <definition xml:id="def-pvalue">
+      <title>P-value</title>
+      <statement>
+        <p>
+          A <m>P</m>-value is the likelihood of observing the sample statistic (or something more extreme) over repeated sampling, under the assumption that the null hypothesis about the population parameter is true.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      Since the null hypothesis is initially assumed true, <em>the onus is on the data to present evidence to contradict the null hypothesis</em>. That is, the null hypothesis is retained unless persuasive evidence suggests otherwise.
+    </p>
+    <warning>
+      <p>
+        Conclusions are <em>always</em> about the parameters. <m>P</m>-values tell us about the unknown <em>parameters</em>, based on the data from one of the many possible values of the <em>statistic</em>.
+      </p>
+    </warning>
+    <p>
+      A 'big' <m>P</m>-value means that the sample statistic (such as <m>\hat{p}</m>) could reasonably have occurred through sampling variation in one of the many possible samples, if the assumption made about the parameter (stated in <m>H_0</m>) was true. A 'small' <m>P</m>-value means that the sample statistic (such as <m>\hat{p}</m>) is unlikely to have occurred through sampling variation in one of the many possible samples, if the assumption made about the parameter (stated in <m>H_0</m>) was true. 'Small' <m>P</m>-values provide persuasive evidence to support the alternative hypothesis.
+    </p>
+    <p>
+      Commonly, a <m>P</m>-value smaller than <m>5</m>% (or <m>0.05</m>) is considered 'small' but this is <em>arbitrary</em>, and sometimes the threshold is discipline-dependent. More reasonably, <m>P</m>-values should be interpreted as giving varying degrees of evidence in support of the alternative hypothesis (Table <xref ref="tab-pvalues-interpretation"/>), but these too are only guidelines.
+    </p>
+    <warning>
+      <p>
+        The threshold for a 'small' <m>P</m>-value is very commonly <m>0.05</m>, but this is arbitrary and not universal. There is nothing special about the value <m>0.05</m>, and there is very little difference in the meaning of a <m>P</m>-value of <m>0.051</m> and a <m>P</m>-value of <m>0.049</m>.
+      </p>
+    </warning>
+    <p>
+      Identifying a <m>P</m>-value of <m>0.05</m> as 'small' (and hence providing 'persuasive evidence' to support <m>H_1</m>) is arbitrary; it means that, if <m>H_0</m> is true, there is a <m>1</m>-in-<m>20</m> chance that the value of the statistic (or a value more extreme) would be observed due to sampling variation. In many situations, the evidence must be more persuasive than this.
+    </p>
+    <p>
+      To appreciate the concept of a <m>0.05</m> (or a <m>1</m>-in-<m>20</m>) chance:
+    </p>
+    <ul>
+      <li><p>the probability of throwing <m>5</m> or more</p></li>
+    </ul>
+    <p>
+      in a row using a fair coin is about <m>0.063</m>.
+    </p>
+    <ul>
+      <li><p>the probability of drawing a black Ace from a pack of cards is about <m>0.038</m>.</p></li>
+      <li><p>the probability of rolling two or more consecutive throws of a</p></li>
+    </ul>
+    <p>
+      is about <m>0.033</m>.
+    </p>
+    <p>
+      These events are improbable, without being essentially impossible.
+    </p>
+    <p>
+      <m>P</m>-values are commonly used in research, but must be used and interpreted correctly <xref ref="greenland2016statistical"/>. Specifically:
+    </p>
+    <ul>
+      <li><p>a <m>P</m>-value <em>is not</em> the probability that the null hypothesis is true.</p></li>
+      <li><p>a <m>P</m>-value <em>does not prove</em> anything (only one possible sample was studied).</p></li>
+      <li><p>a big <m>P</m>-value <em>does not</em> mean the null hypothesis <m>H_0</m> is true, or that <m>H_1</m> is false.</p></li>
+      <li><p>a small <m>P</m>-value <em>does not</em> mean the null hypothesis <m>H_0</m> is false, or that <m>H_1</m> is true.</p></li>
+      <li><p>a small <m>P</m>-value <em>does not</em> mean the results are practically important (Sect. <xref ref="sec-practical-significance"/>).</p></li>
+      <li><p>a small <m>P</m>-value does not necessarily mean a large difference between the statistic and parameter; it means that the difference (whether large or small) could not reasonably be attributed to <em>sampling variation</em> (chance).</p></li>
+    </ul>
+    <warning>
+      <p>
+        <m>P</m>-values are never <em>exactly</em> zero. Some software reports very small <m>P</m>-values as '<m>P &lt; 0.001</m>' (i.e., the <m>P</m>-value is smaller than <m>0.001</m>).<idx><h>Computers and software</h><h>statistical</h></idx> Some software reports very small <m>P</m>-values as '<m>P = 0.000</m>' (i.e., zero to three decimal places). In either case, we should still write <m>P &lt; 0.001</m>.
+      </p>
+      <p>
+        Some software only reports two-tailed <m>P</m>-values.
+      </p>
+    </warning>
+    <warning>
+      <p>
+        Sometimes the results of a study are reported as being <em>statistically significant</em>.<idx>Statistical significance</idx> This usually means that the <m>P</m>-value is less than <m>0.05</m>, though a different <m>P</m>-value is sometimes used as the 'threshold', so check!
+      </p>
+      <p>
+        To avoid confusion, the word 'significant' should be avoided in writing about research unless 'statistical significance' is actually meant. In other situations, consider using words like 'substantial'.
+      </p>
+    </warning>
+  </section>
+
+  <section xml:id="sec-type-errors">
+    <title>More details about how conclusions can go wrong</title>
+    <p>
+      In hypothesis testing, a decision is made about a <em>population</em> using <em>sample</em> information. Since the observed sample is just one of countless possible samples that could have been observed, making an incorrect conclusion is always a possibility.
+    </p>
+    <p>
+      Two mistakes can be made when making a conclusion:
+    </p>
+    <ul>
+      <li><p><em>incorrectly</em> concluding that evidence supports the alternative hypothesis. Of course, the researchers <em>do not know they are incorrect</em>, but the possibility of making this mistake is always present. This is a <em>false positive</em>, or a <em>Type I error</em>.<idx>Type I error</idx></p></li>
+      <li><p><em>incorrectly</em> concluding there is <em>no</em> evidence to support the alternative hypothesis. Of course, the researchers <em>do not know they are incorrect</em>, but the possibility of making this mistake is always present. This is a <em>false negative</em>, or a <em>Type II error</em>.<idx>Type II error</idx></p></li>
+    </ul>
+    <p>
+      Ideally, neither of these errors would be made; however, sampling variation means that neither can ever be completely eliminated. In practice, hypothesis testing begins by assuming the null hypothesis is true, and hence places the onus on the data to provide persuasive evidence in favour of the alternative hypothesis. This means researchers usually prioritise minimising the chance of a Type I error.
+    </p>
+    <p>
+      A Type I error is like declaring an innocent person guilty (recall: innocence is presumed in the judicial system). Similarly, a Type II error is like declaring a guilty person innocent. The law generally sees a Type I error as more grievous than a Type II error, just as in research. In general, larger sample sizes<idx>Sample size</idx> reduce the probability of making Type I and Type II errors.
+    </p>
+    <p>
+      In medical contexts, the similar concepts of <em>sensitivity</em> and <em>specificity</em> are often used rather than the terms <em>Type I</em> and <em>Type II errors</em>. <em>Sensitivity</em><idx>Sensitivity</idx> is the probability of a <em>positive</em> test result among those <em>with</em> the disease, and <em>specificity</em><idx>Specificity</idx> is the probability of a <em>negative</em> test result among those <em>without</em> the disease. High sensitivity is associated with a low chance of Type II error, and higher specificity is associated with a low chance of a Type I.
+    </p>
+    <example xml:id="example-type-i-type-ii">
+      <title>Type I errors</title>
+      <p>
+        For the body-temperature example (Chap. <xref ref="sec-test-one-mean"/>), the conclusion was that the sample provided very strong evidence that the population mean body temperature was <em>not</em> <m>37.0</m>^o^C. However, in truth, the mean internal body may not have changed, and is still <m>37.0</m>^o^C; that is, the null hypothesis actually is true, but we incorrectly decided it was probably not true.
+      </p>
+      <p>
+        This would be a Type I error: we <em>incorrectly</em> concluded that the evidence supported the alternative hypothesis. Of course, since the value of <m></m> is unknown, we do not know if we have made a Type I error or not.
+      </p>
+    </example>
+  </section>
+
+  <section xml:id="sec-wording-conclusion">
+    <title>More details about writing conclusions</title>
+    <p>
+      <idx><h>Hypothesis testing</h><h>writing conclusions</h></idx> In general, communicating the result of a hypothesis test requires stating:
+    </p>
+    <ol>
+      <li><p>the <em>answer</em> to the RQ.</p></li>
+      <li><p>the <em>evidence</em> used to reach that conclusion (such as the <m>t</m>-score and <m>P</m>-value, clarifying if the <m>P</m>-value is <em>one-tailed</em> or <em>two-tailed</em>).</p></li>
+      <li><p><em>sample summary statistics</em> (such as sample means, with CIs and sample sizes).</p></li>
+    </ol>
+    <p>
+      Since we initially assume the null hypothesis is true, conclusions are worded (in context) in terms of how strongly the evidence supports the alternative hypothesis.
+    </p>
+    <warning>
+      <p>
+        Since the null hypothesis is initially assumed to be true, the onus is on the data to provide evidence in support of the alternative hypothesis: the null hypothesis is retained unless persuasive evidence suggests otherwise. Hence, conclusions are always worded in terms of how much evidence supports the <em>alternative</em> hypothesis.
+      </p>
+      <p>
+        We <em>do not</em> say whether the evidence supports the null hypothesis; the null hypothesis is already assumed to be true. Even if the current sample presents no evidence to contradict the assumption, future evidence may emerge. That is:
+      </p>
+      <blockquote>
+        <p>'No evidence of a difference' is <em>not</em> the same as 'evidence of no difference'.</p>
+      </blockquote>
+    </warning>
+    <example xml:id="example-no-evidence-of-a-difference">
+      <title>No evidence of a difference</title>
+      <p>
+        Suppose, when we tested if the mean internal body temperature remained <m>37.0</m>^o^C (Chap. <xref ref="sec-test-one-mean"/>), that we found <em>no evidence</em> that the temperature had changed. This <em>does not</em> provide evidence that the mean internal body temperature is <m>37.0</m>^o^C. It just means that the sample provided no evidence to change our initial <em>assumption</em> that the mean internal body temperature is <m>37.0</m>^o^C.
+      </p>
+    </example>
+  </section>
+
+  <section xml:id="sec-practical-significance">
+    <title>More details about practical importance, statistical significance</title>
+    <idx>Practical importance</idx>
+    <idx>Statistical significance</idx>
+    <p>
+      Hypothesis tests assess <em>statistical significance</em>, which answers the question: 'Can sampling variation reasonably explain the discrepancy between the value of the statistic and the assumed value of the parameter?' Even very small discrepancies between the statistic and the parameter can be <em>statistically</em> different if the sample size is sufficiently large.
+    </p>
+    <p>
+      In contrast, <em>practical importance</em> answers the question: 'Is the discrepancy between the values of the statistic and the parameter of any importance <em>in practice</em>?' Whether a result is of practical importance depends upon the context: what the data are being used for. 'Practical importance' and 'statistical significance' are separate issues.
+    </p>
+    <example xml:id="example-practical-importance">
+      <title>Practical importance</title>
+      <p>
+        In the body-temperature study (Sect. <xref ref="sec-body-temperature"/>), very strong evidence exists that the mean body temperature had changed ('statistical significance'). But the change was so small that, for most purposes, it has no practical importance. In other (e.g., medical) situations, it <em>may</em> have practical importance.
+      </p>
+    </example>
+    <example xml:id="example-practical-importance-herbal">
+      <title>Practical importance</title>
+      <p>
+        <xref ref="maunder2020effectiveness"/> studied the use of herbal medicines for weight loss, and found that the intervention (p. 891)
+      </p>
+      <blockquote>
+        <p>... resulted in a statistically significant weight loss compared to placebo, although this was not considered clinically significant.</p>
+      </blockquote>
+      <p>
+        This means that the difference in mean weight loss between the placebo and intervention groups was unlikely to be explained by chance (<m>P &lt; 0.001</m>; i.e., 'statistical significant'),<idx>Statistical significance</idx> but the difference was so small that it was unlikely to be of any use in practice ('practical importance'). In this context, the researchers decided that a weight loss of at least <m>2.5</m> was of practical importance. However, in the study, the sample mean weight loss was <m>1.61</m>.
+      </p>
+    </example>
+  </section>
+
+  <section xml:id="sec-validity-h-ts">
+    <title>More details about statistical validity</title>
+    <idx>Statistical validity (for inference)</idx>
+    <p>
+      When performing hypothesis tests, <em>statistical validity conditions</em> must be true to ensure that the mathematics behind computing the <m>P</m>-value is sound. For instance, the statistical validity conditions may ensure that the sampling distribution is sufficiently like a normal distribution for the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule to apply.
+    </p>
+    <p>
+      If the statistical validity conditions are <em>not</em> met, the <m>P</m>-values (and hence conclusions) may be inappropriate or only approximately correct.
+    </p>
+  </section>
+
+  <section xml:id="sec-chap28-summary">
+    <title>Chapter summary</title>
+    <p>
+      Hypothesis testing formalises the decision-making process. Starting with an <em>assumption</em> about a parameter of interest, a description of what values the statistic might take is produced (the sampling distribution): this describes what values the statistic is <em>expected</em> to take over all possible samples. This sampling distribution is often a normal distribution.
+    </p>
+    <p>
+      The statistic (the <em>sample estimate</em>) is then <em>observed</em>, and a <em>test statistic</em> is computed to quantify the discrepancy between the values of the parameter (given in <m>H_0</m>) and statistic. Using a <m>P</m>-value, a decision is made about whether the sample evidence supports or contradicts the initial assumption, and hence a <em>conclusion</em> is made. When the sampling distribution is an approximate normal distribution, the test statistic is a <m>t</m>-score or <m>z</m>-score,<idx>z-score</idx> and <m>P</m>-values can often be approximated using the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule.
+    </p>
+  </section>
+
+  <reading-questions xml:id="sec-chap33-quick-review">
+    <title>Quick review questions</title>
+  </reading-questions>
+
+  <exercises xml:id="sec-more-about-tests-exercises">
+    <introduction>
+      <p>Answers to odd-numbered exercises are given at the end of the book.</p>
+    </introduction>
+    <p>
+      [Answers to odd-numbered exercises] are given at the end of the book.
+    </p>
+    <exercise xml:id="exercise-more-about-exercises-approximating-p-values">
+      <p>
+        Assuming the statistical validity conditions are satisfied, use the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule to approximate the <em>two</em>-tailed <m>P</m>-value if:
+      </p>
+      <ol>
+        <li><p>the <m>t</m>-score is <m>3.4</m>.</p></li>
+        <li><p>the <m>t</m>-score is <m>-2.9</m>.</p></li>
+      </ol>
+      <p>
+        \
+      </p>
+      <ol>
+        <li><p>the <m>z</m>-score is <m>-2.1</m>.</p></li>
+        <li><p>the <m>t</m>-score is <m>-6.7</m>.</p></li>
+      </ol>
+    </exercise>
+    <exercise xml:id="exercise-more-about-exercises-approximating-p-values2">
+      <p>
+        Assuming the statistical validity conditions are satisfied, use the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule to approximate the <em>two</em>-tailed <m>P</m>-value if:
+      </p>
+      <ol>
+        <li><p>the <m>z</m>-score is <m>1.05</m>.</p></li>
+        <li><p>the <m>t</m>-score is <m>-1.3</m>.</p></li>
+      </ol>
+      <p>
+        \
+      </p>
+      <ol>
+        <li><p>the <m>t</m>-score is <m>6.7</m>.</p></li>
+        <li><p>the <m>t</m>-score is <m>0.1</m>.</p></li>
+      </ol>
+    </exercise>
+    <exercise xml:id="exercise-more-about-exercises-approximating-p-values-one-tailed">
+      <p>
+        Consider the test statistics in Exercise <xref ref="sec-exr:more-about-exercises-approximating-p-values"/>. Use the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule to approximate the <em>one</em>-tailed <m>P</m>-values in each case.
+      </p>
+    </exercise>
+    <exercise xml:id="exercise-more-about-exercises-approximating-p-values-one-tailed2">
+      <p>
+        Consider the test statistics in Exercise <xref ref="sec-exr:more-about-exercises-approximating-p-values2"/>. Use the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule to approximate the <em>one</em>-tailed <m>P</m>-values in each case.
+      </p>
+    </exercise>
+    <exercise xml:id="exercise-more-about-tests-interpreting-results">
+      <p>
+        Suppose a hypothesis test results in a <m>P</m>-value of <m>0.0501</m>. What would we conclude? What if the <m>P</m>-value was <m>0.0499</m>? Comment.
+      </p>
+    </exercise>
+    <exercise xml:id="exercise-more-about-tests-interpreting-results2">
+      <p>
+        Suppose a hypothesis test results in a <m>P</m>-value of <m>0.011</m>. What would we conclude? What if the <m>P</m>-value was <m>0.009</m>? Comment.
+      </p>
+    </exercise>
+    <exercise xml:id="exercise-more-about-tests-interpreting-hypotheses">
+      <p>
+        Consider the study to determine if the mean body temperature (Chap. <xref ref="sec-test-one-mean"/>) was <m>37.0</m>^o^C, where <m>\bar{x} = 36.8052</m>^o^C. Explain <em>why</em> each of these sets of hypotheses are incorrect.
+      </p>
+      <ol>
+        <li><p><m>H_0</m>: <m>\bar{x} = 37.0</m>; <m>H_1</m>: <m>\bar{x} 37.0</m>.</p></li>
+        <li><p><m>H_0</m>: <m> = 37</m>; <m>H_1</m>: <m> &gt; 37</m>.</p></li>
+        <li><p><m>H_0</m>: <m> = 37</m>; <m>H_1</m>: <m> = 36.8052</m>.</p></li>
+      </ol>
+      <p>
+        \
+      </p>
+      <ol>
+        <li><p><m>H_0</m>: <m>\bar{x} = 36.8052</m>; <m>H_1</m>: <m>\bar{x} &gt; 36.8052</m>.</p></li>
+        <li><p><m>H_0</m>: <m> = 36.8052</m>; <m>H_1</m>: <m> 36.8052</m>.</p></li>
+        <li><p><m>H_0</m>: <m> &gt; 37.0</m>; <m>H_1</m>: <m>\bar{x} &gt; 37.0</m>.</p></li>
+      </ol>
+    </exercise>
+    <exercise xml:id="exercise-more-about-tests-interpreting-hypotheses2">
+      <p>
+        Consider the study to determine if a die was loaded (Chap. <xref ref="sec-test-one-proportion"/>) by studying the proportion of rolls that showed a
+      </p>
+      <p>
+        and where <m>\hat{p} = 0.41</m>. Explain <em>why</em> each of these sets of hypotheses are incorrect.
+      </p>
+      <ol>
+        <li><p><m>H_0</m>: <m>\hat{p} = 1/6</m>; <m>H_1</m>: <m>\hat{p} 1/6</m>.</p></li>
+        <li><p><m>H_0 = 1/6</m>; <m>H_1 1/6</m>.</p></li>
+        <li><p><m>H_0</m>: <m>p = 1/6</m>; <m>H_1</m>: <m>\hat{p} = 0.41</m>.</p></li>
+      </ol>
+      <p>
+        \
+      </p>
+      <ol>
+        <li><p><m>H_0</m>: <m>\hat{p} = 1/6</m>; <m>H_1</m>: <m>\hat{p} = 0.41</m>.</p></li>
+        <li><p><m>H_0</m>: <m>p = 1/6</m>; <m>H_1</m>: <m>p &gt; 1/6</m>.</p></li>
+        <li><p><m>H_0</m>: <m>p = 1/6</m>; <m>H_1</m>: <m>p = 0.41</m>.</p></li>
+      </ol>
+    </exercise>
+    <exercise xml:id="exercise-more-about-tests-conclusions">
+      <p>
+        The recommended daily energy intake for women is <m>7 725</m> kJ (for a particular cohort, in a particular country; <xref ref="data-Altman1991-PracticalStats"/>). The daily energy intake for <m>11</m> women was measured to see if this is being adhered to. The RQ was 'Is the population mean daily energy intake <m>7 725</m> kJ?'
+      </p>
+      <p>
+        The test produced <m>P = 0.018</m>. What, if anything, is wrong with these conclusions after completing the hypothesis test?
+      </p>
+      <ol>
+        <li><p>There is moderate evidence (<m>P = 0.018</m>) that the energy intake is not meeting the recommended daily energy intake.</p></li>
+        <li><p>There is moderate evidence (<m>P = 0.018</m>) that the sample mean energy intake is not meeting the recommended daily energy intake.</p></li>
+        <li><p>There is moderate evidence (<m>P = 0.018</m>) that the population energy intake is not meeting the recommended daily energy intake.</p></li>
+        <li><p>The study proves that the population energy intake is not meeting the recommended daily energy intake (<m>P = 0.018</m>).</p></li>
+        <li><p>There is some evidence that the population energy intake is not meeting the recommended daily energy intake (<m>P &lt; 0.018</m>).</p></li>
+      </ol>
+    </exercise>
+    <exercise xml:id="exercise-more-about-tests-batteries">
+      <p>
+        [<em>Dataset</em>: <c>Battery</c>] A study compared ALDI batteries to another brand of battery. In one test (comparing the time taken for <m>1.5</m> AA batteries to reach <m>1.1</m>), the ALDI brand battery took <m>5.73</m>, and the other brand (Energizer) took <m>5.44</m> <xref ref="mypapers-Dunn-BatteryData"/>.
+      </p>
+      <ol>
+        <li><p>What is the null hypothesis for the test?</p></li>
+        <li><p>The <m>P</m>-value for comparing these two means is about <m>P = 0.70</m>. What does this mean?</p></li>
+        <li><p>Is this difference likely to be of any practical importance? Explain.</p></li>
+        <li><p>What would be a correct conclusion for ALDI to report from the study? Explain.</p></li>
+        <li><p>What else would be useful to know when comparing the two brands of batteries?</p></li>
+      </ol>
+    </exercise>
+    <exercise xml:id="exercise-more-about-tests-consistency">
+      <p>
+        An ecologist was compared the proportion of female and male dingoes kept in zoos that showed signs of mange (a skin disease). She finds 'no statistically significant' difference between the proportions of female and male dingoes with evidence of mange.
+      </p>
+      <p>
+        Which of these statements is <em>consistent</em> with this conclusion?
+      </p>
+      <ol>
+        <li><p>The difference in proportions is <m>0.27</m> and <m>P = 0.36</m>.</p></li>
+        <li><p>The difference in proportions is <m>0.27</m> and <m>P = 0.0001</m>.</p></li>
+        <li><p>The difference in proportions is <m>0.04</m> and <m>P = 0.36</m>.</p></li>
+        <li><p>The difference in proportions is <m>0.04</m> and <m>P = 0.0001</m>.</p></li>
+      </ol>
+      <p>
+        How would the other statements be interpreted then?
+      </p>
+    </exercise>
+    <exercise xml:id="exercise-more-about-tests-consistency2">
+      <p>
+        The study of body temperatures (Chap. <xref ref="sec-test-one-mean"/>) also compared the mean internal body temperatures for females and males <xref ref="data-mackowiak-bodytemp"/>. The study concludes that there is moderate evidence of a difference between the mean temperatures of females and males.
+      </p>
+      <p>
+        Which of these statements is <em>consistent</em> with this conclusion?
+      </p>
+      <ol>
+        <li><p>The difference between the mean temperatures is <m>0.289</m>^o^C and <m>P = 0.024</m>.</p></li>
+        <li><p>The difference between the mean temperatures is <m>2.89</m>^o^C and <m>P = 0.024</m>.</p></li>
+        <li><p>The difference between the mean temperatures is <m>0.289</m>^o^C and <m>P = 0.39</m>.</p></li>
+        <li><p>The difference between the mean temperatures is <m>2.89</m>^o^C and <m>P = 0.39</m>.</p></li>
+      </ol>
+      <p>
+        How would the other statements be interpreted then?
+      </p>
+    </exercise>
+  </exercises>
 </chapter>

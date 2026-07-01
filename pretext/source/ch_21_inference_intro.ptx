@@ -1,5 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Source: 21-Inference-Intro.Rmd -->
 <chapter xml:id="ch-21-inference-intro" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Introducing inference</title>
-  <p>Skeleton for <em>21-Inference-Intro.Rmd</em>. Content to be added.</p>
+  <title>(PART) Analysis</title>
+    <idx>Hypothesis testing</idx>
+    <idx>Confidence intervals</idx>
+  <objectives xml:id="objectives-ch21">
+    <introduction>
+      <p>So far, you have learnt to ask an RQ, design a study, describe and summarise the data, and model sampling variation. <alert>In this chapter</alert>, you will be introduced to the two big ideas in inference: <em>confidence intervals</em> and <em>hypothesis testing</em>. You will learn to:</p>
+    </introduction>
+    <ul>
+      <li><p>explain the purpose of a confidence interval (CI).</p></li>
+      <li><p>explain the purpose of hypothesis testing.</p></li>
+    </ul>
+  </objectives>
+    <p>
+      After posing an RQ (Chap. <xref ref="sec-r-qs"/>), a study is designed (Chaps. <xref ref="sec-research-design"/><ndash/><xref ref="sec-interpretation"/>) to gather the evidence to answer the RQ (Chap. <xref ref="sec-collecting-data-procedures"/>). Then the data are classified (Chap. <xref ref="sec-describing-vars"/>) and summarised accordingly (Chaps. <xref ref="sec-summarise-qual-data"/> to <xref ref="sec-summarise-comments"/>) in preparation for answering the RQ.
+    </p>
+    <p>
+      This part introduces <em>analysis</em>: where the data are used to answer the RQ about the population. Answering the RQ (which is about a <em>parameter</em>) is difficult, since we only study one of the countless possible samples, and hence observe only one of the countless possible values for the <em>statistic</em>. The variation in the values of the statistics from sample to sample is called <em>sampling variation</em> (Chap. <xref ref="sec-sampling-variation"/>).
+    </p>
+    <p>
+      Analysis provides the tools for learning about a population parameter, based on observing one of the numerous possible values of a sample statistic. The appropriate type of analysis depends upon the number and types of variables, and the purpose of the RQ (Sect. <xref ref="sec-two-purposes-of-r-qs"/>):
+    </p>
+    <ul>
+      <li><p><em>confidence intervals</em> answer estimation RQs, where the interest is in how precisely a <em>statistic</em> estimates a <em>parameter</em> (Chaps. <xref ref="sec-ci-one-proportion"/> to <xref ref="sec-one-mean-conf-interval"/>; <xref ref="sec-analysis-paired"/> to <xref ref="sec-analysis-odds-ratio"/>; Sect. <xref ref="sec-regression-ci"/>).<idx>Confidence intervals</idx></p></li>
+      <li><p><em>hypothesis tests</em> answer decision-making RQs, where <em>decisions</em> are required about a <em>parameter</em> based on the value of the <em>statistic</em> (Chaps. <xref ref="sec-test-one-proportion"/> to <xref ref="sec-test-one-mean"/>; <xref ref="sec-analysis-paired"/> to <xref ref="sec-analysis-odds-ratio"/>; Sects. <xref ref="sec-correlation-testing"/> and <xref ref="sec-regression-ht"/>.)<idx>Hypothesis testing</idx></p></li>
+    </ul>
+    <p>
+      Different scenarios require different confidence intervals and hypothesis tests; those discussed in this book are shown in Table <xref ref="tab-overview-table"/>.
+    </p>
+    <p>
+      (ref:CI-OneProp) Chap. <xref ref="sec-ci-one-proportion"/>
+    </p>
+    <p>
+      (ref:HT-OneProp) Chap. <xref ref="sec-test-one-proportion"/>
+    </p>
+    <p>
+      (ref:CI-OneMean) Chap. <xref ref="sec-one-mean-conf-interval"/>
+    </p>
+    <p>
+      (ref:HT-OneMean) Chap. <xref ref="sec-test-one-mean"/>
+    </p>
+    <p>
+      (ref:CI-TwoMeans) Chap. <xref ref="sec-analysis-two-means"/>
+    </p>
+    <p>
+      (ref:HT-TwoMeans) Chap. <xref ref="sec-analysis-two-means"/>
+    </p>
+    <p>
+      (ref:CI-Paired) Chap. <xref ref="sec-analysis-paired"/>
+    </p>
+    <p>
+      (ref:HT-Paired) Chap. <xref ref="sec-analysis-paired"/>
+    </p>
+    <p>
+      (ref:CI-OddsR) Chap. <xref ref="sec-analysis-odds-ratio"/>
+    </p>
+    <p>
+      (ref:HT-OddsR) Chap. <xref ref="sec-analysis-odds-ratio"/>
+    </p>
+    <p>
+      (ref:CI-Cor) Sect. <xref ref="sec-correlation-ci"/>
+    </p>
+    <p>
+      (ref:HT-Cor) Sect. <xref ref="sec-correlation-testing"/>
+    </p>
+    <p>
+      (ref:HT-Reg) Sect. <xref ref="sec-regression-ht"/>
+    </p>
+    <p>
+      (ref:CI-Reg) Sect. <xref ref="sec-regression-ci"/>
+    </p>
 </chapter>

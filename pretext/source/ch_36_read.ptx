@@ -1,5 +1,679 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Source: 36-Read.Rmd -->
 <chapter xml:id="ch-36-read" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Reading and critiquing research</title>
-  <p>Skeleton for <em>36-Read.Rmd</em>. Content to be added.</p>
+  <objectives xml:id="objectives-ch36">
+    <introduction>
+      <p>So far, you have learnt the about the process of research: asking an RQ, designing a study, collecting data, describing and summarising the data, and analysing the data. You have learnt how to write about your research. <alert>In this chapter</alert>, you will learn to:</p>
+    </introduction>
+    <ul>
+      <li><p>read and critique research.</p></li>
+    </ul>
+  </objectives>
+
+  <section xml:id="sec-chap36-intro">
+    <title>Introduction</title>
+    <image source="Illustrations/pexels-pixabay-258353.jpg" width="25%">
+      <description><p>Image.</p></description>
+    </image>
+    <p>
+      All academic disciplines change and adapt. Staying current in your discipline requires reading, critiquing and understanding the research of others, as communicated in <em>journal articles</em> or <em>presentations</em> (Chap. <xref ref="sec-writing-research"/>). (<em>Critiquing</em> means to evaluate: identifying what is good, and what can be improved.)
+    </p>
+    <p>
+      At some time during your studies or employment, you will need to read research articles:
+    </p>
+    <ul>
+      <li><p>to understand current practices in your discipline.</p></li>
+      <li><p>to know <em>why</em> your discipline uses the current procedures and practices.</p></li>
+      <li><p>to learn about new procedures and practices that may be adopted.</p></li>
+      <li><p>to critique the evidence for current or new practices.</p></li>
+      <li><p>to identify open or unresolved questions in your discipline.</p></li>
+      <li><p>to help answer these open or unresolved questions.</p></li>
+    </ul>
+    <p>
+      Familiarity with the language and concepts of research is important for understanding these articles, even if you will not be conducting your own research.
+    </p>
+    <p>
+      Reading research articles can be challenging. Rather than reading articles thoroughly from start to finish, first read the <em>Abstract</em> to obtain an overview of the whole article, without becoming lost in the details. Then, read the <em>Discussion</em>, which highlights the important findings. Next, skim the rest of the article (perhaps focusing on graphs and tables of results). Finally, if necessary, read the article for details.
+    </p>
+    <warning>
+      <p>
+        Terminology and notation varies widely in research (Sect. <xref ref="sec-lexical-ambiguity"/>). When reading research, check the terminology and notation being used if you are unsure!
+      </p>
+    </warning>
+    <p>
+      The six steps of the research process (Sect. <xref ref="sec-six-steps-of-research"/>) can guide the research critique.<idx><h>Research</h><h>six steps</h></idx>
+    </p>
+    <ol>
+      <li><p><em>Asking the RQ</em>.</p></li>
+      <li><p>What RQ is the research answering?</p></li>
+      <li><p>Why is this RQ important?<idx>Research question</idx></p></li>
+      <li><p>To what population will the results apply?</p></li>
+      <li><p>What are the units of analysis<idx>Units of analysis</idx> and units of observation?<idx>Units of observation</idx></p></li>
+      <li><p>How are important terms defined?</p></li>
+      <li><p><em>Designing the study</em>.<idx>Research design</idx></p></li>
+      <li><p>Is the study observational or experimental?</p></li>
+      <li><p>Is the study well-designed? What is not explained or clear?</p></li>
+      <li><p>What design features and used, and why?</p></li>
+      <li><p>How many individuals are in the study?</p></li>
+      <li><p>How was the sample obtained? What are the implications for external validity?<idx>External validity</idx></p></li>
+      <li><p>Is the study designed to maximise internal validity?<idx>Internal validity</idx></p></li>
+      <li><p>How is confounding managed?<idx>Confounding</idx></p></li>
+      <li><p>What are the design limitations?</p></li>
+      <li><p>Are there ethical concerns?<idx>Ethics</idx></p></li>
+      <li><p>What is the source of funding? Are there potential conflicts of interest?</p></li>
+      <li><p><em>Collecting the data</em>.</p></li>
+      <li><p>How were the data collected?<idx>Data collection</idx></p></li>
+      <li><p>Are the necessary details provided so the study can be approximately replicated?</p></li>
+      <li><p><em>Classifying and summarising the data</em>.</p></li>
+      <li><p>Is the data summary appropriate, complete and clear?</p></li>
+      <li><p>What does the data summary reveal about the data?</p></li>
+      <li><p>What do the tables and graphs reveal about the data and relationships?</p></li>
+      <li><p><em>Analysing the data</em>.</p></li>
+      <li><p>What types of confidence intervals (CIs) and/or hypothesis tests were used?</p></li>
+      <li><p>Is the analysis appropriate, accurate, valid and clear?</p></li>
+      <li><p>What do the results mean?</p></li>
+      <li><p>What software was used?</p></li>
+      <li><p>Are the results statistically valid?</p></li>
+      <li><p><em>Reporting the results</em>.</p></li>
+      <li><p>What are the main conclusions, and how do they answer the RQ?</p></li>
+      <li><p>Are the conclusion consistent with the results?</p></li>
+      <li><p>Are the results accurate, appropriate and well-reported?</p></li>
+      <li><p>Are the results of practical importance?</p></li>
+      <li><p>Are the study limitations acknowledged, and their implications discussed?</p></li>
+      <li><p>What other questions have emerged?</p></li>
+    </ol>
+  </section>
+
+  <section xml:id="sec-read-walking-texting">
+    <title>Example: walking while texting</title>
+    <p>
+      <xref ref="sajewicz2023texting"/> studied the impact of texting (on a smartphone) on how students walk (including walking speed). In this section, the article will be briefly discussed.
+    </p>
+
+  <subsection xml:id="sec-read-walking-texting-abstract">
+    <title>The abstract</title>
+    <p>
+      Part of the unstructured abstract for the article reads:
+    </p>
+    <blockquote>
+      <p>The aim of this experiment was to investigate whether using a cell phone while walking affects walking velocity [<ellipsis/>] in young people. Forty-two subjects (<m>20</m> males, <m>22</m> females; mean age: <m>20.74 1.34</m> years; mean height: <m>173.21 8.07</m> cm; mean weight: <m>69.05 14.07</m> kg) participated in the study. The subjects were asked to walk on an FDM<ndash/>1.5 dynamometer platform four times at a constant comfortable velocity and a fast velocity of their choice. They were asked to continuously type one sentence on a cell phone while walking at the same velocity. The results showed that texting while walking led to a significant reduction in velocity compared to walking without the phone.</p>
+    </blockquote>
+    <p>
+      As this is the <em>abstract</em>, many details are absent (but explained in the article itself). Nonetheless, a lot can be learnt about the study from the abstract.
+    </p>
+    <ul>
+      <li><p><em>Asking</em> the RQ:<idx><h>Research question</h><h>repeated-measures</h></idx></p></li>
+      <li><p>this is a repeated-measures RQ: data are collected from the same students 'four times' (which are explained more fully in the article).</p></li>
+      <li><p>the <em>population</em> is 'young people'.</p></li>
+      <li><p>the numbers that follow the <m></m> are not explained: are they CI limits, standard deviations, IQRs, ranges, standard errors?</p></li>
+      <li><p>the <em>units of analysis</em> are the students in the study,<idx>Units of analysis</idx><idx>Units of observation</idx> each with four measurements.</p></li>
+      <li><p>the main outcome is the (average; presumably mean) 'walking velocity'.</p></li>
+      <li><p><em>Designing</em> the study:</p></li>
+      <li><p>the sampling method is not stated, but likely to be voluntary-response.</p></li>
+      <li><p>the sample size is <m>n = 42</m> (<m>20</m> males; <m>22</m> females).</p></li>
+      <li><p><em>Analyse</em> the data:</p></li>
+      <li><p>a quantitative variable (walking velocity) is being compared <em>within</em> individuals, so paired <m>t</m>-tests are a likely method of analysis (Chap. <xref ref="sec-analysis-paired"/>).</p></li>
+      <li><p><em>Report the results</em>:</p></li>
+      <li><p>details of the analysis are not given (e.g., <m>P</m>-values or CIs).</p></li>
+      <li><p>nonetheless, the conclusion is that 'texting led to a significant reduction in velocity compared to walking without the phone'.</p></li>
+    </ul>
+  </subsection>
+
+  <subsection xml:id="sec-read-walking-texting-introduction">
+    <title>Introduction</title>
+    <p>
+      The <em>Introduction</em> section introduces the context for the study, and establishes what is known about the topic. The <em>aim</em> of the study is (p. 1):
+    </p>
+    <blockquote>
+      <p>... to analyze how the use of a cell phone while walking at different velocities affects gait parameters, i.e., velocity, cadence, stride width, and stride length.</p>
+    </blockquote>
+    <p>
+      (Cadence refers to the tempo or rhythm of the walking, measure in steps per minute.)
+    </p>
+  </subsection>
+
+  <subsection xml:id="sec-read-walking-texting-methods">
+    <title>Methods</title>
+    <p>
+      The <em>Methods</em> (or <em>Materials and Methods</em>) section provides details of the study.
+    </p>
+    <ul>
+      <li><p>The <em>sample</em><idx>Sample</idx> comprises students from the University School of Physical Education (Poland) studying a course in gait analysis. This sample may not represent any general population, though the conclusions may possibly apply to non-students and not-Poles.<idx>External validity</idx></p></li>
+      <li><p>Exclusion criteria<idx>Exclusion criteria</idx> (e.g., using lower limb prostheses) and inclusion criteria<idx>Inclusion criteria</idx> (e.g., daily use of a cell phone while walking) were given.</p></li>
+      <li><p>Extraneous variables<idx><h>Variables</h><h>extraneous</h></idx> collected included age, height, weight and sex.</p></li>
+      <li><p>The study was ethical,<idx>Ethics</idx> with permission sought from the students, and approval given by the Senate Committee on Research Ethics at the university.</p></li>
+      <li><p>Control variables<idx><h>Variables</h><h>control</h></idx> included the temperature and humidity: 'the air temperature was constant at <m>22</m> degrees Celsius, and the air humidity was <m>47</m>%' (p. 3).</p></li>
+      <li><p>Details of the specialised equipment used was given: 'The experiment was conducted using an FDM<ndash/>1.5 Zebris dynamography platform'.</p></li>
+      <li><p>Further details of the protocol<idx>Protocol</idx> used were given.</p></li>
+      <li><p>Each subject participated in four tasks. In each, the subject (without footwear) made as many passes on the platform as possible in one minute:</p></li>
+      <li><p>The subject walked at a constant <em>comfortable</em> velocity (i.e., the velocity, chosen by the subject, that the</p></li>
+    </ul>
+    <p>
+      person walks most naturally).
+    </p>
+    <ol>
+      <li><p>The subject walked at a constant <em>fast</em> velocity (i.e., as fast as the subject could comfortably walk, chosen by the subject).</p></li>
+      <li><p>Task 1 was repeated, with subjects continuously typing a sentence on a cell phone.</p></li>
+      <li><p>Task 2 was repeated, with subjects continuously typing a sentence on a cell phone.</p></li>
+      <li><p>Five response variables were used: left-side stride length, right-side stride length, cadence, stride width, and walking velocity.</p></li>
+    </ol>
+    <p>
+      These appear to have been measured <em>objectively</em>.<idx><h>Data</h><h>objective</h></idx>
+    </p>
+    <ul>
+      <li><p>The 'sentences' to be typed were defined as 'tongue twisters... not used in everyday conversation', but were not provided.</p></li>
+      <li><p>The analysis was given as 'paired Student’s <m>t</m>-test'<idx><h>Data</h><h>paired</h></idx><idx><h>Hypothesis testing</h><h>mean difference</h></idx> in most cases, or the Wilcoxon test<idx>Wilcoxon signed ranks test</idx> if the statistical validity conditions were not satisfied.</p></li>
+      <li><p>The software (and version) used was stated: TIBCO Statistica&#174; 13.3.0 (StatSoft Poland).</p></li>
+    </ul>
+  </subsection>
+
+  <subsection xml:id="sec-read-walking-texting-results">
+    <title>Results</title>
+    <p>
+      The <em>Results</em> section provides the results of the analyses.
+    </p>
+    <ul>
+      <li><p>The data are not immediately available (probably due to ethics concerns) but 'are available upon request' (p. 7).</p></li>
+    </ul>
+    <p>
+      Details of the analysis were not available.
+    </p>
+    <ul>
+      <li><p>Case-profile plots<idx><h>Graphs</h><h>case-profile plot</h></idx> were produced for the five response variables, showing the means for each task rather than for all <m>42</m> individuals (much like Fig. <xref ref="fig-running-rm"/>).</p></li>
+      <li><p>Correlations were computed between the five response variables.</p></li>
+    </ul>
+    <p>
+      The correlations between stride width and the other variables were negative; all other correlations were positive. Since the relationships were non-linear, Spearman correlations<idx><h>Correlation coefficient</h><h>Spearman</h></idx> were used rather than the Pearson correlations studied in Chap. <xref ref="sec-correlation-regression"/>. All the corresponding <m>P</m>-values were less than <m>0.05</m> apart from the correlation between stride width and cadence.
+    </p>
+    <ul>
+      <li><p>The following comparisons were made for each response variable:</p></li>
+      <li><p>Task 1 and Task 3 were compared: this explored the impact of texting on a smartphone when walking at a comfortable velocity.</p></li>
+      <li><p>Task 2 and Task 4 were compared: this explored the impact of texting on a smartphone when walking at a fast velocity.</p></li>
+      <li><p>Task 3 and Task 4 were compared: this explored the difference between texting and not texting when walking at a fast velocity.</p></li>
+      <li><p>The mean and standard deviation of the three response variables were provided for each task.</p></li>
+    </ul>
+    <p>
+      However, the numerical summary for the <em>differences</em> were not provided; a <m>P</m>-value only was provided.
+    </p>
+    <ul>
+      <li><p>Fifteen hypothesis tests were conducted: the three between-tasks comparison above, for the five response variables. This increases the chance of making a Type I error.</p></li>
+      <li><p>'Statistically significant'<idx>Statistical significance</idx> was defined as a <m>P</m>-value smaller than <m>0.017</m>, rather than the commonly-used <m>P &lt; 0.05</m>. The reason was to reduce the chance of making a Type I error (Sect. <xref ref="sec-type-errors"/>),<idx>Type I error</idx> but the details are beyond the scope of this book.</p></li>
+      <li><p>The results are summarised as (p. 5):</p></li>
+    </ul>
+    <blockquote>
+      <p>... right and left single step length and gait velocity, were found to be statistically significant in each comparison. The value of the change in step width was statistically significant only when comparing trials 1 and 3, and cadence showed statistical significance when comparing trials 2 and 4, as well as 3 and 4.</p>
+    </blockquote>
+    <ul>
+      <li><p>The researchers also made qualitative observations;<idx><h>Research</h><h>qualitative</h></idx></p></li>
+    </ul>
+    <p>
+      they observed 'moments when the subject took their eyes off the phone in order to assess the direction of the path' (p. 5).
+    </p>
+  </subsection>
+
+  <subsection xml:id="sec-read-walking-texting-discussion">
+    <title>Discussion</title>
+    <p>
+      The <em>Discussion</em> section makes the following observations.
+    </p>
+    <ul>
+      <li><p>The researchers concluded that 'the use of a cell phone while walking significantly affects gait parameters, causing a decrease in walking velocity and a reduction in stride length' (p. 6), thus providing answers to the RQs.</p></li>
+      <li><p>The researchers state (p. 6) that 'This proves that texting on a cell phone has a major impact on gait'. However, the research does <em>not</em> prove anything based on one of countless possible samples.</p></li>
+      <li><p>The study had poor ecological validity,<idx>Ecological validity</idx> as the study 'was conducted in a measurement workshop room, the air temperature was constant at 22 degrees Celsius, and the air humidity was 47\%'.</p></li>
+      <li><p>The researchers listed limitations<idx><h>Limitations</h><h>research design (effectiveness)</h></idx> of the study, including:</p></li>
+      <li><p>that the sentence typed by the subjects was unchanged in both Trials 3 and 4; hence, Trial 4 may have been easier than the previous trial as the sentence was familiar (the carryover effect)<idx>Carryover effect</idx>.</p></li>
+      <li><p>that the step width differed between comfortable walking speed and walking at the <em>same</em> speed with the phone. The researchers attribute this to the carryover effect, as 'walking with the phone at comfortable velocity and at fast velocity directly followed one after the other', and so 'subjects were able to respond to the new conditions by adapting to them during the first transition'.</p></li>
+      <li><p>The researchers made recommendations: 'that the selection of the order of trials and the sentence to be typed on the cell phone be randomized' (p. 7).<idx><h>Confounding</h><h>random allocation</h></idx></p></li>
+    </ul>
+    <p>
+      Overall, the study was conducted well and reported well.
+    </p>
+  </subsection>
+  </section>
+
+  <section xml:id="sec-read-chapter-summary">
+    <title>Chapter summary</title>
+    <p>
+      The six steps of research can be used as a scaffold for critiquing research articles. Starting by reading the <em>Abstract</em> (or <em>Summary</em>, or <em>Overview</em>) for an overview, then the <em>Discussion</em>, and then skim the rest of the article (perhaps focusing on graphs and tables of results). If necessary, read the article for details.
+    </p>
+  </section>
+
+  <reading-questions xml:id="sec-read-quick-review">
+    <title>Quick review questions</title>
+  </reading-questions>
+
+  <exercises xml:id="sec-read-exercises">
+    <introduction>
+      <p>Answers to odd-numbered exercises are given at the end of the book.</p>
+    </introduction>
+    <p>
+      [Answers to odd-numbered exercises] are given at the end of the book.
+    </p>
+    <exercise xml:id="exercise-read-exercisei-phone-step-counts">
+      <p>
+        <xref ref="duncan2018walk"/> examined the accuracy of step counts, as recorded on iPhones. The article states that participants
+      </p>
+      <blockquote>
+        <p>... were recruited through word of mouth and posters displayed around the [researcher's] university. Participants were eligible if they were ambulatory, <m> 18</m> years of age, and owned an iPhone 6 [<ellipsis/>] or newer model.</p>
+      </blockquote>
+      <ol>
+        <li><p>How would you describe the sampling method?</p></li>
+      </ol>
+      <p>
+        What is the implication?
+      </p>
+      <ol>
+        <li><p>How would you describe the information given about the subjects needing to be ambulatory and 18 years of age or over?</p></li>
+      </ol>
+      <p>
+        Although <m>33</m> participants were selected, the authors note some parts of the study used a smaller sample size because one subject lost their phone, while others chose to withdraw from the study.
+      </p>
+      <ol>
+        <li><p>Why did the authors discuss these changes in sample size for some parts of the study?</p></li>
+      </ol>
+      <p>
+        The article notes that previous studies have been able to:
+      </p>
+      <blockquote>
+        <p>... demonstrate the accuracy of the iPhone pedometer function in laboratory test conditions. However, no studies have attempted to evaluate evidence [<ellipsis/>] in the field.</p>
+      </blockquote>
+      <ol>
+        <li><p>Describe the issue that the authors raise with previous studies, using the language in this book.</p></li>
+        <li><p>Among many other comparisons, the researchers compared the <em>mean difference</em> between the number of step counts recorded by manually counting steps (mean: <m>92.6</m>) and the iPhone-recorded number of steps (mean: <m>85.4</m>).</p></li>
+      </ol>
+      <p>
+        What statistical test would be appropriate?
+      </p>
+      <ol>
+        <li><p>What hypotheses are being tested?</p></li>
+        <li><p>While walking at <m>2.5</m>.h^<m>-1</m>^, the above statistical test resulted in <m>t = 2.95</m>.</p></li>
+      </ol>
+      <p>
+        What is the approximate <m>P</m>-value? Interpret the results.
+      </p>
+      <ol>
+        <li><p>The sample size for the analysis mentioned above was <m>n = 32</m>.</p></li>
+      </ol>
+      <p>
+        Is the test statistically valid?
+      </p>
+    </exercise>
+    <exercise xml:id="exercise-read-exercise-headphones">
+      <p>
+        <xref ref="mohammadpoorasl2019prevalence"/> studied the relationship between hearing loss, and headphone and earphone use in Iranian students, using a non-directional study.<idx><h>Study types</h><h>directionality!non-directional</h></idx> The article states:
+      </p>
+      <blockquote>
+        <p>... <m>890</m> students were randomly selected from five schools at <span style="font-variant:small-caps;">qums</span> [<ellipsis/>] using a proportional cluster sampling method...</p>
+      </blockquote>
+      <p>
+        Only <m>866</m> of the <m>890</m> students agreed to participated in the study; of these, <m>745</m> used <em>ear</em>phones. The participants completed a hearing test and a Hearing Loss Questionnaire (HLQ; values between <m>17</m> and <m>34</m>; higher scores indicating more severe hearing loss).
+      </p>
+      <ol>
+        <li><p>What is the population?</p></li>
+        <li><p>Is this an observational or experimental study?</p></li>
+        <li><p>Critique the sampling method.</p></li>
+      </ol>
+      <p>
+        What is the implication for interpreting the results of the study?
+      </p>
+      <p>
+        One question in the HLQ is:
+      </p>
+      <blockquote>
+        <p>Does a hearing problem cause you difficulty when listening to TV or radio?</p>
+      </blockquote>
+      <ol>
+        <li><p>What is a potential problem with this question?</p></li>
+        <li><p>Compute the <m>95</m>% CI for the proportion of students who had used earphones.</p></li>
+      </ol>
+      <p>
+        Some results are presented in Table <xref ref="tab-hearing-loss-table"/>.
+      </p>
+      <ol>
+        <li><p>What statistical test was appropriate for comparing the mean scores for males and females?</p></li>
+        <li><p>What are the hypotheses being tested?</p></li>
+        <li><p>What is the standard error for the <em>difference</em> between the means?</p></li>
+        <li><p>Perform the hypothesis tests; what do the results mean?</p></li>
+        <li><p>Compute the approximate <m>95</m>% CI for the difference between the means.</p></li>
+        <li><p>Are the test and the CI statistically valid?</p></li>
+      </ol>
+      <p>
+        Table <xref ref="tab-hearing-loss-table"/> also compares the HLQ scores for the frequency of <em>earphone</em> use specifically.
+      </p>
+      <ol>
+        <li><p>What are the hypotheses being tested?</p></li>
+        <li><p>Why is the sample size for this comparison only <m>791</m> and not <m>845</m>?</p></li>
+        <li><p>Interpret the <m>P</m>-value for this test; what do the results mean?</p></li>
+      </ol>
+      <p>
+        Table <xref ref="tab-hearing-loss-table"/> also compares the HLQ scores for those who use and do not use <em>earphones</em>.
+      </p>
+      <ol>
+        <li><p>Form an approximate <m>95</m>% CI for the mean hearing loss score for students who use earphones.</p></li>
+        <li><p>Compute the standard error of the <em>difference</em> between the mean hearing loss score for students who use and do earphones.</p></li>
+        <li><p>Perform a hypothesis test to compare the <em>difference</em> between the mean hearing loss score for students who use and do not use earphones, and confirm that the <m>P</m>-value is indeed very small.</p></li>
+      </ol>
+    </exercise>
+    <exercise xml:id="exercise-read-exercise-quakes">
+      <p>
+        <xref ref="mesrkanlou2023effect"/> studied the effect of an earthquake on pregnant mothers in Varzaghan, Iran (p. 2), using:
+      </p>
+      <blockquote>
+        <p>... <m>1000</m> cases of pregnant women living in urban and rural areas of Varzaghan city that consisted of <m>550</m> pre-earthquake and <m>450</m> post-earthquake cases.</p>
+      </blockquote>
+      <p>
+        The researchers compared the mothers in the two groups (pre- and post-earthquake) on various measurements. For example, the mean age of mothers in the <em>pre</em>-group was <m>25.82</m> y, and the mean age of the mothers in the <em>post</em>-group was <m>26.71</m> y; the difference has a <m>P</m>-value of <m>0.084</m>.
+      </p>
+      <ol>
+        <li><p>What does this result <em>mean</em>?</p></li>
+        <li><p><em>Why</em> did the researchers make this comparison between the mothers' ages in two groups?</p></li>
+        <li><p>What type of hypothesis test was used to make this conclusion?</p></li>
+      </ol>
+      <p>
+        The researchers also compared the mean birth weights of the babies born to the mothers in the two groups. In the <em>pre</em>-group, the mean birth weight was <m>3.25</m> (<m>s = 0.52</m>) and in the <em>post</em>-group the mean birth weight was <m>3.18</m> (<m>s = 0.54</m>).
+      </p>
+      <ol>
+        <li><p>Compute the standard error for comparing the <em>difference</em> between the two means.</p></li>
+        <li><p>Perform a hypothesis test to compare the mean birthweights.</p></li>
+      </ol>
+      <p>
+        Interpret the results.
+      </p>
+      <ol>
+        <li><p>The two-tailed <m>P</m>-value for this test as given as <m>0.001</m>.</p></li>
+      </ol>
+      <p>
+        Is this consistent with your calculations?
+      </p>
+      <p>
+        The researchers also compared the percentage of babies with a Low Birth Weight (LBW; less than <m>2.5</m>). For the <em>pre</em>-group, the percentage was <m>6.01</m>%; for the <em>post</em>-group, the percentage was <m>8.92</m>%.
+      </p>
+      <ol>
+        <li><p>What <em>type</em> of definition is given for LBW?</p></li>
+        <li><p>Construct the <m>2 2</m> table for displaying these data.</p></li>
+        <li><p>What type of test was probably used for this comparison?</p></li>
+        <li><p>For the test, <m>^2 = 3.052</m>.</p></li>
+      </ol>
+      <p>
+        Deduce the equivalent <m>z</m>-score and the approximate <m>P</m>-value.
+      </p>
+      <ol>
+        <li><p>What limitations can you identify for this study?</p></li>
+      </ol>
+    </exercise>
+    <exercise xml:id="exercise-read-exercise-selinium">
+      <p>
+        <xref ref="tracy1990selenium"/> studied the selenium (Se) concentration in irrigation and stock water sources in California. For drinking water, the maximum recommended concentration was <m>10.^{-1}</m>; for irrigation water, the maximum recommended concentration was <m>20.^{-1}</m>.
+      </p>
+      <p>
+        Part of the study examined the area within <m>5</m> of wells. When Pliocene rocks were within this radius, the relationship between the Se concentration <m>y</m> in the water and the electrical conductivity of the water <m>x</m> (in deciSiemens per meter, dS.m^<m>-1</m>^) was <m>\hat{y} = -3.1 + 7.0x</m>, where <m>R^2 = 27</m>%.
+      </p>
+      <ol>
+        <li><p>Interpret the meaning of <m>R^2</m>.</p></li>
+        <li><p>What is the value of the correlation coefficient?</p></li>
+        <li><p>The <m>P</m>-value for testing the slope is <m>P &lt; 0.001</m>. Interpret what this means in this context.</p></li>
+        <li><p>What are the measurement units of the slope?</p></li>
+      </ol>
+      <p>
+        For the <m>n = 151</m> wells in the study, Table <xref ref="tab-selenium-table"/> shows the Se concentration of the water and the geology within <m>5</m> of the well.
+      </p>
+      <ol>
+        <li><p>What hypotheses are being tested by the table?</p></li>
+        <li><p>The article states that <m>^2 = 31.5</m>. What is the equivalent <m>z</m>-score for the test?</p></li>
+        <li><p>What is the approximate <m>P</m>-value for the test? Interpret what this means.</p></li>
+      </ol>
+    </exercise>
+    <exercise xml:id="exercise-read-exercise-larva">
+      <p>
+        <xref ref="russell2023difference"/> compared the larvae of two types of mosquitoes: <em>Ae. albopictus</em> (invasive) and <em>Cx. pipiens</em> (native). One study compared the survival rates of the larvae at two temperatures, and in the presence or absence of predator (a small crustacean, called copepods).
+      </p>
+      <p>
+        At <m>15</m>^o^C and <m>25</m>^o^C, the survival rates were <m>86.8</m>% and <m>86.1</m>%, respectively, for the control group (i.e., no copepods). The papers quoted a <m>P</m>-value of <m>P = 0.8076</m>.
+      </p>
+      <ol>
+        <li><p>What type of test was probably used?</p></li>
+        <li><p>Interpret what the <m>P</m>-value means in this context.</p></li>
+      </ol>
+      <p>
+        The researchers also compared the size of the surviving larvae in the control groups for both temperatures. In comparing <em>Cx. pipiens</em> to <em>Ae. albopictus</em> larvae, the paper gives this information:
+      </p>
+      <blockquote>
+        <p><m>mean</m>: <em>Cx. pipiens</em><m>{} = 1.64 0.18</m>, <em>Ae. albopictus</em><m>{} = 1.36 0.13</m>; <m></m>p<m>-value =&lt; .0001</m>.</p>
+      </blockquote>
+      <p>
+        The two sample sizes are <m>n = 410</m> and <m>n = 498</m> respectively.
+      </p>
+      <ol>
+        <li><p>How would these results be interpreted?</p></li>
+        <li><p>What type of test would probably have been used?</p></li>
+        <li><p>Compute the standard error for the difference between the two types of mosquitoes.</p></li>
+        <li><p>Compute the <m>t</m>-score and approximate <m>P</m>-value for the test.</p></li>
+      </ol>
+      <p>
+        What does the mean?
+      </p>
+      <ol>
+        <li><p>Is the <m>P</m>-value in the article consistent with your calculations?</p></li>
+        <li><p>Is the test statistically valid?</p></li>
+      </ol>
+      <p>
+        The length of the surviving larvae from both species were compared for the two temperatures also.. For surviving <em>Cx. pipiens</em>, the paper reports:
+      </p>
+      <blockquote>
+        <p><m>mean SD</m>: <m>15</m>^o^C <m>{}= 1.66 0.01</m>, <m>25</m>^o^C <m>{} = 1.60 0.02</m>; <m></m>p<m>-value = .0065</m>.</p>
+      </blockquote>
+      <p>
+        For surviving <em>Ae. albopictus</em>, the paper reports:
+      </p>
+      <blockquote>
+        <p><m>mean SD</m>: <m>15</m>^o^C <m>{}= 1.35 0.01</m>, <m>25</m>^o^C <m>{} = 1.36 0.01</m>; <m></m>p<m>-value = .4343</m>.</p>
+      </blockquote>
+      <ol>
+        <li><p>How would these results be interpreted?</p></li>
+        <li><p>What type of test would probably have been used?</p></li>
+      </ol>
+      <p>
+        <em>Megacyclops viridis</em> (a copepod) preys on the larvae. The association between predation efficiency (<m>y</m>; a percentage) and predator<ndash/>prey size-ratio (<m>x</m>; no units) was (using <m>n = 45</m>) <m>\hat{y} = -19.56 + 31.64x</m>. The standard errors of the regression coefficients were <m>17.92</m> (intercept) and <m>13.88</m> (slope).
+      </p>
+      <ol>
+        <li><p>Find an approximate <m>95</m>% CI for each regression parameter.</p></li>
+        <li><p>Estimate the <m>P</m>-value for testing if the population slope is zero.</p></li>
+      </ol>
+      <p>
+        Interpret what this means.
+      </p>
+      <ol>
+        <li><p>Is this test statistically valid?</p></li>
+        <li><p>Interpret the meaning of the slope.</p></li>
+        <li><p>The value of <m>R^2</m> was given as <m>0.087</m> (i.e., <m>8.7</m>%).</p></li>
+      </ol>
+      <p>
+        Interpret this value.
+      </p>
+      <ol>
+        <li><p>Find the value of the correlation coefficient, <m>r</m>.</p></li>
+      </ol>
+    </exercise>
+    <exercise xml:id="exercise-read-exercise-mouth">
+      <p>
+        <xref ref="li2017normal"/> studied the maximum mouth opening (MMO; in mm) for <m>452</m> Chinese adults aged from <m>20</m> to <m>35</m>.
+      </p>
+      <ol>
+        <li><p>Would the individuals in the study have been blinded?</p></li>
+      </ol>
+      <p>
+        Explain. What are the implications?
+      </p>
+      <p>
+        The correlation between height and MMO was given as <m>r = 0.54</m> with <m>P &lt; 0.001</m>.
+      </p>
+      <ol>
+        <li><p>What does this <em>mean</em>?</p></li>
+        <li><p>Compute and interpret the value of <m>R^2</m>.</p></li>
+      </ol>
+      <p>
+        The regression equation relating the height <m>x</m> (in cm) and MMO <m>y</m> was given as <m>\hat{y} = 0.36x - 10.15</m>.
+      </p>
+      <ol>
+        <li><p>Interpret the estimates of the regression parameters.</p></li>
+        <li><p>Use the regression equation to predict the MMO for a person <m>179</m> tall.</p></li>
+      </ol>
+      <p>
+        The mean MMO of males was <m>54.18</m> (<m>s = 5.21</m>), and for females was <m>49.62</m> (<m>s = 3.69</m>).
+      </p>
+      <ol>
+        <li><p>What <em>type</em> of hypothesis tests was used to compare the mean MMO for males and females?</p></li>
+        <li><p>The <m>t</m>-score for comparing MMO for males and females is <m>t = 10.63</m>.</p></li>
+      </ol>
+      <p>
+        What is the <m>P</m>-value?
+      </p>
+      <ol>
+        <li><p>Is this result statistically valid?</p></li>
+        <li><p>What is the meaning of this comparison?</p></li>
+        <li><p>Is gender likely to be a confounding variable in this regression analysis?</p></li>
+      </ol>
+      <p>
+        Explain carefully.
+      </p>
+      <p>
+        The authors state one of the limitations as:
+      </p>
+      <blockquote>
+        <p>First, participants were recruited from a pool of people who were undergoing regular medical examinations in our hospital [<ellipsis/>]</p>
+      </blockquote>
+      <ol>
+        <li><p>What does this mean?</p></li>
+      </ol>
+      <p>
+        What are the implications? Are there other limitations?
+      </p>
+    </exercise>
+    <exercise xml:id="exercise-read-exercise-tomatoes">
+      <p>
+        <xref ref="drinkwater1995fundamental"/> compared tomatoes growing on conventional (CNV; <m>n = 14</m>) and organic (ORG; <m>n = 17</m>) farms. Between 1989 and 1990, the researchers sampled tomato fields during April and September (p. <m>1 100</m>). An area between <m>0.04</m> and <m>0.1</m> was set aside within each field for collecting data. Each area was divided into <m>20</m> sections, then a <m>1</m> row was selected at random within each section to be sampled.
+      </p>
+      <ol>
+        <li><p>Explain what type of sampling is being used.</p></li>
+      </ol>
+      <p>
+        One important measure of soil health is the number of actinomycetes. When comparing ORG and CNV, the researchers found that the (p. <m>1 103</m>):
+      </p>
+      <blockquote>
+        <p>... total numbers of actinomycetes [<ellipsis/>] were significantly larger in the ORG soils [<ellipsis/>] (Student's <m>t</m> test, <m>t = 5.4</m>, <m>P = 0.006</m>)...</p>
+      </blockquote>
+      <ol>
+        <li><p>Explain what the results mean.</p></li>
+        <li><p>Are the results statistically valid?</p></li>
+      </ol>
+      <p>
+        The researchers also found that (p. <m>1 103</m>):
+      </p>
+      <blockquote>
+        <p>... starch hydrolyzing actinomycetes were more numerous in CNV [<ellipsis/>] (Student's <m>t</m> test, <m>t = 4.0</m>, <m>P = 0.005</m>).</p>
+      </blockquote>
+      <ol>
+        <li><p>Explain what these results mean.</p></li>
+      </ol>
+      <p>
+        They also found that (p. <m>1 103</m>):
+      </p>
+      <blockquote>
+        <p>Total actinomycete abundance [was] negatively correlated with corky root [a disease] severity (<m>r = -0.76</m>, <m>P = 0.08</m>...).</p>
+      </blockquote>
+      <ol>
+        <li><p>Explain what these results mean.</p></li>
+        <li><p>Compute and interpret the value of <m>R^2</m>.</p></li>
+      </ol>
+    </exercise>
+    <exercise xml:id="exercise-read-exercise-eye-masks">
+      <p>
+        <xref ref="teo2022eye"/> studied pregnant Malaysian women with sleeping disruptions in the last month of pregnancy. The <m>56</m> patients were (p. 1):
+      </p>
+      <blockquote>
+        <p>... randomized to the use of eye-mask and earplugs or "sham" headbands during night sleep (both introduced as sleep aids).</p>
+      </blockquote>
+      <p>
+        Thus, two groups were used: one using eye-masks and earplugs (treatment group, <m>T</m>; <m>n = 29</m>) and one using sham headbands (control or placebo group, <m>P</m>; <m>n = 27</m>).
+      </p>
+      <ol>
+        <li><p>What was the purpose of using 'sham' headbands if it was an ineffective intervention?</p></li>
+        <li><p>What type of study is this: experimental or observational?</p></li>
+      </ol>
+      <p>
+        Explain.
+      </p>
+      <p>
+        Sleep duration was measured in Week 1 (no intervention) and again in Week 2 (with the allocated intervention) for each subject, using a 'wrist actigraphy monitor'.
+      </p>
+      <ol>
+        <li><p>Why is using a 'wrist actigraphy monitor' better than self-reported sleep duration?</p></li>
+      </ol>
+      <p>
+        The women in the two groups were compared. For example, the mean age of the women was <m>30.6</m> y (<m>s = 3.6</m>) (<m>T</m>) and <m>30.1</m> y (<m>s = 3.3</m>) (<m>P</m>); the <m>P</m>-value for the comparison was given as <m>P = 0.56</m>.
+      </p>
+      <ol>
+        <li><p><em>Why</em> was this comparison made?</p></li>
+        <li><p>Compute the standard error for the difference between the two mean sleep durations.</p></li>
+        <li><p>Compute the <m>t</m>-score for the test.</p></li>
+        <li><p>Is the quoted <m>P</m>-value consistent with your calculations?</p></li>
+      </ol>
+      <p>
+        What do these results mean?
+      </p>
+      <ol>
+        <li><p>Is the result statistically valid?</p></li>
+      </ol>
+      <p>
+        Another comparison was the room 'condition' where the women slept: in the treatment group, <m>13</m> had a room with a fan (<m>16</m> had air conditioning), while in the control group <m>10</m> women had a fan (and <m>17</m> air conditioning). The <m>P</m>-value for the comparison was given as <m>P = 0.60</m>.
+      </p>
+      <ol>
+        <li><p><em>Why</em> was this comparison made?</p></li>
+        <li><p>Construct the <m>2 2</m> table summarising the data.</p></li>
+        <li><p>The <m>^2</m>-score for the test is <m>0.35064</m>.</p></li>
+      </ol>
+      <p>
+        Compute the equivalent <m>z</m>-score. Interpret the results.
+      </p>
+      <ol>
+        <li><p>Is the quoted <m>P</m>-value consistent with your calculations?</p></li>
+        <li><p>Is the result statistically valid?</p></li>
+      </ol>
+      <p>
+        In the <em>treatment</em> group, the mean sleep duration in Week 1 was <m>279.0</m> (<m>s = 18.9</m>) and in Week 2 was <m>303.6</m> (<m>s = 18.8</m>). The <em>increase</em> was <m>24.7</m> (<m>s = 14.9</m>).
+      </p>
+      <ol>
+        <li><p>Test if sleep duration <em>increased</em> in the treatment group.</p></li>
+      </ol>
+      <p>
+        Interpret the results mean.
+      </p>
+      <p>
+        In the <em>control</em> group, the mean sleep duration in Week 1 was <m>286.3</m> (<m>s = 20.9</m>) and in Week 2 was <m>301.9</m> (<m>s = 21.8</m>; <m>n = 26</m>). The <em>increase</em> was <m>18.1</m> (<m>s = 17.3</m>).
+      </p>
+      <ol>
+        <li><p>Test if sleep duration <em>increased</em> in the control group.</p></li>
+      </ol>
+      <p>
+        Interpret the results.
+      </p>
+      <ol>
+        <li><p>Why would sleep duration <em>increase</em>, if the control group used an ineffective intervention?</p></li>
+      </ol>
+      <p>
+        The <em>increase</em> in sleep duration can be compared for the two groups.
+      </p>
+      <ol>
+        <li><p>Compute the standard error for difference between the mean increases <m>s.e.( \bar{x}_T - \bar{x}_T)</m>.</p></li>
+        <li><p>Compare the increase in sleep duration for the two groups.</p></li>
+      </ol>
+      <p>
+        Interpret the results.
+      </p>
+      <ol>
+        <li><p>Is the test statistically valid?</p></li>
+      </ol>
+    </exercise>
+  </exercises>
 </chapter>
