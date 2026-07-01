@@ -253,19 +253,9 @@
       Graphs are constructed to help readers understand the data. Hence, after producing a graph, the <em>distribution</em> of the data should be described, focusing on four features:
     </p>
     <ol>
-      <li><p>The <em>shape</em> of the distribution.<idx><h>Quantitative data</h><h>shape</h></idx></p></li>
-    </ol>
-    <p>
-      That is, are most of the values smaller or larger, or about evenly distributed between smaller and larger values?
-    </p>
-    <ol>
-      <li><p>The <em>average</em> of the data.<idx><h>Quantitative data</h><h>averages</h></idx></p></li>
-    </ol>
-    <p>
-      What is an average, central or typical value?
-    </p>
-    <ol>
-      <li><p>The <em>variation</em> in the bulk of the data. <idx><h>Quantitative data</h><h>variation</h></idx></p></li>
+      <li><p>The <em>shape</em> of the distribution.<idx><h>Quantitative data</h><h>shape</h></idx> That is, are most of the values smaller or larger, or about evenly distributed between smaller and larger values?</p></li>
+      <li><p>The <em>average</em> of the data.<idx><h>Quantitative data</h><h>averages</h></idx> What is an average, central or typical value?</p></li>
+      <li><p>The <em>variation</em> in the bulk of the data.<idx><h>Quantitative data</h><h>variation</h></idx></p></li>
       <li><p>Any <em>outliers</em> (unusually large or small observations) or unusual features.<idx><h>Quantitative data</h><h>outliers</h></idx><idx>Outliers</idx></p></li>
     </ol>
     <p>
@@ -385,7 +375,7 @@
     <idx><h>Mean</h><h>of a sample</h></idx>
     <idx>Mean|(</idx>
     <p>
-      The mean of the population is denoted by <m></m>,<idx><h>Mean</h><h>of a population</h></idx> and its value is almost always unknown. The mean of the population is <em>estimated</em> by the mean of the sample, denoted <m>\bar{x}</m>. In this context, the value of the unknown <em>parameter</em> is <m></m>, and the value of the <em>statistic</em> is <m>\bar{x}</m>.
+      The mean of the population is denoted by <m>\mu</m>,<idx><h>Mean</h><h>of a population</h></idx> and its value is almost always unknown. The mean of the population is <em>estimated</em> by the mean of the sample, denoted <m>\bar{x}</m>. In this context, the value of the unknown <em>parameter</em> is <m>\mu</m>, and the value of the <em>statistic</em> is <m>\bar{x}</m>.
     </p>
     <warning>
       <p>
@@ -397,10 +387,10 @@
     <example xml:id="example-small-data-set">
       <title>Estimating a population mean</title>
       <p>
-        Consider a small dataset for answering this descriptive RQ: 'For gorillas aged under <m>20</m>, what is the average chest-beating rate?' The population mean rate (denoted <m></m>) is to be estimated.
+        Consider a small dataset for answering this descriptive RQ: 'For gorillas aged under <m>20</m>, what is the average chest-beating rate?' The population mean rate (denoted <m>\mu</m>) is to be estimated.
       </p>
       <p>
-        Every gorilla cannot be studied, so a <em>sample</em> is studied. The unknown population mean <m></m> is estimated using the sample mean (<m>\bar{x}</m>) of <m>n = 14</m> young gorillas
+        Every gorilla cannot be studied, so a <em>sample</em> is studied. The unknown population mean <m>\mu</m> is estimated using the sample mean (<m>\bar{x}</m>) of <m>n = 14</m> young gorillas
       </p>
       <p>
         Of course, a different sample would likely give a different value for <m>\bar{x}</m>.
@@ -424,7 +414,7 @@
       </statement>
     </definition>
     <p>
-      To find the <em>value</em> of the sample mean, <em>add</em> (denoted by <m></m>) all the observations (denoted by <m>x</m>) then <em>divide</em> by the number of observations (denoted by <m>n</m>). In symbols:<idx><h>Mean</h><h>of a sample</h></idx>
+      To find the <em>value</em> of the sample mean, <em>add</em> (denoted by <m>\sum</m>) all the observations (denoted by <m>x</m>) then <em>divide</em> by the number of observations (denoted by <m>n</m>). In symbols:<idx><h>Mean</h><h>of a sample</h></idx>
     </p>
     <me>\bar{x} = \frac{\sum x}{n}.</me>
     <example xml:id="example-compute-mean">
@@ -454,9 +444,20 @@
     <example xml:id="example-bats-mean">
       <title>Computing a sample mean</title>
       <p>
-        <xref ref="griffin1960echolocation"/> recorded the distance at which flies (<em>Drosophila</em>) were detected by bats for <m>n = 11</m> detections (Table <xref ref="tab-bat-data"/>). The population mean distance is estimated by the sample mean as <m>\bar{x} = 532/11 = 48.4</m>.
+        <xref ref="griffin1960echolocation"/> recorded the distance at which flies (<em>Drosophila</em>) were detected by bats for <m>n = 11</m> detections (Table <xref ref="tab-bat-data"/>). The population mean distance is estimated by the sample mean as <m>\bar{x} = 532/11 = 48.4</m> cm.
       </p>
     </example>
+    <table xml:id="tab-bat-data">
+      <title>The distance at which small fruit flies were detected by bats.</title>
+      <tabular halign="center" top="medium" bottom="medium">
+        <row header="yes" bottom="medium">
+          <cell colspan="11"><em>Detection distance (in cm)</em></cell>
+        </row>
+        <row>
+          <cell><m>62</m></cell><cell><m>52</m></cell><cell><m>68</m></cell><cell><m>23</m></cell><cell><m>34</m></cell><cell><m>45</m></cell><cell><m>27</m></cell><cell><m>42</m></cell><cell><m>83</m></cell><cell><m>56</m></cell><cell><m>40</m></cell>
+        </row>
+      </tabular>
+    </table>
     <idx>Mean|)</idx>
   </subsection>
 
@@ -465,11 +466,11 @@
     <idx><h>Median</h><h>of a sample</h></idx>
     <idx>Median|(</idx>
     <p>
-      A median is a value separating the largest <m>50</m>% of the data from the smallest <m>50</m>% of the data. In a dataset with <m>n</m> values, the median is <em>ordered observation number</em> <m>(n + 1) 2</m>. (The value of the median is <em>not</em> <m>(n + 1) 2</m>, and the median <em>not</em> necessarily halfway between the minimum and maximum values in the data.)
+      A median is a value separating the largest <m>50</m>% of the data from the smallest <m>50</m>% of the data. In a dataset with <m>n</m> values, the median is <em>ordered observation number</em> <m>(n + 1)/2</m>. (The value of the median is <em>not</em> <m>(n + 1)/2</m>, and the median <em>not</em> necessarily halfway between the minimum and maximum values in the data.)
     </p>
     <note>
       <p>
-        Many calculators cannot find the median. The median has no commonly-used symbol, though <m>\tilde{}</m> and <m>\tilde{x}</m> are sometimes used for the population and sample medians respectively.
+        Many calculators cannot find the median. The median has no commonly-used symbol, though <m>\tilde{\mu}</m> and <m>\tilde{x}</m> are sometimes used for the population and sample medians respectively.
       </p>
     </note>
     <definition xml:id="def-median">
@@ -492,6 +493,17 @@
         Thus, the sample median, an estimate of the <em>population</em> median<idx><h>Median</h><h>of a population</h></idx>, is between <m>1.7</m> (ordered observation <m>7</m>) and <m>1.7</m> (ordered observation <m>8</m>). Since these values are the same, the sample median is <m>1.7</m> beats per <m>10</m>.
       </p>
     </example>
+    <table xml:id="tab-g-young-sorted">
+      <title>The chest-beating rate of young gorillas, in increasing order.</title>
+      <tabular halign="center" top="medium" bottom="medium">
+        <row header="yes" bottom="medium">
+          <cell colspan="14"><em>Chest-beating rate, per 10 h</em></cell>
+        </row>
+        <row>
+          <cell><m>0.7</m></cell><cell><m>0.9</m></cell><cell><m>1.3</m></cell><cell><m>1.5</m></cell><cell><m>1.5</m></cell><cell><m>1.5</m></cell><cell><m>1.7</m></cell><cell><m>1.7</m></cell><cell><m>1.8</m></cell><cell><m>2.6</m></cell><cell><m>3.0</m></cell><cell><m>4.1</m></cell><cell><m>4.4</m></cell><cell><m>4.4</m></cell>
+        </row>
+      </tabular>
+    </table>
     <p>
       To clarify:
     </p>
@@ -598,7 +610,7 @@
     <title>Variation: the standard deviation</title>
     <idx><h>Standard deviation</h><h>of a sample</h></idx>
     <p>
-      The population standard deviation (a parameter) is denoted by <m></m> and is estimated by the sample standard deviation <m>s</m> (a statistic). The standard deviation is the most commonly-used measure of variation. It is tedious to compute manually, so is usually calculated using statistical software<idx><h>Computers and software</h><h>statistical</h></idx> for large amounts of data, or a calculator for small amounts of data.
+      The population standard deviation (a parameter) is denoted by <m>\sigma</m> and is estimated by the sample standard deviation <m>s</m> (a statistic). The standard deviation is the most commonly-used measure of variation. It is tedious to compute manually, so is usually calculated using statistical software<idx><h>Computers and software</h><h>statistical</h></idx> for large amounts of data, or a calculator for small amounts of data.
     </p>
     <p>
       The <em>standard deviation</em> is (approximately) the mean distance that observations are from the mean. This seems like a reasonable way to measure the amount of variation in data.
@@ -623,7 +635,7 @@
     </p>
     <me>s = \sqrt{ \frac{\sum(x - \bar{x})^2}{n - 1} },</me>
     <p>
-      where <m>\bar{x}</m> is the sample mean, <m>x</m> represents the individual data values, <m>n</m> is the sample size, and the symbol '<m></m>' means to <em>add</em> (Sect. <xref ref="sec-mean"/>). Using the formula requires these steps.
+      where <m>\bar{x}</m> is the sample mean, <m>x</m> represents the individual data values, <m>n</m> is the sample size, and the symbol '<m>\sum</m>' means to <em>add</em> (Sect. <xref ref="sec-mean"/>). Using the formula requires these steps.
     </p>
     <ol>
       <li><p>Calculate the sample mean: <m>\overline{x}</m>.</p></li>
@@ -648,9 +660,6 @@
         The sample standard deviation of the chest-beating rate is <m>1.27</m> per <m>10</m>.
       </p>
     </example>
-    <p>
-      (ref:StdDevDemo) The standard deviation is related to the sum of the squared-distances from the mean. The chest-beating data are used. The sum of the deviations is <em>always</em> zero.
-    </p>
     <p>
       The sample standard deviation <m>s</m> is:
     </p>
@@ -708,8 +717,8 @@
       For the chest-beating data (Table <xref ref="tab-g-young-sorted"/>), where <m>n = 14</m> (an <em>even</em> number of observations), the median is <m>1.7</m> (Example <xref ref="example-sample-median"/>). The data then can be split into <em>smaller</em> and <em>larger</em> halves, each with seven values:
     </p>
     <ul>
-      <li><p>[23mm][l]{Smaller half:} <m>0.7</m> <m>0.9</m> <m>1.3</m> <m>1.5</m> <m>1.5</m> <m>1.5</m> <m>1.7</m></p></li>
-      <li><p>[23mm][l]{Larger half:} <m>1.7</m> <m>1.8</m> <m>2.6</m> <m>3.0</m> <m>4.1</m> <m>4.4</m> <m>4.4</m></p></li>
+      <li><p>Smaller half: <m>0.7</m>  <m>0.9</m>  <m>1.3</m>  <m>1.5</m>  <m>1.5</m>  <m>1.5</m>  <m>1.7</m></p></li>
+      <li><p>Larger half:  <m>1.7</m>  <m>1.8</m>  <m>2.6</m>  <m>3.0</m>  <m>4.1</m>  <m>4.4</m>  <m>4.4</m></p></li>
     </ul>
     <p>
       Since each half has seven observations (an <em>odd</em> number), the median of each half is the <m>(7 + 1)/2 = 4</m>th ordered value. Hence:<idx>Quartiles</idx>
@@ -747,8 +756,8 @@
         The bat data (Table <xref ref="tab-bat-data"/>) has <m>n = 11</m> observations. The smaller and larger halves of the data, <em>without</em> the median of <m>45</m>, are:
       </p>
       <ul>
-        <li><p>[23mm][l]{Smaller half:} <m>23</m> <m>27</m> <m>34</m> <m>40</m> <m>42</m>: the median is <m>Q_1 = 34</m>.</p></li>
-        <li><p>[23mm][l]{Larger half:} <m>52</m> <m>56</m> <m>62</m> <m>68</m> <m>83</m>: the median is <m>Q_3 = 62</m>.</p></li>
+        <li><p>Smaller half: <m>23</m>  <m>27</m>  <m>34</m>  <m>40</m>  <m>42</m>: the median is <m>Q_1 = 34</m>.</p></li>
+        <li><p>Larger half: <m>52</m>  <m>56</m>  <m>62</m>  <m>68</m>  <m>83</m>: the median is <m>Q_3 = 62</m>.</p></li>
       </ul>
       <p>
         Hence, the IQR is <m>62 - 34 = 28</m>. (If the median <em>is</em> included in each half, the IQR is <m>59 - 37 = 22</m>.)
@@ -860,7 +869,7 @@
         An engineering project <xref ref="data-hald-statistical"/> studied a new building material, to estimate the average permeability. Permeability time (the time for water to permeate the sheets) was measured from <m>81</m> pieces of material (in seconds).
       </p>
       <p>
-        For these data, the mean is <m>\bar{x} = 43.162</m> and the standard deviation is <m>s = 27.358</m>. Using the standard deviation rule, outliers are observations <em>smaller</em> than <m>43.162 - (3 27.358)</m> or <em>larger</em> than <m>43.162 + (3 27.358)</m>; that is, <em>smaller</em> than <m>-38.9</m> (which is clearly not appropriate here, as the data must be positive values), or <em>larger</em> than <m>125.2</m>. This rule is shown in Fig. <xref ref="fig-sd-outliers"/>; two observations are identified as outliers using the standard deviation rule.
+        For these data, the mean is <m>\bar{x} = 43.162</m> and the standard deviation is <m>s = 27.358</m>. Using the standard deviation rule, outliers are observations <em>smaller</em> than <m>43.162 - (3 \times 27.358)</m> or <em>larger</em> than <m>43.162 + (3 \times 27.358)</m>; that is, <em>smaller</em> than <m>-38.9</m> (which is clearly not appropriate here, as the data must be positive values), or <em>larger</em> than <m>125.2</m>. This rule is shown in Fig. <xref ref="fig-sd-outliers"/>; two observations are identified as outliers using the standard deviation rule.
       </p>
     </example>
   </subsection>
@@ -878,8 +887,8 @@
           The IQR rule identifies mild and extreme outliers.
         </p>
         <ul>
-          <li><p><em>Extreme outliers</em>: observations <m>3 IQR</m> more unusual than <m>Q_1</m> or <m>Q_3</m>.<idx><h>Outliers</h><h>IQR rule!extreme outliers</h></idx></p></li>
-          <li><p><em>Mild outliers</em>: observations <m>1.5 IQR</m> more unusual than <m>Q_1</m> or <m>Q_3</m> (that are not extreme outliers).<idx><h>Outliers</h><h>IQR rule!mild outliers</h></idx></p></li>
+          <li><p><em>Extreme outliers</em>: observations <m>3 \times \text{IQR}</m> more unusual than <m>Q_1</m> or <m>Q_3</m>.<idx><h>Outliers</h><h>IQR rule!extreme outliers</h></idx></p></li>
+          <li><p><em>Mild outliers</em>: observations <m>1.5 \times \text{IQR}</m> more unusual than <m>Q_1</m> or <m>Q_3</m> (that are not extreme outliers).<idx><h>Outliers</h><h>IQR rule!mild outliers</h></idx></p></li>
         </ul>
       </statement>
     </definition>
@@ -889,14 +898,14 @@
     <example xml:id="example-iqr-outliers-eg">
       <title>IQR rule for identifying outliers</title>
       <p>
-        Using the permeability data seen in Example <xref ref="example-sd-outliers-eg"/>, a computer shows that <m>Q_1 = 24.7</m> and <m>Q_3 = 50.6</m>, so <m>IQR = {50.6 - 24.7 = 25.9}</m>. Then, <em>extreme</em> outliers are observations <m>3 25.9 = 77.7</m> more unusual than <m>Q_1</m> or <m>Q_3</m>. That is, <em>extreme</em> outliers are observations are:
+        Using the permeability data seen in Example <xref ref="example-sd-outliers-eg"/>, a computer shows that <m>Q_1 = 24.7</m> and <m>Q_3 = 50.6</m>, so <m>\text{IQR} = {50.6 - 24.7 = 25.9}</m>. Then, <em>extreme</em> outliers are observations <m>3 \times 25.9 = 77.7</m> more unusual than <m>Q_1</m> or <m>Q_3</m>. That is, <em>extreme</em> outliers are observations are:
       </p>
       <ul>
         <li><p>more unusual than <m>24.7 - 77.7 = -53.0</m> (that is, <em>less</em> than <m>-53.0</m>); or</p></li>
         <li><p>more unusual than <m>50.6 + 77.7 = 128.3</m> (that is, <em>greater</em> than <m>128.3</m>).</p></li>
       </ul>
       <p>
-        <em>Mild</em> outliers are observations <m>1.5 25.9 = 38.9</m> more unusual than <m>Q_1</m> or <m>Q_3</m> (that are not extreme outliers). That is, <em>mild</em> outliers are
+        <em>Mild</em> outliers are observations <m>1.5 \times 25.9 = 38.9</m> more unusual than <m>Q_1</m> or <m>Q_3</m> (that are not extreme outliers). That is, <em>mild</em> outliers are
       </p>
       <ul>
         <li><p>more unusual than <m>24.7 - 38.9 = -14.2</m> (that is, <em>less</em> than <m>-14.2</m>); or</p></li>
@@ -974,6 +983,51 @@
     <p>
       Many households are coordinated by women in their late <m>50</m>s. The number of people and number of children under <m>5</m> years of age are both right-skewed. One household has over <m>30</m> people, and has <m>10</m> children in that household. (These are identified as outliers, but are unlikely to be mistakes.) Some observations are missing for some variables, explaining the differences in sample sizes in Table <xref ref="tab-water-access-quant"/>.
     </p>
+    <table xml:id="tab-water-access-quant">
+      <title>Summarising the quantitative data in the water-access study.</title>
+      <tabular halign="center" top="medium" bottom="medium">
+        <row header="yes" bottom="medium">
+          <cell></cell>
+          <cell><em><m>n</m></em></cell>
+          <cell><em>Mean</em></cell>
+          <cell><em>Median</em></cell>
+          <cell><em>Std dev.</em></cell>
+          <cell><em>IQR</em></cell>
+          <cell><em>Min.</em></cell>
+          <cell><em>Max.</em></cell>
+        </row>
+        <row>
+          <cell>Woman's age (years)</cell>
+          <cell><m>120</m></cell>
+          <cell><m>41.6</m></cell>
+          <cell><m>40.5</m></cell>
+          <cell><m>14.56</m></cell>
+          <cell><m>30.25</m></cell>
+          <cell><m>19</m></cell>
+          <cell><m>61</m></cell>
+        </row>
+        <row>
+          <cell>Household size</cell>
+          <cell><m>121</m></cell>
+          <cell><m>7.0</m></cell>
+          <cell><m>6.0</m></cell>
+          <cell><m>4.80</m></cell>
+          <cell><m>4.00</m></cell>
+          <cell><m>0</m></cell>
+          <cell><m>32</m></cell>
+        </row>
+        <row>
+          <cell>Children aged under <m>5</m></cell>
+          <cell><m>120</m></cell>
+          <cell><m>1.6</m></cell>
+          <cell><m>1.0</m></cell>
+          <cell><m>1.65</m></cell>
+          <cell><m>2.00</m></cell>
+          <cell><m>0</m></cell>
+          <cell><m>10</m></cell>
+        </row>
+      </tabular>
+    </table>
     <idx><h>Quantitative data</h><h>summarising|)</h></idx>
   </section>
 
@@ -982,28 +1036,91 @@
     <p>
       Quantitative data can be graphed using a histogram, stemplot (in special circumstances), or dot charts. Quantitative data can be summarised numerically; the most common techniques are indicated in Table <xref ref="tab-summary-quant-stats"/>. The <em>mean</em> and <em>standard deviation</em> are usually used whenever possible, for practical and mathematical reasons. Sometimes quoting both the mean and median (and the standard deviation and IQR) may be appropriate.
     </p>
+    <table xml:id="tab-summary-quant-stats">
+      <title>Summarising quantitative data.</title>
+      <tabular halign="center" top="medium" bottom="medium">
+        <row header="yes" bottom="medium">
+          <cell><em>Feature</em></cell>
+          <cell><em>Approximately symmetric</em></cell>
+          <cell><em>Not symmetric, or has outliers</em></cell>
+        </row>
+        <row>
+          <cell>Average</cell>
+          <cell>Mean</cell>
+          <cell>Median</cell>
+        </row>
+        <row>
+          <cell>Variation</cell>
+          <cell>Standard deviation</cell>
+          <cell>IQR</cell>
+        </row>
+        <row>
+          <cell>Outliers</cell>
+          <cell>Standard deviation rule</cell>
+          <cell>IQR rule</cell>
+        </row>
+      </tabular>
+    </table>
   </section>
 
   <reading-questions xml:id="sec-summarise-quant-quick-review">
     <title>Quick review questions</title>
+    <introduction>
+      <p>Are the following statements <em>true</em> or <em>false</em>?</p>
+    </introduction>
+    <exercise xml:id="rq-ch11-1">
+      <statement><p>The IQR measures the amount of variability in data.</p></statement>
+      <answer><p>True.</p></answer>
+    </exercise>
+    <exercise xml:id="rq-ch11-2">
+      <statement><p>The mean and the median can both be called an 'average'.</p></statement>
+      <answer><p>True.</p></answer>
+    </exercise>
+    <exercise xml:id="rq-ch11-3">
+      <statement><p>The mean and the median are not always the same value.</p></statement>
+      <answer><p>True.</p></answer>
+    </exercise>
+    <exercise xml:id="rq-ch11-4">
+      <statement><p>The range is a simple measure of variation in a set of data.</p></statement>
+      <answer><p>True.</p></answer>
+    </exercise>
+    <exercise xml:id="rq-ch11-5">
+      <statement><p>The standard deviation measures the amount of variability in data.</p></statement>
+      <answer><p>True.</p></answer>
+    </exercise>
+    <exercise xml:id="rq-ch11-6">
+      <statement><p>Another name for the median is <m>Q_2</m>.</p></statement>
+      <answer><p>True.</p></answer>
+    </exercise>
+    <exercise xml:id="rq-ch11-7">
+      <statement><p><m>Q_3</m> is the median of the largest half of the data.</p></statement>
+      <answer><p>True.</p></answer>
+    </exercise>
+    <exercise xml:id="rq-ch11-8">
+      <statement><p>The IQR is a useful measure of variation in data that are skewed.</p></statement>
+      <answer><p>True.</p></answer>
+    </exercise>
+    <exercise xml:id="rq-ch11-9">
+      <statement><p>The IQR is the difference between the first and second quartiles.</p></statement>
+      <answer><p>False (it is the difference between the third and first quartiles).</p></answer>
+    </exercise>
+    <exercise xml:id="rq-ch11-10">
+      <statement><p>Another name for the <m>75</m>th percentile is <m>Q_3</m>.</p></statement>
+      <answer><p>True.</p></answer>
+    </exercise>
+    <exercise xml:id="rq-ch11-11">
+      <statement><p>The units of the standard deviation and the IQR are the same as for the original data.</p></statement>
+      <answer><p>True.</p></answer>
+    </exercise>
   </reading-questions>
 
   <exercises xml:id="sec-summarise-quant-exercises">
     <introduction>
       <p>Answers to odd-numbered exercises are given at the end of the book.</p>
     </introduction>
-    <p>
-      [Answers to odd-numbered exercises] are given at the end of the book.
-    </p>
     <exercise xml:id="exercise-graph-ab-sdeaths">
       <p>
-        The <em>Australian Bureau of Statistics</em>
-      </p>
-      <p>
-        records the
-      </p>
-      <p>
-        The histogram of the age of death for females in 2012 is shown in Fig. <xref ref="fig-death-age-lime"/> (left panel). Describe the distribution.
+        The <em>Australian Bureau of Statistics</em> (<url href="http://www.abs.gov.au/">ABS</url>) records the <url href="http://www.abs.gov.au/AUSSTATS/subscriber.nsf/log?openagent&amp;33020do008_2012.xls&amp;3302.0&amp;Data%20Cubes&amp;19D242509768F63BCA257C1B000D6ECA&amp;0&amp;2012&amp;07.11.2013&amp;Latest">age at death of Australians</url>. The histogram of the age of death for females in 2012 is shown in Fig. <xref ref="fig-death-age-lime"/> (left panel). Describe the distribution.
       </p>
     </exercise>
     <exercise xml:id="exercise-graph-lime-trees">
@@ -1013,32 +1130,19 @@
     </exercise>
     <exercise xml:id="exercise-numerical-quant-nhanes">
       <p>
-        [<em>Dataset</em>: <c>NHANES</c>] The histogram of the direct HDL cholesterol concentration from the American National Health and Nutrition Examination Survey (<span style="font-variant:small-caps;">nhanes</span>) <xref ref="data-NHANES-Rpackage"/> from <m>1999</m><ndash/><m>2004</m> is shown in Fig. <xref ref="fig-nhanes-cherry-ripe-hist"/> (left panel).
+        [<em>Dataset</em>: <c>NHANES</c>] The histogram of the direct HDL cholesterol concentration from the American National Health and Nutrition Examination Survey (<sc>nhanes</sc>) <xref ref="data-NHANES-Rpackage"/> from <m>1999</m><ndash/><m>2004</m> is shown in Fig. <xref ref="fig-nhanes-cherry-ripe-hist"/> (left panel).
       </p>
       <ol>
-        <li><p>Should the mean or median be used to measure the 'average' HDL cholesterol concentration?</p></li>
-      </ol>
-      <p>
-        Explain.
-      </p>
-      <ol>
+        <li><p>Should the mean or median be used to measure the 'average' HDL cholesterol concentration? Explain.</p></li>
         <li><p>Describe the distribution.</p></li>
       </ol>
     </exercise>
-    <p>
-      (ref:CherryRipeHist) Left: the histogram of direct HDL cholesterol concentration from the <span style="font-variant:small-caps;">nhanes</span> study (large outliers exist but are hard to see, as the sample size is very large). Right: the weights of `Fun Size' <em>Cherry Ripe</em> chocolate bars.
-    </p>
     <exercise xml:id="exercise-numerical-quant-cherry-ripes">
       <p>
         [<em>Dataset</em>: <c>CherryRipe</c>] The histogram of the weights of 'Fun Size' <em>Cherry Ripe</em> chocolate bars between 2016 and 2019 is shown in Fig. <xref ref="fig-nhanes-cherry-ripe-hist"/> (right panel).
       </p>
       <ol>
-        <li><p>Should the mean or median be used to measure the 'average' weight of a 'Fun Size' <em>Cherry Ripe</em> bar?</p></li>
-      </ol>
-      <p>
-        Explain.
-      </p>
-      <ol>
+        <li><p>Should the mean or median be used to measure the 'average' weight of a 'Fun Size' <em>Cherry Ripe</em> bar? Explain.</p></li>
         <li><p>Describe the distribution.</p></li>
       </ol>
     </exercise>
@@ -1053,6 +1157,20 @@
         <li><p>the sample IQR of the number of fatalities per year over this period.</p></li>
       </ol>
     </exercise>
+    <table xml:id="tab-fatalities">
+      <title>Fatalities at amusement park rides in the US.</title>
+      <tabular halign="center" top="medium" bottom="medium">
+        <row header="yes" bottom="medium">
+          <cell colspan="10"><em>Fatalities</em></cell>
+        </row>
+        <row>
+          <cell><m>1994</m></cell><cell><m>1995</m></cell><cell><m>1996</m></cell><cell><m>1997</m></cell><cell><m>1998</m></cell><cell><m>1999</m></cell><cell><m>2000</m></cell><cell><m>2001</m></cell><cell><m>2002</m></cell><cell><m>2003</m></cell>
+        </row>
+        <row>
+          <cell><m>2</m></cell><cell><m>4</m></cell><cell><m>3</m></cell><cell><m>4</m></cell><cell><m>7</m></cell><cell><m>6</m></cell><cell><m>1</m></cell><cell><m>3</m></cell><cell><m>2</m></cell><cell><m>5</m></cell>
+        </row>
+      </tabular>
+    </table>
     <exercise xml:id="exercise-numerical-quant-fulmars">
       <p>
         <xref ref="data-Furness1996-Fulmars"/> studied fulmars (a seabird). The mass of the female birds were (in grams): <m>635</m>; <m>635</m>; <m>668</m>; <m>640</m>; <m>645</m>; <m>635</m>.
@@ -1067,27 +1185,48 @@
     </exercise>
     <exercise xml:id="exercise-numerical-quant-soi">
       <p>
-        Draw a stemplot of the
-      </p>
-      <p>
-        in August from <m>1995</m> to <m>2003</m> (Table <xref ref="tab-so-ivalues"/>). Then, use your calculator (where possible) to calculate the:
+        Draw a stemplot of the <url href="http://www.bom.gov.au/climate/current/soihtm1.shtml">average monthly SOI</url> (from the Australian Bureau of Meteorology) in August from <m>1995</m> to <m>2003</m> (Table <xref ref="tab-so-ivalues"/>). Then, use your calculator (where possible) to calculate the:
       </p>
       <ol>
-        <li><p>sample mean</p></li>
+        <li><p>sample mean.</p></li>
         <li><p>sample median.</p></li>
-      </ol>
-      <p>
-        \
-      </p>
-      <ol>
         <li><p>range.</p></li>
         <li><p>sample standard deviation.</p></li>
         <li><p>sample IQR.</p></li>
       </ol>
     </exercise>
+    <table xml:id="tab-so-ivalues">
+      <title>The average monthly SOI values in August from 1995 to 2003.</title>
+      <tabular halign="center" top="medium" bottom="medium">
+        <row header="yes" bottom="medium">
+          <cell><em>Year</em></cell>
+          <cell><m>1995</m></cell>
+          <cell><m>1996</m></cell>
+          <cell><m>1997</m></cell>
+          <cell><m>1998</m></cell>
+          <cell><m>1999</m></cell>
+          <cell><m>2000</m></cell>
+          <cell><m>2001</m></cell>
+          <cell><m>2002</m></cell>
+          <cell><m>2003</m></cell>
+        </row>
+        <row>
+          <cell><em>Monthly average SOI</em></cell>
+          <cell><m>0.8</m></cell>
+          <cell><m>4.6</m></cell>
+          <cell><m>-19.8</m></cell>
+          <cell><m>9.8</m></cell>
+          <cell><m>2.1</m></cell>
+          <cell><m>5.3</m></cell>
+          <cell><m>-8.2</m></cell>
+          <cell><m>-14.6</m></cell>
+          <cell><m>-1.8</m></cell>
+        </row>
+      </tabular>
+    </table>
     <exercise xml:id="exercise-weight-fries">
       <p>
-        [<em>Dataset</em>: <c>FriesWt</c>] <xref ref="data-Wetzel2005-McDonalds"/> weighed orders of french fries to determine how they matched the target weight of <m>171</m> (Table <xref ref="tab-fries-wt-table"/>).
+        [<em>Dataset</em>: <c>FriesWt</c>] <xref ref="data-Wetzel2005-McDonalds"/> weighed orders of french fries to determine how they matched the target weight of <m>171</m> g (Table <xref ref="tab-fries-wt-table"/>).
       </p>
       <ol>
         <li><p>Produce graphs to summarise the data.</p></li>
@@ -1097,6 +1236,23 @@
         Do you think the weights meet the target weight, on average?
       </p>
     </exercise>
+    <table xml:id="tab-fries-wt-table">
+      <title>The weight of servings of french fries (in g).</title>
+      <tabular halign="center" top="medium" bottom="medium">
+        <row header="yes" bottom="medium">
+          <cell colspan="11"><em>Weight of large orders of fries (in g)</em></cell>
+        </row>
+        <row>
+          <cell><m>117.0</m></cell><cell><m>126.0</m></cell><cell><m>128.0</m></cell><cell><m>132.0</m></cell><cell><m>133.0</m></cell><cell><m>133.0</m></cell><cell><m>134.0</m></cell><cell><m>137.0</m></cell><cell><m>138.0</m></cell><cell><m>139.0</m></cell><cell><m>139.0</m></cell>
+        </row>
+        <row>
+          <cell><m>140.0</m></cell><cell><m>141.0</m></cell><cell><m>142.0</m></cell><cell><m>142.5</m></cell><cell><m>143.0</m></cell><cell><m>143.5</m></cell><cell><m>145.0</m></cell><cell><m>146.0</m></cell><cell><m>146.0</m></cell><cell><m>151.0</m></cell><cell><m>152.0</m></cell>
+        </row>
+        <row>
+          <cell><m>152.0</m></cell><cell><m>154.0</m></cell><cell><m>154.0</m></cell><cell><m>154.5</m></cell><cell><m>154.5</m></cell><cell><m>155.0</m></cell><cell><m>156.0</m></cell><cell><m>156.5</m></cell><cell><m>157.0</m></cell><cell><m>176.0</m></cell><cell></cell>
+        </row>
+      </tabular>
+    </table>
     <exercise xml:id="exercise-summary-quant-orthoses">
       <p>
         [<em>Dataset</em>: <c>Orthoses</c>] <xref ref="swinnen2018influence"/> studied the influence of using ankle-foot orthoses in children with cerebral palsy. The data for the <m>15</m> subjects is shown in Table <xref ref="tab-describe-ankle-foot"/>.
@@ -1122,6 +1278,17 @@
         <li><p>What is the value of the sample IQR of the number of microplastics?</p></li>
       </ol>
     </exercise>
+    <table xml:id="tab-microplastics">
+      <title>The number of microplastics found in 11 patients.</title>
+      <tabular halign="center" top="medium" bottom="medium">
+        <row header="yes" bottom="medium">
+          <cell colspan="11"><em>Number of microplastics</em></cell>
+        </row>
+        <row>
+          <cell><m>8</m></cell><cell><m>3</m></cell><cell><m>5</m></cell><cell><m>2</m></cell><cell><m>0</m></cell><cell><m>2</m></cell><cell><m>1</m></cell><cell><m>7</m></cell><cell><m>5</m></cell><cell><m>1</m></cell><cell><m>0</m></cell>
+        </row>
+      </tabular>
+    </table>
     <exercise xml:id="exercise-numerical-quant-describe-brain-freeze-histogram">
       <p>
         Describe the histogram in Fig. <xref ref="fig-hist-brain-freeze"/> for the brain-freeze data.
@@ -1146,9 +1313,9 @@
         <xref ref="PuddingJeans"/> recorded data on the price of different styles of women's jeans (Fig. <xref ref="fig-jeans-boxplot"/>, right panel).
       </p>
       <ol>
-        <li><p>What proportion of boot-cut jeans in the sample cost less than $$80$?</p></li>
-        <li><p>What proportion of skinny jeans in the sample cost less than $$80$?</p></li>
-        <li><p>What proportion of straight jeans in the sample cost less than $$80$?</p></li>
+        <li><p>What proportion of boot-cut jeans in the sample cost less than $<m>80</m>?</p></li>
+        <li><p>What proportion of skinny jeans in the sample cost less than $<m>80</m>?</p></li>
+        <li><p>What proportion of straight jeans in the sample cost less than $<m>80</m>?</p></li>
         <li><p>In general, which type of jeans are the cheapest?</p></li>
       </ol>
     </exercise>
