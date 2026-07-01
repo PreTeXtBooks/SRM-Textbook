@@ -244,6 +244,86 @@
     <p>
       <xref ref="lopez2022farmers"/> studied three rural communities in Cameroon, and recorded information about their access to water. The study could be used to determine contributors to the incidence of diarrhoea in young children (<m>85</m> households had children under <m>5</m> years of age). The variables in the <c>WaterAccess</c> dataset are classified in Tables <xref ref="tab-water-access-qual-variables"/> and <xref ref="tab-water-access-quant-variables"/>.
     </p>
+    <table xml:id="tab-water-access-qual-variables">
+      <title>The qualitative variables in the water-access dataset.</title>
+      <tabular halign="center" top="medium" bottom="medium">
+        <row header="yes" bottom="medium">
+          <cell><em>Qualitative variable</em></cell>
+          <cell><em>Type</em></cell>
+          <cell><em>Levels</em></cell>
+        </row>
+        <row>
+          <cell>Region</cell>
+          <cell>Nominal</cell>
+          <cell>Mbeng; Mbih; Ntsingbeu</cell>
+        </row>
+        <row>
+          <cell>Education</cell>
+          <cell>Ordinal</cell>
+          <cell>Primary or less; Secondary or higher</cell>
+        </row>
+        <row>
+          <cell>Distance to water source</cell>
+          <cell>Ordinal</cell>
+          <cell>Under <m>100</m>m; <m>100</m>m to <m>1000</m>m; over <m>1000</m>m</cell>
+        </row>
+        <row>
+          <cell>Queuing time at water source</cell>
+          <cell>Ordinal</cell>
+          <cell>Under <m>5</m> mins; <m>5</m> to <m>15</m> mins; Over <m>15</m> mins</cell>
+        </row>
+        <row>
+          <cell>Household has a garden</cell>
+          <cell>Nominal</cell>
+          <cell>Yes; No</cell>
+        </row>
+        <row>
+          <cell>Household keeps livestock</cell>
+          <cell>Nominal</cell>
+          <cell>Yes; No</cell>
+        </row>
+        <row>
+          <cell>Water source</cell>
+          <cell>Nominal</cell>
+          <cell>Well; Bore; Tap; River</cell>
+        </row>
+        <row>
+          <cell>How often water container washed</cell>
+          <cell>Ordinal</cell>
+          <cell>Before each fill; Once per week; Once per month</cell>
+        </row>
+        <row>
+          <cell>Diarrhoea in children under <m>5</m></cell>
+          <cell>Nominal</cell>
+          <cell>Yes; No</cell>
+        </row>
+      </tabular>
+    </table>
+    <table xml:id="tab-water-access-quant-variables">
+      <title>The quantitative variables in the water-access dataset.</title>
+      <tabular halign="center" top="medium" bottom="medium">
+        <row header="yes" bottom="medium">
+          <cell><em>Quantitative variable</em></cell>
+          <cell><em>Type</em></cell>
+          <cell><em>Information</em></cell>
+        </row>
+        <row>
+          <cell>Household coordinator's (woman's) age</cell>
+          <cell>Continuous</cell>
+          <cell>Rounded to nearest year</cell>
+        </row>
+        <row>
+          <cell>Number of people in household</cell>
+          <cell>Discrete</cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell>Number of children under <m>5</m> in household</cell>
+          <cell>Discrete</cell>
+          <cell></cell>
+        </row>
+      </tabular>
+    </table>
   </section>
 
   <section xml:id="sec-describing-summary">
@@ -259,15 +339,38 @@
 
   <reading-questions xml:id="sec-chap11-quick-review">
     <title>Quick review questions</title>
+    <introduction>
+      <p>
+        <xref ref="benetou2020diet"/> studied school-aged adolescents in Greece. Among other variables, for each child they recorded the body-mass index (weight, divided by height-squared), diet quality (poor; moderate; good), the region where they lived (Attica; Thessaloniki; Other), the number of days they performed physical exercise in the last week, and school grade.
+      </p>
+      <p>Are the following statements <em>true</em> or <em>false</em>?</p>
+    </introduction>
+    <exercise xml:id="rq-ch10-1">
+      <statement><p>'Body-mass index' is a quantitative discrete variable.</p></statement>
+      <answer><p>False (quantitative continuous).</p></answer>
+    </exercise>
+    <exercise xml:id="rq-ch10-2">
+      <statement><p>'Diet quality' is a qualitative ordinal variable.</p></statement>
+      <answer><p>True.</p></answer>
+    </exercise>
+    <exercise xml:id="rq-ch10-3">
+      <statement><p>'Region of residence' is a qualitative nominal variable.</p></statement>
+      <answer><p>True.</p></answer>
+    </exercise>
+    <exercise xml:id="rq-ch10-4">
+      <statement><p>'Number of days the child performed physical exercise in the last week' is a quantitative discrete variable.</p></statement>
+      <answer><p>True.</p></answer>
+    </exercise>
+    <exercise xml:id="rq-ch10-5">
+      <statement><p>'School grade' is a quantitative continuous variable.</p></statement>
+      <answer><p>False (qualitative ordinal).</p></answer>
+    </exercise>
   </reading-questions>
 
   <exercises xml:id="sec-describe-exercises">
     <introduction>
       <p>Answers to odd-numbered exercises are given at the end of the book.</p>
     </introduction>
-    <p>
-      [Answers to odd-numbered exercises] are given at the end of the book.
-    </p>
     <exercise xml:id="exercise-describe-classifying1">
       <p>
         Classify these variables as quantitative (discrete or continuous) or qualitative (nominal or ordinal).
@@ -296,11 +399,7 @@
       </p>
       <ol>
         <li><p>The age group of respondents to a survey.</p></li>
-      </ol>
-      <ol>
         <li><p>Whether a cyclist is wearing a helmet or not.</p></li>
-      </ol>
-      <ol>
         <li><p>The dosage of a medication applied: <m>40</m>, <m>60</m> or <m>80</m> per day.</p></li>
       </ol>
     </exercise>
@@ -310,11 +409,7 @@
       </p>
       <ol>
         <li><p>The brand of fertiliser being applied.</p></li>
-      </ol>
-      <ol>
         <li><p>The age of trees.</p></li>
-      </ol>
-      <ol>
         <li><p>Highest level of education (never finished school; primary school; secondary school; beyond secondary school).</p></li>
       </ol>
     </exercise>
@@ -347,11 +442,6 @@
         <li><p>'Female' and 'male'.</p></li>
         <li><p>The percentage of people who are female.</p></li>
       </ul>
-      <ul>
-        <li><p>The sex of the person.</p></li>
-        <li><p>'Female' and 'male'.</p></li>
-        <li><p>The percentage of people who are female.</p></li>
-      </ul>
     </exercise>
     <exercise xml:id="exercise-variables-levels-b">
       <p>
@@ -362,12 +452,6 @@
         <li><p>The percentage of women who are aged under <m>40</m>.</p></li>
         <li><p>Whether a woman is aged under <m>40</m>.</p></li>
         <li><p>'Yes' and 'No'.</p></li>
-      </ul>
-      <ul>
-        <li><p>'Full-time' and 'part-time'.</p></li>
-        <li><p>The percentage of women who are aged under <m>40</m>.</p></li>
-        <li><p>Whether a woman is aged under <m>40</m>.</p></li>
-        <li><p>'Yes' and 'no'.</p></li>
       </ul>
     </exercise>
     <exercise xml:id="exercise-describe-classifying-variables1">
@@ -434,11 +518,35 @@
     </exercise>
     <exercise xml:id="exercise-describe-classifying-orthoses">
       <p>
-        <xref ref="swinnen2018influence"/> studied the use of ankle-foot orthoses in children with cerebral palsy. Table <xref ref="tab-describe-ankle-foot"/> give the data for the <m>15</m> subjects. (<span style="font-variant:small-caps;">gmfcs</span> is the
+        <xref ref="swinnen2018influence"/> studied the use of ankle-foot orthoses in children with cerebral palsy. Table <xref ref="tab-describe-ankle-foot"/> gives the data for the <m>15</m> subjects. (<span style="font-variant:small-caps;">gmfcs</span> is the <url href="https://en.wikipedia.org/wiki/Gross_Motor_Function_Classification_System">Gross Motor Function Classification System</url> describing the impact of cerebral palsy on motor function; <em>lower</em> levels mean <em>better</em> functionality.) Classify the variables in the study using the language of this chapter.
       </p>
-      <p>
-        describing the impact of cerebral palsy on motor function; <em>lower</em> levels mean <em>better</em> functionality.) Classify the variables in the study using the language of this chapter.
-      </p>
+      <table xml:id="tab-describe-ankle-foot">
+        <title>The orthoses dataset.</title>
+        <tabular halign="center" top="medium" bottom="medium">
+          <row header="yes" bottom="medium">
+            <cell><em>Gender</em></cell>
+            <cell><em>Age (years)</em></cell>
+            <cell><em>Height (cm)</em></cell>
+            <cell><em>Weight (kg)</em></cell>
+            <cell><em>GMFCS</em></cell>
+          </row>
+          <row><cell>M</cell><cell><m>9</m></cell><cell><m>136</m></cell><cell><m>34.5</m></cell><cell><m>1</m></cell></row>
+          <row><cell>M</cell><cell><m>7</m></cell><cell><m>106</m></cell><cell><m>16.2</m></cell><cell><m>2</m></cell></row>
+          <row><cell>M</cell><cell><m>7</m></cell><cell><m>129</m></cell><cell><m>21.1</m></cell><cell><m>1</m></cell></row>
+          <row><cell>M</cell><cell><m>12</m></cell><cell><m>152</m></cell><cell><m>40.4</m></cell><cell><m>1</m></cell></row>
+          <row><cell>M</cell><cell><m>11</m></cell><cell><m>146</m></cell><cell><m>39.3</m></cell><cell><m>2</m></cell></row>
+          <row><cell>M</cell><cell><m>5</m></cell><cell><m>113</m></cell><cell><m>18.1</m></cell><cell><m>1</m></cell></row>
+          <row><cell>M</cell><cell><m>6</m></cell><cell><m>112</m></cell><cell><m>16.7</m></cell><cell><m>2</m></cell></row>
+          <row><cell>M</cell><cell><m>8</m></cell><cell><m>112</m></cell><cell><m>19.1</m></cell><cell><m>1</m></cell></row>
+          <row><cell>M</cell><cell><m>8</m></cell><cell><m>138</m></cell><cell><m>28.6</m></cell><cell><m>1</m></cell></row>
+          <row><cell>M</cell><cell><m>6</m></cell><cell><m>116</m></cell><cell><m>19.3</m></cell><cell><m>1</m></cell></row>
+          <row><cell>F</cell><cell><m>7</m></cell><cell><m>113</m></cell><cell><m>17.6</m></cell><cell><m>1</m></cell></row>
+          <row><cell>M</cell><cell><m>11</m></cell><cell><m>141</m></cell><cell><m>34.9</m></cell><cell><m>1</m></cell></row>
+          <row><cell>M</cell><cell><m>7</m></cell><cell><m>136</m></cell><cell><m>34.5</m></cell><cell><m>1</m></cell></row>
+          <row><cell>F</cell><cell><m>9</m></cell><cell><m>128</m></cell><cell><m>21.9</m></cell><cell><m>1</m></cell></row>
+          <row><cell>F</cell><cell><m>8</m></cell><cell><m>133</m></cell><cell><m>23.0</m></cell><cell><m>1</m></cell></row>
+        </tabular>
+      </table>
     </exercise>
     <exercise xml:id="exercise-describe-classifying-nitrogen-in-soil">
       <p>
@@ -467,6 +575,23 @@
         <li><p>The number of people who died at each location.</p></li>
         <li><p>The percentage of people who died at each location.</p></li>
       </ol>
+      <table xml:id="tab-table-selfie-deaths">
+        <title>Locations of people dying while taking selfies.</title>
+        <tabular halign="center" top="medium" bottom="medium">
+          <row header="yes" bottom="medium">
+            <cell></cell>
+            <cell><em>Number</em></cell>
+            <cell><em>Percentage</em></cell>
+          </row>
+          <row><cell>Nature, associated environments</cell><cell><m>48</m></cell><cell><m>43.2</m></cell></row>
+          <row><cell>Train, railway, associated structures</cell><cell><m>22</m></cell><cell><m>19.9</m></cell></row>
+          <row><cell>Buildings, associated structures</cell><cell><m>17</m></cell><cell><m>15.3</m></cell></row>
+          <row><cell>Road, bridge, associated structures</cell><cell><m>12</m></cell><cell><m>10.8</m></cell></row>
+          <row><cell>Dams, associated structures</cell><cell><m>7</m></cell><cell><m>6.3</m></cell></row>
+          <row><cell>Fields, farms, associated structures</cell><cell><m>4</m></cell><cell><m>3.6</m></cell></row>
+          <row><cell>Others</cell><cell><m>1</m></cell><cell><m>0.9</m></cell></row>
+        </tabular>
+      </table>
     </exercise>
   </exercises>
 </chapter>
