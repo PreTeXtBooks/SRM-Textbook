@@ -190,15 +190,21 @@
 
   <reading-questions xml:id="sec-chap9-quick-review">
     <title>Quick review questions</title>
+    <exercise>
+      <p>Are the following statements <em>true</em> or <em>false</em>?</p>
+      <ol>
+        <li><p>When interpreting the results of a study, the steps taken to maximise internal validity should be evaluated. [True]</p></li>
+        <li><p>If studies are not externally valid, then they are not useful. [False]</p></li>
+        <li><p>When interpreting the results of a study, the steps taken to maximise external validity do not need to be evaluated. [False]</p></li>
+        <li><p>When interpreting the results of a study, ecological validity is about the impact of the study on the environment. [False]</p></li>
+      </ol>
+    </exercise>
   </reading-questions>
 
   <exercises xml:id="sec-interpretation-exercises">
     <introduction>
       <p>Answers to odd-numbered exercises are given at the end of the book.</p>
     </introduction>
-    <p>
-      [Answers to odd-numbered exercises] are given at the end of the book.
-    </p>
     <exercise xml:id="exercise-validity-lighting">
       <p>
         <xref ref="gentile2022improving"/> examined how people can save energy through lighting choices. The study states (p. 9) that the results 'are limited to the [sample] and cannot be easily projected to other similar settings'.
@@ -212,7 +218,7 @@
         Fill the blanks with the correct word: <em>internal</em>, <em>external</em> or <em>ecological</em>.
       </p>
       <p>
-        When interpreting the results of studies, we consider the practicality ( validity), the generalisability ( validity) and the effectiveness ( validity).
+        When interpreting the results of studies, we consider the practicality (<fillin characters="10"/> validity), the generalisability (<fillin characters="10"/> validity) and the effectiveness (<fillin characters="10"/> validity).
       </p>
     </exercise>
     <exercise xml:id="exercise-interpretation-exercise-external-validity">
@@ -261,7 +267,7 @@
     </exercise>
     <exercise xml:id="exercise-interpretation-cough-drops">
       <p>
-        <xref ref="johnson2018menthol"/> studied the use of over-the-counter menthol cough-drops in people with a cough. One conclusion from the <em>observational</em> study of <m>548</m> people was that, taking 'too many cough drops [...] may actually make coughs more severe',
+        <xref ref="johnson2018menthol"/> studied the use of over-the-counter menthol cough-drops in people with a cough. One conclusion from the <em>observational</em> study of <m>548</m> people was that, taking 'too many cough drops [<ellipsis/>] may actually make coughs more severe', <url href="https://www.fammed.wisc.edu/wren-study-excessive-use-menthol-cough-drops-actually-increase-coughs/">as one author explained</url>.
       </p>
       <p>
         Critique this statement.
