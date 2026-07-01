@@ -41,6 +41,91 @@
         The gender of the respondent is <em>nominal</em> (two levels), while the age group is <em>ordinal</em> (six levels). The levels are shown in the rows. The three questions about safety (Table <xref ref="tab-a-vtable2"/>) all yield <em>ordinal</em> responses (five levels, in columns).
       </p>
     </example>
+    <table xml:id="tab-a-vtable1">
+      <title>Demographic information for the AV data for <m>400</m> respondents.</title>
+      <tabular halign="center" top="medium" bottom="medium">
+        <row header="yes" bottom="medium">
+          <cell></cell>
+          <cell><em>Number</em></cell>
+          <cell><em>Percentage</em></cell>
+        </row>
+        <row>
+          <cell colspan="3"><em>Gender</em></cell>
+        </row>
+        <row>
+          <cell>Female</cell><cell><m>204</m></cell><cell><m>51</m></cell>
+        </row>
+        <row>
+          <cell>Male</cell><cell><m>196</m></cell><cell><m>49</m></cell>
+        </row>
+        <row>
+          <cell colspan="3"><em>Age group</em></cell>
+        </row>
+        <row>
+          <cell><m>18</m> to <m>24</m></cell><cell><m>52</m></cell><cell><m>13</m></cell>
+        </row>
+        <row>
+          <cell><m>25</m> to <m>34</m></cell><cell><m>76</m></cell><cell><m>19</m></cell>
+        </row>
+        <row>
+          <cell><m>35</m> to <m>44</m></cell><cell><m>76</m></cell><cell><m>19</m></cell>
+        </row>
+        <row>
+          <cell><m>45</m> to <m>54</m></cell><cell><m>72</m></cell><cell><m>18</m></cell>
+        </row>
+        <row>
+          <cell><m>55</m> to <m>64</m></cell><cell><m>56</m></cell><cell><m>14</m></cell>
+        </row>
+        <row>
+          <cell><m>65+</m></cell><cell><m>68</m></cell><cell><m>17</m></cell>
+        </row>
+      </tabular>
+    </table>
+    <table xml:id="tab-a-vtable2">
+      <title>Responses to three scenarios for the AV data for <m>400</m> respondents (rows sum to <m>n = 400</m>).</title>
+      <tabular halign="center" top="medium" bottom="medium">
+        <row header="yes" bottom="medium">
+          <cell></cell>
+          <cell colspan="2"><em>Unsafe</em></cell>
+          <cell colspan="2"><em>Somewhat unsafe</em></cell>
+          <cell colspan="2"><em>Neutral</em></cell>
+          <cell colspan="2"><em>Somewhat safe</em></cell>
+          <cell colspan="2"><em>Safe</em></cell>
+        </row>
+        <row header="yes" bottom="medium">
+          <cell></cell>
+          <cell><em><m>n</m></em></cell><cell><em>%</em></cell>
+          <cell><em><m>n</m></em></cell><cell><em>%</em></cell>
+          <cell><em><m>n</m></em></cell><cell><em>%</em></cell>
+          <cell><em><m>n</m></em></cell><cell><em>%</em></cell>
+          <cell><em><m>n</m></em></cell><cell><em>%</em></cell>
+        </row>
+        <row>
+          <cell>Driving near an AV</cell>
+          <cell><m>58</m></cell><cell><m>15</m></cell>
+          <cell><m>79</m></cell><cell><m>20</m></cell>
+          <cell><m>96</m></cell><cell><m>24</m></cell>
+          <cell><m>97</m></cell><cell><m>24</m></cell>
+          <cell><m>70</m></cell><cell><m>18</m></cell>
+        </row>
+        <row>
+          <cell>Cycling near an AV</cell>
+          <cell><m>77</m></cell><cell><m>19</m></cell>
+          <cell><m>104</m></cell><cell><m>26</m></cell>
+          <cell><m>87</m></cell><cell><m>22</m></cell>
+          <cell><m>76</m></cell><cell><m>19</m></cell>
+          <cell><m>56</m></cell><cell><m>14</m></cell>
+        </row>
+        <row>
+          <cell>Walking near an AV</cell>
+          <cell><m>63</m></cell><cell><m>16</m></cell>
+          <cell><m>86</m></cell><cell><m>22</m></cell>
+          <cell><m>103</m></cell><cell><m>26</m></cell>
+          <cell><m>82</m></cell><cell><m>21</m></cell>
+          <cell><m>66</m></cell><cell><m>17</m></cell>
+        </row>
+      </tabular>
+    </table>
   </section>
 
   <section xml:id="sec-qualitative-graphs">
@@ -164,6 +249,13 @@
     <p>
       Recall that the <em>purpose of a graph is to display the information in the clearest, simplest possible way, to facilitate understanding the message(s) in the data</em>. A pie chart often makes the message hard to see <xref ref="siegrist1996use"/>.<idx><h>Graphs</h><h>pie chart!warnings</h></idx> <idx><h>Qualitative data</h><h>graphs|)</h></idx>
     </p>
+    <figure xml:id="fig-av-dot-bar-pie">
+      <caption>The age group of respondents in the AV study. All graphs present the same data.</caption>
+      <description><p>Four panels showing the age group of AV study respondents: top left is a dot chart, top right is a bar chart, bottom left is a pie chart, and bottom right is a tilted (3D) pie chart.</p></description>
+    </figure>
+    <p>
+      <url href="https://learningapps.org/watch?v=pf4om4k5t22" visual="learningapps.org/watch?v=pf4om4k5t22">Interactive activity: dot charts, bar charts and pie charts.</url>
+    </p>
   </subsection>
   </section>
 
@@ -206,7 +298,7 @@
     <example xml:id="example-av-proportions-percentages">
       <title>Proportions and percentages</title>
       <p>
-        Consider the AV data in Table <xref ref="tab-a-vtable1"/>, summarising results from a sample of <m>n = 400</m> respondents. The <em>sample proportion</em> of respondents aged <m>25</m> to <m>34</m> is <m>76 400</m>, or <m>0.19</m>. The <em>sample percentage</em> of respondents aged <m>25</m> to <m>34</m> is <m>0.19 100</m>, or <m>19</m>%, as in the table.
+        Consider the AV data in Table <xref ref="tab-a-vtable1"/>, summarising results from a sample of <m>n = 400</m> respondents. The <em>sample proportion</em> of respondents aged <m>25</m> to <m>34</m> is <m>76 \div 400</m>, or <m>0.19</m>. The <em>sample percentage</em> of respondents aged <m>25</m> to <m>34</m> is <m>0.19 \times 100</m>, or <m>19</m>%, as in the table.
       </p>
     </example>
   </section>
@@ -215,7 +307,7 @@
     <title>Numerical summary: odds</title>
     <idx>Odds</idx>
     <p>
-      For the AV data in Table <xref ref="tab-a-vtable1"/>, the number of females is slightly larger than the number of males. Specifically, the <em>ratio</em> of females to males is <m>204 196 = 1.04</m>; that is, there are <m>1.04</m> <em>times</em> as many females as males. This value of <m>1.04</m> is the <em>odds</em> that a respondent is female in the sample. An alternative interpretation is that there are <m>1.04 100 = 104</m> females for every <m>100</m> males in the sample.
+      For the AV data in Table <xref ref="tab-a-vtable1"/>, the number of females is slightly larger than the number of males. Specifically, the <em>ratio</em> of females to males is <m>204 \div 196 = 1.04</m>; that is, there are <m>1.04</m> <em>times</em> as many females as males. This value of <m>1.04</m> is the <em>odds</em> that a respondent is female in the sample. An alternative interpretation is that there are <m>1.04 \times 100 = 104</m> females for every <m>100</m> males in the sample.
     </p>
     <p>
       While proportions and percentages are computed as the number of results of interest divided by the <em>total number</em>, the <em>odds</em> are computed as the number of results of interest divided by <em>the remaining number</em> (Fig. <xref ref="fig-prop-odds"/>).
@@ -236,6 +328,10 @@
         </p>
       </statement>
     </definition>
+    <figure xml:id="fig-prop-odds">
+      <caption>Proportions (left) are the number of interest divided by the total number. Odds (right) are the number of interest divided by the rest.</caption>
+      <description><p>A diagram comparing proportions and odds: the left side shows a fraction with the count of interest over the total, the right side shows the count of interest over the remaining count.</p></description>
+    </figure>
     <example xml:id="example-av-odds-male">
       <title>Interpreting odds</title>
       <p>
@@ -259,7 +355,7 @@
         Consider the AV data in Table <xref ref="tab-a-vtable1"/>, summarising results from a sample of <m>n = 400</m> respondents.
       </p>
       <p>
-        The percentage of respondents aged <m>18</m> to <m>24</m> is <m>52/400 400 = 13</m>%. The <em>odds</em> that a respondent is aged <m>18</m> to <m>24</m> is <m>52/(400 - 52) = 0.15</m>. This means the number of respondents aged <m>18</m> to <m>24</m> is <m>0.15</m> times (i.e., less then) the number of respondents aged over <m>24</m>.
+        The percentage of respondents aged <m>18</m> to <m>24</m> is <m>52/400 \times 100 = 13</m>%. The <em>odds</em> that a respondent is aged <m>18</m> to <m>24</m> is <m>52/(400 - 52) = 0.15</m>. This means the number of respondents aged <m>18</m> to <m>24</m> is <m>0.15</m> times (i.e., less then) the number of respondents aged over <m>24</m>.
       </p>
       <p>
         The <em>odds</em> that a respondent is aged <m>18</m> to <m>54</m> is <m>(52 + 76 + 76 + 72)/(56 + 68) = 2.23</m>. This means the number of respondents aged <m>18</m> to <m>54</m> is <m>2.23</m> times (i.e., greater than) the number of respondents aged <m>55</m> or over.
@@ -352,8 +448,62 @@
       <xref ref="lopez2022farmers"/> recorded data about access to water for three rural communities in Cameroon (see Sect. <xref ref="sec-water-access-quant"/>). Numerous qualitative variables are recorded; some are displayed in Fig. <xref ref="fig-water-acess-qual"/>, and summarised in Table <xref ref="tab-water-access-qual"/>. Notice that the levels<idx>Levels</idx> of the two ordinal variables are displayed in their natural order.
     </p>
     <p>
-      The distance to the nearest water source is usually less than <m>1</m>, and the wait is often over <m>15</m>. The most common water source (i,e., the mode) is a bore (<m>68.6</m>%). The median (and mode) distance to the water source was <m>100</m> to <m>1000</m>; the median wait time was <m>5</m> to <m>15</m> (the mode wait time was under <m>5</m>).
+      The distance to the nearest water source is usually less than <m>1</m> km, and the wait is often over <m>15</m> mins. The most common water source (i,e., the mode) is a bore (<m>68.6</m>%). The median (and mode) distance to the water source was <m>100</m> to <m>1000</m> m; the median wait time was <m>5</m> to <m>15</m> mins (the mode wait time was under <m>5</m> mins).
     </p>
+    <figure xml:id="fig-water-acess-qual">
+      <caption>The distance to the water source (left), the wait time at the water source (centre), and the water sources (right) for the water-access study.</caption>
+      <description><p>Three dot charts showing qualitative variables from the water-access study: distance to water source, queue wait time at water source, and type of water source.</p></description>
+    </figure>
+    <table xml:id="tab-water-access-qual">
+      <title>Summarising some qualitative data in the water-access study. Ordinal variables (left) and nominal variable (right).</title>
+      <tabular halign="center" top="medium" bottom="medium">
+        <row header="yes" bottom="medium">
+          <cell></cell>
+          <cell><em>Number</em></cell>
+          <cell><em>%</em></cell>
+          <cell><em>Odds</em></cell>
+        </row>
+        <row>
+          <cell colspan="4"><em>Distance to water source (<m>n = 121</m>)</em></cell>
+        </row>
+        <row>
+          <cell>Under <m>100</m> m</cell><cell><m>55</m></cell><cell><m>45.5</m></cell><cell><m>0.83</m></cell>
+        </row>
+        <row>
+          <cell><m>100</m> m to <m>1000</m> m</cell><cell><m>57</m></cell><cell><m>47.1</m></cell><cell><m>0.89</m></cell>
+        </row>
+        <row>
+          <cell>Over <m>1000</m> m</cell><cell><m>9</m></cell><cell><m>7.4</m></cell><cell><m>0.08</m></cell>
+        </row>
+        <row>
+          <cell colspan="4"><em>Wait time at water source (<m>n = 120</m>)</em></cell>
+        </row>
+        <row>
+          <cell>Under <m>5</m> mins</cell><cell><m>50</m></cell><cell><m>41.7</m></cell><cell><m>0.71</m></cell>
+        </row>
+        <row>
+          <cell><m>5</m> to <m>15</m> mins</cell><cell><m>28</m></cell><cell><m>23.3</m></cell><cell><m>0.30</m></cell>
+        </row>
+        <row>
+          <cell>Over <m>15</m> mins</cell><cell><m>42</m></cell><cell><m>35.0</m></cell><cell><m>0.54</m></cell>
+        </row>
+        <row>
+          <cell colspan="4"><em>Water source (<m>n = 121</m>)</em></cell>
+        </row>
+        <row>
+          <cell>Bore</cell><cell><m>83</m></cell><cell><m>68.6</m></cell><cell><m>2.18</m></cell>
+        </row>
+        <row>
+          <cell>River</cell><cell><m>15</m></cell><cell><m>12.4</m></cell><cell><m>0.14</m></cell>
+        </row>
+        <row>
+          <cell>Tap</cell><cell><m>7</m></cell><cell><m>5.8</m></cell><cell><m>0.06</m></cell>
+        </row>
+        <row>
+          <cell>Well</cell><cell><m>16</m></cell><cell><m>13.2</m></cell><cell><m>0.15</m></cell>
+        </row>
+      </tabular>
+    </table>
     <idx><h>Qualitative data</h><h>summarising|)</h></idx>
   </section>
 
@@ -366,30 +516,59 @@
 
   <reading-questions xml:id="sec-summary-qual-quick-review">
     <title>Quick review questions</title>
-    <p>
-      Are the following statements <em>true</em> or <em>false</em>?
-    </p>
+    <introduction>
+      <p>Are the following statements <em>true</em> or <em>false</em>?</p>
+    </introduction>
+    <exercise xml:id="rq-ch12-1">
+      <statement><p>Nominal data can be summarised using a median.</p></statement>
+      <answer><p>False.</p></answer>
+    </exercise>
+    <exercise xml:id="rq-ch12-2">
+      <statement><p>Ordinal data can be summarised using a mode.</p></statement>
+      <answer><p>True.</p></answer>
+    </exercise>
+    <exercise xml:id="rq-ch12-3">
+      <statement><p>Odds are the ratio of how often a result of interest occurs, to how often it does <em>not</em> occur.</p></statement>
+      <answer><p>True.</p></answer>
+    </exercise>
+    <exercise xml:id="rq-ch12-4">
+      <statement><p>Proportions and percentages are the same.</p></statement>
+      <answer><p>False. Percentages are proportions multiplied by <m>100</m>, so similar (but different).</p></answer>
+    </exercise>
   </reading-questions>
 
   <exercises xml:id="sec-summarise-qual-data-exercises">
     <introduction>
       <p>Answers to odd-numbered exercises are given at the end of the book.</p>
     </introduction>
-    <p>
-      [Answers to odd-numbered exercises] are given at the end of the book.
-    </p>
     <exercise xml:id="exercise-spider-monkeys">
       <p>
-        A study of spider monkeys <xref ref="data-Chapman1990-SpiderMonkeys"/> examined the types of social groups present
+        A study of spider monkeys <xref ref="data-Chapman1990-SpiderMonkeys"/> examined the types of social groups present (Table <xref ref="tab-spider-monkeys"/>).
       </p>
       <ol>
         <li><p>Construct a suitable plot, and explain what the data reveal.</p></li>
         <li><p>Determine, if appropriate, the median and mode social group.</p></li>
       </ol>
+      <table xml:id="tab-spider-monkeys">
+        <title>Social groups in spider monkeys.</title>
+        <tabular halign="center" top="medium" bottom="medium">
+          <row header="yes" bottom="medium">
+            <cell><em>Social group</em></cell>
+            <cell><em>Percentage</em></cell>
+          </row>
+          <row><cell>Solitary</cell><cell><m>8</m></cell></row>
+          <row><cell>All males</cell><cell><m>3</m></cell></row>
+          <row><cell>Female + no young</cell><cell><m>2</m></cell></row>
+          <row><cell>Mixed young</cell><cell><m>15</m></cell></row>
+          <row><cell>Mixed + no young</cell><cell><m>1</m></cell></row>
+          <row><cell>One female + offspring</cell><cell><m>23</m></cell></row>
+          <row><cell>Many females + offspring</cell><cell><m>48</m></cell></row>
+        </tabular>
+      </table>
     </exercise>
     <exercise xml:id="exercise-qual-summary">
       <p>
-        <xref ref="czarniecka2021consumer"/> studied how Poles prepared and consumed coffee using a sample of <m>1 500</m> Poles. Some data are shown in Table <xref ref="tab-coffee-poles"/>.
+        <xref ref="czarniecka2021consumer"/> studied how Poles prepared and consumed coffee using a sample of <m>1\,500</m> Poles. Some data are shown in Table <xref ref="tab-coffee-poles"/>.
       </p>
       <ol>
         <li><p>Classify the variables as quantitative, nominal or ordinal.</p></li>
@@ -397,6 +576,39 @@
         <li><p>Summarise the three variables.</p></li>
         <li><p>Where appropriate, compute the median and mode for each variable.</p></li>
       </ol>
+      <table xml:id="tab-coffee-poles">
+        <title>Location of coffee consumption, brewing temperature and brewing time, from <m>1\,500</m> Poles.</title>
+        <tabular halign="center" top="medium" bottom="medium">
+          <row header="yes" bottom="medium">
+            <cell></cell>
+            <cell><em><m>n</m></em></cell>
+          </row>
+          <row>
+            <cell colspan="2"><em>Where consumed</em></cell>
+          </row>
+          <row><cell>Home</cell><cell><m>1432</m></cell></row>
+          <row><cell>Canteen</cell><cell><m>687</m></cell></row>
+          <row><cell>Cafe</cell><cell><m>922</m></cell></row>
+          <row><cell>Others' homes</cell><cell><m>994</m></cell></row>
+          <row><cell>Work</cell><cell><m>1196</m></cell></row>
+          <row>
+            <cell colspan="2"><em>Brewing temperature</em></cell>
+          </row>
+          <row><cell><m>100^{\circ}\text{C}</m></cell><cell><m>748</m></cell></row>
+          <row><cell><m>98^{\circ}\text{C}</m></cell><cell><m>269</m></cell></row>
+          <row><cell><m>93^{\circ}\text{C}</m></cell><cell><m>453</m></cell></row>
+          <row><cell>Unknown</cell><cell><m>30</m></cell></row>
+          <row>
+            <cell colspan="2"><em>Brewing time</em></cell>
+          </row>
+          <row><cell>Under <m>3</m> mins</cell><cell><m>226</m></cell></row>
+          <row><cell>About <m>3</m> mins</cell><cell><m>267</m></cell></row>
+          <row><cell>About <m>4</m> mins</cell><cell><m>114</m></cell></row>
+          <row><cell>About <m>5</m> mins</cell><cell><m>82</m></cell></row>
+          <row><cell>About <m>6</m> mins</cell><cell><m>30</m></cell></row>
+          <row><cell>Unknown</cell><cell><m>781</m></cell></row>
+        </tabular>
+      </table>
     </exercise>
     <exercise xml:id="exercise-graphs-cars">
       <p>
@@ -405,11 +617,6 @@
       <ol>
         <li><p>Produce a dot chart.</p></li>
         <li><p>Produce a histogram.</p></li>
-      </ol>
-      <p>
-        \
-      </p>
-      <ol>
         <li><p>Produce a bar chart.</p></li>
         <li><p>Produce a pie chart.</p></li>
       </ol>
@@ -419,23 +626,15 @@
     </exercise>
     <exercise xml:id="exercise-graph-survey-data">
       <p>
-        A
-      </p>
-      <p>
+        A <url href="https://www.nielsen.com/us/en/insights/news/2018/smart-speaking-my-language-despite-their-vast-capabilities-smart-speakers-all-about-the-music.print.html">survey of voice assistants</url>
         (such as Amazon Echo; Google Home; etc.) conducted by
-      </p>
-      <p>
+        <url href="https://www.nielsen.com/au/en.html">Nielsen</url>
         asked respondents to indicate how they used their voice assistant. The options were:
       </p>
       <ul>
         <li><p>listening to music;</p></li>
         <li><p>listen to news;</p></li>
         <li><p>use alarms, timer;</p></li>
-      </ul>
-      <p>
-        \
-      </p>
-      <ul>
         <li><p>search for real-time information (e.g., traffic; weather);</p></li>
         <li><p>search for factual information (e.g., trivia; history);</p></li>
         <li><p>chat with voice assistant for fun.</p></li>
@@ -457,6 +656,36 @@
         <li><p>Compute and interpret the odds of a respondent agreeing <em>or</em> strongly agreeing with the statement.</p></li>
         <li><p>Compute and interpret the odds of a respondent being male.</p></li>
       </ol>
+      <table xml:id="tab-bread">
+        <title>The bread-tasting data (<m>n = 300</m>).</title>
+        <tabular halign="center" top="medium" bottom="medium">
+          <row header="yes" bottom="medium">
+            <cell></cell>
+            <cell><em>Number</em></cell>
+            <cell><em>Percentage</em></cell>
+          </row>
+          <row>
+            <cell colspan="3"><em>Gender</em></cell>
+          </row>
+          <row><cell>Female</cell><cell><m>150</m></cell><cell><m>50</m></cell></row>
+          <row><cell>Male</cell><cell><m>150</m></cell><cell><m>50</m></cell></row>
+          <row>
+            <cell colspan="3"><em>Place of residence</em></cell>
+          </row>
+          <row><cell>Rural</cell><cell><m>49</m></cell><cell><m>16</m></cell></row>
+          <row><cell>City up to <m>20\,000</m> residents</cell><cell><m>38</m></cell><cell><m>13</m></cell></row>
+          <row><cell>City <m>20\,000</m> to <m>100\,000</m> residents</cell><cell><m>83</m></cell><cell><m>28</m></cell></row>
+          <row><cell>City more than <m>100\,000</m> residents</cell><cell><m>130</m></cell><cell><m>43</m></cell></row>
+          <row>
+            <cell colspan="3"><em>Response to statement</em></cell>
+          </row>
+          <row><cell>Strongly agree</cell><cell><m>30</m></cell><cell><m>10</m></cell></row>
+          <row><cell>Agree</cell><cell><m>84</m></cell><cell><m>28</m></cell></row>
+          <row><cell>Neutral</cell><cell><m>78</m></cell><cell><m>26</m></cell></row>
+          <row><cell>Disagree</cell><cell><m>66</m></cell><cell><m>22</m></cell></row>
+          <row><cell>Strongly disagree</cell><cell><m>42</m></cell><cell><m>14</m></cell></row>
+        </tabular>
+      </table>
     </exercise>
     <exercise xml:id="exercise-reclaimed-water">
       <p>
@@ -472,6 +701,27 @@
         <li><p>Compute the odds of a farmer stating 'high price' as a disadvantage, among farmers who listed a disadvantage.</p></li>
         <li><p>What is the difference in the meaning of the last two statements?</p></li>
       </ol>
+      <table xml:id="tab-reclaimed-water">
+        <title>The advantages and disadvantages of using reclaimed water, reported by <m>231</m> farmers. (Not all farmers responded.)</title>
+        <tabular halign="center" top="medium" bottom="medium">
+          <row header="yes" bottom="medium">
+            <cell></cell>
+            <cell><em>No. farmers</em></cell>
+          </row>
+          <row>
+            <cell colspan="2"><em>Advantages</em></cell>
+          </row>
+          <row><cell>Water reutilization</cell><cell><m>15</m></cell></row>
+          <row><cell>Availability</cell><cell><m>27</m></cell></row>
+          <row><cell>Sustainability</cell><cell><m>16</m></cell></row>
+          <row>
+            <cell colspan="2"><em>Disadvantages</em></cell>
+          </row>
+          <row><cell>High price</cell><cell><m>40</m></cell></row>
+          <row><cell>Growing conductivity</cell><cell><m>12</m></cell></row>
+          <row><cell>Lack of proper filtering</cell><cell><m>21</m></cell></row>
+        </tabular>
+      </table>
     </exercise>
     <exercise xml:id="exercise-student-transport">
       <p>
@@ -486,13 +736,30 @@
         <li><p>Compute the odds that a student walks to campus. Explain what this means.</p></li>
         <li><p>Construct appropriate plots to display the data.</p></li>
       </ol>
+      <table xml:id="tab-transport-table">
+        <title>Modes of transport for students getting to campus.</title>
+        <tabular halign="center" top="medium" bottom="medium">
+          <row header="yes" bottom="medium">
+            <cell></cell>
+            <cell><em>Number</em></cell>
+          </row>
+          <row>
+            <cell colspan="2"><em>Active</em></cell>
+          </row>
+          <row><cell>Bicycle</cell><cell><m>29</m></cell></row>
+          <row><cell>Walking</cell><cell><m>35</m></cell></row>
+          <row>
+            <cell colspan="2"><em>Motorised</em></cell>
+          </row>
+          <row><cell>Car</cell><cell><m>70</m></cell></row>
+          <row><cell>Bus</cell><cell><m>117</m></cell></row>
+          <row><cell>Other</cell><cell><m>33</m></cell></row>
+        </tabular>
+      </table>
     </exercise>
     <exercise xml:id="exercise-qual-sum-baby-boom">
       <p>
-        [<em>Dataset</em>: <c>BabyBoom</c>]
-      </p>
-      <p>
-        shows the gender of <m>44</m> babies born in a hospital on one day <xref ref="mypapers-Dunn-dataset-1999"/><xref ref="data-Steele-BabyBoom"/>. The data are given in the order in which the births occurred.
+        [<em>Dataset</em>: <c>BabyBoom</c>] The dataset shows the gender of <m>44</m> babies born in a hospital on one day <xref ref="mypapers-Dunn-dataset-1999"/><xref ref="data-Steele-BabyBoom"/>. The data are given in the order in which the births occurred.
       </p>
       <ol>
         <li><p>What is the mode sex?</p></li>
@@ -512,13 +779,29 @@
         <li><p>For each qualitative variable, compute the percentage and odds of one of the levels occurring in the data.</p></li>
         <li><p>Compute appropriate statistics for each quantitative variable.</p></li>
       </ol>
+      <table xml:id="tab-lung-cap-tab">
+        <title>The lung volume (FEV) for youth in East Boston in the 1970s; the first six observations in the dataset (<m>n = 654</m>).</title>
+        <tabular halign="center" top="medium" bottom="medium">
+          <row header="yes" bottom="medium">
+            <cell><em>Age</em></cell>
+            <cell><em>FEV</em></cell>
+            <cell><em>Height</em></cell>
+            <cell><em>Gender</em></cell>
+            <cell><em>Smoking</em></cell>
+          </row>
+          <row><cell><m>3</m></cell><cell><m>1.072</m></cell><cell><m>46</m></cell><cell>F</cell><cell>No</cell></row>
+          <row><cell><m>4</m></cell><cell><m>0.839</m></cell><cell><m>48</m></cell><cell>F</cell><cell>No</cell></row>
+          <row><cell><m>4</m></cell><cell><m>1.102</m></cell><cell><m>48</m></cell><cell>F</cell><cell>No</cell></row>
+          <row><cell><m>4</m></cell><cell><m>1.389</m></cell><cell><m>48</m></cell><cell>F</cell><cell>No</cell></row>
+          <row><cell><m>4</m></cell><cell><m>1.577</m></cell><cell><m>49</m></cell><cell>F</cell><cell>No</cell></row>
+          <row><cell><m>4</m></cell><cell><m>1.418</m></cell><cell><m>49</m></cell><cell>F</cell><cell>No</cell></row>
+          <row><cell><m>\vdots</m></cell><cell><m>\vdots</m></cell><cell><m>\vdots</m></cell><cell><m>\vdots</m></cell><cell><m>\vdots</m></cell></row>
+        </tabular>
+      </table>
     </exercise>
     <exercise xml:id="exercise-summarise-uni-orthoses">
       <p>
-        <xref ref="swinnen2018influence"/> studied the influence of using ankle-foot orthoses in children with cerebral palsy. The data in Table <xref ref="tab-describe-ankle-foot"/> give the data for the <m>15</m> subjects. (<span style="font-variant:small-caps;">Gmfcs</span> is the
-      </p>
-      <p>
-        used to describe the impact of cerebral palsy on their motor function; where <em>lower</em> levels mean <em>better</em> functionality.)
+        <xref ref="swinnen2018influence"/> studied the influence of using ankle-foot orthoses in children with cerebral palsy. The data in Table <xref ref="tab-describe-ankle-foot"/> give the data for the <m>15</m> subjects. (<sc>Gmfcs</sc> is the <url href="https://en.wikipedia.org/wiki/Gross_Motor_Function_Classification_System">Gross Motor Function Classification System</url> used to describe the impact of cerebral palsy on their motor function; where <em>lower</em> levels mean <em>better</em> functionality.)
       </p>
       <ol>
         <li><p>Construct suitable plots for all variables.</p></li>
