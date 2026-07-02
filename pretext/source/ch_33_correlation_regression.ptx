@@ -313,6 +313,34 @@
   </subsection>
   </section>
 
+  <exercises xml:id="sec-ch33-exercises">
+    <introduction>
+      <p>Answers to odd-numbered exercises are given at the end of the book.</p>
+    </introduction>
+    <exercise xml:id="exercise-cor-test-dogs">
+      <p>
+        [<em>Dataset</em>: <c>Dogs</c>] <xref ref="quan2017relation"/> studied Phu Quoc Ridgeback dogs (<em>Canis familiaris</em>), and recorded many measurements of the dogs, including body length and body height. The scatterplot displaying this relationship and the software output are shown in Fig. <xref ref="fig-dogs-scatter"/>. In this example, it does not matter which variable is used as <m>x</m> or <m>y</m>.
+      </p>
+      <ol>
+        <li><p>Describe the relationship.</p></li>
+        <li><p><em>Taller</em> dogs might be expected to be <em>longer</em>. To test this, write the hypotheses in terms of correlations.</p></li>
+        <li><p>Perform the test, using the output. Write a conclusion.</p></li>
+        <li><p>Is the test statistically valid?</p></li>
+      </ol>
+    </exercise>
+    <figure xml:id="fig-dogs-scatter">
+      <caption>Phu Quoc ridgeback dogs. Left: a scatterplot of the body height vs length. Right: software output.</caption>
+      <sidebyside widths="50% 40%" margins="5%">
+        <image source="generated/DogsScatter" width="100%">
+          <description><p>Scatterplot of body height vs body length for Phu Quoc ridgeback dogs.</p></description>
+        </image>
+        <image source="jamovi/Dogs/DogsCorrelationCI" width="100%">
+          <description><p>Software output for correlation between body height and body length.</p></description>
+        </image>
+      </sidebyside>
+    </figure>
+  </exercises>
+
   <section xml:id="sec-ch33-supplementary-figures">
     <title>Supplementary figures</title>
     <figure xml:id="fig-borers-rise-run">
