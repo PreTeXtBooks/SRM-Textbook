@@ -29,10 +29,7 @@
       </statement>
     </definition>
     <p>
-      Using this definition, the result of rolling a die is a 'random procedure', with possible results , , , ,
-    </p>
-    <p>
-      and . Similarly, tossing a coin is a random procedure with two possible results: <alert>Heads</alert> or <alert>Tails</alert>
+      Using this definition, the result of rolling a die is a 'random procedure', with possible results ⚀, ⚁, ⚂, ⚃, ⚄ and ⚅. Similarly, tossing a coin is a random procedure with two possible results: <alert>Heads</alert> (<alert>H</alert>) or <alert>Tails</alert> (<alert>T</alert>).
     </p>
   </section>
 
@@ -66,13 +63,10 @@
         Consider rolling a fair, six-sided die (the random procedure). We do not know what face will be uppermost until we roll the die.
       </p>
       <p>
-        However, the <em>sample space</em> for this procedure can be listed: , , , ,
+        However, the <em>sample space</em> for this procedure can be listed: ⚀, ⚁, ⚂, ⚃, ⚄ and ⚅. These are all mutually exclusive<idx>Mutually exclusive</idx> (or distinct) results and cover all possible results (exhaustive)<idx>Exhaustive</idx> from a single roll. The sample space is <em>discrete</em> (see Sect. <xref ref="sec-quant-data"/>).<idx><h>Quantitative data</h><h>discrete</h></idx>
       </p>
       <p>
-        and . These are all mutually exclusive<idx>Mutually exclusive</idx> (or distinct) results and cover all possible results (exhaustive)<idx>Exhaustive</idx> from a single roll. The sample space is <em>discrete</em> (see Sect. <xref ref="sec-quant-data"/>).<idx><h>Quantitative data</h><h>discrete</h></idx>
-      </p>
-      <p>
-        The event 'rolling a ' is a simple event.
+        The event 'rolling a ⚀' is a simple event.
       </p>
     </example>
     <p>
@@ -92,23 +86,10 @@
         Some <em>events</em> that can be defined using the sample space in Example <xref ref="example-sample-space-die"/> include:
       </p>
       <ul>
-        <li><p>rolling a</p></li>
+        <li><p>rolling a ⚃. This <em>simple event</em> includes one element of the sample space: ⚃.</p></li>
+        <li><p>rolling an odd number. This <em>compound event</em> includes three elements of the sample space: ⚀, ⚂ and ⚄.</p></li>
+        <li><p>rolling a number larger than ⚁. This <em>compound event</em> includes four elements of the sample space: ⚂, ⚃, ⚄ and ⚅.</p></li>
       </ul>
-      <p>
-        . This <em>simple event</em> includes one element of the sample space: .
-      </p>
-      <ul>
-        <li><p>rolling an odd number. This <em>compound event</em> includes three elements of the sample space:</p></li>
-      </ul>
-      <p>
-        , and .
-      </p>
-      <ul>
-        <li><p>rolling a number larger than</p></li>
-      </ul>
-      <p>
-        . This <em>compound event</em> includes four elements of the sample space: , , and .
-      </p>
       <p>
         The sample space is <em>discrete</em> (see Sect. <xref ref="sec-quant-data"/>).
       </p>
@@ -122,11 +103,11 @@
         Many <em>compound events</em> can be defined using this sample space; for example:
       </p>
       <ul>
-        <li><p>throwing more than <m>50</m>.</p></li>
-        <li><p>throwing between <m>10</m> and <m>40</m>.</p></li>
+        <li><p>throwing more than <m>50</m> m.</p></li>
+        <li><p>throwing between <m>10</m> and <m>40</m> m.</p></li>
       </ul>
       <p>
-        Because the sample space is continuous, throwing an <em>exact</em> distance (such as <em>exactly</em> <m>10</m>) is technically not possible (see Sect. <xref ref="sec-quant-data"/>).
+        Because the sample space is continuous, throwing an <em>exact</em> distance (such as <em>exactly</em> <m>10</m> m) is technically not possible (see Sect. <xref ref="sec-quant-data"/>).
       </p>
     </example>
     <p>
@@ -142,16 +123,16 @@
         <li><p>Event <m>B</m> is 'roll a number divisible by <m>3</m>'.</p></li>
       </ul>
       <p>
-        Event <m>A</m> comprises the simple events , and . Event <m>B</m> comprises the simple events and .
+        Event <m>A</m> comprises the simple events <em>roll a ⚁</em>, <em>roll a ⚃</em> and <em>roll a ⚅</em>. Event <m>B</m> comprises the simple events <em>roll a ⚂</em> and <em>roll a ⚅</em>.
       </p>
       <p>
-        Then, the Event '<m>A</m> <alert>and</alert> <m>B</m>' includes all events only occurring in both <m>A</m> and in <m>B</m>; that is, '<m>A</m> <alert>and</alert> <m>B</m>' comprises the single simple event .
+        Then, the Event '<m>A</m> <alert>and</alert> <m>B</m>' includes all events only occurring in both <m>A</m> and in <m>B</m>; that is, '<m>A</m> <alert>and</alert> <m>B</m>' comprises the single simple event <em>roll a ⚅</em>.
       </p>
       <p>
-        Event '<m>A</m> <alert>or</alert> <m>B</m>' include the events in <m>A</m>, the events in <m>B</m>, and those in both; that is, '<m>A</m> <alert>or</alert> <m>B</m>' comprises the four simple events , , and .
+        Event '<m>A</m> <alert>or</alert> <m>B</m>' include the events in <m>A</m>, the events in <m>B</m>, and those in both; that is, '<m>A</m> <alert>or</alert> <m>B</m>' comprises the four simple events <em>roll a ⚁</em>, <em>roll a ⚂</em>, <em>roll a ⚃</em> and <em>roll a ⚅</em>.
       </p>
       <p>
-        The event '<alert>not</alert> <m>A</m>' comprises the three simple events , and .
+        The event '<alert>not</alert> <m>A</m>' comprises the three simple events <em>roll a ⚀</em>, <em>roll a ⚂</em> and <em>roll a ⚄</em>.
       </p>
     </example>
     <p>
@@ -202,16 +183,9 @@
     <title>Classical approach</title>
     <idx><h>Probability</h><h>classical approach</h></idx>
     <p>
-      What is the probability of rolling a
+      What is the probability of rolling a ⚃ on a die? The sample space has six possible outcomes (see Example <xref ref="example-sample-space-die"/>) that are <em>equally likely</em> to occur (i.e., no reason exists to expect one event to occur more often than the others), and the event 'rolling a ⚃' comprises just <em>one</em> of those events. Thus,
     </p>
-    <p>
-      on a die? The sample space has six possible outcomes (see Example <xref ref="example-sample-space-die"/>) that are <em>equally likely</em> to occur (i.e., no reason exists to expect one event to occur more often than the others), and the event 'rolling a
-    </p>
-    <p>
-      comprises just <em>one</em> of those events. Thus,
-    </p>
-    <me>\text{Probability of rolling a $\largedice{4}$}    = \frac{\text{The number of rolls that are a $\largedice{4}$}}{\text{The number of possible events in the sample space}}    = \frac{1}{6}.</me>
-    <me>\text{Probability of rolling a 4}    = \frac{\text{The number of rolls that are a 4}}{\text{The number of possible events in the sample space}}    = \frac{1}{6}.</me>
+    <me>\text{Probability of rolling a 4} = \frac{\text{The number of rolls that are a 4}}{\text{The number of possible events in the sample space}} = \frac{1}{6}.</me>
     <p>
       This approach to computing probabilities is called the <em>classical</em> approach to probability, and is only appropriate when all events in the sample space are <em>equally likely</em>.
     </p>
@@ -228,25 +202,10 @@
     </p>
     <me>\text{Prob. of an event}     =     \frac{\text{Number of simple events in the event of interest}}{\text{Total number of possible equally-likely events}}.</me>
     <p>
-      We can say that 'the probability of rolling a
+      We can say that 'the probability of rolling a ⚃ is <m>1/6</m>', or 'the probability of rolling a ⚃ is <m>0.1667</m>'. The answer can also be expressed as a <em>percentage</em>: 'the probability of rolling a ⚃ is <m>16.67</m>%'.<idx>Percentages</idx> The answer could also be interpreted as 'the <em>expected</em> proportion of rolls that are a ⚃ is <m>0.1667</m>'.<idx>Proportions</idx> That is, about <m>16.67</m>% of a very large number of future rolls are likely to be a ⚃.
     </p>
     <p>
-      is <m>1/6</m>', or 'the probability of rolling a
-    </p>
-    <p>
-      is <m>0.1667</m>'. The answer can also be expressed as a <em>percentage</em>: 'the probability of rolling a
-    </p>
-    <p>
-      is <m>16.67</m>%'.<idx>Percentages</idx> The answer could also be interpreted as 'the <em>expected</em> proportion of rolls that are a
-    </p>
-    <p>
-      is <m>0.1667</m>'.<idx>Proportions</idx> That is, about <m>16.67</m>% of a very large number of future rolls are likely to be a .
-    </p>
-    <p>
-      The probability of rolling a
-    </p>
-    <p>
-      is <m>0.1667</m>, but any single roll of the die either <em>will</em> or <em>will not</em> produce a , and we don't know which will occur.
+      The probability of rolling a ⚃ is <m>0.1667</m>, but any single roll of the die either <em>will</em> or <em>will not</em> produce a ⚃, and we don't know which will occur.
     </p>
     <example xml:id="example-simple-prob">
       <title>Probabilities for compound events</title>
@@ -260,9 +219,9 @@
         Consider rolling a standard six-sided die.
       </p>
       <ul>
-        <li><p>The <em>probability</em> of rolling an even number is <m>3 6 = 0.5</m>.</p></li>
-        <li><p>The <em>percentage</em> of rolls expected to be even is <m>3 6 100 = 50</m>%.</p></li>
-        <li><p>The <em>odds</em> of rolling an even number is <m>3 3 = 1</m>.</p></li>
+        <li><p>The <em>probability</em> of rolling an even number is <m>3 \div 6 = 0.5</m>.</p></li>
+        <li><p>The <em>percentage</em> of rolls expected to be even is <m>3 \div 6 \times 100 = 50</m>%.</p></li>
+        <li><p>The <em>odds</em> of rolling an even number is <m>3 \div 3 = 1</m>.</p></li>
       </ul>
     </example>
     <example xml:id="example-events-and-prob">
@@ -271,13 +230,10 @@
         Consider the probabilities of the events in Example <xref ref="example-events"/>.
       </p>
       <ul>
-        <li><p>The probability of rolling a is <m>1/6</m> (or about <m>0.1667</m>).</p></li>
+        <li><p>The probability of rolling a ⚃ is <m>1/6</m> (or about <m>0.1667</m>).</p></li>
         <li><p>The probability of rolling an odd number is <m>3/6</m>, or <m>1/2</m> (or <m>0.5</m>).</p></li>
-        <li><p>The probability of rolling a number larger than</p></li>
+        <li><p>The probability of rolling a number larger than ⚁ is <m>4/6</m>, or <m>2/3</m> (or about <m>0.6667</m>).</p></li>
       </ul>
-      <p>
-        is <m>4/6</m>, or <m>2/3</m> (or about <m>0.6667</m>).
-      </p>
     </example>
   </subsection>
 
@@ -291,10 +247,7 @@
       What is the probability that a newborn baby will be male? The sample space could be listed as: <em>male</em> and <em>non-male</em>. Since the sample space has two elements, the classical approach suggests the probability is <m>1\div2 = 0.5</m>. However, this approach is appropriate <em>only if</em> males and non-males are <em>equally likely</em> to be born. But are they?
     </p>
     <p>
-      In 2021 in
-    </p>
-    <p>
-      <m>289 603</m> live births occurred, with <m>148 636</m> male births, <m>140 944</m> female births, and <m>23</m> others (or 'not stated'). The <em>proportion</em> of males born in the 2021 sample is <m>148 636 289 603 = 0.513</m>, or about <m>51.3</m>%. An <em>estimate</em> of the probability that the next birth will be male is about <m>0.513</m> (or <m>51.3</m>%), based on using past data.
+      In 2021 in <url href="https://www.aihw.gov.au/reports/mothers-babies/australias-mothers-babies/data">Australia</url>, <m>289\,603</m> live births occurred, with <m>148\,636</m> male births, <m>140\,944</m> female births, and <m>23</m> others (or 'not stated'). The <em>proportion</em> of males born in the 2021 sample is <m>148\,636 \div 289\,603 = 0.513</m>, or about <m>51.3</m>%. An <em>estimate</em> of the probability that the next birth will be male is about <m>0.513</m> (or <m>51.3</m>%), based on using past data.
     </p>
     <p>
       This is the <em>relative frequency</em> approach to calculating probabilities: based on past data. The relative frequency method can only ever produce an <em>approximate</em> probability, as it is based on a limited number of past observations. An actual probability would require an infinite number of observations.
@@ -310,7 +263,7 @@
     <example xml:id="example-rf-probability">
       <title>Relative frequency probability</title>
       <p>
-        Based on the earlier information, the <em>odds</em> that a new baby will be a boy is <em>approximately</em> <m>0.513 (1 - 0.513) = 1.053</m><idx>Odds</idx> (i.e., <m>105.3</m> boys per <m>100</m> girls). According to the
+        Based on the earlier information, the <em>odds</em> that a new baby will be a boy is <em>approximately</em> <m>0.513 \div (1 - 0.513) = 1.053</m><idx>Odds</idx> (i.e., <m>105.3</m> boys per <m>100</m> girls). According to the <url href="http://www.abs.gov.au/ausstats/abs@.nsf/0/B8865D71D84F5210CA2579330016754C?opendocument"><em>Australian Bureau of Statistics</em> (ABS)</url>:
       </p>
       <blockquote>
         <p>The sex ratio for all births registered in Australia generally fluctuates around <m>105.5</m> male births per <m>100</m> female births.</p>
@@ -336,40 +289,19 @@
         <em>Before</em> a fair coin is tossed:<idx>Probability</idx><idx>Proportions</idx><idx>Odds</idx>
       </p>
       <ul>
-        <li><p>the <em>probability</em> of throwing a</p></li>
+        <li><p>the <em>probability</em> of throwing a <alert>H</alert> is <m>1/2 = 0.5</m> (or <m>50</m>%).</p></li>
+        <li><p>the <em>expected proportion</em> of <alert>H</alert> for many coin tosses is <m>0.5</m> (or <m>50</m>%).</p></li>
+        <li><p>the <em>odds</em> of throwing a <alert>H</alert> is <m>1/1 = 1</m>.</p></li>
       </ul>
-      <p>
-        is <m>1/2 = 0.5</m> (or <m>50</m>%).
-      </p>
-      <ul>
-        <li><p>the <em>expected proportion</em> of</p></li>
-      </ul>
-      <p>
-        for many coin tosses is <m>0.5</m> (or <m>50</m>%).
-      </p>
-      <ul>
-        <li><p>the <em>odds</em> of throwing a</p></li>
-      </ul>
-      <p>
-        is <m>1/1 = 1</m>.
-      </p>
       <p>
         If we have <em>already</em> tossed a coin <m>100</m> times and found <m>47</m> heads:
       </p>
       <ul>
-        <li><p>the <em>proportion</em> of</p></li>
+        <li><p>the <em>proportion</em> of <alert>H</alert> in the sample is <m>47/100 = 0.47</m> (or <m>47</m>%).</p></li>
+        <li><p>the odds that we <em>threw</em> a <alert>H</alert> in the sample is <m>47/53 = 0.887</m>.</p></li>
       </ul>
       <p>
-        in the sample is <m>47/100 = 0.47</m> (or <m>47</m>%).
-      </p>
-      <ul>
-        <li><p>the odds that we <em>threw</em> a</p></li>
-      </ul>
-      <p>
-        in the sample is <m>47/53 = 0.887</m>.
-      </p>
-      <p>
-        The 'probability that we just threw a ' makes no sense, because the result is known.
+        The 'probability that we just threw a <alert>H</alert>' makes no sense, because the result is known.
       </p>
     </example>
   </subsection>
@@ -400,10 +332,7 @@
     <example xml:id="example-subjective-prob-el-nino">
       <title>Subjective probability</title>
       <p>
-        During El events, eastern Australia typically experiences drier-than-average winters and springs. The
-      </p>
-      <p>
-        reported (on 23 May 2023) that the Australian <em>Bureau of Meteorology</em> predicted a <m>50</m>% probability of an El event in 2023, while the American <em>National Oceanic and Atmospheric Administration</em> predicted a <m>90</m>% chance of an El event in 2023.
+        During El Niño events, eastern Australia typically experiences drier-than-average winters and springs. The <url href="https://www.abc.net.au/news/2023-05-23/noaa-bom-el-nino-chances-explored/102341466"><em>Australian Broadcasting Corporation</em>'s news website</url> reported (on 23 May 2023) that the Australian <em>Bureau of Meteorology</em> predicted a <m>50</m>% probability of an El Niño event in 2023, while the American <em>National Oceanic and Atmospheric Administration</em> predicted a <m>90</m>% chance of an El Niño event in 2023.
       </p>
       <p>
         Despite this, '[both] agencies are looking at the same part of the Pacific Ocean' to make their predictions. However, 'the US and Australia base their probability on different criteria'. The probabilities are subjective probabilities, based on complex mathematical models.
@@ -416,7 +345,7 @@
     <title>Independence of events</title>
     <idx>Independence</idx>
     <p>
-      One important concept in probability is <em>independence</em>. Two events are <em>independent</em> if the probability of one event happening is the same, whether or not the other event has happened. For example, the probability of getting a on a coin toss is the same whether you are sitting or not sitting: the result of the coin toss is <em>independent</em> of whether you are seated.
+      One important concept in probability is <em>independence</em>. Two events are <em>independent</em> if the probability of one event happening is the same, whether or not the other event has happened. For example, the probability of getting a <alert>H</alert> on a coin toss is the same whether you are sitting or not sitting: the result of the coin toss is <em>independent</em> of whether you are seated.
     </p>
     <image source="Pics/iconmonstr-arrow-44-240.png" width="25%">
       <description><p>Image.</p></description>
@@ -443,7 +372,7 @@
     </example>
     <note>
       <p>
-        A 'standard' pack of cards has <m>52</m> cards, organised into four <em>suits</em>: spades <m></m>, clubs <m></m> (both black), hearts <m></m> and diamonds <m></m> (both red).<idx>Cards: standard pack</idx> Each <em>suit</em> has <m>13</m> <em>denominations</em>: <m>2</m>, <m>3</m>, <m>4</m>, <m>5</m>, <m>6</m>, <m>7</m>, <m>8</m>, <m>9</m>, <m>10</m>, Jack (J), Queen (Q), King (K), Ace (A). The Ace, King, Queen and Jack cards are called <em>picture cards</em>. (Most packs also contain two jokers, which are not considered part of a <em>standard</em> pack.)
+        A 'standard' pack of cards has <m>52</m> cards, organised into four <em>suits</em>: spades <m>\spadesuit</m>, clubs <m>\clubsuit</m> (both black), hearts <m>\heartsuit</m> and diamonds <m>\diamondsuit</m> (both red).<idx>Cards: standard pack</idx> Each <em>suit</em> has <m>13</m> <em>denominations</em>: <m>2</m>, <m>3</m>, <m>4</m>, <m>5</m>, <m>6</m>, <m>7</m>, <m>8</m>, <m>9</m>, <m>10</m>, Jack (J), Queen (Q), King (K), Ace (A). The Ace, King, Queen and Jack cards are called <em>picture cards</em>. (Most packs also contain two jokers, which are not considered part of a <em>standard</em> pack.)
       </p>
     </note>
     <warning>
@@ -451,30 +380,24 @@
         Random samples produce <em>independent</em> units of analysis.<idx><h>Sampling</h><h>random</h></idx><idx>Units of analysis</idx>
       </p>
     </warning>
+    <p>
+      <url href="https://learningapps.org/watch?v=pbd3ekn3k22">LearningApps: Independence activity</url>
+    </p>
   </section>
 
   <section xml:id="sec-conditional-probability">
     <title>Conditional probability</title>
     <idx><h>Probability</h><h>conditional</h></idx>
     <p>
-      <em>Conditional probability</em> refers to adjusting probabilities when extra information is known. For example, the probability of rolling a
-    </p>
-    <p>
-      is <m>1/6</m> using the classical approach, as the sample space has six equally-likely elements. However, if we are told that an <em>odd number</em> is rolled, only three elements in the sample space need now be considered (rolls of , ,
-    </p>
-    <p>
-      rather than all six elements; other outcomes are impossible). So, the probability of rolling a
-    </p>
-    <p>
-      is <m>1/3</m>. We say 'the probability of rolling a , <em>given that the roll is an odd number</em>, is <m>1/3</m>'.
+      <em>Conditional probability</em> refers to adjusting probabilities when extra information is known. For example, the probability of rolling a ⚀ is <m>1/6</m> using the classical approach, as the sample space has six equally-likely elements. However, if we are told that an <em>odd number</em> is rolled, only three elements in the sample space need now be considered (rolls of ⚀, ⚂, ⚄ rather than all six elements; other outcomes are impossible). So, the probability of rolling a ⚀ is <m>1/3</m>. We say 'the probability of rolling a ⚀, <em>given that the roll is an odd number</em>, is <m>1/3</m>'.
     </p>
     <example xml:id="example-conditional-cards">
       <title>Conditional probability</title>
       <p>
-        Suppose someone draws a card from a pack of cards. The probability that the card is a <m></m> is <m>13/52 = 1/4</m>, or <m>25</m>%.
+        Suppose someone draws a card from a pack of cards. The probability that the card is a <m>\clubsuit</m> is <m>13/52 = 1/4</m>, or <m>25</m>%.
       </p>
       <p>
-        However, if you are told that the card is a <em>black</em> card, then the card must be either a <m></m> or <m></m>. The probability that the card is a <m></m>, <em>given</em> that the card is black, is <m>13/26 = 1/2</m>, or <m>50</m>%.
+        However, if you are told that the card is a <em>black</em> card, then the card must be either a <m>\clubsuit</m> or <m>\spadesuit</m>. The probability that the card is a <m>\clubsuit</m>, <em>given</em> that the card is black, is <m>13/26 = 1/2</m>, or <m>50</m>%.
       </p>
     </example>
     <example xml:id="example-sunglasses">
@@ -490,8 +413,8 @@
         Conditional probabilities can also be computed:
       </p>
       <ul>
-        <li><p><em>if the observed person is female</em>, the probability that she is wearing sunglasses is <m>126 (240 + 126) = 0.3443</m>, or about <m>34.4</m>%.</p></li>
-        <li><p><em>if the observed person is male</em>, the probability that he is wearing sunglasses is <m>123 (263 + 123) = 0.3187</m>, or about <m>31.9</m>%.</p></li>
+        <li><p><em>if the observed person is female</em>, the probability that she is wearing sunglasses is <m>126 \div (240 + 126) = 0.3443</m>, or about <m>34.4</m>%.</p></li>
+        <li><p><em>if the observed person is male</em>, the probability that he is wearing sunglasses is <m>123 \div (263 + 123) = 0.3187</m>, or about <m>31.9</m>%.</p></li>
       </ul>
       <p>
         These probabilities are close, but not exactly equal.
@@ -500,6 +423,26 @@
         If the two events were <em>independent</em>, then these two conditional probabilities would be the same: the probability of wearing sunglasses would be the same for females and males. In other words, the probability of wearing sunglasses did not depend on whether a female or a male was observed. We might say that wearing sunglasses is close to, but not exactly, independent of the sex of the person, in the <em>sample</em>. We cannot be sure if wearing sunglasses is independent of the sex of the person in the <em>population</em>.
       </p>
     </example>
+    <table xml:id="tab-sunglasses-table-prob">
+      <title>Females and males wearing sunglasses on the Goodwill Bridge, Brisbane</title>
+      <tabular halign="center" top="major" bottom="major">
+        <row header="yes" bottom="minor">
+          <cell></cell>
+          <cell><alert>Female</alert></cell>
+          <cell><alert>Male</alert></cell>
+        </row>
+        <row>
+          <cell>Not wearing sunglasses</cell>
+          <cell>240</cell>
+          <cell>263</cell>
+        </row>
+        <row>
+          <cell>Wearing sunglasses</cell>
+          <cell>126</cell>
+          <cell>123</cell>
+        </row>
+      </tabular>
+    </table>
   </section>
 
   <section xml:id="sec-tools-probability-summary">
@@ -519,15 +462,49 @@
 
   <reading-questions xml:id="sec-tools-probability-quick-review">
     <title>Quick review questions</title>
+    <introduction>
+      <p>
+        Suppose <em>Event <m>A</m></em> is defined as 'Rolling a ⚀ or a ⚁ on a fair die'. Also, suppose <em>Event <m>B</m></em> is defined as 'Rolling an even number'. Are the following statements <em>true</em> or <em>false</em>?
+      </p>
+    </introduction>
+    <exercise label="rq-ch18-1">
+      <statement><p>The best <em>approach</em> to computing the probability of Event <m>A</m> occurring is the <em>classical</em> approach.</p></statement>
+      <answer><p>True.</p></answer>
+    </exercise>
+    <exercise label="rq-ch18-2">
+      <statement><p>The <em>probability</em> of Event <m>A</m> occurring is <m>2/6</m>.</p></statement>
+      <answer><p>True.</p></answer>
+    </exercise>
+    <exercise label="rq-ch18-3">
+      <statement><p>Rolling a ⚀ on the first roll is <em>independent</em> of rolling a ⚀ on a second roll.</p></statement>
+      <answer><p>True.</p></answer>
+    </exercise>
+    <exercise label="rq-ch18-4">
+      <statement><p>The <em>probability</em> of '<m>A</m> <alert>and</alert> <m>B</m>' occurring is <m>1/6</m>.</p></statement>
+      <answer><p>True.</p></answer>
+    </exercise>
+    <exercise label="rq-ch18-5">
+      <statement><p>The <em>probability</em> of '<m>A</m> <alert>or</alert> <m>B</m>' occurring is <m>4/6</m>.</p></statement>
+      <answer><p>True.</p></answer>
+    </exercise>
+    <exercise label="rq-ch18-6">
+      <statement><p>The <em>probability</em> of '<alert>not</alert> <m>B</m>' occurring is <m>3/6</m>.</p></statement>
+      <answer><p>True.</p></answer>
+    </exercise>
+    <exercise label="rq-ch18-7">
+      <statement><p>The <em>odds</em> of '<alert>not</alert> <m>B</m>' occurring is <m>3/6</m>.</p></statement>
+      <answer><p>False: odds are <m>1</m>.</p></answer>
+    </exercise>
+    <exercise label="rq-ch18-8">
+      <statement><p>The probability of Event <m>B</m> occurring, <em>if</em> Event <m>A</m> has already occurred, is <m>1/2</m>.</p></statement>
+      <answer><p>True.</p></answer>
+    </exercise>
   </reading-questions>
 
   <exercises xml:id="sec-probability-exercises">
     <introduction>
       <p>Answers to odd-numbered exercises are given at the end of the book.</p>
     </introduction>
-    <p>
-      [Answers to odd-numbered exercises] are given at the end of the book.
-    </p>
     <exercise xml:id="exercise-probability-method">
       <p>
         Which <em>approach</em> is best used to estimate a probability in these situations?
@@ -543,12 +520,12 @@
       </p>
       <ol>
         <li><p>The probability that a <alert>King</alert> will be chosen from a pack of cards.</p></li>
-        <li><p>The probability that Paris receives more than <m>50</m> of rain next May.</p></li>
+        <li><p>The probability that Paris receives more than <m>50</m> mm of rain next May.</p></li>
       </ol>
     </exercise>
     <exercise xml:id="exercise-probability-and-or-not">
       <p>
-        Consider drawing cards from a fair pack. <em>Event A</em> is 'drawing a picture card', <em>Event B</em> is 'drawing a <alert>King</alert> or <alert>Ace</alert>' and <em>Event C</em> is 'drawing a <m></m>'.
+        Consider drawing cards from a fair pack. <em>Event A</em> is 'drawing a picture card', <em>Event B</em> is 'drawing a <alert>King</alert> or <alert>Ace</alert>' and <em>Event C</em> is 'drawing a <m>\spadesuit</m>'.
       </p>
       <ol>
         <li><p>What events are in '<m>A</m> <alert>and</alert> <m>B</m>'?</p></li>
@@ -565,7 +542,7 @@
     </exercise>
     <exercise xml:id="exercise-probability-and-or-not2">
       <p>
-        Consider rolling a fair die. <em>Event A</em> is 'rolling an <em>even</em> number', <em>Event B</em> is 'rolling an <em>odd</em> number' and <em>Event C</em> is 'rolling a .
+        Consider rolling a fair die. <em>Event A</em> is 'rolling an <em>even</em> number', <em>Event B</em> is 'rolling an <em>odd</em> number' and <em>Event C</em> is 'rolling a ⚁'.
       </p>
       <ol>
         <li><p>What events are in '<m>A</m> <alert>and</alert> <m>B</m>'?</p></li>
@@ -582,7 +559,7 @@
     </exercise>
     <exercise xml:id="exercise-probability-three-events">
       <p>
-        Consider these three events about tossing two fair coins, say Coin A and Coin B: <em>Event 1</em> is 'toss a on Coin A'; <em>Event 2</em> is 'toss a on Coin A'; and <em>Event 3</em> is 'toss a on Coin B'.
+        Consider these three events about tossing two fair coins, say Coin A and Coin B: <em>Event 1</em> is 'toss a <alert>H</alert> on Coin A'; <em>Event 2</em> is 'toss a <alert>T</alert> on Coin A'; and <em>Event 3</em> is 'toss a <alert>H</alert> on Coin B'.
       </p>
       <ol>
         <li><p>Are <em>Event 1</em> and <em>Event 2</em> independent events?</p></li>
@@ -594,7 +571,7 @@
     </exercise>
     <exercise xml:id="exercise-probability-three-events2">
       <p>
-        Consider these three events about drawing one card from a fair pack: <em>Event 1</em> is 'draw a <alert>Jack</alert>'; <em>Event 2</em> is 'draw a <m></m>'; and <em>Event 3</em> is 'draw a <m></m>'.
+        Consider these three events about drawing one card from a fair pack: <em>Event 1</em> is 'draw a <alert>Jack</alert>'; <em>Event 2</em> is 'draw a <m>\heartsuit</m>'; and <em>Event 3</em> is 'draw a <m>\clubsuit</m>'.
       </p>
       <ol>
         <li><p>Compute the probability of <em>Event 1</em>.</p></li>
@@ -612,26 +589,13 @@
         Suppose I roll a standard six-sided die.
       </p>
       <ol>
-        <li><p>What is the <em>probability</em> that I will roll a number larger than</p></li>
-      </ol>
-      <p>
-        ?
-      </p>
-      <ol>
-        <li><p>What are the <em>odds</em> of rolling a number smaller than</p></li>
-      </ol>
-      <p>
-        ?
-      </p>
-      <ol>
+        <li><p>What is the <em>probability</em> that I will roll a number larger than ⚁?</p></li>
+        <li><p>What are the <em>odds</em> of rolling a number smaller than ⚅?</p></li>
         <li><p>Suppose I toss a coin after rolling the die. Is the result from the coin toss <em>independent</em> of what I rolled on the die?</p></li>
         <li><p>What is the probability that I roll a number divisible by <m>2</m> on the die?</p></li>
         <li><p>What is the probability that I roll a number divisible by <m>2</m> <alert>and</alert> divisible by <m>3</m> on the die?</p></li>
-        <li><p>What is the probability of rolling a</p></li>
+        <li><p>What is the probability of rolling a ⚁, <em>given</em> that the number is smaller than ⚃?</p></li>
       </ol>
-      <p>
-        , <em>given</em> that the number is smaller than ?
-      </p>
     </exercise>
     <exercise xml:id="exercise-probability-cards">
       <p>
@@ -643,12 +607,7 @@
         <li><p>What is the <em>probability</em> that you will draw a picture card (<alert>Ace</alert>, <alert>King</alert>, <alert>Queen</alert> or <alert>Jack</alert>)?</p></li>
         <li><p>What are the <em>odds</em> that you will draw a picture card (<alert>Ace</alert>, <alert>King</alert>, <alert>Queen</alert> or <alert>Jack</alert>)?</p></li>
         <li><p>Suppose I draw two cards from the pack. Are the events 'Draw a <alert>King</alert> first' and 'Draw a <alert>Queen</alert> second' independent events?</p></li>
-        <li><p>Suppose I draw one card from the pack (drawing the second without replacing the first), then roll a six-sided die. Are the events 'Draw a <alert>Jack</alert> from the pack of cards' and 'Roll a</p></li>
-      </ol>
-      <p>
-        on the die' independent events? Explain.
-      </p>
-      <ol>
+        <li><p>Suppose I draw one card from the pack (drawing the second without replacing the first), then roll a six-sided die. Are the events 'Draw a <alert>Jack</alert> from the pack of cards' and 'Roll a ⚄ on the die' independent events? Explain.</p></li>
         <li><p>If I draw a picture card, what is the probability the card is a <alert>King</alert>?</p></li>
       </ol>
     </exercise>
@@ -665,23 +624,18 @@
     </exercise>
     <exercise xml:id="exercise-sample-space-infinite-coins">
       <p>
-        Consider the random process ‘tossing a coin’. Event <m>H</m> is of interest: 'the number of tosses until the first is thrown’.
+        Consider the random process 'tossing a coin'. Event <m>H</m> is of interest: 'the number of tosses until the first <alert>H</alert> is thrown'.
       </p>
       <ol>
         <li><p>What is the sample space?</p></li>
         <li><p>Find the probability that <m>H</m> is one.</p></li>
-      </ol>
-      <p>
-        \
-      </p>
-      <ol>
         <li><p>Find the probability that <m>H</m> is two.</p></li>
         <li><p>Find the probability that <m>H</m> is one <alert>or</alert> two.</p></li>
       </ol>
     </exercise>
     <exercise xml:id="exercise-first-nation-students">
       <p>
-        <xref ref="mypaper-Dunn-GLM"/>-IEE tabulated information about Queensland school children (Table <xref ref="tab-ed-table"/>).
+        <xref ref="mypaper-Dunn-GLM-IEE"/> tabulated information about Queensland school children (Table <xref ref="tab-ed-table"/>).
       </p>
       <ol>
         <li><p>What is the probability that a randomly chosen student is a First Nations student?</p></li>
@@ -725,12 +679,12 @@
         Both are important for understanding how well a test works in practice. Ideally, a test would have high sensitivity and high specificity.
       </p>
       <p>
-        A certain test has a <em>sensitivity</em> of <m>0.99</m> and a <em>specificity</em> of <m>0.98</m>. Consider a group of <m>1 000</m> people, <m>100</m> of whom (unknowingly) have the disease and <m>900</m> who (unknowingly) do not have the disease. All the people are given the test.
+        A certain test has a <em>sensitivity</em> of <m>0.99</m> and a <em>specificity</em> of <m>0.98</m>. Consider a group of <m>1\,000</m> people, <m>100</m> of whom (unknowingly) have the disease and <m>900</m> who (unknowingly) do not have the disease. All the people are given the test.
       </p>
       <ol>
         <li><p>Suppose the <m>100</m> people who <em>do</em> have a disease are tested. How many would be expected to return a positive test result?</p></li>
         <li><p>Suppose the <m>900</m> people who <em>do not</em> have a disease are tested. How many would be expected to return a positive test result?</p></li>
-        <li><p>In total, how many positive tests would be expected from the <m>1 000</m> people?</p></li>
+        <li><p>In total, how many positive tests would be expected from the <m>1\,000</m> people?</p></li>
         <li><p>Consider those people who return a positive test result. What is the probability that one of these people actually has the disease?</p></li>
       </ol>
     </exercise>
@@ -744,7 +698,7 @@
     </exercise>
     <exercise xml:id="exercise-andrews-quote">
       <p>
-        On 13 October, 1997, the American television programme <em>Nightline</em> interviewed Dr Richard Andrews, director of California's <em>Office of Emergency Services</em>, to discussed natural disasters being predicted. In the interview,
+        On 13 October, 1997, the American television programme <em>Nightline</em> interviewed Dr Richard Andrews, director of California's <em>Office of Emergency Services</em>, to discussed natural disasters being predicted. In the interview, <url href="https://chance.dartmouth.edu/chance_news/recent_news/chance_news_6.12part1.html#Everyprobability">Dr Andrews said:</url>
       </p>
       <blockquote>
         <p>I listen to earth scientists talk about earthquake probabilities a lot and in my mind every probability is <m>50</m><ndash/><m>50</m>: either it will happen or it won't happen.</p>
@@ -753,5 +707,70 @@
         Explain why Dr Andrews is incorrect when he says that 'every probability is <m>50</m><ndash/><m>50</m>'. Give an example to show why he must be incorrect.
       </p>
     </exercise>
+    <table xml:id="tab-ed-table">
+      <title>The number of First Nations and non-First Nations students in Queensland schools in 2019</title>
+      <tabular halign="center" top="major" bottom="major">
+        <row header="yes" bottom="minor">
+          <cell></cell>
+          <cell><alert>Number of First Nations students</alert></cell>
+          <cell><alert>Number of non-First Nations students</alert></cell>
+        </row>
+        <row>
+          <cell colspan="3"><em>Government schools</em></cell>
+        </row>
+        <row>
+          <cell>Females</cell>
+          <cell>2 540</cell>
+          <cell>21 219</cell>
+        </row>
+        <row bottom="minor">
+          <cell>Males</cell>
+          <cell>2 734</cell>
+          <cell>22 574</cell>
+        </row>
+        <row>
+          <cell colspan="3"><em>Non-government schools</em></cell>
+        </row>
+        <row>
+          <cell>Females</cell>
+          <cell>391</cell>
+          <cell>9 496</cell>
+        </row>
+        <row>
+          <cell>Males</cell>
+          <cell>362</cell>
+          <cell>9 963</cell>
+        </row>
+      </tabular>
+    </table>
+    <table xml:id="tab-skip-breakfast2">
+      <title>The number of Iranian children aged <m>6</m> to <m>18</m> who skip and do not skip breakfast</title>
+      <tabular halign="center" top="major" bottom="major">
+        <row header="yes" bottom="minor">
+          <cell></cell>
+          <cell><alert>Skips breakfast</alert></cell>
+          <cell><alert>Doesn't skip breakfast</alert></cell>
+          <cell><alert>Total</alert></cell>
+        </row>
+        <row>
+          <cell>Females</cell>
+          <cell>2 383</cell>
+          <cell>4 257</cell>
+          <cell>6 640</cell>
+        </row>
+        <row bottom="minor">
+          <cell>Males</cell>
+          <cell>1 944</cell>
+          <cell>4 902</cell>
+          <cell>6 846</cell>
+        </row>
+        <row>
+          <cell><alert>Total</alert></cell>
+          <cell>4 327</cell>
+          <cell>9 159</cell>
+          <cell>13 486</cell>
+        </row>
+      </tabular>
+    </table>
   </exercises>
 </chapter>
