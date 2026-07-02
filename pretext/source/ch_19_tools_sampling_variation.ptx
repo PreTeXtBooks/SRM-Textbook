@@ -63,10 +63,7 @@
       Sample proportions, like all statistics, vary from sample to sample; that is, <em>sampling variation</em> exists, so sample proportions have a <em>sampling distribution</em>.
     </p>
     <p>
-      Consider a European roulette wheel
-    </p>
-    <p>
-      a ball and wheel are spun, and the ball can land on any number on the wheel from <m>0</m> to <m>36</m> (inclusive). Using the classical approach to probability, the probability of the ball landing on an <em>odd</em> number (an '<em>odd-spin</em>') is <m>p = 18/37 = 0.486</m>. This is the <em>population proportion</em> (the parameter).
+      Consider a European roulette wheel: a ball and wheel are spun, and the ball can land on any number on the wheel from <m>0</m> to <m>36</m> (inclusive). Using the classical approach to probability, the probability of the ball landing on an <em>odd</em> number (an '<em>odd-spin</em>') is <m>p = 18/37 = 0.486</m>. This is the <em>population proportion</em> (the parameter).
     </p>
     <p>
       If the wheel is spun (say) <m>15</m> times, the <em>sample</em> proportion of odd-spins, denoted <m>\hat{p}</m>, will vary. But, <em>how</em> does <m>\hat{p}</m> vary from one set of <m>15</m> spins to another set of <m>15</m> spins? Can we describe <em>how</em> the values of <m>\hat{p}</m> vary across the possible samples?
@@ -83,6 +80,10 @@
     <p>
       The sampling distributions can be described by a mean (called the <em>sampling mean</em>) and a standard deviation (called the <em>standard error</em>).
     </p>
+    <figure xml:id="fig-roulette-wheel-hist">
+      <caption>Sampling distributions for the proportion of roulette wheel spins that show an odd number, for sets of rolls of varying sizes.</caption>
+      <image source="fig-roulette-wheel-hist.png" width="100%"/>
+    </figure>
     <example xml:id="example-reasonable-valuesp">
       <title>Reasonable values for the sample proportion</title>
       <p>
@@ -125,6 +126,10 @@
     <p>
       The sampling distributions can be described by a mean (called the <em>sampling mean</em>) and a standard deviation (called the <em>standard error</em>).
     </p>
+    <figure xml:id="fig-roulette-wheel-histx">
+      <caption>Sampling distributions for the mean of the numbers after a roulette wheel is spun a certain number of times.</caption>
+      <image source="fig-roulette-wheel-histx.png" width="100%"/>
+    </figure>
     <warning>
       <p>
         The values of the sample mean vary from sample to sample. The distribution of the possible values of the <em>sample</em> mean is called a <em>sampling distribution</em>.
@@ -174,6 +179,10 @@
         </p>
       </statement>
     </definition>
+    <figure xml:id="fig-statistic-varies-across-samples">
+      <caption>Describing how the value of the sample statistic varies across all possible samples, when the sampling distribution has a normal distribution.</caption>
+      <image source="fig-statistic-varies-across-samples.png" width="70%"/>
+    </figure>
     <p>
       Figures <xref ref="fig-roulette-wheel-hist"/> and <xref ref="fig-roulette-wheel-histx"/> show that the variation in the values of the statistic get smaller for larger sample sizes. That is, the standard error gets <em>smaller</em> as the sample sizes get <em>larger</em>: sample statistics show less variation for larger <m>n</m>. This makes sense: <em>larger</em> samples generally produce more precise estimates.<idx>Precision</idx> After all, that's the advantage of larger samples: all else being equal, larger samples produce more precise estimates (Sect. <xref ref="sec-precision-accuracy"/>).
     </p>
@@ -199,10 +208,7 @@
   <section xml:id="sec-standard-deviation-and-standard-error-ch19">
     <title>Standard deviation and standard error</title>
     <p>
-      Even
-    </p>
-    <p>
-      <em>standard deviation</em> and <em>standard error</em> <xref ref="ko2014inappropriate"/>. Understanding the difference is important.
+      Even experienced researchers confuse the meaning and the usage of the terms <em>standard deviation</em> and <em>standard error</em> <xref ref="ko2014inappropriate"/>. Understanding the difference is important.
     </p>
     <p>
       The <em>standard deviation</em>, in general, quantifies the amount of variation in any quantity that varies. The <em>standard error</em> only ever refers to the standard deviation that describes a sampling distribution.
@@ -226,6 +232,7 @@
     <p>
       Parameters do not vary from sample to sample, so <em>do not</em> have a sampling distribution (or a standard error).
     </p>
+    <p><url href="https://learningapps.org/watch?v=pk8ucviua22" visual="learningapps.org/watch?v=pk8ucviua22">Interactive activity: standard deviation and standard error.</url></p>
   </section>
 
   <section xml:id="sec-sampling-variation-summary">
@@ -237,22 +244,64 @@
 
   <reading-questions xml:id="sec-sampling-variation-quick-review">
     <title>Quick review questions</title>
+    <p>Are the following statements <em>true</em> or <em>false</em>?</p>
+    <exercise xml:id="rq-sampling-variation-1">
+      <statement><p>The phrase 'the standard error of the population proportion' is illogical.</p></statement>
+      <answer><p>True.</p></answer>
+    </exercise>
+    <exercise xml:id="rq-sampling-variation-2">
+      <statement><p>The sample size does <em>not</em> have a standard error.</p></statement>
+      <answer><p>True.</p></answer>
+    </exercise>
+    <exercise xml:id="rq-sampling-variation-3">
+      <statement><p>Sampling variation refers to how sample sizes vary.</p></statement>
+      <answer><p>False.</p></answer>
+    </exercise>
+    <exercise xml:id="rq-sampling-variation-4">
+      <statement><p>Sampling distributions describe how parameters vary.</p></statement>
+      <answer><p>False.</p></answer>
+    </exercise>
+    <exercise xml:id="rq-sampling-variation-5">
+      <statement><p>Statistics do not vary from sample to sample.</p></statement>
+      <answer><p>False.</p></answer>
+    </exercise>
+    <exercise xml:id="rq-sampling-variation-6">
+      <statement><p>Populations are numerically summarised using parameters.</p></statement>
+      <answer><p>True.</p></answer>
+    </exercise>
+    <exercise xml:id="rq-sampling-variation-7">
+      <statement><p>The <em>standard deviation</em> is a type of <em>standard error</em> in a specific situation.</p></statement>
+      <answer><p>False.</p></answer>
+    </exercise>
+    <exercise xml:id="rq-sampling-variation-8">
+      <statement><p>Sampling distributions are always <em>normal</em> distributions.</p></statement>
+      <answer><p>False.</p></answer>
+    </exercise>
+    <exercise xml:id="rq-sampling-variation-9">
+      <statement><p>Sampling variation measures the amount of variation in the individuals in the sample.</p></statement>
+      <answer><p>False.</p></answer>
+    </exercise>
+    <exercise xml:id="rq-sampling-variation-10">
+      <statement><p>The standard error measures the size of the error when we use a sample to estimate a population.</p></statement>
+      <answer><p>False.</p></answer>
+    </exercise>
+    <exercise xml:id="rq-sampling-variation-11">
+      <statement><p>In general, a standard deviation measures the amount of variation.</p></statement>
+      <answer><p>True.</p></answer>
+    </exercise>
   </reading-questions>
 
   <exercises xml:id="sec-sampling-variation-exercises">
     <introduction>
       <p>Answers to odd-numbered exercises are given at the end of the book.</p>
     </introduction>
-    <p>
-      [Answers to odd-numbered exercises] are given at the end of the book.
-    </p>
     <exercise xml:id="exercise-std-error-or-std-deviation-a">
       <p>
         In the following scenarios, would a <em>standard deviation</em> or a <em>standard error</em> be the appropriate way to measure the amount of variation? Explain.
       </p>
       <ol>
         <li><p>Researchers are studying the spending habits of customers. They would like to measure the variation in the amount spent by shoppers per transaction at a supermarket.</p></li>
-        <li><p>Researchers are studying the time it takes for inner-city office workers to travel to work each morning. They would like to determine the precision with which their estimate (a mean of <m>47</m>) has been measured.</p></li>
+        <li><p>Researchers are studying the time it takes for inner-city office workers to travel to work each morning. They would like to determine the precision with which their estimate (a mean of <m>47</m> mins) has been measured.</p></li>
       </ol>
     </exercise>
     <exercise xml:id="exercise-std-error-or-std-deviation-b">
