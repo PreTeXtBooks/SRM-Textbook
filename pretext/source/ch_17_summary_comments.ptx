@@ -65,9 +65,10 @@
         The artificial third dimension makes determining the heights of the bars hard. In contrast, a side-by-side bar graph (Fig. <xref ref="fig-bar3d2d"/>, right panel) makes it clear whether each age group has more females or more males.<idx><h>Graphs</h><h>side-by-side bar chart</h></idx>
       </p>
     </example>
-    <p>
-      (ref:NHANES) Two plots of the <span style="font-variant:small-caps;">nhanes</span> participants, divided by age group and sex. Left: a three-dimensional bar chart. Right: a side-by-side bar chart.
-    </p>
+    <figure xml:id="fig-bar3d2d">
+      <caption>Two plots of the <span style="font-variant:small-caps;">nhanes</span> participants, divided by age group and sex. Left: a three-dimensional bar chart. Right: a side-by-side bar chart.</caption>
+      <image source="fig-bar3d2d.png" width="100%"/>
+    </figure>
   </subsection>
 
   <subsection xml:id="sec-overplotting">
@@ -100,12 +101,15 @@
         Consider data recording the body temperature of <m>n = 130</m> people (<xref ref="data-mackowiak-bodytemp"/>, <xref ref="data-Shoemaker1996-Temperature"/>). A histogram of the data (Fig. <xref ref="fig-histos-temp"/>, left panel) clearly shows the distribution of body temperatures.
       </p>
       <p>
-        The vertical axis, displaying the counts, must start at zero since the bar heights visually imply a quantity of interest. However, the horizontal axis starts at <m>35.5</m>^o^C, which does not create any problems as the <em>distances</em> from a temperature of <m>0</m>^o^C do not visually imply any quantity of interest.<idx><h>Graphs</h><h>histogram</h></idx>
+        The vertical axis, displaying the counts, must start at zero since the bar heights visually imply a quantity of interest. However, the horizontal axis starts at <m>35.5^{\circ}\text{C}</m>, which does not create any problems as the <em>distances</em> from a temperature of <m>0^{\circ}\text{C}</m> do not visually imply any quantity of interest.<idx><h>Graphs</h><h>histogram</h></idx>
       </p>
       <p>
-        In contrast, starting the horizontal axis at a temperature of <m>0</m>^o^C (Fig. <xref ref="fig-histos-temp"/>, right panel) makes any details in the histogram difficult to see; the histogram is pointless.
+        In contrast, starting the horizontal axis at a temperature of <m>0^{\circ}\text{C}</m> (Fig. <xref ref="fig-histos-temp"/>, right panel) makes any details in the histogram difficult to see; the histogram is pointless.
       </p>
     </example>
+    <p>
+      <url href="https://learningapps.org/watch?v=pgn3q7ptv22">Interactive: truncated axes</url>
+    </p>
   </subsection>
 
   <subsection xml:id="sec-pie-chart-problems">
@@ -121,6 +125,10 @@
         <xref ref="data-Solomon2002-ginkgo"/> studied the use of ginkgo for memory enhancement. Caregivers blinded<idx>Blinding</idx> to the treatment (ginkgo or placebo)<idx>Placebo</idx> reported the impact on subjects' memory. The bar chart (Fig. <xref ref="fig-pie-small-counts"/>, left panel), for subjects on the placebo, shows that four of the available categories had zero responses, and one had a very small number of responses (two). The pie chart (right) make the small category difficult to see, and the categories with zero counts impossible to see.
       </p>
     </example>
+    <figure xml:id="fig-pie-small-counts">
+      <caption>Data with zeros and small counts are easy to see in a bar chart (left panel) and dot chart, but difficult to see in a pie chart (right panel).</caption>
+      <image source="fig-pie-small-counts.png" width="90%"/>
+    </figure>
   </subsection>
   </section>
 
@@ -158,6 +166,137 @@
       <li><p>units of measurements are given where appropriate (i.e., only for age).</p></li>
       <li><p>numbers in columns are aligned for easier reading and comparing.</p></li>
     </ul>
+    <table xml:id="tab-water-access-summary-comments-table">
+      <title>Numerical summary of the water-access data in <m>85</m> households with children, according to whether children under <m>5</m> years of age had reported diarrhoea in the last two weeks.</title>
+      <tabular halign="center" top="major">
+        <col/><col/><col/><col/><col/><col/><col/>
+        <row header="yes" bottom="minor">
+          <cell></cell>
+          <cell colspan="2">All households</cell>
+          <cell colspan="2">Reported diarrhoea</cell>
+          <cell colspan="2">No reported diarrhoea</cell>
+        </row>
+        <row header="yes" bottom="medium">
+          <cell></cell>
+          <cell><m>n</m></cell>
+          <cell>Summary</cell>
+          <cell><m>n</m></cell>
+          <cell>Summary</cell>
+          <cell><m>n</m></cell>
+          <cell>Summary</cell>
+        </row>
+        <row>
+          <cell><em>Age (in years)<m>^{a}</m></em></cell>
+          <cell>85</cell>
+          <cell>37.0 (28.5)</cell>
+          <cell>26</cell>
+          <cell>46.5 (31.0)</cell>
+          <cell>59</cell>
+          <cell>35.0 (24.0)</cell>
+        </row>
+        <row>
+          <cell><em>Household size<m>^{a}</m></em></cell>
+          <cell>85</cell>
+          <cell>7.0 (6.0)</cell>
+          <cell>26</cell>
+          <cell>8.5 (8.0)</cell>
+          <cell>59</cell>
+          <cell>6.0 (5.0)</cell>
+        </row>
+        <row bottom="minor">
+          <cell><em>Under 5s in household<m>^{a}</m></em></cell>
+          <cell>85</cell>
+          <cell>2.0 (2.0)</cell>
+          <cell>26</cell>
+          <cell>2.0 (2.0)</cell>
+          <cell>59</cell>
+          <cell>2.0 (1.0)</cell>
+        </row>
+        <row header="yes" bottom="minor">
+          <cell>Region<m>^{b}</m></cell>
+          <cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+        </row>
+        <row>
+          <cell><m>\quad</m>Mbeng</cell>
+          <cell>26</cell><cell>30.6%</cell>
+          <cell>12</cell><cell>46.2%</cell>
+          <cell>14</cell><cell>23.7%</cell>
+        </row>
+        <row>
+          <cell><m>\quad</m>Mbih</cell>
+          <cell>28</cell><cell>32.9%</cell>
+          <cell>9</cell><cell>34.6%</cell>
+          <cell>19</cell><cell>32.2%</cell>
+        </row>
+        <row bottom="minor">
+          <cell><m>\quad</m>Ntsingbeu</cell>
+          <cell>31</cell><cell>36.5%</cell>
+          <cell>5</cell><cell>19.2%</cell>
+          <cell>26</cell><cell>44.1%</cell>
+        </row>
+        <row header="yes" bottom="minor">
+          <cell>Water source<m>^{b}</m></cell>
+          <cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+        </row>
+        <row>
+          <cell><m>\quad</m>Bore</cell>
+          <cell>56</cell><cell>65.9%</cell>
+          <cell>16</cell><cell>61.5%</cell>
+          <cell>40</cell><cell>67.8%</cell>
+        </row>
+        <row>
+          <cell><m>\quad</m>River</cell>
+          <cell>13</cell><cell>15.3%</cell>
+          <cell>4</cell><cell>15.4%</cell>
+          <cell>9</cell><cell>15.3%</cell>
+        </row>
+        <row>
+          <cell><m>\quad</m>Tap</cell>
+          <cell>6</cell><cell>7.1%</cell>
+          <cell>1</cell><cell>3.8%</cell>
+          <cell>5</cell><cell>8.5%</cell>
+        </row>
+        <row bottom="minor">
+          <cell><m>\quad</m>Well</cell>
+          <cell>10</cell><cell>11.8%</cell>
+          <cell>5</cell><cell>19.2%</cell>
+          <cell>5</cell><cell>8.5%</cell>
+        </row>
+        <row header="yes" bottom="minor">
+          <cell>Education<m>^{b}</m></cell>
+          <cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+        </row>
+        <row>
+          <cell><m>\quad</m>Primary or less</cell>
+          <cell>38</cell><cell>44.7%</cell>
+          <cell>11</cell><cell>42.3%</cell>
+          <cell>27</cell><cell>45.8%</cell>
+        </row>
+        <row bottom="minor">
+          <cell><m>\quad</m>Secondary or higher</cell>
+          <cell>47</cell><cell>55.3%</cell>
+          <cell>15</cell><cell>57.7%</cell>
+          <cell>32</cell><cell>54.2%</cell>
+        </row>
+        <row header="yes" bottom="minor">
+          <cell>Has livestock<m>^{b}</m></cell>
+          <cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+        </row>
+        <row>
+          <cell><m>\quad</m>No</cell>
+          <cell>20</cell><cell>23.5%</cell>
+          <cell>3</cell><cell>11.5%</cell>
+          <cell>17</cell><cell>28.8%</cell>
+        </row>
+        <row bottom="major">
+          <cell><m>\quad</m>Yes</cell>
+          <cell>65</cell><cell>76.5%</cell>
+          <cell>23</cell><cell>88.5%</cell>
+          <cell>42</cell><cell>71.2%</cell>
+        </row>
+      </tabular>
+      <p><m>^{a}</m>Quantitative variables are summarised using medians and IQR. <m>^{b}</m>Qualitative variables are summarised using counts and percentages.</p>
+    </table>
     <p>
       The table summarises the <em>sample</em>, but RQs are about the <em>population</em>. For example, one relational RQ could be:
     </p>
@@ -171,17 +310,15 @@
       Broadly, two possible reasons could explain why the <em>sample</em> percentages of households reporting diarrhoea in children are different:
     </p>
     <ol>
-      <li><p><em>The <alert>population</alert> percentages are the same</em>.</p></li>
+      <li>
+        <p><em>The <alert>population</alert> percentages are the same</em>.</p>
+        <p>The <em>sample</em> percentages are <em>different</em> simply because of the households selected in this particular sample. Another sample, with different households, might produce different sample percentages. <em>Sampling variation explains the difference in the sample percentages</em>.</p>
+      </li>
+      <li>
+        <p><em>The <alert>population</alert> percentages are different</em>.</p>
+        <p>The difference between the <em>sample</em> percentages reflects this difference between the <em>population</em> percentages.</p>
+      </li>
     </ol>
-    <p>
-      The <em>sample</em> percentages are <em>different</em> simply because of the households selected in this particular sample. Another sample, with different households, might produce different sample percentages. <em>Sampling variation explains the difference in the sample percentages</em>.
-    </p>
-    <ol>
-      <li><p><em>The <alert>population</alert> percentages are different</em>.</p></li>
-    </ol>
-    <p>
-      The difference between the <em>sample</em> percentages reflects this difference between the <em>population</em> percentages.
-    </p>
     <p>
       The difficulty is knowing which of these reasons ('hypotheses')<idx>Hypotheses</idx> is the most likely explanation for the difference between the sample percentages. This question is of prime importance as it answers the RQ. Tools for answering these questions are considered later in this book.
     </p>
@@ -189,27 +326,43 @@
 
   <reading-questions xml:id="sec-summary-comments-quick-review">
     <title>Quick review questions</title>
+    <p>Are the following statements <em>true</em> or <em>false</em>?</p>
+    <exercise label="rq-ch17-1">
+      <statement><p>Graphs usually have their captions <em>under</em> the figure.</p></statement>
+      <answer><p>True.</p></answer>
+    </exercise>
+    <exercise label="rq-ch17-2">
+      <statement><p>Graphs should use as many colours as possible.</p></statement>
+      <answer><p>False. Use different colours only if they have a purpose (and explain that purpose if it is not clear).</p></answer>
+    </exercise>
+    <exercise label="rq-ch17-3">
+      <statement><p>Graphs should usually be carefully created using computer software.</p></statement>
+      <answer><p>True.</p></answer>
+    </exercise>
+    <exercise label="rq-ch17-4">
+      <statement><p>Tables should have plenty of horizontal and vertical lines.</p></statement>
+      <answer><p>False: very few vertical lines (if any); minimum of horizontal lines.</p></answer>
+    </exercise>
+    <exercise label="rq-ch17-5">
+      <statement><p>Tables usually have their captions <em>under</em> the table.</p></statement>
+      <answer><p>False. Table captions go <em>above</em> the table.</p></answer>
+    </exercise>
   </reading-questions>
 
   <exercises xml:id="sec-summarise-comments-exercises">
     <introduction>
       <p>Answers to odd-numbered exercises are given at the end of the book.</p>
     </introduction>
-    <p>
-      [Answers to odd-numbered exercises] are given at the end of the book.
-    </p>
     <exercise xml:id="exercise-graphs123">
       <p>
         What would be the best graph for displaying the data for these situations?
       </p>
       <ol>
         <li><p>Researchers record the pH of water and the temperature of the water, in various creeks in the north island of New Zealand, to explore the relationship between pH and temperature.</p></li>
-        <li><p>Researchers measure the difference between each swimmers' fastest <m>100</m> time and their fastest <m>200</m> time.</p></li>
-      </ol>
-      <p>
-        The researchers were interested in the average time <em>difference</em>.
-      </p>
-      <ol>
+        <li>
+          <p>Researchers measure the difference between each swimmers' fastest <m>100</m> time and their fastest <m>200</m> time.</p>
+          <p>The researchers were interested in the average time <em>difference</em>.</p>
+        </li>
         <li><p>A research study examined the way in which students usually came to university (bus; private car; carpooling; etc.) and their program of study.</p></li>
       </ol>
     </exercise>
@@ -219,17 +372,15 @@
       </p>
       <ol>
         <li><p>Researchers record the number of times a specific recycling bin is used each day at a shopping centre, over many days.</p></li>
-        <li><p>Researchers measure the difference between heart rate before and two hours after drinking a cup of coffee.</p></li>
+        <li>
+          <p>Researchers measure the difference between heart rate before and two hours after drinking a cup of coffee.</p>
+          <p>The researchers were interested in the average increase in heart rate.</p>
+        </li>
+        <li>
+          <p>A research study recorded the diet of students (vegan; vegetarian; other) and the cost of groceries in the previous week, for many students.</p>
+          <p>The researchers were exploring if there was any relationship between diet and cost of groceries.</p>
+        </li>
       </ol>
-      <p>
-        The researchers were interested in the average increase in heart rate.
-      </p>
-      <ol>
-        <li><p>A research study recorded the diet of students (vegan; vegetarian; other) and the cost of groceries in the previous week, for many students.</p></li>
-      </ol>
-      <p>
-        The researchers were exploring if there was any relationship between diet and cost of groceries.
-      </p>
     </exercise>
     <exercise xml:id="exercise-graphs-lime-trees">
       <p>
@@ -279,7 +430,7 @@
     </exercise>
     <exercise xml:id="exercise-graphs-typing">
       <p>
-        [<em>Dataset</em>: <c>Typing</c>] The <c>Typing</c> dataset <xref ref="pinet2022typing"/> contains four variables: typing speed (<c>mTS</c>), typing accuracy (<c>mAcc</c>), age (<c>Age</c>), and sex (<c>Sex</c>) for <m>1 301</m> students. Produce graphs necessary for understanding the data, making sure to explain what they reveal.
+        [<em>Dataset</em>: <c>Typing</c>] The <c>Typing</c> dataset <xref ref="pinet2022typing"/> contains four variables: typing speed (<c>mTS</c>), typing accuracy (<c>mAcc</c>), age (<c>Age</c>), and sex (<c>Sex</c>) for <m>1\,301</m> students. Produce graphs necessary for understanding the data, making sure to explain what they reveal.
       </p>
       <p>
         Does the mean typing speed or mean accuracy appear to differ by the age or sex of the student? What other questions could be useful to ask about the data?
@@ -295,8 +446,46 @@
   <section xml:id="sec-ch17-supplementary-figures">
     <title>Supplementary figures</title>
     <figure xml:id="fig-histos-temp">
-      <caption>Histograms of body temperature data (left: starting from minimum value; right: starting from 0°C).</caption>
-      <image source="fig-histos-temp.png" width="80%"/>
+      <caption>Two histograms displaying the body temperature of <m>130</m> people. Left: a well-constructed histogram. Right: a poorly-constructed histogram.</caption>
+      <image source="fig-histos-temp.png" width="100%"/>
+    </figure>
+    <figure xml:id="fig-miner-crab-plot">
+      <caption>Left: the number of noisy miners and the number of eucalyptus trees. Right: a scatterplot of the colour of female horseshoe crabs and the condition of their spines.</caption>
+      <image source="fig-miner-crab-plot.png" width="95%"/>
+    </figure>
+    <figure xml:id="fig-ais-sport-barchart">
+      <caption>Sports played by athletes in the AIS study.</caption>
+      <image source="fig-ais-sport-barchart.png" width="60%"/>
+    </figure>
+    <table xml:id="tab-results-table">
+      <title>A table of results.</title>
+      <tabular halign="left" top="major">
+        <col/><col/><col/>
+        <row header="yes" bottom="minor">
+          <cell></cell>
+          <cell>Mean</cell>
+          <cell>Std dev.</cell>
+        </row>
+        <row>
+          <cell>Current smoker</cell>
+          <cell>206.6</cell>
+          <cell>46</cell>
+        </row>
+        <row>
+          <cell>Current non-smoker</cell>
+          <cell>214.64</cell>
+          <cell>48.7945</cell>
+        </row>
+        <row bottom="major">
+          <cell>Difference</cell>
+          <cell>8.03</cell>
+          <cell></cell>
+        </row>
+      </tabular>
+    </table>
+    <figure xml:id="fig-results-plot">
+      <caption>A boxplot of systolic blood pressure by smoking status.</caption>
+      <image source="fig-results-plot.png" width="55%"/>
     </figure>
   </section>
 </chapter>
