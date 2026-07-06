@@ -1,5 +1,450 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Source: 09-Collect.Rmd -->
 <chapter xml:id="ch-09-collect" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Collecting data</title>
-  <p>Skeleton for <em>09-Collect.Rmd</em>. Content to be added.</p>
+  <title>(PART) Collecting data</title>
+  <objectives xml:id="objectives-ch09">
+    <introduction>
+      <p>So far, you have learnt to ask an RQ and design the study. <alert>In this chapter</alert>, you will learn to:</p>
+    </introduction>
+    <ul>
+      <li><p>record the important steps in data collection.</p></li>
+      <li><p>describe study protocols.</p></li>
+      <li><p>ask questionnaire questions.</p></li>
+    </ul>
+  </objectives>
+
+  <section xml:id="sec-protocols-intro">
+    <title>Introduction</title>
+    <p>
+      If the RQ is well-constructed, terms are clearly defined, and the study is well-designed and explained, then the process for collecting the data should be easy to describe. Data collection is often time-consuming, tedious and expensive, so collecting the data correctly first time is important, hence an accurate description of the data collection process is essential.
+    </p>
+    <note>
+      <p>
+        Data collection is often tedious, time-consuming and expensive: you usually get one chance to collect data. In contrast, data (once collected) can be analysed as many times as necessary. Design the study properly the first time!
+      </p>
+    </note>
+  </section>
+
+  <section xml:id="sec-protocols">
+    <title>Protocols</title>
+    <idx>Protocol</idx>
+    <idx>Data collection</idx>
+    <p>
+      <em>Before</em> collecting the data, a plan should be established and documented that explains exactly <em>how</em> the data will be obtained, which will include <em>operational definitions</em> (Sect. <xref ref="sec-operation-definitions"/>).<idx><h>Definitions</h><h>operational</h></idx> This plan is called a <em>protocol</em>, and allows results to be confirmed and compared.
+    </p>
+    <definition xml:id="def-protocol">
+      <title>Protocol</title>
+      <statement>
+        <p>
+          A <em>protocol</em> is a procedure documenting the details of the design and implementation of studies, and for data collection.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      A protocol usually has at least three components that describe:
+    </p>
+    <ol>
+      <li><p>how individuals are chosen from the population (i.e., external validity).</p></li>
+      <li><p>how data are collected from the individuals (i.e., internal validity).</p></li>
+      <li><p>the types of analyses and software (including version) used.<idx>Computers and software</idx></p></li>
+    </ol>
+    <p>
+      Data collection often encounters problems or challenges, which should be documented also.
+    </p>
+    <example xml:id="example-protocol-example">
+      <title>Protocol</title>
+      <p>
+        <xref ref="data-Romanchik2018-cookies"/> made cookies using puréed green peas in place of margarine (to increase the nutritional value of cookies). They assessed the acceptance of these cookies to college students.
+      </p>
+      <p>
+        The protocol discussed <em>how the individuals were chosen</em> (p. 4):
+      </p>
+      <blockquote>
+        <p>...through advertisement across campus from students attending a university in the southeastern United States.</p>
+      </blockquote>
+      <p>
+        This voluntary sample comprised <m>80.6</m>% women, a higher percentage than in the general population, and in the college population. (Other extraneous variables were also recorded.)
+      </p>
+      <p>
+        Exclusion criteria were also applied, excluding people 'with an allergy or sensitivity to an ingredient used in the preparation of the cookies' (p. 5). The researchers also described <em>how the data were obtained</em>, including these steps (p. 5):
+      </p>
+      <ul>
+        <li><p>tasters sat at individual tables, so they could not be influenced by other tasters.</p></li>
+        <li><p>cookies were presented individually, on individual plates.</p></li>
+        <li><p>the cookies were presented in a randomised order (fat substituted with green pea puree at <m>25</m>%, <m>0</m>%, <m>50</m>%, <m>100</m>% and <m>75</m>%).</p></li>
+        <li><p>between tastes, tasters 'cleansed their palates' by drinking distilled water at <m>25^{\circ}\text{C}</m>.</p></li>
+        <li><p>the tasters recorded (p. 5):</p></li>
+      </ul>
+      <blockquote>
+        <p>characteristics of color, smell, moistness, flavor, aftertaste, and overall acceptability, for each sample of cookies...</p>
+      </blockquote>
+      <p>
+        Thus, internal validity was addressed using random allocation (to manage confounding), blinding individuals (to partially manage the Hawthorne effect), and washouts (to manage the carryover effect). Details are also given of how the cookies were made, and how objective measurements (such as moisture content) were determined. Subjects were not blinded to being in a study, but were blinded to which substitution percentage was in each cookie.
+      </p>
+      <p>
+        The <em>type of analyses and software used</em> were also given.
+      </p>
+    </example>
+    <example xml:id="example-definitions-sex">
+      <title>Operational definitions</title>
+      <p>
+        In a study where the sex of a person is the explanatory variable, an <em>operational definition</em> for the sex of the person is needed. That is, a description is needed for <em>how</em> the researchers determine the sex of the person.
+      </p>
+      <p>
+        One option is to <em>ask</em> each individual their sex. Another option is to make an <em>informed assessment</em>, based on clothing and body shape, for instance. A third option is to have subjects indicate their sex in a <em>multiple-choice question</em>.
+      </p>
+      <p>
+        Different types of studies may require different means for determining the sex of a person. The study protocol should explain <em>how</em> the sex of the person will be established.
+      </p>
+    </example>
+    <p>
+      Unforeseen complications are not unusual, so often a <em>pilot study</em> (or a <em>practice run</em>) is conducted before the actual data collection, to:<idx>Pilot study</idx>
+    </p>
+    <ul>
+      <li><p>determine the feasibility of the data collection protocol.</p></li>
+      <li><p>identify unforeseen challenges.</p></li>
+      <li><p>obtain data to determine appropriate sample sizes (Sect. <xref ref="sec-estimating-sample-size"/>).</p></li>
+      <li><p>identify ways to potentially save time and money.</p></li>
+    </ul>
+    <p>
+      The pilot study may suggest changes to the protocol.
+    </p>
+    <definition xml:id="def-pilot-study">
+      <title>Pilot study</title>
+      <statement>
+        <p>
+          A <em>pilot study</em> is a small test run of the study used to check that the protocol is appropriate and practical, and to identify (and hence fix) possible problems with the research design or protocol.
+        </p>
+      </statement>
+    </definition>
+    <image source="Pics/iconmonstr-task-1-240.png" width="25%">
+      <description><p>Image.</p></description>
+    </image>
+    <p>
+      The data can be collected once the protocol<idx>Protocol</idx> has been finalised. Protocols ensure studies are reproducible (Sect. <xref ref="sec-reproducible-research"/>),<idx><h>Research</h><h>reproducibility</h></idx> so others can confirm or compare results, and others can understand exactly what was done, and how. Protocols should indicate how design aspects (such as blinding the individuals, random allocation of treatments, etc.) will happen.<idx>Research design</idx> The final <em>protocol</em>, without pedantic detail, should be reported. Diagrams can be useful to support explanations. All studies should have a well-established protocol for describing how the study was done.
+    </p>
+    <example>
+      <p>
+        Consider this partial protocol, which shows honesty in describing a protocol:
+      </p>
+      <blockquote>
+        <p>Fresh cow dung was obtained from free-ranging, grass fed, and antibiotic-free Milking Shorthorn cows (<em>Bos taurus</em>) in the Tilden Regional Park in Berkeley, CA. Resting cows were approached with caution and startled by loud shouting, whereupon the cows rapidly stood up, defecated, and moved away from the source of the annoyance. Dung was collected in ZipLoc bags (<m>1</m> gallon), snap-frozen and stored at <m>-80</m> C.</p>
+        <attribution><xref ref="hare2008sepsid"/>, p. 10</attribution>
+      </blockquote>
+    </example>
+  </section>
+
+  <section xml:id="sec-ask-survey-questions">
+    <title>Collecting data using questionnaires</title>
+    <idx><h>Questionnaire</h><h>questions</h></idx>
+    <idx>Questionnaire</idx>
+    <idx>Survey</idx>
+
+  <subsection xml:id="sec-writing-questions">
+    <title>Writing questions</title>
+    <p>
+      Collecting data using <em>questionnaires</em> is common for both observational and experimental studies. Questionnaires are very difficult to do well: question wording is crucial, and surprisingly difficult <xref ref="fink1995survey"/>. Pilot testing questionnaires is crucial.
+    </p>
+    <definition xml:id="def-questionnaire">
+      <title>Questionnaire</title>
+      <statement>
+        <p>
+          A questionnaire is a set of questions for respondents to answer.<idx>Questionnaire</idx>
+        </p>
+      </statement>
+    </definition>
+    <note>
+      <p>
+        A <em>questionnaire</em> is a set of questions to obtain information from individuals.<idx>Questionnaire</idx><idx>Survey</idx> A <em>survey</em> is an entire methodology, that includes gathering data using a questionnaire, finding a sample, and other components.
+      </p>
+    </note>
+    <p>
+      Questions in a questionnaire may be <em>open-ended</em> (respondents can write their own answers) or <em>closed</em> (respondents select from a small number of possible answers, as in multiple-choice questions).<idx><h>Questionnaire</h><h>questions!open-ended</h></idx><idx><h>Questionnaire</h><h>questions!closed</h></idx> Open-ended and closed questions both have advantages and disadvantages. Answers to open-ended questions more easily lend themselves to qualitative analysis<idx><h>Research</h><h>qualitative</h></idx> and closed questions more to quantitative research.<idx><h>Research</h><h>quantitative</h></idx> This section briefly discusses writing questions.
+    </p>
+    <example xml:id="example-open-closed-questions">
+      <title>Open and closed questions</title>
+      <p>
+        German students were asked a series of questions about microplastics <xref ref="raab2021conceptions"/>, including:
+      </p>
+      <ol>
+        <li><p>Name sources of microplastics in the household.</p></li>
+        <li><p>In which ecosystems are microplastics in Germany? Tick the answer (multiple ticks are possible). <em>Options</em>: (a) sea; (b) rivers; (c) lakes; (d) groundwater.</p></li>
+        <li><p>Assess the potential danger posed by microplastics. <em>Options</em>: (a) very dangerous; (b) dangerous; (c) hardly dangerous; (d) not dangerous.</p></li>
+      </ol>
+      <p>
+        The first question is <em>open-ended</em>: respondents provide their own answers. The second question is <em>closed</em>, where <em>multiple</em> options can be selected. The third question is <em>closed</em>, where only <em>one</em> option can be selected.
+      </p>
+    </example>
+    <p>
+      Writing good questionnaire questions is difficult. Good practice requires:
+    </p>
+    <ul>
+      <li><p><em>avoiding leading questions</em> that may lead respondents to answer a certain way.<idx>Leading questions</idx></p></li>
+      <li><p><em>avoiding ambiguity</em> by avoiding unfamiliar or technical terms.</p></li>
+      <li><p><em>avoiding asking the uninformed</em>; avoid asking respondents about issues they don't know about. Many people will give a response even if they do not understand (and such responses are worthless). For example, people may give directions to places that do not even exist <xref ref="collett1976pointing"/>.</p></li>
+      <li><p><em>avoiding complex and double-barrelled questions</em>, which are hard to understand and the answers hard to interpret.</p></li>
+      <li><p><em>avoiding problems with ethics</em>,<idx>Ethics</idx> such as questions about people breaking laws, or revealing confidential or private information. In special cases and with justification, ethics committees may allow such questions.</p></li>
+      <li><p><em>ensuring clarity</em> in question wording.</p></li>
+      <li><p>(for closed questions) ensuring options are <em>mutually exclusive</em> (responses fit into only one category)<idx>Mutually exclusive</idx> and <em>exhaustive</em> (categories cover <em>all</em> options).<idx>Exhaustive</idx></p></li>
+    </ul>
+    <example xml:id="example-leading-qns">
+      <title>Poor question wording</title>
+      <p>
+        Consider a questionnaire asking these questions:
+      </p>
+      <ol>
+        <li><p>Because bottles from bottled water create enormous amounts of non-biodegradable landfill and hence threaten native wildlife, do you support banning bottled water?</p></li>
+        <li><p>Do you drink more water now?</p></li>
+        <li><p>Are you more concerned about Coagulase-negative <em>Staphylococcus</em> or <em>Neisseria pharyngis</em> in bottled water?</p></li>
+        <li><p>Do you drink water in plastic and/or glass bottles?</p></li>
+        <li><p>Do you have a water tank installed illegally, without permission?</p></li>
+        <li><p>Do you avoid purchasing water in plastic bottles unless it is carbonated, unless the bottles are plastic but not necessarily if the lid is recyclable?</p></li>
+      </ol>
+      <p>
+        Question 1 is <em>leading</em> because the expected response is obvious. Better would be: 'Do you support or not support banning bottled water?'
+      </p>
+      <p>
+        Question 2 is <em>ambiguous</em>: it is unclear what 'more water now' is being compared to.
+      </p>
+      <p>
+        Question 3 is unlikely to give sensible answers, as most people will be <em>uninformed</em>. Many people will still give an opinion, but the data will be effectively useless (though the researcher may not realise).
+      </p>
+      <p>
+        Question 4 is <em>double-barrelled</em>, and would be better asked as two separate questions (one asking about plastic bottles, and one about glass bottles).
+      </p>
+      <p>
+        Question 5 is unlikely to be given <em>ethical approval</em> or to obtain truthful answers, as respondents are unlikely to admit to breaking rules.
+      </p>
+      <p>
+        Question 6 is <em>unclear</em>, since knowing what a <em>yes</em> or <em>no</em> answer means is confusing.
+      </p>
+    </example>
+    <example xml:id="example-question-wording">
+      <title>Question wording</title>
+      <p>
+        Question <em>wording</em> can be important. In the 2014 <em>General Social Survey</em> (https://gss.norc.org), when white Americans were asked for their opinion of the amount America spends on <em>welfare</em>, <m>58</m>% of respondents answered 'Too much'. However, when white Americans were asked for their opinion of the amount America spends on <em>assistance to the poor</em>, only <m>16</m>% of respondents answered 'Too much' <xref ref="PovertyWording"/>.
+      </p>
+    </example>
+    <example xml:id="example-mutually-exclusive-qns">
+      <title>Mutually exclusive options</title>
+      <p>
+        In a study to determine the time doctors spent with patients (from <xref ref="chan2008exploration"/>), doctors were given the options:<idx><h>Questionnaire</h><h>questions!closed</h></idx>
+      </p>
+      <ul>
+        <li><p><m>0</m><ndash/><m>5</m>.</p></li>
+        <li><p><m>5</m><ndash/><m>10</m>.</p></li>
+        <li><p>more than <m>10</m>.</p></li>
+      </ul>
+      <p>
+        This is a poor question, because a respondent does not know which option to select for an answer of '<m>5</m>'. The options are not <em>mutually exclusive</em>.
+      </p>
+    </example>
+    <p>
+      The following (humourous) video shows how questions can be manipulated by those not wanting to be ethical: <url href="https://www.youtube.com/watch?v=G0ZZJXw4MTA" visual="youtube.com/watch?v=G0ZZJXw4MTA">Video: Yes Prime Minister on manipulative questioning</url>.
+    </p>
+  </subsection>
+
+  <subsection xml:id="sec-biases">
+    <title>Challenges using questionnaires</title>
+    <idx><h>Questionnaire</h><h>biases</h></idx>
+    <p>
+      Using questionnaires presents myriad challenges.
+    </p>
+    <ul>
+      <li><p><em>Non-response bias</em> (Sect. <xref ref="sec-selection-bias"/>):<idx><h>Bias</h><h>selection</h></idx> non-response bias is common with questionnaires, as they are often used with voluntary-response samples (Sect. <xref ref="sec-non-random-samples"/>).<idx><h>Sampling</h><h>non-random!voluntary</h></idx> The people who <em>do not</em> respond to the survey may be different from those who <em>do</em> respond.</p></li>
+      <li><p><em>Response bias</em> (Sect. <xref ref="sec-selection-bias"/>):<idx><h>Bias</h><h>response</h></idx> people do not always answer truthfully; for example, what people <em>say</em> may not correspond with what people <em>do</em> (Example <xref ref="example-ecological-cups"/>). Sometimes this is unintentional (e.g., poor questions wording), due to embarrassment, or because questions are controversial. Sometimes, respondents repeatedly provide the same answer (without reading the question) to a series of multiple-choice questions (i.e., always select 'Always').</p></li>
+      <li><p><em>Recall bias</em>:<idx><h>Bias</h><h>recall</h></idx> people may not be able to accurately recall past events clearly, or recall when they happened.</p></li>
+      <li><p><em>Question order</em>: the order of the questions can influence the responses.<idx><h>Bias</h><h>question order</h></idx></p></li>
+      <li><p><em>Interpretation</em>: phrases and words such as 'Sometimes' and 'Somewhat disagree' may have different meanings to different people.<idx><h>Bias</h><h>interpretation</h></idx></p></li>
+    </ul>
+    <p>
+      Many of these can be managed with careful questionnaire design, but discussing the methods are beyond the scope of this book.
+    </p>
+    <example>
+      <p>
+        <xref ref="alharthy2023knowledge"/> studied the knowledge, attitude, and level of confidence of paramedics when managing patients with visual or hearing problems. They used a questionnaire, which was sent to (p. 5)
+      </p>
+      <blockquote>
+        <p>... <m>372</m> potential participants with the expectation that at least <m>310</m> questionnaires [would] be returned (<m>83</m>% assumed return rate). However, only <m>97</m> out of <m>372</m> participants completed the questionnaire, resulting in actual return rate of <m>26</m>%.</p>
+      </blockquote>
+      <p>
+        Response rates from questionnaires are often very low (and unrepresentative).<idx><h>Questionnaire</h><h>response rate</h></idx>
+      </p>
+    </example>
+  </subsection>
+
+  <subsection xml:id="sec-software-questionnaires">
+    <title>Preparing software for questionnaire data</title>
+    <idx><h>Questionnaire</h><h>software</h></idx>
+    <idx><h>Computers and software</h><h>data entry</h></idx>
+    <p>
+      Care is needed when preparing software for data collected using a questionnaire. Sometimes, of course, the data are collected by computer (e.g., online) and are supplied to the researchers already formatted and in electronic format.
+    </p>
+    <p>
+      Data from open questions are usually text-based (such as words, sentences or paragraphs of text). These can generally be included in the data worksheet (though there may be a limit to the length of such data), but cannot be analysed using the quantitative methods described in this book.<idx><h>Research</h><h>qualitative</h></idx>
+    </p>
+    <p>
+      Closed questions are easily included in a data worksheet. In closed questions where respondents can select <em>one</em> option only, one column is needed for the question that records which option was selected. In closed questions where respondents can select <em>all</em> options that apply, each option requires its own column that records each respondents' answer for that option.
+    </p>
+    <example xml:id="example-open-closed-questions-software">
+      <title>Open and closed questions: software</title>
+      <p>
+        In Example <xref ref="example-open-closed-questions"/>, three questionnaire questions are given that were asked of German students about microplastics <xref ref="raab2021conceptions"/>. Some (artificial) data are shown entered in Fig. <xref ref="fig-microplasticsjamovi"/>.
+      </p>
+      <p>
+        The first question requires open-ended, text-based answers (<c>Sources</c>).<idx><h>Questionnaire</h><h>questions!open-ended</h></idx> For the second (closed) question, students could select <em>multiple</em> options, so each option needs one column in the data worksheet (<c>WhereSeas</c> to <c>WhereGroundwater</c>).<idx><h>Questionnaire</h><h>questions!open-ended</h></idx><idx><h>Questionnaire</h><h>questions!closed</h></idx> The third (closed) question required students to select <em>one</em> option from a given list, so one column (<c>Danger</c>) is needed to record responses. As usual (Sect. <xref ref="sec-data-entry"/>), each row represents one unit of analysis (student).
+      </p>
+    </example>
+    <figure xml:id="fig-microplasticsjamovi">
+      <caption>The data worksheet for some example data, for the microplastics study.</caption>
+      <image source="DataPrep/Microplastics/MicroplasticsSetup.png" width="100%">
+        <description><p>Screenshot of a data worksheet showing columns for Sources (open-ended text), WhereSeas through WhereGroundwater (binary closed options), and Danger (single-select closed option), with one row per student.</p></description>
+      </image>
+    </figure>
+    <idx>Research design|)</idx>
+  </subsection>
+  </section>
+
+  <section xml:id="sec-chap10-summary">
+    <title>Chapter summary</title>
+    <p>
+      Having a detailed procedure for collecting the data (the <em>protocol</em>) is important. Using a <em>pilot study</em> to trial the protocol can reveal unexpected changes necessary for a good protocol. Creating good questionnaires questions is difficult, but important.
+    </p>
+  </section>
+
+  <reading-questions xml:id="sec-chap10-quick-review">
+    <title>Quick review questions</title>
+    <exercise>
+      <p>What is the biggest problem with this question: 'Do you have bromodosis?'</p>
+      <ol>
+        <li><p>It is double-barrelled.</p></li>
+        <li><p>It is a leading question.</p></li>
+        <li><p>It uses language that may not be understood. [Correct]</p></li>
+        <li><p>It is ambiguous.</p></li>
+      </ol>
+    </exercise>
+    <exercise>
+      <p>What is the biggest problem with this question: 'Do you spend too much time connected to the internet?'</p>
+      <ol>
+        <li><p>It is double-barrelled.</p></li>
+        <li><p>It is a leading question.</p></li>
+        <li><p>It uses language that may not be understood.</p></li>
+        <li><p>It is ambiguous. [Correct]</p></li>
+      </ol>
+    </exercise>
+    <exercise>
+      <p>What is the biggest problem with this question: 'Do you eat fruits and vegetables?'</p>
+      <ol>
+        <li><p>It is double-barrelled. [Correct]</p></li>
+        <li><p>It is a leading question.</p></li>
+        <li><p>It uses language that may not be understood.</p></li>
+        <li><p>It is ambiguous.</p></li>
+      </ol>
+    </exercise>
+    <exercise>
+      <p><em>True</em> or <em>false</em>: A well-defined protocol allows the researchers to make the study externally valid. [False]</p>
+    </exercise>
+    <exercise>
+      <p><em>True</em> or <em>false</em>: This question is likely to be a <em>leading</em> question: 'Do you support a ban on drinks sold in unrecyclable plastic bottles?' [True]</p>
+    </exercise>
+  </reading-questions>
+
+  <exercises xml:id="sec-collection-exercises">
+    <introduction>
+      <p>Answers to odd-numbered exercises are given at the end of the book.</p>
+    </introduction>
+    <exercise xml:id="exercise-collect-survey-questions1">
+      <p>
+        What is the problem with this question?
+      </p>
+      <blockquote>
+        <p>What is your age? (Select one option)</p>
+        <ul>
+          <li><p>Under <m>18</m>.</p></li>
+          <li><p>Over <m>18</m>.</p></li>
+        </ul>
+      </blockquote>
+    </exercise>
+    <exercise xml:id="exercise-collect-survey-questions1b">
+      <p>
+        What is the problem with this question?
+      </p>
+      <blockquote>
+        <p>How many children do you have? (Select one option)</p>
+        <ul>
+          <li><p>None.</p></li>
+          <li><p><m>1</m> or <m>2</m>.</p></li>
+          <li><p><m>2</m> or <m>3</m>.</p></li>
+          <li><p>More than <m>4</m>.</p></li>
+        </ul>
+      </blockquote>
+    </exercise>
+    <exercise xml:id="exercise-collect-survey-questions2">
+      <p>
+        Which of these questionnaire questions is better? Why?
+      </p>
+      <ol>
+        <li><p>Should concerned cat owners vaccinate their pets?</p></li>
+        <li><p>Should domestic cats be required to be vaccinated or not?</p></li>
+        <li><p>Do you agree that pet-owners should have their cats vaccinated?</p></li>
+      </ol>
+    </exercise>
+    <exercise xml:id="exercise-collect-survey-questions2b">
+      <p>
+        Which of these questionnaire questions is better? Why?
+      </p>
+      <ol>
+        <li><p>Do you own an environmentally-friendly electric vehicle?</p></li>
+        <li><p>Do you own an electric vehicle?</p></li>
+        <li><p>Do you own or do you not own an electric vehicle?</p></li>
+      </ol>
+    </exercise>
+    <exercise xml:id="exercise-sunscreen-questions">
+      <p>
+        <xref ref="data-Falk2013-SunProtection"/> studied sunscreen use, and asked participants questions, including these:
+      </p>
+      <ul>
+        <li><p>how often do you sun bathe with the intention to tan during the summer in Sweden? (Possible answers: never, seldom, sometimes, often, always).</p></li>
+        <li><p>how long do you usually stay in the sun between <m>11</m>am and <m>3</m>pm, during a typical day-off in the summer (June<ndash/>August)? (Possible answers: <m>&lt; 30</m>, <m>30</m><ndash/><m>1</m>, <m>1</m><ndash/><m>2</m>, <m>2</m><ndash/><m>3</m>, <m>&gt;3</m>).</p></li>
+      </ul>
+      <p>
+        Critique these questions. What biases may be present?
+      </p>
+    </exercise>
+    <exercise xml:id="exercise-kids-environment-questions">
+      <p>
+        <xref ref="moron2021children"/> studied primary-school children's knowledge of their natural environment. They were asked three questions:
+      </p>
+      <ol>
+        <li>
+          <p>Do you usually visit Guadaira Park?</p>
+          <ul>
+            <li><p>No, I don't like parks.</p></li>
+            <li><p>No, I don't usually visit it.</p></li>
+            <li><p>Yes, once per week.</p></li>
+            <li><p>Yes, more than once a week.</p></li>
+          </ul>
+        </li>
+        <li>
+          <p>How many times have you visited nature (the beach, countryside, mountains, etc.) in the last month?</p>
+          <ul>
+            <li><p>Never.</p></li>
+            <li><p>Once.</p></li>
+            <li><p>Two to three times.</p></li>
+            <li><p>More than three times.</p></li>
+          </ul>
+        </li>
+        <li>
+          <p>Which is your favourite natural place?</p>
+          <ul>
+            <li><p>Write a story.</p></li>
+            <li><p>Draw a picture.</p></li>
+          </ul>
+        </li>
+      </ol>
+      <p>
+        Which questions are <em>open</em> and which are <em>closed</em>? Which questions will produce <em>qualitative</em> data? Critique the questions.
+      </p>
+    </exercise>
+  </exercises>
 </chapter>

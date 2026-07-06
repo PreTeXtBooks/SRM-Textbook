@@ -1,5 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <appendix xml:id="app-tables" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title><m>z</m>-score tables</title>
-  <p>Skeleton for <em>51-App-Tables.Rmd</em>. Content to be added.</p>
+  <section xml:id="sec-z-tables-neg">
+    <title><m>z</m>-score table: negative <m>z</m>-scores</title>
+    <idx><h>z-score tables</h><h>negative z</h></idx>
+    <p>
+      The table below gives the area to the <em>left</em> of the given (negative) <m>z</m>-score
+      under the standard normal distribution.
+    </p>
+  </section>
+  <section xml:id="sec-z-tables-pos">
+    <title><m>z</m>-score table: positive <m>z</m>-scores</title>
+    <idx><h>z-score tables</h><h>positive z</h></idx>
+    <p>
+      The table below gives the area to the <em>left</em> of the given (positive) <m>z</m>-score
+      under the standard normal distribution.
+    </p>
+  </section>
+  <section xml:id="sec-z-tables-online">
+    <title>Online <m>z</m>-score calculators</title>
+    <idx><h>z-score tables</h><h>online</h></idx>
+    <p>
+      Many online calculators can find areas under the standard normal distribution.
+      For instance, the GeoGebra normal distribution calculator at
+      <url href="https://www.geogebra.org/m/nSqSnSnK">geogebra.org</url>.
+    </p>
+  </section>
 </appendix>

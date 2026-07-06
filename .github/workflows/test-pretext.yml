@@ -28,6 +28,21 @@ jobs:
         run: |
           pip install -r pretext/requirements.txt
 
+      - name: Prepare PreTeXt resource cache
+        run: |
+          python3 -c "
+          from pretext import resources
+          import shutil
+          cache = resources.resource_base_path() / 'rs_cache'
+          src = cache / 'runestone_services.xml'
+          dst = cache / 'rs_services.xml'
+          if src.exists() and not dst.exists():
+              shutil.copy2(str(src), str(dst))
+              print('Created rs_services.xml from bundled cache')
+          else:
+              print('rs_services.xml already exists or source not found')
+          "
+
       - name: Build PreTeXt book (HTML)
         run: |
           cd pretext

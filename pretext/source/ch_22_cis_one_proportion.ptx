@@ -1,5 +1,594 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Source: 22-CIs-OneProportion.Rmd -->
 <chapter xml:id="ch-22-cis-one-proportion" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Confidence intervals: one proportion</title>
-  <p>Skeleton for <em>22-CIs-OneProportion.Rmd</em>. Content to be added.</p>
+  <objectives xml:id="objectives-ch22">
+    <introduction>
+      <p>So far, you have learnt to ask an RQ, design a study, describe and summarise the data, and model sampling variation. <alert>In this chapter</alert>, you will learn to construct <em>confidence intervals</em> for one proportion. You will learn to:</p>
+    </introduction>
+    <ul>
+      <li><p>identify situations where estimating a proportion is appropriate.</p></li>
+      <li><p>form confidence intervals for one proportion.</p></li>
+      <li><p>determine whether the conditions for using the confidence intervals apply in a given situation.</p></li>
+    </ul>
+  </objectives>
+
+  <section xml:id="sec-ci-one-proportion">
+    <title>Introduction</title>
+    <image source="Illustrations/pexels-skitterphoto-705171.jpg" width="25%">
+      <description><p>Image.</p></description>
+    </image>
+    <p>
+      Suppose a fair, six-sided die is rolled <m>25</m> times. What proportion of the rolls will produce an even number? That is, what will be the value of the <em>sample proportion</em> of numbers that are even? Of course, no-one knows, because the proportion of rolls that will be even will not be the same for every sample of <m>25</m> rolls. The value of the sample proportion (the statistic) <em>varies</em> from sample to sample: <em>sampling variation</em> exists.
+    </p>
+  </section>
+
+  <section xml:id="sec-sampling-distribution-knownp">
+    <title>Sampling distribution for <m>\hat{p}</m>: for <m>p</m> known</title>
+    <idx><h>Sampling distribution</h><h>one proportion (known p)</h></idx>
+    <p>
+      As seen in Chap. <xref ref="ch-19-tools-sampling-variation"/>, sample statistics often vary with a normal distribution (whose standard deviation is called the <em>standard error</em>). However, being more specific about the details of the normal distribution (such as the values of its mean and standard deviation) is useful.
+    </p>
+    <warning>
+      <p>
+        Remember: studying a sample leads to the following observations:
+      </p>
+      <p>
+        <ul>
+          <li><p>every sample is likely to be different.</p></li>
+          <li><p>we observe just one of the many possible samples.</p></li>
+          <li><p>every sample is likely to yield a different value for the statistic.</p></li>
+          <li><p>we observe just one of the many possible values for the statistic.</p></li>
+        </ul>
+      </p>
+      <p>
+        Since many values for the sample proportion are possible, the values of the sample proportion vary (called <em>sampling variation</em>) and have a <em>distribution</em> (called a <em>sampling distribution</em>).
+      </p>
+    </warning>
+    <p>
+      To better understand the sampling distribution for the proportion of even numbers in <m>25</m> rolls of a die, statistical theory could be used, or thousands of repetitions of a sample of <m>25</m> rolls could be performed, or a computer could <em>simulate</em> many samples of <m>25</m> rolls (like we did for a roulette wheel in Sect. <xref ref="sec-sampling-distribution-proportions"/>).
+    </p>
+    <p>
+      Here, the <em>population proportion</em> of even rolls is <m>p = 0.5</m> (using the classical approach to probability: three of the six faces of the die are even). Each sample of <m>n = 25</m> rolls produces a <em>sample</em> proportion, denoted by <m>\hat{p}</m>, which varies from sample to sample.
+    </p>
+    <note>
+      <p>
+        <m>p</m> refers to the <em>population</em> proportion, and <m>\hat{p}</m> refers to a <em>sample</em> proportion.
+      </p>
+    </note>
+    <p>
+      The sample proportions would be expected to vary around <m>p = 0.5</m> (the <em>population proportion</em>): some values of <m>\hat{p}</m> larger than <m>p</m>, and some smaller than <m>p</m>. The value of the sample proportion in <m>25</m> rolls could be <em>very</em> small or <em>very</em> high by chance, but we wouldn't expect to see that very often. The sample proportions exhibit sampling variation, and the <em>amount</em> of sampling variation is quantified using a <em>standard error</em>.
+    </p>
+    <p>
+      Suppose a fair die was rolled <m>25</m> times, and this random procedure<idx>Random procedure</idx> was repeated <em>thousands</em> of times, and the proportion of even rolls was recorded for every one of those thousands of sets of <m>25</m> rolls. These thousands of sample proportions <m>\hat{p}</m> (one from every sample of <m>n = 25</m> rolls) could be shown using a histogram; see the animation below.
+    </p>
+    <image source="fig-roll-dice-hist-html.gif" width="70%">
+      <description><p>An animated histogram, updated after every new sample of <m>25</m> rolls, showing how the sample proportion of even rolls varies from sample to sample.</p></description>
+    </image>
+    <p>
+      The shape of the histogram is roughly a normal distribution. The sampling distribution for <m>\hat{p}</m> will always have an approximately normal distribution when certain conditions are met: see Sect. <xref ref="sec-validity-proportions"/>. The mean of this distribution is called the <em>sampling mean</em>, and the standard deviation for this sampling distribution is called the <em>standard error</em>, denoted <m>\text{s.e.}(\hat{p})</m> (see Fig. <xref ref="fig-normal-die-theory-ci"/>).
+    </p>
+    <p>
+      More specifically, the <em>values</em> of the mean and standard deviation of the normal distribution in the animation above can be determined:
+    </p>
+    <p>
+      <ul>
+        <li><p>the <em>sampling mean</em> has the value of <m>p = 0.5</m> (i.e., the average value of <m>\hat{p}</m> is <m>0.5</m>).</p></li>
+        <li><p>the standard deviation, called the <em>standard error</em> <m>\text{s.e.}(\hat{p})</m>, has the value <m>0.1</m>. (The source of this number will be revealed soon, in Equation <xref ref="eq-std-error-example-die-ci"/>.)</p></li>
+      </ul>
+    </p>
+    <p>
+      This distribution is the <em>sampling distribution</em>, whose standard deviation is called a <em>standard error</em>. A picture of this normal distribution can be drawn (Fig. <xref ref="fig-normal-die-theory-ci"/>). While we still don't know <em>exactly</em> what the next roll will produce, we have some idea of <em>how</em> the sample proportion varies in samples of <m>25</m> rolls. For instance, values of <m>\hat{p}</m> less than <m>0.2</m>, or greater than <m>0.8</m> are unlikely to be observed from a fair die (with <m>p = 0.5</m>) in <m>25</m> rolls.
+    </p>
+    <figure xml:id="fig-normal-die-theory-ci">
+      <caption>The sampling distribution is an approximate normal distribution with mean <m>0.5</m> and standard error <m>0.1</m>; it is a model for how the proportion of even rolls varies when a die is rolled <m>25</m> times.</caption>
+      <image source="fig-normal-die-theory-ci.png" width="100%"/>
+    </figure>
+    <p>
+      More generally, the sampling distribution of <m>\hat{p}</m> is described as follows.
+    </p>
+    <definition xml:id="def-sampling-dist-prop-ci">
+      <title>Sampling distribution of a sample proportion with population proportion known</title>
+      <statement>
+        <p>
+          When the value of <m>p</m> is <em>known</em>, the <em>sampling distribution of the sample proportion</em> is (when certain conditions are met; Sect. <xref ref="sec-validity-proportions"/>) described by
+        </p>
+        <p>
+          <ul>
+            <li><p>an approximate normal distribution,</p></li>
+            <li><p>centred around the sampling mean whose value is <m>p</m>,</p></li>
+            <li><p>with a standard deviation (called the <em>standard error</em> of <m>\hat{p}</m>), whose value is</p></li>
+          </ul>
+        </p>
+        <men xml:id="eq-std-error-pknown-ci">\text{s.e.}(\hat{p}) = \sqrt{\frac{ p \times (1 - p)}{n}},</men>
+        <p>
+          where <m>n</m> is the size of the sample used to compute <m>\hat{p}</m>, and <m>p</m> is the population proportion.
+        </p>
+      </statement>
+    </definition>
+    <warning>
+      <p>
+        The parameter <m>p</m> and the statistic <m>\hat{p}</m> are both <em>proportions</em>. However, the <em>average value</em> of the sample proportions from all possible samples can be described by a <em>sampling mean</em>, whose value is <m>p</m>. The sampling mean of the sampling distribution is the 'average' value of all possible sample proportions, <m>\hat{p}</m>.
+      </p>
+    </warning>
+    <p>
+      For the die example, where <m>n = 25</m> rolls and <m>p = 0.5</m>, using Equation <xref ref="eq-std-error-pknown-ci"/> gives:
+    </p>
+    <men xml:id="eq-std-error-example-die-ci">\text{s.e.} (\hat{p}) = \sqrt{\frac{0.5 \times (1 - 0.5)}{25}} = 0.1.</men>
+    <p>
+      This standard error is the standard deviation of the normal distribution in the animation in Sect. <xref ref="sec-sampling-distribution-knownp"/>.
+    </p>
+    <p>
+      In practice the value of <m>p</m> is almost always unknown. This situation is studied from Sect. <xref ref="sec-sampling-distribution-unknownp"/> onwards.
+    </p>
+  </section>
+
+  <section xml:id="sec-c-ip-knownp">
+    <title>Sampling intervals for <m>\hat{p}</m></title>
+    <idx>Sampling interval</idx>
+    <p>
+      Since the possible values of the sample proportions <m>\hat{p}</m> can be described by an approximate <em>normal distribution</em>, the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule (Def. <xref ref="def-empirical-rule"/>) applies.<idx>68–95–99.7 rule</idx>
+    </p>
+    <p>
+      For example, in Fig. <xref ref="fig-normal-die-theory-ci"/> (where the sampling mean is <m>0.5</m> and the standard error is <m>0.1</m>), about <m>68</m>% of the time a sample of <m>25</m> rolls will have a value of <m>\hat{p}</m> between <m>0.5</m> give-or-take <em>one</em> standard deviation (that is, give-or-take <m>0.1</m>).
+    </p>
+    <p>
+      So, about <m>68</m>% of the time, the proportion of even rolls in a sample of <m>25</m> rolls will lie between <m>0.5 - 0.1 = 0.4</m> and <m>0.5 + 0.1 = 0.6</m>. Similarly, about <m>95</m>% of the time, the proportion of even rolls will be between <m>0.5</m> give-or-take <m>(2 \times 0.1)</m>, or between <m>0.3</m> and <m>0.7</m>.
+    </p>
+    <p>
+      These intervals tell us what values of <m>\hat{p}</m> are likely to be observed in samples of size <m>25</m>. Most of the time (i.e., approximately <m>95</m>% of the time), the value of <m>\hat{p}</m> is expected to be between <m>0.30</m> and <m>0.70</m> (Fig. <xref ref="fig-ci-relationships-si"/>).
+    </p>
+    <p>
+      Formally, the sample proportion <m>\hat{p}</m> is likely to lie within the interval
+    </p>
+    <p>
+      <md>p \pm \big(\text{multiplier} \times \text{s.e.}(\hat{p})\big),</md>
+    </p>
+    <p>
+      where <m>\text{s.e.}(\hat{p})</m> is the <em>standard error of the sample proportion</em> (calculated using Equation <xref ref="eq-std-error-pknown-ci"/>). The <em>multiplier</em> is a <m>z</m>-score, whose value depends on how confident we wish to be that the interval contains the value of <m>\hat{p}</m>. For a <m>95</m>% interval, the multiplier is <em>approximately</em> <m>2</m>, based on the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule: approximately <m>95</m>% of observations are within <em>two</em> standard deviations of the value of <m>p</m> (the mean of the normal distribution in Fig. <xref ref="fig-normal-die-theory-ci"/>). That is, the <em>approximate</em> <m>95</m>% sampling interval is:
+    </p>
+    <p>
+      <md>p \pm (2 \times \text{s.e.}(\hat{p}) ).</md>
+    </p>
+    <p>
+      An exact value for the multiplier (i.e., a <m>z</m>-score) can be found using Appendix <xref ref="sec-z-tables-online"/>. <em>Any</em> level of confidence can be used (but different multipliers are then needed). This interval is called a <em>sampling interval</em>.
+    </p>
+    <warning>
+      <p>
+        The symbol '<m>\pm</m>' means 'plus or minus', or (colloquially) 'give-or-take'.
+      </p>
+    </warning>
+    <figure xml:id="fig-ci-relationships-si">
+      <caption>A known value of <m>p</m> produces a range of <m>\hat{p}</m> values.</caption>
+      <image source="fig-ci-relationships-si.png" width="73%"/>
+    </figure>
+  </section>
+
+  <section xml:id="sec-sampling-distribution-unknownp">
+    <title>Sampling distribution for <m>\hat{p}</m>: for <m>p</m> unknown</title>
+    <idx><h>Sampling distribution</h><h>one proportion (for a CI)</h></idx>
+    <p>
+      In the die example (Sects. <xref ref="sec-sampling-distribution-knownp"/> and <xref ref="sec-c-ip-knownp"/>), the value of <m>p</m> was known. However, usually the value of <m>p</m> (the <em>parameter</em>) is <em>unknown</em>; after all, the reason for taking a sample is to <em>estimate</em> the unknown value of <m>p</m>. When the value of <m>p</m> is unknown, the standard error is computed using the best available estimate of <m>p</m>, which is <m>\hat{p}</m>.
+    </p>
+    <definition xml:id="def-sampling-distribution-phat">
+      <title>Sampling distribution of a sample proportion with population proportion unknown</title>
+      <statement>
+        <p>
+          When the value of <m>p</m> is <em>unknown</em>, the <em>sampling distribution of the sample proportion</em> is (when certain conditions are met; Sect. <xref ref="sec-validity-proportions"/>) described by
+        </p>
+        <p>
+          <ul>
+            <li><p>an approximate normal distribution,</p></li>
+            <li><p>centred around the sampling mean, whose value is <m>p</m>,</p></li>
+            <li><p>with a standard deviation (called the <em>standard error</em> of <m>\hat{p}</m>) whose value is</p></li>
+          </ul>
+        </p>
+        <men xml:id="eq-stderrorphat">\text{s.e.}(\hat{p}) = \sqrt{\frac{ \hat{p} \times (1 - \hat{p})}{n}},</men>
+        <p>
+          where <m>n</m> is the size of the sample used to compute <m>\hat{p}</m>, and <m>\hat{p}</m> is the sample proportion. In general, the approximation gets better as the sample size gets larger.
+        </p>
+      </statement>
+    </definition>
+    <warning>
+      <p>
+        When computing the standard error for a proportion, take care! Make sure you use a <em>proportion</em> in the formula, not a <em>percentage</em> (i.e., <m>0.5</m> rather than <m>50</m>%). Also: don't forget to take the square root.
+      </p>
+    </warning>
+  </section>
+
+  <section xml:id="sec-conf-int-p-unknown-p">
+    <title>Confidence intervals for <m>p</m></title>
+    <idx><h>Confidence intervals</h><h>one proportion</h></idx>
+    <p>
+      Let's pretend for the moment that the population proportion of even rolls on a die is <em>unknown</em> (simply to demonstrate ideas). An <em>estimate</em> of the population proportion of even rolls could be found by rolling a die <m>n = 25</m> times, and computing <m>\hat{p}</m> (an estimate of <m>p</m>). Suppose <m>11</m> of the <m>n = 25</m> rolls produce an even number, so <m>\hat{p} = 11/25 = 0.44</m>. The best estimate of <m>p</m> is therefore <m>\hat{p} = 0.44</m>. We might expect the (unknown) value of <m>p</m> to be a little smaller than this estimate <m>\hat{p}</m>, or a little larger.
+    </p>
+    <p>
+      Using Def. <xref ref="def-sampling-distribution-phat"/>, the sample proportions vary with an approximate normal distribution around <m>p</m> (whose value is unknown), with a standard deviation (the standard error) of
+    </p>
+    <p>
+      <md>\text{s.e.}(\hat{p}) = \sqrt{\frac{ 0.44 \times (1 - 0.44)}{25}} = 0.09927739.</md>
+    </p>
+    <p>
+      Previously, the sampling distribution was used to construct a sampling interval that was likely to contain the unknown value of <m>\hat{p}</m>. However, here the value of <m>\hat{p}</m> is known, so an interval is created that is likely to contain the unknown value of <m>p</m> that produced the observed value of <m>\hat{p}</m> (Fig. <xref ref="fig-ci-relationships-ci"/>).
+    </p>
+    <figure xml:id="fig-ci-relationships-ci">
+      <caption>The sampling distribution for <m>\hat{p}</m>: many values of <m>p</m> may have produced the observed value of <m>\hat{p}</m>.</caption>
+      <image source="fig-ci-relationships-ci.png" width="75%"/>
+    </figure>
+    <p>
+      The unknown value of <m>p</m> could be a little smaller or a little larger than the value of <m>\hat{p}</m>; the interval is the value of <m>\hat{p}</m>, give-or-take a little. More formally:
+    </p>
+    <p>
+      <md>\hat{p} \pm \big(\text{multiplier}\times\text{s.e.}(\hat{p})\big)</md>
+    </p>
+    <p>
+      for a suitable multiplier. This interval for <m>p</m> is called a <em>confidence interval</em> (or a CI). The multiplier is a <m>z</m>-score, and the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m><idx>68–95–99.7 rule</idx> rule gives approximate values for the multipliers. The give-or-take amount, called the <em>margin of error</em>, is <m>\left(\text{multiplier}\times\text{s.e.}(\hat{p})\right)</m>.<idx>Margin of error</idx>
+    </p>
+    <p>
+      Using the approximate multiplier of <m>2</m> (from the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule), the approximate <m>95</m>% CI is
+    </p>
+    <p>
+      <md>0.44 \pm (2 \times 0.099277), \quad\text{or } 0.44\pm 0.1986;</md>
+    </p>
+    <p>
+      that is, the margin of error is <m>0.1986</m>. Computing the two values, the interval is from
+    </p>
+    <p>
+      <md>0.44 - 0.1986 = 0.241, \quad\text{to}\quad 0.44 + 0.1986 = 0.639.</md>
+    </p>
+    <p>
+      The interval, from <m>0.241</m> to <m>0.639</m>, is an interval containing values of <m>p</m> that could have reasonably produced the observed value of <m>\hat{p} = 0.44</m> (Fig. <xref ref="fig-p-producing-p-hat-html"/>). We can say the interval <m>0.241</m> to <m>0.639</m> has a <m>95</m>% chance of straddling the unknown value of the population proportion <m>p</m>.
+    </p>
+    <definition xml:id="def-confidence-interval-p">
+      <title>Confidence interval for the population proportion</title>
+      <statement>
+        <p>
+          A <em>confidence interval</em> (CI) for the unknown value of the population proportion <m>p</m> is
+        </p>
+        <p>
+          <md xml:id="eq-cip">\hat{p} \pm \big( \text{multiplier} \times \text{s.e.}(\hat{p})\big),</md>
+        </p>
+        <p>
+          where <m>\big( \text{multiplier} \times \text{s.e.}(\hat{p})\big)</m> is the <em>margin of error</em>, and <m>\text{s.e.}(\hat{p})</m> is the <em>standard error</em> of <m>\hat{p}</m> (see Equation <xref ref="eq-stderrorphat"/>), where <m>\hat{p}</m> is the sample proportion. For an <em>approximate</em> <m>95</m>% CI, the multiplier is <m>2</m>.
+        </p>
+      </statement>
+    </definition>
+    <figure xml:id="fig-p-producing-p-hat-html">
+      <caption>The CI gives an interval containing values of <m>p</m> that may have produced the observed value of <m>\hat{p}</m>. Here, the CI is <m>0.241</m> to <m>0.639</m>.</caption>
+      <image source="fig-p-producing-p-hat-html.gif" width="100%"/>
+    </figure>
+    <p>
+      In general, we do not know if the computed CI contains the actual value of <m>p</m>, since the value of <m>p</m> is usually unknown. However, in this contrived example, the CI <em>does</em> happen to straddle the value of <m>p = 0.5</m>.
+    </p>
+    <note>
+      <p>
+        In this case, we know the value of the population parameter: <m>p = 0.5</m>. Usually we do <em>not</em> know the value of the parameter. After all, that's why we take a sample: to <em>estimate</em> the unknown value of the population proportion.
+      </p>
+    </note>
+    <p>
+      Suppose <em>thousands</em> of people rolled a die <m>25</m> times, and <em>each</em> person found <m>\hat{p}</m> for their sample, and hence computed the CI for their sample of <m>25</m> rolls. Every sample of <m>25</m> rolls could produce a different estimate <m>\hat{p}</m>, and so a different value for <m>\text{s.e.}(\hat{p})</m>, and hence a different <m>95</m>% CI. However, <em>about 95% of these thousands of CIs from those thousands of samples would straddle the true proportion <m>p</m></em>.
+    </p>
+    <p>
+      Since we usually don't know the value of <m>p</m>, and since we usually only have one sample (and hence one CI), in general <em>we never know whether the CI computed from the single sample we have straddles the value of <m>p</m> or not</em>.
+    </p>
+    <p>
+      Again, let's allow the computer to simulate the situation. Suppose the process of recording the sample proportion of even numbers in <m>n = 25</m> rolls is repeated fifty times, and for each of those fifty sets of <m>25</m> rolls a CI is produced (see the animation below). About <m>95</m>% of those <m>95</m>% CIs straddle the value <m>p = 0.5</m> (shown as solid lines), but some do not (shown as dashed lines). Of course, value of <m>p</m> is rarely known, so we never know if the CI computed from our single sample contains <m>p</m> or not.
+    </p>
+    <image source="fig-roll-dice-ci-movie.gif" width="90%">
+      <description><p>An animation of <m>50</m> confidence intervals, each computed from a different sample of <m>25</m> die rolls; about <m>95</m>% of the intervals straddle the true value <m>p = 0.5</m>.</p></description>
+    </image>
+    <definition xml:id="def-confidence-interval">
+      <title>Confidence interval (CI)</title>
+      <statement>
+        <p>
+          A CI is an interval which contains the unknown value of the parameter a given percentage of the time (over repeated sampling).
+        </p>
+        <p>
+          Informally: a <em>confidence interval</em> (CI) is an interval likely to contain the unknown value of the parameter.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      In general, higher confidence means wider intervals (Fig. <xref ref="fig-ci-widths-many2"/>), since wider intervals are needed to be more certain that the interval contains <m>\hat{p}</m>. Try changing the confidence level for the CI in the interaction below.
+    </p>
+    <figure xml:id="fig-ci-widths-many2">
+      <caption>Changing the confidence level of the CI changes the width, for any given sample size.</caption>
+      <image source="fig-ci-widths-many2.png" width="70%"/>
+    </figure>
+    <note>
+      <p>
+        Using the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule produces <em>approximate</em> multipliers and hence <em>approximate</em> CIs. Exact multipliers (and hence exact CIs), which are <m>z</m>-scores, can be found using Appendix <xref ref="sec-z-tables-online"/>, or software.<idx>Software output</idx> Except for small sample sizes, the approximate CIs are generally close to the exact CIs.
+      </p>
+    </note>
+    <p>
+      <url href="https://learningapps.org/watch?v=p2hckvhh222" visual="learningapps.org/watch?v=p2hckvhh222">Interactive activity: confidence intervals for a proportion.</url>
+    </p>
+  </section>
+
+  <section xml:id="sec-ci-interpretation-p">
+    <title>Interpretation of a CI</title>
+    <idx><h>Confidence intervals</h><h>interpretation</h></idx>
+    <p>
+      The <em>correct</em> interpretation (see Def. <xref ref="def-confidence-interval"/>) of a <m>95</m>% CI is the following:
+    </p>
+    <blockquote>
+      <p>
+        If the same size samples were repeatedly taken many times, and the <m>95</m>% CI computed for each sample, <m>95</m>% of these CIs formed would contain the value of the parameter.
+      </p>
+    </blockquote>
+    <p>
+      In Sect. <xref ref="sec-conf-int-p-unknown-p"/>, the CI was interpreted as giving a range of values of <m>p</m> that could reasonably be expected to produce the observed value of <m>\hat{p}</m>. The CI can also be seen as having a <m>95</m>% chance of straddling the unknown value of the parameter. These are close to the correct interpretation.
+    </p>
+    <p>
+      Commonly, the CI is interpreted as having a <m>95</m>% chance of containing the value of population parameter <m>p</m> (even though the CI either <em>does</em> or <em>does not</em> contain the value of <m>p</m>). This is like a convenience that captures the essence of the correct interpretation. More details on interpreting a CI are given in Sect. <xref ref="sec-ci-interpretation"/>.
+    </p>
+    <p>
+      <url href="https://learningapps.org/watch?v=pn5cyc5nj22" visual="learningapps.org/watch?v=pn5cyc5nj22">Interactive activity: interpreting a confidence interval.</url>
+    </p>
+  </section>
+
+  <section xml:id="sec-validity-proportions">
+    <title>Statistical validity conditions</title>
+    <idx><h>Statistical validity (for inference)</h><h>one proportion</h></idx>
+    <p>
+      The CIs formed in this chapter assume the sampling distribution is approximately a normal distribution (and so, for example, the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule can be applied). This is only true if certain conditions are met. If these conditions are met (so that the sampling distribution has an approximate normal distribution), the CI is called <em>statistically valid</em>. Whenever a CI is formed, the relevant statistical validity conditions need to be checked.
+    </p>
+    <p>
+      If the statistical validity conditions are not met, an alternative method<idx>Non-parametric statistics</idx> <xref ref="conover2003practical"/> or resampling methods<idx>Resampling methods</idx> may be used <xref ref="efron2021computer"/>.
+    </p>
+    <definition xml:id="def-statistical-validity">
+      <title>Statistical validity</title>
+      <statement>
+        <p>
+          A result is <em>statistically valid</em> if the conditions for the underlying mathematical calculations to be approximately correct are met, such as the sampling distribution having an approximate normal distribution.
+        </p>
+      </statement>
+    </definition>
+    <image source="Illustrations/pexels-karolina-grabowska-4226912.jpg" width="25%">
+      <description><p>Image.</p></description>
+    </image>
+    <example xml:id="example-statistical-validity-analogy">
+      <title>Statistical validity analogy</title>
+      <p>
+        Suppose your doctor asks you to get a blood test, after fasting (refraining from eating) for <m>12\,\text{h}</m> before your test.
+      </p>
+      <p>
+        The next day, you have a big breakfast, lunch at a caf<ellipsis/>e, and then have your blood test. Your blood is analysed, and your doctor is sent the results of the blood test.
+      </p>
+      <p>
+        Since you did not fast, the results may or may not be valid. The doctor can learn <em>something</em>, but not as much as if you had followed instructions. Similarly, if the conditions for computing the CI are not met, the calculations still produce a CI, but the results may be slightly unreliable.
+      </p>
+    </example>
+    <p>
+      The CI for a single proportion is <em>statistically valid</em> if <em>both</em> of these are true:
+    </p>
+    <p>
+      <ul>
+        <li><p>the number of individuals of interest exceeds <m>5</m>.</p></li>
+        <li><p>the number of individuals <em>not</em> of interest exceeds <m>5</m>.</p></li>
+      </ul>
+    </p>
+    <p>
+      The value of <m>5</m> here is a rough figure; some books give other values (such as <m>10</m>). The units of analysis are also assumed to be <em>independent</em> (e.g., ideally from a simple random sample).
+    </p>
+    <p>
+      These conditions ensure that the sampling distribution of <m>\hat{p}</m> has an approximate normal distribution. If these conditions are not met, the normal model may not be a good approximation to the sampling distribution (so, for example, using the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule may be inappropriate) and so the CI may also be slightly unreliable.
+    </p>
+    <example xml:id="example-dice-stat-validity">
+      <title>Statistical validity</title>
+      <p>
+        For the die-throwing example in Sect. <xref ref="sec-conf-int-p-unknown-p"/>, <m>11</m> even rolls and <m>14</m> odd rolls were observed. Both exceed <m>5</m>, so the CI is statistically valid.
+      </p>
+    </example>
+    <example xml:id="example-statistical-validity-phat">
+      <title>Statistical validity conditions</title>
+      <p>
+        Consider a situation where <m>p = 0.1</m> is the population proportion for some result of interest.
+      </p>
+      <p>
+        A sample of size <m>n = 10</m> is taken, with one positive result: <m>\hat{p} = 0.1</m>. The statistical validity conditions <em>are not</em> satisfied, and the sampling distribution is not well modelled by a normal distribution (Fig. <xref ref="fig-statistical-validity-p-hat"/>, left panel). Using a normal distribution to model the sampling distribution would be silly.
+      </p>
+      <p>
+        In contrast, assume a sample of size <m>n = 150</m> is taken, with <m>15</m> positive results: <m>\hat{p} = 0.1</m> again. However, in this case, the statistical validity conditions <em>are</em> satisfied, and the sampling distribution is well modelled by a normal distribution (Fig. <xref ref="fig-statistical-validity-p-hat"/>, right panel).<idx><h>Confidence intervals</h><h>one proportion</h></idx>
+      </p>
+    </example>
+    <figure xml:id="fig-statistical-validity-p-hat">
+      <caption>Two proposed sampling distributions. The sampling distribution from many simulated samples is shown in the histogram; the normal model is shown by the solid lines. Left: when the statistical validity conditions are not met. Right: when the statistical validity conditions are met.</caption>
+      <image source="fig-statistical-validity-p-hat.png" width="90%"/>
+    </figure>
+  </section>
+
+  <section xml:id="sec-female-coffee-drinkers">
+    <title>Example: female coffee drinkers</title>
+    <image source="Illustrations/gian-cescon-GxQ13MXLTHQ-unsplash.jpg" width="25%">
+      <description><p>Image.</p></description>
+    </image>
+    <p>
+      <xref ref="data-Kelpin2018-AlcoholCoffee"/> studied <m>360</m> female college students in the United States, and found that <m>61</m> drank coffee daily. The parameter is <m>p</m>, the unknown <em>population</em> proportion of female college students in the United States that drink coffee daily.
+    </p>
+    <p>
+      The sample size is <m>n = 360</m>, and the <em>sample</em> proportion of daily coffee drinkers is <m>\hat{p} = 61/360 = 0.16944</m>. Of course, the sample proportion varies from sample to sample, so the sample proportion has <em>sampling variation</em>, measured by the <em>standard error</em>:
+    </p>
+    <p>
+      <md>\text{s.e.}(\hat{p}) = \sqrt{ \frac{ 0.16944 \times (1 - 0.16944)}{360}} = 0.01977.</md>
+    </p>
+    <p>
+      An approximate <m>95</m>% CI is <m>0.16944 \pm (2 \times 0.01977)</m>, or <m>0.16944 \pm 0.03954</m> (i.e., the <em>margin of error</em> is <m>0.03954</m>).<idx>Margin of error</idx> Equivalently, the approximate <m>95</m>% CI is from <m>0.130</m> to <m>0.209</m>, after rounding appropriately. We write:
+    </p>
+    <blockquote>
+      <p>
+        The sample proportion of female US college students who drink coffee daily is <m>\hat{p} = 0.169</m> (<m>n = 360</m>), with an approximate <m>95</m>% CI from <m>0.130</m> to <m>0.209</m>.
+      </p>
+    </blockquote>
+    <p>
+      That is, values for <m>p</m> that may have led to this value of <m>\hat{p} = 0.1694</m> are between <m>0.130</m> and <m>0.209</m> with <m>95</m>% confidence. (This CI may or may not contain the true proportion <m>p</m>.) This CI is <em>statistically</em> valid, since <m>61</m> in the sample drink coffee, and <m>299</m> do not (and both exceed five).
+    </p>
+    <warning>
+      <p>
+        Many decimal places are used in the working, but final answers are rounded.
+      </p>
+    </warning>
+  </section>
+
+  <section xml:id="sec-chap20-summary">
+    <title>Chapter summary</title>
+    <p>
+      To compute a confidence interval (CI) for a proportion, compute the sample proportion, <m>\hat{p}</m>, and identify the sample size <m>n</m> used to compute <m>\hat{p}</m>. Then compute the standard error, which quantifies how much the value of <m>\hat{p}</m> varies across all possible samples:
+    </p>
+    <p>
+      <md>\text{s.e.}(\hat{p}) = \sqrt{\frac{ \hat{p} \times (1-\hat{p})}{n}}.</md>
+    </p>
+    <p>
+      The <em>margin of error</em> is (multiplier<m>{}\times{}</m>standard error), where the multiplier is <m>2</m> for an approximate <m>95</m>% CI (from the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule). Then the CI is:
+    </p>
+    <p>
+      <md>\hat{p} \pm \left( \text{multiplier}\times\text{standard error} \right).</md>
+    </p>
+    <p>
+      The statistical validity conditions should also be checked.
+    </p>
+    <note>
+      <p>
+        You must use <em>proportions</em> in these formulas, <alert>not</alert> <em>percentages</em>; that is, use values between <m>0</m> and <m>1</m> (like <m>0.169</m> rather than <m>16.9</m>%).
+      </p>
+    </note>
+  </section>
+
+  <reading-questions xml:id="sec-chap24-quick-review">
+    <title>Quick review questions</title>
+    <introduction>
+      <p>
+        Are the following statements <em>true</em> or <em>false</em>?
+      </p>
+    </introduction>
+    <exercise label="rq-ci-one-proportion-1">
+      <statement><p><m>p</m> is a <em>parameter</em>.</p></statement>
+      <answer><p>True.</p></answer>
+    </exercise>
+    <exercise label="rq-ci-one-proportion-2">
+      <statement><p>The value of <m>p</m> will vary from sample to sample.</p></statement>
+      <answer><p>False.</p></answer>
+    </exercise>
+    <exercise label="rq-ci-one-proportion-3">
+      <statement><p>The <em>standard error</em> refers to the sampling variation in <m>p</m>.</p></statement>
+      <answer><p>False.</p></answer>
+    </exercise>
+    <exercise label="rq-ci-one-proportion-4">
+      <statement><p>Suppose <m>n = 50</m> and <m>\hat{p} = 0.4</m>; then the standard error of <m>\hat{p}</m> is <m>0.06928</m>.</p></statement>
+      <answer><p>True.</p></answer>
+    </exercise>
+  </reading-questions>
+
+  <exercises xml:id="sec-ci-one-proportion-exercises">
+    <introduction>
+      <p>Answers to odd-numbered exercises are given at the end of the book.</p>
+    </introduction>
+    <exercise xml:id="exercise-ci-one-proportion-hiccups">
+      <p>
+        <xref ref="data-Lee2016-Hiccups"/> found that <m>708</m> of <m>864</m> patients examined with hiccups were male in their sample.
+      </p>
+      <ol>
+        <li><p>Compute the sample proportion of people with hiccups who are male.</p></li>
+        <li><p>Find an approximate <m>95</m>% CI for the proportion of people with hiccups who are male.</p></li>
+        <li><p>Check if the statistical validity conditions are met or not.</p></li>
+        <li><p>Draw a sketch of how the sample proportion varies for samples of size <m>864</m>.</p></li>
+      </ol>
+    </exercise>
+    <exercise xml:id="exercise-ci-paramedic">
+      <p>
+        <xref ref="lord2009impact"/> studied how paramedics administer pain medication, and found that <m>791</m> of patients reporting pain did <em>not</em> receive pain relief, out of <m>1\,766</m> patients in the study who initially reported pain.
+      </p>
+      <ol>
+        <li><p>Compute the sample proportion of patients who did not receive pain medication.</p></li>
+        <li><p>Find an approximate <m>95</m>% CI for the proportion of patients who did not receive pain medication.</p></li>
+        <li><p>Check if the statistical validity conditions are met or not.</p></li>
+        <li><p>Draw a sketch of how the sample proportion varies for samples of size <m>1\,766</m>.</p></li>
+      </ol>
+    </exercise>
+    <exercise xml:id="exercise-ci-z-a">
+      <p>
+        For an approximate <m>95</m>% CI, the multiplier (from the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule) is <m>2</m>. Use Appendix <xref ref="sec-z-tables-online"/> to find the <em>exact</em> value for the multiplier.
+      </p>
+    </exercise>
+    <exercise xml:id="exercise-ci-z-b">
+      <p>
+        Use Appendix <xref ref="sec-z-tables-online"/> to find the <em>exact</em> value for the multiplier to create a <m>99</m>% CI.
+      </p>
+    </exercise>
+    <exercise xml:id="exercise-ci-one-proportion-snacking">
+      <p>
+        <xref ref="data-Mann12017-UniStudents"/> studied the eating habits of university students in Canada. They found that <m>8</m> students out of <m>154</m> met the recommendation for eating a sufficient number of servings of grains each day.
+      </p>
+      <ol>
+        <li><p>Find an approximate <m>95</m>% CI for the population proportion of Canadian students that meet the recommendation for eating a sufficient number of servings of grains each day.</p></li>
+        <li><p>Check if the statistical validity conditions are met or not.</p></li>
+        <li><p>Draw a sketch of how the sample proportion varies for samples of size <m>154</m>.</p></li>
+        <li><p>Would these results be likely to apply to US university students? Explain.</p></li>
+      </ol>
+    </exercise>
+    <exercise xml:id="exercise-koalas-crossing-roads">
+      <p>
+        <xref ref="data-Dexter2018-Koalas"/> found that <m>18</m> of the <m>n = 51</m> koalas studied in a certain area over <m>30</m> months had crossed at least one road during that time. The parameter is <m>p</m>, the unknown <em>population</em> proportion of koalas that had crossed at least one road over the <m>30</m> months.
+      </p>
+      <ol>
+        <li><p>Find an approximate <m>95</m>% CI for the proportion of koalas that had crossed the road at least once in the <m>30</m> months.</p></li>
+        <li><p>Check if the statistical validity conditions are met or not.</p></li>
+        <li><p>Draw a sketch of how the sample proportion varies for samples of size <m>51</m>.</p></li>
+      </ol>
+    </exercise>
+    <exercise xml:id="exercise-ci-one-proportion-salt-intake">
+      <p>
+        <xref ref="data-Sutherland-SaltIntake"/> studied salt intake in the United Kingdom, and found that <m>2\,182</m> out of the <m>6\,882</m> people sampled in 2007 'generally added salt at the table'. Find an approximate <m>95</m>% CI for the population proportion of Britons that generally add salt at the table.
+      </p>
+    </exercise>
+    <exercise xml:id="exercise-ci-turbines">
+      <p>
+        A study of turbine failures <xref ref="MyersBook"/><xref ref="NelsonLifeData"/> ran <m>42</m> turbines for around <m>3\,000\,\text{h}</m>, and found that nine developed fissures (small cracks). Find a <m>95</m>% CI for the true proportion of turbines that would develop fissures after <m>3\,000\,\text{h}</m> of use. Are the statistical validity conditions satisfied?
+      </p>
+      <p>
+        The study also ran <m>39</m> turbines for around <m>400\,\text{h}</m>, and found that zero developed fissures. Find a <m>95</m>% CI for the true proportion of turbines that would develop fissures after <m>400\,\text{h}</m> of use. Are the statistical validity conditions satisfied?
+      </p>
+    </exercise>
+    <exercise xml:id="exercise-canadian-energy-drinks">
+      <p>
+        <xref ref="data-Hammond2018-Drinks"/> studied young Canadians aged <m>12</m><ndash/><m>24</m>, and found <m>365</m> of the <m>1\,516</m> respondents reported sleeping difficulties after consuming energy drinks. Find a <m>95</m>% CI for the true proportion of young Canadians who experience sleeping difficulties after consuming energy drinks. Are the statistical validity conditions satisfied?
+      </p>
+    </exercise>
+    <exercise xml:id="exercise-one-prop-ci-alcohol">
+      <p>
+        <xref ref="mclaughlin2010alcohol"/> studied the proportion of alcohol-associated calls to the ambulance service over four years in a midwestern American town. Of the <m>1\,014</m> calls received over the four years, <m>500</m> were received on the weekend (Saturday and Sunday). Find an approximate <m>95</m>% CI for the true proportion of alcohol-related calls that occur on the weekend.
+      </p>
+    </exercise>
+    <exercise xml:id="exercise-one-prop-ci-ai">
+      <p>
+        <xref ref="oca2023bias"/> used three different AI chatbots to produce recommendations for ophthalmologist in the <m>20</m> largest cities in the USA. ChatGPT made <m>44</m> recommendations, of which <m>14</m> were female. Find an approximate <m>95</m>% CI for the true proportion of female ophthalmologists recommended in those <m>20</m> cities.
+      </p>
+    </exercise>
+    <exercise xml:id="exercise-one-prop-ci-cheating">
+      <p>
+        ChatGPT was launched in 2022. <xref ref="lee2024cheating"/> studied the impact on cheating for Californian high-school students in 2023. Students were asked to respond to this question (among many others):
+      </p>
+      <blockquote>
+        <p>
+          In the past month, how often have you used an Artificial Intelligence or digital device (e.g. ChatGPT, smart phone) as an unauthorised aid during an assessment, school assignment, or homework.
+        </p>
+      </blockquote>
+      <p>
+        Options were 'Never', 'Once', '<m>2</m> to <m>3</m> times' and '<m>4</m> or more times'.
+      </p>
+      <p>
+        In private high schools, <m>13</m> of <m>202</m> students reported using AI in this manner at least once. Find an approximate <m>95</m>% CI for the true proportion of students using ChatGPT in this manner in 2023.
+      </p>
+    </exercise>
+    <exercise xml:id="exercise-one-prop-ci-wear-hats">
+      <p>
+        [<em>Dataset</em>: <c>HatSunglasses</c>] <xref ref="data-Dexter2019-SunProtection"/> recorded the number of people at the foot of the Goodwill Bridge, Brisbane, who wore hats between <m>11</m>:<m>30</m>am to <m>12</m>:<m>30</m>pm. Of the <m>752</m> people observed, <m>101</m> wore hats. Find an approximate <m>95</m>% CI for the true proportion of people wearing hats at this time at the foot of the Goodwill Bridge.
+      </p>
+    </exercise>
+    <exercise xml:id="exercise-one-prop-ci-wear-sunglasses">
+      <p>
+        [<em>Dataset</em>: <c>HatSunglasses</c>] <xref ref="data-Dexter2019-SunProtection"/> recorded the number of people at the foot of the Goodwill Bridge, Brisbane, who wore sunglasses between <m>11</m>:<m>30</m>am to <m>12</m>:<m>30</m>pm. Of the <m>752</m> people observed, <m>249</m> wore sunglasses. Find an approximate <m>95</m>% CI for the true proportion of people wearing sunglasses at this time at the foot of the Goodwill Bridge.
+      </p>
+    </exercise>
+  </exercises>
 </chapter>

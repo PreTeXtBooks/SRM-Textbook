@@ -1,5 +1,445 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Source: 23-CIs-OneMean.Rmd -->
 <chapter xml:id="ch-23-cis-one-mean" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Confidence intervals: one mean</title>
-  <p>Skeleton for <em>23-CIs-OneMean.Rmd</em>. Content to be added.</p>
+  <objectives xml:id="objectives-ch23">
+    <introduction>
+      <p>So far, you have learnt to ask an RQ, design a study, classify and summarise the data, and construct a confidence interval for one proportion. You have also been introduced to confidence intervals. <alert>In this chapter</alert>, you will learn to</p>
+    </introduction>
+    <ul>
+      <li><p>identify situations where estimating a mean is appropriate.</p></li>
+      <li><p>form confidence intervals for one mean.</p></li>
+      <li><p>determine whether the conditions for using the confidence intervals apply in a given situation.</p></li>
+    </ul>
+  </objectives>
+
+  <section xml:id="sec-one-mean-conf-interval">
+    <title>Introduction</title>
+    <idx><h>Confidence intervals</h><h>one mean|(</h></idx>
+    <image source="Illustrations/pexels-skitterphoto-705171.jpg" width="25%">
+      <description><p>Image.</p></description>
+    </image>
+    <p>
+      Consider rolling a fair, six-sided die <m>n = 25</m> times. Suppose we are interested in the <em>mean</em> of the numbers that are rolled. Since every face of the die is equally likely to appear on any one roll, the population mean of all possible rolls is <m>\mu = 3.5</m> (in the middle of the numbers on the faces of the die, so this is also the <em>median</em>).
+    </p>
+    <p>
+      What will be the sample mean of the numbers in the <m>25</m> rolls? We don't know, as the sample mean varies from sample to sample (<em>sampling variation</em>).
+    </p>
+    <warning>
+      <p>
+        Remember: studying a sample leads to the following observations:
+      </p>
+      <ul>
+        <li><p>every sample is likely to be different.</p></li>
+        <li><p>we observe just one of the many possible samples.</p></li>
+        <li><p>every sample is likely to yield a different value for the statistic.</p></li>
+        <li><p>we observe just one of the many possible values for the statistic.</p></li>
+      </ul>
+      <p>
+        Since many values for the sample mean are possible, the values of the sample mean vary (called <em>sampling variation</em>) and have a <em>distribution</em> (called a <em>sampling distribution</em>).
+      </p>
+    </warning>
+  </section>
+
+  <section xml:id="sec-sampling-dist-sample-mean-sigma-known">
+    <title>Sampling distribution for <m>\bar{x}</m>: for <m>\sigma</m> known</title>
+    <idx><h>Sampling distribution</h><h>one mean (\sigma known)</h></idx>
+    <p>
+      Suppose thousands of people made one set of <m>25</m> rolls each, and computed the mean for their sample.<idx><h>Mean</h><h>of a sample</h></idx> Then, every person would have a sample mean for their sample, and we could produce a histogram of all these sample means (Fig. <xref ref="fig-roll-dice-hist-mean-fig"/>). The mean for any single sample of <m>n = 25</m> rolls will sometimes be higher than <m>\mu = 3.5</m>, and sometimes lower than <m>\mu = 3.5</m>, but often close to <m>3.5</m>. Sample means larger than <m>4.5</m>, or smaller than <m>2.5</m>, would occur rarely.
+    </p>
+    <figure xml:id="fig-roll-dice-hist-mean-fig">
+      <caption>Rolling dice: the mean of 25 rolls, for thousands of repetitions. The solid line is the normal distribution used to model the sampling distribution.</caption>
+      <image source="fig-roll-dice-hist-mean-fig.png" width="60%"/>
+    </figure>
+    <p>
+      From Fig. <xref ref="fig-roll-dice-hist-mean-fig"/>, the sample means vary with an approximate normal distribution (as with the sample proportions). This normal distribution does <em>not</em> describe the data; it describes how the <em>values of the sample means vary across all possible samples</em>. Under certain conditions (Sect. <xref ref="sec-validity-sample-mean"/>), the values of the sample mean vary with a normal distribution, and this normal distribution has a mean and a standard deviation.
+    </p>
+    <p>
+      The mean of this sampling distribution (the <em>sampling mean</em>) has the value <m>\mu</m>. The standard deviation of this sampling distribution (the <em>standard error of the sample means</em>) is denoted <m>\text{s.e.}(\bar{x})</m>. When the <em>population</em> standard deviation <m>\sigma</m> is <em>known</em>, the value of the standard error happens to be
+    </p>
+    <me>\text{s.e.}(\bar{x}) = \frac{\sigma}{\sqrt{n}}.</me>
+    <p>
+      In summary, the values of the sample means have a <em>sampling distribution</em> described by:
+    </p>
+    <ul>
+      <li><p>an approximate normal distribution,</p></li>
+      <li><p>with a sampling mean whose value is <m>\mu</m>, and</p></li>
+      <li><p>a standard deviation, called the standard error, of <m>\text{s.e.}(\bar{x}) = \sigma/\sqrt{n}</m>.</p></li>
+    </ul>
+    <p>
+      However, since the <em>population</em> standard deviation is rarely ever known, we will focus on the case where the value of <m>\sigma</m> is unknown (and estimated by the <em>sample</em> standard deviation, <m>s</m>).
+    </p>
+  </section>
+
+  <section xml:id="sec-sampling-dist-sample-mean">
+    <title>Sampling distribution for <m>\bar{x}</m>: for <m>\sigma</m> unknown</title>
+    <idx><h>Sampling distribution</h><h>one mean</h></idx>
+    <p>
+      Since the value of the population standard deviation <m>\sigma</m> is almost never known, the sample standard deviation <m>s</m> is used to estimate the standard error of the mean: <m>\text{s.e.}(\bar{x}) = s/\sqrt{n}</m>. With this information, the <em>sampling distribution of the sample mean</em> can be described.
+    </p>
+    <definition xml:id="def-sampling-distribution-xbar-ci">
+      <title>Sampling distribution of a sample mean for <m>\sigma</m> unknown</title>
+      <statement>
+        <p>
+          When the <em>population</em> standard deviation is unknown, the <em>sampling distribution of the sample mean</em> is (when certain conditions are met; Sect. <xref ref="sec-validity-sample-mean"/>) described by:
+        </p>
+        <ul>
+          <li><p>an approximate normal distribution,</p></li>
+          <li><p>centred around a sampling mean whose value is <m>\mu</m>,</p></li>
+          <li><p>with a standard deviation (called the <em>standard error of the mean</em>), denoted <m>\text{s.e.}(\bar{x})</m>, whose value is</p></li>
+        </ul>
+        <men xml:id="eq-stderrorxbar-ci">\text{s.e.}(\bar{x}) = \frac{s}{\sqrt{n}},</men>
+        <p>
+          where <m>n</m> is the size of the sample, and <m>s</m> is the sample standard deviation of the observations.
+        </p>
+      </statement>
+    </definition>
+    <warning>
+      <p>
+        A mean or a median may be appropriate for describing the <em>data</em>. However, the <em>sampling distribution</em> for the sample mean (under certain conditions) has a <em>normal distribution</em>. Hence, the mean is appropriate for describing the sampling distribution, even if not for describing the data.
+      </p>
+    </warning>
+  </section>
+
+  <section xml:id="sec-one-mean-ci">
+    <title>Confidence intervals for <m>\mu</m></title>
+    <p>
+      In practice, we do not know the value of <m>\mu</m>. After all, that's why we take a sample: to <em>estimate</em> the value of the unknown population mean. Suppose, then, we did not know the value of <m>\mu</m> (the parameter) for the die-rolling situation, but we have an <em>estimate</em>: the value of <m>\bar{x}</m>, the sample mean (the statistic). The value of <m>\bar{x}</m> may be a bit smaller than <m>\mu</m>, or a bit larger than <m>\mu</m> (but we don't know which, since we do not know the value of <m>\mu</m>). In other words, the values of <m>\mu</m> that may have produced the observed value <m>\bar{x}</m> may be less than the value of <m>\bar{x}</m>, or greater than the value of <m>\bar{x}</m>.
+    </p>
+    <p>
+      Since the values of <m>\bar{x}</m> vary from sample to sample (<em>sampling variation</em>) with an approximate normal distribution (Def. <xref ref="def-sampling-distribution-xbar-ci"/>), the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule could be used to construct an approximate <m>95</m>% interval for the plausible values of <m>\mu</m> that may have produced the observed values of the sample mean.<idx>68–95–99.7 rule</idx> This is a <em>confidence interval</em> (or a CI).
+    </p>
+    <p>
+      A CI for the population mean is an interval surrounding a sample mean. In general, a CI for <m>\mu</m> is
+    </p>
+    <me>\bar{x} \pm \overbrace{\big(\text{multiplier}\times\text{s.e.}(\bar{x})\big)}^{\text{The `margin of error'}}.</me>
+    <p>
+      For an approximate <m>95</m>% CI, the multiplier is about <m>2</m> (since about <m>95</m>% of values are within two standard deviations of the mean, from the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule).
+    </p>
+    <definition xml:id="def-confidence-intervalmu">
+      <title>Confidence interval for <m>\mu</m></title>
+      <statement>
+        <p>
+          A <em>confidence interval</em> (CI) for the unknown value of the population mean <m>\mu</m> is
+        </p>
+        <men xml:id="eq-c-imu">\bar{x} \pm \big( \text{multiplier} \times \text{s.e.}(\bar{x})\big),</men>
+        <p>
+          where <m>\big( \text{multiplier} \times \text{s.e.}(\bar{x})\big)</m> is the <em>margin of error</em>, and <m>\text{s.e.}(\bar{x})</m> is the <em>standard error</em> of <m>\bar{x}</m> (see Equation <xref ref="eq-stderrorxbar-ci"/>), where <m>\bar{x}</m> is the sample mean, and <m>n</m> is the sample size. For an <em>approximate</em> <m>95</m>% CI, the multiplier is <m>2</m>.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      CIs are often <m>95</m>% CIs, but any level of confidence can be used (with the appropriate multiplier). In this book, a multiplier of <m>2</m> is used when <em>approximate</em> <m>95</m>% CIs are created manually, and otherwise software is used.<idx>Software output</idx> Commonly, CIs are computed at <m>90</m>%, <m>95</m>% and <m>99</m>% confidence levels.
+    </p>
+    <note>
+      <p>
+        In Chap. <xref ref="ch-22-cis-one-proportion"/>, the multiplier was a <m>z</m>-score, and approximate values for the multiplier were found using the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule.
+      </p>
+      <p>
+        However, when computing the CI for a sample mean, the multiplier is <em>not</em> a <m>z</m>-score. The multiplier would be a <m>z</m>-score if the value of the <em>population</em> standard deviation was known (e.g., the situation in Sect. <xref ref="sec-sampling-dist-sample-mean-sigma-known"/>). When <m>\sigma</m> is unknown (almost always), and the <em>sample</em> standard deviation is used instead, the multiplier is a <m>t</m>-score (Sect. <xref ref="sec-tscores"/>).<idx>t-score</idx>
+      </p>
+      <p>
+        The values of <m>t</m>- and <m>z</m>-multipliers are <em>very</em> similar, and (except for small sample sizes) using an approximate multiplier of <m>2</m> is reasonable for computing <em>approximate</em> <m>95</m>% CIs in either case.
+      </p>
+    </note>
+    <p>
+      Pretend for the moment that the value of <m>\mu</m> was unknown, and we tossed a die <m>25</m> times, and found <m>\bar{x} = 3.2</m> and <m>s = 2.5</m>. Then,
+    </p>
+    <me>\text{s.e.}(\bar{x}) = \frac{s}{\sqrt{n}} = \frac{2.5}{\sqrt{25}} = 0.5.</me>
+    <p>
+      Hence, the sample means vary with an approximate normal distribution, centred around the unknown value of <m>\mu</m>, with a standard deviation of <m>\text{s.e.}(\bar{x}) = 0.5</m> (Fig. <xref ref="fig-dice-mean-normal"/>).
+    </p>
+    <figure xml:id="fig-dice-mean-normal">
+      <caption>The sampling distribution is an approximate normal distribution with mean <m>3.5</m> and standard error <m>0.5</m>; it is a model of how the mean roll varies when a die is rolled <m>25</m> times.</caption>
+      <image source="fig-dice-mean-normal.png" width="95%"/>
+    </figure>
+    <p>
+      Our estimate of <m>\bar{x} = 3.2</m> may be a bit smaller than the value of <m>\mu</m>, or a bit larger than the value of <m>\mu</m>; that is, the value of <m>\mu</m> is <m>\bar{x}</m>, give-or-take a bit. A range of <m>\mu</m> values that are likely to straddle <m>\bar{x}</m> is given by a CI. An <em>approximate</em> <m>95</m>% CI is (using Equation <xref ref="eq-c-imu"/>) from
+    </p>
+    <md>
+      <mrow>3.2 - (2 \times 0.5) \amp \qquad\text{(which is } 2.2 \text{)}</mrow>
+      <mrow>\text{to}\quad 3.2 + (2 \times 0.5) \amp \qquad\text{(which is } 4.2 \text{)}.</mrow>
+    </md>
+    <p>
+      Hence, values of <m>\mu</m> between <m>2.2</m> to <m>4.2</m> could reasonably have produced a sample mean of <m>\bar{x} = 3.2</m>. Using software, the exact <m>95</m>% CI is from <m>2.17</m> to <m>4.23</m>, the same as the approximate CI to one decimal place.<idx><h>Software output</h><h>one mean</h></idx>
+    </p>
+  </section>
+
+  <section xml:id="sec-validity-sample-mean">
+    <title>Statistical validity conditions</title>
+    <idx><h>Statistical validity (for inference)</h><h>one mean</h></idx>
+    <p>
+      As with any CI, the underlying mathematics requires certain conditions to be met so that the results are statistically valid (i.e., the sampling distribution is sufficiently like a normal distribution).
+    </p>
+    <p>
+      The CI for a single mean is <em>statistically valid</em> if <em>either</em> of these is true:
+    </p>
+    <ul>
+      <li><p><m>n \ge 25</m>. (If the distribution of the data is highly skewed, the sample size may need to be larger.)</p></li>
+      <li><p><m>n &lt; 25</m>, <em>and</em> the sample data come from a population with a normal distribution.</p></li>
+    </ul>
+    <p>
+      The sample size of <m>25</m> is a rough figure, and some books give other values (such as <m>30</m>).
+    </p>
+    <p>
+      This condition ensures that the <em>sampling distribution of the sample means has an approximate normal distribution</em> (so that, for example, the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule can be used).<idx>68–95–99.7 rule</idx> Provided the sample size is larger than about <m>25</m>, this will be approximately true <em>even if</em> the distribution of the individuals in the population do not have a normal distribution. That is, when <m>n \ge 25</m> the sample means generally have an approximate normal distribution, even if the data themselves do not follow a normal distribution. The units of analysis are also assumed to be <em>independent</em> (e.g., ideally from a simple random sample).
+    </p>
+    <p>
+      If the statistical validity conditions are not met, other methods (e.g., non-parametric methods<idx>Non-parametric statistics</idx> <xref ref="bauer1972constructing"/>; resampling methods<idx>Resampling methods</idx> <xref ref="efron2021computer"/>) may be used.
+    </p>
+    <warning>
+      <p>
+        When <m>n \ge 25</m> approximately, the <em>data</em> do not have to have a normal distribution. The <em>sample means</em> need to have a normal distribution, which is approximately true if the statistical validity conditions are true.
+      </p>
+    </warning>
+    <example xml:id="example-dice-conditions">
+      <title>Statistical validity</title>
+      <p>
+        In the die example (Sect. <xref ref="sec-one-mean-ci"/>), where <m>n = 25</m>, the CI is statistically valid.
+      </p>
+    </example>
+    <p>
+      The second statistical validity condition requires the <em>population</em> to have a normal distribution. Knowing this is obviously difficult; we do not have access to the whole population. All we can reasonably do is to identify (from the sample) whether the population is likely to be non-normal (when the CI would be not valid).
+    </p>
+    <image source="Illustrations/pexels-anna-shvets-4225923.jpg" width="25%">
+      <description><p>Image.</p></description>
+    </image>
+    <example xml:id="example-assumptions-ct">
+      <title>Statistical validity</title>
+      <p>
+        <xref ref="data-silverman-CT"/> examine exposure to radiation for CT scans in the abdomen for <m>n = 17</m> patients <xref ref="data-zou-fluoroscopy"/>. As the sample size is 'small' (less than <m>25</m>), the <em>population data</em> must have a normal distribution for a CI for <m>\mu</m> to be statistically valid.
+      </p>
+      <p>
+        A histogram of the total radiation dose received using the <em>sample</em> data (Fig. <xref ref="fig-ctscan-histogram"/>) suggests this is very unlikely. Even though the histogram is from <em>sample</em> data, it seems improbable that the data in the sample would have come from a <em>population</em> with a normal distribution.
+      </p>
+      <p>
+        A CI for the mean of these data will probably <em>not</em> be statistically valid. Other methods (such as resampling methods<idx>Resampling methods</idx>, which are beyond the scope of this book) are needed to compute a CI for the mean.
+      </p>
+    </example>
+    <figure xml:id="fig-ctscan-histogram">
+      <caption>The radiation doses from CT scans for <m>17</m> people.</caption>
+      <image source="fig-ctscan-histogram.png" width="75%"/>
+    </figure>
+    <idx><h>Confidence intervals</h><h>one mean|)</h></idx>
+    <p>
+      <url href="https://learningapps.org/watch?v=ppetqnq4322" visual="learningapps.org/watch?v=ppetqnq4322">Interactive activity: confidence intervals for one mean.</url>
+    </p>
+  </section>
+
+  <section xml:id="sec-cadmium-in-peanuts">
+    <title>Example: cadmium in peanuts</title>
+    <idx><h>Examples</h><h>cadmium in peanuts</h></idx>
+    <image source="Illustrations/tom-hermans-ZPfd3ZobOc0-unsplash.jpg" width="25%">
+      <description><p>Image.</p></description>
+    </image>
+    <p>
+      <xref ref="data-Blair2017-Peanuts"/> studied peanuts gathered from a variety of regions in the United States over various times (perhaps a representative sample). They found the sample mean cadmium concentration was <m>\bar{x} = 0.076\ppms</m> with a standard deviation of <m>s = 0.0460\ppms</m>, from a sample of <m>290</m> peanuts. The parameter is <m>\mu</m>, the population mean cadmium concentration in peanuts.
+    </p>
+    <p>
+      Every sample of <m>n = 290</m> peanuts is likely to produce a different sample mean, so <em>sampling variation</em> in <m>\bar{x}</m> exists and can be measured using the standard error:
+    </p>
+    <me>\text{s.e.}(\bar{x}) = \frac{s}{\sqrt{n}} = \frac{0.0460}{\sqrt{290}} = 0.002701\ppms.</me>
+    <p>
+      The approximate <m>95</m>% CI is <m>0.0768 \pm (2 \times 0.002701)</m>, or <m>0.0768 \pm 0.00540</m>, which is from <m>0.0714</m> to <m>0.0822\ppms</m>. (The <em>margin of error</em> is <m>0.00540</m>.)<idx>Margin of error</idx> We write:
+    </p>
+    <blockquote>
+      <p>The sample mean cadmium concentration of peanuts is <m>0.0768\ppms</m> (<m>n = 290</m>), with an approximate <m>95</m>% CI from <m>0.0714</m> to <m>0.0822\ppms</m>.</p>
+    </blockquote>
+    <p>
+      If we repeatedly took samples of size <m>290</m> from this population, about <m>95</m>% of the <m>95</m>% CIs would contain the population mean (<em>our</em> CI may or may not contain the value of <m>\mu</m>). The plausible values of <m>\mu</m> that could have produced <m>\bar{x} = 0.0768</m> are between <m>0.0714</m> and <m>0.0822\ppms</m>. Alternatively, we are about <m>95</m>% confident that the CI of <m>0.0714</m> to <m>0.0822\ppms</m> straddles the population mean.
+    </p>
+    <p>
+      Since the sample size is larger than <m>25</m>, the CI is statistically valid.
+    </p>
+  </section>
+
+  <section xml:id="sec-one-mean-summary">
+    <title>Chapter summary</title>
+    <p>
+      To compute a confidence interval (CI) for a mean, compute the sample mean, <m>\bar{x}</m>, and identify the sample size <m>n</m>. Then compute the standard error, which quantifies how much the value of <m>\bar{x}</m> varies across all possible samples:
+    </p>
+    <me>\text{s.e.}(\bar{x}) = \frac{s}{\sqrt{n}},</me>
+    <p>
+      where <m>s</m> is the sample standard deviation. The <em>margin of error</em> is (multiplier<m>{}\times{}</m>standard error), where the multiplier is <m>2</m> for an approximate <m>95</m>% CI (from the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule). Then the CI is:
+    </p>
+    <me>\bar{x} \pm \left( \text{multiplier}\times\text{standard error} \right).</me>
+    <p>
+      The statistical validity conditions should also be checked.
+    </p>
+  </section>
+
+  <reading-questions xml:id="sec-one-mean-quick-review">
+    <title>Quick review questions</title>
+    <introduction>
+      <p>
+        Are the following statements <em>true</em> or <em>false</em>?
+      </p>
+    </introduction>
+    <exercise label="rq-ch23-1">
+      <statement><p>The value of <m>\bar{x}</m> varies from sample to sample.</p></statement>
+      <answer><p>True.</p></answer>
+    </exercise>
+    <exercise label="rq-ch23-2">
+      <statement><p>A CI for <m>\mu</m> is never statistically valid if the histogram of the <em>data</em> has a non-normal distribution.</p></statement>
+      <answer><p>False.</p></answer>
+    </exercise>
+    <exercise label="rq-ch23-3">
+      <statement><p>A sample of data produces <m>s = 8</m> and <m>n = 20</m>; the standard error of the mean is <m>1.7889</m>.</p></statement>
+      <answer><p>True.</p></answer>
+    </exercise>
+    <exercise label="rq-ch23-4">
+      <statement><p>When the sample size is less than <m>25</m>, the standard error is not statistically valid.</p></statement>
+      <answer><p>False.</p></answer>
+    </exercise>
+  </reading-questions>
+
+  <exercises xml:id="sec-one-mean-conf-interval-exercises">
+    <title>Exercises</title>
+    <introduction>
+      <p>Answers to odd-numbered exercises are given at the end of the book.</p>
+    </introduction>
+
+    <exercise xml:id="exercise-one-mean-ci-bears">
+      <p>
+        <xref ref="bartareau2017estimating"/> studied American black bears, and found the mean weight of the <m>n = 185</m> male bears was <m>\bar{x} = 84.9\kgs</m>, with a standard deviation of <m>s = 51.1\kgs</m>.
+      </p>
+      <ol>
+        <li><p>Define the <em>parameter</em> of interest.</p></li>
+        <li><p>Compute the standard error of the mean.</p></li>
+        <li><p>Draw a picture of the approximate sampling distribution for <m>\bar{x}</m>.</p></li>
+        <li><p>Compute the approximate <m>95</m>% CI.</p></li>
+        <li><p>Write a conclusion.</p></li>
+        <li><p>Is the CI statistically valid?</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="exercise-bags-ci">
+      <p>
+        <xref ref="data-Dianat2014-schoolbags"/> studied the weight of the school bags of a sample of <m>586</m> children in Grades <m>6</m>--<m>8</m> in Tabriz, Iran. The mean weight was <m>\bar{x} = 2.8\kgs</m> with a standard deviation of <m>s = 0.94\kgs</m>.
+      </p>
+      <ol>
+        <li><p>Define the <em>parameter</em> of interest.</p></li>
+        <li><p>Compute the standard error of the mean.</p></li>
+        <li><p>Draw a picture of the approximate sampling distribution for <m>\bar{x}</m>.</p></li>
+        <li><p>Compute the approximate <m>95</m>% CI.</p></li>
+        <li><p>Write a conclusion.</p></li>
+        <li><p>Is the CI statistically valid?</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="exercise-ci-one-mean-lung-capacity-in-children">
+      <p>
+        [<em>Dataset</em>: <c>LungCap</c>] <xref ref="data-Tager-FEV"/> studied the lung capacity of children in East Boston. They measured the forced expiratory volume (FEV) of a sample of <m>n = 45</m> eleven-year-old girls. For these children, the mean lung capacity was <m>\bar{x} = 2.85</m> litres and the standard deviation was <m>s = 0.43</m> litres <xref ref="BIB-data-FEV"/>. Find an approximate <m>95</m>% CI for the population mean lung capacity of eleven-year-old females from East Boston.
+      </p>
+    </exercise>
+
+    <exercise xml:id="exercise-ci-one-mean-environmental-pollution">
+      <p>
+        <xref ref="data-Taylor2013-Lead"/> studied lead smelter emissions near children's public playgrounds. They found the mean lead concentration at one playground (Memorial Park, Port Pirie, in South Australia) was <m>6\,956.41\microgs.\ms^{-2}</m>, with a standard deviation of <m>7\,571.74\microgs.\ms^{-2}</m>, from a sample of <m>n = 58</m> wipes taken over a seven-day period. (As a reference, the Western Australian Government recommends a maximum of <m>400\microgs.\ms^{-2}</m>.)
+      </p>
+      <p>
+        Find an approximate <m>95</m>% CI for the mean lead concentration at this playground. Would these results apply to playgrounds in other parts of Australia?
+      </p>
+    </exercise>
+
+    <exercise xml:id="exercise-ci-one-mean-toothbrushing">
+      <p>
+        <xref ref="data-Macgregor1985-ToothbrushinghYoungAdults"/> studied the brushing time for <m>60</m> young adults (aged <m>18</m>--<m>22</m> years old), and found the mean tooth brushing time was <m>33.0\secs</m>, with a standard deviation of <m>12.0\secs</m>. Find an approximate <m>95</m>% CI for the mean brushing time for young adults.
+      </p>
+    </exercise>
+
+    <exercise xml:id="exercise-ci-one-mean-blood-loss">
+      <p>
+        <xref ref="data-Williams2007-BloodLoss"/> asked paramedics (<m>n = 199</m>) to estimate the amount of blood loss on four different surfaces. When the actual amount of blood spill on concrete was <m>1\,000\mLs</m>, the mean guess was <m>846.4\mLs</m> (with a standard deviation of <m>651.1\mLs</m>).
+      </p>
+      <ol>
+        <li><p>What is the approximate <m>95</m>% CI for the mean guess of blood loss?</p></li>
+        <li><p>Do you think the participants are good at estimating the amount of blood loss on concrete?</p></li>
+        <li><p>Is this CI statistically valid?</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="exercise-one-mean-ci-nhanes-interpret">
+      <p>
+        [<em>Dataset</em>: <c>NHANES</c>] Using data from the <em>nhanes</em> study <xref ref="data-NHANES3-Data"/>, the approximate <m>95</m>% CI for the mean direct HDL cholesterol is <m>1.356</m> to <m>1.374\mmols</m>/L. Which (if any) of these interpretations are acceptable? Explain <em>why</em> the other interpretations are incorrect.
+      </p>
+      <ol>
+        <li><p>In the <em>sample</em>, about <m>95</m>% of individuals have a direct HDL concentration between <m>1.356</m> to <m>1.374\mmols</m>/L.</p></li>
+        <li><p>In the <em>population</em>, about <m>95</m>% of individuals have a direct HDL concentration between <m>1.356</m> to <m>1.374\mmols</m>/L.</p></li>
+        <li><p>About <m>95</m>% of the <em>samples</em> are between <m>1.356</m> to <m>1.374\mmols</m>/L.</p></li>
+        <li><p>About <m>95</m>% of the <em>populations</em> are between <m>1.356</m> to <m>1.374\mmols</m>/L.</p></li>
+        <li><p>The <em>population</em> mean varies so that it is between <m>1.356</m> to <m>1.374\mmols</m>/L about <m>95</m>% of the time.</p></li>
+        <li><p>We are about <m>95</m>% sure that the <em>sample</em> mean is between <m>1.356</m> to <m>1.374\mmols</m>/L.</p></li>
+        <li><p>It is plausible that the <em>sample</em> mean is between <m>1.356</m> to <m>1.374\mmols</m>/L.</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="exercise-one-mean-std-error">
+      <p>
+        <xref ref="data-Grabosky2016-Trees"/> describe the diameter of <em>Quercus bicolor</em> trees planted in a lawn as having a mean of <m>25.8\cms</m>, with a standard error of <m>0.64\cms</m>, from a sample of <m>19</m> trees. Which (if either) of the following is correct?
+      </p>
+      <ol>
+        <li><p>About <m>95</m>% of the trees in the <em>sample</em> will have a diameter between <m>25.8 - (2\times 0.64)</m> and <m>25.8 + (2\times 0.64)\cms</m> (using the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule).</p></li>
+        <li><p>About <m>95</m>% of these types of trees in the <em>population</em> will have a diameter between <m>25.8 - (2\times 0.64)</m> and <m>25.8 + (2\times 0.64)\cms</m> (using the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule)?</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="exercise-chewing-time">
+      <p>
+        <xref ref="watanabe1995estimation"/> studied <m>n = 30</m> five-year-old children, and found the mean time for the children to eat a cookie was <m>61.3\secs</m>, with a standard deviation of <m>29.4\secs</m>.
+      </p>
+      <ol>
+        <li><p>What is an approximate <m>95</m>% CI for the population mean time for a five-year-old child to eat a cookie?</p></li>
+        <li><p>Is the CI statistically valid?</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="exercise-ci-pizzas">
+      <p>
+        [<em>Dataset</em>: <c>PizzaSize</c>] In 2011, <em>Eagle Boys Pizza</em> ran a campaign that claimed (among many other claims) that <em>Eagle Boys</em> pizzas were 'Real size <m>12</m>-inch large pizzas' in an effort to out-market <em>Dominos Pizza</em>. <em>Eagle Boys</em> made the data behind the campaign publicly available <xref ref="mypapers-Dunn-PizzaSize"/>. A summary of the diameters of a sample of <m>125</m> of <em>Eagle Boys</em> large pizzas is shown in Fig. <xref ref="fig-pizza-ci-jamovi"/>.
+      </p>
+      <ol>
+        <li><p>What do <m>\mu</m> and <m>\bar{x}</m> represent in this context?</p></li>
+        <li><p>Write down the <em>values</em> of <m>\mu</m> and <m>\bar{x}</m>.</p></li>
+        <li><p>Write down the <em>values</em> of <m>\sigma</m> and <m>s</m>.</p></li>
+        <li><p>Compute the value of the standard error of the mean <m>\text{s.e.}(\bar{x})</m>.</p></li>
+        <li><p>Explain the difference in <em>meaning</em> between <m>s</m> and <m>\text{s.e.}(\bar{x})</m> here.</p></li>
+        <li><p>If someone else takes a sample of <m>125</m> <em>Eagle Boys</em> pizzas, will the sample mean be <m>11.486</m> inches again (as in this sample)? Why or why not?</p></li>
+        <li><p>Draw a picture of the approximate sampling distribution for <m>\bar{x}</m>.</p></li>
+        <li><p>Compute an approximate <m>95</m>% CI for the mean pizza diameter.</p></li>
+        <li><p>Write a statement that communicates your <m>95</m>% CI for the mean pizza diameter.</p></li>
+        <li><p>What are the <em>statistical</em> validity conditions? Is the computed CI statistically valid?</p></li>
+        <li><p>Do you think that, on average, the pizzas do have a mean diameter of <m>12</m> inches in the population, as Eagle Boys claim? Explain.</p></li>
+      </ol>
+      <figure xml:id="fig-pizza-ci-jamovi">
+        <caption>Summary statistics for the diameter of <em>Eagle Boys</em> large pizzas.</caption>
+        <image source="fig-pizza-ci-jamovi.png" width="40%"/>
+      </figure>
+    </exercise>
+
+    <exercise xml:id="exercise-ci-matches-per-box">
+      <p>
+        Claire and Jake were wondering about the mean number of matches in a box. The boxes contain this statement:
+      </p>
+      <blockquote>
+        <p>An average of <m>45</m> matches per box.</p>
+      </blockquote>
+      <p>
+        They purchased a carton containing <m>n = 25</m> boxes of matches, and Jake counted the number of matches in <em>one</em> of those <m>25</m> boxes. The box contained <m>44</m> matches.
+      </p>
+      <p>
+        'Oh wow. Just wow.' said Jake. 'They lie. There's only <m>44</m> in this box.'
+      </p>
+      <ol>
+        <li><p>What is Jake's misunderstanding?</p></li>
+        <li><p>Then, they counted the number of matches in <em>each</em> of the <m>n = 25</m> boxes, and found the mean number of matches per box was <m>44.9</m> matches, and the standard deviation was <m>0.124</m>. Jake notes that the mean is <m>44.9</m> matches per box, and says: 'You can't have <m>0.9</m> of a match. That's dumb.' How would you respond?</p></li>
+        <li><p>'Wow!' said Jake. 'The claim is <m>45</m> matches per box on average, but the mean really is <m>44.9</m>! They're liars!' What is Jake's misunderstanding?</p></li>
+        <li><p>'Come on, Jake,' said Claire. 'As if the mean will be <em>exactly</em> <m>45</m> in a sample every single time. Let's work out the confidence interval.' Why does Claire think a CI is needed? What will it tell them?</p></li>
+        <li><p>What is an approximate <m>95</m>% CI for the mean for Claire's sample?</p></li>
+        <li><p>'Aha,' said Jake; 'I told you so! They <em>are</em> absolutely lying! Your confidence interval doesn't even include their mean of <m>45</m>! The manufacturer <em>must</em> be lying!' Is Jake correct? Why or why not? What does the CI <em>mean</em>?</p></li>
+        <li><p>In this scenario, what does <m>\bar{x}</m> represent? What is the <em>value</em> of <m>\bar{x}</m>?</p></li>
+        <li><p>In this scenario, what does <m>\mu</m> represent? What is the <em>value</em> of <m>\mu</m>?</p></li>
+      </ol>
+    </exercise>
+  </exercises>
 </chapter>

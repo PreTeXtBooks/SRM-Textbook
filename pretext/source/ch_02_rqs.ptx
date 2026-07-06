@@ -87,7 +87,7 @@
     <p>
       Data are rarely taken from all the individuals in the population: <em>all</em> individuals are rarely accessible in practice.
       For example, testing a new drug cannot possibly study <em>all</em> people who might use the drug (some may not even be born yet).
-      In contrast, a <em>sample</em> is a <em>subset</em> of the population from which data are obtained (<xref ref="ch-sampling"/>).
+      In contrast, a <em>sample</em> is a <em>subset</em> of the population from which data are obtained (<xref ref="ch-06-research-design-sampling"/>).
       Countless samples are possible from any given population, but only one is studied.
     </p>
 
@@ -178,8 +178,8 @@
     </warning>
 
     <p>
-      Answering <em>estimation</em> descriptive RQs is studied in <xref ref="ch-ci-one-proportion"/> and <xref ref="ch-one-mean-conf-interval"/>.
-      Answering <em>decision-making</em> descriptive RQs is studied in <xref ref="ch-test-one-proportion"/> and <xref ref="ch-test-one-mean"/>.
+      Answering <em>estimation</em> descriptive RQs is studied in <xref ref="ch-22-cis-one-proportion"/> and <xref ref="ch-23-cis-one-mean"/>.
+      Answering <em>decision-making</em> descriptive RQs is studied in <xref ref="ch-26-testing-one-proportion"/> and <xref ref="ch-27-testing-one-mean"/>.
     </p>
 
     <example xml:id="example-descriptive-rq-body-temp">
@@ -867,14 +867,14 @@
     <p>
       As noted earlier, RQs can be written with one of two purposes.
       <em>Estimation RQs</em> ask how precisely an unknown <em>value</em> in the <em>population</em> is estimated by the <em>sample</em>.
-      Estimation RQs are answered using <em>confidence intervals</em>, which are discussed in <xref ref="ch-ci-one-proportion"/> to <xref ref="ch-one-mean-conf-interval"/>,
-      <xref ref="ch-analysis-paired"/> to <xref ref="ch-analysis-odds-ratio"/>, plus <xref ref="sec-correlation-testing"/> and <xref ref="sec-regression-ht"/>.
+      Estimation RQs are answered using <em>confidence intervals</em>, which are discussed in <xref ref="ch-22-cis-one-proportion"/> to <xref ref="ch-23-cis-one-mean"/>,
+      <xref ref="ch-29-cis-testing-mean-difference"/> to <xref ref="ch-31-cis-testing-odds-ratios"/>, plus <xref ref="sec-correlation-testing"/> and <xref ref="sec-regression-ht"/>.
     </p>
 
     <p>
       <em>Decision-making RQs</em> require a decision to be made about the unknown values in the population.
-      They are answered using <em>hypothesis tests</em>, and discussed in <xref ref="ch-test-one-proportion"/> to <xref ref="ch-test-one-mean"/>,
-      <xref ref="ch-analysis-paired"/> to <xref ref="ch-analysis-odds-ratio"/>, plus <xref ref="sec-correlation-testing"/> and <xref ref="sec-regression-ht"/>.
+      They are answered using <em>hypothesis tests</em>, and discussed in <xref ref="ch-26-testing-one-proportion"/> to <xref ref="ch-27-testing-one-mean"/>,
+      <xref ref="ch-29-cis-testing-mean-difference"/> to <xref ref="ch-31-cis-testing-odds-ratios"/>, plus <xref ref="sec-correlation-testing"/> and <xref ref="sec-regression-ht"/>.
     </p>
 
     <example xml:id="example-types-of-rqs">

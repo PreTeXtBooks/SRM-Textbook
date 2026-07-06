@@ -1,5 +1,1361 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Source: 31-CIsTesting-OddsRatios.Rmd -->
 <chapter xml:id="ch-31-cis-testing-odds-ratios" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Comparing two odds or proportions: CIs and tests</title>
-  <p>Skeleton for <em>31-CIsTesting-OddsRatios.Rmd</em>. Content to be added.</p>
+
+  <introduction xml:id="sec-analysis-odds-ratio">
+    <p>
+      This chapter compares two groups measured on a two-level qualitative variable, using confidence intervals and hypothesis tests based on the difference between two proportions, or on the odds ratio (OR) comparing two odds.
+    </p>
+  </introduction>
+
+  <objectives xml:id="objectives-ch31">
+    <introduction>
+      <p>You have learnt to ask an RQ, design a study, classify and summarise the data, construct confidence intervals, and conduct hypothesis tests. <alert>In this chapter</alert>, you will learn to:</p>
+    </introduction>
+    <ul>
+      <li><p>identify situations where comparing proportions or odds is appropriate.</p></li>
+      <li><p>form confidence intervals for the difference between two proportions.</p></li>
+      <li><p>form confidence intervals for odds ratios.</p></li>
+      <li><p>conduct hypothesis tests for comparing two proportions.</p></li>
+      <li><p>conduct hypothesis tests for comparing two odds.</p></li>
+      <li><p>determine whether the conditions for using these methods apply in a given situation.</p></li>
+    </ul>
+  </objectives>
+
+  <section xml:id="sec-meals-on-campus">
+    <title>Introduction: meals on-campus</title>
+    <image source="Illustrations/pexels-startup-stock-photos-7096.jpg" width="25%">
+      <description><p>Image.</p></description>
+    </image>
+    <p>
+      <xref ref="data-Mann12017-UniStudents"/> examined the relationship between where university students usually ate, and where the student lived, for students from two Canadian universities. The researchers cross-classified the <m>n = 183</m> students (the units of analysis) according to two <em>qualitative</em> variables:
+    </p>
+    <ul>
+      <li><p>where the student lived, <em>with</em> their parents or <em>not with</em> their parents.</p></li>
+      <li><p>where the student ate most meals, <em>off</em>-campus or <em>on</em>-campus.</p></li>
+    </ul>
+    <p>
+      Both variables are qualitative, so means are not appropriate for summarising the data. The data can be compiled into a two-way table of counts<idx><h>Tables</h><h>two-way</h></idx> (Table <xref ref="tab-meals-data-table"/>), also called a <em>contingency table</em>.<idx>Two-way tables</idx> Both qualitative variables have two levels, so this is a <m>2\times 2</m> table. Every cell in the <m>2\times 2</m> table contains different students, so the comparison is <em>between</em> individuals.
+    </p>
+    <warning>
+      <p>
+        The study has one sample of students, classified according to two variables (i.e., each student is placed into one of the four cells in the <m>2\times 2</m> table).
+      </p>
+    </warning>
+    <table xml:id="tab-meals-data-table">
+      <title>Where university students live and eat.</title>
+      <tabular halign="center">
+        <row header="yes"><cell></cell><cell>Most off-campus</cell><cell>Most on-campus</cell></row>
+        <row><cell>Living with parents</cell><cell>52</cell><cell>2</cell></row>
+        <row><cell>Not living with parents</cell><cell>105</cell><cell>24</cell></row>
+      </tabular>
+    </table>
+    <p>
+      The <em>proportion</em> of students who eat most meals off-campus can be compared between those who live with their parents and those who do <em>not</em> live with their parents. Then, the parameter is the difference between the population proportions in each group.
+    </p>
+    <p>
+      Alternatively, the <em>odds</em> of students who eat most meals off-campus can be compared between those who live with their parents and those who do <em>not</em> live with their parents. Then, the parameter is the comparison of the odds in both groups, the <em>odds ratio</em> (OR);<idx>Odds ratio</idx> specifically, the OR of eating most meals off-campus, comparing those living with parents to those not living with parents.
+    </p>
+    <note>
+      <p>
+        The table can be constructed with either variable as the rows. However, software commonly compares <em>rows</em>, so it makes sense to place the groups to be compared (i.e., the levels of the explanatory variable) in the rows of the table.
+      </p>
+    </note>
+  </section>
+
+  <section xml:id="sec-ci-odds-ratios-summaries">
+    <title>Summarising data</title>
+    <idx>Odds</idx>
+    <idx>Difference between proportions</idx>
+    <idx>Odds ratio</idx>
+    <p>
+      Since two groups are being compared, subscripts are used to distinguish between the two groups; say, Groups <m>1</m> and <m>2</m> in general (Table <xref ref="tab-orht"/>). For this example, we use <m>N</m> to refer to students <em>not</em> living with their parents, and <m>L</m> for students living with their parents.
+    </p>
+    <table xml:id="tab-orht">
+      <title>Notation used to distinguish the two independent groups.</title>
+      <tabular halign="center">
+        <row header="yes"><cell></cell><cell>Group 1</cell><cell>Group 2</cell><cell>Comparing groups</cell></row>
+        <row><cell>Sample sizes:</cell><cell><m>n_1</m></cell><cell><m>n_2</m></cell><cell></cell></row>
+        <row><cell>Sample odds:</cell><cell><m>\text{Odds}_1</m></cell><cell><m>\text{Odds}_2</m></cell><cell><m>\text{Odds ratio (OR)} = \text{Odds}_1/\text{Odds}_2</m></cell></row>
+        <row><cell>Sample proportions:</cell><cell><m>\hat{p}_1</m></cell><cell><m>\hat{p}_2</m></cell><cell><m>\hat{p}_1 - \hat{p}_2</m></cell></row>
+        <row><cell>Standard errors:</cell><cell><m>\displaystyle\text{s.e.}(\hat{p}_1)</m></cell><cell><m>\displaystyle\text{s.e.}(\hat{p}_2)</m></cell><cell><m>\displaystyle\text{s.e.}(\hat{p}_1 - \hat{p}_2)</m></cell></row>
+      </tabular>
+    </table>
+    <p>
+      The parameter is either a difference between two population proportions, or a population OR. For example, the parameter could be the difference between population proportion of students eating most meals <em>off</em>-campus, comparing students living with their parents, to students <em>not</em> living with their parents. Alternatively (and equivalently), the parameter could be the population OR of eating most meals <em>off</em>-campus, comparing students living with their parents, to students <em>not</em> living with their parents.
+    </p>
+    <figure xml:id="fig-eating-software">
+      <caption>Software output for comparing the odds and proportion of students eating most meals at home, for students living with and not with their parents.</caption>
+      <image source="fig-eating-software.png" width="65%"/>
+    </figure>
+    <warning>
+      <p>
+        Since software commonly compares <em>rows</em> (for example, see the text under the bottom table in Fig. <xref ref="fig-eating-software"/>), it makes sense to place the groups to be compared (i.e., the explanatory variable) in the rows of the table.
+      </p>
+      <p>
+        Then, the difference between the two proportions are usually calculated as the Row 1 proportion minus the Row 2 proportion. Similarly, the odds then can be interpreted as<idx><h>Odds ratio</h><h>interpreting</h></idx><idx><h>Software output</h><h>comparing two odds (odds ratio)</h></idx> comparing Column 1 counts to Column 2 counts, and the <em>odds ratio</em> as comparing the Row 1 odds to the Row 2 odds.
+      </p>
+    </warning>
+    <p>
+      The RQ and the hypotheses can be written as comparing <em>proportions</em> (Sect. <xref ref="sec-compare-two-proportions"/>), comparing <em>odds</em> (Sect. <xref ref="sec-compare-two-odds"/>), or about <em>ORs</em>. With two qualitative variables, an appropriate numerical summary includes the odds and proportions (or percentages) for the outcome for both comparison groups, and the sample sizes (Table <xref ref="tab-eating-numerical-summary"/>).
+    </p>
+    <p>
+      To compare the <em>proportions</em>, define the sample proportion of students eating most meals off-campus as <m>\hat{p}</m>, and write <m>\hat{p}_L</m> for the proportion living with parents and <m>\hat{p}_N</m> for the proportion <em>not</em> living with parents. Then,
+    </p>
+    <me>\hat{p}_L = \frac{52}{52 + 2} = 0.96296 \quad\text{and}\quad \hat{p}_N = \frac{105}{105 + 24} = 0.813953.</me>
+    <p>
+      The <em>difference</em> between the two proportions is
+    </p>
+    <me>\hat{p}_L - \hat{p}_N = 0.9630 - 0.8140 =  0.1490,</me>
+    <p>
+      (as in the software output: Fig. <xref ref="fig-eating-software"/>). By this definition, the difference is how much greater the proportion eating most meals off-campus is for students <em>living</em> with their parents, compared to students <em>not living</em> with their parents.
+    </p>
+    <note>
+      <p>
+        Be clear about how differences are defined! Differences could be computed as:
+      </p>
+      <ul>
+        <li><p>the proportion eating most meals off-campus for those living with their parents, <em>minus</em> the proportion <em>not</em> living with their parents.</p></li>
+      </ul>
+      <p>
+        This measures how much greater the proportion is for those living with their parents; or
+      </p>
+      <ul>
+        <li><p>the proportion eating most meals off-campus for those <em>not</em> living with their parents, <em>minus</em> the proportion living with their parents.</p></li>
+      </ul>
+      <p>
+        This measures how much greater the proportion is for those <em>not</em> living with their parents.
+      </p>
+      <p>
+        Either is fine, provided you are <em>consistent</em>, and <em>clear</em> about how the differences are computed. The <em>meaning</em> of any conclusions will be the same.
+      </p>
+    </note>
+    <p>
+      To compare the <em>odds</em>, first see that the odds of eating most meals <em>off-campus</em> is:
+    </p>
+    <ul>
+      <li><p><m>52 \div 2 = 26</m> for students <em>living with their parents</em> (Row 1 of Table <xref ref="tab-meals-data-table"/>).</p></li>
+      <li><p><m>105 \div 24 = 4.375</m> for students <em>not living with their parents</em> (Row 2 of Table <xref ref="tab-meals-data-table"/>).</p></li>
+    </ul>
+    <p>
+      (Notice the numbers in the <em>second</em> column are always on the bottom of the fraction.) So the <em>OR</em> of eating most meals <em>off-campus</em> (the <em>first</em> column), comparing students living with parents to students <em>not</em> living with parents (<em>second</em> column), is <m>26 \div 4.375 = 5.943</m> (as in the software output: Fig. <xref ref="fig-eating-graphs"/>).
+    </p>
+    <p>
+      The numerical summary (Table <xref ref="tab-eating-numerical-summary"/>) shows the proportion and odds of eating most meals off-campus, comparing students living at home and those not living at home.
+    </p>
+    <warning>
+      <p>
+        The OR can be interpreted in <em>either</em> of these ways (i.e., both are correct):<idx><h>Odds ratio</h><h>interpreting</h></idx><idx><h>Software output</h><h>comparing two odds (odds ratio)</h></idx>
+      </p>
+      <ul>
+        <li><p>the <em>odds</em> compare Row 1 counts to Row 2 counts, for both columns. The <em>OR</em> then compares the Column 1 odds to the Column 2 odds.</p></li>
+        <li><p>the <em>odds</em> compare Column 1 counts to Column 2 counts. The <em>OR</em> then compares the Row 1 odds to the Row 2 odds.</p></li>
+      </ul>
+      <p>
+        Odds and ORs are computed with the <em>first row</em> and <em>first column</em> values on the <em>top</em> of the fraction. Since the explanatory variable is usually in the rows, the second is usually the most useful. In this case, both of the above approaches produces an OR of <m>5.943</m>.
+      </p>
+    </warning>
+    <p>
+      An appropriate graph is a side-by-side bar chart<idx><h>Graphs</h><h>side-by-side bar chart</h></idx> or a stacked bar chart<idx><h>Graphs</h><h>stacked bar chart</h></idx> (Fig. <xref ref="fig-eating-graphs"/>). The side-by-side bar is useful for comparing odds. For instance, in the two left-most bars in Fig. <xref ref="fig-eating-graphs"/> (left panel), the first bar is <m>26</m> times as high as the second bar (and <m>26</m> is the odds); in the two right-most bars, the first bar is <m>4.375</m> times as high as the second bar (and <m>4.375</m> is the odds). A stacked bar chart is useful for comparing proportions.
+    </p>
+    <table xml:id="tab-eating-numerical-summary">
+      <title>The odds and proportion of university students eating most meals off-campus.</title>
+      <tabular halign="center">
+        <row header="yes"><cell></cell><cell>Odds of having most meals off-campus</cell><cell>Proportion having most meals off-campus</cell><cell>Sample size</cell></row>
+        <row><cell>Living with parents</cell><cell>26.000</cell><cell>0.963</cell><cell>54</cell></row>
+        <row><cell>Not living with parents</cell><cell>4.375</cell><cell>0.814</cell><cell>129</cell></row>
+        <row><cell></cell><cell><em>OR: 5.943</em></cell><cell><em>Difference: 0.149</em></cell><cell></cell></row>
+      </tabular>
+    </table>
+    <figure xml:id="fig-eating-graphs">
+      <caption>The student-eating data. Left: a side-by-side bar chart. Right: a stacked bar chart.</caption>
+      <image source="fig-eating-graphs.png" width="95%"/>
+    </figure>
+  </section>
+
+  <section xml:id="sec-ci-compare-proportions">
+    <title>Confidence intervals for comparing proportions</title>
+    <idx><h>Confidence intervals</h><h>comparing two proportions</h></idx>
+    <idx><h>Sampling distribution</h><h>comparing two proportions</h></idx>
+    <idx>Difference between proportions</idx>
+    <p>
+      The sample proportions for each group will vary from sample to sample, and the <em>difference</em> between the sample proportions will be different for each sample. Hence, the <em>difference</em> between the two sample proportions has a sampling distribution and <em>standard error</em>. Under certain conditions (Sect. <xref ref="sec-validity-chi-sq"/>), this sampling distribution has a normal distribution.
+    </p>
+    <definition xml:id="def-sampling-distribution-diff-proportions">
+      <title>Sampling distribution for the difference between two sample proportions for a CI</title>
+      <statement>
+        <p>
+          When constructing a CI, the <em>sampling distribution of the difference between two sample proportions</em> <m>\hat{p}_1</m> and <m>\hat{p}_2</m> is (when the appropriate conditions are met; Sect. <xref ref="sec-validity-chi-sq"/>) described by:
+        </p>
+        <ul>
+          <li><p>an approximate normal distribution,</p></li>
+          <li><p>centred around a sampling mean whose value is <m>{p_1} - {p_2}</m>, the difference between the <em>population</em> proportions,</p></li>
+          <li><p>with a standard deviation, called the standard error of the difference between the proportions, of <m>\displaystyle\text{s.e.}(\hat{p}_1 - \hat{p}_2)</m>.</p></li>
+        </ul>
+        <p>
+          The standard error for the difference between the proportions is found using
+        </p>
+        <men xml:id="eq-se-two-proportions-ci">\text{s.e.}(\hat{p}_1 - \hat{p}_2) = \sqrt{ \text{s.e.}(\hat{p}_1)^2 + \text{s.e.}(\hat{p}_2)^2},</men>
+        <p>
+          though this value will often be <em>given</em> (e.g., on computer output).
+        </p>
+      </statement>
+    </definition>
+    <p>
+      For the student-eating data, the standard errors of the sample proportions for each group are computed using Equation <xref ref="eq-stderrorphat"/> as
+    </p>
+    <md>
+      <mrow>\text{s.e.}(\hat{p}_L) \amp= \sqrt{\frac{0.962963 \times (1 - 0.962963)}{54}}   = 0.025700, \text{and}</mrow>
+      <mrow>\text{s.e.}(\hat{p}_N) \amp= \sqrt{\frac{0.8139535\times (1 - 0.8139535)}{129}} = 0.034262.</mrow>
+    </md>
+    <p>
+      The standard error of the difference between the proportions is then
+    </p>
+    <me>\text{s.e.}(\hat{p}_L - \hat{p}_N) = \sqrt{ \text{s.e.}(\hat{p}_L)^2 + \text{s.e.}(\hat{p}_N)^2} = \sqrt{ 0.025700^2 + 0.034262^2 } = 0.042830.</me>
+    <p>
+      Thus, the differences between the sample proportions will have:
+    </p>
+    <ul>
+      <li><p>an approximate normal distribution,</p></li>
+      <li><p>centred around the sampling mean whose value is <m>p_L - p_N</m>,</p></li>
+      <li><p>with a standard deviation of <m>\text{s.e.}(\hat{p}_L - \hat{p}_N) = 0.0428295</m>.</p></li>
+    </ul>
+    <p>
+      The sampling distribution describes how the values of <m>\hat{p}_L - \hat{p}_N</m> vary from sample to sample. Then, finding a <m>95</m>% CI for the difference between the proportions is similar to the process used previously, since the sampling distribution has an approximate normal distribution:
+    </p>
+    <me>\text{statistic} \pm \big(\text{multiplier} \times\text{s.e.}(\text{statistic})\big).</me>
+    <p>
+      When the statistic is <m>\hat{p}_L - \hat{p}_N</m>, the approximate <m>95</m>% CI is
+    </p>
+    <me>(\hat{p}_L - \hat{p}_N) \pm \big(2 \times \text{s.e.}(\hat{p}_L - \hat{p}_N)\big).</me>
+    <p>
+      So, in this case, the approximate <m>95</m>% CI is
+    </p>
+    <me>0.1490 \pm (2 \times 0.042830),</me>
+    <p>
+      or <m>0.149 \pm 0.0857</m> after rounding (i.e., from <m>0.0633</m> to <m>0.235</m>). This approximate CI is very similar to the (exact) CI from software (Fig. <xref ref="fig-eating-graphs"/>).<idx><h>Software output</h><h>comparing two proportions</h></idx> We write:
+    </p>
+    <blockquote>
+      <p>The difference between the proportions of students eating most meals at home is <m>0.1490</m>, higher for those living with their parents (<m>0.963</m>; <m>n = 52</m>) than those not living with their parents (<m>0.814</m>; <m>n = 129</m>), with the approximate <m>95</m>% CI from <m>0.0633</m> to <m>0.235</m>.</p>
+    </blockquote>
+    <p>
+      The plausible values for the difference between the two population proportions are between <m>0.063</m> to <m>0.235</m>, larger for those living with parents.
+    </p>
+    <warning>
+      <p>
+        Giving the CI alone is insufficient; the <em>direction</em> in which the differences were calculated must be given, so readers know which group had the higher proportion.
+      </p>
+    </warning>
+  </section>
+
+  <section xml:id="sec-compare-two-proportions">
+    <title>Hypothesis tests for comparing proportions: <m>z</m>-test</title>
+    <idx><h>Hypothesis testing</h><h>comparing two proportions</h></idx>
+    <idx>Difference between proportions</idx>
+    <p>
+      To compare the two proportions using a hypothesis test, the two-tailed RQ is:
+    </p>
+    <blockquote>
+      <p>Is the <em>population</em> proportion of students eating most meals off-campus the same for students <em>living with</em> their parents and for students <em>not living with</em> their parents?</p>
+    </blockquote>
+    <p>
+      As usual, the population values are unknown, so the parameter <m>p_L - p_N</m> is estimated using the statistic <m>\hat{p}_L - \hat{p}_N</m>.
+    </p>
+    <p>
+      Hypothesis testing always begins by assuming that the null hypothesis is true (Sect. <xref ref="sec-hypothesis-null"/>). In this context, that means assuming that the population proportion of eating most meals off-campus is the same in both groups:
+    </p>
+    <ul>
+      <li><p><m>H_0</m>: <m>p_L - p_N = 0</m> (equivalent to <m>p_L = p_N</m>).</p></li>
+    </ul>
+    <p>
+      From the RQ, the alternative hypothesis is <em>two</em>-tailed:
+    </p>
+    <ul>
+      <li><p><m>H_1</m>: <m>p_L - p_N \ne 0</m> (equivalent to <m>p_L \ne p_N</m>).</p></li>
+    </ul>
+    <p>
+      Because the null hypothesis is assumed to be true, the proportions are assumed to have the same value for both groups. Hence, the data from the two groups can be combined to determine an overall (or common) proportion of students eating most meals off-campus:
+    </p>
+    <men xml:id="eq-overall-p">\hat{p} = \frac{52 + 105}{52 + 105 + 2 + 24} = \frac{157}{183} = 0.85792.</men>
+    <p>
+      This is the overall proportion of students eating most meals off-campus, since we assumed no difference between students living with and not with their parents. Effectively, this proportion has been computed by summing the columns in Table <xref ref="tab-meals-data-table"/> and using this combined data to compute the proportion of students eating most meals off-campus.
+    </p>
+    <warning>
+      <p>
+        As with any hypothesis test, the null hypothesis is assumed to be true. For a test comparing two proportions, that implies the proportion in each group is the same, and so the standard errors are computed using the common (overall) proportion.
+      </p>
+    </warning>
+    <p>
+      The <em>sample</em> proportions for the two groups (<m>L</m> and <m>N</m>) will vary from sample to sample and so have a sampling distribution. The standard error of the sample proportion for each sample is computed using this common proportion <m>\hat{p}</m>, using the same idea as in Equation <xref ref="eq-stderrorphat"/>:
+    </p>
+    <md>
+      <mrow>\text{s.e.}(p_L) \amp= \sqrt{ \frac{\hat{p}\times(1 - \hat{p})}{n_L}} = \sqrt{ \frac{0.85792\times(1 - 0.85792)}{54}} = 0.047511, \text{and}</mrow>
+      <mrow>\text{s.e.}(p_N) \amp= \sqrt{ \frac{\hat{p}\times(1 - \hat{p})}{n_N}} = \sqrt{ \frac{0.85792\times(1 - 0.85792)}{129}} = 0.030739.</mrow>
+    </md>
+    <warning>
+      <p>
+        When computing the standard errors as part of a <em>hypothesis test</em>, the common or overall proportion is used to compute the standard errors.
+      </p>
+    </warning>
+    <p>
+      The difference between the two proportions will vary from sample to sample too, and hence have a sampling distribution; under certain conditions (Sect. <xref ref="sec-validity-chi-sq"/>), this sampling distribution will have a normal distribution. The standard error of this sampling distribution for the <em>difference</em> between the proportions is
+    </p>
+    <me>\text{s.e.}(\hat{p}_L - \hat{p}_N) = \sqrt{ \text{s.e.}(\hat{p}_L)^2 +  \text{s.e.}(\hat{p}_N)^2 } = \sqrt{ 0.047511^2 + 0.030739^2} = 0.056588,</me>
+    <p>
+      which is similar to Equation <xref ref="eq-se-two-proportions-ci"/>, except that a common proportion was used to compute <m>\text{s.e.}(\hat{p}_L)</m> and <m>\text{s.e.}(\hat{p}_N)</m>.
+    </p>
+    <definition xml:id="def-sampling-distribution-diff-proportions-ht">
+      <title>Sampling distribution for the difference between two sample proportions for a hypothesis test</title>
+      <statement>
+        <p>
+          When conducting a hypothesis test, the <em>sampling distribution of the difference between two sample proportions</em> <m>\hat{p}_1</m> and <m>\hat{p}_2</m> is (when the appropriate conditions are met; Sect. <xref ref="sec-validity-chi-sq"/>) described by:
+        </p>
+        <ul>
+          <li><p>an approximate normal distribution,</p></li>
+          <li><p>centred around a sampling mean whose value is <m>{p_{1}} - {p_{2}}</m>, the difference between the <em>population</em> proportions (from <m>H_0</m>),</p></li>
+          <li><p>with a standard deviation, called the standard error of the difference between the proportions, of <m>\displaystyle\text{s.e.}(\hat{p}_1 - \hat{p}_2)</m>.</p></li>
+        </ul>
+        <p>
+          The standard error for the difference between the proportions is
+        </p>
+        <me>\text{s.e.}(\hat{p}_1 - \hat{p}_2) = \sqrt{ \text{s.e.}(\hat{p}_1)^2 +  \text{s.e.}(\hat{p}_2)^2 },</me>
+        <p>
+          where
+        </p>
+        <me>\text{s.e.}(p_1) = \sqrt{ \frac{\hat{p}\times(1 - \hat{p})}{n_1}} \quad\text{and}\quad \text{s.e.}(p_2) = \sqrt{ \frac{\hat{p}\times(1 - \hat{p})}{n_2}},</me>
+        <p>
+          where <m>\hat{p}</m> is the common (overall) sample proportion.
+        </p>
+      </statement>
+    </definition>
+    <p>
+      Since the sampling distribution has an approximate normal distribution, the test statistic is<idx><h>Test statistic</h><h>z-score</h></idx>
+    </p>
+    <me>z = \frac{ (\hat{p}_L - \hat{p}_N) - (p_L - p_N) }{\text{s.e.}(\hat{p}_L - \hat{p}_N)}  = \frac{ 0.14901 - 0}{0.056588}  = 2.633.</me>
+    <p>
+      Since the sampling distribution has an approximate normal distribution, the approximate <m>P</m>-value can be computed from normal distribution tables (Sect. <xref ref="sec-exact-areas-using-tables"/>), approximated using the <m>68</m>&#8211;<m>95</m>&#8211;<m>99.7</m> rule,<idx>68&#64;<m>68</m>&#8211;<m>95</m>&#8211;<m>99.7</m> rule</idx> or from software output (Fig. <xref ref="fig-eating-software"/>).<idx><h>Software output</h><h>comparing two proportions</h></idx> The two-tailed <m>P</m>-value reported by software (Fig. <xref ref="fig-eating-software"/>, under the column <c>p</c>) is indeed small: <m>0.008</m> to three decimal places.
+    </p>
+    <warning>
+      <p>
+        The test statistic for tests involving proportions is a <m>z</m>-score and <em>not</em> a <m>t</m>-score.
+      </p>
+    </warning>
+    <p>
+      A small <m>P</m>-value means strong evidence exists to supporting <m>H_1</m>: the evidence suggests a difference between the <em>population</em> proportions. We write:
+    </p>
+    <blockquote>
+      <p>The <em>sample</em> provides strong evidence (<m>z = 2.63</m>; two-tailed <m>P = 0.008</m>) that the proportion of students in the <em>population</em> of having most meals off-campus is different for students living with their parents (proportion: <m>0.963</m>, <m>n = 54</m>) and students <em>not</em> living with their parents (proportion: <m>0.814</m>, <m>n = 129</m>; difference: <m>0.149</m>; approximate <m>95</m>% CI from <m>0.0633</m> to <m>0.235</m>, higher for students living with their parents).</p>
+    </blockquote>
+    <p>
+      The conclusion includes three components (Sect. <xref ref="sec-wording-conclusion"/>): the <em>answer to the RQ</em>; the <em>evidence</em> used to reach that conclusion ('<m>z = 2.63</m>; two-tailed <m>P = 0.008</m>'); and some <em>sample summary statistics</em> (including the <m>95</m>% CI for the difference between proportions). The conclusion makes clear which proportion is higher.
+    </p>
+  </section>
+
+  <section xml:id="sec-ci-compare-odds">
+    <title>Confidence intervals for comparing odds (for an odds ratio)</title>
+    <idx><h>Sampling distribution</h><h>odds ratio</h></idx>
+    <idx>Odds ratio</idx>
+    <idx><h>Confidence intervals</h><h>comparing two odds (odds ratio)</h></idx>
+    <p>
+      A CI can be formed for the OR, as well as for the difference between two proportions. Every sample of students is likely to be different, and hence the odds of students eating off campus will vary from sample to sample (in both groups). Hence, the OR varies also from sample to sample. That is, <em>sampling variation</em> exists, so the OR has a <em>sampling distribution</em>.
+    </p>
+    <p>
+      However, the sampling distribution of the sample OR does <em>not have a normal distribution</em>. (For those interested: the <em>logarithm</em> of the OR has an approximate normal distribution under certain conditions.) For this reason, the CI for the OR will be taken directly from software output, and the sampling distribution is not discussed.
+    </p>
+    <p>
+      Software<idx><h>Software output</h><h>comparing two odds (odds ratio)</h></idx> (Fig. <xref ref="fig-eating-graphs"/>, right panel) gives the sample OR as <m>5.94</m>, and the (exact) <m>95</m>% CI as <m>1.35</m> to <m>26.1</m>. The value of the OR is the same as the value computed manually.
+    </p>
+    <p>
+      We write:
+    </p>
+    <blockquote>
+      <p>The odds of students eating most meals off-campus is <m>5.94</m>, higher for students living with their parents (odds: <m>26.0</m>; <m>n = 54</m>) than for students <em>not</em> living with their parents (odds: <m>4.38</m>; <m>n = 129</m>), with the <m>95</m>% CI from <m>1.35</m> to <m>26.1</m>.</p>
+    </blockquote>
+    <p>
+      There is a <m>95</m>% chance that this CI straddles the population OR. Notice that the <em>meaning</em> of the OR is explained in the conclusions: the odds of eating most meals <em>off</em>-campus, and comparing students living with parents to <em>not</em> living with parents.
+    </p>
+    <p>
+      <em>The CI for an OR is not symmetrical</em>, like the others we have seen (for those interested: this is because the OR has no upper limit, but the lower limit of an OR is zero; the <em>logarithm</em> of the limits of the CI form a symmetric interval); that is, the sample OR of <m>5.94</m> is not in the centre of the CI.
+    </p>
+    <note>
+      <p>Interpreting and explaining ORs can be challenging, so care is needed!</p>
+    </note>
+    <p>
+      <url href="https://learningapps.org/watch?v=pqzmnub7n22">LearningApps: interactive activity on odds ratios</url>
+    </p>
+  </section>
+
+  <section xml:id="sec-compare-two-odds">
+    <title>Hypothesis tests for comparing odds: <m>\chi</m>-test</title>
+    <idx>Odds ratio</idx>
+    <idx><h>Hypothesis testing</h><h>odds ratio</h></idx>
+
+    <subsection xml:id="sec-two-odds-hypotheses">
+      <title>Hypotheses</title>
+      <p>
+        For the <m>2\times 2</m> table of counts in Table <xref ref="tab-meals-data-table"/>, odds can be compared rather than proportions:
+      </p>
+      <blockquote>
+        <p>Are the <em>population odds</em> of students eating most meals off-campus the same for students <em>living with</em> their parents and for students <em>not living with</em> their parents?</p>
+      </blockquote>
+      <p>
+        If the odds are the same in the two groups, this is equivalent to an OR of one. Hence, the RQ could also be written as
+      </p>
+      <blockquote>
+        <p>Is the <em>population OR</em> of eating most meals off-campus, comparing students who live <em>with their</em> parents to students <em>not living with</em> their parents, equal to one?</p>
+      </blockquote>
+      <p>
+        Either way, the <em>parameter</em> is the population OR, and the null hypothesis is the 'no difference, no change, no relationship' position:
+      </p>
+      <ul>
+        <li><p><m>H_0</m>: The <em>population</em> OR is one, or (equivalently) the <em>population</em> odds are the same in each group.</p></li>
+      </ul>
+      <p>
+        This hypothesis proposes that the <em>sample</em> odds are not the same in the two groups only due to sampling variation. This is the initial <em>assumption</em>. The alternative hypothesis is
+      </p>
+      <ul>
+        <li><p><m>H_1</m>: The <em>population</em> OR is not one, or (equivalently) the <em>population</em> odds are <em>different</em> in each group.</p></li>
+      </ul>
+      <warning>
+        <p>For comparing odds, the alternative hypothesis <em>is always two-tailed</em>.</p>
+      </warning>
+      <p>
+        In our example then:
+      </p>
+      <ul>
+        <li><p><m>H_0</m>: The <em>population</em> odds of eating most meals off-campus is the <em>same</em> for students living with their parents and for students not living with their parents.</p></li>
+        <li><p><m>H_1</m>: The <em>population</em> odds of eating most meals off-campus is <em>different</em> for students living with their parents and for students not living with their parents.</p></li>
+      </ul>
+      <p>
+        As usual, the decision-making process starts by <em>assuming</em> the null hypothesis is true: that the <em>population</em> OR is one (i.e., the population odds in each group are equal).
+      </p>
+      <warning>
+        <p>
+          For two-way tables, RQs can be framed in terms of ORs, comparing odds, comparing proportions, or (for larger two-way table) using associations (or relationships).
+        </p>
+        <p>
+          For consistency: if the RQ is about odds, the hypotheses and conclusion should be about the odds; if the RQ is about proportions, the hypotheses and conclusion should be about the proportions; and so on.
+        </p>
+      </warning>
+    </subsection>
+
+    <subsection xml:id="sec-expected-values">
+      <title>Finding expected counts</title>
+      <idx>Expected counts</idx>
+      <p>
+        Assuming the null hypothesis is true (which is the initial assumption made) means that the odds are the same in both groups (and the proportions are the same in both groups too). That is, the proportions of students eating most meals off-campus is the same for students <em>living with</em> and <em>not living with</em> their parents. Let's consider the implication.
+      </p>
+      <p>
+        From Table <xref ref="tab-meals-data-table"/>, <m>157</m> students out of <m>183</m> ate most meals off-campus, so that <m>157 \div 183 = 0.8579</m> of students in the entire sample ate most of their meals off-campus (which is the common proportion found in Equation <xref ref="eq-overall-p"/>).
+      </p>
+      <p>
+        If the proportion of students who eat most of their meals off-campus is the <em>same</em> for those who live with their parents and those who don't, then we'd <em>expect</em> <m>0.8579</m> of students in <em>both</em> groups to be eating most meals off-campus. In other words, the two <em>conditional</em> probabilities<idx>Probability!conditional</idx> would be the same. In that case:
+      </p>
+      <ul>
+        <li><p>we would <em>expect</em> a proportion of <m>0.8579</m> of the <m>54</m> students who <em>live with their parents</em> (i.e., <m>0.8579\times 54 = 46.33</m> students) to eat most meals off-campus.</p></li>
+        <li><p>we would <em>expect</em> a proportion of <m>0.8579</m> of the <m>129</m> students who <em>don't live with their parents</em> (i.e., <m>0.8579\times 129 = 110.67</m> students) to eat most meals off-campus.</p></li>
+      </ul>
+      <p>
+        In other words, the proportions (and hence the odds) of eating most meals off-campus is the same in each group. Those are the <em>expected</em> counts if the proportions (or odds) were exactly the same in each group (Table <xref ref="tab-meals-data-table-expected"/>), as assumed in <m>H_0</m>.
+      </p>
+      <p>
+        How close are the <em>observed</em> counts (Table <xref ref="tab-meals-data-table"/>) to the <em>expected</em> counts (Table <xref ref="tab-meals-data-table-expected"/>)? For instance, <m>46.33</m> of the <m>54</m> students who <em>live with their parents</em> are <em>expected</em> to eat most meals off-campus; yet we observed <m>52</m>; <m>110.67</m> of the <m>129</m> students who <em>don't live with their parents</em> are <em>expected</em> to eat most meals off-campus; yet we observed <m>105</m>.
+      </p>
+      <p>
+        The observed and expected counts are similar, but not the exactly same. The difference between the observed and expected counts <em>may</em> be explained by sampling variation (that is, the null hypothesis explanation).
+      </p>
+      <p>
+        The hypothesis test effectively compares the observed counts to the expected counts (assuming no relationship between the variables) over the whole <m>2\times 2</m> table.
+      </p>
+      <warning>
+        <p>
+          You <em>do not</em> have to compute the expected counts explicitly (software does it in the background, or explicitly if requested). However, seeing how the decision-making process works in this context is helpful.
+        </p>
+      </warning>
+      <p>
+        In previous hypothesis tests, the <em>sampling distribution</em> had an approximate normal distribution. However, the sampling distribution of the OR is more complicated (for those interested: the <em>logarithm</em> of the sample ORs have an approximate normal distribution, and hence a <em>standard error</em>), so will not be presented. We will use software output only to conduct the test.
+      </p>
+      <table xml:id="tab-meals-data-table-expected">
+        <title>Where university students live and eat: expected counts.</title>
+        <tabular halign="center">
+          <row header="yes"><cell></cell><cell>Most off-campus</cell><cell>Most on-campus</cell><cell>Total</cell></row>
+          <row><cell>Living with parents</cell><cell>46.328</cell><cell>7.672</cell><cell>54</cell></row>
+          <row><cell>Not living with parents</cell><cell>110.672</cell><cell>18.328</cell><cell>129</cell></row>
+          <row><cell>Total</cell><cell>157.000</cell><cell>26.000</cell><cell>183</cell></row>
+        </tabular>
+      </table>
+    </subsection>
+
+    <subsection xml:id="sec-test-stat-obs">
+      <title>Computing the value of the test statistic</title>
+      <idx><h>Test statistic</h><h>chi-squared</h></idx>
+      <p>
+        The decision-making process compares what is <em>expected</em> if the null hypothesis about the parameter is true (Table <xref ref="tab-meals-data-table-expected"/>) to what is <em>observed</em> in the sample (Table <xref ref="tab-meals-data-table"/>). Previously, when the sampling distribution was a normal distribution, the test statistic was a <m>t</m>-score or a <m>z</m>-score. However, the sampling distribution for an OR does <em>not</em> have a normal distribution, and so a different test statistic is needed.
+      </p>
+      <p>
+        In this context, the test-statistic is 'chi-squared', written <m>\chi^2</m>. The <m>\chi^2</m>-score measures the overall size of the differences between the expected counts and observed counts, over the entire <m>2\times 2</m> table.
+      </p>
+      <note>
+        <p>
+          The Greek letter <m>\chi</m> is pronounced 'kie', as in <alert>ki</alert>te (<em>not</em> 'chi' as in <alert>Chi</alert>na or in <alert>chi</alert>n). The test statistic <m>\chi^2</m> is pronounced as 'chi-squared'.
+        </p>
+      </note>
+      <video xml:id="video-chi-pronounce" youtube="" source="Movies/chi.mp4" width="30%">
+        <description>A short video demonstrating the pronunciation of chi.</description>
+      </video>
+      <p>
+        From the software (Fig. <xref ref="fig-eating-software"/>), <m>\chi^2 = 6.934</m>. But what does this value <em>mean</em>? Is it 'large' or 'small'? The <m>\chi^2</m>-value, for <m>2\times 2</m> tables of counts, has an equivalent <m>z</m>-score, so that a <m>P</m>-value can be estimated using the <m>68</m>&#8211;<m>95</m>&#8211;<m>99.7</m> rule. The <m>\chi^2</m>-value is equivalent to
+      </p>
+      <me>z = \sqrt{\chi^2}\qquad\text{for a $2\times 2$ table of counts only}.</me>
+      <p>
+        Here then, the <m>\chi^2</m>-value is equivalent to a <m>z</m>-score of <m>\sqrt{6.934} = 2.633</m>. This is the <em>same</em> <m>z</m>-score produced when comparing two proportions (Sect. <xref ref="sec-compare-two-proportions"/>; Fig. <xref ref="fig-eating-software"/>), and hence the <m>P</m>-value will be the same also. Using the <m>68</m>&#8211;<m>95</m>&#8211;<m>99.7</m> rule, a small <m>P</m>-value is expected. The two-tailed <m>P</m>-value reported by software (Fig. <xref ref="fig-eating-software"/>, under the column <c>p</c>) is indeed small: <m>0.008</m> to three decimals.
+      </p>
+      <warning>
+        <p>Recall that <m>\chi^2</m>-tests always have <em>two-tailed</em> alternative hypotheses, so two-tailed <m>P</m>-values are always reported.</p>
+      </warning>
+      <p>
+        <url href="https://learningapps.org/watch?v=ptw49fp0322">LearningApps: interactive activity on chi-squared tests</url>
+      </p>
+      <p>
+        Click on the hotspots in the following image, and describe what the software output tells us: <url href="https://learningapps.org/watch?v=p54msvghc22">LearningApps: hotspot activity on the chi-squared output</url>.
+      </p>
+    </subsection>
+
+    <subsection xml:id="sec-writing-conclusion-chi2">
+      <title>Writing conclusions</title>
+      <p>
+        A very small <m>P</m>-value (<m>0.008</m> to three decimals) means strong evidence exists to supporting <m>H_1</m>: the evidence suggests a difference in the <em>population</em> odds in the two groups. We write:
+      </p>
+      <blockquote>
+        <p>The <em>sample</em> provides strong evidence (<m>\chi^2 = 6.934</m>, <m>n = 54</m>; two-tailed <m>P = 0.008</m>) that the odds in the <em>population</em> of having most meals off-campus is different for students living with their parents (odds: <m>26</m>) and students <em>not</em> living with their parents (odds: <m>4.375</m>, <m>n = 129</m>; OR: <m>5.94</m>; <m>95</m>% CI from <m>1.35</m> to <m>26.1</m>).</p>
+      </blockquote>
+      <p>
+        The conclusion includes three components (Sect. <xref ref="sec-wording-conclusion"/>): the <em>answer to the RQ</em>; the <em>evidence</em> used to reach that conclusion ('<m>\chi^2 = 6.934</m>; two-tailed <m>P = 0.008</m>'); and some <em>sample summary statistics</em> (including the <m>95</m>% CI for the OR).
+      </p>
+      <p>
+        The conclusion makes clear what the odds and the OR <em>mean</em>. The odds are described as the 'odds of having most meals off-campus', and the OR as then comparing these odds between 'students living with their parents and students <em>not</em> living with their parents'.
+      </p>
+    </subsection>
+  </section>
+
+  <section xml:id="sec-validity-chi-sq">
+    <title>Statistical validity conditions</title>
+    <idx><h>Statistical validity (for inference)</h><h>odds ratio</h></idx>
+    <p>
+      As usual, these results hold under certain conditions. The CIs and tests above are statistically valid if:
+    </p>
+    <ul>
+      <li><p>all <em>expected</em> counts are at least five.</p></li>
+    </ul>
+    <p>
+      Some books may give other (but similar) conditions.
+    </p>
+    <p>
+      The statistical validity condition refers to the <em>expected</em> (not the <em>observed</em>) counts. In some software, the <em>expected</em> counts must be explicitly requested to see if this condition is satisfied (Fig. <xref ref="fig-uni-meals-test-expected-jamovi"/>). The units of analysis are also assumed to be <em>independent</em> (e.g., from a simple random sample).
+    </p>
+    <p>
+      If the statistical validity conditions are not met, other similar options include using a Fisher's exact test<idx>Fisher's exact test</idx> <xref ref="conover2003practical"/> or using resampling methods <xref ref="efron2021computer"/>.
+    </p>
+    <figure xml:id="fig-uni-meals-test-expected-jamovi">
+      <caption>The expected counts, as computed by software.</caption>
+      <image source="fig-uni-meals-test-expected-jamovi.png" width="70%"/>
+    </figure>
+    <example xml:id="example-statistical-validity-eating-ht">
+      <title>Statistical validity</title>
+      <p>
+        For the student-eating data, the smallest <em>observed</em> count is <m>2</m> (living with parents; most meals off-campus), but the smallest <em>expected</em> count (see Table <xref ref="tab-meals-data-table-expected"/> or Fig. <xref ref="fig-uni-meals-test-expected-jamovi"/>) is <m>7.67</m>, which is greater than five. This means the two analyses (comparing proportions; comparing odds) are both statistically valid. The size of the <em>expected</em> counts is important for the statistical validity condition.
+      </p>
+    </example>
+    <p>
+      Usually, you do not compute these expected counts. However, a quick check for the statistical validity is to compute the <em>smallest</em> expected counts, using
+    </p>
+    <men xml:id="eq-smallest-expected-count">\frac{(\text{Smallest row total})\times(\text{Smallest column total})}{\text{Overall total}}.</men>
+    <p>
+      If this value is greater than five, the CIs and tests are statistically valid.
+    </p>
+  </section>
+
+  <section xml:id="sec-compare-many-proportions">
+    <title>Hypothesis tests of independence more generally: <m>\chi^2</m>-tests</title>
+    <p>
+      Often a table of counts is larger than <m>2\times 2</m>. In these situations, the RQ may not be able to be worded in terms of comparing proportions or odds. Instead, the hypotheses can be worded in terms of <em>independence</em>, <em>relationships</em> or <em>associations</em> (but <em>not</em> correlations) between the variables:
+    </p>
+    <blockquote>
+      <p>Is there a relationship (or association) between one qualitative variable and another qualitative variable?</p>
+    </blockquote>
+    <p>
+      The RQ is answered using a <m>\chi^2</m>-test, by extending the ideas in Sect. <xref ref="sec-compare-two-odds"/>; <em><m>z</m>-tests and <m>t</m>-tests are not appropriate.</em>
+    </p>
+    <example xml:id="example-chi-sq-larger">
+      <title>Two-way tables larger than <m>2\times 2</m></title>
+      <p>
+        [<em>Dataset</em>: <c>RipsID</c>] <xref ref="diez2023rip"/> studied Spanish people's knowledge of ocean rips (Table <xref ref="tab-rip-table-data"/>). The table is a <m>4\times 2</m> two-way table. The rows are the age groups, as the age groups are being compared. The RQ is
+      </p>
+      <blockquote>
+        <p>Is there a relationship (or association) between age group and people's ability to correctly identify a rip?</p>
+      </blockquote>
+    </example>
+    <table xml:id="tab-rip-table-data">
+      <title>Identifying rips: data by age group.</title>
+      <tabular halign="center">
+        <row header="yes"><cell></cell><cell>Correctly</cell><cell>Incorrectly</cell></row>
+        <row><cell>18 to 24</cell><cell>41</cell><cell>5</cell></row>
+        <row><cell>25 to 34</cell><cell>47</cell><cell>12</cell></row>
+        <row><cell>35 to 50</cell><cell>106</cell><cell>19</cell></row>
+        <row><cell>51 to 65</cell><cell>52</cell><cell>7</cell></row>
+      </tabular>
+    </table>
+    <table xml:id="tab-rip-table-summary">
+      <title>Identifying rips: a summary table. The ORs are relative to the <m>51</m> to <m>65</m> age group.</title>
+      <tabular halign="center">
+        <row header="yes"><cell></cell><cell>Odds</cell><cell>OR</cell><cell>Percentage</cell><cell><m>n</m></cell></row>
+        <row><cell>18 to 24</cell><cell>8.200</cell><cell>1.104</cell><cell>89.1</cell><cell>46</cell></row>
+        <row><cell>25 to 34</cell><cell>3.917</cell><cell>0.527</cell><cell>79.7</cell><cell>59</cell></row>
+        <row><cell>35 to 50</cell><cell>5.579</cell><cell>0.751</cell><cell>84.8</cell><cell>125</cell></row>
+        <row><cell>51 to 65</cell><cell>7.429</cell><cell></cell><cell>88.1</cell><cell>59</cell></row>
+      </tabular>
+    </table>
+    <p>
+      The odds and percentage of people in each age group that can correctly identify rips can be computed (Table <xref ref="tab-rip-table-summary"/>), but this is not always possible (e.g., for a <m>3\times 4</m> table). ORs compare <em>pairs</em> of odds, and the ORs in Table <xref ref="tab-rip-table-summary"/> are all relative to those in the <m>51</m> to <m>65</m> age group (hence, no OR is given for the <m>51</m> to <m>65</m> age group, which is the <em>reference level</em>).<idx>Reference level</idx> For example, the odds of someone aged <m>18</m> to <m>24</m> correctly identifying a rip is <m>1.104</m> times the odds of someone aged <m>51</m> to <m>65</m> correctly identifying a rip.
+    </p>
+    <p>
+      For tables larger than <m>2\times 2</m> more generally, the hypothesis are usually worded in terms of associations or relationships (but <em>not</em> correlations) between the variables:
+    </p>
+    <ul>
+      <li><p><m>H_0</m>: In the <em>population</em>, there <em>is no association</em> between correctly identifying a rip and age group.</p></li>
+      <li><p><m>H_1</m>: In the <em>population</em>, there <em>is an association</em> between correctly identifying a rip and age group.</p></li>
+    </ul>
+    <p>
+      The test statistic is a <m>\chi^2</m>-value, which compares the observed and expected counts;<idx>Expected counts</idx> the expected counts are found in the same way as in Sect. <xref ref="sec-expected-values"/>.
+    </p>
+    <p>
+      For two-way tables larger than <m>2\times 2</m>, the parameter describing the association between the variables is the <m>\chi^2</m>-value. When no relationship exists in the sample, the observed and expected counts are the same, and <m>\chi^2 = 0</m>. The larger the difference between the observed and expected counts, the larger the value of <m>\chi^2</m>. Sampling variation means that the observed counts will vary from sample to sample, so that <m>\chi^2</m> may not be exactly zero, even if there is no association between the variables.
+    </p>
+    <p>
+      Software computes <m>\chi^2 = 2.406</m>, and the two-tailed <m>P</m>-value as <m>P = 0.492</m> (Fig. <xref ref="fig-rips-jamovi"/>, left panel). This <m>P</m>-value means there is not persuasive evidence to support the alternative hypothesis:
+    </p>
+    <blockquote>
+      <p>The <em>sample</em> provides no evidence (<m>\chi^2 = 2.406</m>, <m>n = 289</m>; two-tailed <m>P = 0.492</m>) of an association between age group and the ability to correctly identify a rip among Spanish people.</p>
+    </blockquote>
+    <warning>
+      <p>For hypothesis tests involving tables of counts larger than <m>2\times 2</m>, the alternative hypothesis <em>is always two-tailed</em>.</p>
+    </warning>
+    <figure xml:id="fig-rips-jamovi">
+      <caption>Software output for the hypothesis test about knowledge of ocean rips.</caption>
+      <image source="fig-rips-jamovi.png" width="90%"/>
+    </figure>
+    <p>
+      The statistical validity conditions are the same as in Sect. <xref ref="sec-validity-chi-sq"/>:<idx><h>Statistical validity (for inference)</h><h>odds ratio</h></idx> all <em>expected</em> counts are at least five. Using Equation <xref ref="eq-smallest-expected-count"/>,
+    </p>
+    <me>\frac{(\text{Smallest row total})\times(\text{Smallest column total})}{\text{Overall total}} = \frac{46\times 43}{289} = 6.84</me>
+    <p>
+      (as in Fig. <xref ref="fig-rips-jamovi"/>, right panel), which is larger than five. The test is statistically valid.
+    </p>
+    <p>
+      <url href="https://learningapps.org/watch?v=ptw49fp0322">LearningApps: interactive activity on chi-squared tests</url>
+    </p>
+  </section>
+
+  <section xml:id="sec-turtle-nests">
+    <title>Example: turtle nests</title>
+    <p>
+      The hatching success of loggerhead turtles on Mediterranean beaches is often compromised by fungi and bacteria. <xref ref="candan2021first"/> studied the odds of a nest being infected, comparing relocated nests (relocated due to the risk of tidal inundation), and non-relocated nests (Table <xref ref="tab-turtle-nest-data-table"/>). The researchers were interested in knowing:
+    </p>
+    <blockquote>
+      <p>For Mediterranean loggerhead turtles, are the odds of infections the same for natural and relocated nests?</p>
+    </blockquote>
+    <table xml:id="tab-turtle-nest-data-table">
+      <title>Infected and non-infected turtle nests.</title>
+      <tabular halign="center">
+        <row header="yes"><cell></cell><cell>Non-infected</cell><cell>Infected</cell></row>
+        <row><cell>Natural</cell><cell>29</cell><cell>10</cell></row>
+        <row><cell>Relocated</cell><cell>14</cell><cell>8</cell></row>
+      </tabular>
+    </table>
+    <table xml:id="tab-turtle-nest-summary-table">
+      <title>Numerical summary for the turtles data.</title>
+      <tabular halign="center">
+        <row header="yes"><cell></cell><cell>Odds not infected</cell><cell>Proportion not infected</cell><cell>Sample size</cell></row>
+        <row><cell>Natural</cell><cell>2.90</cell><cell>0.744</cell><cell>39</cell></row>
+        <row><cell>Relocated</cell><cell>1.75</cell><cell>0.636</cell><cell>22</cell></row>
+        <row><cell></cell><cell><em>OR: 1.66</em></cell><cell><em>Diff.: 0.107</em></cell><cell></cell></row>
+      </tabular>
+    </table>
+    <figure xml:id="fig-turtle-nests-graphs">
+      <caption>Bar chart for the turtle-nesting data.</caption>
+      <image source="fig-turtle-nests-graphs.png" width="50%"/>
+    </figure>
+    <p>
+      Since the RQ is written in terms of odds, the hypotheses should be written using odds also:
+    </p>
+    <ul>
+      <li><p><m>H_0</m>: The odds of a nest being infected is <em>the same</em> for natural and relocated nests.</p></li>
+      <li><p><m>H_1</m>: The odds of a nest being infected is <em>not the same</em> for natural and relocated nests.</p></li>
+    </ul>
+    <p>
+      Here, <m>N</m> refers to <alert>N</alert>atural nests, and <m>R</m> to <alert>R</alert>elocated nests. The parameter is the odds ratio of a nest being infected, comparing natural to relocated nests. (The equivalent hypotheses written in terms of proportions would be <m>H_0</m>: <m>p_N - p_R = 0</m> and <m>H_1</m>: <m>p_N - p_R \ne 0</m>. The hypotheses could also be written in terms of associations.)
+    </p>
+    <p>
+      A graphical summary is shown in Fig. <xref ref="fig-turtle-nests-graphs"/>. A numerical summary table (Table <xref ref="tab-turtle-nest-summary-table"/>) shows that the odds of natural nest being infected is <m>1.66</m> times the odds of a relocated nest being infected. From the software output (Fig. <xref ref="fig-turtle-nests-output-jamovi"/>), the <m>\chi^2</m>-value is <m>0.777</m>. Since the table is a <m>2\times 2</m> table, the equivalent <m>z</m>-score can be found: <m>z = \sqrt{0.777} = 0.88</m>. This <m>z</m>-score is very small, so expect a large <m>P</m>-value. (This is the value of the <m>z</m>-score shown in Fig. <xref ref="fig-turtle-nests-output-jamovi"/> for comparing two proportions.) The <m>P</m>-value is <m>0.378</m> on the output (for both tests).
+    </p>
+    <p>
+      The smallest <em>expected</em> count is <m>(22\times 18) / 61 = 6.49</m>, which exceeds five, so the test is statistically valid. Since the RQ and hypotheses were written in terms of odds, the conclusion is also written in terms of odds:
+    </p>
+    <blockquote>
+      <p>There is no evidence of a difference in the odds of non-infection (<m>\chi^2</m>: <m>0.777</m>; <m>P</m>-value: <m>0.378</m>; OR: <m>1.657</m>; <m>95</m>% CI: <m>0.537</m> to <m>5.12</m>) between natural nests (odds: <m>2.90</m>; <m>n = 39</m>) and relocated nests (odds: <m>1.75</m>; <m>n = 22</m>).</p>
+    </blockquote>
+    <p>
+      There is no evidence that relocating the nest (to protect them from tidal inundation) changes the risk of infection.
+    </p>
+    <warning>
+      <p>
+        We <em>do not</em> say whether the evidence supports the null hypothesis. We assume the null hypothesis is true, so we state the strength of evidence to change our mind (and hence support the alternative hypothesis). The current sample presents no evidence to contradict the assumption, but future evidence may emerge.
+      </p>
+    </warning>
+    <figure xml:id="fig-turtle-nests-output-jamovi">
+      <caption>The software output for the turtle-nesting data.</caption>
+      <image source="fig-turtle-nests-output-jamovi.png" width="60%"/>
+    </figure>
+  </section>
+
+  <section xml:id="sec-ht-compare-odds-burros">
+    <title>Example: health of female burros</title>
+    <p>
+      <xref ref="johnson1987demography"/> studied <m>315</m> introduced female burros (donkeys) in the Mojave Desert (California) to understand management processes. One RQ was:
+    </p>
+    <blockquote>
+      <p>For these female burros, is the reproductive status of the burros related to their health?</p>
+    </blockquote>
+    <p>
+      The data (Table <xref ref="tab-burros-data"/>) are given in a <m>3\times 3</m> table of counts. The data are summarised using row proportions in Table <xref ref="tab-burros-summary"/>, and in a graph in Fig. <xref ref="fig-burros-chisq-jamovi-plot"/> (left panel). Software output is shown in Fig. <xref ref="fig-burros-chisq-jamovi-plot"/> (right panel).
+    </p>
+    <table xml:id="tab-burros-data">
+      <title>The health and reproductive status of female burros. (Pregnant and lactating burros were counted with the lactating burros only.)</title>
+      <tabular halign="center">
+        <row header="yes"><cell></cell><cell>Excellent</cell><cell>Fair</cell><cell>Poor</cell></row>
+        <row><cell>Barren</cell><cell>16</cell><cell>21</cell><cell>38</cell></row>
+        <row><cell>Pregnant</cell><cell>14</cell><cell>53</cell><cell>62</cell></row>
+        <row><cell>Lactating</cell><cell>4</cell><cell>29</cell><cell>78</cell></row>
+      </tabular>
+    </table>
+    <table xml:id="tab-burros-summary">
+      <!-- Reconstructed from the rendered book: caption is "Row proportions" in the source, though the columns shown are odds/OR/percentage/n for having excellent health -->
+      <title>Row proportions for the burros data (i.e., rows sum to one).</title>
+      <tabular halign="center">
+        <row header="yes"><cell></cell><cell>Odds</cell><cell>Odds ratio</cell><cell>Percentage</cell><cell><m>n</m></cell></row>
+        <row><cell>Barren</cell><cell>0.271</cell><cell>7.254</cell><cell>21.333</cell><cell>75.000</cell></row>
+        <row><cell>Pregnant</cell><cell>0.122</cell><cell>3.257</cell><cell>10.853</cell><cell>129.000</cell></row>
+        <row><cell>Lactating</cell><cell>0.037</cell><cell></cell><cell>3.604</cell><cell>111.000</cell></row>
+      </tabular>
+    </table>
+    <p>
+      The hypotheses must be worded in terms of associations (or <em>relationships</em>):
+    </p>
+    <ul>
+      <li><p><m>H_0</m>: <em>No association</em> exists between reproductive status and overall health.</p></li>
+      <li><p><m>H_1</m>: <em>An association</em> exists between reproductive status and overall health.</p></li>
+    </ul>
+    <p>
+      From the software output (Fig. <xref ref="fig-burros-chisq-jamovi-plot"/>, right panel), <m>\chi^2 = 23.585</m>. Notice that a comparison of proportions is not possible for tables larger than <m>2\times 2</m>. Software reports <m>P &lt; 0.001</m>, which suggests very strong evidence in the sample that an association exists between reproductive status and overall health.
+    </p>
+    <figure xml:id="fig-burros-chisq-jamovi-plot">
+      <caption>Left: a stacked bar chart for the burro-health data. Right: software output for the burro-health data.</caption>
+      <image source="fig-burros-chisq-jamovi-plot.png" width="100%"/>
+    </figure>
+    <p>
+      The conclusion could be written as
+    </p>
+    <blockquote>
+      <p>The sample provides very strong evidence (<m>\chi^2 = 23.585</m>; <m>P &lt; 0.001</m>; <m>3\times 3</m> table) of an association between reproductive status and overall health of female burros (<m>n = 315</m>).</p>
+    </blockquote>
+    <p>
+      Adding sample summary information to this conclusion is cumbersome. Instead, readers can be pointed to the numerical summary (Table <xref ref="tab-burros-summary"/>). Furthermore, CIs are not reported.
+    </p>
+    <p>
+      While we know there is an association between the variables, we can only speculate on the nature of the association (i.e., for which group(s) the <em>population</em> proportions are different). Formal methods for doing so requires methods beyond this book, but Fig. <xref ref="fig-burros-chisq-jamovi-plot"/> (left panel) suggests that lactating burros are far more likely to have poor health.
+    </p>
+    <p>
+      The smallest <em>expected</em> value is <m>75\times 34/315 = 8.1</m>, which exceeds <m>5</m>, so the results are statistically valid.
+    </p>
+  </section>
+
+  <section xml:id="sec-tests-odds-ratio-summary">
+    <title>Chapter summary</title>
+    <p>
+      To compare a two-level qualitative variable between two groups, a CI can be formed for the difference between two proportions, or for an OR.
+    </p>
+    <p>
+      To compute a CI for the difference between two proportions, compute the difference between the two sample proportions, <m>\hat{p}_1 - \hat{p}_2</m>, and identify the sample sizes <m>n_1</m> and <m>n_2</m>. Then the standard error, which quantifies how much the value of <m>\hat{p}_1 - \hat{p}_2</m> varies across all possible samples, is
+    </p>
+    <me>\text{s.e.}(\hat{p}_1 - \hat{p}_2) = \sqrt{ \text{s.e}(\hat{p}_1) + \text{s.e.}(\hat{p}_2)},</me>
+    <p>
+      where <m>\text{s.e.}(\hat{p}_1)</m> and <m>\text{s.e.}(\hat{p}_2)</m> are the standard errors of Groups <m>1</m> and <m>2</m> (Equation <xref ref="eq-stderrorphat"/>). The <em>margin of error</em> is (multiplier<m>{}\times{}</m>standard error), where the multiplier is <m>2</m> for an approximate <m>95</m>% CI (using the <m>68</m>&#8211;<m>95</m>&#8211;<m>99.7</m> rule). Then the CI is:
+    </p>
+    <me>(\hat{p}_1 - \hat{p}_2) \pm \left( \text{multiplier}\times\text{standard error} \right).</me>
+    <p>
+      Software is used to compute a CI for the OR, as the sampling distribution does not have a normal distribution.
+    </p>
+    <p>
+      These steps are used to test a hypothesis about a difference between two population proportions <m>p_1 - p_2</m>.
+    </p>
+    <ul>
+      <li><p>Write the null hypothesis (<m>H_0</m>) and the alternative hypothesis (<m>H_1</m>); initially <em>assume</em> the value of <m>(p_1 - p_2)</m> in the null hypothesis to be true.</p></li>
+      <li>
+        <p>Describe the <em>sampling distribution</em>, which describes what to <em>expect</em> from the difference between the sample proportions based on this assumption: under certain statistical validity conditions, the difference between the sample proportions vary with:</p>
+        <ul>
+          <li><p>an approximate normal distribution,</p></li>
+          <li><p>with sampling mean whose value is the value of <m>(p_1 - p_2)</m> (from <m>H_0</m>), and</p></li>
+          <li><p>having a standard deviation of <m>\displaystyle \text{s.e.}(\hat{p}_1 - \hat{p}_2)</m> computed using the <em>common</em> proportion.</p></li>
+        </ul>
+      </li>
+      <li>
+        <p>Compute the value of the <em>test statistic</em>:</p>
+        <me>z = \frac{ (\hat{p}_1 - \hat{p}_2) - (p_1 - p_2)}{\text{s.e.}(\hat{p}_1 - \hat{p}_2)},</me>
+        <p>where <m>p_1 - p_2</m> is the hypothesised difference given in the null hypothesis.</p>
+      </li>
+      <li><p>An approximate <em><m>P</m>-value</em> can be estimated using the <m>68</m>&#8211;<m>95</m>&#8211;<m>99.7</m> rule, or an exact <m>P</m>-value found using software. Use the <m>P</m>-value to make a decision, and write a conclusion.</p></li>
+      <li><p>Check the statistical validity conditions.</p></li>
+    </ul>
+    <p>
+      These steps are used to test a hypothesis for comparing two odds, or to test for a relationship between two qualitative variables more generally.
+    </p>
+    <ul>
+      <li><p>Write the null hypothesis (<m>H_0</m>) and the alternative hypothesis (<m>H_1</m>); initially <em>assume</em> no relationship between the two variables.</p></li>
+      <li><p>Find the value of the <em>test statistic</em> (a <m>\chi^2</m>-score) on the software output. (For <m>2\times 2</m> tables only, the equivalent <m>z</m>-score is <m>\sqrt{\chi^2}</m>.)</p></li>
+      <li><p>A <em><m>P</m>-value</em> is found using software; use the <m>P</m>-value to make a decision, and write a conclusion.</p></li>
+      <li><p>Check the statistical validity conditions.</p></li>
+    </ul>
+    <p>
+      The statistical validity conditions should be checked: all <em>expected</em> counts should exceed five.
+    </p>
+  </section>
+
+  <reading-questions xml:id="sec-tests-odds-ratio-quick-review">
+    <title>Quick review questions</title>
+    <introduction>
+      <p>
+        <xref ref="chen2023triage"/> investigated the relationship between body temperature of patients admitted to hospital following a heart attack (HA), and a having a subsequent HA while in hospital (Table <xref ref="tab-h-attack-data"/>).
+      </p>
+      <p>Are the following statements <em>true</em> or <em>false</em>?</p>
+    </introduction>
+    <exercise label="qr-ch31-1">
+      <statement><p>From the software output, the <m>P</m>-value is <m>0.180</m>.</p></statement>
+      <answer><p>False.</p></answer>
+    </exercise>
+    <exercise label="qr-ch31-2">
+      <statement><p>The alternative hypothesis is two-tailed.</p></statement>
+      <answer><p>True.</p></answer>
+    </exercise>
+    <exercise label="qr-ch31-3">
+      <statement><p>There is <em>no</em> evidence of a difference in odds of having an in-hospital HA, comparing patients with low and high body temperatures.</p></statement>
+      <answer><p>False.</p></answer>
+    </exercise>
+    <exercise label="qr-ch31-4">
+      <statement><p>The CI is not statistically valid, because the CI for the difference between the proportions has a <em>negative</em> value.</p></statement>
+      <answer><p>False.</p></answer>
+    </exercise>
+    <exercise label="qr-ch31-5">
+      <statement><p>The CI means that the sample OR is likely to be between <m>0.330</m> and <m>5.568</m>.</p></statement>
+      <answer><p>False.</p></answer>
+    </exercise>
+    <exercise label="qr-ch31-6">
+      <statement><p>The <m>\chi^2</m>-value is <m>0.180</m>.</p></statement>
+      <answer><p>True.</p></answer>
+    </exercise>
+    <exercise label="qr-ch31-7">
+      <statement><p>Of patients with a low body temperature, <m>4/27 = 0.148</m> had an in-hospital HA.</p></statement>
+      <answer><p>True.</p></answer>
+    </exercise>
+    <exercise label="qr-ch31-8">
+      <statement><p>The <em>odds</em> that a patient with a low body temperature had an in-hospital HA is <m>4/23 = 0.174</m>.</p></statement>
+      <answer><p>True.</p></answer>
+    </exercise>
+    <exercise label="qr-ch31-9">
+      <statement><p>Select the correct answer. The OR in the output is given as <m>1.357</m>. What does this OR <em>mean</em>?</p></statement>
+      <answer><p>The odds of having an in-hospital HA is <m>1.357</m> times greater for those with a low body temperature.</p></answer>
+    </exercise>
+    <table xml:id="tab-h-attack-data">
+      <title>Body temperature of patients, and whether they experienced a heart attack while in hospital.</title>
+      <tabular halign="center">
+        <row header="yes"><cell></cell><cell>In-hospital HA</cell><cell>No in-hospital HA</cell></row>
+        <row><cell>Low body temp.</cell><cell>4</cell><cell>23</cell></row>
+        <row><cell>High body temp.</cell><cell>5</cell><cell>39</cell></row>
+      </tabular>
+    </table>
+    <figure xml:id="fig-h-attack-jamovi">
+      <caption>Software output for the heart-attack study.</caption>
+      <image source="fig-h-attack-jamovi.png" width="50%"/>
+    </figure>
+  </reading-questions>
+
+  <exercises xml:id="sec-tests-odds-ratio-exercises">
+    <introduction>
+      <p>Answers to odd-numbered exercises are given at the end of the book.</p>
+    </introduction>
+
+    <exercise xml:id="exercise-odds-same">
+      <p>
+        Consider the expected counts in Table <xref ref="tab-meals-data-table-expected"/>. Confirm that the <em>odds</em> of having most meals off-campus is the same for students living with their parents, and for students not living with their parents.
+      </p>
+    </exercise>
+
+    <exercise xml:id="exercise-odds-same2">
+      <p>
+        Compute all four expected counts in Table <xref ref="tab-h-attack-data"/>. Confirm that the corresponding test may not be statistically valid.
+      </p>
+    </exercise>
+
+    <exercise xml:id="exercise-odds-ratio-ci-sampling-dist-a">
+      <p>
+        Sketch the sampling distribution for the difference between the proportions of students eating most meals off-campus, for those living with parents minus those not living with parents. What is the sampling distribution for the equivalent OR?
+      </p>
+    </exercise>
+
+    <exercise xml:id="exercise-odds-ratio-ci-sampling-dist-b">
+      <p>
+        Sketch the sampling distribution for the difference between the proportion of non-infected turtle nests, for natural nests minus relocated nests (in Sect. <xref ref="sec-turtle-nests"/>). What is the sampling distribution for the equivalent OR?
+      </p>
+    </exercise>
+
+    <exercise xml:id="exercise-chi2z">
+      <p>
+        Suppose an analysis of a <m>2\times 2</m> table of counts produces a value of <m>\chi^2 = 10.66</m>.
+      </p>
+      <ol>
+        <li><p>What would be the equivalent <m>z</m>-score for comparing the two proportions?</p></li>
+        <li><p>What would be the approximate <m>P</m>-value?</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="exercise-chi2z-a">
+      <p>
+        Suppose an analysis of a <m>2\times 2</m> table of counts produces a value of <m>\chi^2 = 4.06</m>.
+      </p>
+      <ol>
+        <li><p>What would be the equivalent <m>z</m>-score for comparing the two proportions?</p></li>
+        <li><p>What would be the approximate <m>P</m>-value?</p></li>
+      </ol>
+    </exercise>
+
+    <exercise xml:id="exercise-ev-adoption">
+      <p>
+        [<em>Dataset</em>: <c>EVPurchase</c>] <xref ref="egbue2017mass"/> studied the adoption of electric vehicles (EVs) by a group of professional Americans (Table <xref ref="tab-ev10years"/>). Software output is shown in Fig. <xref ref="fig-ev-jamovi"/>.
+      </p>
+      <ol>
+        <li><p>Based on the output, how is the difference between the two proportions defined?</p></li>
+        <li><p>Write the hypothesis for comparing the <em>proportions</em> using this definition of the difference.</p></li>
+        <li><p>Use the software output to conduct the test.</p></li>
+        <li><p>Use the software output to write down the corresponding CI for the difference in proportions.</p></li>
+        <li><p>Based on the output, how is the OR defined?</p></li>
+        <li><p>Write the hypothesis for comparing the <em>odds</em>, for those with and without post-graduate study.</p></li>
+        <li><p>Use the software output to conduct the test.</p></li>
+        <li><p>Use the software output to write down the corresponding CI for the OR.</p></li>
+        <li><p>Are the CIs and tests statistically valid?</p></li>
+      </ol>
+      <table xml:id="tab-ev10years">
+        <title>Responses to 'Would you purchase an electric vehicle in the next <m>10</m> years?' by education.</title>
+        <tabular halign="center">
+          <row header="yes"><cell></cell><cell>Yes</cell><cell>No</cell></row>
+          <row><cell>No post-grad</cell><cell>24</cell><cell>8</cell></row>
+          <row><cell>Post-grad study</cell><cell>51</cell><cell>29</cell></row>
+        </tabular>
+      </table>
+      <figure xml:id="fig-ev-jamovi">
+        <caption>Software output for the EV study.</caption>
+        <image source="fig-ev-jamovi.png" width="50%"/>
+      </figure>
+    </exercise>
+
+    <exercise xml:id="exercise-ethiopian-farmers">
+      <p>
+        <xref ref="meresa2023effect"/> investigated Ethiopian farmers' adoption of improved soil and water conservation structures on their farms (Table <xref ref="tab-farmers-data"/>). Software output is shown in Fig. <xref ref="fig-farmers-jamovi-ht"/>.
+      </p>
+      <ol>
+        <li><p>Based on the output, how is the difference between the two proportions defined?</p></li>
+        <li><p>Write the hypothesis for comparing the proportions, using this definition of the difference.</p></li>
+        <li><p>Use the software output to conduct the test.</p></li>
+        <li><p>Use the software output to write down the corresponding CI for the difference in proportions.</p></li>
+        <li><p>Based on the output, how is the OR defined?</p></li>
+        <li><p>Write the hypothesis for comparing the odds, for farmers with small and large farms.</p></li>
+        <li><p>Use the software output to conduct the test.</p></li>
+        <li><p>Use the software output to write down the corresponding CI for the OR.</p></li>
+        <li><p>Are the CIs and tests statistically valid?</p></li>
+      </ol>
+      <table xml:id="tab-farmers-data">
+        <title>Adoption of conservation practices by Ethiopian farmers, by farm size.</title>
+        <tabular halign="center">
+          <row header="yes"><cell></cell><cell>Non-adopter</cell><cell>Adopter</cell></row>
+          <row><cell>Less than <m>0.5</m> ha (small)</cell><cell>86</cell><cell>61</cell></row>
+          <row><cell><m>\ge 0.5</m> ha (large)</cell><cell>43</cell><cell>71</cell></row>
+        </tabular>
+      </table>
+      <figure xml:id="fig-farmers-jamovi-ht">
+        <caption>Software output for the farming study.</caption>
+        <image source="fig-farmers-jamovi-ht.png" width="50%"/>
+      </figure>
+    </exercise>
+
+    <exercise xml:id="exercise-or-crashes">
+      <p>
+        [<em>Dataset</em>: <c>CarCrashes</c>] <xref ref="wang2020driver"/> recorded information about car crashes in a rural, mountainous county in western China (Table <xref ref="tab-crash-data-table-html"/>).
+      </p>
+      <ol>
+        <li><p>Sketch a suitable graph to display the data.</p></li>
+        <li><p>Compute the <em>proportion</em> of crashes involving a pedestrian in 2011 (<m>\hat{p}_{2011}</m>), and in 2015 (<m>\hat{p}_{2015}</m>).</p></li>
+        <li><p>Compute the <em>difference between the proportion</em> of crashes involving a pedestrian from 2011 to 2015, consistent with the definition used in the output (Fig. <xref ref="fig-car-crash-jamovi"/>).</p></li>
+        <li><p>Compute the value of <m>\text{s.e.}(\hat{p}_{2011} - \hat{p}_{2015})</m>, needed for constructing the CI.</p></li>
+        <li><p>Construct the <em>approximate</em> <m>95</m>% CI for the difference between the proportions.</p></li>
+        <li><p>Write down a <m>95</m>% CI for the difference between the proportions.</p></li>
+        <li><p>Interpret what this CI means.</p></li>
+        <li><p>Compute the <em>odds</em> of crashes involving a pedestrian in 2011, and also in 2015.</p></li>
+        <li><p>Compute the <em>OR</em> of crashes involving a pedestrian, comparing 2011 to 2015.</p></li>
+        <li><p>Write down the CI for the OR.</p></li>
+        <li><p>Construct an appropriate numerical summary table for the data.</p></li>
+        <li><p>Compute the value of <m>\text{s.e.}(\hat{p}_{2011} - \hat{p}_{2015})</m>, needed for conducting a hypothesis test.</p></li>
+        <li><p>Conduct a hypothesis test to determine if there is a difference between <m>p_{2011}</m> and <m>p_{2015}</m>.</p></li>
+        <li><p>Conduct a hypothesis test to determine if there is a difference between the odds of a crash involving a pedestrian for 2011 and 2015.</p></li>
+        <li><p>Are the CIs and tests statistically valid?</p></li>
+      </ol>
+      <table xml:id="tab-crash-data-table-html">
+        <title>Type of car crashes in different years.</title>
+        <tabular halign="center">
+          <row header="yes"><cell></cell><cell>Involving pedestrians</cell><cell>Involving vehicles</cell></row>
+          <row><cell>2011</cell><cell>15</cell><cell>35</cell></row>
+          <row><cell>2015</cell><cell>37</cell><cell>85</cell></row>
+        </tabular>
+      </table>
+      <figure xml:id="fig-car-crash-jamovi">
+        <caption>Software output for the car-crash data.</caption>
+        <image source="fig-car-crash-jamovi.png" width="50%"/>
+      </figure>
+    </exercise>
+
+    <exercise xml:id="exercise-tests-odds-ratio-scars">
+      <p>
+        [<em>Dataset</em>: <c>ScarHeight</c>] <xref ref="data-Wallace2017-Sunburn"/> compared the heights of scars from burns received by people in Western Australia (Table <xref ref="tab-scars-data"/>). Software was used to analyse the data (Fig. <xref ref="fig-scar-height-risk-jamovi"/>).
+      </p>
+      <ol>
+        <li><p>Sketch an appropriate graph to summarise the data.</p></li>
+        <li><p>Compute the <em>proportion</em> of men having a smooth scar, and the <em>proportion</em> of women.</p></li>
+        <li><p>Compute the <em>difference between the proportions</em> of men and women having a smooth scar.</p></li>
+        <li><p>Compute the standard error for the difference between the proportions, needed for constructing a CI.</p></li>
+        <li><p>Compute the <em>approximate</em> <m>95</m>% CI for the difference between the proportions.</p></li>
+        <li><p>Write down the <m>95</m>% CI for the difference between the proportions, using the software output.</p></li>
+        <li><p>Interpret what this CI means.</p></li>
+        <li><p>Compute the <em>odds</em> of having a smooth scar for men, and for women.</p></li>
+        <li><p>Compute the <em>OR</em> of having a smooth scar, comparing men to women.</p></li>
+        <li><p>Write down the CI for the OR of having a smooth scar, comparing men to women.</p></li>
+        <li><p>Compile a numerical summary table.</p></li>
+        <li><p>Compute the value of standard error of the difference between the proportions, needed for conducting a hypothesis test.</p></li>
+        <li><p>Conduct a hypothesis test to determine if there is a difference between the proportions for men and women.</p></li>
+        <li><p>Conduct a hypothesis test to determine if there is a difference between the odds for men and women.</p></li>
+        <li><p>Are the CIs and tests statistically valid?</p></li>
+      </ol>
+      <table xml:id="tab-scars-data">
+        <title>Heights of scars for men and women.</title>
+        <tabular halign="center">
+          <row header="yes"><cell></cell><cell>Men</cell><cell>Women</cell></row>
+          <row><cell>Smooth</cell><cell>216</cell><cell>99</cell></row>
+          <row><cell>0mm to 1mm</cell><cell>115</cell><cell>62</cell></row>
+        </tabular>
+      </table>
+      <figure xml:id="fig-scar-height-risk-jamovi">
+        <caption>Software output for the scar-height data.</caption>
+        <image source="fig-scar-height-risk-jamovi.png" width="50%"/>
+      </figure>
+    </exercise>
+
+    <exercise xml:id="exercise-pet-birds-test">
+      <p>
+        [<em>Dataset</em>: <c>PetBirds</c>] <xref ref="data-Kohlmeier1992-BirdsCancer"/> examined people with lung cancer, and a matched set of controls who did not have lung cancer, and recorded the number in each group that kept pet birds. The data are shown in Table <xref ref="tab-birds-data"/>, and the software output in Fig. <xref ref="fig-pet-birds-jamovi"/>.
+      </p>
+      <p>Consider this RQ:</p>
+      <blockquote>
+        <p>Are the odds of having a pet bird the same for people <em>with</em> lung cancer (cases) and for people <em>without</em> lung cancer (controls)?</p>
+      </blockquote>
+      <ol>
+        <li><p>Compute the difference between the proportions of people with pet birds, for those with and without lung cancer.</p></li>
+        <li><p>Compute the standard error needed to compute the CI for the difference in proportions.</p></li>
+        <li><p>Compute the standard error needed to conduct the hypothesis test to compare the proportions.</p></li>
+        <li><p>Explain <em>why</em> the two standard errors have slightly different values.</p></li>
+        <li><p>Compute an approximate <m>95</m>% CI for the difference between the two proportions.</p></li>
+        <li><p>Write down the <m>95</m>% CI for the difference between the proportions using the output (Fig. <xref ref="fig-pet-birds-jamovi"/>).</p></li>
+        <li><p>Interpret the CIs.</p></li>
+        <li><p>Conduct a hypothesis test to compare the two proportions.</p></li>
+        <li><p>Confirm that the OR in the output is correct.</p></li>
+        <li><p>Write down a <m>95</m>% CI for the OR, and interpret what it means.</p></li>
+        <li><p>Perform a hypothesis test to determine if the odds of having a pet bird is the same for people with and without lung cancer.</p></li>
+        <li><p>Are the CIs and tests statistically valid?</p></li>
+        <li><p>Explain why no cause-and-effect can be reached.</p></li>
+      </ol>
+      <table xml:id="tab-birds-data">
+        <title>The pet bird data.</title>
+        <tabular halign="center">
+          <row header="yes"><cell></cell><cell>Adults with lung cancer</cell><cell>Adults without lung cancer</cell><cell>Total</cell></row>
+          <row><cell>Did not keep pet birds</cell><cell>141</cell><cell>328</cell><cell>469</cell></row>
+          <row><cell>Kept pet birds</cell><cell>98</cell><cell>101</cell><cell>199</cell></row>
+          <row><cell>Total</cell><cell>239</cell><cell>429</cell><cell>668</cell></row>
+        </tabular>
+      </table>
+      <figure xml:id="fig-pet-birds-jamovi">
+        <caption>Software output for the pet-birds data.</caption>
+        <image source="fig-pet-birds-jamovi.png" width="99%"/>
+      </figure>
+    </exercise>
+
+    <exercise xml:id="exercise-tests-odds-ratio-august-rainfall-in-emerald">
+      <p>
+        [<em>Dataset</em>: <c>EmeraldAug</c>] The <em>Southern Oscillation Index</em> (SOI) is a standardised measure of the air pressure difference between Tahiti and Darwin, and is related to rainfall in some parts of the world <xref ref="climate-stone-1996"/>, and especially Queensland <xref ref="climate-stone-1992"/>.
+      </p>
+      <p>
+        The rainfall at Emerald (Queensland) was recorded for Augusts between 1889 and 2002 inclusive <xref ref="mypapers-dunnsmyth-glms"/>, where the monthly average SOI was positive, and when the SOI was non-positive (zero or negative), as shown in Table <xref ref="tab-soi-table-analysis"/>.
+      </p>
+      <ol>
+        <li><p>Compute the difference between the proportions of Augusts with rain, for months with a positive SOI compared to months with a non-positive SOI.</p></li>
+        <li><p>Compute the standard error needed to compute the CI for the difference in proportions.</p></li>
+        <li><p>Compute the standard error needed to conduct the hypothesis to compare the proportions.</p></li>
+        <li><p>Explain <em>why</em> the two standard errors have slightly different values.</p></li>
+        <li><p>Compute an approximate <m>95</m>% CI for the difference between the two proportions.</p></li>
+        <li><p>Write down the <m>95</m>% CI for the difference between the proportions using the output (Fig. <xref ref="fig-emerald-rain-jamovi-output"/>).</p></li>
+        <li><p>Interpret the CIs.</p></li>
+        <li><p>Conduct a hypothesis test to compare the two proportions.</p></li>
+        <li><p>Confirm that the OR in the output is correct.</p></li>
+        <li><p>Write down a <m>95</m>% CI for the OR, and interpret what it means.</p></li>
+        <li><p>Perform a hypothesis test to determine if the odds of recording rain is the same for Augusts with non-positive and positive SOI.</p></li>
+        <li><p>Are the CIs and tests statistically valid?</p></li>
+      </ol>
+      <!-- Reconstructed from the parallel EmeraldAug SOI table in ch_15's exercises, transposed to this chapter's row/column layout -->
+      <table xml:id="tab-soi-table-analysis">
+        <title>The SOI, and whether rainfall was recorded in Augusts between 1889 and 2002 inclusive.</title>
+        <tabular halign="center">
+          <row header="yes"><cell></cell><cell>Rainfall recorded</cell><cell>No rainfall recorded</cell></row>
+          <row><cell>Positive SOI</cell><cell>53</cell><cell>7</cell></row>
+          <row><cell>Non-positive SOI</cell><cell>40</cell><cell>14</cell></row>
+        </tabular>
+      </table>
+      <figure xml:id="fig-emerald-rain-jamovi-output">
+        <caption>Software output for the Emerald-rain data.</caption>
+        <image source="fig-emerald-rain-jamovi-output.png" width="65%"/>
+      </figure>
+    </exercise>
+
+    <exercise xml:id="exercise-test-odds-ratio-sunglasses">
+      <p>
+        [<em>Dataset</em>: <c>HatSunglasses</c>] <xref ref="data-Dexter2019-SunProtection"/> recorded the number of people at the foot of the Goodwill Bridge, Brisbane, who wore hats between <m>11</m>:<m>30</m>am to <m>12</m>:<m>30</m>pm. Of the <m>366</m> females observed, <m>22</m> wore hats; of the <m>386</m> males observed, <m>79</m> wore hats.
+      </p>
+      <ol>
+        <li><p>Construct the two-way table for the data.</p></li>
+        <li><p>Compute the proportions of females and males wearing a hat, and hence the difference between the proportions.</p></li>
+        <li><p>Compute the odds of a female and the odds of a male wearing a hat, and hence the OR.</p></li>
+        <li><p>Compute an approximate <m>95</m>% CI for the difference between the proportions.</p></li>
+        <li><p>Write down the <m>95</m>% CI for the difference between the proportion (Fig. <xref ref="fig-sunglasses-output"/>).</p></li>
+        <li><p>Interpret the CIs.</p></li>
+        <li><p>Write down, then interpret, a <m>95</m>% CI for the OR.</p></li>
+        <li><p>Perform a hypothesis test to determine if the odds of wearing a hat is the same for females and males.</p></li>
+        <li><p>Write down the conclusion.</p></li>
+        <li><p>Are the CIs and tests statistically valid?</p></li>
+      </ol>
+      <figure xml:id="fig-sunglasses-output">
+        <caption>Software output for the hats data.</caption>
+        <image source="fig-sunglasses-output.png" width="99%"/>
+      </figure>
+    </exercise>
+
+    <exercise xml:id="exercise-odds-ratios-ci-turbines-ht">
+      <p>
+        [<em>Dataset</em>: <c>Turbines</c>] A study of turbine failures <xref ref="MyersBook"/><xref ref="NelsonLifeData"/> ran <m>73</m> turbines for around <m>1\,800</m> hours, and found that seven developed fissures (small cracks). They also ran a different set of <m>42</m> turbines for about <m>3\,000</m> hours, and found that nine developed fissures.
+      </p>
+      <ol>
+        <li><p>Construct the two-way table for the data.</p></li>
+        <li><p>Compute the difference between the proportions of fissures at <m>1\,800</m> hours and <m>3\,000</m> hours, and hence the difference between the proportions.</p></li>
+        <li><p>Compute the odds of a fissure after <m>1\,800</m> hours and after <m>3\,000</m> hours, and hence the OR.</p></li>
+        <li><p>Compute an approximate <m>95</m>% CI for the difference between the proportions.</p></li>
+        <li><p>Write down the <m>95</m>% CI for the difference between the proportions (Fig. <xref ref="fig-turbines-output"/>).</p></li>
+        <li><p>Interpret the CIs.</p></li>
+        <li><p>Write down, then interpret, a <m>95</m>% CI for the OR.</p></li>
+        <li><p>Test for a relationship.</p></li>
+        <li><p>Are the CIs and tests statistically valid?</p></li>
+      </ol>
+      <figure xml:id="fig-turbines-output">
+        <caption>Software output for the turbine data.</caption>
+        <image source="fig-turbines-output.png" width="60%"/>
+      </figure>
+    </exercise>
+
+    <exercise xml:id="exercise-test-odds-ratio-bear-tree">
+      <p>
+        <xref ref="witmer2020preliminary"/> compared various types of repellents (including bear faeces) to prevent bears damaging trees in an Idaho forest. Part of the data are summarised in Table <xref ref="tab-bear-tree-data"/>.
+      </p>
+      <ol>
+        <li><p>Compute the odds of new damage for both repellents, and hence the OR.</p></li>
+        <li><p>Compute the proportion of trees with new damage for both repellents, and hence the difference between the proportions.</p></li>
+        <li><p>Write the hypothesis for conducting a hypothesis test involving proportions.</p></li>
+        <li><p>Write the hypothesis for conducting a hypothesis test involving odds.</p></li>
+        <li><p>Software gives <m>\chi^2</m> as <m>4.4850</m>. What is the equivalent <m>z</m>-score (e.g., for the test of proportions)? Would you expect a large or small <m>P</m>-value?</p></li>
+        <li><p>The <m>P</m>-value, from software, is <m>P = 0.0342</m>. Write a conclusion, either using odds or proportions.</p></li>
+        <li><p>Is the analysis statistically valid?</p></li>
+      </ol>
+      <table xml:id="tab-bear-tree-data">
+        <title>The number of trees with new damage by bears, according to different repellents.</title>
+        <tabular halign="center">
+          <row header="yes"><cell></cell><cell>New damage</cell><cell>No new damage</cell></row>
+          <row><cell>Bear faeces</cell><cell>6</cell><cell>69</cell></row>
+          <row><cell>Control (water)</cell><cell>15</cell><cell>60</cell></row>
+        </tabular>
+      </table>
+    </exercise>
+
+    <exercise xml:id="exercise-b12-deficiency">
+      <p>
+        [<em>Dataset</em>: <c>B12Diet</c>] <xref ref="data-Gammon2012-B12"/> examined B12 deficiencies in 'predominantly overweight/obese women of South Asian origin living in Auckland'. Some women were on a vegetarian diet and some were not (Table <xref ref="tab-b12-data"/>). One RQ was:
+      </p>
+      <blockquote>
+        <p>Among this group of women, are the odds of being vitamin B12 deficient different for women on a vegetarian diet compared to women on a non-vegetarian diet?</p>
+      </blockquote>
+      <ol>
+        <li><p>Compute the odds of B12 deficiency for both diets, and hence the OR.</p></li>
+        <li><p>Compute the proportion of women with B12 deficiency for both diets, and hence the difference between the proportions.</p></li>
+        <li><p>Write the hypothesis for conducting a hypothesis test involving proportions.</p></li>
+        <li><p>Write the hypothesis for conducting a hypothesis test involving odds.</p></li>
+        <li><p>Software gives <m>\chi^2</m> as <m>4.7067</m>. What is the equivalent <m>z</m>-score (e.g., for the test of proportions)? Would you expect a large or small <m>P</m>-value?</p></li>
+        <li><p>The <m>P</m>-value, from software, is <m>P = 0.0305</m>. Write a conclusion, either using odds or proportions.</p></li>
+        <li><p>Is the analysis statistically valid?</p></li>
+      </ol>
+      <table xml:id="tab-b12-data">
+        <title>The number of vegetarian and non-vegetarian women who are (and are not) B12 deficient.</title>
+        <tabular halign="center">
+          <row header="yes"><cell></cell><cell>B12 deficient</cell><cell>Not B12 deficient</cell></row>
+          <row><cell>Vegetarians</cell><cell>8</cell><cell>26</cell></row>
+          <row><cell>Non-vegetarians</cell><cell>8</cell><cell>82</cell></row>
+        </tabular>
+      </table>
+    </exercise>
+
+    <exercise xml:id="exercise-dogs-ht">
+      <p>
+        [<em>Dataset</em>: <c>DogWalks</c>] <xref ref="naughton2024association"/> studied the difference between the activities of dogs kept in the city and on farms (Table <xref ref="tab-dog-walk-table"/>). One RQ was:
+      </p>
+      <blockquote>
+        <p>For Northern Ireland dogs, is there an association between length of walks, and location?</p>
+      </blockquote>
+      <ol>
+        <li><p>Write down the hypotheses to answer this RQ.</p></li>
+        <li><p>Perform a hypothesis to answer the RQ, using the output in Fig. <xref ref="fig-dog-walks-jamovi"/>.</p></li>
+        <li><p>Write down the conclusion, in terms of odds, including a CI.</p></li>
+        <li><p>Write down the conclusion, in terms of proportions, including a CI.</p></li>
+        <li><p>Is the test statistically valid?</p></li>
+      </ol>
+      <table xml:id="tab-dog-walk-table">
+        <title>The length of walks for dogs, living in the city and farms. ('Varies' means usually short walks, but occasional longer walks.)</title>
+        <tabular halign="center">
+          <row header="yes"><cell></cell><cell>Under <m>30</m></cell><cell><m>30</m> to under <m>60</m></cell><cell><m>60</m> to under <m>120</m></cell><cell>Varies</cell></row>
+          <row><cell>City</cell><cell>138</cell><cell>84</cell><cell>13</cell><cell>264</cell></row>
+          <row><cell>Farm</cell><cell>84</cell><cell>102</cell><cell>33</cell><cell>243</cell></row>
+        </tabular>
+      </table>
+      <figure xml:id="fig-dog-walks-jamovi">
+        <caption>Software output for the dog-walking data.</caption>
+        <image source="fig-dog-walks-jamovi.png" width="45%"/>
+      </figure>
+    </exercise>
+
+    <exercise xml:id="exercise-compliance-ht">
+      <p>
+        [<em>Dataset</em>: <c>Mumps</c>] <xref ref="soud2009isolation"/> studied the compliance of students with an isolation request following a large mumps outbreak in Kansas in 2006. One RQ was:
+      </p>
+      <blockquote>
+        <p>Is there an association between age group, and compliance with the isolation order?</p>
+      </blockquote>
+      <p>
+        The data are shown in Table <xref ref="tab-mumps-table-html"/> and the software output in Fig. <xref ref="fig-mumps-jamovi-html"/>.
+      </p>
+      <ol>
+        <li><p>Write down the hypotheses.</p></li>
+        <li><p>Compute the proportion of each age group that complied with the isolation request.</p></li>
+        <li><p>Compute the odds of each age group that complied with the isolation request.</p></li>
+        <li><p>Compute the relevant ORs (using 'Older than <m>22</m>' as the reference level), and interpret what these mean.</p></li>
+        <li><p>Determine the <m>\chi^2</m>-value and perform a hypothesis to answer the RQ.</p></li>
+        <li><p>Is the test statistically valid?</p></li>
+      </ol>
+      <table xml:id="tab-mumps-table-html">
+        <title>The compliance of students by age group.</title>
+        <tabular halign="center">
+          <row header="yes"><cell></cell><cell>Complied</cell><cell>Did not comply</cell></row>
+          <row><cell><m>18</m> to <m>19</m></cell><cell>40</cell><cell>10</cell></row>
+          <row><cell><m>20</m> to <m>21</m></cell><cell>37</cell><cell>14</cell></row>
+          <row><cell>Older than <m>22</m></cell><cell>22</cell><cell>9</cell></row>
+        </tabular>
+      </table>
+      <figure xml:id="fig-mumps-jamovi-html">
+        <caption>Software output for the compliance data.</caption>
+        <image source="fig-mumps-jamovi-html.png" width="45%"/>
+      </figure>
+    </exercise>
+
+    <exercise xml:id="exercise-shopping-bags">
+      <p>
+        [<em>Dataset</em>: <c>ShoppingBags</c>] <xref ref="choon2017perception"/> studied <m>400</m> residents of Klang Valley, Malaysia, to examine residents' approach to waste management. One RQ was:
+      </p>
+      <blockquote>
+        <p>For residents of Klang Valley, is age group associated with whether people bring their own bags when shopping?</p>
+      </blockquote>
+      <p>
+        The data (Table <xref ref="tab-bags-table-ht-html"/>) are given in a <m>3\times 2</m> table of counts. The software output is shown in Fig. <xref ref="fig-bags-chisq-jamovi-html"/>.
+      </p>
+      <ol>
+        <li><p>Compute the odds of someone bringing a shopping bag, for each age group.</p></li>
+        <li><p>Compute the OR of bringing a shopping bag (using the 'Over <m>40</m>' age group as the reference level).</p></li>
+        <li><p>Compute the percentage of people bringing a shopping bag, for each age group.</p></li>
+        <li><p>Construct the hypotheses for testing for an association between the variables.</p></li>
+        <li><p>Use the software output to answer the research question.</p></li>
+        <li><p>Write a conclusion.</p></li>
+        <li><p>Is the test statistically valid?</p></li>
+      </ol>
+      <table xml:id="tab-bags-table-ht-html">
+        <title>Whether shoppers bring their own bags, and the shoppers age group.</title>
+        <tabular halign="center">
+          <row header="yes"><cell></cell><cell>Brings own bags</cell><cell>Does not bring own bags</cell></row>
+          <row><cell><m>30</m> and under</cell><cell>126</cell><cell>138</cell></row>
+          <row><cell><m>31</m> to <m>40</m></cell><cell>50</cell><cell>32</cell></row>
+          <row><cell>Over <m>40</m></cell><cell>41</cell><cell>13</cell></row>
+        </tabular>
+      </table>
+      <figure xml:id="fig-bags-chisq-jamovi-html">
+        <caption>Software output for the shopping-bags data.</caption>
+        <image source="fig-bags-chisq-jamovi-html.png" width="45%"/>
+      </figure>
+    </exercise>
+
+    <exercise xml:id="exercise-crab-shells">
+      <p>
+        [<em>Dataset</em>: <c>CrabShells3</c>] Hermit crabs place sea anemones on their shells for protection. <xref ref="brooks1989hermit"/> studied the placement of the anemones:
+      </p>
+      <blockquote>
+        <p>Is there a relationship between the vertical and horizontal locations of anemones placed by hermit crabs on their shells?</p>
+      </blockquote>
+      <p>
+        The data are shown in Table <xref ref="tab-crab-shell-data-html"/>, and output in Fig. <xref ref="fig-crab-shells-chisq-jamovi-html"/>.
+      </p>
+      <ol>
+        <li><p>Perform a hypothesis test to answer the RQ using the <m>3\times 3</m> table (Fig. <xref ref="fig-crab-shells-chisq-jamovi-html"/>, top output).</p></li>
+        <li><p>Confirm that the statistical validity conditions are not met when using the <m>3\times 3</m> table.</p></li>
+        <li><p>Construct a <m>2\times 2</m> table, recording the location of the anemones as either 'Central' or 'Side' without distinguishing <em>which</em> side. Hence, repeat the test using the <m>2\times 2</m> table (Fig. <xref ref="fig-crab-shells-chisq-jamovi-html"/>, bottom output). (These data are in the file <c>CrabShell2</c>.)</p></li>
+      </ol>
+      <table xml:id="tab-crab-shell-data-html">
+        <title>The location of anemones placed on shells by hermit crabs.</title>
+        <tabular halign="center">
+          <row header="yes"><cell></cell><cell>Side 1</cell><cell>Central</cell><cell>Side 2</cell></row>
+          <row><cell>Row: Side 1</cell><cell>2</cell><cell>9</cell><cell>9</cell></row>
+          <row><cell>Row: Central</cell><cell>22</cell><cell>30</cell><cell>37</cell></row>
+          <row><cell>Row: Side 2</cell><cell>1</cell><cell>0</cell><cell>2</cell></row>
+        </tabular>
+      </table>
+      <figure xml:id="fig-crab-shells-chisq-jamovi-html">
+        <caption>Software output for the <m>3\times 3</m> table of crab-shell data (top output), and for the <m>2\times 2</m> table of crab-shell data (bottom output).</caption>
+        <image source="fig-crab-shells-chisq-jamovi-html.png" width="45%"/>
+      </figure>
+    </exercise>
+  </exercises>
+
 </chapter>
