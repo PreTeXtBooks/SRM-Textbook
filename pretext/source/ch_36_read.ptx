@@ -97,7 +97,7 @@
       Part of the unstructured abstract for the article reads:
     </p>
     <blockquote>
-      <p>The aim of this experiment was to investigate whether using a cell phone while walking affects walking velocity [<ellipsis/>] in young people. Forty-two subjects (<m>20</m> males, <m>22</m> females; mean age: <m>20.74 1.34</m> years; mean height: <m>173.21 8.07</m> cm; mean weight: <m>69.05 14.07</m> kg) participated in the study. The subjects were asked to walk on an FDM<ndash/>1.5 dynamometer platform four times at a constant comfortable velocity and a fast velocity of their choice. They were asked to continuously type one sentence on a cell phone while walking at the same velocity. The results showed that texting while walking led to a significant reduction in velocity compared to walking without the phone.</p>
+      <p>The aim of this experiment was to investigate whether using a cell phone while walking affects walking velocity [<ellipsis/>] in young people. Forty-two subjects (<m>20</m> males, <m>22</m> females; mean age: <m>20.74\pm 1.34</m> years; mean height: <m>173.21\pm 8.07</m> cm; mean weight: <m>69.05\pm 14.07</m> kg) participated in the study. The subjects were asked to walk on an FDM<ndash/>1.5 dynamometer platform four times at a constant comfortable velocity and a fast velocity of their choice. They were asked to continuously type one sentence on a cell phone while walking at the same velocity. The results showed that texting while walking led to a significant reduction in velocity compared to walking without the phone.</p>
     </blockquote>
     <p>
       As this is the <em>abstract</em>, many details are absent (but explained in the article itself). Nonetheless, a lot can be learnt about the study from the abstract.
@@ -106,7 +106,7 @@
       <li><p><em>Asking</em> the RQ:<idx><h>Research question</h><h>repeated-measures</h></idx></p></li>
       <li><p>this is a repeated-measures RQ: data are collected from the same students 'four times' (which are explained more fully in the article).</p></li>
       <li><p>the <em>population</em> is 'young people'.</p></li>
-      <li><p>the numbers that follow the <m></m> are not explained: are they CI limits, standard deviations, IQRs, ranges, standard errors?</p></li>
+      <li><p>the numbers that follow the <m>\pm</m> are not explained: are they CI limits, standard deviations, IQRs, ranges, standard errors?</p></li>
       <li><p>the <em>units of analysis</em> are the students in the study,<idx>Units of analysis</idx><idx>Units of observation</idx> each with four measurements.</p></li>
       <li><p>the main outcome is the (average; presumably mean) 'walking velocity'.</p></li>
       <li><p><em>Designing</em> the study:</p></li>
@@ -255,7 +255,7 @@
         <xref ref="duncan2018walk"/> examined the accuracy of step counts, as recorded on iPhones. The article states that participants
       </p>
       <blockquote>
-        <p>... were recruited through word of mouth and posters displayed around the [researcher's] university. Participants were eligible if they were ambulatory, <m> 18</m> years of age, and owned an iPhone 6 [<ellipsis/>] or newer model.</p>
+        <p>... were recruited through word of mouth and posters displayed around the [researcher's] university. Participants were eligible if they were ambulatory, <m>\ge 18</m> years of age, and owned an iPhone 6 [<ellipsis/>] or newer model.</p>
       </blockquote>
       <ol>
         <li><p>How would you describe the sampling method?</p></li>
@@ -287,7 +287,7 @@
       </p>
       <ol>
         <li><p>What hypotheses are being tested?</p></li>
-        <li><p>While walking at <m>2.5</m>.h^<m>-1</m>^, the above statistical test resulted in <m>t = 2.95</m>.</p></li>
+        <li><p>While walking at <m>2.5\kms\text{.h}^{-1}</m>, the above statistical test resulted in <m>t = 2.95</m>.</p></li>
       </ol>
       <p>
         What is the approximate <m>P</m>-value? Interpret the results.
@@ -371,7 +371,7 @@
         <li><p>What type of hypothesis test was used to make this conclusion?</p></li>
       </ol>
       <p>
-        The researchers also compared the mean birth weights of the babies born to the mothers in the two groups. In the <em>pre</em>-group, the mean birth weight was <m>3.25</m> (<m>s = 0.52</m>) and in the <em>post</em>-group the mean birth weight was <m>3.18</m> (<m>s = 0.54</m>).
+        The researchers also compared the mean birth weights of the babies born to the mothers in the two groups. In the <em>pre</em>-group, the mean birth weight was <m>3.25\kgs</m> (<m>s = 0.52</m>) and in the <em>post</em>-group the mean birth weight was <m>3.18\kgs</m> (<m>s = 0.54</m>).
       </p>
       <ol>
         <li><p>Compute the standard error for comparing the <em>difference</em> between the two means.</p></li>
@@ -387,13 +387,13 @@
         Is this consistent with your calculations?
       </p>
       <p>
-        The researchers also compared the percentage of babies with a Low Birth Weight (LBW; less than <m>2.5</m>). For the <em>pre</em>-group, the percentage was <m>6.01</m>%; for the <em>post</em>-group, the percentage was <m>8.92</m>%.
+        The researchers also compared the percentage of babies with a Low Birth Weight (LBW; less than <m>2.5\kgs</m>). For the <em>pre</em>-group, the percentage was <m>6.01</m>%; for the <em>post</em>-group, the percentage was <m>8.92</m>%.
       </p>
       <ol>
         <li><p>What <em>type</em> of definition is given for LBW?</p></li>
-        <li><p>Construct the <m>2 2</m> table for displaying these data.</p></li>
+        <li><p>Construct the <m>2\times 2</m> table for displaying these data.</p></li>
         <li><p>What type of test was probably used for this comparison?</p></li>
-        <li><p>For the test, <m>^2 = 3.052</m>.</p></li>
+        <li><p>For the test, <m>\chi^2 = 3.052</m>.</p></li>
       </ol>
       <p>
         Deduce the equivalent <m>z</m>-score and the approximate <m>P</m>-value.
@@ -404,10 +404,10 @@
     </exercise>
     <exercise xml:id="exercise-read-exercise-selinium">
       <p>
-        <xref ref="tracy1990selenium"/> studied the selenium (Se) concentration in irrigation and stock water sources in California. For drinking water, the maximum recommended concentration was <m>10.^{-1}</m>; for irrigation water, the maximum recommended concentration was <m>20.^{-1}</m>.
+        <xref ref="tracy1990selenium"/> studied the selenium (Se) concentration in irrigation and stock water sources in California. For drinking water, the maximum recommended concentration was <m>10\microgs.\xLs^{-1}</m>; for irrigation water, the maximum recommended concentration was <m>20\microgs.\xLs^{-1}</m>.
       </p>
       <p>
-        Part of the study examined the area within <m>5</m> of wells. When Pliocene rocks were within this radius, the relationship between the Se concentration <m>y</m> in the water and the electrical conductivity of the water <m>x</m> (in deciSiemens per meter, dS.m^<m>-1</m>^) was <m>\hat{y} = -3.1 + 7.0x</m>, where <m>R^2 = 27</m>%.
+        Part of the study examined the area within <m>5\kms</m> of wells. When Pliocene rocks were within this radius, the relationship between the Se concentration <m>y</m> in the water and the electrical conductivity of the water <m>x</m> (in deciSiemens per meter, <m>\text{dS.m}^{-1}</m>) was <m>\hat{y} = -3.1 + 7.0x</m>, where <m>R^2 = 27</m>%.
       </p>
       <ol>
         <li><p>Interpret the meaning of <m>R^2</m>.</p></li>
@@ -416,11 +416,11 @@
         <li><p>What are the measurement units of the slope?</p></li>
       </ol>
       <p>
-        For the <m>n = 151</m> wells in the study, Table <xref ref="tab-selenium-table"/> shows the Se concentration of the water and the geology within <m>5</m> of the well.
+        For the <m>n = 151</m> wells in the study, Table <xref ref="tab-selenium-table"/> shows the Se concentration of the water and the geology within <m>5\kms</m> of the well.
       </p>
       <ol>
         <li><p>What hypotheses are being tested by the table?</p></li>
-        <li><p>The article states that <m>^2 = 31.5</m>. What is the equivalent <m>z</m>-score for the test?</p></li>
+        <li><p>The article states that <m>\chi^2 = 31.5</m>. What is the equivalent <m>z</m>-score for the test?</p></li>
         <li><p>What is the approximate <m>P</m>-value for the test? Interpret what this means.</p></li>
       </ol>
     </exercise>
@@ -439,7 +439,7 @@
         The researchers also compared the size of the surviving larvae in the control groups for both temperatures. In comparing <em>Cx. pipiens</em> to <em>Ae. albopictus</em> larvae, the paper gives this information:
       </p>
       <blockquote>
-        <p><m>mean</m>: <em>Cx. pipiens</em><m>{} = 1.64 0.18</m>, <em>Ae. albopictus</em><m>{} = 1.36 0.13</m>; <m></m>p<m>-value =&lt; .0001</m>.</p>
+        <p><m>\text{mean}\pm\text{SD}</m>: <em>Cx. pipiens</em><m>{} = 1.64 \pm 0.18\mms</m>, <em>Ae. albopictus</em><m>{} = 1.36 \pm 0.13\mms</m>; <m>p</m>-value <m>=&lt; .0001</m>.</p>
       </blockquote>
       <p>
         The two sample sizes are <m>n = 410</m> and <m>n = 498</m> respectively.
@@ -461,13 +461,13 @@
         The length of the surviving larvae from both species were compared for the two temperatures also.. For surviving <em>Cx. pipiens</em>, the paper reports:
       </p>
       <blockquote>
-        <p><m>mean SD</m>: <m>15</m>^o^C <m>{}= 1.66 0.01</m>, <m>25</m>^o^C <m>{} = 1.60 0.02</m>; <m></m>p<m>-value = .0065</m>.</p>
+        <p><m>\text{mean}\pm\text{SD}</m>: <m>15</m>^o^C <m>{}= 1.66\pm 0.01\mms</m>, <m>25</m>^o^C <m>{} = 1.60\pm 0.02\mms</m>; <m>p</m>-value <m>= .0065</m>.</p>
       </blockquote>
       <p>
         For surviving <em>Ae. albopictus</em>, the paper reports:
       </p>
       <blockquote>
-        <p><m>mean SD</m>: <m>15</m>^o^C <m>{}= 1.35 0.01</m>, <m>25</m>^o^C <m>{} = 1.36 0.01</m>; <m></m>p<m>-value = .4343</m>.</p>
+        <p><m>\text{mean}\pm\text{SD}</m>: <m>15</m>^o^C <m>{}= 1.35\pm 0.01\mms</m>, <m>25</m>^o^C <m>{} = 1.36\pm 0.01\mms</m>; <m>p</m>-value <m>= .4343</m>.</p>
       </blockquote>
       <ol>
         <li><p>How would these results be interpreted?</p></li>
@@ -517,10 +517,10 @@
       </p>
       <ol>
         <li><p>Interpret the estimates of the regression parameters.</p></li>
-        <li><p>Use the regression equation to predict the MMO for a person <m>179</m> tall.</p></li>
+        <li><p>Use the regression equation to predict the MMO for a person <m>179\cms</m> tall.</p></li>
       </ol>
       <p>
-        The mean MMO of males was <m>54.18</m> (<m>s = 5.21</m>), and for females was <m>49.62</m> (<m>s = 3.69</m>).
+        The mean MMO of males was <m>54.18\mms</m> (<m>s = 5.21</m>), and for females was <m>49.62\mms</m> (<m>s = 3.69</m>).
       </p>
       <ol>
         <li><p>What <em>type</em> of hypothesis tests was used to compare the mean MMO for males and females?</p></li>
@@ -552,7 +552,7 @@
     </exercise>
     <exercise xml:id="exercise-read-exercise-tomatoes">
       <p>
-        <xref ref="drinkwater1995fundamental"/> compared tomatoes growing on conventional (CNV; <m>n = 14</m>) and organic (ORG; <m>n = 17</m>) farms. Between 1989 and 1990, the researchers sampled tomato fields during April and September (p. <m>1 100</m>). An area between <m>0.04</m> and <m>0.1</m> was set aside within each field for collecting data. Each area was divided into <m>20</m> sections, then a <m>1</m> row was selected at random within each section to be sampled.
+        <xref ref="drinkwater1995fundamental"/> compared tomatoes growing on conventional (CNV; <m>n = 14</m>) and organic (ORG; <m>n = 17</m>) farms. Between 1989 and 1990, the researchers sampled tomato fields during April and September (p. <m>1 100</m>). An area between <m>0.04</m> and <m>0.1\has</m> was set aside within each field for collecting data. Each area was divided into <m>20</m> sections, then a <m>1\ms</m> row was selected at random within each section to be sampled.
       </p>
       <ol>
         <li><p>Explain what type of sampling is being used.</p></li>
@@ -630,8 +630,8 @@
       </p>
       <ol>
         <li><p><em>Why</em> was this comparison made?</p></li>
-        <li><p>Construct the <m>2 2</m> table summarising the data.</p></li>
-        <li><p>The <m>^2</m>-score for the test is <m>0.35064</m>.</p></li>
+        <li><p>Construct the <m>2\times 2</m> table summarising the data.</p></li>
+        <li><p>The <m>\chi^2</m>-score for the test is <m>0.35064</m>.</p></li>
       </ol>
       <p>
         Compute the equivalent <m>z</m>-score. Interpret the results.
@@ -641,7 +641,7 @@
         <li><p>Is the result statistically valid?</p></li>
       </ol>
       <p>
-        In the <em>treatment</em> group, the mean sleep duration in Week 1 was <m>279.0</m> (<m>s = 18.9</m>) and in Week 2 was <m>303.6</m> (<m>s = 18.8</m>). The <em>increase</em> was <m>24.7</m> (<m>s = 14.9</m>).
+        In the <em>treatment</em> group, the mean sleep duration in Week 1 was <m>279.0\mins</m> (<m>s = 18.9</m>) and in Week 2 was <m>303.6\mins</m> (<m>s = 18.8</m>). The <em>increase</em> was <m>24.7\mins</m> (<m>s = 14.9</m>).
       </p>
       <ol>
         <li><p>Test if sleep duration <em>increased</em> in the treatment group.</p></li>
@@ -650,7 +650,7 @@
         Interpret the results mean.
       </p>
       <p>
-        In the <em>control</em> group, the mean sleep duration in Week 1 was <m>286.3</m> (<m>s = 20.9</m>) and in Week 2 was <m>301.9</m> (<m>s = 21.8</m>; <m>n = 26</m>). The <em>increase</em> was <m>18.1</m> (<m>s = 17.3</m>).
+        In the <em>control</em> group, the mean sleep duration in Week 1 was <m>286.3\mins</m> (<m>s = 20.9</m>) and in Week 2 was <m>301.9\mins</m> (<m>s = 21.8</m>; <m>n = 26</m>). The <em>increase</em> was <m>18.1\mins</m> (<m>s = 17.3</m>).
       </p>
       <ol>
         <li><p>Test if sleep duration <em>increased</em> in the control group.</p></li>
@@ -680,13 +680,43 @@
   <section xml:id="sec-ch36-supplementary-tables">
     <title>Supplementary tables</title>
     <table xml:id="tab-hearing-loss-table">
-      <title>Mean HLQ scores by frequency of music and earphone use</title>
-      <tabular>
-        <row header="yes"><cell>Use category</cell><cell>n</cell><cell>Mean HLQ</cell><cell>95% CI</cell><cell>P-value</cell></row>
-        <row><cell>Music: never/rarely</cell><cell>—</cell><cell>—</cell><cell>—</cell><cell rowspan="2">—</cell></row>
-        <row><cell>Music: often/always</cell><cell>—</cell><cell>—</cell><cell>—</cell></row>
-        <row><cell>Earphones: never/rarely</cell><cell>—</cell><cell>—</cell><cell>—</cell><cell rowspan="2">—</cell></row>
-        <row><cell>Earphones: often/always</cell><cell>—</cell><cell>—</cell><cell>—</cell></row>
+      <title>The Hearing Loss Questionnaire scores for various demographic variables.</title>
+      <tabular halign="center" top="medium" bottom="medium">
+        <row header="yes" bottom="minor">
+          <cell></cell>
+          <cell></cell>
+          <cell colspan="2"><em>HLQ</em></cell>
+          <cell></cell>
+        </row>
+        <row header="yes" bottom="medium">
+          <cell><em>Levels</em></cell>
+          <cell><em>Sample size</em></cell>
+          <cell><em>Mean</em></cell>
+          <cell><em>Std dev.</em></cell>
+          <cell><em>P</em>-value</cell>
+        </row>
+        <row><cell colspan="5"><em>Sex</em></cell></row>
+        <row><cell>Female</cell><cell>543</cell><cell>19.37</cell><cell>2.91</cell><cell>0.009</cell></row>
+        <row><cell>Male</cell><cell>302</cell><cell>19.99</cell><cell>3.51</cell><cell></cell></row>
+        <row><cell colspan="5"><em>Frequency of earphone use</em></cell></row>
+        <row><cell>0, 1 times/day</cell><cell>194</cell><cell>19.20</cell><cell>2.87</cell><cell>0.001</cell></row>
+        <row><cell>2 to 3 times/day</cell><cell>319</cell><cell>19.60</cell><cell>2.66</cell><cell></cell></row>
+        <row><cell>More than 3 times/day</cell><cell>278</cell><cell>20.20</cell><cell>3.54</cell><cell></cell></row>
+        <row><cell colspan="5"><em>Earphone use</em></cell></row>
+        <row><cell>Yes</cell><cell>745</cell><cell>19.80</cell><cell>3.08</cell><cell><m>&lt; 0.001</m></cell></row>
+        <row><cell>No</cell><cell>100</cell><cell>19.00</cell><cell>1.71</cell><cell></cell></row>
+      </tabular>
+    </table>
+    <table xml:id="tab-selenium-table">
+      <title>Number of wells with dissolved selenium (Se) concentration above <m>2\microgs.\xLs^{-1}</m>, and the geology within <m>5\kms</m> radius of the well.</title>
+      <tabular halign="center" top="medium" bottom="medium">
+        <row header="yes" bottom="medium">
+          <cell></cell>
+          <cell><em>Pliocene rocks present</em></cell>
+          <cell><em>Pliocene rocks not present</em></cell>
+        </row>
+        <row><cell>Se concentration <m>\le 2\microgs.\xLs^{-1}</m></cell><cell>78</cell><cell>15</cell></row>
+        <row><cell>Se concentration greater than <m>2\microgs.\xLs^{-1}</m></cell><cell>23</cell><cell>35</cell></row>
       </tabular>
     </table>
   </section>

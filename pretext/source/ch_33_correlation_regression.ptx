@@ -47,7 +47,7 @@
     </warning>
     <figure xml:id="fig-borers-scatterjamovi2">
       <caption>Sorghum yield against borer infestation. Left: scatterplot. Right: correlation output.</caption>
-      <sidebyside widths="54% 41%" margins="3%">
+      <sidebyside widths="51% 38%" margins="3%">
         <image source="generated/BorersScatterjamovi2" width="100%">
           <description><p>Scatterplot of sorghum yield against borer infestation.</p></description>
         </image>
@@ -84,7 +84,7 @@
     </example>
     <figure xml:id="fig-on-icyclones-correlation">
       <caption>The number of cyclones in the Australian region each year from 1969 to 2005, and the ONI averaged over October, November, December. Left: scatterplot. Right: software output.</caption>
-      <sidebyside widths="54% 41%" margins="3%">
+      <sidebyside widths="51% 38%" margins="3%">
         <image source="generated/ONIcyclonesCorrelation" width="100%">
           <description><p>Scatterplot of the number of cyclones against the ONI.</p></description>
         </image>
@@ -727,7 +727,7 @@
     </p>
     <figure xml:id="fig-output-removal-efficiency">
       <caption>The software output exploring the relationship between removal efficiency and inlet temperature.</caption>
-      <sidebyside widths="45% 54%" margins="1%">
+      <sidebyside widths="43% 52%" margins="1%">
         <image source="jamovi/Removal/RemovalCorrelation" width="100%">
           <description><p>Software output showing the correlation coefficient for the removal efficiency data.</p></description>
         </image>
@@ -1102,7 +1102,7 @@
     </exercise>
     <figure xml:id="fig-osa-scatter">
       <caption>Neck circumference vs REI for Down Syndrome adults. Left: scatterplot. Right: software output.</caption>
-      <sidebyside widths="45% 54%" margins="1%">
+      <sidebyside widths="43% 52%" margins="1%">
         <image source="generated/OSAscatter" width="100%">
           <description><p>Scatterplot of REI against neck circumference for Down Syndrome adults.</p></description>
         </image>
@@ -1131,7 +1131,7 @@
     </exercise>
     <figure xml:id="fig-ed-scatterjamovi">
       <caption>The number of emergency department patients, and the number of days since distribution of welfare. Left: scatterplot. Right: software output.</caption>
-      <sidebyside widths="38% 61%" margins="1%">
+      <sidebyside widths="36% 58%" margins="1%">
         <image source="generated/EDScatterjamovi" width="100%">
           <description><p>Scatterplot of mean number of ED patients against days after welfare distribution.</p></description>
         </image>
@@ -1158,7 +1158,7 @@
     </exercise>
     <figure xml:id="fig-bitumen-plot">
       <caption>Air voids in bitumen. Left: scatterplot. Right: software output</caption>
-      <sidebyside widths="45% 54%" margins="1%">
+      <sidebyside widths="43% 52%" margins="1%">
         <image source="generated/BitumenPlot" width="100%">
           <description><p>Scatterplot of air voids against bitumen content.</p></description>
         </image>
@@ -1183,7 +1183,7 @@
     </exercise>
     <figure xml:id="fig-possum-plot">
       <caption>The relationship between weight of possums and the elevation of their location. Left: scatterplot. Right: software output.</caption>
-      <sidebyside widths="45% 54%" margins="1%">
+      <sidebyside widths="43% 52%" margins="1%">
         <image source="generated/PossumPlot" width="100%">
           <description><p>Scatterplot of body weight against elevation for male Leadbeater's possums.</p></description>
         </image>

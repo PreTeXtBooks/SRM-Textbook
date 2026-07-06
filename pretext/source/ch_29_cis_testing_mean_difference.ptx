@@ -4,7 +4,7 @@
   <title>Mean differences (paired data): CIs and tests</title>
     <idx><h>Research question</h><h>relational</h></idx>
     <idx>Mean difference</idx>
-  <objectives xml:id="objectives-ch29">
+  <objectives xml:id="sec-analysis-paired">
     <introduction>
       <p>You have learnt to ask an RQ, design a study, classify and summarise the data, construct confidence intervals, and conduct hypothesis tests. <alert>In this chapter</alert>, you will learn to:</p>
     </introduction>

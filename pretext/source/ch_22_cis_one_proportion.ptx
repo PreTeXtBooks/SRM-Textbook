@@ -27,7 +27,7 @@
     <title>Sampling distribution for <m>\hat{p}</m>: for <m>p</m> known</title>
     <idx><h>Sampling distribution</h><h>one proportion (known p)</h></idx>
     <p>
-      As seen in Chap. <xref ref="sec-sampling-variation"/>, sample statistics often vary with a normal distribution (whose standard deviation is called the <em>standard error</em>). However, being more specific about the details of the normal distribution (such as the values of its mean and standard deviation) is useful.
+      As seen in Chap. <xref ref="ch-19-tools-sampling-variation"/>, sample statistics often vary with a normal distribution (whose standard deviation is called the <em>standard error</em>). However, being more specific about the details of the normal distribution (such as the values of its mean and standard deviation) is useful.
     </p>
     <warning>
       <p>
@@ -100,9 +100,7 @@
             <li><p>with a standard deviation (called the <em>standard error</em> of <m>\hat{p}</m>), whose value is</p></li>
           </ul>
         </p>
-        <p>
-          <md xml:id="eq-std-error-pknown-ci">\text{s.e.}(\hat{p}) = \sqrt{\frac{ p \times (1 - p)}{n}},</md>
-        </p>
+        <men xml:id="eq-std-error-pknown-ci">\text{s.e.}(\hat{p}) = \sqrt{\frac{ p \times (1 - p)}{n}},</men>
         <p>
           where <m>n</m> is the size of the sample used to compute <m>\hat{p}</m>, and <m>p</m> is the population proportion.
         </p>
@@ -116,9 +114,7 @@
     <p>
       For the die example, where <m>n = 25</m> rolls and <m>p = 0.5</m>, using Equation <xref ref="eq-std-error-pknown-ci"/> gives:
     </p>
-    <p>
-      <md xml:id="eq-std-error-example-die-ci">\text{s.e.} (\hat{p}) = \sqrt{\frac{0.5 \times (1 - 0.5)}{25}} = 0.1.</md>
-    </p>
+    <men xml:id="eq-std-error-example-die-ci">\text{s.e.} (\hat{p}) = \sqrt{\frac{0.5 \times (1 - 0.5)}{25}} = 0.1.</men>
     <p>
       This standard error is the standard deviation of the normal distribution in the animation in Sect. <xref ref="sec-sampling-distribution-knownp"/>.
     </p>
@@ -187,9 +183,7 @@
             <li><p>with a standard deviation (called the <em>standard error</em> of <m>\hat{p}</m>) whose value is</p></li>
           </ul>
         </p>
-        <p>
-          <md xml:id="eq-stderrorphat">\text{s.e.}(\hat{p}) = \sqrt{\frac{ \hat{p} \times (1 - \hat{p})}{n}},</md>
-        </p>
+        <men xml:id="eq-stderrorphat">\text{s.e.}(\hat{p}) = \sqrt{\frac{ \hat{p} \times (1 - \hat{p})}{n}},</men>
         <p>
           where <m>n</m> is the size of the sample used to compute <m>\hat{p}</m>, and <m>\hat{p}</m> is the sample proportion. In general, the approximation gets better as the sample size gets larger.
         </p>

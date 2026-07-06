@@ -115,6 +115,12 @@
     <p>
       Sex, age and overall health are <em>confounding variables</em> (Def. <xref ref="def-confounding-variable"/>): they are associated with the type of diet (explanatory variable) <em>and</em> faecal weight (response variable).<idx><h>Variables</h><h>confounding</h></idx> For example, the age of the subject may be associated with faecal weight (older people tend to eat less, and eat differently, than younger people), and the research design means older people are more likely to be consuming the refined cereal. This is an extreme case of <em>confounding</em> (Fig. <xref ref="fig-confounding-diagram"/>); usually, confounding is more subtle (and more difficult to detect) than in this example.
     </p>
+    <figure xml:id="fig-confounding-diagram">
+      <caption>An extreme example of confounding.</caption>
+      <image source="generated/ConfoundingDiagram-1.png" width="55%">
+        <description><p>A diagram showing an unmeasured (lurking) variable, Age, with dashed arrows pointing to both the explanatory variable (Diet) and the response variable (Faecal weight), alongside a direct arrow from Diet to Faecal weight labelled 'Apparent association'. The diagram illustrates how a lurking variable can create the appearance of an association between the explanatory and response variables, when in fact none exists.</p></description>
+      </image>
+    </figure>
     <warning>
       <p>
         <em>The groups being compared should be as similar as possible</em>, apart from the difference being studied.
@@ -209,7 +215,7 @@
     </example>
     <example>
       <p>
-        In a study on the influenza vaccine, <xref ref="kheok2008efficacy"/> listed the <alert>P</alert>opulation as 'health-care workers' <xref ref="kheok2008efficacy,-p.\-466"/>, and the sample comprised healthcare workers at two specific hospitals. The population was refined using exclusion criteria: those (p. 466)
+        In a study on the influenza vaccine, <xref ref="kheok2008efficacy"/> listed the <alert>P</alert>opulation as 'health-care workers' (p. 466), and the sample comprised healthcare workers at two specific hospitals. The population was refined using exclusion criteria: those (p. 466)
       </p>
       <blockquote>
         <p>...declining to give consent, a history of egg protein allergy, and neurological or immunological conditions that are contraindications to the influenza vaccine.</p>
@@ -221,13 +227,13 @@
         <xref ref="data-Guirao2017-amputees"/> studied the walking abilities of amputees. Inclusion criteria included (p. 27):
       </p>
       <blockquote>
-        <p>... length of the femur of the amputated limb of at least <m>15</m> measured from the greater trochanter; use of the prosthesis for at least <m>12</m> months prior to enrollment and more than <m>6</m>/day...</p>
+        <p>... length of the femur of the amputated limb of at least <m>15\cms</m> measured from the greater trochanter; use of the prosthesis for at least <m>12</m> months prior to enrollment and more than <m>6\hs</m>/day...</p>
       </blockquote>
       <p>
         Exclusion criteria included (p. 27) people with:
       </p>
       <blockquote>
-        <p>... cognitive impairment hindering the ability to follow instructions and/or perform the tests; body weight over <m>100</m>...</p>
+        <p>... cognitive impairment hindering the ability to follow instructions and/or perform the tests; body weight over <m>100\kgs</m>...</p>
       </blockquote>
     </example>
     <ol>
@@ -281,6 +287,12 @@
       <p>
         Since the study is experimental, participants could be <em>randomly allocated</em> into one of two groups, so both groups would have a similar distribution of ages (and other potential confounders). Then groups could be randomly allocated to receive one of the diets (Fig. <xref ref="fig-random-allocation-himalaya"/>).
       </p>
+      <figure xml:id="fig-random-allocation-himalaya">
+        <caption>Random allocation can occur in two places for the <em>Himalaya</em> study.</caption>
+        <image source="generated/RandomAllocationHimalaya-1.png" width="65%">
+          <description><p>Diagram of a true experimental study design showing individuals randomly allocated into two groups, which are then randomly allocated to receive one of two diets, Himalaya 292 or Refined cereal.</p></description>
+        </image>
+      </figure>
       <p>
         In the <em>Himalaya 292</em> study, individuals were randomly allocated to the diets (p. <m>1 033</m>), which manages confounding due to age and other potential confounding variables also.
       </p>
@@ -419,7 +431,7 @@
     </example>
     <warning>
       <p>
-        Observational studies <em>can</em> (and often do) have control groups. Indeed, one specific type of observational study is called a <em>case-control study</em><idx><h>Study types</h><h>case-control studies</h></idx> (Sect. <xref ref="sec-backward"/>). However, individuals are <em>not allocated to the control group</em> by the researchers in observational studies, so initially the control and study groups may be very different, which may explain any differences in the outcome.
+        Observational studies <em>can</em> (and often do) have control groups. Indeed, one specific type of observational study is called a <em>case-control study</em><idx><h>Study types</h><h>case-control studies</h></idx> (Sect. <xref ref="sec-backward-studies"/>). However, individuals are <em>not allocated to the control group</em> by the researchers in observational studies, so initially the control and study groups may be very different, which may explain any differences in the outcome.
       </p>
     </warning>
     <p>
@@ -429,6 +441,12 @@
       <li><p><em>Random sampling</em> impacts <em>external</em> validity. Its purpose is <em>finding individuals</em> to study, and is possible in both observational and experimental studies.</p></li>
       <li><p><em>Random allocation</em> helps eliminate confounding, by distributing possible confounders across treatment groups, and is only possible in <em>experimental</em> studies. <em>Random allocation</em> impacts <em>internal</em> validity. Its purpose is <em>allocating treatments to individuals</em>, which does not occur in observational studies.</p></li>
     </ul>
+    <figure xml:id="fig-random-allocation-sampling">
+      <caption>Comparing random allocation and random sampling.</caption>
+      <image source="generated/RandomAllocationSampling-1.png" width="75%">
+        <description><p>Diagram of a true experimental study design showing random sampling of individuals from the population (affecting external validity), followed by random allocation of individuals to treatment groups (affecting internal validity).</p></description>
+      </image>
+    </figure>
   </section>
 
   <section xml:id="sec-hawthorne-effect">
@@ -531,6 +549,12 @@
     <p>
       The impact of the observer effect can be minimised by blinding the <em>researchers</em>, so that they do not know which treatments the individuals are receiving. The researchers <em>giving</em> the treatment and the researchers <em>evaluating</em> the treatment can both be blinded, by using a third party. For example, the researchers may give an assistant two drugs, labelled A and B. The assistant administers the drug and evaluates the participants' response to the treatments. Later, the assistant tells the researchers whether Drug A or Drug B performed better, but only the researchers know which drugs the labels A and B refer to (Fig. <xref ref="fig-blinding-third-party"/>).
     </p>
+    <figure xml:id="fig-blinding-third-party">
+      <caption>Using a third party to avoid the observer effect.</caption>
+      <image source="generated/BlindingThirdParty-1.png" width="85%">
+        <description><p>Diagram of a true experimental study design showing a third party positioned between the researchers and the individuals, so that the researchers giving and evaluating the treatment do not know which treatment (drug A or drug B) each individual receives.</p></description>
+      </image>
+    </figure>
     <example xml:id="example-obs-effecty-pain">
       <title>Observer effect: experimental study</title>
       <p>
@@ -612,6 +636,12 @@
       <p>
         Three active pain relievers were compared to different-coloured placebo <xref ref="data-Huskisson1974-placebo"/> in <m>22</m> patients. The most pain relief was experienced by those taking <em>red</em> placebos (Fig. <xref ref="fig-placebos"/>), who experienced even more pain relief than those given true pain relievers. Note that the outcome is subjective:<idx><h>Data</h><h>subjective</h></idx> a <em>patient</em>-reported outcome.<idx>Response variable</idx><idx><h>Data</h><h>subjective</h></idx>
       </p>
+      <figure xml:id="fig-placebos">
+        <caption>Pain relief, for various pain relief medicine and different-coloured placebos.</caption>
+        <image source="generated/Placebos-1.png" width="65%">
+          <description><p>Line graph of average pain relief score over time (in hours) for aspirin, all placebos, and red placebos. The red placebo line shows the greatest pain relief, exceeding both aspirin and the overall average for all placebos.</p></description>
+        </image>
+      </figure>
     </example>
     <p>
       Since the placebo effect is concerned with individual responses to <em>allocated treatments</em>, it is not directly relevant to observational studies.
@@ -866,8 +896,14 @@
       Well-designed studies manage the <em>Hawthorne effect</em> (e.g., by blinding <em>participants</em>); the <em>observer effect</em> (e.g., by blinding the <em>researchers</em>); the <em>placebo effect</em> (experimental studies only; e.g., by using controls, objective outcomes and blinding subjects); and the <em>carryover effect</em> (e.g., by using a washout, or randomly allocating the treatment order). Recording objective data is usually better than recording subjective data.
     </p>
     <p>
-      Often, however, not all of these strategies can be used. For instance, people usually know they are involved in an experimental study, so the Hawthorne effect may impact conclusions. In these cases, the possible impacts should be minimised as far as possible, and then the likely impact on the conclusions discussed. The impact of these issues are often reported as <em>limitations</em><idx>Limitations</idx> (Chap. <xref ref="sec-interpretation"/>).
+      Often, however, not all of these strategies can be used. For instance, people usually know they are involved in an experimental study, so the Hawthorne effect may impact conclusions. In these cases, the possible impacts should be minimised as far as possible, and then the likely impact on the conclusions discussed. The impact of these issues are often reported as <em>limitations</em><idx>Limitations</idx> (Chap. <xref ref="ch-08-research-design-limitations"/>).
     </p>
+    <figure xml:id="fig-design-considerations">
+      <caption>Design considerations for designing studies. Note: lurking variables become confounding variables when recorded in the study, and so can be managed as confounding variables. The arrows indicate the main design strategies to (perhaps partially) manage the indicated potential bias. Not all strategies are possible for every study.</caption>
+      <image source="generated/DesignConsiderations-1.png" width="90%">
+        <description><p>Diagram summarising design considerations, showing how restricting, blocking, analysis and random allocation can manage confounding, and how blinding participants, researchers and subjects can manage the Hawthorne, observer and placebo effects, with washout or randomised treatment order managing the carryover effect.</p></description>
+      </image>
+    </figure>
     <example xml:id="example-design-example">
       <title>Research design</title>
       <p>
@@ -886,7 +922,7 @@
     <title>Quick review questions</title>
     <exercise>
       <p>
-        <xref ref="doosti2016development"/> wanted to determine the relationship between the depth of bruising on apples and the impact force. The researchers purposefully hit apples with three different <em>forces</em> (<m>200</m>, <m>700</m> and <m>1200</m> mJ/s) to inflict bruises on the apples. The researchers then recorded the <em>depth</em> of the bruising. The study was conducted separately for three different <em>regions</em> of the apple (lower; middle; upper), and each apple was only used once.
+        <xref ref="doosti2016development"/> wanted to determine the relationship between the depth of bruising on apples and the impact force. The researchers purposefully hit apples with three different <em>forces</em> (<m>200</m>, <m>700</m> and <m>1200\mJs</m>) to inflict bruises on the apples. The researchers then recorded the <em>depth</em> of the bruising. The study was conducted separately for three different <em>regions</em> of the apple (lower; middle; upper), and each apple was only used once.
       </p>
       <p>
         Are the following statements <em>true</em> or <em>false</em>?
@@ -987,7 +1023,7 @@
     </exercise>
     <exercise xml:id="exercise-design-exp-weight-loss">
       <p>
-        Consider a study comparing the average weight loss for patients who are <em>instructed</em> to do about <m>30</m> mins of exercise a day (Group A), to patients who are instructed to do about <m>60</m> mins of exercise a day (Group B). Which of the following statements are true?
+        Consider a study comparing the average weight loss for patients who are <em>instructed</em> to do about <m>30\mins</m> of exercise a day (Group A), to patients who are instructed to do about <m>60\mins</m> of exercise a day (Group B). Which of the following statements are true?
       </p>
       <ol>
         <li><p>This is an experimental study.</p></li>

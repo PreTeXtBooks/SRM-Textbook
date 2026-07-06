@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Source: 35-Write.Rmd -->
-<chapter xml:id="ch-35-write" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>(PART) Reporting and reading research</title>
+<chapter xml:id="sec-writing-research" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Reporting and writing research</title>
   <objectives xml:id="objectives-ch35">
     <introduction>
       <p>So far, you have learnt the about the process of research: asking an RQ, designing a study, collecting data, describing and summarising the data, and analysing the data. <alert>In this chapter</alert>, you will learn to:</p>
@@ -172,9 +172,10 @@
     <p>
       These components capture the six-step research process used in this book (Fig. <xref ref="fig-report-structure"/>).
     </p>
-    <p>
-      (ref:Structure) The connection between the article and the steps studied. The <em>Abstract</em> briefly covers all aspects of the study, and the <em>Discussion</em> explains what has been learnt through the process, and discusses the results.
-    </p>
+    <figure xml:id="fig-report-structure">
+      <caption>The connection between the article and the steps studied. The <em>Abstract</em> briefly covers all aspects of the study, and the <em>Discussion</em> explains what has been learnt through the process, and discusses the results.</caption>
+      <image source="fig-report-structure.png" width="60%"/>
+    </figure>
 
   <subsection xml:id="sec-writing-titles">
     <title>Article titles</title>
@@ -242,7 +243,7 @@
     </p>
     <warning>
       <p>
-        Cutting-and-pasting software output into reports is rarely acceptable, except for carefully-prepared graphs (Chap. <xref ref="sec-summarise-comments"/>; Sect. <xref ref="sec-writing-graphs-tables"/>).
+        Cutting-and-pasting software output into reports is rarely acceptable, except for carefully-prepared graphs (Chap. <xref ref="ch-17-summary-comments"/>; Sect. <xref ref="sec-writing-graphs-tables"/>).
       </p>
     </warning>
   </subsection>
@@ -256,7 +257,7 @@
       <li><p>summarises the results.</p></li>
       <li><p>gives a short evaluation of the results.</p></li>
       <li><p>answers the stated RQ (i.e., makes a conclusion).</p></li>
-      <li><p>discusses limitations (Chap. <xref ref="sec-interpretation"/>), strengths, weaknesses, problems, challenges.</p></li>
+      <li><p>discusses limitations (Chap. <xref ref="ch-08-research-design-limitations"/>), strengths, weaknesses, problems, challenges.</p></li>
       <li><p>tries to anticipate and respond to potential questions about the research.</p></li>
     </ul>
     <p>
@@ -290,7 +291,7 @@
     <idx><h>Software output</h><h>graphs</h></idx>
     <idx><h>Graphs</h><h>using software</h></idx>
     <p>
-      Good figures and tables take time and care to prepare (Chap. <xref ref="sec-summarise-comments"/>). Their purpose should always be to <em>display information in the simplest, clearest possible way</em>, and to highlight the important information. In general, tables, graphs and images:
+      Good figures and tables take time and care to prepare (Chap. <xref ref="ch-17-summary-comments"/>). Their purpose should always be to <em>display information in the simplest, clearest possible way</em>, and to highlight the important information. In general, tables, graphs and images:
     </p>
     <ul>
       <li><p><em>should</em> be discussed (not just presented) and referred to in the text.</p></li>
@@ -376,6 +377,17 @@
 
   <reading-questions xml:id="sec-chap40-quick-review">
     <title>Quick review questions</title>
+
+    <exercise xml:id="rq-writing-research">
+      <p>Are the following statements <em>true</em> or <em>false</em>?</p>
+      <ol>
+        <li><p>Using long, obscure words makes writing sound more scientific.</p></li>
+        <li><p>Presentations generally focus on the details of how the study was done.</p></li>
+        <li><p>The <em>Introduction</em> should explain why the study was done.</p></li>
+        <li><p>Numbers should be given to as many decimal places as possible, for the greatest accuracy.</p></li>
+        <li><p>The design of the study should be explained in detail in the <em>Methods</em> section.</p></li>
+      </ol>
+    </exercise>
   </reading-questions>
 
   <exercises xml:id="sec-write-exercises">
@@ -487,6 +499,30 @@
       <p>
         In a student project, the heights that students could jump vertically were compared, starting from a squat or standing position. Every student in the study performed both jumps. Critique the <em>numerical summary</em> produced by the research team (Table <xref ref="tab-write-exercises-project2"/>).
       </p>
+      <table xml:id="tab-write-exercises-project2">
+        <title>A numerical summary of the data, showing how much higher the standing jump height is compared to the squat jump.</title>
+        <tabular halign="center" top="minor" bottom="minor">
+          <col/><col/><col/><col/><col/><col/><col/>
+          <row header="yes" bottom="minor">
+            <cell><m>n</m></cell>
+            <cell>Mean</cell>
+            <cell>Standard deviation</cell>
+            <cell>Standard error</cell>
+            <cell>Confidence interval <m>95</m>%</cell>
+            <cell><m>t</m> value</cell>
+            <cell><m>P</m> value</cell>
+          </row>
+          <row>
+            <cell>50</cell>
+            <cell>7.480</cell>
+            <cell>4.674</cell>
+            <cell>0.661</cell>
+            <cell><m>6.152</m> to <m>8.808</m></cell>
+            <cell>11.316</cell>
+            <cell>0.000</cell>
+          </row>
+        </tabular>
+      </table>
     </exercise>
     <exercise xml:id="exercise-write-exercises-student3">
       <p>

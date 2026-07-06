@@ -438,7 +438,7 @@
     <title>Numerical summary tables</title>
     <idx><h>Qualitative data</h><h>summary tables</h></idx>
     <p>
-      Qualitative variables should be summarised in a table. The table should include, as a minimum, numbers and/or percentages for each level. While useful in other contexts (see Chap. <xref ref="sec-compare-qual-data"/>), odds are usually not given in the summary table. Examples are shown in Tables <xref ref="tab-a-vtable1"/> and <xref ref="tab-a-vtable2"/>, and in the next section.
+      Qualitative variables should be summarised in a table. The table should include, as a minimum, numbers and/or percentages for each level. While useful in other contexts (see Chap. <xref ref="ch-15-compare-qual"/>), odds are usually not given in the summary table. Examples are shown in Tables <xref ref="tab-a-vtable1"/> and <xref ref="tab-a-vtable2"/>, and in the next section.
     </p>
   </section>
 
