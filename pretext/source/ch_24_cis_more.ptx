@@ -27,7 +27,7 @@
     </p>
     <me>\text{statistic} \pm (\text{multiplier} \times \text{standard error}),</me>
     <p>
-      where <m>(multiplier standard error)</m> is called the <em>margin of error</em>.<idx>Margin of error</idx>
+      where <m>(\text{multiplier} \times \text{standard error})</m> is called the <em>margin of error</em>.<idx>Margin of error</idx>
     </p>
     <p>
       When the sampling distribution has an approximate normal distribution, the <em>approximate</em> <m>95</m>% CI uses a <em>multiplier</em> of <m>2</m> (from the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule).<idx>68–95–99.7 rule</idx> To compute CIs other than <m>95</m>% CIs (such as <m>99</m>% CIs), and for <em>exact</em> <m>95</m>% CIs, software is used.<idx>Software output</idx>
@@ -49,6 +49,10 @@
     <p>
       Besides checking the statistical validity conditions, the <em>internal validity</em><idx>Internal validity</idx> and <em>external validity</em><idx>External validity</idx> of the study should be discussed (Fig. <xref ref="fig-validities-ci"/>). In addition, CIs also require that the sample size is less than about <m>10</m>% of the population size; this is almost always the case.
     </p>
+    <figure xml:id="fig-validities-ci">
+      <caption>Four types of validities for studies.</caption>
+      <image source="fig-validities-ci.png" width="90%"/>
+    </figure>
   </section>
 
   <section xml:id="sec-ci-writing-conclusions">
@@ -71,15 +75,15 @@
         In Sect. <xref ref="sec-cadmium-in-peanuts"/>, the mean cadmium level of peanuts was estimated. The conclusion was:
       </p>
       <blockquote>
-        <p>The sample mean cadmium concentration of peanuts is <m>0.0768</m> (<m>n = 290</m>), with an approximate <m>95</m>% CI from <m>0.0714</m> to <m>0.0822</m>.</p>
+        <p>The sample mean cadmium concentration of peanuts is <m>0.0768\ppms</m> (<m>n = 290</m>), with an approximate <m>95</m>% CI from <m>0.0714</m> to <m>0.0822\ppms</m>.</p>
       </blockquote>
       <p>
         Each of the three elements above are given.
       </p>
       <ol>
-        <li><p>The CI: <m>0.0714</m> to <m>0.0822</m>.</p></li>
+        <li><p>The CI: <m>0.0714</m> to <m>0.0822\ppms</m>.</p></li>
         <li><p>The level of confidence for the CI: <m>95</m>%.</p></li>
-        <li><p>The value of the statistic: <m>\bar{x} = 0.0768</m>.</p></li>
+        <li><p>The value of the statistic: <m>\bar{x} = 0.0768\ppms</m>.</p></li>
       </ol>
       <p>
         In addition, the CI is flagged as an <em>approximate</em> <m>95</m>% CI.
@@ -97,7 +101,7 @@
       <p>The CI is an interval which contains the unknown value of the parameter <m>95</m>% of the time (over repeated sampling).</p>
     </blockquote>
     <p>
-      That is, if we <em>repeated</em> the process (of selecting a sample of a given size, then computing the CI) numerous times, <m>95</m>% of those CIs formed would contain the value of the parameter. This is the idea shown in
+      That is, if we <em>repeated</em> the process (of selecting a sample of a given size, then computing the CI) numerous times, <m>95</m>% of those CIs formed would contain the value of the parameter. This is the idea shown in the animation in Sect. <xref ref="sec-conf-int-p-unknown-p"/>.
     </p>
     <p>
       In practice, this definition is unsatisfying, since we only ever have <em>one</em> sample, not <em>many</em> samples. Furthermore, since the value of the parameter is unknown (after all, the reason for taking a sample was to <em>estimate</em> the value of the parameter), we don't know if the CI from <em>our</em> single sample straddles the population parameter or not.
@@ -106,7 +110,8 @@
       Two reasonable alternative interpretations for a <m>95</m>% CI are below.
     </p>
     <blockquote>
-      <p><em> The <m>95</m>% CI gives a range of values of the parameter that could reasonably (with <m>95</m>% confidence) have produced the observed value of the statistic. </em> There is a <m>95</m>% chance that the <m>95</m>% CI straddles the unknown value of the parameter.</p>
+      <p>The <m>95</m>% CI gives a range of values of the parameter that could reasonably (with <m>95</m>% confidence) have produced the observed value of the statistic.</p>
+      <p>There is a <m>95</m>% chance that the <m>95</m>% CI straddles the unknown value of the parameter.</p>
     </blockquote>
     <p>
       These alternatives are adequate and common interpretations.
@@ -120,28 +125,28 @@
     <example xml:id="example-ci-writing-conclusions-interpret">
       <title>Interpreting CIs</title>
       <p>
-        In Example <xref ref="example-ci-writing-conclusions"/>, the approximate <m>95</m>% CI for the cadmium concentration in peanuts was from <m>0.0714</m> to <m>0.0822</m>. The correct interpretation is:
+        In Example <xref ref="example-ci-writing-conclusions"/>, the approximate <m>95</m>% CI for the cadmium concentration in peanuts was from <m>0.0714</m> to <m>0.0822\ppms</m>. The correct interpretation is:
       </p>
       <blockquote>
         <p>If many samples of <m>290</m> peanuts were taken, and the approximate <m>95</m>% CI computed for each one, about <m>95</m>% of those CIs would contain the population mean.</p>
       </blockquote>
       <p>
-        Our CI may or may not include the value of <m></m>, however. We might say:
+        Our CI may or may not include the value of <m>\mu</m>, however. We might say:
       </p>
       <blockquote>
-        <p>This <m>95</m>% CI (from <m>0.0714</m> to <m>0.0822</m>) has a <m>95</m>% chance of straddling the actual value of <m></m>.</p>
+        <p>This <m>95</m>% CI (from <m>0.0714</m> to <m>0.0822\ppms</m>) has a <m>95</m>% chance of straddling the actual value of <m>\mu</m>.</p>
       </blockquote>
       <p>
         Alternatively, we could say:
       </p>
       <blockquote>
-        <p>The range of values of <m></m> that could plausibly (with <m>95</m>% confidence) have produced <m>\bar{x} = 0.0768</m> is between <m>0.0714</m> to <m>0.0822</m>.</p>
+        <p>The range of values of <m>\mu</m> that could plausibly (with <m>95</m>% confidence) have produced <m>\bar{x} = 0.0768</m> is between <m>0.0714</m> to <m>0.0822\ppms</m>.</p>
       </blockquote>
       <p>
         In practice, the CI is usually interpreted as:
       </p>
       <blockquote>
-        <p>There is a <m>95</m>% chance that the population mean level of cadmium in peanuts is between <m>0.0714</m> to <m>0.0822</m>.</p>
+        <p>There is a <m>95</m>% chance that the population mean level of cadmium in peanuts is between <m>0.0714</m> to <m>0.0822\ppms</m>.</p>
       </blockquote>
       <p>
         This last statement is not strictly correct, but is commonly-used, and sufficient for our use.
@@ -155,7 +160,8 @@
       <em>Confidence intervals</em> (or CIs) tell us about the unknown <em>population parameter</em>, based on what we learn from one the countless possible sample statistics. CIs give an interval in which a parameter is likely to lie over repeated sampling. Since we only ever have one sample, two reasonable alternative interpretations for a <m>95</m>% CI are:
     </p>
     <blockquote>
-      <p><em> the <m>95</m>% CI gives a range of values of the parameter that could reasonably (with <m>95</m>% confidence) have produced our observed value of the statistic. </em> there is a <m>95</m>% chance that our <m>95</m>% CI straddles the value of the parameter.</p>
+      <p>the <m>95</m>% CI gives a range of values of the parameter that could reasonably (with <m>95</m>% confidence) have produced our observed value of the statistic.</p>
+      <p>there is a <m>95</m>% chance that our <m>95</m>% CI straddles the value of the parameter.</p>
     </blockquote>
     <p>
       We never know if the CI from <em>our</em> single sample includes the population parameter or not. When reporting a CI, include:
@@ -165,24 +171,44 @@
       <li><p>the level of confidence for the CI (typically, a <m>95</m>% CI); and</p></li>
       <li><p>the value of the statistic (the parameter estimate) and the sample size.</p></li>
     </ol>
+    <p><url href="https://learningapps.org/watch?v=paixpst9c22" visual="learningapps.org/watch?v=paixpst9c22">Interactive activity (LearningApps)</url></p>
   </section>
 
-  <exercises xml:id="sec-chap26-quick-review">
+  <reading-questions xml:id="sec-chap26-quick-review">
+    <title>Quick review questions</title>
     <introduction>
-      <p>Answers to odd-numbered exercises are given at the end of the book.</p>
+      <p>Are the following statements <em>true</em> or <em>false</em>?</p>
     </introduction>
-    <p>
-      Are the following statements <em>true</em> or <em>false</em>?
-    </p>
-  </exercises>
+    <exercise xml:id="rq-chap26-1">
+      <statement><p>CIs <em>always</em> have <m>95</m>% confidence.</p></statement>
+      <answer><p>False.</p></answer>
+    </exercise>
+    <exercise xml:id="rq-chap26-2">
+      <statement><p>Statistical validity concerns the <em>generalisability</em> of the results.</p></statement>
+      <answer><p>False.</p></answer>
+    </exercise>
+    <exercise xml:id="rq-chap26-3">
+      <statement><p>CIs always include the value of the <em>population</em> parameter.</p></statement>
+      <answer><p>False.</p></answer>
+    </exercise>
+    <exercise xml:id="rq-chap26-4">
+      <statement><p>All else being equal, a <m>95</m>% CI is <em>wider</em> than a <m>90</m>% CI.</p></statement>
+      <answer><p>True.</p></answer>
+    </exercise>
+    <exercise xml:id="rq-chap26-5">
+      <statement><p>The 'multiplier times the standard error' is called the <em>margin of error</em>.</p></statement>
+      <answer><p>True.</p></answer>
+    </exercise>
+    <exercise xml:id="rq-chap26-6">
+      <statement><p>We are fairly sure (but <em>not certain</em>) that the CI includes the value of the statistic.</p></statement>
+      <answer><p>False (a CI must contain the value of the statistic).</p></answer>
+    </exercise>
+  </reading-questions>
 
   <exercises xml:id="sec-about-c-is-exercises">
     <introduction>
       <p>Answers to odd-numbered exercises are given at the end of the book.</p>
     </introduction>
-    <p>
-      [Answers to odd-numbered exercises] are given at the end of the book.
-    </p>
     <exercise xml:id="exercise-about-c-is-interpretation-p">
       <p>
         <xref ref="hirst1962epidemiology"/> computed a <m>95</m>% CI to estimate the proportion of trees with apple scab, and found <m>\hat{p} = 0.314</m> and <m>s.e.(\hat{p}) = 0.091</m>. What would be <em>wrong</em> with the following conclusions?
@@ -194,28 +220,28 @@
     </exercise>
     <exercise xml:id="exercise-about-c-is-interpretation-p2">
       <p>
-        <xref ref="data-Fayet2017-Snacks"/> studied the snacking habits of Australian children. In 2007 (for which <m>n = 3 637</m>), the CI for the proportion of children snacking ('an eating occasion that occurred between meals based on time of day'; p. 1) was <m>0.981 0.003</m> in 2007. What would be <em>wrong</em> with the following conclusion?
+        <xref ref="data-Fayet2017-Snacks"/> studied the snacking habits of Australian children. In 2007 (for which <m>n = 3\,637</m>), the CI for the proportion of children snacking ('an eating occasion that occurred between meals based on time of day'; p. 1) was <m>0.981\pm 0.003</m> in 2007. What would be <em>wrong</em> with the following conclusion?
       </p>
       <ul>
-        <li><p>An approximate <m>95</m>% CI for the sample proportion of snacks (in 2007) is <m>0.981 0.003</m>.</p></li>
+        <li><p>An approximate <m>95</m>% CI for the sample proportion of snacks (in 2007) is <m>0.981\pm 0.003</m>.</p></li>
       </ul>
     </exercise>
     <exercise xml:id="exercise-about-c-is-interpretation-mean">
       <p>
-        <xref ref="data-Guirao2017-amputees"/> studied how far amputees could walk in two minutes following a femoral (leg) implant. After <m>14</m> months, the sample of ten amputees walked a mean of <m>122.5</m>; the <m>95</m>% CI was computed as <m>96.4</m> to <m>148.6</m>. What would be <em>wrong</em> with the following conclusions?
+        <xref ref="data-Guirao2017-amputees"/> studied how far amputees could walk in two minutes following a femoral (leg) implant. After <m>14</m> months, the sample of ten amputees walked a mean of <m>122.5\ms</m>; the <m>95</m>% CI was computed as <m>96.4\ms</m> to <m>148.6\ms</m>. What would be <em>wrong</em> with the following conclusions?
       </p>
       <ol>
-        <li><p>Approximately <m>95</m>% of the amputees walked between <m>96.4</m> and <m>1 488.6</m> in two minutes.</p></li>
-        <li><p>The <m>95</m>% CI for the sample mean distance walked in two minutes was between <m>96.4</m> and <m>1 488.6</m>.</p></li>
+        <li><p>Approximately <m>95</m>% of the amputees walked between <m>96.4</m> and <m>1\,488.6\ms</m> in two minutes.</p></li>
+        <li><p>The <m>95</m>% CI for the sample mean distance walked in two minutes was between <m>96.4</m> and <m>1\,488.6\ms</m>.</p></li>
       </ol>
     </exercise>
     <exercise xml:id="exercise-about-c-is-interpretation-mean2">
       <p>
-        A study of sodium intake in Thailand found the <m>95</m>% CI for the mean daily sodium intake for subjects with a secondary school education was <m>3 565</m> to <m>3 903</m>. What would be wrong with the following conclusions?
+        A study of sodium intake in Thailand found the <m>95</m>% CI for the mean daily sodium intake for subjects with a secondary school education was <m>3\,565</m> to <m>3\,903\mgs</m>. What would be wrong with the following conclusions?
       </p>
       <ol>
-        <li><p>This CI means that approximately <m>95</m>% of the subjects had a daily sodium intake between <m>3 565</m> to <m>3 903</m>.</p></li>
-        <li><p>A <m>95</m>% CI for the sample mean daily sodium intake is between <m>3 565</m> to <m>3 903</m>.</p></li>
+        <li><p>This CI means that approximately <m>95</m>% of the subjects had a daily sodium intake between <m>3\,565</m> to <m>3\,903\mgs</m>.</p></li>
+        <li><p>A <m>95</m>% CI for the sample mean daily sodium intake is between <m>3\,565</m> to <m>3\,903\mgs</m>.</p></li>
       </ol>
     </exercise>
     <exercise xml:id="exercise-ci-possums">
@@ -223,10 +249,10 @@
         In discussing the weight of adult male Leadbeater's possums, <xref ref="data-Williams2022-Possums"/> state (p. 170):
       </p>
       <blockquote>
-        <p>The average adult male Leadbeater’s possum weighed <m>137</m> (<m>95</m>% CI = <m>135</m>, <m>139</m>), with <m>90</m>% of weights between <m>122</m> and <m>153</m>.</p>
+        <p>The average adult male Leadbeater’s possum weighed <m>137\gs</m> (<m>95</m>% CI = <m>135\gs</m>, <m>139\gs</m>), with <m>90</m>% of weights between <m>122</m> and <m>153\gs</m>.</p>
       </blockquote>
       <p>
-        indicates that a <em>higher</em> value for the confidence level means <em>wider</em> CIs, since wider intervals are needed to be <em>more</em> certain that the interval contains the value of the parameter that produced the value of the statistic.
+        Figure <xref ref="fig-ci-widths-many2"/> indicates that a <em>higher</em> value for the confidence level means <em>wider</em> CIs, since wider intervals are needed to be <em>more</em> certain that the interval contains the value of the parameter that produced the value of the statistic.
       </p>
       <p>
         In light of this, explain why the <m>90</m>% interval is <em>wider</em> than the <m>95</m>% interval in the above quote.

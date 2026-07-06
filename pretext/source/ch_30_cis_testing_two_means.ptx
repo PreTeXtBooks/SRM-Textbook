@@ -24,7 +24,11 @@
       <p>For female Mexican garter snakes, is the mean snout<ndash/>vent length (SVL) different for those in regions with crayfish and without crayfish?</p>
     </blockquote>
     <p>
-      Two different groups of snakes are studied, so this is a relational RQ (the study uses a between-individuals comparison<idx><h>Comparison</h><h>between individuals</h></idx>) with no intervention, and the data are shown
+      Two different groups of snakes are studied, so this is a relational RQ (the study uses a between-individuals comparison<idx><h>Comparison</h><h>between individuals</h></idx>) with no intervention, and the data are shown below.
+    </p>
+    <p>
+      <!-- The Rmd shows the raw SVL data for all n = 76 snakes (35 crayfish, 41 non-crayfish) as an interactive HTML datatable; the individual raw values are not reproduced here since they are not recoverable from the surrounding prose (only the summary statistics in Table [tab-snakes-numerical-test] are given). -->
+      [<em>Dataset</em>: <c>Snakes</c>] The raw data comprise the SVL (in cm) for each of the <m>41</m> female snakes living in non-crayfish regions, and each of the <m>35</m> female snakes living in crayfish regions.
     </p>
   </section>
 
@@ -38,9 +42,45 @@
         No sample size or standard deviation is provided for the differences in Table <xref ref="tab-snakes-numerical-test"/>; these make no sense in the context of comparing two means.
       </p>
     </warning>
+    <figure xml:id="fig-snakes-summary-testjamovi">
+      <caption>Software output for the garter-snakes data.</caption>
+      <sidebyside widths="48% 48%" margins="2%">
+        <image source="jamovi/Snakes/Snakes-Test.png" width="100%">
+          <description><p>Jamovi hypothesis-test output for the garter-snakes data.</p></description>
+        </image>
+        <image source="jamovi/Snakes/Snakes-Summary.png" width="100%">
+          <description><p>Jamovi descriptive-statistics output for the garter-snakes data.</p></description>
+        </image>
+      </sidebyside>
+    </figure>
+    <table xml:id="tab-snakes-numerical-test">
+      <title>Numerical summaries of SVL (in cm) for female garter snakes in two regions</title>
+      <!-- Standard deviations reconstructed from se = sd / sqrt(n), using the mean, n and se values given in the surrounding prose; not stated explicitly in the Rmd source. -->
+      <tabular>
+        <row header="yes"><cell>Group</cell><cell>Mean</cell><cell>Standard deviation</cell><cell>Sample size</cell><cell>Standard error</cell></row>
+        <row><cell>Non-crayfish region</cell><cell><m>42.566</m></cell><cell><m>7.79</m></cell><cell><m>41</m></cell><cell><m>1.216</m></cell></row>
+        <row><cell>Crayfish region</cell><cell><m>34.171</m></cell><cell><m>12.49</m></cell><cell><m>35</m></cell><cell><m>2.112</m></cell></row>
+        <row><cell><em>Difference</em></cell><cell><m>8.394</m></cell><cell>&#8212;</cell><cell>&#8212;</cell><cell><m>2.437</m></cell></row>
+      </tabular>
+    </table>
+    <figure xml:id="fig-snakes-errorbar">
+      <caption>Boxplot (left) and error bar chart (right) of SVL for female snakes in two regions.</caption>
+      <image source="fig-snakes-errorbar.png" width="95%"/>
+    </figure>
     <p>
       Since two groups are being compared, subscripts are used to distinguish between the statistics for the two groups; say, Groups <m>1</m> and <m>2</m> in general (Table <xref ref="tab-ind-sample-notation-ht"/>). Using this notation, the <em>parameter</em> in the RQ is the difference between population means: <m>\mu_1 - \mu_2</m>. As usual, the population values are unknown, so this is estimated using the statistic <m>\bar{x}_1 - \bar{x}_2</m>.
     </p>
+    <table xml:id="tab-ind-sample-notation-ht">
+      <title>Notation used to distinguish between the two independent groups</title>
+      <tabular>
+        <row header="yes"><cell/><cell>Group 1</cell><cell>Group 2</cell><cell>Comparing groups</cell></row>
+        <row><cell>Sample sizes:</cell><cell><m>n_1</m></cell><cell><m>n_2</m></cell><cell>&#8212;</cell></row>
+        <row><cell>Population means:</cell><cell><m>\mu_1</m></cell><cell><m>\mu_2</m></cell><cell><m>\mu_1 - \mu_2</m></cell></row>
+        <row><cell>Sample means:</cell><cell><m>\bar{x}_1</m></cell><cell><m>\bar{x}_2</m></cell><cell><m>\bar{x}_1 - \bar{x}_2</m></cell></row>
+        <row><cell>Standard deviations:</cell><cell><m>s_1</m></cell><cell><m>s_2</m></cell><cell>&#8212;</cell></row>
+        <row><cell>Standard errors:</cell><cell><m>\displaystyle\text{s.e.}(\bar{x}_1) = \frac{s_1}{\sqrt{n_1}}</m></cell><cell><m>\displaystyle\text{s.e.}(\bar{x}_2) = \frac{s_2}{\sqrt{n_2}}</m></cell><cell><m>\displaystyle\text{s.e.}(\bar{x}_1 - \bar{x}_2)</m></cell></row>
+      </tabular>
+    </table>
     <p>
       For the garter-snakes data, define the differences as the mean for females snakes living in non-crayfish regions (<m>N</m>), <em>minus</em> the mean for female snakes in crayfish regions (<m>C</m>): <m>\mu_N - \mu_C</m>. This is the <em>parameter</em>. By this definition, the differences refer to how much larger (on average) the SVL is for snakes living in non-crayfish regions.
     </p>
@@ -59,8 +99,8 @@
       The two CIs for the SVL are (using information from the bottom table in Fig. <xref ref="fig-snakes-summary-testjamovi"/>):
     </p>
     <ul>
-      <li><p>[34mm][l]{Crayfish regions:} <m>34.171 (2 2.112)</m>, or from <m>29.94</m> to <m>38.40</m>.</p></li>
-      <li><p>[34mm][l]{Non-crayfish regions:} <m>42.566 (2 1.216)</m>, or from <m>40.13</m> to <m>45.00</m>.</p></li>
+      <li><p>Crayfish regions: <m>34.171 \pm (2 \times 2.112)</m>, or from <m>29.94</m> to <m>38.40</m> cm.</p></li>
+      <li><p>Non-crayfish regions: <m>42.566 \pm (2\times 1.216)</m>, or from <m>40.13</m> to <m>45.00</m> cm.</p></li>
     </ul>
     <p>
       However, the error bar chart, and these CIs, do not give a CI for the <em>difference</em> between the two means, as relevant to the RQ.
@@ -71,10 +111,14 @@
         <xref ref="data-ForestBiomass2017"/> studied the foliage biomass of small-leaved lime trees from three sources: coppices; natural; planted. Three graphical summaries are shown in Fig. <xref ref="fig-lime-trees-box-errorbar"/>: a boxplot (showing the variation in <em>individual</em> trees; left), an error bar chart (showing the variation in the <em>sample means</em>; centre) on the same vertical scale as the boxplot, and the same error bar chart using a more appropriate scale for the error bar plot (right).
       </p>
     </example>
+    <figure xml:id="fig-lime-trees-box-errorbar">
+      <caption>Boxplot (left) and error bar charts (centre; right) comparing the mean foliage biomass for small-leaved lime trees from three sources (C: Coppice; N: Natural; P: Planted). The centre panel shows an error bar chart using the same vertical scale as the boxplot; the dashed horizontal lines are the limits of the error bar chart on the right. The right error bar chart uses a more appropriate scale on the vertical axis. The solid dots show the mean of the distributions.</caption>
+      <image source="fig-lime-trees-box-errorbar.png" width="100%"/>
+    </figure>
   </section>
 
   <section xml:id="sec-ci-diff-between-means">
-    <title>Confidence intervals for  _1 - _2</title>
+    <title>Confidence intervals for <m>\mu_1 - \mu_2</m></title>
     <idx><h>Sampling distribution</h><h>comparing two means</h></idx>
     <idx><h>Confidence intervals</h><h>comparing two means|(</h></idx>
     <p>
@@ -89,7 +133,7 @@
         <ul>
           <li><p>an approximate normal distribution,</p></li>
           <li><p>centred around a sampling mean whose value is <m>{\mu_1} - {\mu_2}</m>, the difference between the <em>population</em> means,</p></li>
-          <li><p>with a standard deviation, called the standard error of the difference between the means, of <m>.e.(\bar{x}_1 - \bar{x}_2)</m>.</p></li>
+          <li><p>with a standard deviation, called the standard error of the difference between the means, of <m>\displaystyle\text{s.e.}(\bar{x}_1 - \bar{x}_2)</m>.</p></li>
         </ul>
         <p>
           The standard error for the difference between the means is found using
@@ -106,21 +150,21 @@
     <ul>
       <li><p>an approximate normal distribution,</p></li>
       <li><p>centred around the sampling mean whose value is <m>\mu_N - \mu_C</m>,</p></li>
-      <li><p>with a standard deviation, called the <em>standard error</em> of the difference, of <m>s.e.(\bar{x}_P - \bar{x}_C) = 2.437</m>.</p></li>
+      <li><p>with a standard deviation, called the <em>standard error</em> of the difference, of <m>\text{s.e.}(\bar{x}_N - \bar{x}_C) = 2.437</m>.</p></li>
     </ul>
     <p>
       The standard error of the difference between the means was computed using
     </p>
-    <me>\text{s.e.}(\bar{x}_N - \bar{x}_C)   = \sqrt{ \text{s.e.}(\bar{x}_N)^2 + \text{s.e.}(\bar{x}_C)^2}   = \sqrt{ 1.216^2 + 2.1112^2 } = 2.437,</me>
+    <me>\text{s.e.}(\bar{x}_N - \bar{x}_C)   = \sqrt{ \text{s.e.}(\bar{x}_N)^2 + \text{s.e.}(\bar{x}_C)^2}   = \sqrt{ 1.216^2 + 2.112^2 } = 2.437,</me>
     <p>
       the same value shown in the <em>second row</em> of the software output (Fig. <xref ref="fig-snakes-summary-testjamovi"/>).
     </p>
     <p>
-      The sampling distribution describes how the values of <m>\bar{x}_N - \bar{x}_C</m> vary from sample to sample. Then, finding a <m>95</m>% CI for the difference between the mean SVLs is similar to the process used in Chap. <xref ref="sec-one-mean-conf-interval"/>, since the sampling distribution has an approximate normal distribution:
+      The sampling distribution describes how the values of <m>\bar{x}_N - \bar{x}_C</m> vary from sample to sample. Then, finding a <m>95</m>% CI for the difference between the mean SVLs is similar to the process used in Chap. <xref ref="ch-23-cis-one-mean"/>, since the sampling distribution has an approximate normal distribution:
     </p>
     <me>\text{statistic} \pm \big(\text{multiplier} \times\text{s.e.}(\text{statistic})\big).</me>
     <p>
-      When the statistic is <m>\bar{x}_P - \bar{x}_C</m>, the approximate <m>95</m>% CI is
+      When the statistic is <m>\bar{x}_N - \bar{x}_C</m>, the approximate <m>95</m>% CI is
     </p>
     <me>(\bar{x}_N - \bar{x}_C) \pm \big(2 \times \text{s.e.}(\bar{x}_N - \bar{x}_C)\big).</me>
     <p>
@@ -128,13 +172,13 @@
     </p>
     <me>8.394 \pm (2 \times 2.437)</me>
     <p>
-      or <m>8.394 4.874</m>, after rounding appropriately. We write:
+      or <m>8.394 \pm 4.874</m>, after rounding appropriately. We write:
     </p>
     <blockquote>
-      <p>The difference between mean SVLs is <m>8.39</m>, shorter for those living in a crayfish region (mean: <m>34.17</m>; s.e.: <m>2.112</m>; <m>n = 35</m>) compared to those <em>not</em> living in a crayfish region (mean: <m>42.57</m>; s.e.: <m>1.216</m>; <m>n = 41</m>), with an <em>approximate</em> <m>95</m>% CI for the difference between mean SVLs from <m>3.52</m> to <m>13.27</m>.</p>
+      <p>The difference between mean SVLs is <m>8.39</m> cm, shorter for those living in a crayfish region (mean: <m>34.17</m> cm; s.e.: <m>2.112</m>; <m>n = 35</m>) compared to those <em>not</em> living in a crayfish region (mean: <m>42.57</m> cm; s.e.: <m>1.216</m>; <m>n = 41</m>), with an <em>approximate</em> <m>95</m>% CI for the difference between mean SVLs from <m>3.52</m> to <m>13.27</m> cm.</p>
     </blockquote>
     <p>
-      The plausible values for the difference between the two population means SVLs are between <m>3.52</m> to <m>13.27</m> (shorter for those living in crayfish regions).
+      The plausible values for the difference between the two population means SVLs are between <m>3.52</m> to <m>13.27</m> cm (shorter for those living in crayfish regions).
     </p>
     <warning>
       <p>
@@ -157,8 +201,8 @@
     </p>
   </section>
 
-  <section xml:id="sec-hypothesis-tests-for-$\mu-1-\mu-2$:-$t$-test-ch30">
-    <title>Hypothesis tests for _1 - _2: t-test</title>
+  <section xml:id="sec-two-means-t-test">
+    <title>Hypothesis tests for <m>\mu_1 - \mu_2</m>: <m>t</m>-test</title>
     <idx><h>Hypothesis testing</h><h>comparing two means|(</h></idx>
     <p>
       A hypothesis test can be used to decide if the SVL is different for the two regions. The parameter for the test is <m>\mu_N - \mu_C</m>.
@@ -173,13 +217,13 @@
       From the RQ, the alternative hypothesis is <em>two</em>-tailed:
     </p>
     <ul>
-      <li><p><m>H_1</m>: <m>\mu_N - \mu_C 0</m> (equivalent to <m>\mu_N \mu_C</m>).</p></li>
+      <li><p><m>H_1</m>: <m>\mu_N - \mu_C \ne 0</m> (equivalent to <m>\mu_N \ne \mu_C</m>).</p></li>
     </ul>
     <p>
       The alternative hypothesis proposes that any difference between the <em>sample</em> means is because a difference really exists between the <em>population means</em>. The alternative hypothesis is two-tailed, based on the RQ.
     </p>
     <p>
-      The difference between the sample mean SVLs in the two groups depends on which one of the many possible samples is randomly obtained, <em>even if</em> the difference between the means in the population is zero. The difference between the sample means is <m>8.394</m>, but this difference will vary from sample to sample; that is, <em>sampling variation</em> exists.
+      The difference between the sample mean SVLs in the two groups depends on which one of the many possible samples is randomly obtained, <em>even if</em> the difference between the means in the population is zero. The difference between the sample means is <m>8.394</m> cm, but this difference will vary from sample to sample; that is, <em>sampling variation</em> exists.
     </p>
     <p>
       For the SVL data, the sampling distribution of <m>\bar{x}_N - \bar{x}_C</m> can be described as (see Def. <xref ref="def-sampling-distribution-diff-means"/>):
@@ -187,7 +231,7 @@
     <ul>
       <li><p>an approximate normal distribution,</p></li>
       <li><p>centred around the sampling mean whose value is <m>{\mu_{N}} - {\mu_{C}} = 0</m>, the difference between the population means (from <m>H_0</m>),</p></li>
-      <li><p>with a standard deviation of <m>s.e.(\bar{x}_N - \bar{x}_C) = 2.4368</m>.</p></li>
+      <li><p>with a standard deviation of <m>\text{s.e.}(\bar{x}_N - \bar{x}_C) = 2.4368</m>.</p></li>
     </ul>
     <note>
       <p>
@@ -200,25 +244,700 @@
     <p>
       The observed difference between sample means, relative to what was expected, is found by computing the test statistic; in this case, a <m>t</m>-score. The software output (Fig. <xref ref="fig-snakes-summary-testjamovi"/>) gives the <m>t</m>-score, but the <m>t</m>-score can also be computed using the information in Table <xref ref="tab-snakes-numerical-test"/>:<idx>t-score</idx>
     </p>
+    <md>
+      <mrow>t \amp= \frac{\text{sample statistic} - \text{mean of sampling distribution (from } H_0\text{)}}{\text{standard deviation of sampling distribution}}</mrow>
+      <mrow>\amp= \frac{ (\bar{x}_N - \bar{x}_C) - (\mu_N - \mu_C)}{\text{s.e.}(\bar{x}_N - \bar{x}_C)} = \frac{8.39 - 0}{2.4368} = 3.44,</mrow>
+    </md>
+    <p>
+      as in the software output.
+    </p>
+    <p>
+      A <m>P</m>-value determines if the sample statistic is consistent with the assumption (i.e., <m>H_0</m>). Since the <m>t</m>-score is large, the <m>P</m>-value will be small using the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule<idx>68<ndash/>95<ndash/>99.7 rule</idx> (and less than <m>0.003</m>). This is confirmed by the software (Fig. <xref ref="fig-snakes-summary-testjamovi"/>): the two-tailed <m>P</m>-value is <m>0.0011</m>.
+    </p>
+    <p>
+      A small <m>P</m>-value suggests the observations are <em>inconsistent</em> with the assumption of no difference (Table <xref ref="tab-pvalues-interpretation"/>), and the difference between the sample means could <em>not</em> be reasonably explained by sampling variation, if <m>\mu_N - \mu_C = 0</m>.
+    </p>
+    <p>
+      <url href="https://learningapps.org/watch?v=pd365s6bj22" visual="learningapps.org/watch?v=pd365s6bj22">Interactive activity: click on the pins in the image, and describe what the software output tells us.</url>
+    </p>
+    <p>
+      In conclusion, write:
+    </p>
+    <blockquote>
+      <p>Strong evidence exists in the sample (two independent samples <m>t = 3.445</m>; two-tailed <m>P = 0.0011</m>) that the population mean SVL is different for female snakes living in crayfish regions (mean: <m>34.17</m> cm; <m>n = 35</m>) and non-crayfish regions (mean: <m>42.57</m> cm; <m>n = 41</m>; <m>95</m>% CI for the difference: <m>3.51</m> to <m>13.28</m> cm longer for those in non-crayfish regions).</p>
+    </blockquote>
+    <p>
+      The conclusion contains an <em>answer to the RQ</em>, the <em>evidence</em> leading to this conclusion (<m>t = 3.44</m>; two-tailed <m>P = 0.0011</m>), and <em>sample summary statistics</em>, including a CI.
+      <idx><h>Hypothesis testing</h><h>comparing two means|)</h></idx>
+    </p>
   </section>
 
-  <section xml:id="sec-ch30-supplementary-figures">
-    <title>Supplementary figures and tables</title>
-    <figure xml:id="fig-snakes-errorbar">
-      <caption>Left: boxplot of garter snake SVL data. Right: error bar chart showing 95% CIs for each group.</caption>
-      <image source="fig-snakes-errorbar.png" width="80%"/>
+  <section xml:id="sec-validity-two-means">
+    <title>Statistical validity conditions</title>
+    <idx><h>Statistical validity (for inference)</h><h>comparing two means</h></idx>
+    <p>
+      As usual, these results apply under certain conditions. The CI and test for comparing two means is <em>statistically valid</em> if <em>either</em> of these is true:
+    </p>
+    <ul>
+      <li><p>when <em>both</em> samples have <m>n \ge 25</m>. (If the distribution of a sample is highly skewed, the sample size for that sample may need to be larger.)</p></li>
+      <li><p>when one or both groups have <m>25</m> or fewer observations, <em>and</em> the <em>populations</em> corresponding to the groups with samples sizes under <m>25</m> have an approximate normal distribution.</p></li>
+    </ul>
+    <p>
+      The sample size of <m>25</m> is a rough figure; some books give other values (such as <m>30</m>).
+    </p>
+    <p>
+      This condition ensures that the <em>distribution of the difference between sample means has an approximate normal distribution</em> (so that, for example, the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule can be used). The histograms of the <em>sample data</em> can be used to determine if normality of the <em>populations</em> seems reasonable. The units of analysis are also assumed to be <em>independent</em> (e.g., from a simple random sample).
+    </p>
+    <p>
+      If the statistical validity conditions are not met, other similar options include using a Mann-Whitney test<idx>Mann-Whitney test</idx> <xref ref="conover2003practical"/> or using resampling methods <xref ref="efron2021computer"/>.
+    </p>
+    <example xml:id="example-statistical-validity-reaction-ht">
+      <title>Statistical validity</title>
+      <p>
+        For the garter-snakes data, both samples sizes exceed <m>25</m> (<m>41</m> and <m>35</m>), so the test is statistically valid. The data in each group do not need to be normally distributed, since both sample sizes are larger than <m>25</m>, and the data are not severely skewed (Fig. <xref ref="fig-snakes-errorbar"/>, left panel).
+      </p>
+    </example>
+  </section>
+
+  <section xml:id="sec-compare-many-means">
+    <title>Tests for comparing more than two means: ANOVA</title>
+    <p>
+      Often, more than two means need to be compared. This requires a different method, called <em>analysis of variance</em><idx>Analysis of variance</idx> (or <sc>anova</sc>). The details are beyond the scope of this book. In this section, a very brief overview of using a one-way <sc>anova</sc> is given, using an example. Importantly, this example shows that the basic principles of hypothesis testing from Chap. <xref ref="ch-28-testing-more"/> still apply.
+    </p>
+    <p>
+      <sc>Anova</sc> is a general tool that can be extended beyond just comparing more than two means, and used in many and varied context for the analysis of data.
+    </p>
+    <example xml:id="example-anova">
+      <title>ANOVA</title>
+      <p>
+        [<em>Dataset</em>: <c>Lime</c>] <xref ref="data-ForestBiomass2017"/> studied the foliage biomass of small-leaved lime trees from three sources: coppices (<m>C</m>); natural (<m>N</m>); planted (<m>P</m>); see Example <xref ref="example-error-bar-charts2"/>. A boxplot and error bar chart are shown in Fig. <xref ref="fig-lime-trees-box-errorbar"/>. A numerical summary is shown in Table <xref ref="tab-lime-trees-summary"/> (based on the output in Fig. <xref ref="fig-lime-trees-jamovi"/>).
+      </p>
+      <p>
+        To compare the mean foliage biomass of trees from the three sources, the null hypothesis is 'no difference' between the population means:
+      </p>
+      <me>H_0: \mu_C = \mu_N = \mu_P.</me>
+      <p>
+        The alternative hypothesis is that the three means are not all equal. This hypothesis encompasses many possibilities: for example, that the three means are <em>all</em> different from each other, or that the first is different from the other two (which are the same). Because the alternative hypothesis encompasses many possibilities, we write:
+      </p>
+      <me>H_1: \text{Not all means are equal.}</me>
+      <warning>
+        <p>
+          For comparing more than two means, the alternative hypothesis <em>is always two-tailed</em>.
+        </p>
+      </warning>
+      <p>
+        Performing an <sc>anova</sc> using software (Fig. <xref ref="fig-lime-trees-jamovi"/>) gives <m>P = 0.005</m>. (The <em>test statistic</em> here is an <m>F</m>-score;<idx>F-score</idx> we don't discuss these further, but the <m>F</m>-score measures the overall difference between the three means.) The small <m>P</m>-value in this context means the same as usual (Sect. <xref ref="sec-about-pvalues"/>): there is persuasive evidence to support the alternative hypothesis (that the three means are <em>not</em> all equal).
+      </p>
+      <p>
+        While we know the means are not all the same, we do not know <em>which</em> group means are different from which other group means. One option might be to compare all possible combinations of two groups (i.e., the means of groups <m>C</m> and <m>N</m>; the means of groups <m>C</m> and <m>P</m>; the means of groups <m>N</m> and <m>P</m>) using three separate two-sample <m>t</m>-tests. While this approach is possible, it increases the probability of declaring a false positive (i.e., of making a Type I error; Sect. <xref ref="sec-type-errors"/>):<idx>Type I error</idx> <em>incorrectly</em> declaring that a difference exists between two sets of means. The correct approach requires methods beyond this book.
+      </p>
+    </example>
+    <figure xml:id="fig-lime-trees-jamovi">
+      <caption>Software output for testing hypotheses for the lime-trees data.</caption>
+      <image source="jamovi/Lime/LimeANOVA.png" width="55%"/>
     </figure>
-    <figure xml:id="fig-snakes-summary-testjamovi">
-      <caption>Jamovi output showing summary statistics and hypothesis test results for the garter snake data.</caption>
-      <image source="fig-snakes-summary-testjamovi.png" width="80%"/>
-    </figure>
-    <table xml:id="tab-snakes-numerical-test">
-      <title>Numerical summaries of garter snake SVL data</title>
+    <table xml:id="tab-lime-trees-summary">
+      <title>Foliage biomass of lime trees (in kg) from different origins</title>
+      <!-- Individual group means/SDs/SEs/n are computed from the Lime dataset at render time and are not stated numerically anywhere in the surrounding prose (only the overall ANOVA P = 0.005 is given), so exact cell values cannot be reconstructed with confidence. -->
       <tabular>
-        <row header="yes"><cell>Group</cell><cell>n</cell><cell>Mean (cm)</cell><cell>Std dev (cm)</cell><cell>Std error (cm)</cell></row>
-        <row><cell>Female</cell><cell>—</cell><cell>—</cell><cell>—</cell><cell>—</cell></row>
-        <row><cell>Male</cell><cell>—</cell><cell>—</cell><cell>—</cell><cell>—</cell></row>
+        <row header="yes"><cell>Origin</cell><cell>Mean</cell><cell>Standard deviation</cell><cell>Standard error</cell><cell><m>n</m></cell></row>
+        <row><cell>Coppice</cell><cell>&#8212;</cell><cell>&#8212;</cell><cell>&#8212;</cell><cell>&#8212;</cell></row>
+        <row><cell>Natural</cell><cell>&#8212;</cell><cell>&#8212;</cell><cell>&#8212;</cell><cell>&#8212;</cell></row>
+        <row><cell>Planted</cell><cell>&#8212;</cell><cell>&#8212;</cell><cell>&#8212;</cell><cell>&#8212;</cell></row>
       </tabular>
     </table>
   </section>
+
+  <section xml:id="sec-speed-signage">
+    <title>Example: speed signage</title>
+    <p>
+      To reduce vehicle speeds on freeway exit ramps, <xref ref="ma2019impacts"/> studied the impact of additional signage. At one site (Ningxuan Freeway), speeds were recorded for <m>38</m> vehicles <em>before</em> the extra signage was added, and then for <m>41</m> different vehicles <em>after</em> the extra signage was added.
+    </p>
+    <p>
+      The researchers are hoping that the addition of extra signage will <em>reduce</em> the mean speed of the vehicles. The RQ is:
+    </p>
+    <blockquote>
+      <p>At this freeway exit, does the mean vehicle speed <em>reduce</em> after extra signage is added?</p>
+    </blockquote>
+    <p>
+      The data are <em>not</em> paired: different vehicles are measured before (<m>B</m>) and after (<m>A</m>) the extra signage is added. Define <m>\mu</m> as the mean speed (in km.h<m>^{-1}</m>) on the exit ramp, and the parameter as <m>\mu_B - \mu_A</m>, the <em>reduction</em> in the mean speed.
+    </p>
+    <p>
+      The data can be summarised (Table <xref ref="tab-signage-summary"/>) using the software output (Fig. <xref ref="fig-speed-jamovi-ci2"/>), where
+    </p>
+    <me>\text{s.e.}(\bar{x}_B - \bar{x}_A) = \sqrt{ \text{s.e.}(\bar{x}_B)^2 + \text{s.e.}(\bar{x}_A)^2} = \sqrt{ 2.140^2 + 2.051^2} = 2.965,</me>
+    <p>
+      as in the output table (Row 2). A boxplot of the data is shown in Fig. <xref ref="fig-signage-error-bar"/> (left panel), and an error bar chart in Fig. <xref ref="fig-signage-error-bar"/> (right panel).
+    </p>
+    <figure xml:id="fig-speed-jamovi-ci2">
+      <caption>Software output for the speed data.</caption>
+      <image source="jamovi/Speed/Speed-ALL.png" width="100%"/>
+    </figure>
+    <table xml:id="tab-signage-summary">
+      <title>The signage data summary (in km.h<m>^{-1}</m>)</title>
+      <!-- Median values are not stated numerically in the surrounding prose and so are not reconstructed here. Standard deviations reconstructed from se = sd / sqrt(n) using the mean/se/n values given in the text (which matches the sd values quoted later in the concluding paragraph: 13.19 and 13.13). -->
+      <tabular>
+        <row header="yes"><cell/><cell>Mean</cell><cell>Median</cell><cell>Standard deviation</cell><cell>Standard error</cell><cell>Sample size</cell></row>
+        <row><cell>Before</cell><cell><m>98.02</m></cell><cell>&#8212;</cell><cell><m>13.19</m></cell><cell><m>2.140</m></cell><cell><m>38</m></cell></row>
+        <row><cell>After</cell><cell><m>92.34</m></cell><cell>&#8212;</cell><cell><m>13.13</m></cell><cell><m>2.051</m></cell><cell><m>41</m></cell></row>
+        <row><cell><em>Speed reduction</em></cell><cell><m>5.674</m></cell><cell>&#8212;</cell><cell>&#8212;</cell><cell><m>2.965</m></cell><cell>&#8212;</cell></row>
+      </tabular>
+    </table>
+    <figure xml:id="fig-signage-error-bar">
+      <caption>Boxplot (left) and error bar chart (right) showing the mean speed before and after the addition of extra signage, and the <m>95</m>% CIs. The vertical scales on the two graphs are different.</caption>
+      <image source="fig-signage-error-bar.png" width="90%"/>
+    </figure>
+    <p>
+      An approximate <m>95</m>% CI for the difference between the mean speeds is
+    </p>
+    <me>5.674 \pm (2 \times 2.9642),</me>
+    <p>
+      or from <m>-0.25</m> to <m>11.60</m> km.h<m>^{-1}</m>. (This is very similar to the <m>95</m>% CI shown in Fig. <xref ref="fig-speed-jamovi-ci2"/>.) The negative value is not a negative speed. Since the difference between the means is defined as a <em>reduction</em>, this CI means that the <em>reduction</em> in the populations mean speed is likely between <m>-0.25</m> to <m>11.64</m> km.h<m>^{-1}</m>. Since a negative reduction is an increase, this is more easily understood as the difference being located between a <m>0.25</m> km.h<m>^{-1}</m> <em>increase</em> before the signage was added to an <m>11.64</m> km.h<m>^{-1}</m> <em>reduction</em> after the signage was added.
+    </p>
+    <p>
+      The hypotheses are:
+    </p>
+    <ul>
+      <li><p><m>H_0</m>: <m>\mu_B - \mu_A = 0</m>: there is no difference in the population mean speeds.</p></li>
+      <li><p><m>H_1</m>: <m>\mu_B - \mu_A &gt; 0</m>: the population mean speed has <em>reduced</em> after the addition of signage.</p></li>
+    </ul>
+    <p>
+      The best estimate of the difference in <em>population</em> means is the difference between the <em>sample</em> means: <m>(\bar{x}_B - \bar{x}_A) = 5.68</m>. Since <m>\text{s.e.}(\bar{x}_B - \bar{x}_A) = 2.965</m>, the <m>t</m>-score is
+    </p>
+    <me>t = \frac{(\bar{x}_B - \bar{x}_A) - (\mu_B - \mu_A)}{\text{s.e.}(\bar{x}_B - \bar{x}_{A})} = \frac{5.674 - 0}{2.9642} = 1.91.</me>
+    <p>
+      using Equation <xref ref="eq-tscore"/>. (Recall that <m>\mu_B - \mu_A = 0</m> is initially assumed, from the null hypothesis.)
+    </p>
+    <p>
+      Remembering that the alternative hypothesis is <em>one-tailed</em>, the <m>P</m>-value (using the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule) is larger than <m>0.025</m>, but smaller than <m>0.32</m>, so making a clear decision is difficult without using software. However, since the <m>t</m>-score is <em>just</em> less than 2, we suspect that the <m>P</m>-value is likely to be closer to <m>0.025</m> than to <m>0.32</m>.
+    </p>
+    <p>
+      From software, <m>P = 0.0297</m> (you cannot be this precise just using the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule). Using Table <xref ref="tab-pvalues-interpretation"/>, this <m>P</m>-value provides moderate evidence of a reduction in mean speeds. We conclude:
+    </p>
+    <blockquote>
+      <p>Moderate evidence exists in the sample (<m>t = 1.91</m>; one-tailed <m>P = 0.030</m>) that mean speeds have reduced after the addition of extra signage (mean reduction: <m>5.67</m> km.h<m>^{-1}</m>; <m>95</m>% CI for the difference: <m>-0.23</m> to <m>11.6</m> km.h<m>^{-1}</m>; s.e.: <m>2.96</m> km.h<m>^{-1}</m>). The before mean speed was <m>98.02</m> km.h<m>^{-1}</m> (<m>n = 38</m>; standard deviation: <m>13.19</m> km.h<m>^{-1}</m>); the after mean speed was <m>92.34</m> km.h<m>^{-1}</m> (<m>n = 41</m>; standard deviation: <m>13.13</m> km.h<m>^{-1}</m>).</p>
+    </blockquote>
+    <p>
+      Whether the mean speed reduction of <m>5.67</m> km.h<m>^{-1}</m> has <em>practical importance</em> is a separate issue.<idx>Practical importance</idx> Using the validity conditions, the CI and the test are statistically valid.
+    </p>
+    <note>
+      <p>
+        Remember: the conclusion must make clear <em>which</em> mean is larger!
+      </p>
+    </note>
+  </section>
+
+  <section xml:id="sec-chamomile-tea-two-means">
+    <title>Example: chamomile tea</title>
+    <p>
+      (This study was seen in Sect. <xref ref="sec-chamomile-tea-paired"/>.) <xref ref="rafraf2015effectiveness"/> studied patients with Type 2 diabetes mellitus (T2DM). They randomly allocated <m>32</m> patients into a control group (who drank hot water), and <m>32</m> to receive chamomile tea (<xref ref="rafraf2015effectiveness"/>).
+    </p>
+    <p>
+      The total glucose (TG) was measured for each individual in both groups, both before the intervention and after eight weeks on the intervention. Summary data are given in Table <xref ref="tab-tg-summary-table"/>. Evidence suggests that the chamomile tea group shows a mean reduction in TG (Sect. <xref ref="sec-chamomile-tea-paired"/>), while the hot-water group shows no evidence of a reduction. That is, there appears to be a difference between the two groups regarding the <em>change</em> in TG. However, the differences between the chamomile-tea and the hot-water groups may be due to the samples selected (i.e., sampling variation), so comparing the changes between the two groups is helpful.
+    </p>
+    <p>
+      The following relational RQ can be asked:
+    </p>
+    <blockquote>
+      <p>For patients with T2DM, is the mean reduction in TG <em>greater</em> for the chamomile tea group compared to the hot water group?</p>
+    </blockquote>
+    <p>
+      Notice the RQ is one-tailed; the aim of the study is to determine if the chamomile-tea drinking group performs <em>better</em> (i.e., reduces the mean TG) than the control group.
+    </p>
+    <p>
+      This RQ is comparing two separate groups; specifically, comparing the <em>differences</em> between the two groups. This study contains both <em>within</em>-individuals comparisons (see Sect. <xref ref="sec-chamomile-tea-paired"/>) and a <em>between</em>-individuals comparison (this section); see Fig. <xref ref="fig-tea-summary-annotated"/>. This is equivalent to treating the <em>differences</em> for both groups as the two separate sets of data in the two-sample analysis.
+    </p>
+    <figure xml:id="fig-tea-summary-annotated">
+      <caption>The chamomile-tea study has two within-individuals comparisons, and a between-individuals comparison (comparing the differences in each group).</caption>
+      <image source="OtherImages/ChamomileTea/ChamomileSummary-BetweenWithinGroups.png" width="100%"/>
+    </figure>
+    <p>
+      The corresponding hypotheses are:
+    </p>
+    <me>H_0: \mu_T - \mu_W = 0 \qquad \text{and} \qquad H_1: \mu_T - \mu_W &gt; 0</me>
+    <p>
+      where <m>\mu</m> refers to the mean <em>reduction</em> in TG, <m>T</m> refers to the tea-drinking group, and <m>W</m> to the hot-water drinking group.
+    </p>
+    <p>
+      The parameter <m>\mu_T - \mu_W</m> is estimated by the statistic <m>\bar{x}_T - \bar{x}_W = 45.74</m> mg.dL<m>^{-1}</m>. The standard error for the statistic was found as <m>\text{s.e.}(\bar{x}_T - \bar{x}_W) = 8.42</m> (using the information in Table <xref ref="tab-tg-summary-table"/>). Hence, the test statistic is:
+    </p>
+    <me>t = \frac{(\bar{x}_T - \bar{x}_W) - (\mu_T - \mu_W)}{\text{s.e.}(\bar{x}_T - \bar{x}_W)} = \frac{45.75 - 0}{8.42} = 5.43,</me>
+    <p>
+      which is very large, so the <m>P</m> value will be very small (using the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule), and certainly smaller than <m>0.001</m>.
+    </p>
+    <p>
+      We write:
+    </p>
+    <blockquote>
+      <p>There is very strong evidence (<m>t = 5.43</m>; one-tailed <m>P &lt; 0.001</m>) that the mean reduction in TG for the chamomile-tea drinking group (mean reduction: <m>36.62</m> mg.dL<m>^{-1}</m>) is greater than the mean reduction in TG for the hot-water drinking group (mean reduction: <m>-7.12</m> mg.dL<m>^{-1}</m>; difference between means: <m>45.74</m> mg.dL<m>^{-1}</m>; approx. <m>95</m>% CI: <m>28.64</m> to <m>62.84</m> mg.dL<m>^{-1}</m>).</p>
+    </blockquote>
+    <p>
+      Again, the sample sizes are larger than <m>25</m>, so the results are statistically valid.
+    </p>
+    <!-- tab-tg-summary-table is the TG summary table introduced in Sect. sec-chamomile-tea-paired (Chap. 29); it is not redefined here as this chapter's Rmd source does not repeat the underlying r chunk, only referencing \@ref(tab:TGsummaryTable). -->
+  </section>
+
+  <section xml:id="sec-chap30-summary">
+    <title>Chapter summary</title>
+    <p>
+      To compute a confidence interval (CI) for the difference between two means, compute the difference between the two sample means, <m>\bar{x}_1 - \bar{x}_2</m>, and identify the sample sizes <m>n_1</m> and <m>n_2</m>. Then compute the standard error, which quantifies how much the value of <m>\bar{x}_1 - \bar{x}_2</m> varies across all possible samples:
+    </p>
+    <me>\text{s.e.}(\bar{x}_1 - \bar{x}_2) = \sqrt{ \text{s.e}(\bar{x}_1) + \text{s.e.}(\bar{x}_2)},</me>
+    <p>
+      where <m>\text{s.e.}(\bar{x}_1)</m> and <m>\text{s.e.}(\bar{x}_2)</m> are the standard errors of Groups <m>1</m> and <m>2</m>. The <em>margin of error</em> is (multiplier<m>{}\times{}</m>standard error), where the multiplier is <m>2</m> for an approximate <m>95</m>% CI (using the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule). Then the CI is:
+    </p>
+    <me>(\bar{x}_1 - \bar{x}_2) \pm \left( \text{multiplier}\times\text{standard error} \right).</me>
+    <p>
+      The statistical validity conditions should also be checked.
+    </p>
+    <p>
+      These steps are used to test a hypothesis about a difference between two population means <m>\mu_1 - \mu_2</m>.
+    </p>
+    <ul>
+      <li><p>Write the null hypothesis (<m>H_0</m>) and the alternative hypothesis (<m>H_1</m>); initially <em>assume</em> the value of <m>(\mu_1 - \mu_2)</m> in the null hypothesis to be true.</p></li>
+      <li>
+        <p>Describe the <em>sampling distribution</em>, which describes what to <em>expect</em> from the difference between the sample means based on this assumption: under certain statistical validity conditions, the difference between the sample means vary with:</p>
+        <ul>
+          <li><p>an approximate normal distribution,</p></li>
+          <li><p>with sampling mean whose value is the value of <m>(\mu_1 - \mu_2)</m> (from <m>H_0</m>), and</p></li>
+          <li><p>having a standard deviation of <m>\displaystyle \text{s.e.}(\bar{x}_1 - \bar{x}_2)</m>.</p></li>
+        </ul>
+      </li>
+      <li>
+        <p>Compute the value of the <em>test statistic</em>:</p>
+        <me>t = \frac{ (\bar{x}_1 - \bar{x}_2) - (\mu_1 - \mu_2)}{\text{s.e.}(\bar{x}_1 - \bar{x}_2)},</me>
+        <p>where <m>\mu_1 - \mu_2</m> is the hypothesised difference given in the null hypothesis.</p>
+      </li>
+      <li><p>The <m>t</m>-value is like a <m>z</m>-score, and so an approximate <em><m>P</m>-value</em> can be estimated using the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule, or found using software. Use the <m>P</m>-value to make a decision, and write a conclusion.</p></li>
+      <li><p>Check the statistical validity conditions.</p></li>
+    </ul>
+    <p>
+      <sc>Anova</sc> is used to compare means for more than two groups.
+    </p>
+    <p>
+      The following short video may help explain some of these concepts:
+    </p>
+    <video xml:id="video-two-means" youtube="" source="videos/TwoMeans.mp4" width="60%"/>
+  </section>
+
+  <reading-questions xml:id="sec-chap35-quick-review">
+    <title>Quick review questions</title>
+    <introduction>
+      <p>
+        <xref ref="lee2016effect"/> studied iron levels in Koreans with Type 2 diabetes, comparing people on a vegan (<m>n = 46</m>) and a conventional (<m>n = 47</m>) diet for <m>12</m> weeks. A summary of the data for iron levels are shown in Table <xref ref="tab-vegan-diet"/>.
+      </p>
+      <p>
+        Are the following statements <em>true</em> or <em>false</em>?
+      </p>
+      <table xml:id="tab-vegan-diet">
+        <title>Comparing the iron levels (mg) for subjects using a vegan or conventional diet for <m>12</m> weeks</title>
+        <tabular>
+          <row header="yes"><cell/><cell>Mean</cell><cell>Standard deviation</cell><cell><m>n</m></cell></row>
+          <row><cell>Vegan diet</cell><cell><m>13.9</m></cell><cell><m>2.3</m></cell><cell><m>46</m></cell></row>
+          <row><cell>Conventional diet</cell><cell><m>15.0</m></cell><cell><m>2.7</m></cell><cell><m>47</m></cell></row>
+          <row><cell><em>Difference</em></cell><cell><m>1.1</m></cell><cell>&#8212;</cell><cell>&#8212;</cell></row>
+        </tabular>
+      </table>
+    </introduction>
+    <exercise label="rq-ch30-1">
+      <statement><p>An appropriate graph for displaying the <em>data</em> is a boxplot.</p></statement>
+      <answer><p>True.</p></answer>
+    </exercise>
+    <exercise label="rq-ch30-2">
+      <statement><p>The difference between the means in the population is denoted <m>\mu_V - \mu_C</m>, where <m>V</m> represent the vegan diet, and <m>C</m> represents the conventional diet.</p></statement>
+      <answer><p>True.</p></answer>
+    </exercise>
+    <exercise label="rq-ch30-3">
+      <statement><p>The standard error of the difference between the sample means is denoted <m>\text{s.e.}(\bar{x}_V) - \text{s.e.}(\bar{x}_C)</m>.</p></statement>
+      <answer><p>False: <m>\text{s.e.}(\bar{x}_C - \bar{x}_V)</m>.</p></answer>
+    </exercise>
+    <exercise label="rq-ch30-4">
+      <statement><p>An error bar chart displays the variation in the <em>data</em>.</p></statement>
+      <answer><p>False: variation for the sample means.</p></answer>
+    </exercise>
+    <exercise label="rq-ch30-5">
+      <statement><p>The sample size is missing from the <em>Difference</em> row, but the value is <m>47 - 46 = 1</m>.</p></statement>
+      <answer><p>False: sample size makes no sense.</p></answer>
+    </exercise>
+    <exercise label="rq-ch30-6">
+      <statement><p>The standard deviation is missing from the <em>Difference</em> row, but the value is <m>0.4</m>.</p></statement>
+      <answer><p>False: standard deviation makes no sense.</p></answer>
+    </exercise>
+    <exercise label="rq-ch30-7">
+      <statement><p>The standard error for the difference cannot be computed, as not enough information is given.</p></statement>
+      <answer><p>False: <m>0.5197</m>.</p></answer>
+    </exercise>
+    <exercise label="rq-ch30-8">
+      <statement><p>The two-tailed <m>P</m>-value for the comparison is <m>P = 0.046</m>. This means that <em>no evidence</em> that the population means are different.</p></statement>
+      <answer><p>False: slight evidence population means are different.</p></answer>
+    </exercise>
+  </reading-questions>
+
+  <exercises xml:id="sec-test-two-means-exercises">
+    <title>Exercises</title>
+    <introduction>
+      <p>Answers to odd-numbered exercises are given at the end of the book.</p>
+    </introduction>
+    <exercise xml:id="exercise-two-sample-diffs-a">
+      <statement>
+        <p>
+          Suppose researchers are comparing the cell diameter of lymphocytes (a type of white blood cell) and tumour cells. Define the mean diameter of lymphocytes as <m>\mu_L</m>, and the mean diameter of tumour cells as <m>\mu_T</m>.
+        </p>
+        <p>
+          If the difference between the means were defined as <m>\mu_L - \mu_T</m>, what does this <em>mean</em>?
+        </p>
+      </statement>
+    </exercise>
+    <exercise xml:id="exercise-two-sample-diffs-b">
+      <statement>
+        <p>
+          Suppose researchers are comparing the braking distance of cars using two different types of brake pads (Type A and Type B). Define the mean breaking distance for cars with Type A brake pads as <m>\mu_A</m>, and mean breaking distance for cars with Type B brake pads as <m>\mu_B</m>.
+        </p>
+        <p>
+          If the difference between the means were defined as <m>\mu_B - \mu_A</m>, what does this <em>mean</em>?
+        </p>
+      </statement>
+    </exercise>
+    <exercise xml:id="exercise-two-means-ci-sampling-dist-signage">
+      <statement>
+        <p>Sketch the sampling distribution for the difference between the mean speeds before and after adding extra signage (Sect. <xref ref="sec-speed-signage"/>).</p>
+      </statement>
+    </exercise>
+    <exercise xml:id="exercise-two-means-ci-sampling-dist-tea">
+      <statement>
+        <p>Sketch the sampling distribution for the difference between reduction in mean TG for the tea-drinking and the hot-water drinking group (Sect. <xref ref="sec-chamomile-tea-two-means"/>).</p>
+      </statement>
+    </exercise>
+    <exercise xml:id="exercise-two-means-whales">
+      <statement>
+        <p>
+          <xref ref="agbayani2020growth"/> measured (among other variables) the length of gray whales (<em>Eschrichtius robustus</em>) at birth. Are female gray whales longer than males, on average, in the population at birth? Summary information is shown in Table <xref ref="tab-whale-info"/>.
+        </p>
+        <table xml:id="tab-whale-info">
+          <title>Numerical summary of length of whales at birth (in m)</title>
+          <tabular>
+            <row header="yes"><cell/><cell>Mean</cell><cell>Standard deviation</cell><cell>Sample size</cell></row>
+            <row><cell>Female</cell><cell><m>4.66</m></cell><cell><m>0.379</m></cell><cell><m>26</m></cell></row>
+            <row><cell>Male</cell><cell><m>4.60</m></cell><cell><m>0.305</m></cell><cell><m>30</m></cell></row>
+          </tabular>
+        </table>
+        <ol>
+          <li><p>Define the parameter, and write down its estimate. Carefully describe what it means.</p></li>
+          <li><p>Sketch an error bar chart.</p></li>
+          <li><p>Compute the standard error of the difference between the two means.</p></li>
+          <li><p>Compile a numerical summary table.</p></li>
+          <li><p>Compute the approximate <m>95</m>% CI.</p></li>
+          <li><p>Write the hypotheses to answer the RQ.</p></li>
+          <li><p>Compute the <m>t</m>-score, and approximate the <m>P</m>-value using the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule.</p></li>
+          <li><p>Write a conclusion.</p></li>
+          <li><p>Are the CI and test statistically valid?</p></li>
+        </ol>
+      </statement>
+    </exercise>
+    <exercise xml:id="exercise-two-means-nhanes">
+      <statement>
+        <p>
+          [<em>Dataset</em>: <c>NHANES</c>] Earlier, the <sc>nhanes</sc> study (Exercise <xref ref="exercise-compare-quant-exercises-nhanes"/>) was used to summarise the data used to answer this RQ:
+        </p>
+        <blockquote>
+          <p>Among Americans, is the mean direct HDL cholesterol (in mmol.L<m>^{-1}</m>) different for current smokers and non-smokers?</p>
+        </blockquote>
+        <p>
+          Use the software output in Fig. <xref ref="fig-nhanes-test"/> to answer these questions.
+        </p>
+        <ol>
+          <li><p>Define the parameter of interest, and write down its estimate. Carefully describe what it means.</p></li>
+          <li><p>Sketch an error bar chart.</p></li>
+          <li><p>Compile a numerical summary table.</p></li>
+          <li><p>Compute the approximate <m>95</m>% CI, and write a conclusion.</p></li>
+          <li><p>Write down the exact <m>95</m>% CI, and write a conclusion.</p></li>
+          <li><p>Write the hypotheses to answer the RQ.</p></li>
+          <li><p>Write down the standard error of the difference.</p></li>
+          <li><p>Write down the <m>t</m>-score and the <m>P</m>-value.</p></li>
+          <li><p>Write a conclusion.</p></li>
+          <li><p>Are the CI and test statistically valid?</p></li>
+          <li><p>Is the difference between the means likely to be of practical importance?</p></li>
+        </ol>
+      </statement>
+    </exercise>
+    <figure xml:id="fig-nhanes-test">
+      <caption>Software output for the <sc>nhanes</sc> data.</caption>
+      <image source="jamovi/NHANES/NHANES-DirectHDL-Smoke-ALL.png" width="95%"/>
+    </figure>
+    <exercise xml:id="exercise-means-ind-samples-exercises-echinacea">
+      <statement>
+        <p>
+          <xref ref="data-barrett-echinacea"/> studied the effectiveness of echinacea to treat the common cold, and compared the mean duration of the cold for participants treated with echinacea or a placebo<idx>Placebo</idx> to determine if using echinacea <em>reduced</em> the mean duration of symptoms. Participants were blinded to the treatment, and allocated to the groups randomly. A summary of the data is given in Table <xref ref="tab-echinacea"/>.
+        </p>
+        <table xml:id="tab-echinacea">
+          <title>Numerical summary of duration (in days) of common cold symptoms, for blinded patients taking echinacea or a placebo</title>
+          <tabular>
+            <row header="yes"><cell/><cell>Mean</cell><cell>Standard deviation</cell><cell>Standard error</cell><cell>Sample size</cell></row>
+            <row><cell>Placebo</cell><cell><m>6.87</m></cell><cell><m>3.62</m></cell><cell>&#8212;</cell><cell><m>176</m></cell></row>
+            <row><cell>Echinacea</cell><cell><m>6.34</m></cell><cell><m>3.31</m></cell><cell>&#8212;</cell><cell><m>183</m></cell></row>
+            <row><cell><em>Difference</em></cell><cell><m>0.53</m></cell><cell>&#8212;</cell><cell>&#8212;</cell><cell>&#8212;</cell></row>
+          </tabular>
+        </table>
+        <ol>
+          <li><p>What is the parameter? Carefully describe what it means.</p></li>
+          <li><p>Compute the standard error for the mean duration of symptoms for each group.</p></li>
+          <li><p>Compute the standard error for the difference between the means.</p></li>
+          <li><p>Sketch an error bar chart.</p></li>
+          <li><p>Compute an approximate <m>95</m>% CI for the <em>difference</em> between the mean durations for the two groups.</p></li>
+          <li><p>Compute an approximate <m>95</m>% CI for the population mean duration of symptoms for those treated with echinacea.</p></li>
+          <li><p>Write the hypotheses to answer the RQ.</p></li>
+          <li><p>Compute the standard error of the difference.</p></li>
+          <li><p>Compute the <m>t</m>-score, and approximate the <m>P</m>-value using the normal distribution tables.</p></li>
+          <li><p>Write a conclusion.</p></li>
+          <li><p>Are the CI and test statistically valid?</p></li>
+          <li><p>Are the results likely to be of practical importance?</p></li>
+        </ol>
+      </statement>
+    </exercise>
+    <exercise xml:id="exercise-means-ind-samples-exercises-carpal-tunnel-syndrome">
+      <statement>
+        <p>
+          Carpal tunnel syndrome (CTS) is pain experienced in the wrists. <xref ref="data-Schmid2012-splinting"/> compared two different treatments: night splinting, or gliding exercises.
+        </p>
+        <p>
+          Participants were <em>randomly allocated</em> to one of the two groups. Pain intensity (measured using a quantitative visual analogue scale; <em>larger</em> values mean <em>greater</em> pain) were recorded after one week of treatment. The data are summarised in Table <xref ref="tab-carpal-tunnel"/>.
+        </p>
+        <table xml:id="tab-carpal-tunnel">
+          <title>Numerical summary of pain intensity for two different treatments of carpal tunnel syndrome</title>
+          <tabular>
+            <row header="yes"><cell/><cell>Mean</cell><cell>Standard deviation</cell><cell>Standard error</cell><cell>Sample size</cell></row>
+            <row><cell>Exercise</cell><cell><m>0.8</m></cell><cell><m>1.4</m></cell><cell>&#8212;</cell><cell><m>10</m></cell></row>
+            <row><cell>Splinting</cell><cell><m>1.1</m></cell><cell><m>1.1</m></cell><cell>&#8212;</cell><cell><m>10</m></cell></row>
+            <row><cell><em>Difference</em></cell><cell><m>0.3</m></cell><cell>&#8212;</cell><cell>&#8212;</cell><cell>&#8212;</cell></row>
+          </tabular>
+        </table>
+        <ol>
+          <li><p>What is the parameter? Carefully describe what it means.</p></li>
+          <li><p>Compute the standard error for the mean pain intensity for each group.</p></li>
+          <li><p>Compute the standard error for the difference between the mean of the two groups.</p></li>
+          <li><p>Sketch an error bar chart.</p></li>
+          <li><p>Compute an approximate <m>95</m>% CI for the <em>difference</em> in mean pain intensity for the treatments.</p></li>
+          <li><p>Compute an approximate <m>95</m>% CI for the population mean pain intensity for those treated with splinting.</p></li>
+          <li><p>Write the hypotheses to answer the RQ.</p></li>
+          <li><p>Compute the <m>t</m>-score, and approximate the <m>P</m>-value using the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule.</p></li>
+          <li><p>Write a conclusion.</p></li>
+          <li><p>Are the CI and test statistically valid?</p></li>
+        </ol>
+      </statement>
+    </exercise>
+    <exercise xml:id="exercise-two-means-dental">
+      <statement>
+        <p>
+          [<em>Dataset</em>: <c>Dental</c>] <xref ref="data-woodward-dental"/> recorded the sugar consumption in industrialised (mean: <m>41.8</m> kg/person/y) and non-industrialised (mean: <m>24.6</m> kg/person/y) countries. The software output is shown in Fig. <xref ref="fig-dental-jamovi"/>.
+        </p>
+        <ol>
+          <li><p>What is the parameter? Carefully describe what it means.</p></li>
+          <li><p>Write the hypotheses.</p></li>
+          <li><p>Using the software output (Fig. <xref ref="fig-dental-jamovi"/>), write down and interpret the CI.</p></li>
+          <li><p>Write a conclusion for the hypothesis test.</p></li>
+          <li><p>Is the test statistically valid?</p></li>
+        </ol>
+      </statement>
+    </exercise>
+    <figure xml:id="fig-dental-jamovi">
+      <caption>Software output for the sugar-consumption data; the Groups refer to whether the country is industrialised (Yes) or not (No).</caption>
+      <image source="jamovi/Dental/WoodwardWalker1994-ttest.png" width="95%"/>
+    </figure>
+    <exercise xml:id="exercise-deceleration">
+      <statement>
+        <p>
+          [<em>Dataset</em>: <c>Deceleration</c>] To reduce vehicle speeds on freeway exit ramps, <xref ref="ma2019impacts"/> studied using additional signage. At one site studied (Ningxuan Freeway), speeds were recorded at various points on the freeway exit for vehicles <em>before</em> the extra signage was added, and then for different vehicles <em>after</em> the extra signage was added.
+        </p>
+        <p>
+          In addition, the <em>deceleration</em> of each vehicle was determined (Exercise <xref ref="exercise-compare-quant-deceleration"/>) as the vehicle left the <m>120</m> km.h<m>^{-1}</m> speed zone and approached the <m>80</m> km.h<m>^{-1}</m> speed zone. Use the data, and the summary in Table <xref ref="tab-signage-summary-dec-ht"/>, to test the RQ:
+        </p>
+        <blockquote>
+          <p>At this freeway exit, is the mean vehicle deceleration the same before extra signage is added and after extra signage is added?</p>
+        </blockquote>
+        <p>
+          Identify clearly the parameter of interest to understand how much the deceleration <em>increased</em> after adding the extra signage. Remember to compute and interpret the CI for this parameter.
+        </p>
+        <table xml:id="tab-signage-summary-dec-ht">
+          <title>The signage deceleration data summary (in m.s<m>^{-2}</m>)</title>
+          <!-- Values are computed from the Deceleration dataset at render time and are not stated numerically anywhere in the surrounding prose, so exact cell values cannot be reconstructed with confidence. -->
+          <tabular>
+            <row header="yes"><cell/><cell>Mean</cell><cell>Standard deviation</cell><cell>Standard error</cell><cell>Sample size</cell></row>
+            <row><cell>Before</cell><cell>&#8212;</cell><cell>&#8212;</cell><cell>&#8212;</cell><cell>&#8212;</cell></row>
+            <row><cell>After</cell><cell>&#8212;</cell><cell>&#8212;</cell><cell>&#8212;</cell><cell>&#8212;</cell></row>
+            <row><cell><em>Change</em></cell><cell>&#8212;</cell><cell>&#8212;</cell><cell>&#8212;</cell><cell>&#8212;</cell></row>
+          </tabular>
+        </table>
+      </statement>
+    </exercise>
+    <exercise xml:id="exercise-face-plant">
+      <statement>
+        <p>
+          [<em>Dataset</em>: <c>ForwardFall</c>] A study <xref ref="data-Wojcik-ForwardFall"/> compared the lean-forward angle in younger and older women. An elaborate set-up was constructed to measure this lean-forward angle, using harnesses. Consider this RQ:
+        </p>
+        <blockquote>
+          <p>Among healthy women, is the mean lean-forward angle <em>greater</em> for younger women compared to older women?</p>
+        </blockquote>
+        <p>
+          Use the software output (Fig. <xref ref="fig-fall-forward-ttest-jamovi"/>) to answer these questions:
+        </p>
+        <ol>
+          <li><p>What is the parameter? Carefully describe what it means.</p></li>
+          <li><p>What is an appropriate graph to display the <em>data</em>?</p></li>
+          <li><p>Construct an appropriate numerical summary from the software output (Fig. <xref ref="fig-fall-forward-ttest-jamovi"/>).</p></li>
+          <li><p>Construct <em>approximate</em> and <em>exact</em> <m>95</m>% CIs. Explain any differences.</p></li>
+          <li><p>Is the test one- or two-tailed?</p></li>
+          <li><p>Write the statistical hypothesis.</p></li>
+          <li><p>Use the software output to conduct the hypothesis test.</p></li>
+          <li><p>Write a conclusion.</p></li>
+          <li><p>Are the CI and test statistically valid?</p></li>
+        </ol>
+      </statement>
+    </exercise>
+    <figure xml:id="fig-fall-forward-ttest-jamovi">
+      <caption>Software output for the face-plant data.</caption>
+      <image source="jamovi/FallForward/FallForwardTTestOutput-All.png" width="95%"/>
+    </figure>
+    <exercise xml:id="exercise-bhadp">
+      <statement>
+        <p>
+          <xref ref="data-Becker1991-BHADP"/> compared the access to health promotion (HP) services for people with and without a disability in southwestern of the USA. 'Access' was measured using the quantitative <em>Barriers to Health Promoting Activities for Disabled Persons</em> (<sc>bhadp</sc>) scale. <em>Higher</em> scores mean <em>greater</em> barriers to health promotion services. The RQ is:
+        </p>
+        <blockquote>
+          <p>Is there a difference between the mean <sc>bhadp</sc> scores, for people with and without a disability, in southwestern USA?</p>
+        </blockquote>
+        <table xml:id="tab-bhadp-summary">
+          <title>The data summary for <sc>bhadp</sc> scores (no measurement units)</title>
+          <tabular>
+            <row header="yes"><cell/><cell>Sample mean</cell><cell>Standard deviation</cell><cell>Sample size</cell><cell>Standard error</cell></row>
+            <row><cell>Disability</cell><cell><m>31.83</m></cell><cell><m>7.73</m></cell><cell><m>132</m></cell><cell><m>0.6728</m></cell></row>
+            <row><cell>No disability</cell><cell><m>25.07</m></cell><cell><m>4.80</m></cell><cell><m>137</m></cell><cell><m>0.4101</m></cell></row>
+            <row><cell><em>Difference</em></cell><cell><m>6.76</m></cell><cell>&#8212;</cell><cell>&#8212;</cell><cell>&#8212;</cell></row>
+          </tabular>
+        </table>
+        <ol>
+          <li><p>What is the parameter? Carefully describe what it means.</p></li>
+          <li><p>Sketch an error bar chart.</p></li>
+          <li><p>Compute the standard error of the difference.</p></li>
+          <li><p>Compile a numerical summary table.</p></li>
+          <li><p>Compute the approximate <m>95</m>% CI, and write a conclusion.</p></li>
+          <li><p>Write down the hypotheses.</p></li>
+          <li><p>Compute the <m>t</m>-score.</p></li>
+          <li><p>Determine the <m>P</m>-value.</p></li>
+          <li><p>Write a conclusion.</p></li>
+          <li><p>Are the CI and test statistically valid?</p></li>
+        </ol>
+      </statement>
+    </exercise>
+    <exercise xml:id="exercise-test-two-means-body-temperature">
+      <statement>
+        <p>
+          [<em>Dataset</em>: <c>BodyTemp</c>] Consider again the body temperature data from Sect. <xref ref="sec-body-temperature"/>. The researchers also recorded the gender of the patients, as they also wanted to compare the mean internal body temperatures for females and males.
+        </p>
+        <p>
+          Use the software output in Fig. <xref ref="fig-body-temp-gender-jamovi-ht"/> to perform this test and to construct an approximate <m>95</m>% CI appropriate for answering the RQ. Comment on the practical significance of your results.
+        </p>
+      </statement>
+    </exercise>
+    <figure xml:id="fig-body-temp-gender-jamovi-ht">
+      <caption>Software output for the body-temperature data.</caption>
+      <image source="jamovi/BodyTemp/BodyTempTestGender.png" width="100%"/>
+    </figure>
+    <exercise xml:id="exercise-test-two-means-fitness-of-paramedics">
+      <statement>
+        <p>
+          <xref ref="data-chapman2007-MaleParamedics"/> compared 'conventional' male paramedics in Western Australia with male 'special-operations' paramedics. Some information comparing their physical profiles is shown in Table <xref ref="tab-paramedics-test"/>.
+        </p>
+        <table xml:id="tab-paramedics-test">
+          <title>The physical profile of conventional (<m>n = 18</m>) and special operation (<m>n = 11</m>) paramedics in Western Australia</title>
+          <tabular>
+            <row header="yes"><cell/><cell>Conventional</cell><cell>Special Operations</cell></row>
+            <row><cell>Grip strength (kg): Mean</cell><cell><m>51</m></cell><cell><m>56</m></cell></row>
+            <row><cell>Grip strength (kg): Standard deviation</cell><cell><m>8</m></cell><cell><m>9</m></cell></row>
+            <row><cell>Grip strength (kg): Standard error</cell><cell>&#8212;</cell><cell>&#8212;</cell></row>
+            <row><cell>Push-ups (per minute): Mean</cell><cell><m>36</m></cell><cell><m>47</m></cell></row>
+            <row><cell>Push-ups (per minute): Standard deviation</cell><cell><m>10</m></cell><cell><m>11</m></cell></row>
+            <row><cell>Push-ups (per minute): Standard error</cell><cell>&#8212;</cell><cell>&#8212;</cell></row>
+          </tabular>
+        </table>
+        <ol>
+          <li><p>Compute the missing standard errors.</p></li>
+          <li><p>Compare the mean grip strength for the two groups of paramedics. (The <em>standard error for the difference between the means</em> is <m>3.30</m>.)</p></li>
+          <li><p>Compare the mean number of push-ups completed in one minute for the two groups of paramedics. (The <em>standard error for the difference between the means</em> is <m>4.0689</m>.)</p></li>
+        </ol>
+      </statement>
+    </exercise>
+    <exercise xml:id="exercise-two-means-ci-exercises-anorexia">
+      <statement>
+        <p>
+          [<em>Dataset</em>: <c>Anorexia</c>] Young girls (<m>n = 29</m>) with anorexia received cognitive behavioural treatment (<xref ref="data-hand-handbook"/>), while another <m>n = 26</m> young girls received a control treatment (the 'standard' treatment). All girls had their weight recorded before and after treatment.
+        </p>
+        <ol>
+          <li><p>Determine the mean <em>gain</em> for individual girls using software.</p></li>
+          <li><p>Compute a CI for the mean weight gain for the girls in each group.</p></li>
+          <li><p>Compute a CI for the difference between the mean weight gains for the two treatment groups.</p></li>
+          <li><p>Conduct a test to determine if there is a difference between the mean weight gains for the two treatment groups.</p></li>
+        </ol>
+      </statement>
+    </exercise>
+    <exercise xml:id="exercise-coeliac">
+      <statement>
+        <p>
+          Researchers studied the impact of a gluten-free diet on dental cavities <xref ref="khalaf2020caries"/>. Some summary information regarding the number decayed, missing and filled teeth (DMFT) is shown in Table <xref ref="tab-coeliac-dmft-ci"/>. An <em>exact</em> <m>95</m>% CI is given as for the difference is <m>-2.32</m> to <m>2.76</m>.
+        </p>
+        <table xml:id="tab-coeliac-dmft-ci">
+          <title>The summary of the number of DMFT for coeliacs and non-coeliacs</title>
+          <tabular>
+            <row header="yes"><cell/><cell>Sample size</cell><cell>Mean</cell><cell>Standard deviation</cell><cell>Standard error</cell></row>
+            <row><cell>Coeliacs</cell><cell><m>23</m></cell><cell><m>8.39</m></cell><cell><m>4.4</m></cell><cell><m>0.92</m></cell></row>
+            <row><cell>Non-coeliacs</cell><cell><m>23</m></cell><cell><m>8.17</m></cell><cell><m>4.1</m></cell><cell><m>0.86</m></cell></row>
+            <row><cell><em>Difference</em></cell><cell>&#8212;</cell><cell><m>0.22</m></cell><cell>&#8212;</cell><cell><m>1.3</m></cell></row>
+          </tabular>
+        </table>
+        <ol>
+          <li><p>Using the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule gives a slightly different CI. Why?</p></li>
+          <li><p>True or false: the difference is computed as the number of DMFT for coeliacs minus non-coeliacs.</p></li>
+          <li><p>True or false: one of the values for the CI is a negative value, which must be an error (as a negative number of DMFT is impossible).</p></li>
+          <li>
+            <p>We are <m>95</m>% confident that the difference between the population means is:</p>
+            <ul>
+              <li><p>smaller for coeliacs;</p></li>
+              <li><p>between <m>2.32</m> higher for non-coeliacs to <m>2.76</m> higher for coeliacs.</p></li>
+              <li><p>between <m>2.76</m> higher for non-coeliacs to <m>2.32</m> higher for coeliacs.</p></li>
+            </ul>
+          </li>
+        </ol>
+      </statement>
+    </exercise>
+    <exercise xml:id="exercise-two-means-reaction-times">
+      <statement>
+        <p>
+          [<em>Dataset</em>: <c>ReactionTime</c>] <xref ref="data-Strayer2001-phones"/> examined the reaction times, while driving, for students from the University of Utah <xref ref="agresti2007statistics"/>. In one study, students were randomly allocated to one of two groups: one group <em>used</em> a mobile phone while driving in a driving simulator, and one group <em>did not use</em> a mobile phone while driving in a driving simulator. The reaction time for each student was measured.
+        </p>
+        <!-- The raw reaction-time data (32 values per group) are shown as an interactive datatable in the Rmd HTML output; individual values are not stated in the surrounding prose and so are not reconstructed here. -->
+        <p>Use the data to answer this RQ:</p>
+        <blockquote>
+          <p>For students, what is the difference between the mean reaction time while driving when using a mobile phone and when <em>not</em> using a mobile phone?</p>
+        </blockquote>
+      </statement>
+    </exercise>
+    <exercise xml:id="exercise-two-means-ci-exercises-bmi-anova">
+      <statement>
+        <p>
+          [<em>Dataset</em>: <c>BMI</c>] <xref ref="johnson2021association"/> collected data from hospital outpatients at an Irish hospital. One RQ in the study concerns comparing the mean number of days per week that patients exercise for more than <m>30</m> minutes (say, <m>\mu</m>) according to their smoking status: daily (<m>D</m>), occasionally (<m>O</m>) or not at all (<m>N</m>).
+        </p>
+        <p>
+          Use the output (Fig. <xref ref="fig-bmi-jamovi"/>) to answer the questions that follow.
+        </p>
+        <ol>
+          <li><p>Construct an error bar chart to summarise the data.</p></li>
+          <li><p>Construct a numerical summary table.</p></li>
+          <li><p>Perform a suitable hypothesis test, and answer the RQ.</p></li>
+        </ol>
+      </statement>
+    </exercise>
+    <figure xml:id="fig-bmi-jamovi">
+      <caption>Software output for testing hypotheses for the BMI data.</caption>
+      <image source="jamovi/BMI/BMIANOVA.png" width="55%"/>
+    </figure>
+  </exercises>
 </chapter>

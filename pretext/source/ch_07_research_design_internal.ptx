@@ -845,7 +845,7 @@
         <p>...most people are pre-informed about the daily temperature by the weather forecast and expect a certain degree of heat, which ultimately also affects their perception of it to a great extent.</p>
       </blockquote>
     </example>
-    <example xml:id="example-subjective-and-objective-data">
+    <example xml:id="example-subjective-and-objective-data-bmi">
       <title>Subjective and objective data</title>
       <p>
         <xref ref="johnson2021association"/> asked <m>70</m> people in south-west Ireland to <em>subjectively</em> self-report their Body-Mass index (BMI) category, as 'Normal' or 'Overweight'. <em>Thirty-six</em> subjects self-reported their BMI category as 'Normal'.

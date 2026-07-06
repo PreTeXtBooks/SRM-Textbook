@@ -16,7 +16,7 @@
   <section xml:id="sec-chap28-intro">
     <title>Introduction</title>
     <p>
-      In Chaps. <xref ref="sec-test-one-proportion"/> and <xref ref="ch-27-testing-one-mean"/>, hypothesis tests for one proportion and one mean were studied. Later chapters discuss hypothesis tests in other contexts, too. However, the general approach to hypothesis testing is the same for <em>any</em> hypothesis test. This chapter discusses some general ideas in hypothesis testing:
+      In Chaps. <xref ref="ch-26-testing-one-proportion"/> and <xref ref="ch-27-testing-one-mean"/>, hypothesis tests for one proportion and one mean were studied. Later chapters discuss hypothesis tests in other contexts, too. However, the general approach to hypothesis testing is the same for <em>any</em> hypothesis test. This chapter discusses some general ideas in hypothesis testing:
     </p>
     <ul>
       <li><p>stating the <em>assumptions</em> and forming hypotheses (Sect. <xref ref="sec-about-hypotheses"/>).</p></li>
@@ -118,10 +118,10 @@
     <example xml:id="example-alt-hypothesis-body-temp">
       <title>Alternative hypotheses</title>
       <p>
-        For the body-temperature study (Chap. <xref ref="ch-27-testing-one-mean"/>), the alternative hypothesis is <em>two-tailed</em> (i.e., <m>H_1</m>: <m> 37.0</m>): the RQ asks if the population mean is <m>37.0</m>^o^C or <em>not</em>. Two possibilities are considered: that <m></m> could be either larger <em>or</em> smaller than <m>37.0</m>.
+        For the body-temperature study (Chap. <xref ref="ch-27-testing-one-mean"/>), the alternative hypothesis is <em>two-tailed</em> (i.e., <m>H_1</m>: <m>\mu \ne 37.0</m>): the RQ asks if the population mean is <m>37.0</m>^o^C or <em>not</em>. Two possibilities are considered: that <m>\mu</m> could be either larger <em>or</em> smaller than <m>37.0</m>.
       </p>
       <p>
-        A <em>one-tailed alternative hypothesis</em> would be appropriate if the RQ asked 'Is the <em>population</em> mean internal body temperature <em>greater</em> than <m>37.0</m>^o^C?' (i.e., <m>H_1</m>: <m> &gt; 37.0</m>), or 'Is the <em>population</em> mean internal body temperature <em>smaller</em> than <m>37.0</m>^o^C?' (i.e., <m>H_1</m>: <m> &lt; 37.0</m>). One-tailed RQs such as these would only be asked if there were good scientific reasons to suspect a difference in one direction specifically.
+        A <em>one-tailed alternative hypothesis</em> would be appropriate if the RQ asked 'Is the <em>population</em> mean internal body temperature <em>greater</em> than <m>37.0</m>^o^C?' (i.e., <m>H_1</m>: <m>\mu &gt; 37.0</m>), or 'Is the <em>population</em> mean internal body temperature <em>smaller</em> than <m>37.0</m>^o^C?' (i.e., <m>H_1</m>: <m>\mu &lt; 37.0</m>). One-tailed RQs such as these would only be asked if there were good scientific reasons to suspect a difference in one direction specifically.
       </p>
     </example>
     <warning>
@@ -137,6 +137,7 @@
       </ul>
     </warning>
   </subsection>
+    <p><url href="https://learningapps.org/watch?v=pdvd1n72j22" visual="learningapps.org/watch?v=pdvd1n72j22">LearningApps interactive activity: null and alternative hypotheses.</url></p>
   </section>
 
   <section xml:id="sec-sampling-distributions-expectation">
@@ -149,10 +150,7 @@
       When the sampling distribution is described by a normal distribution, the <em>mean</em> of the normal distribution (the sampling mean) is the parameter value given in the <em>assumption</em> (<m>H_0</m>), and the <em>standard deviation</em> of the normal distribution is called the <em>standard error</em>.<idx>Standard error</idx> However, <em>not all sampling distributions are normal distributions</em>.
     </p>
     <p>
-      The variation in the sampling distribution (as measured by the standard error) depends on the sample size. For example, suppose <m>p</m> is defined as the probability of rolling a
-    </p>
-    <p>
-      on a die. In one roll, finding a sample proportion of <m>\hat{p} = 1</m>, is not unreasonable. However, in <m>20 000</m> rolls, a sample proportion of <m>\hat{p} = 1</m> would be <em>incredibly</em> unlikely for a fair die.
+      The variation in the sampling distribution (as measured by the standard error) depends on the sample size. For example, suppose <m>p</m> is defined as the probability of rolling a ⚀ on a die. In one roll, finding a sample proportion of <m>\hat{p} = 1</m>, is not unreasonable. However, in <m>20\,000</m> rolls, a sample proportion of <m>\hat{p} = 1</m> would be <em>incredibly</em> unlikely for a fair die.
     </p>
   </section>
 
@@ -163,7 +161,7 @@
     </p>
     <me>\text{test statistic} =    \frac{\text{value of sample statistic} - \text{centre of the sampling distribution}}         {\text{standard deviation of the sampling distribution (i.e., standard error)}}.</me>
     <p>
-      The 'standard deviation of the sampling distribution' is called the standard error of the statistic. This is called a '<em>test statistic</em>', since the calculation is based on sample data (so it is a <em>statistic</em>) and used in a hypothesis <em>test</em>. This test statistic may be a <m>z</m>-score or a <m>t</m>-score. Other test statistics, when the sampling distribution is not described by a normal distribution, are used too (as in Chap. <xref ref="sec-analysis-odds-ratio"/>).
+      The 'standard deviation of the sampling distribution' is called the standard error of the statistic. This is called a '<em>test statistic</em>', since the calculation is based on sample data (so it is a <em>statistic</em>) and used in a hypothesis <em>test</em>. This test statistic may be a <m>z</m>-score or a <m>t</m>-score. Other test statistics, when the sampling distribution is not described by a normal distribution, are used too (as in Chap. <xref ref="ch-31-cis-testing-odds-ratios"/>).
     </p>
     <note>
       <p>
@@ -220,14 +218,6 @@
       Understanding <m>P</m>-values requires care.
     </p>
     <definition xml:id="def-pvalue">
-      <title>$P$-value</title>
-      <statement>
-        <p>
-          A <m>P</m>-value is the likelihood of observing the sample statistic (or something more extreme) over repeated sampling, under the assumption that the null hypothesis about the population parameter is true.
-        </p>
-      </statement>
-    </definition>
-    <definition xml:id="def-pvalue">
       <title>P-value</title>
       <statement>
         <p>
@@ -254,6 +244,17 @@
         The threshold for a 'small' <m>P</m>-value is very commonly <m>0.05</m>, but this is arbitrary and not universal. There is nothing special about the value <m>0.05</m>, and there is very little difference in the meaning of a <m>P</m>-value of <m>0.051</m> and a <m>P</m>-value of <m>0.049</m>.
       </p>
     </warning>
+    <table xml:id="tab-pvalues-interpretation">
+      <title>A guideline for interpreting <m>P</m>-values. <m>P</m>-values should be interpreted in context, and indicate the strength of evidence to support the alternative hypothesis.</title>
+      <tabular>
+        <row header="yes"><cell>If the <m>P</m>-value is...</cell><cell>Write the conclusion as...</cell></row>
+        <row><cell>Larger than <m>0.10</m></cell><cell><em>Insufficient</em> evidence to support <m>H_1</m></cell></row>
+        <row><cell>Between <m>0.05</m> and <m>0.10</m></cell><cell><em>Slight</em> evidence to support <m>H_1</m></cell></row>
+        <row><cell>Between <m>0.01</m> and <m>0.05</m></cell><cell><em>Moderate</em> evidence to support <m>H_1</m></cell></row>
+        <row><cell>Between <m>0.001</m> and <m>0.01</m></cell><cell><em>Strong</em> evidence to support <m>H_1</m></cell></row>
+        <row><cell>Smaller than <m>0.001</m></cell><cell><em>Very strong</em> evidence to support <m>H_1</m></cell></row>
+      </tabular>
+    </table>
     <p>
       Identifying a <m>P</m>-value of <m>0.05</m> as 'small' (and hence providing 'persuasive evidence' to support <m>H_1</m>) is arbitrary; it means that, if <m>H_0</m> is true, there is a <m>1</m>-in-<m>20</m> chance that the value of the statistic (or a value more extreme) would be observed due to sampling variation. In many situations, the evidence must be more persuasive than this.
     </p>
@@ -261,18 +262,10 @@
       To appreciate the concept of a <m>0.05</m> (or a <m>1</m>-in-<m>20</m>) chance:
     </p>
     <ul>
-      <li><p>the probability of throwing <m>5</m> or more</p></li>
-    </ul>
-    <p>
-      in a row using a fair coin is about <m>0.063</m>.
-    </p>
-    <ul>
+      <li><p>the probability of throwing <m>5</m> or more <alert>H</alert> in a row using a fair coin is about <m>0.063</m>.</p></li>
       <li><p>the probability of drawing a black Ace from a pack of cards is about <m>0.038</m>.</p></li>
-      <li><p>the probability of rolling two or more consecutive throws of a</p></li>
+      <li><p>the probability of rolling two or more consecutive throws of a ⚅ is about <m>0.033</m>.</p></li>
     </ul>
-    <p>
-      is about <m>0.033</m>.
-    </p>
     <p>
       These events are improbable, without being essentially impossible.
     </p>
@@ -303,6 +296,7 @@
         To avoid confusion, the word 'significant' should be avoided in writing about research unless 'statistical significance' is actually meant. In other situations, consider using words like 'substantial'.
       </p>
     </warning>
+    <p><url href="https://learningapps.org/watch?v=p04ya6w8t22" visual="learningapps.org/watch?v=p04ya6w8t22">LearningApps interactive activity: interpreting P-values.</url></p>
   </section>
 
   <section xml:id="sec-type-errors">
@@ -332,7 +326,7 @@
         For the body-temperature example (Chap. <xref ref="ch-27-testing-one-mean"/>), the conclusion was that the sample provided very strong evidence that the population mean body temperature was <em>not</em> <m>37.0</m>^o^C. However, in truth, the mean internal body may not have changed, and is still <m>37.0</m>^o^C; that is, the null hypothesis actually is true, but we incorrectly decided it was probably not true.
       </p>
       <p>
-        This would be a Type I error: we <em>incorrectly</em> concluded that the evidence supported the alternative hypothesis. Of course, since the value of <m></m> is unknown, we do not know if we have made a Type I error or not.
+        This would be a Type I error: we <em>incorrectly</em> concluded that the evidence supported the alternative hypothesis. Of course, since the value of <m>\mu</m> is unknown, we do not know if we have made a Type I error or not.
       </p>
     </example>
   </section>
@@ -367,6 +361,7 @@
         Suppose, when we tested if the mean internal body temperature remained <m>37.0</m>^o^C (Chap. <xref ref="ch-27-testing-one-mean"/>), that we found <em>no evidence</em> that the temperature had changed. This <em>does not</em> provide evidence that the mean internal body temperature is <m>37.0</m>^o^C. It just means that the sample provided no evidence to change our initial <em>assumption</em> that the mean internal body temperature is <m>37.0</m>^o^C.
       </p>
     </example>
+    <p><url href="https://learningapps.org/watch?v=p13paniqk22" visual="learningapps.org/watch?v=p13paniqk22">LearningApps interactive activity: wording conclusions.</url></p>
   </section>
 
   <section xml:id="sec-practical-significance">
@@ -394,9 +389,10 @@
         <p>... resulted in a statistically significant weight loss compared to placebo, although this was not considered clinically significant.</p>
       </blockquote>
       <p>
-        This means that the difference in mean weight loss between the placebo and intervention groups was unlikely to be explained by chance (<m>P &lt; 0.001</m>; i.e., 'statistical significant'),<idx>Statistical significance</idx> but the difference was so small that it was unlikely to be of any use in practice ('practical importance'). In this context, the researchers decided that a weight loss of at least <m>2.5</m> was of practical importance. However, in the study, the sample mean weight loss was <m>1.61</m>.
+        This means that the difference in mean weight loss between the placebo and intervention groups was unlikely to be explained by chance (<m>P &lt; 0.001</m>; i.e., 'statistical significant'),<idx>Statistical significance</idx> but the difference was so small that it was unlikely to be of any use in practice ('practical importance'). In this context, the researchers decided that a weight loss of at least <m>2.5\kgs</m> was of practical importance. However, in the study, the sample mean weight loss was <m>1.61\kgs</m>.
       </p>
     </example>
+    <p><url href="https://learningapps.org/watch?v=p6yimkdn522" visual="learningapps.org/watch?v=p6yimkdn522">LearningApps interactive activity: practical importance and statistical significance.</url></p>
   </section>
 
   <section xml:id="sec-validity-h-ts">
@@ -418,19 +414,56 @@
     <p>
       The statistic (the <em>sample estimate</em>) is then <em>observed</em>, and a <em>test statistic</em> is computed to quantify the discrepancy between the values of the parameter (given in <m>H_0</m>) and statistic. Using a <m>P</m>-value, a decision is made about whether the sample evidence supports or contradicts the initial assumption, and hence a <em>conclusion</em> is made. When the sampling distribution is an approximate normal distribution, the test statistic is a <m>t</m>-score or <m>z</m>-score,<idx>z-score</idx> and <m>P</m>-values can often be approximated using the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule.
     </p>
+    <p><url href="https://learningapps.org/watch?v=p9epa2fpj22" visual="learningapps.org/watch?v=p9epa2fpj22">LearningApps interactive activity: chapter summary.</url></p>
   </section>
 
   <reading-questions xml:id="sec-chap33-quick-review">
     <title>Quick review questions</title>
+    <introduction>
+      <p>Are the following statements <em>true</em> or <em>false</em>?</p>
+    </introduction>
+    <exercise xml:id="rq-more-about-tests-1">
+      <statement><p>When a <m>P</m>-value is very small, a very large difference <em>must</em> exist between the statistic and parameter.</p></statement>
+      <answer><p>False.</p></answer>
+    </exercise>
+    <exercise xml:id="rq-more-about-tests-2">
+      <statement><p>The alternative hypothesis is one-tailed if the sample statistic is larger than the hypothesised population parameter.</p></statement>
+      <answer><p>False.</p></answer>
+    </exercise>
+    <exercise xml:id="rq-more-about-tests-3">
+      <statement><p>When the sampling distribution has an approximate normal distribution, the standard deviation of this normal distribution is called the <em>standard error</em>.</p></statement>
+      <answer><p>True.</p></answer>
+    </exercise>
+    <exercise xml:id="rq-more-about-tests-4">
+      <statement><p>Both <m>z</m>-scores and <m>t</m>-scores can be test statistics.</p></statement>
+      <answer><p>True.</p></answer>
+    </exercise>
+    <exercise xml:id="rq-more-about-tests-5">
+      <statement><p><m>P</m>-values can never be exactly zero.</p></statement>
+      <answer><p>True.</p></answer>
+    </exercise>
+    <exercise xml:id="rq-more-about-tests-6">
+      <statement><p>A <m>P</m>-value is the probability that the null hypothesis is true.</p></statement>
+      <answer><p>False.</p></answer>
+    </exercise>
+    <exercise xml:id="rq-more-about-tests-7">
+      <statement>
+        <p>Select the correct answer. What is wrong (if anything) with this null hypothesis: <m>H_0 = 37</m>?</p>
+        <ol marker="a.">
+          <li><p>There is nothing wrong.</p></li>
+          <li><p>The value of <m>37</m> is probably a sample value.</p></li>
+          <li><p>No parameter is given.</p></li>
+          <li><p>This is the alternative (not the null) hypothesis.</p></li>
+        </ol>
+      </statement>
+      <answer><p>No parameter is given; perhaps <m>H_0</m>: <m>\mu = 37</m>.</p></answer>
+    </exercise>
   </reading-questions>
 
   <exercises xml:id="sec-more-about-tests-exercises">
     <introduction>
       <p>Answers to odd-numbered exercises are given at the end of the book.</p>
     </introduction>
-    <p>
-      [Answers to odd-numbered exercises] are given at the end of the book.
-    </p>
     <exercise xml:id="exercise-more-about-exercises-approximating-p-values">
       <p>
         Assuming the statistical validity conditions are satisfied, use the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule to approximate the <em>two</em>-tailed <m>P</m>-value if:
@@ -438,11 +471,6 @@
       <ol>
         <li><p>the <m>t</m>-score is <m>3.4</m>.</p></li>
         <li><p>the <m>t</m>-score is <m>-2.9</m>.</p></li>
-      </ol>
-      <p>
-        \
-      </p>
-      <ol>
         <li><p>the <m>z</m>-score is <m>-2.1</m>.</p></li>
         <li><p>the <m>t</m>-score is <m>-6.7</m>.</p></li>
       </ol>
@@ -454,23 +482,18 @@
       <ol>
         <li><p>the <m>z</m>-score is <m>1.05</m>.</p></li>
         <li><p>the <m>t</m>-score is <m>-1.3</m>.</p></li>
-      </ol>
-      <p>
-        \
-      </p>
-      <ol>
         <li><p>the <m>t</m>-score is <m>6.7</m>.</p></li>
         <li><p>the <m>t</m>-score is <m>0.1</m>.</p></li>
       </ol>
     </exercise>
     <exercise xml:id="exercise-more-about-exercises-approximating-p-values-one-tailed">
       <p>
-        Consider the test statistics in Exercise <xref ref="sec-exr:more-about-exercises-approximating-p-values"/>. Use the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule to approximate the <em>one</em>-tailed <m>P</m>-values in each case.
+        Consider the test statistics in Exercise <xref ref="exercise-more-about-exercises-approximating-p-values"/>. Use the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule to approximate the <em>one</em>-tailed <m>P</m>-values in each case.
       </p>
     </exercise>
     <exercise xml:id="exercise-more-about-exercises-approximating-p-values-one-tailed2">
       <p>
-        Consider the test statistics in Exercise <xref ref="sec-exr:more-about-exercises-approximating-p-values2"/>. Use the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule to approximate the <em>one</em>-tailed <m>P</m>-values in each case.
+        Consider the test statistics in Exercise <xref ref="exercise-more-about-exercises-approximating-p-values2"/>. Use the <m>68</m><ndash/><m>95</m><ndash/><m>99.7</m> rule to approximate the <em>one</em>-tailed <m>P</m>-values in each case.
       </p>
     </exercise>
     <exercise xml:id="exercise-more-about-tests-interpreting-results">
@@ -488,35 +511,22 @@
         Consider the study to determine if the mean body temperature (Chap. <xref ref="ch-27-testing-one-mean"/>) was <m>37.0</m>^o^C, where <m>\bar{x} = 36.8052</m>^o^C. Explain <em>why</em> each of these sets of hypotheses are incorrect.
       </p>
       <ol>
-        <li><p><m>H_0</m>: <m>\bar{x} = 37.0</m>; <m>H_1</m>: <m>\bar{x} 37.0</m>.</p></li>
-        <li><p><m>H_0</m>: <m> = 37</m>; <m>H_1</m>: <m> &gt; 37</m>.</p></li>
-        <li><p><m>H_0</m>: <m> = 37</m>; <m>H_1</m>: <m> = 36.8052</m>.</p></li>
-      </ol>
-      <p>
-        \
-      </p>
-      <ol>
+        <li><p><m>H_0</m>: <m>\bar{x} = 37.0</m>; <m>H_1</m>: <m>\bar{x} \ne 37.0</m>.</p></li>
+        <li><p><m>H_0</m>: <m>\mu = 37</m>; <m>H_1</m>: <m>\mu &gt; 37</m>.</p></li>
+        <li><p><m>H_0</m>: <m>\mu = 37</m>; <m>H_1</m>: <m>\mu = 36.8052</m>.</p></li>
         <li><p><m>H_0</m>: <m>\bar{x} = 36.8052</m>; <m>H_1</m>: <m>\bar{x} &gt; 36.8052</m>.</p></li>
-        <li><p><m>H_0</m>: <m> = 36.8052</m>; <m>H_1</m>: <m> 36.8052</m>.</p></li>
-        <li><p><m>H_0</m>: <m> &gt; 37.0</m>; <m>H_1</m>: <m>\bar{x} &gt; 37.0</m>.</p></li>
+        <li><p><m>H_0</m>: <m>\mu = 36.8052</m>; <m>H_1</m>: <m>\mu \ne 36.8052</m>.</p></li>
+        <li><p><m>H_0</m>: <m>\mu &gt; 37.0</m>; <m>H_1</m>: <m>\bar{x} &gt; 37.0</m>.</p></li>
       </ol>
     </exercise>
     <exercise xml:id="exercise-more-about-tests-interpreting-hypotheses2">
       <p>
-        Consider the study to determine if a die was loaded (Chap. <xref ref="sec-test-one-proportion"/>) by studying the proportion of rolls that showed a
-      </p>
-      <p>
-        and where <m>\hat{p} = 0.41</m>. Explain <em>why</em> each of these sets of hypotheses are incorrect.
+        Consider the study to determine if a die was loaded (Chap. <xref ref="ch-26-testing-one-proportion"/>) by studying the proportion of rolls that showed a ⚀, and where <m>\hat{p} = 0.41</m>. Explain <em>why</em> each of these sets of hypotheses are incorrect.
       </p>
       <ol>
-        <li><p><m>H_0</m>: <m>\hat{p} = 1/6</m>; <m>H_1</m>: <m>\hat{p} 1/6</m>.</p></li>
-        <li><p><m>H_0 = 1/6</m>; <m>H_1 1/6</m>.</p></li>
+        <li><p><m>H_0</m>: <m>\hat{p} = 1/6</m>; <m>H_1</m>: <m>\hat{p} \ne 1/6</m>.</p></li>
+        <li><p><m>H_0 = 1/6</m>; <m>H_1 \ne 1/6</m>.</p></li>
         <li><p><m>H_0</m>: <m>p = 1/6</m>; <m>H_1</m>: <m>\hat{p} = 0.41</m>.</p></li>
-      </ol>
-      <p>
-        \
-      </p>
-      <ol>
         <li><p><m>H_0</m>: <m>\hat{p} = 1/6</m>; <m>H_1</m>: <m>\hat{p} = 0.41</m>.</p></li>
         <li><p><m>H_0</m>: <m>p = 1/6</m>; <m>H_1</m>: <m>p &gt; 1/6</m>.</p></li>
         <li><p><m>H_0</m>: <m>p = 1/6</m>; <m>H_1</m>: <m>p = 0.41</m>.</p></li>
@@ -524,7 +534,7 @@
     </exercise>
     <exercise xml:id="exercise-more-about-tests-conclusions">
       <p>
-        The recommended daily energy intake for women is <m>7 725</m> kJ (for a particular cohort, in a particular country; <xref ref="data-Altman1991-PracticalStats"/>). The daily energy intake for <m>11</m> women was measured to see if this is being adhered to. The RQ was 'Is the population mean daily energy intake <m>7 725</m> kJ?'
+        The recommended daily energy intake for women is <m>7\,725</m> kJ (for a particular cohort, in a particular country; <xref ref="data-Altman1991-PracticalStats"/>). The daily energy intake for <m>11</m> women was measured to see if this is being adhered to. The RQ was 'Is the population mean daily energy intake <m>7\,725</m> kJ?'
       </p>
       <p>
         The test produced <m>P = 0.018</m>. What, if anything, is wrong with these conclusions after completing the hypothesis test?
@@ -539,7 +549,7 @@
     </exercise>
     <exercise xml:id="exercise-more-about-tests-batteries">
       <p>
-        [<em>Dataset</em>: <c>Battery</c>] A study compared ALDI batteries to another brand of battery. In one test (comparing the time taken for <m>1.5</m> AA batteries to reach <m>1.1</m>), the ALDI brand battery took <m>5.73</m>, and the other brand (Energizer) took <m>5.44</m> <xref ref="mypapers-Dunn-BatteryData"/>.
+        [<em>Dataset</em>: <c>Battery</c>] A study compared ALDI batteries to another brand of battery. In one test (comparing the time taken for <m>1.5\vs</m> AA batteries to reach <m>1.1\vs</m>), the ALDI brand battery took <m>5.73\hs</m>, and the other brand (Energizer) took <m>5.44\hs</m> <xref ref="mypapers-Dunn-BatteryData"/>.
       </p>
       <ol>
         <li><p>What is the null hypothesis for the test?</p></li>
@@ -584,19 +594,4 @@
       </p>
     </exercise>
   </exercises>
-
-  <section xml:id="sec-ch28-supplementary-tables">
-    <title>Supplementary tables</title>
-    <table xml:id="tab-pvalues-interpretation">
-      <title>Guidelines for interpreting P-values as evidence</title>
-      <tabular>
-        <row header="yes"><cell>P-value range</cell><cell>Strength of evidence against H<sub>0</sub></cell></row>
-        <row><cell>P > 0.10</cell><cell>Weak or no evidence</cell></row>
-        <row><cell>0.05 &lt; P ≤ 0.10</cell><cell>Moderate evidence</cell></row>
-        <row><cell>0.01 &lt; P ≤ 0.05</cell><cell>Strong evidence</cell></row>
-        <row><cell>0.001 &lt; P ≤ 0.01</cell><cell>Very strong evidence</cell></row>
-        <row><cell>P ≤ 0.001</cell><cell>Extremely strong evidence</cell></row>
-      </tabular>
-    </table>
-  </section>
 </chapter>

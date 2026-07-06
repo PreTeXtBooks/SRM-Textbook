@@ -12,7 +12,11 @@
     </ul>
   </objectives>
 
-  <section xml:id="sec-sample-size-introduction">
+  <!-- Rmd top-level chapter heading label {#EstimatingSampleSize} is referenced from
+       other chapters (e.g. ch_09) as Sect. sec-estimating-sample-size; since the
+       <chapter> xml:id must stay ch-32-sample-size for the main.ptx xi:include wiring,
+       that id is placed on this opening section instead. -->
+  <section xml:id="sec-estimating-sample-size">
     <title>Introduction</title>
     <idx>Sample size estimation</idx>
     <p>
@@ -21,13 +25,13 @@
     <example xml:id="example-sample-size-impact">
       <title>Impact of sample size on CIs</title>
       <p>
-        Suppose we wish to estimate an unknown proportion, and find that <m>\hat{p} = 0.52</m> from a sample of size <m>n = 25</m>. The approximate <m>95</m>% CI is <m>0.52 0.200</m> (so the <em>margin of error</em> is <m>0.200</m>).
+        Suppose we wish to estimate an unknown proportion, and find that <m>\hat{p} = 0.52</m> from a sample of size <m>n = 25</m>. The approximate <m>95</m>% CI is <m>0.52 \pm 0.200</m> (so the <em>margin of error</em> is <m>0.200</m>).
       </p>
       <p>
-        If the estimate of <m>\hat{p} = 0.52</m> was found from a sample of size <m>n = 100</m> (rather than <m>n = 25</m>), a more precise estimate should be expected. The approximate <m>95</m>% CI is <m>0.52 0.100</m>; the margin of error is <m>0.100</m>, so the estimate is indeed more precise.
+        If the estimate of <m>\hat{p} = 0.52</m> was found from a sample of size <m>n = 100</m> (rather than <m>n = 25</m>), a more precise estimate should be expected. The approximate <m>95</m>% CI is <m>0.52 \pm 0.100</m>; the margin of error is <m>0.100</m>, so the estimate is indeed more precise.
       </p>
       <p>
-        If the estimate of <m>\hat{p} = 0.52</m> was found from a sample of size <m>n = 400</m>, the approximate <m>95</m>% CI is <m>0.52 0.050</m>; the margin of error is <m>0.050</m> (which is more precise again).
+        If the estimate of <m>\hat{p} = 0.52</m> was found from a sample of size <m>n = 400</m>, the approximate <m>95</m>% CI is <m>0.52 \pm 0.050</m>; the margin of error is <m>0.050</m> (which is more precise again).
       </p>
       <p>
         At each step, the sample size was four times as large, but the margin of error was halved.
@@ -41,6 +45,12 @@
       <li><p>for <em>small</em> sample sizes (say, smaller than <m>15</m>), precision greatly increases with small increases in the sample size.</p></li>
       <li><p>for <em>large</em> sample sizes (say, greater than <m>30</m>), precision improves only slightly when the sample size is increased.</p></li>
     </ul>
+    <figure xml:id="fig-sample-size-ci">
+      <caption>The approximate 95% confidence interval for various sample sizes.</caption>
+      <image source="fig-sample-size-ci.png" width="75%">
+        <description><p>An interactive plot showing the approximate 95% confidence interval width shrinking as the sample size, <m>n</m>, increases, with a slider to change the sample size from 5 to 50.</p></description>
+      </image>
+    </figure>
     <p>
       Figure <xref ref="fig-sample-size-ci-width"/> shows the approximate width of the CI for estimating a proportion, for various sample sizes (all else being equal). Observe that:
     </p>
@@ -49,6 +59,12 @@
       <li><p>for <em>small</em> sample sizes (say, smaller than <m>15</m>), precision greatly increases with small increases in the sample size.</p></li>
       <li><p>for <em>large</em> sample sizes (say, greater than <m>30</m>), precision improves only slightly when the sample size is increased.</p></li>
     </ul>
+    <figure xml:id="fig-sample-size-ci-width">
+      <caption>The approximate width of a 95% CI for a proportion, when various size samples are used.</caption>
+      <image source="fig-sample-size-ci-width.png" width="95%">
+        <description><p>A plot of sample size (horizontal axis, from 0 to 50) against the estimated proportion (vertical axis, from 0 to 1), showing two curves bounding the approximate 95% CI width around a proportion of 0.5: the CI is wide for small sample sizes and narrows quickly at first, then only slightly for sample sizes above about 30.</p></description>
+      </image>
+    </figure>
     <p>
       That is, improving precision gets more difficult as sample sizes get larger: large gains in precision are made by moderately increasing small sample sizes, but only small gains in precision are made by large increases in already-large sample sizes.
     </p>
@@ -95,13 +111,13 @@
     <example xml:id="example-sample-size-m-error">
       <title>Practical importance in sample size calculations</title>
       <p>
-        In a weight-loss study, estimating the weight loss with a precision of <m>1</m> is far more precise than is necessary: a weight loss of <m>1</m> has no practical importance, but would require a massive sample size to detect.<idx>Practical importance</idx>
+        In a weight-loss study, estimating the weight loss with a precision of <m>1\gs</m> is far more precise than is necessary: a weight loss of <m>1\gs</m> has no practical importance, but would require a massive sample size to detect.<idx>Practical importance</idx>
       </p>
       <p>
-        In contrast, the sample size needed to detect a mean weight loss with a precision of <m>50</m> would be far smaller. However, a weight loss so great is of no practical importance either, as most people who are looking to lose weight are hoping to lose far less than <m>50</m>.
+        In contrast, the sample size needed to detect a mean weight loss with a precision of <m>50\kgs</m> would be far smaller. However, a weight loss so great is of no practical importance either, as most people who are looking to lose weight are hoping to lose far less than <m>50\kgs</m>.
       </p>
       <p>
-        The researchers may decide that a weight loss of <m>5</m> is sufficient to be of practical importance, and determine the sample size based on this value.
+        The researchers may decide that a weight loss of <m>5\kgs</m> is sufficient to be of practical importance, and determine the sample size based on this value.
       </p>
     </example>
     <p>
@@ -125,13 +141,16 @@
         Always <em>round up</em> the result of the sample size calculation.
       </p>
     </warning>
+    <p>
+      <url href="https://learningapps.org/watch?v=pfduds6kt22" visual="learningapps.org">Interactive activity: sample size estimation</url>
+    </p>
   </section>
 
   <section xml:id="sec-sample-size-proportions">
     <title>Sample size for estimating one proportion</title>
     <idx><h>Sample size estimation</h><h>one proportion</h></idx>
     <p>
-      In Sect. <xref ref="sec-female-coffee-drinkers"/>, a CI was formed for the <em>population</em> proportion of female college students in the United States that drink coffee daily <xref ref="data-Kelpin2018-AlcoholCoffee"/>. From a sample of <m>n = 360</m>, the CI was <m>0.1694 0.0395</m> (i.e., the <em>margin of error</em> is <m>0.0395</m>), or from <m>0.130</m> to <m>0.209</m>.
+      In Sect. <xref ref="sec-female-coffee-drinkers"/>, a CI was formed for the <em>population</em> proportion of female college students in the United States that drink coffee daily <xref ref="data-Kelpin2018-AlcoholCoffee"/>. From a sample of <m>n = 360</m>, the CI was <m>0.1694 \pm 0.0395</m> (i.e., the <em>margin of error</em> is <m>0.0395</m>), or from <m>0.130</m> to <m>0.209</m>.
     </p>
     <p>
       To obtain a more precise estimate (i.e., a narrower CI), a larger sample is needed, but how much larger? For instance, suppose we would like a CI with margin of error of <m>0.02</m> (rather than <m>0.0395</m>). What size sample is needed?
@@ -146,7 +165,7 @@
       </statement>
     </definition>
     <p>
-      For the coffee-drinking situation above, at least <m> 1 (0.02^2) = 2 500</m> female college students in the US is needed. This is a substantial increase from the original sample size of <m>360</m>.
+      For the coffee-drinking situation above, at least <m>1 \div (0.02^2) = 2 500</m> female college students in the US is needed. This is a substantial increase from the original sample size of <m>360</m>.
     </p>
     <example xml:id="example-sample-sizep">
       <title>Sample size calculations for one proportion</title>
@@ -158,6 +177,9 @@
         people are needed; <em>at least</em> <m>n = 204.08</m> people. In practice, <em>at least</em> <m>205</m> people are needed to achieve this desired level of precision (that is, <em>always round up</em> in sample size calculations).
       </p>
     </example>
+    <p>
+      The following short video may help explain some of these concepts: <url href="https://www.youtube.com/embed/-fflEggczG4" visual="youtube.com">Video: sample size for estimating a proportion</url>
+    </p>
   </section>
 
   <section xml:id="sec-sample-size-one-mean">
@@ -227,7 +249,7 @@
     <example xml:id="example-sample-size-weight-gain">
       <title>Sample size estimation for mean differences</title>
       <p>
-        In Sect. <xref ref="sec-mean-diff-ci"/>, a CI is computed for the difference between the distances walked in <m>6</m> (the six-minute walk test, 6MWT), using a <m>20</m> and <m>30</m> walkway <xref ref="saiphoklang2022comparison"/>, for <m>50</m> Thai patients. The <em>approximate</em> <m>95</m>% CI is from <m>15.80</m> to <m>28.26</m>, further for a <m>30</m> walkway (i.e., the margin of error is <m>6.234</m>).
+        In Sect. <xref ref="sec-mean-diff-ci"/>, a CI is computed for the difference between the distances walked in <m>6\mins</m> (the six-minute walk test, 6MWT), using a <m>20\ms</m> and <m>30\ms</m> walkway <xref ref="saiphoklang2022comparison"/>, for <m>50</m> Thai patients. The <em>approximate</em> <m>95</m>% CI is from <m>15.80\ms</m> to <m>28.26\ms</m>, further for a <m>30\ms</m> walkway (i.e., the margin of error is <m>6.234\ms</m>).
       </p>
       <p>
         Suppose we wanted to estimate the mean difference in the 6MWT distances for Malaysian patients; we could use the value of <m>s</m> from this study (i.e., <m>s = 22.03920</m>). Also, suppose we wanted a precision of <m>4</m> (that is, the margin of error is <m>4</m>). For this <em>more precise</em> estimate, we would need a <em>larger sample</em>. So compute:
@@ -267,7 +289,7 @@
     <example xml:id="example-sample-size-speeds">
       <title>Sample size estimation for difference between means</title>
       <p>
-        In Sect. <xref ref="sec-speed-signage"/>, a CI is computed for difference between the mean speeds of cars before and after signage was added <xref ref="ma2019impacts"/>. Suppose we wanted to estimate the difference between the mean reaction times within <m>5</m>.h^<m>-1</m>^.
+        In Sect. <xref ref="sec-speed-signage"/>, a CI is computed for difference between the mean speeds of cars before and after signage was added <xref ref="ma2019impacts"/>. Suppose we wanted to estimate the difference between the mean reaction times within <m>5\kms</m>.h^<m>-1</m>^.
       </p>
       <p>
         In Sect. <xref ref="sec-speed-signage"/>, the two groups (before and after signage added) produced standard deviations of <m>13.194</m> and <m>13.134</m> (which are very similar). We decide to use <m>s = 13.15</m> in the sample-size calculation as the common value of <m>s</m>:
@@ -355,15 +377,27 @@
 
   <reading-questions xml:id="sec-chap30-quick-review">
     <title>Quick review questions</title>
+    <introduction>
+      <p>Are the following statements <em>true</em> or <em>false</em>?</p>
+    </introduction>
+    <exercise xml:id="rq-sample-size-1">
+      <statement><p>A <em>larger</em> sample size produces a <em>more accurate</em> estimate of the parameter, all else being equal.</p></statement>
+      <answer><p>False.</p></answer>
+    </exercise>
+    <exercise xml:id="rq-sample-size-2">
+      <statement><p>A <em>larger</em> sample size produces a <em>more random</em> sample.</p></statement>
+      <answer><p>False.</p></answer>
+    </exercise>
+    <exercise xml:id="rq-sample-size-3">
+      <statement><p>We should <em>always</em> take the <em>largest</em> possible sample size.</p></statement>
+      <answer><p>False.</p></answer>
+    </exercise>
   </reading-questions>
 
   <exercises xml:id="sec-estimating-sample-size-exercises">
     <introduction>
       <p>Answers to odd-numbered exercises are given at the end of the book.</p>
     </introduction>
-    <p>
-      [Answers to odd-numbered exercises] are given at the end of the book.
-    </p>
     <exercise xml:id="exercise-sample-size-narrow1">
       <p>
         To obtain a <em>narrower</em> CI, is a larger or smaller sample size necessary (all else being equal)?
@@ -376,33 +410,33 @@
     </exercise>
     <exercise xml:id="exercise-sample-size-mean1">
       <p>
-        Suppose we need to estimate a population <em>mean</em> (with <m>95</m>% confidence), using <m>s = 1</m>.
+        Suppose we need to estimate a population <em>mean</em> (with <m>95</m>% confidence), using <m>s = 1\kgs</m>.
       </p>
       <ol>
-        <li><p>What size sample is needed to estimate the population mean within <m>0.4</m>?</p></li>
-        <li><p>What size sample is needed to estimate the population mean within <m>0.2</m> (that is, the CI will be <em>half</em> as wide as in the first calculation)?</p></li>
-        <li><p>What size sample is needed to estimate the population mean within <m>0.1</m> (that is, the CI will be <em>a quarter</em> as wide as in the first calculation)?</p></li>
+        <li><p>What size sample is needed to estimate the population mean within <m>0.4\kgs</m>?</p></li>
+        <li><p>What size sample is needed to estimate the population mean within <m>0.2\kgs</m> (that is, the CI will be <em>half</em> as wide as in the first calculation)?</p></li>
+        <li><p>What size sample is needed to estimate the population mean within <m>0.1\kgs</m> (that is, the CI will be <em>a quarter</em> as wide as in the first calculation)?</p></li>
         <li><p>To get a CI <em>half</em> as wide, how many <em>times</em> more units of analysis are needed?</p></li>
         <li><p>To get a CI <em>a quarter</em> as wide, how many <em>times</em> more units of analysis are needed?</p></li>
-        <li><p>Would a <em>smaller</em> or <em>larger</em> sample be needed to estimate the population mean within <m>0.4</m>, with <m>99</m>% confidence? Explain.</p></li>
+        <li><p>Would a <em>smaller</em> or <em>larger</em> sample be needed to estimate the population mean within <m>0.4\kgs</m>, with <m>99</m>% confidence? Explain.</p></li>
       </ol>
     </exercise>
     <exercise xml:id="exercise-sample-size-two-mean2">
       <p>
-        Suppose we need to estimate a difference between two population <em>means</em> (with <m>95</m>% confidence), using <m>s = 8</m>.
+        Suppose we need to estimate a difference between two population <em>means</em> (with <m>95</m>% confidence), using <m>s = 8\cms</m>.
       </p>
       <ol>
-        <li><p>What size samples are needed to estimate the difference between the population means within <m>4</m>?</p></li>
-        <li><p>What size samples are needed to estimate the difference between the population means within <m>2</m> (that is, the CI will be <em>half</em> as wide as in the first calculation)?</p></li>
-        <li><p>What size samples are needed to estimate the difference between the population means within <m>1</m> (that is, the CI will be <em>a quarter</em> as wide as in the first calculation)?</p></li>
+        <li><p>What size samples are needed to estimate the difference between the population means within <m>4\cms</m>?</p></li>
+        <li><p>What size samples are needed to estimate the difference between the population means within <m>2\cms</m> (that is, the CI will be <em>half</em> as wide as in the first calculation)?</p></li>
+        <li><p>What size samples are needed to estimate the difference between the population means within <m>1\cms</m> (that is, the CI will be <em>a quarter</em> as wide as in the first calculation)?</p></li>
         <li><p>To get a CI <em>half</em> as wide, how many <em>times</em> more units of analysis are needed?</p></li>
         <li><p>To get a CI <em>a quarter</em> as wide, how many <em>times</em> more units of analysis are needed?</p></li>
-        <li><p>Would a <em>smaller</em> or <em>larger</em> sample be needed to estimate the population mean within <m>4</m>, with <m>99</m>% confidence? Explain.</p></li>
+        <li><p>Would a <em>smaller</em> or <em>larger</em> sample be needed to estimate the population mean within <m>4\cms</m>, with <m>99</m>% confidence? Explain.</p></li>
       </ol>
     </exercise>
     <exercise xml:id="exercise-sample-size-prop-eating">
       <p>
-        <xref ref="data-Mann12017-UniStudents"/> studied of the eating habits of university students in Canada (Sect. <xref ref="sec-exr:ci-one-proportion-snacking"/>). They estimated the proportion of Canadian students that ate a sufficient number of servings of grains each day.
+        <xref ref="data-Mann12017-UniStudents"/> studied of the eating habits of university students in Canada (Sect. <xref ref="exercise-ci-one-proportion-snacking"/>). They estimated the proportion of Canadian students that ate a sufficient number of servings of grains each day.
       </p>
       <p>
         Suppose we wished to repeat the study but for <em>New Zealand</em> university students; that is, we seek an estimate of the population proportion of New Zealand students that eat a sufficient number of servings of grains each day (with <m>95</m>% confidence).
@@ -426,26 +460,26 @@
     </exercise>
     <exercise xml:id="exercise-sample-size-mean-lung-capacity">
       <p>
-        <xref ref="data-Tager-FEV"/> measured the lung capacity of <m>11</m>-year-old girls in East Boston, using the <em>forced expiratory volume</em> (FEV) of the children (Exercise <xref ref="sec-exr:ci-one-mean-lung-capacity-in-children"/>). Suppose we wished to repeat the study, and find a <m>95</m>% CI for the mean FEV for <m>11</m>-year-old <em>Australian</em> girls.
+        <xref ref="data-Tager-FEV"/> measured the lung capacity of <m>11</m>-year-old girls in East Boston, using the <em>forced expiratory volume</em> (FEV) of the children (Exercise <xref ref="exercise-ci-one-mean-lung-capacity-in-children"/>). Suppose we wished to repeat the study, and find a <m>95</m>% CI for the mean FEV for <m>11</m>-year-old <em>Australian</em> girls.
       </p>
       <p>
-        Since Australian and American children might be somewhat similar, we could use, as an approximation, the standard deviation from that study: <m>s = 0.43</m>.
+        Since Australian and American children might be somewhat similar, we could use, as an approximation, the standard deviation from that study: <m>s = 0.43\Ls</m>.
       </p>
       <ol>
-        <li><p>What size sample is needed to estimate the mean within <m>0.02</m>?</p></li>
-        <li><p>What size sample is needed to estimate the mean within <m>0.05</m>?</p></li>
-        <li><p>What size sample is needed to estimate the mean within <m>0.10</m>?</p></li>
-        <li><p>Suppose we wished to find <m>99</m>% (not <m>95</m>%) CI for the mean FEV for <m>11</m>-year-old <em>Australian</em> girls, within <m>0.10</m>. Would this sample size be <em>larger</em> or <em>smaller</em> than the sample size found for a <m>95</m>% CI (also within <m>0.10</m>)?</p></li>
+        <li><p>What size sample is needed to estimate the mean within <m>0.02\Ls</m>?</p></li>
+        <li><p>What size sample is needed to estimate the mean within <m>0.05\Ls</m>?</p></li>
+        <li><p>What size sample is needed to estimate the mean within <m>0.10\Ls</m>?</p></li>
+        <li><p>Suppose we wished to find <m>99</m>% (not <m>95</m>%) CI for the mean FEV for <m>11</m>-year-old <em>Australian</em> girls, within <m>0.10\Ls</m>. Would this sample size be <em>larger</em> or <em>smaller</em> than the sample size found for a <m>95</m>% CI (also within <m>0.10\Ls</m>)?</p></li>
         <li><p>Do you think this study would be costly, in terms of time and money?</p></li>
       </ol>
     </exercise>
     <exercise xml:id="exercise-sample-size-one-mean-blood-loss-sample-size">
       <p>
-        <xref ref="data-Williams2007-BloodLoss"/> asked paramedics (<m>n = 199</m>) to estimate the amount of blood loss on four different surfaces. When the actual amount of blood spill on concrete was <m>1 000</m>, the mean guess was <m>846.4</m> (with a standard deviation of <m>651.1</m>). For a different study:
+        <xref ref="data-Williams2007-BloodLoss"/> asked paramedics (<m>n = 199</m>) to estimate the amount of blood loss on four different surfaces. When the actual amount of blood spill on concrete was <m>1 000\mLs</m>, the mean guess was <m>846.4\mLs</m> (with a standard deviation of <m>651.1\mLs</m>). For a different study:
       </p>
       <ol>
-        <li><p>how many paramedics are needed to estimate the mean with a precision of <m>50</m>?</p></li>
-        <li><p>how many paramedics are needed to estimate the mean with a precision of <m>25</m>?</p></li>
+        <li><p>how many paramedics are needed to estimate the mean with a precision of <m>50\mLs</m>?</p></li>
+        <li><p>how many paramedics are needed to estimate the mean with a precision of <m>25\mLs</m>?</p></li>
         <li><p>how many times greater does the sample size need to be to <em>halve</em> the width of the margin of error?</p></li>
       </ol>
     </exercise>
@@ -463,11 +497,11 @@
     </exercise>
     <exercise xml:id="exercise-sample-size-captopril">
       <p>
-        <xref ref="data-macgregor-essential"/> studied treating hypertension with Captopril. Patients had their systolic blood pressure measured (in mm Hg) immediately <em>before</em> and two hours <em>after</em> being given the drug. A pilot study showed that the difference between the two measurements had a standard deviation of about <m>9</m> Hg.
+        <xref ref="data-macgregor-essential"/> studied treating hypertension with Captopril. Patients had their systolic blood pressure measured (in mm Hg) immediately <em>before</em> and two hours <em>after</em> being given the drug. A pilot study showed that the difference between the two measurements had a standard deviation of about <m>9\mms</m> Hg.
       </p>
       <ol>
-        <li><p>Determine the sample size needed to estimate the mean reduction in <em>systolic</em> blood pressure within <m>2</m> Hg.</p></li>
-        <li><p>Determine the sample size needed to estimate the mean reduction in <em>diastolic</em> blood pressure within <m>1.5</m> Hg.</p></li>
+        <li><p>Determine the sample size needed to estimate the mean reduction in <em>systolic</em> blood pressure within <m>2\mms</m> Hg.</p></li>
+        <li><p>Determine the sample size needed to estimate the mean reduction in <em>diastolic</em> blood pressure within <m>1.5\mms</m> Hg.</p></li>
       </ol>
     </exercise>
     <exercise xml:id="exercise-sample-size-whales">
@@ -475,9 +509,9 @@
         <xref ref="agbayani2020growth"/> studied gray whales (<em>Eschrichtius robustus</em>) and measured (among other variables) the length of whales at birth. Summary information is shown in Table <xref ref="tab-whale-info"/>. Suppose another research study wanted to study sperm whales, which have an approximately similar size.
       </p>
       <ol>
-        <li><p>Determine the sample size needed to estimate the difference between the mean lengths for female and male sperm whales at birth, within <m>0.15</m>.</p></li>
-        <li><p>Determine the sample size needed to estimate the difference between the mean lengths for female and male sperm whales at birth, within <m>0.10</m>.</p></li>
-        <li><p>Determine the sample size needed to estimate the difference between the mean lengths for female and male <em>goldfish</em> at birth, within <m>1</m>.</p></li>
+        <li><p>Determine the sample size needed to estimate the difference between the mean lengths for female and male sperm whales at birth, within <m>0.15\ms</m>.</p></li>
+        <li><p>Determine the sample size needed to estimate the difference between the mean lengths for female and male sperm whales at birth, within <m>0.10\ms</m>.</p></li>
+        <li><p>Determine the sample size needed to estimate the difference between the mean lengths for female and male <em>goldfish</em> at birth, within <m>1\mms</m>.</p></li>
       </ol>
     </exercise>
     <exercise xml:id="exercise-sample-size-pneumonia">
@@ -496,7 +530,7 @@
     </exercise>
     <exercise xml:id="exercise-sample-size-sunglasses">
       <p>
-        Exercise <xref ref="sec-exr:test-odds-ratio-sunglasses"/> describes a study comparing the proportion of females and males who wore sunglasses in Brisbane, Australia <xref ref="data-Dexter2019-SunProtection"/>. Suppose we wished to make a similar comparison for people in Auckland, estimating the difference in the proportions within <m>0.07</m>. How many females and males would be needed?
+        Exercise <xref ref="exercise-test-odds-ratio-sunglasses"/> describes a study comparing the proportion of females and males who wore sunglasses in Brisbane, Australia <xref ref="data-Dexter2019-SunProtection"/>. Suppose we wished to make a similar comparison for people in Auckland, estimating the difference in the proportions within <m>0.07</m>. How many females and males would be needed?
       </p>
     </exercise>
   </exercises>

@@ -18,7 +18,76 @@
     <p>
       Selecting the correct CI or hypothesis test can be challenging, and this book only describes a few possible scenarios. For the situations studied in this book, identifying the <em>type</em> of RQ (e.g., descriptive or correlational), and the <em>number</em> and <em>type</em> of variables (qualitative or quantitative) is important (Table <xref ref="tab-inference-test-ci2"/>). <em>Appendix <xref ref="sec-statistics-and-parameters"/></em> may also prove useful.
     </p>
-    <example xml:id="example-selecting-an-analysis">
+    <table xml:id="tab-inference-test-ci2">
+      <title>Analysis scenarios studied</title>
+      <tabular halign="center" top="major" bottom="major">
+        <row header="yes" bottom="minor">
+          <cell colspan="2"><alert>Summaries</alert></cell>
+          <cell colspan="2"><alert>Analysis</alert></cell>
+        </row>
+        <row header="yes" bottom="minor">
+          <cell><alert>Graphical display</alert></cell>
+          <cell><alert>Numerical summary</alert></cell>
+          <cell><alert>Confidence interval</alert></cell>
+          <cell><alert>Hypothesis test</alert></cell>
+        </row>
+        <row>
+          <cell colspan="4"><em>Descriptive RQ: proportion in one sample (i.e., one qualitative variable)</em></cell>
+        </row>
+        <row>
+          <cell>Bar charts; pie chart</cell>
+          <cell>Counts; percentages; odds</cell>
+          <cell><xref ref="ch-22-cis-one-proportion">CI for one mean</xref></cell>
+          <cell><xref ref="ch-26-testing-one-proportion">One-sample <m>z</m>-test</xref></cell>
+        </row>
+        <row>
+          <cell colspan="4"><em>Descriptive RQ: mean of one sample (i.e., one quantitative variable)</em></cell>
+        </row>
+        <row>
+          <cell>Histogram; stemplot; dot chart</cell>
+          <cell>Means, medians; std dev., IQR; outliers</cell>
+          <cell><xref ref="ch-23-cis-one-mean">CI for one mean</xref></cell>
+          <cell><xref ref="ch-27-testing-one-mean">One-sample <m>t</m>-test</xref></cell>
+        </row>
+        <row>
+          <cell colspan="4"><em>Repeated-measures RQ: paired quantitative data</em></cell>
+        </row>
+        <row>
+          <cell><xref ref="sec-histo-diff-plot">Histogram of <em>differences</em></xref>; <xref ref="sec-case-profile-plot">case-profile</xref></cell>
+          <cell>Mean, std dev. etc. of <em>differences</em></cell>
+          <cell><xref ref="ch-29-cis-testing-mean-difference">CI for mean difference</xref></cell>
+          <cell><xref ref="ch-29-cis-testing-mean-difference"><m>t</m>-test for mean differences</xref></cell>
+        </row>
+        <row>
+          <cell colspan="4"><em>Relational RQs: comparing quantitative variables</em></cell>
+        </row>
+        <row>
+          <cell><xref ref="sec-error-bar-charts">Error bar chart</xref></cell>
+          <cell>Mean and std error of the difference; mean, std dev. etc. of <em>each</em> group</cell>
+          <cell><xref ref="ch-30-cis-testing-two-means">CI of the difference between two means</xref></cell>
+          <cell><xref ref="ch-30-cis-testing-two-means"><m>t</m>-test for the difference between two means</xref></cell>
+        </row>
+        <row>
+          <cell colspan="4"><em>Relational RQs: comparing qualitative variables</em></cell>
+        </row>
+        <row>
+          <cell>Side-by-side bar chart; stacked bar chart</cell>
+          <cell>Odds; OR; percentages</cell>
+          <cell><xref ref="ch-31-cis-testing-odds-ratios">CI for ORs; CI for difference between two proportions</xref></cell>
+          <cell><xref ref="ch-31-cis-testing-odds-ratios"><m>\chi^2</m>-test for OR; <m>z</m>-test for difference between two proportions</xref></cell>
+        </row>
+        <row>
+          <cell colspan="4"><em>Correlational RQs</em></cell>
+        </row>
+        <row>
+          <cell>Scatterplot</cell>
+          <cell>Correlation coefficient; <m>R^2</m></cell>
+          <cell><xref ref="ch-33-correlation-regression">CI for correlation coefficient; CI for regression parameters</xref></cell>
+          <cell><xref ref="ch-33-correlation-regression">Test for correlation; <m>t</m>-test for regression parameters</xref></cell>
+        </row>
+      </tabular>
+    </table>
+    <example xml:id="example-selecting-an-analysis-cardiac-arrest">
       <title>Selecting an analysis</title>
       <p>
         <xref ref="bjornsson2021effect"/> studied whether the 'presence of a prehospital physician improves survival from cardiac arrest' (p. 227). They studied 471 cardiac arrests: <m>200</m> treated by prehospital physicians (2004 to 2007), and <m>271</m> treated by emergency medical technicians (2008 to 2014).
@@ -27,10 +96,10 @@
         For each cardiac admission (the unit of analysis), two variables are recorded. <em>Whether a prehospital physician is present</em> (the explanatory variable) is qualitative with two levels (Yes; No). <em>Whether a patient survived</em> (the response variable) is qualitative with two levels (Yes; No). They compared the survival proportions for the two scenarios; this is a <em>relational RQ</em>.
       </p>
       <p>
-        To study the <em>proportion</em> of survivors for each scenario, a <m>z</m>-test for the difference between proportions (and corresponding CI) would be used. Alternatively, a <m>^2</m>-test for comparing the odds of survival (and a CI for the OR) could also be used.
+        To study the <em>proportion</em> of survivors for each scenario, a <m>z</m>-test for the difference between proportions (and corresponding CI) would be used. Alternatively, a <m>\chi^2</m>-test for comparing the odds of survival (and a CI for the OR) could also be used.
       </p>
     </example>
-    <example xml:id="example-selecting-an-analysis">
+    <example xml:id="example-selecting-an-analysis-cricket">
       <title>Selecting an analysis</title>
       <p>
         <xref ref="lyons2023female"/> studied the relationship between the ball release speed (BRS) and the height of female cricket players, and BRS and arm length. Since they are exploring the relationship between two <em>pairs of quantitative variables</em>, both RQs are correlational RQs.
@@ -39,7 +108,7 @@
         If the relationships are approximately linear (determined by examining the two scatterplots), a test for correlations (and corresponding CI) would be used, for one each relationship to be studied. Alternatively, a linear regression model could be fitted (one for each relationship), and a test for the <em>slope</em> of the fitted regression equation (and corresponding CI) could be conducted.
       </p>
     </example>
-    <example xml:id="example-selecting-an-analysis">
+    <example xml:id="example-selecting-an-analysis-mockingbirds">
       <title>Selecting an analysis</title>
       <p>
         <xref ref="hitt2023lead"/> studied the impact of soil lead levels in New Orleans (USA) neighbourhoods on northern mockingbirds (p. 2):
@@ -57,15 +126,18 @@
         To study the difference between the mean lead concentrations in the two groups, a two-sample <m>t</m>-test for the difference between the means (and the corresponding CI) is needed (provided the statistical validity assumptions are met). One test is needed for comparing blood lead concentrations, and another for comparing concentrations in feathers.
       </p>
     </example>
+    <p>
+      The following short video may help explain some of these concepts. Note that the test for correlation and regression have not yet been covered in this book (but they will be in the next few chapters).
+    </p>
+    <video xml:id="video-select-test" youtube="" source="videos/SelectTest.mp4" width="60%">
+      <description>A short video explaining how to select an appropriate analysis.</description>
+    </video>
   </section>
 
   <exercises xml:id="sec-select-test-exercises">
     <introduction>
       <p>Answers to odd-numbered exercises are given at the end of the book.</p>
     </introduction>
-    <p>
-      [Answers to odd-numbered exercises] are given at the end of the book.
-    </p>
     <exercise xml:id="exercise-sampling-distribution-a">
       <p>
         Identify which of these statistics <em>do not</em> have a sampling distribution well-modelled by a normal distribution. Explain your answer.

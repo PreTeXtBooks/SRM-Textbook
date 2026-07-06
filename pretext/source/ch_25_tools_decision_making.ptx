@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Source: 25-Tools-DecisionMaking.Rmd -->
-<chapter xml:id="ch-25-tools-decision-making" xmlns:xi="http://www.w3.org/2001/XInclude">
+<chapter xml:id="sec-making-decisions" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Making decisions</title>
   <objectives xml:id="objectives-ch25">
     <introduction>
@@ -19,11 +19,15 @@
       Suppose I produce a pack of cards, and shuffle them well. The event of interest is 'the number of red cards when I draw <m>25</m> cards from the pack, with replacement'. ('With replacement' means that, after drawing a card, I place the card back into the pack, and reshuffle before drawing a new card; each draw is then from an identical, complete pack of <m>52</m> cards.) The pack of cards can be considered the <em>population</em>. In a standard pack, the proportion of red cards is <m>p = 0.5</m> for each draw, because sampling is with replacement. <m>\hat{p}</m> is the proportion of red cards in the <em>sample</em> of <m>n = 25</m> cards.
     </p>
     <p>
-      Suppose the sample of <m>25</m> cards produces <m>\hat{p} = 1</m>; that is, <em>all</em> <m>n = 25</m> cards in the sample are red cards
+      Suppose the sample of <m>25</m> cards produces <m>\hat{p} = 1</m>; that is, <em>all</em> <m>n = 25</m> cards in the sample are red cards (see the animation, or Fig. <xref ref="fig-draw15-cards"/>).
     </p>
     <p>
       What should you conclude? How likely is it that this would happen by chance from a fair pack? Is this evidence that the pack of cards is somehow unfair, poorly shuffled, or manipulated?
     </p>
+    <figure xml:id="fig-draw15-cards">
+      <caption>How likely is it to draw (with replacement) <m>25</m> red cards in a row from a fair pack?</caption>
+      <image source="fig-draw15-cards.png" width="75%"/>
+    </figure>
     <p>
       Of course, the sample of <m>25</m> cards is just one of <em>countless</em> possible samples that could have been chosen to study. Different samples comprise different cards, and the sample proportion depends on which cards are drawn for the studied sample. This leads to one of the most important observations about sampling.
     </p>
@@ -58,7 +62,7 @@
     </p>
   </section>
 
-  <section xml:id="sec-making-decisions:-hypotheses-ch25">
+  <section xml:id="sec-making-decisions-hypotheses">
     <title>Making decisions: hypotheses</title>
     <p>
       Two reasons could explain why the value of the <em>sample</em> proportion of red cards in <m>25</m> cards (<m>\hat{p} = 1</m>) is not exactly equal to the value of the population proportion (<m>p = 0.5</m>).
@@ -90,7 +94,7 @@
   <section xml:id="sec-decision-making">
     <title>Making decisions: the process</title>
     <p>
-      The ideas in Sect. <xref ref="sec-need-for-decision-making"/> suggest a formal process of decision-making in research
+      The ideas in Sect. <xref ref="sec-need-for-decision-making"/> suggest a formal process of decision-making in research (Fig. <xref ref="fig-decision-flow"/>).
     </p>
     <ol>
       <li><p><em>Make an assumption about the value of the parameter</em>. By doing so, we assume that <em>sampling variation</em> explains any discrepancy between the value of the observed statistic and this assumed value of the parameter.</p></li>
@@ -100,6 +104,10 @@
       <li><p>if the observed value of the <em>sample statistic</em> is <em>unlikely</em> to have been observed by chance, the statistic (i.e., the evidence) <em>contradicts</em> the assumption about the <em>parameter</em>, so the assumption is probably (but not certainly) <em>wrong</em>.</p></li>
       <li><p>if the observed value of the <em>sample statistic</em> could easily be explained by chance, the statistic (i.e., the evidence) is <em>consistent with</em> the assumption about the <em>parameter</em>, so the assumption may be (but is not certainly) <em>correct</em>.</p></li>
     </ol>
+    <figure xml:id="fig-decision-flow">
+      <caption>A way to make decisions.</caption>
+      <image source="fig-decision-flow.png" width="100%"/>
+    </figure>
     <image source="Illustrations/pexels-ketut-subiyanto-4546136.jpg" width="25%">
       <description><p>Image.</p></description>
     </image>
@@ -127,10 +135,7 @@
     <title>Making decisions: the steps</title>
     <idx><h>Decision making</h><h>steps</h></idx>
     <p>
-      Let's think about each step in the decision-making process
-    </p>
-    <p>
-      individually:
+      Let's think about each step in the decision-making process (Fig. <xref ref="fig-decision-flow"/>) individually:
     </p>
     <ul>
       <li><p>making an <em>assumption</em> about the parameter (Sect. <xref ref="sec-assumption"/>).</p></li>
@@ -171,7 +176,7 @@
         Many dental associations recommend brushing teeth for two minutes. <xref ref="data-Macgregor1979-BrushingDurationKids"/> recorded the toothbrushing time for <m>85</m> uninstructed schoolchildren from England to assess compliance with these guidelines.
       </p>
       <p>
-        We initially <em>assume</em> the <em>population</em> mean toothbrushing time is two minutes (<m>H_0</m>: <m> = 2</m>). If the <em>sample</em> mean is not two minutes, the null hypothesis explains this discrepancy as sampling variation. A sample can then be obtained to determine if the sample mean is consistent with, or contradicts, this assumption.
+        We initially <em>assume</em> the <em>population</em> mean toothbrushing time is two minutes (<m>H_0</m>: <m>\mu = 2</m>). If the <em>sample</em> mean is not two minutes, the null hypothesis explains this discrepancy as sampling variation. A sample can then be obtained to determine if the sample mean is consistent with, or contradicts, this assumption.
       </p>
     </example>
   </subsection>
@@ -190,11 +195,15 @@
       Think about the cards in Sect. <xref ref="sec-need-for-decision-making"/>. In a fair pack, <em>half</em> the cards are red in the <em>population</em> (the pack of cards), so the population proportion is assumed to be <m>p = 0.5</m>. In a <em>sample</em> of <m>25</m> cards, what values could be reasonably expected for the <em>sample</em> proportion <m>\hat{p}</m> of red cards (the statistic)? If samples of size <m>n = 25</m> were repeatedly taken from a fair pack with <m>p = 0.5</m>, the sample proportion of red cards would vary from hand to hand, of course. But <em>how</em> would <m>\hat{p}</m> vary from sample to sample?
     </p>
     <p>
-      Suppose we simulated only ten hands of <m>n = 25</m> cards each, using a computer;
+      Suppose we simulated only ten hands of <m>n = 25</m> cards each, using a computer; the animation (or Fig. <xref ref="fig-roll-dice10"/>) shows the sample proportion of red cards from each repetition.
     </p>
     <p>
       Naturally, the value of <m>\hat{p}</m> varies.
     </p>
+    <figure xml:id="fig-roll-dice10">
+      <caption>Ten hands of <m>25</m> cards: the sample proportion of cards in each hand that is red (shown on the right-hand side) varies from hand to hand.</caption>
+      <image source="fig-roll-dice10.png" width="75%"/>
+    </figure>
     <p>
       The distribution of the sample statistic is called the <em>sampling distribution</em> (Sect. <xref ref="sec-sampling-variation-intro"/>). The sampling distribution for <m>\hat{p}</m> is given in Sect. <xref ref="sec-sampling-distribution-knownp"/> when the value of <m>p</m> is known (as assumed here): an approximate normal distribution, with mean <m>p = 0.5</m>, and a standard deviation (the <em>standard error</em>) of
     </p>
@@ -202,6 +211,10 @@
     <p>
       A picture of this sampling distribution can be drawn (Fig. <xref ref="fig-sampling-dist-cards"/>). Values of <m>\hat{p}</m> larger than <m>0.8</m> or smaller than <m>0.2</m> would appear very unlikely.
     </p>
+    <figure xml:id="fig-sampling-dist-cards">
+      <caption>The sampling distribution for <m>\hat{p}</m>, the sample proportion of red cards in <m>25</m> cards.</caption>
+      <image source="fig-sampling-dist-cards.png" width="85%"/>
+    </figure>
   </subsection>
 
   <subsection xml:id="sec-observation">
@@ -227,6 +240,10 @@
     <p>
       But since we <em>did</em> find <m>\hat{p} = 1</m>, the assumption of a fair pack is probably wrong. That is, there is persuasive evidence that the assumption is wrong, and that the pack of cards is not fair.<idx>Evidence-based research</idx> The decision-making process is shown in Fig. <xref ref="fig-decision-flow-cards"/>.
     </p>
+    <figure xml:id="fig-decision-flow-cards">
+      <caption>A way to make decisions for the cards example.</caption>
+      <image source="fig-decision-flow-cards.png" width="100%"/>
+    </figure>
     <p>
       What if we had observed <m>18</m> red cards in a hand of <m>25</m> cards, a sample proportion of <m>\hat{p} = 18/25 = 0.72</m>? The conclusion is not quite so obvious then: Fig. <xref ref="fig-sampling-dist-cards"/> shows that <m>\hat{p} = 0.72</m> is unlikely, but <m>\hat{p} = 0.72</m> (and even larger values) certainly do occur.
     </p>
@@ -242,23 +259,27 @@
   <section xml:id="sec-tools-decision-making-example">
     <title>Example: brushing teeth</title>
     <p>
-      Many dental associations recommend brushing teeth for two minutes (i.e., for <m>120</m>). <xref ref="data-Macgregor1979-BrushingDurationKids"/> recorded the toothbrushing time for <m>85</m> uninstructed schoolchildren from England to assess compliance with these guidelines. Of course, every possible sample of <m>85</m> children in England will include different children, and so produce various sample mean brushing times <m>\bar{x}</m>. Even if the <em>population</em> mean toothbrushing time really was <m>120</m> (i.e., <m> = 120</m>), the <em>sample</em> mean probably wouldn't be exactly <m>120</m>, because of this sampling variation.
+      Many dental associations recommend brushing teeth for two minutes (i.e., for <m>120\secs</m>). <xref ref="data-Macgregor1979-BrushingDurationKids"/> recorded the toothbrushing time for <m>85</m> uninstructed schoolchildren from England to assess compliance with these guidelines. Of course, every possible sample of <m>85</m> children in England will include different children, and so produce various sample mean brushing times <m>\bar{x}</m>. Even if the <em>population</em> mean toothbrushing time really was <m>120\secs</m> (i.e., <m>\mu = 120</m>), the <em>sample</em> mean probably wouldn't be exactly <m>120\secs</m>, because of this sampling variation.
     </p>
     <p>
-      To begin, <em>assume</em> the population mean toothbrushing time is <m> = 120</m>; that is, <m>H_0</m> is <m> = 120</m>. <em>If</em> this is true, we then could describe what values of the sample statistic <m>\bar{x}</m> could be <em>expected</em> from all possible samples by describing the sampling distribution of <m>\bar{x}</m>: how sample means are likely to vary for samples of size <m>85</m> when <m> = 120</m>.
+      To begin, <em>assume</em> the population mean toothbrushing time is <m>\mu = 120</m>; that is, <m>H_0</m> is <m>\mu = 120</m>. <em>If</em> this is true, we then could describe what values of the sample statistic <m>\bar{x}</m> could be <em>expected</em> from all possible samples by describing the sampling distribution of <m>\bar{x}</m>: how sample means are likely to vary for samples of size <m>85</m> when <m>\mu = 120</m>.
     </p>
     <p>
-      The study found the mean time spent brushing was <m>60.3</m>, with a standard deviation of <m>23.8</m>. Using the ideas in Chap. <xref ref="sec-one-mean-conf-interval"/>, and in Sect. <xref ref="sec-sampling-dist-sample-mean"/> specifically, the sampling distribution of <m>\bar{x}</m> has an approximate normal distribution, with mean <m> = 120</m> (from <m>H_0</m>) and a standard deviation of <m>s.e.(\bar{x}) = 23.8/\sqrt{85} = 2.58</m> (shown in Fig. <xref ref="fig-sampling-dist-brushing"/>).
+      The study found the mean time spent brushing was <m>60.3\secs</m>, with a standard deviation of <m>23.8\secs</m>. Using the ideas in Chap. <xref ref="sec-one-mean-conf-interval"/>, and in Sect. <xref ref="sec-sampling-dist-sample-mean"/> specifically, the sampling distribution of <m>\bar{x}</m> has an approximate normal distribution, with mean <m>\mu = 120</m> (from <m>H_0</m>) and a standard deviation of <m>\text{s.e.}(\bar{x}) = 23.8/\sqrt{85} = 2.58\secs</m> (shown in Fig. <xref ref="fig-sampling-dist-brushing"/>).
     </p>
     <p>
-      A sample mean of <m>\bar{x} = 60.3</m> seems incredibly unlikely if <m> = 120</m>. This suggests that the sample evidence <em>contradicts</em> the assumption that <m> = 120</m>, and so the mean toothbrushing time in the population is very unlikely to be <m>120</m>.
+      A sample mean of <m>\bar{x} = 60.3</m> seems incredibly unlikely if <m>\mu = 120</m>. This suggests that the sample evidence <em>contradicts</em> the assumption that <m>\mu = 120</m>, and so the mean toothbrushing time in the population is very unlikely to be <m>120\secs</m>.
     </p>
+    <figure xml:id="fig-sampling-dist-brushing">
+      <caption>The sampling distribution for <m>\bar{x}</m>, the mean toothbrushing time in schoolchildren from England. A sample mean of <m>60.3\secs</m> seems very unlikely.</caption>
+      <image source="fig-sampling-dist-brushing.png" width="85%"/>
+    </figure>
   </section>
 
   <section xml:id="sec-tools-decision-making-summary">
     <title>Chapter summary</title>
     <p>
-      Making decisions about parameters based on a statistic is challenging: only one of the many possible samples is observed. Since every sample is likely to be different, different values of the sample statistic are possible. In this chapter, though, a process for making decisions has been studied
+      Making decisions about parameters based on a statistic is challenging: only one of the many possible samples is observed. Since every sample is likely to be different, different values of the sample statistic are possible. In this chapter, though, a process for making decisions has been studied (Fig. <xref ref="fig-decision-flow"/>).
     </p>
     <p>
       Decisions are often made by making an <em>assumption</em> about the parameter, which leads to an <em>expectation</em> of what values of the statistic are reasonably possible. We can then make <em>observations</em> about our sample, and then make a <em>decision</em> about whether the sample data support or contradict the initial assumption.
@@ -267,21 +288,48 @@
 
   <reading-questions xml:id="sec-tools-decision-making-quick-review">
     <title>Quick review questions</title>
+    <p>Are the following statements <em>true</em> or <em>false</em>?</p>
+    <exercise xml:id="rq-making-decisions-1">
+      <statement><p>Parameters describe <em>populations</em>.</p></statement>
+      <answer><p>True.</p></answer>
+    </exercise>
+    <exercise xml:id="rq-making-decisions-2">
+      <statement><p>Both <m>\bar{x}</m> and <m>\mu</m> are <em>statistics</em>.</p></statement>
+      <answer><p>False.</p></answer>
+    </exercise>
+    <exercise xml:id="rq-making-decisions-3">
+      <statement><p>The value of a statistic is likely to be <em>same</em> in every sample.</p></statement>
+      <answer><p>False.</p></answer>
+    </exercise>
+    <exercise xml:id="rq-making-decisions-4">
+      <statement><p><em>Sampling variation</em> describes how the value of a <em>statistic</em> varies from sample to sample.</p></statement>
+      <answer><p>True.</p></answer>
+    </exercise>
+    <exercise xml:id="rq-making-decisions-5">
+      <statement><p>An initial assumption is made about the <em>sample statistic</em>.</p></statement>
+      <answer><p>False.</p></answer>
+    </exercise>
+    <exercise xml:id="rq-making-decisions-6">
+      <statement><p>If the sample results seem inconsistent with what was expected, then the assumption about the population is probably true.</p></statement>
+      <answer><p>False.</p></answer>
+    </exercise>
+    <exercise xml:id="rq-making-decisions-7">
+      <statement><p>In the sample, we know exactly what value of <m>\hat{p}</m> to expect.</p></statement>
+      <answer><p>False.</p></answer>
+    </exercise>
+    <exercise xml:id="rq-making-decisions-8">
+      <statement><p>Hypotheses are made about the population.</p></statement>
+      <answer><p>True.</p></answer>
+    </exercise>
   </reading-questions>
 
   <exercises xml:id="sec-making-decisions-exercises">
     <introduction>
       <p>Answers to odd-numbered exercises are given at the end of the book.</p>
     </introduction>
-    <p>
-      [Answers to odd-numbered exercises] are given at the end of the book.
-    </p>
     <exercise xml:id="exercise-making-decisions-dice">
       <p>
-        While playing a die-based game, your opponent rolls a
-      </p>
-      <p>
-        ten times in a row.
+        While playing a die-based game, your opponent rolls a ⚅ ten times in a row.
       </p>
       <ol>
         <li><p>Do you think there is a problem with the die?</p></li>
@@ -290,7 +338,7 @@
     </exercise>
     <exercise xml:id="exercise-making-decisions-coin">
       <p>
-        A friend tosses a coin, and obtains two times in a row.
+        A friend tosses a coin, and obtains H two times in a row.
       </p>
       <ol>
         <li><p>Do you think there is a problem with the coin?</p></li>
