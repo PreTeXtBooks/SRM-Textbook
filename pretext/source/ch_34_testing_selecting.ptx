@@ -16,7 +16,7 @@
   <section xml:id="sec-about-selecting-analysis">
     <title>About selecting an appropriate analysis</title>
     <p>
-      Selecting the correct CI or hypothesis test can be challenging, and this book only describes a few possible scenarios. For the situations studied in this book, identifying the <em>type</em> of RQ (e.g., descriptive or correlational), and the <em>number</em> and <em>type</em> of variables (qualitative or quantitative) is important (Table <xref ref="tab-inference-test-ci2"/>). <em>Appendix <xref ref="sec-statistics-and-parameters"/></em> may also prove useful.
+      Selecting the correct CI or hypothesis test can be challenging, and this book only describes a few possible scenarios. For the situations studied in this book, identifying the <em>type</em> of RQ (e.g., descriptive or correlational), and the <em>number</em> and <em>type</em> of variables (qualitative or quantitative) is important (Table <xref ref="tab-inference-test-ci2"/>). The <em>Appendix</em> may also prove useful.
     </p>
     <table xml:id="tab-inference-test-ci2">
       <title>Analysis scenarios studied</title>
