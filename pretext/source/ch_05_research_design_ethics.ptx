@@ -41,16 +41,13 @@
     <example xml:id="example-ethics-disciplines">
       <title>Ethics</title>
       <p>Ethics are important for <em>all</em> studies, not just those involving people or animals. For example:</p>
-      <list><title/>
+      
         <ul>
           <li><p>in engineering, <m>238</m> articles published between 1945 and 2015 were retracted, mostly for unethical research practice <xref ref="rubbo2019retractions"/>.</p></li>
           <li><p>in the chemical sciences, <m>331</m> retractions were reported in 2017 and 2018 due to ethical issues, such as falsification of data<idx>Data falsification</idx> and plagiarism <xref ref="coudert2019correcting"/>.<idx>Plagiarism</idx></p></li>
         </ul>
-      </list>
     </example>
-
   </section>
-
 
   <section xml:id="sec-common-ethical-issues">
     <title>Ethical issues in research design</title>
@@ -61,7 +58,7 @@
 
     <p>Ethical issues embrace many areas when designing research studies.</p>
 
-    <list><title/>
+    
       <ul>
         <li><p><em>Acknowledgements</em>: all those who contributed to the research should be acknowledged, including those who prepare figures, take photographs, or have helped collect data.</p></li>
         <li><p><em>Analysis</em>: the analysis must use appropriate methods.</p></li>
@@ -80,7 +77,7 @@
         <li><p><em>Social risks</em>: social harm or discomfort (to researchers, participants or bystanders) should be avoided or minimised.</p></li>
         <li><p><em>Storage of data</em>: data should be stored securely, kept for the required amount of time, then (if appropriate) securely disposed.</p></li>
       </ul>
-    </list>
+    
 
     <example xml:id="example-ethics-tuskegee">
       <title>Poor ethics</title>
@@ -143,7 +140,7 @@
 
     <p>Studies must be ethical, and any formal study must obtain ethical approval <em>before</em> beginning. Ethics covers issues including, but not restricted to:</p>
 
-    <list><title/>
+    
       <ul>
         <li><p>acknowledgements.</p></li>
         <li><p>analysis methods.</p></li>
@@ -162,7 +159,7 @@
         <li><p>social risks.</p></li>
         <li><p>storage of data.</p></li>
       </ul>
-    </list>
+    
 
   </section>
 
@@ -181,6 +178,18 @@
         <li><p>Ethics only apply to the design of the study.</p></li>
         <li><p>Ethics apply even to the analysis of the data.</p></li>
       </ol>
+<solution>
+      <ol>
+        <li><p>TRUE</p></li>
+        <li><p>FALSE</p></li>
+        <li><p>FALSE</p></li>
+        <li><p>FALSE</p></li>
+        <li><p>TRUE</p></li>
+        <li><p>FALSE</p></li>
+        <li><p>TRUE</p></li>
+
+      </ol>
+</solution>
     </exercise>
 
   </reading-questions>
