@@ -19,7 +19,7 @@
   <section xml:id="sec-chap7-intro">
     <title>Introduction</title>
     <p>
-      A well-designed study is needed to draw solid conclusions: a study with high <em>external validity</em> (Sect. <xref ref="def-external-validity"/>) and high <em>internal validity</em> (Sect. <xref ref="def-internal-validity"/>). This chapter discusses some research design decisions to maximise internal validity.
+      A well-designed study is needed to draw solid conclusions: a study with high <em>external validity</em> (<xref ref="def-external-validity"/>) and high <em>internal validity</em> (<xref ref="def-internal-validity"/>). This chapter discusses some research design decisions to maximise internal validity.
     </p>
     <example xml:id="example-internal-validity">
       <title>Importance of internal validity</title>
@@ -34,11 +34,11 @@
       Specific design strategies for maximising internal validity include:
     </p>
     <ul>
-      <li><p>managing confounding (Sect. <xref ref="sec-managing-confounding"/>).</p></li>
-      <li><p>managing the Hawthorne effect by blinding individuals (Sect. <xref ref="sec-hawthorne-effect"/>).</p></li>
-      <li><p>managing the observer effect by blinding the researchers (Sect. <xref ref="sec-observer-effect"/>).</p></li>
-      <li><p>managing the placebo effect by using controls, objective measures and blinding (Sect. <xref ref="sec-placebo-effect"/>).</p></li>
-      <li><p>managing the carryover effect by using washouts (Sect. <xref ref="sec-carry-over-effect"/>).</p></li>
+      <li><p>managing confounding (<xref ref="sec-managing-confounding"/>).</p></li>
+      <li><p>managing the Hawthorne effect by blinding individuals (<xref ref="sec-hawthorne-effect"/>).</p></li>
+      <li><p>managing the observer effect by blinding the researchers (<xref ref="sec-observer-effect"/>).</p></li>
+      <li><p>managing the placebo effect by using controls, objective measures and blinding (<xref ref="sec-placebo-effect"/>).</p></li>
+      <li><p>managing the carryover effect by using washouts (<xref ref="sec-carry-over-effect"/>).</p></li>
     </ul>
     <p>
       Not all of these strategies will be relevant to every study.
@@ -80,11 +80,11 @@
       <li><p>the different <em>overall health</em> in each group (Group A would generally be healthier than those in Group B).</p></li>
     </ul>
     <p>
-      Any difference in faecal weight detected between the two groups may not be due to the diets (Table <xref ref="tab-confounding-groups"/>): the study has very poor internal validity, due to poor research design.
+      Any difference in faecal weight detected between the two groups may not be due to the diets (<xref ref="tab-confounding-groups"/>): the study has very poor internal validity, due to poor research design.
     </p>
     <table xml:id="tab-confounding-groups">
       <title>Comparing Groups A and B: extreme confounding.</title>
-      <tabular halign="center" top="medium" bottom="medium">
+      <tabular halign="center">
         <row header="yes" bottom="medium">
           <cell></cell>
           <cell><em>Group A</em></cell>
@@ -113,7 +113,7 @@
       </tabular>
     </table>
     <p>
-      Sex, age and overall health are <em>confounding variables</em> (Def. <xref ref="def-confounding-variable"/>): they are associated with the type of diet (explanatory variable) <em>and</em> faecal weight (response variable).<idx><h>Variables</h><h>confounding</h></idx> For example, the age of the subject may be associated with faecal weight (older people tend to eat less, and eat differently, than younger people), and the research design means older people are more likely to be consuming the refined cereal. This is an extreme case of <em>confounding</em> (Fig. <xref ref="fig-confounding-diagram"/>); usually, confounding is more subtle (and more difficult to detect) than in this example.
+      Sex, age and overall health are <em>confounding variables</em> (<xref ref="def-confounding-variable"/>): they are associated with the type of diet (explanatory variable) <em>and</em> faecal weight (response variable).<idx><h>Variables</h><h>confounding</h></idx> For example, the age of the subject may be associated with faecal weight (older people tend to eat less, and eat differently, than younger people), and the research design means older people are more likely to be consuming the refined cereal. This is an extreme case of <em>confounding</em> (<xref ref="fig-confounding-diagram"/>); usually, confounding is more subtle (and more difficult to detect) than in this example.
     </p>
     <figure xml:id="fig-confounding-diagram">
       <caption>An extreme example of confounding.</caption>
@@ -136,7 +136,7 @@
       <li><p><em>Randomly allocating</em> individuals to the comparison groups.<idx><h>Confounding</h><h>analysis</h></idx></p></li>
     </ol>
     <p>
-      Random allocation should ensure that the values of potential confounding variables are approximately evenly distributed between the comparison groups.<idx><h>Confounding</h><h>random allocation</h></idx> This is true for identified potential confounders (such as age), but also for unidentified potential confounders, or variables that are hard to measure or observe (e.g., genetic conditions). One of the comparison groups is often a control group (Def. <xref ref="def-control"/>).
+      Random allocation should ensure that the values of potential confounding variables are approximately evenly distributed between the comparison groups.<idx><h>Confounding</h><h>random allocation</h></idx> This is true for identified potential confounders (such as age), but also for unidentified potential confounders, or variables that are hard to measure or observe (e.g., genetic conditions). One of the comparison groups is often a control group (<xref ref="def-control"/>).
     </p>
     <example xml:id="example-random-allocation-thirst">
       <p>
@@ -193,7 +193,7 @@
       </statement>
     </definition>
     <p>
-      Exclusion and inclusion criteria clarify which individuals are explicitly included or excluded from the population for the purposes of the study, and their use should be explained when their purpose is not obvious. Exclusion and inclusion criteria are not both necessary; none, one or both may be used. These are a type of <em>control variable</em> (Def. <xref ref="def-control-variables"/>).<idx><h>Confounding</h><h>control variables</h></idx>
+      Exclusion and inclusion criteria clarify which individuals are explicitly included or excluded from the population for the purposes of the study, and their use should be explained when their purpose is not obvious. Exclusion and inclusion criteria are not both necessary; none, one or both may be used. These are a type of <em>control variable</em> (<xref ref="def-control-variables"/>).<idx><h>Confounding</h><h>control variables</h></idx>
     </p>
     <image source="Pics/iconmonstr-checkbox-14-240.png" width="25%">
       <description><p>Image.</p></description>
@@ -237,7 +237,7 @@
       </blockquote>
     </example>
     <ol>
-      <li><p><em>Blocking</em>,<idx><h>Confounding</h><h>blocking</h></idx> when units of analysis are arranged into different groups containing individuals that are similar to each another (see Sect. <xref ref="sec-paired-invasive-plants"/> for an example).</p></li>
+      <li><p><em>Blocking</em>,<idx><h>Confounding</h><h>blocking</h></idx> when units of analysis are arranged into different groups containing individuals that are similar to each another (see <xref ref="sec-paired-invasive-plants"/> for an example).</p></li>
     </ol>
     <p>
       For the <em>Himalaya 292</em> study, for example, subjects may be <em>paired</em> (i.e., groups of two).<idx><h>Study types</h><h>paired</h></idx> That is, each person is paired with another person of the same sex and of a similar age and weight; one of each pair is given the <em>Himalaya 292</em> diet, and the other is given the refined cereal diet. Each pair is called a <em>block</em>.
@@ -267,7 +267,7 @@
     </p>
     <warning>
       <p>
-        <em>Record</em> all the extraneous variables likely to be important (Sect. <xref ref="sec-record-extraneous"/>). This may include information about the <em>individuals</em> in the study, and the <em>circumstances</em> of the individuals in the study (that is, the circumstances the individuals find themselves in; these may not be measured on the individuals themselves).
+        <em>Record</em> all the extraneous variables likely to be important (<xref ref="sec-record-extraneous"/>). This may include information about the <em>individuals</em> in the study, and the <em>circumstances</em> of the individuals in the study (that is, the circumstances the individuals find themselves in; these may not be measured on the individuals themselves).
       </p>
     </warning>
     <example xml:id="example-himalaya-confounding">
@@ -279,13 +279,13 @@
         The study could be <em>restricted</em> to people under <m>30</m>. Age would be a <em>control variable</em>.
       </p>
       <p>
-        <em>Blocking</em> could be used by finding similar pairs of subjects (e.g., pairs of subjects of the same sex, with similar age and weight). One of each pair is given the refined cereal diet, and one given the <em>Himalaya 292</em> diet. The <em>differences</em> in faecal weight for each pair can be analysed using special methods (see Chap. <xref ref="sec-analysis-paired"/> for example).
+        <em>Blocking</em> could be used by finding similar pairs of subjects (e.g., pairs of subjects of the same sex, with similar age and weight). One of each pair is given the refined cereal diet, and one given the <em>Himalaya 292</em> diet. The <em>differences</em> in faecal weight for each pair can be analysed using special methods (see <xref ref="sec-analysis-paired"/> for example).
       </p>
       <p>
         Information <em>about the individuals</em> could be recorded, such as age and pre-study weight. Information <em>about the circumstances</em> of the individuals could also be recorded, such as where they live. Then, special methods of <em>analysis</em> could be used to analyse the data.
       </p>
       <p>
-        Since the study is experimental, participants could be <em>randomly allocated</em> into one of two groups, so both groups would have a similar distribution of ages (and other potential confounders). Then groups could be randomly allocated to receive one of the diets (Fig. <xref ref="fig-random-allocation-himalaya"/>).
+        Since the study is experimental, participants could be <em>randomly allocated</em> into one of two groups, so both groups would have a similar distribution of ages (and other potential confounders). Then groups could be randomly allocated to receive one of the diets (<xref ref="fig-random-allocation-himalaya"/>).
       </p>
       <figure xml:id="fig-random-allocation-himalaya">
         <caption>Random allocation can occur in two places for the <em>Himalaya</em> study.</caption>
@@ -299,11 +299,11 @@
     </example>
     <example>
       <p>
-        An experiment to study the effect of using ginkgo to enhance memory <xref ref="data-Solomon2002-ginkgo"/> compared two groups: one using ginkgo (<m>n = 111</m>), and one using a fake, non-active supplement (<m>n = 108</m>). The authors randomly allocated participants to each group, then compared the two groups to ensure that no obvious differences initially existed between the groups that might explain differences in the response variable (Table <xref ref="tab-ginkgo-demographics"/>).
+        An experiment to study the effect of using ginkgo to enhance memory <xref ref="data-Solomon2002-ginkgo"/> compared two groups: one using ginkgo (<m>n = 111</m>), and one using a fake, non-active supplement (<m>n = 108</m>). The authors randomly allocated participants to each group, then compared the two groups to ensure that no obvious differences initially existed between the groups that might explain differences in the response variable (<xref ref="tab-ginkgo-demographics"/>).
       </p>
       <table xml:id="tab-ginkgo-demographics">
         <title>Comparing the two groups in the ginkgo-memory study.</title>
-        <tabular halign="center" top="medium" bottom="medium">
+        <tabular halign="center">
           <row header="yes" bottom="medium">
             <cell>Characteristic</cell>
             <cell>Group A (ginkgo)</cell>
@@ -335,7 +335,7 @@
         Researchers explored the use of dominant and non-dominant hands for chest compression in student paramedics using an experimental study <xref ref="cross2019impact"/>. Students were randomly divided into two groups: DHOS (dominant hand on chest) and NDHOC (non-dominant hand on chest). The two groups were then compared:
       </p>
       <table>
-        <tabular halign="center" top="medium" bottom="medium">
+        <tabular halign="center">
           <row header="yes" bottom="medium">
             <cell>Demographic</cell>
             <cell>All participants (<m>n = 75</m>)</cell>
@@ -372,11 +372,11 @@
     <example xml:id="example-active-sedentary-women">
       <title>Comparing study groups: observational study</title>
       <p>
-        An observational study compared the iron levels of active and sedentary women aged <m>18</m> to <m>35</m> <xref ref="data-woolf-ironstatus"/>. The active women (<m>n = 28</m>) and sedentary women (<m>n = 28</m>) were compared on a variety of characteristics (Table <xref ref="tab-sedentary-demographics"/>). The active women were similar to the sedentary women on these characteristics, but were (in general) slightly younger, slightly heavier, and slightly more likely to use hormonal contraceptives.
+        An observational study compared the iron levels of active and sedentary women aged <m>18</m> to <m>35</m> <xref ref="data-woolf-ironstatus"/>. The active women (<m>n = 28</m>) and sedentary women (<m>n = 28</m>) were compared on a variety of characteristics (<xref ref="tab-sedentary-demographics"/>). The active women were similar to the sedentary women on these characteristics, but were (in general) slightly younger, slightly heavier, and slightly more likely to use hormonal contraceptives.
       </p>
       <table xml:id="tab-sedentary-demographics">
         <title>The demographic information for those in the study of iron levels in women.</title>
-        <tabular halign="center" top="medium" bottom="medium">
+        <tabular halign="center">
           <row header="yes" bottom="medium">
             <cell>Characteristic</cell>
             <cell>Active women</cell>
@@ -431,11 +431,11 @@
     </example>
     <warning>
       <p>
-        Observational studies <em>can</em> (and often do) have control groups. Indeed, one specific type of observational study is called a <em>case-control study</em><idx><h>Study types</h><h>case-control studies</h></idx> (Sect. <xref ref="sec-backward-studies"/>). However, individuals are <em>not allocated to the control group</em> by the researchers in observational studies, so initially the control and study groups may be very different, which may explain any differences in the outcome.
+        Observational studies <em>can</em> (and often do) have control groups. Indeed, one specific type of observational study is called a <em>case-control study</em><idx><h>Study types</h><h>case-control studies</h></idx> (<xref ref="sec-backward-studies"/>). However, individuals are <em>not allocated to the control group</em> by the researchers in observational studies, so initially the control and study groups may be very different, which may explain any differences in the outcome.
       </p>
     </warning>
     <p>
-      Random <em>sampling</em> and random <em>allocation</em><idx><h>Confounding</h><h>random allocation</h></idx><idx>Sampling</idx> are different concepts (Fig. <xref ref="fig-random-allocation-sampling"/>) with different purposes, but are often confused.
+      Random <em>sampling</em> and random <em>allocation</em><idx><h>Confounding</h><h>random allocation</h></idx><idx>Sampling</idx> are different concepts (<xref ref="fig-random-allocation-sampling"/>) with different purposes, but are often confused.
     </p>
     <ul>
       <li><p><em>Random sampling</em> impacts <em>external</em> validity. Its purpose is <em>finding individuals</em> to study, and is possible in both observational and experimental studies.</p></li>
@@ -488,7 +488,7 @@
       <description><p>Image.</p></description>
     </image>
     <p>
-      In <em>experimental</em> studies, <em>people</em> are often informed that they are in a study, due to ethics requirements (Sect. <xref ref="sec-common-ethical-issues"/>); they may not, however, know <em>which</em> treatment they have received. In <em>observational</em> studies, individuals <em>may</em> or <em>may not</em> know they are being observed. For instance, in a study where subjects' blood pressure is measured, subjects clearly know they are being observed, which has the potential to alter the subjects' behaviour (e.g., people become tense, called 'white-coat hypertension'). As far as possible, efforts should be made to ensure that individuals do not know that they are being observed (the participants are <em>blinded</em>).
+      In <em>experimental</em> studies, <em>people</em> are often informed that they are in a study, due to ethics requirements (<xref ref="sec-common-ethical-issues"/>); they may not, however, know <em>which</em> treatment they have received. In <em>observational</em> studies, individuals <em>may</em> or <em>may not</em> know they are being observed. For instance, in a study where subjects' blood pressure is measured, subjects clearly know they are being observed, which has the potential to alter the subjects' behaviour (e.g., people become tense, called 'white-coat hypertension'). As far as possible, efforts should be made to ensure that individuals do not know that they are being observed (the participants are <em>blinded</em>).
     </p>
     <example xml:id="example-hawthorne-himalaya">
       <title>Hawthorne effect: experimental study</title>
@@ -547,7 +547,7 @@
       </statement>
     </definition>
     <p>
-      The impact of the observer effect can be minimised by blinding the <em>researchers</em>, so that they do not know which treatments the individuals are receiving. The researchers <em>giving</em> the treatment and the researchers <em>evaluating</em> the treatment can both be blinded, by using a third party. For example, the researchers may give an assistant two drugs, labelled A and B. The assistant administers the drug and evaluates the participants' response to the treatments. Later, the assistant tells the researchers whether Drug A or Drug B performed better, but only the researchers know which drugs the labels A and B refer to (Fig. <xref ref="fig-blinding-third-party"/>).
+      The impact of the observer effect can be minimised by blinding the <em>researchers</em>, so that they do not know which treatments the individuals are receiving. The researchers <em>giving</em> the treatment and the researchers <em>evaluating</em> the treatment can both be blinded, by using a third party. For example, the researchers may give an assistant two drugs, labelled A and B. The assistant administers the drug and evaluates the participants' response to the treatments. Later, the assistant tells the researchers whether Drug A or Drug B performed better, but only the researchers know which drugs the labels A and B refer to (<xref ref="fig-blinding-third-party"/>).
     </p>
     <figure xml:id="fig-blinding-third-party">
       <caption>Using a third party to avoid the observer effect.</caption>
@@ -629,12 +629,12 @@
       For example, people who attend therapy expect a positive outcome; this expectation may result in temporary or perceived (or sometimes even real) improvements in their condition. This is the placebo effect.
     </p>
     <p>
-      To manage the placebo effect, researchers should record <em>objective</em><idx>Response variable</idx><idx><h>Data</h><h>objective</h></idx> data (Sect. <xref ref="sec-record-objective-data"/>) rather than patient-reported (subjective) outcomes when possible <xref ref="enck2013placebo"/>. (The operational definitions (Sect. <xref ref="sec-operation-definitions"/>)<idx><h>Definitions</h><h>operational</h></idx> for the variables should make clear whether subjective or objective data are recorded.) Using a <em>control</em> group (Def. <xref ref="def-control"/>), if possible, is also useful: it acts as a benchmark for detecting changes in the outcome due to the treatment of interest. In addition, <em>blinding</em> the individuals and the researchers may help manage the placebo effect, as then the individuals cannot know which group they are in.
+      To manage the placebo effect, researchers should record <em>objective</em><idx>Response variable</idx><idx><h>Data</h><h>objective</h></idx> data (<xref ref="sec-record-objective-data"/>) rather than patient-reported (subjective) outcomes when possible <xref ref="enck2013placebo"/>. (The operational definitions (<xref ref="sec-operation-definitions"/>)<idx><h>Definitions</h><h>operational</h></idx> for the variables should make clear whether subjective or objective data are recorded.) Using a <em>control</em> group (<xref ref="def-control"/>), if possible, is also useful: it acts as a benchmark for detecting changes in the outcome due to the treatment of interest. In addition, <em>blinding</em> the individuals and the researchers may help manage the placebo effect, as then the individuals cannot know which group they are in.
     </p>
     <example xml:id="example-placebo-colours">
       <title>Placebo effect</title>
       <p>
-        Three active pain relievers were compared to different-coloured placebo <xref ref="data-Huskisson1974-placebo"/> in <m>22</m> patients. The most pain relief was experienced by those taking <em>red</em> placebos (Fig. <xref ref="fig-placebos"/>), who experienced even more pain relief than those given true pain relievers. Note that the outcome is subjective:<idx><h>Data</h><h>subjective</h></idx> a <em>patient</em>-reported outcome.<idx>Response variable</idx><idx><h>Data</h><h>subjective</h></idx>
+        Three active pain relievers were compared to different-coloured placebo <xref ref="data-Huskisson1974-placebo"/> in <m>22</m> patients. The most pain relief was experienced by those taking <em>red</em> placebos (<xref ref="fig-placebos"/>), who experienced even more pain relief than those given true pain relievers. Note that the outcome is subjective:<idx><h>Data</h><h>subjective</h></idx> a <em>patient</em>-reported outcome.<idx>Response variable</idx><idx><h>Data</h><h>subjective</h></idx>
       </p>
       <figure xml:id="fig-placebos">
         <caption>Pain relief, for various pain relief medicine and different-coloured placebos.</caption>
@@ -652,7 +652,7 @@
     <example xml:id="example-himalaya-placebo">
       <title>Placebo effect</title>
       <p>
-        In the <em>Himalaya</em> study, the individuals 'were not told the identity of the test cereal in the foods provided' (<xref ref="data-Bird2008-wholegrain"/>, p. <m>1 033</m>). The subjects were blinded to the diet they were exposed to. However, some may <em>think</em> they are on the refined cereal or <em>Himalaya</em> diet, and respond accordingly (perhaps unconsciously). The use of the refined cereal was acting as a control (Def. <xref ref="def-control"/>). Researchers measured faecal weight, an <em>objective</em> outcome<idx><h>Data</h><h>objective</h></idx>, to minimise the placebo effect.
+        In the <em>Himalaya</em> study, the individuals 'were not told the identity of the test cereal in the foods provided' (<xref ref="data-Bird2008-wholegrain"/>, p. <m>1 033</m>). The subjects were blinded to the diet they were exposed to. However, some may <em>think</em> they are on the refined cereal or <em>Himalaya</em> diet, and respond accordingly (perhaps unconsciously). The use of the refined cereal was acting as a control (<xref ref="def-control"/>). Researchers measured faecal weight, an <em>objective</em> outcome<idx><h>Data</h><h>objective</h></idx>, to minimise the placebo effect.
       </p>
     </example>
     <example>
@@ -769,7 +769,7 @@
       </p>
     </example>
     <p>
-      In observational studies, blinding individuals <em>may</em> be easier than in experimental studies (Sect. <xref ref="sec-hawthorne-effect"/>). Blinding the researchers may be difficult, since the researchers need to record the value of the explanatory variable.
+      In observational studies, blinding individuals <em>may</em> be easier than in experimental studies (<xref ref="sec-hawthorne-effect"/>). Blinding the researchers may be difficult, since the researchers need to record the value of the explanatory variable.
     </p>
     <example xml:id="example-blinding-gymnasts">
       <title>Blinding: observational studies</title>
@@ -795,13 +795,13 @@
       One way to design a high-quality study is to record information about many (potential) extraneous variables. Various reasons for doing this have been given.
     </p>
     <ul>
-      <li><p>To evaluate <em>external validity</em> to determine if the sample is representative of the population (Sect. <xref ref="sec-representative-samples"/>), by comparing the sample and population.</p></li>
+      <li><p>To evaluate <em>external validity</em> to determine if the sample is representative of the population (<xref ref="sec-representative-samples"/>), by comparing the sample and population.</p></li>
       <li>
         <p>To improve <em>internal validity</em>, by helping to manage confounding:</p>
         <ul>
-          <li><p>by avoiding lurking variables (Sect. <xref ref="sec-extraneous-variables"/>).</p></li>
-          <li><p>by determining if the comparison groups are similar (Sect. <xref ref="sec-managing-confounding"/>).</p></li>
-          <li><p>by using the information in analysis (Sect. <xref ref="sec-managing-confounding"/>).</p></li>
+          <li><p>by avoiding lurking variables (<xref ref="sec-extraneous-variables"/>).</p></li>
+          <li><p>by determining if the comparison groups are similar (<xref ref="sec-managing-confounding"/>).</p></li>
+          <li><p>by using the information in analysis (<xref ref="sec-managing-confounding"/>).</p></li>
         </ul>
       </li>
     </ul>
@@ -890,13 +890,14 @@
   <section xml:id="sec-chap7-summary">
     <title>Chapter summary</title>
     <p>
-      Designing effective studies (Fig. <xref ref="fig-design-considerations"/>) requires researchers to <em>manage or minimise confounding</em> where possible, by: <em>restricting</em> the study to certain groups; <em>blocking</em> individuals into similar groups; through special <em>analysis</em> methods; and/or through <em>random allocation</em> of the units of analysis. Random allocation is only possible for experimental studies.
+      Designing effective studies (<xref ref="fig-design-considerations"/>) requires researchers to <em>manage or minimise confounding</em> where possible, by: <em>restricting</em> the study to certain groups; <em>blocking</em> individuals into similar groups; through special <em>analysis</em> methods; and/or through <em>random allocation</em> of the units of analysis. Random allocation is only possible for experimental studies.
     </p>
     <p>
       Well-designed studies manage the <em>Hawthorne effect</em> (e.g., by blinding <em>participants</em>); the <em>observer effect</em> (e.g., by blinding the <em>researchers</em>); the <em>placebo effect</em> (experimental studies only; e.g., by using controls, objective outcomes and blinding subjects); and the <em>carryover effect</em> (e.g., by using a washout, or randomly allocating the treatment order). Recording objective data is usually better than recording subjective data.
     </p>
+<p>The following short video may help explain some of these concepts: <url href ="https://www.youtube.com/channel/UCzCAw5XaQICnpeofb37Kx1w">Study design (StatsCasts)</url>.</p>
     <p>
-      Often, however, not all of these strategies can be used. For instance, people usually know they are involved in an experimental study, so the Hawthorne effect may impact conclusions. In these cases, the possible impacts should be minimised as far as possible, and then the likely impact on the conclusions discussed. The impact of these issues are often reported as <em>limitations</em><idx>Limitations</idx> (Chap. <xref ref="ch-08-research-design-limitations"/>).
+      Often, however, not all of these strategies can be used. For instance, people usually know they are involved in an experimental study, so the Hawthorne effect may impact conclusions. In these cases, the possible impacts should be minimised as far as possible, and then the likely impact on the conclusions discussed. The impact of these issues are often reported as <em>limitations</em><idx>Limitations</idx> (<xref ref="ch-08-research-design-limitations"/>).
     </p>
     <figure xml:id="fig-design-considerations">
       <caption>Design considerations for designing studies. Note: lurking variables become confounding variables when recorded in the study, and so can be managed as confounding variables. The arrows indicate the main design strategies to (perhaps partially) manage the indicated potential bias. Not all strategies are possible for every study.</caption>
@@ -938,6 +939,19 @@
         <li><p>The <em>placebo</em> effect is likely to be a big problem in this study. [False]</p></li>
         <li><p>The <em>observer</em> effect is likely to be a big problem in this study. [False]</p></li>
       </ol>
+<solution>
+      <ol>
+<li><p>TRUE</p></li>
+<li><p>TRUE</p></li>
+<li><p>FALSE</p></li>
+<li><p>TRUE</p></li>
+<li><p>TRUE</p></li>
+<li><p>FALSE</p></li>
+<li><p>FALSE</p></li>
+<li><p>FALSE</p></li>
+<li><p>FALSE</p></li>
+      </ol>
+</solution>
     </exercise>
   </reading-questions>
 
@@ -956,6 +970,15 @@
         <li><p>Experimental studies <em>must</em> use a control group.</p></li>
         <li><p>Using random samples is important in observational studies as a way to manage confounding.</p></li>
       </ol>
+<solution>
+      <ol>
+<li><p>FALSE</p></li>
+<li><p>FALSE</p></li>
+<li><p>FALSE</p></li>
+<li><p>FALSE</p></li>
+<li><p>FALSE</p></li>
+      </ol>
+</solution>
     </exercise>
     <exercise xml:id="exercise-design-true-false2">
       <p>
@@ -968,6 +991,15 @@
         <li><p>Only experimental studies can use random sampling.</p></li>
         <li><p>In experimental studies, the treatments <em>must</em> be allocated by the researchers.</p></li>
       </ol>
+<solution>
+      <ol>
+<li><p>FALSE</p></li>
+<li><p>TRUE</p></li>
+<li><p>FALSE</p></li>
+<li><p>FALSE</p></li>
+<li><p>TRUE</p></li>
+      </ol>
+</solution>
     </exercise>
     <exercise xml:id="exercise-design-exp-improve-iv">
       <p>
@@ -981,6 +1013,9 @@
         <li><p>Blinding the researchers.</p></li>
         <li><p>Using random samples.</p></li>
       </ul>
+<solution>
+      <p>All, except for using random samples.</p>
+</solution>
     </exercise>
     <exercise xml:id="exercise-design-obs-improve-iv">
       <p>
@@ -994,6 +1029,9 @@
         <li><p>Blinding the researchers.</p></li>
         <li><p>Using random samples.</p></li>
       </ul>
+<solution>
+      <p>All, except for using random samples.</p>
+</solution>
     </exercise>
     <exercise xml:id="exercise-research-design-hawthorne-effect">
       <p>
@@ -1012,6 +1050,9 @@
       <p>
         A study compared the average amount of pollen returned to the hive per bee, for two types of native Australian bees: yellow and black carpenter bees, and green carpenter bees. The researchers also recorded the size of the hive, among other variables. <em>Why</em> did they do this?
       </p>
+<solution>
+      <p>In case the size of the hive is a confounding variable.</p>
+</solution>
     </exercise>
     <exercise xml:id="exercise-research-design-septic">
       <p>
@@ -1044,6 +1085,22 @@
           </ul>
         </li>
       </ol>
+<solution>
+      <ol>
+<li><p>TRUE</p></li>
+<li><p>FALSE</p></li>
+<li><p>TRUE</p></li>
+<li><p>TRUE</p></li>
+<li><p>FALSE</p></li>
+<li><p>FALSE</p></li>
+<li><p>FALSE</p></li>
+<li><p>TRUE</p></li>
+<li><p>TRUE</p></li>
+<li><p>TRUE</p></li>
+<li><p>TRUE</p></li>
+<li><p>FALSE</p></li>
+      </ol>
+</solution>
     </exercise>
     <exercise xml:id="exercise-research-smoking-alfresco">
       <p>
@@ -1094,6 +1151,11 @@
         </li>
         <li><p>What is the purpose of blinding the participants?</p></li>
       </ol>
+<solution>
+<p>A group receiving a pill that looks just like Treatment A and B, but has no effective ingredient</p>
+<p>Blinding the participants</p>
+<p>To ensure that participants did not change their behaviour because of the treatment they were receiving</p>
+</solution>
     </exercise>
     <exercise xml:id="exercise-research-icelandic-good">
       <p>
@@ -1205,8 +1267,24 @@
         Two observers recorded the labour time by observing workers from the start to the end of the work.
       </p>
       <ol>
-        <li><p>What is the <em>explanatory variable</em>?</p></li>
-        <li><p>What is the <em>response variable</em>?</p></li>
+        <li><p>What is the <em>explanatory variable</em>?</p>
+          <ol marker="a.">
+<li><p>Floor area</p></li>
+<li><p>Hours of labour</p></li>
+<li><p>Average age of workers</p></li>
+<li><p>Average years of experience of workers</p></li>
+<li><p>Storey height</p></li>
+</ol>
+</li>
+        <li><p>What is the <em>response variable</em>?</p>
+          <ol marker="a.">
+<li><p>Floor area</p></li>
+<li><p>Hours of labour</p></li>
+<li><p>Average age of workers</p></li>
+<li><p>Average years of experience of workers</p></li>
+<li><p>Storey height</p></li>
+</ol>
+</li>
         <li>
           <p>What <em>type</em> of description is appropriate for the variable 'age of the workers'?</p>
           <ol marker="a.">
@@ -1216,12 +1294,32 @@
             <li><p>A lurking variable, since we don't know how it might be related to the response and explanatory variables.</p></li>
           </ol>
         </li>
-        <li><p>What is the most likely way to manage confounding in this study?</p></li>
+        <li><p>What is the most likely way to manage confounding in this study?</p>
+          <ol marker="a.">
+            <li><p>Restricting, the study to multi-storey buildings.</p></li>
+            <li><p>Blocking, by only studying unit blocks.</p></li>
+            <li><p>Analysis, by using other recorded variables in the analysis.</p></li>
+            <li><p>Random allocation of workers to the building projects.</p></li>
+          </ol>
+        </li>
+
         <li><p>True or false: the <em>carryover</em> effect is likely to be a big problem in this study.</p></li>
         <li><p>True or false: the <em>Hawthorne</em> effect is likely to be a big problem in this study.</p></li>
         <li><p>True or false: the <em>placebo</em> effect is likely to be a big problem in this study.</p></li>
         <li><p>True or false: <em>observer</em> effect is likely to be a big problem in this study.</p></li>
       </ol>
+<solution>
+<ol>
+<li><p>Floor area</p></li>
+<li><p>Hours of labour</p></li>
+<li><p>An extraneous variable, because it is likely to be related to the response variable only</p></li>
+<li><p>Analysis, by using other recorded variables in the analysis.</p></li>
+<li><p>FALSE</p></li>
+<li><p>TRUE</p></li>
+<li><p>FALSE</p></li>
+<li><p>FALSE</p></li>
+</ol>
+</solution>
     </exercise>
   </exercises>
 </chapter>
