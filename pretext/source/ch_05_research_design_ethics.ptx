@@ -39,9 +39,7 @@
           <li><p>in the chemical sciences, <m>331</m> retractions were reported in 2017 and 2018 due to ethical issues, such as falsification of data<idx>Data falsification</idx> and plagiarism <xref ref="coudert2019correcting"/>.<idx>Plagiarism</idx></p></li>
         </ul>
     </example>
-
   </section>
-
 
   <section xml:id="sec-common-ethical-issues">
     <title>Ethical issues in research design</title>
@@ -71,7 +69,7 @@
         <li><p><em>Social risks</em>: social harm or discomfort (to researchers, participants or bystanders) should be avoided or minimised.</p></li>
         <li><p><em>Storage of data</em>: data should be stored securely, kept for the required amount of time, then (if appropriate) securely disposed.</p></li>
       </ul>
-    </list>
+    
 
     <example xml:id="example-ethics-tuskegee">
       <title>Poor ethics</title>
@@ -153,7 +151,7 @@
         <li><p>social risks.</p></li>
         <li><p>storage of data.</p></li>
       </ul>
-    </list>
+    
 
   </section>
 
