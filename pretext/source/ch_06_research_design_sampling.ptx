@@ -75,12 +75,11 @@
 
     <p>Only studying one sample out of countless possible samples raises questions:</p>
 
-    <list><title/>
+   
       <ul>
         <li><p><em>which</em> individuals should be included in the sample to be studied?</p></li>
         <li><p><em>how many</em> individuals should be included in the sample to be studied?</p></li>
       </ul>
-    </list>
 
     <p>
       The first issue is studied in this chapter.
@@ -118,6 +117,10 @@
         This is a simple example of <em>sampling variation</em>.<idx>Sampling variation</idx>
       </p>
     </example>
+    <figure>
+      <image source="images/DealCards.gif" width="70%">
+      </image>
+    </figure>
 
   </section>
 
@@ -148,12 +151,11 @@
 
     <p>Using this language:</p>
 
-    <list><title/>
+   
       <ul>
         <li><p>the sampling <em>method</em> (i.e., <em>how</em> the sample is selected) impacts the <em>accuracy</em> of the sample estimate (i.e., <em>external validity</em>).</p></li>
         <li><p>the <em>size</em> of the sample impacts the <em>precision</em> of the sample estimate (i.e., <em>internal</em> validity).</p></li>
       </ul>
-    </list>
 
     <p>
       Large samples are more likely to produce <em>precise</em> estimates, but they may or may not be accurate estimates.
@@ -217,13 +219,12 @@
       <idx><h>Sampling</h><h>random</h></idx>
 
       <p>In a <em>random sample</em>, both of these statements are true:</p>
-      <list><title/>
+     
         <ol>
           <li><p>each individual in the population can be selected.</p></li>
           <li><p>each individual is chosen on the basis of <em>impersonal</em> chance (such as using a random number generator, or a table of random numbers).</p></li>
         </ol>
-      </list>
-
+  
       <p>Some examples of random sampling methods appear in <xref ref="tab-types-of-random-sampling"/>, and are explained further in <xref ref="sec-random-sampling-methods"/>.</p>
 
       <definition xml:id="def-random-sampling">
@@ -298,7 +299,7 @@
 
       <p>A <em>non-random</em> sample is selected using personal input from the researchers. Examples include:</p>
 
-      <list><title/>
+     
         <ul>
           <li><p><em>judgement samples</em>.<idx><h>Sampling</h><h>non-random</h><h>judgement</h></idx>
             Individuals are selected based on the researchers' judgement (possibly unconsciously), perhaps because the individuals are (or may appear) agreeable, supportive, easily accessible, or helpful.
@@ -312,8 +313,7 @@
           <li><p><em>cherry-picking</em>.<idx><h>Sampling</h><h>non-random</h><h>cherry-picking</h></idx>
             Individuals are specifically chosen to reach the conclusion that the researchers want.</p></li>
         </ul>
-      </list>
-
+  
       <p>
         In non-random sampling, the individuals <em>in</em> the study are probably different from those <em>not in</em> the study.
         That is, <em>non-random samples are not likely to be externally valid</em>.<idx>External validity</idx>
@@ -358,7 +358,7 @@
         Selecting a simple random sample requires a list of all members of the population, called the <em>sampling frame</em>, from which to select a sample.
         Obtaining the sampling frame is often difficult or impossible, and so finding a simple random sample is also difficult.
         For example, finding a simple random sample of wombats would require having a list and location of all wombats.
-        This is absurd; other random sampling methods, like special ecological sampling methods (e.g., <xref ref="manly2014introduction"/>), would be used instead.
+        This is absurd; other random sampling methods, like <url href = "http://www.countrysideinfo.co.uk/what_method.htm">special ecological sampling methods</url> (e.g., <xref ref="manly2014introduction"/>), would be used instead.
       </p>
 
       <definition xml:id="def-sampling-frame">
@@ -370,7 +370,6 @@
 
       <p>
         Selecting a simple random sample from the <em>sampling frame</em> can be performed using <em>random numbers</em> (e.g., using random number tables, or websites like <url href="https://www.random.org" visual="www.random.org">random.org</url>).
-        Other random sampling methods avoid the need for a sampling frame, but still use randomness rather than human choice.
       </p>
 
       <warning xml:id="warn-book-assumes-srs">
@@ -395,7 +394,7 @@
         <p>
           A simple random sample could be found using the course enrolment list, by first placing all <m>441</m> student names into rows of a spreadsheet<idx><h>Computers and software</h><h>spreadsheets</h></idx> (ordered by name, student ID, or any way).
           Then, using random numbers, <m>40</m> rows are selected at random (without repeating numbers) between <m>1</m> and <m>441</m> inclusive.
-          For instance, the first few random numbers might be: <c>410</c>, <c>215</c>, <c>384</c>, <c>158</c>, <c>296</c>.
+          For instance, when I used <url xref="random.org">random.org</url> the first few random numbers might be: <c>410</c>, <c>215</c>, <c>384</c>, <c>158</c>, <c>296</c>.
         </p>
         <p>
           Every student chosen using this method becomes part of the study.
@@ -403,6 +402,10 @@
           By chance, the sample comprises <m>15</m> younger students and <m>25</m> older students.
         </p>
       </example>
+    <figure>
+      <image source="images/unnamed-chunk-4.gif" width="70%">
+      </image>
+    </figure>
 
     </subsection>
 
@@ -428,6 +431,11 @@
           By chance, the sample comprises <m>17</m> younger students and <m>23</m> older students.
         </p>
       </example>
+
+    <figure>
+      <image source="images/unnamed-chunk-5.gif" width="70%">
+      </image>
+    </figure>
 
       <warning xml:id="warn-systematic-pattern">
         <p>
@@ -472,7 +480,18 @@
           This is a <em>proportional</em> stratified sample.<idx><h>Sampling</h><h>proportional</h></idx>
         </p>
       </example>
-
+    <figure>
+      <image source="images/unnamed-chunk-6.gif" width="70%">
+      </image>
+    </figure>
+<p>
+Similarly, the second animation below shows how a stratified random sample of size 
+<m>40</m> might be selected, by randomly selecting <m>27</m> younger and <m>13</m>
+older students.</p>
+    <figure>
+      <image source="images/unnamed-chunk-7.gif" width="70%">
+      </image>
+    </figure>
     </subsection>
 
 
@@ -493,7 +512,10 @@
           By chance, the chosen classes produce a sample size of <m>n = 47</m> (<m>31</m> younger; <m>16</m> older).
         </p>
       </example>
-
+    <figure>
+      <image source="images/unnamed-chunk-8.gif" width="70%">
+      </image>
+    </figure>
     </subsection>
 
 
@@ -513,19 +535,22 @@
           The sample size is <m>10\times 4 = 40</m>, comprising (by chance) <m>24</m> younger students and <m>16</m> older students.
         </p>
       </example>
+    <figure>
+      <image source="images/unnamed-chunk-9.gif" width="70%">
+      </image>
+    </figure>
 
       <example xml:id="example-multistage-national">
         <title>Multi-stage sampling</title>
         <p>Multi-stage sampling is often used by national statistical agencies. For example, to obtain a multi-stage random sample from a country:</p>
-        <list><title/>
+       
           <ul>
             <li><p><em>Stage 1</em>: randomly select some cities in the nation.</p></li>
             <li><p><em>Stage 2</em>: randomly select some suburbs in these chosen cities.</p></li>
             <li><p><em>Stage 3</em>: randomly select some streets in these chosen suburbs.</p></li>
             <li><p><em>Stage 4</em>: randomly select some houses in these chosen streets.</p></li>
           </ul>
-        </list>
-        <p>This is cheaper than simple random sampling, as data collectors can be deployed in a small number of cities (only those chosen in Stage 1).</p>
+            <p>This is cheaper than simple random sampling, as data collectors can be deployed in a small number of cities (only those chosen in Stage 1).</p>
       </example>
 
     </subsection>
@@ -542,7 +567,7 @@
 
       <table xml:id="tab-samples-summary">
         <title>A summary of the various random samples selected using different random sampling methods. In the population, <m>66.7</m>% of students are younger students. Repeating any random sampling method is likely to produce a different sample each time.</title>
-        <tabular halign="center" top="medium" bottom="medium">
+        <tabular halign="center">
           <col halign="left"/>
           <col/>
           <col/>
@@ -683,12 +708,12 @@
       </p>
     </example>
 
-    <note xml:id="note-diet-sample">
+    <example>
       <p>In a study of diets of children at child-care centres, researchers used samples in 2010 and 2016, described as follows <xref ref="larson2019staff"/> (p. 336):</p>
       <blockquote>
         <p>In 2010, a stratified random sampling procedure was used to select representative cross-sections of providers working in licensed center-based programs and licensed providers of family home-based care from publicly available lists. [<ellipsis/>] Additional participants were also recruited in 2016 using a combination of stratified random and open, convenience-based sampling.</p>
       </blockquote>
-    </note>
+    </example>
 
     <p>
       Sometimes, practicalities dictate how the sample is obtained, which may result in a non-random sample.
@@ -720,14 +745,13 @@
         For the typing study in <xref ref="example-typing"/>, only selecting students who attend the gym, or only students who are at a certain café, is unlikely to be somewhat representative of the student population.
         Instead, the researchers could approach students at different days, times and locations:
       </p>
-      <list><title/>
+     
         <ul>
           <li><p>at the café on Monday at <m>8</m>am.</p></li>
           <li><p>at the gym on Tuesday at <m>11</m>:<m>30</m>am.</p></li>
           <li><p>at the library on Thursdays at <m>2</m>pm.</p></li>
         </ul>
-      </list>
-      <p>
+        <p>
         <em>This is not a random sample</em>, but should contain a variety of students.
         Ideally, <em>students would not be included more than once in the sample</em>, though this is often difficult to ensure.
         The students <em>in</em> the sample are probably somewhat similar to those <em>not</em> in the sample in terms of average typing speeds (there is no obvious reason why they would not be), but we cannot be sure.
@@ -874,6 +898,13 @@
         <li><p>A <em>large</em> sample is <em>always</em> better than a <em>random</em> sample.</p></li>
         <li><p><em>Convenience</em> sampling and <em>judgement</em> sampling are examples of non-random sampling.</p></li>
       </ol>
+<solution>
+      <ol>
+<li><p>FALSE</p></li>
+<li><p>FALSE</p></li>
+<li><p>TRUE</p></li>
+      </ol>
+</solution>
     </exercise>
 
   </reading-questions>
@@ -887,27 +918,31 @@
 
     <exercise xml:id="exercise-sampling-advantage-random">
       <p>What is the main advantage of using a <em>random</em> sample?</p>
-      <list><title/>
+     
         <ol marker="a">
           <li><p>It is easier.</p></li>
           <li><p>It is more likely to produce an experimental study.</p></li>
           <li><p>It is more likely to produce an externally-valid study.</p></li>
           <li><p>It is more likely to produce precise estimates.</p></li>
         </ol>
-      </list>
-    </exercise>
+<solution>
+<p>It is more likely to produce an externally-valid study.</p>
+</solution>
+      </exercise>
 
     <exercise xml:id="exercise-sampling-advantage-large">
       <p>What is the main advantage of using a <em>large</em> sample?</p>
-      <list><title/>
+     
         <ol marker="a">
           <li><p>It is easier.</p></li>
           <li><p>It is more likely to produce an experimental study.</p></li>
           <li><p>It is more likely to produce an externally-valid study.</p></li>
           <li><p>It is more likely to produce precise estimates.</p></li>
         </ol>
-      </list>
-    </exercise>
+<solution>
+<p>It is more likely to produce precise estimates.</p>
+</solution>
+      </exercise>
 
     <exercise xml:id="exercise-sampling-over-under-a">
       <p>
@@ -1007,6 +1042,13 @@
         <li><p>The study is likely to have high <em>external</em> validity.</p></li>
         <li><p>The sample size is too small for the study results to provide useful information.</p></li>
       </ol>
+<solution>
+      <ol>
+<li><p>TRUE</p></li>
+<li><p>FALSE</p></li>
+<li><p>FALSE</p></li>
+      </ol>
+</solution>
     </exercise>
 
     <exercise xml:id="exercise-sampling-forest">
