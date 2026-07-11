@@ -28,13 +28,12 @@
 
     <p>Different types of studies can be used to collect the data needed to answer RQs:</p>
 
-    <list><title/>
+
       <ul>
         <li><p><em>descriptive</em> studies (<xref ref="sec-descriptive-studies"/>) answer descriptive RQs.</p></li>
         <li><p><em>observational</em> studies (<xref ref="sec-observational-studies"/>) answer RQs with an explanatory variable, but <em>no intervention</em>.<idx>Intervention</idx></p></li>
         <li><p><em>experimental</em> studies (<xref ref="sec-experimental-studies"/>) answer RQs with an explanatory variable and <em>an intervention</em>.</p></li>
       </ul>
-    </list>
 
     <p>Observational and experimental studies are sometimes collectively called <em>analytical studies</em>.<idx><h>Study types</h><h>analytical</h></idx></p>
 
@@ -220,7 +219,7 @@
 
     <table xml:id="tab-experimental-study-designs">
       <title>Comparing analytical designs with a between-individuals comparison.</title>
-      <tabular halign="center" top="medium" bottom="medium">
+      <tabular halign="center">
         <col halign="right"/>
         <col/>
         <col/>
@@ -266,13 +265,12 @@
         <title>True experiment</title>
         <statement>
           <p>In a <em>true experiment</em>, the researchers:</p>
-          <list><title/>
+      
             <ol>
               <li><p>allocate treatments to groups of individuals (i.e., allocate the values of the explanatory variable to the individuals), <em>and</em></p></li>
               <li><p>determine who or what individuals are in those groups.</p></li>
             </ol>
-          </list>
-          <p>While the steps may not happen <em>explicitly</em>, they happen <em>conceptually</em>.</p>
+                <p>While the steps may not happen <em>explicitly</em>, they happen <em>conceptually</em>.</p>
         </statement>
       </definition>
 
@@ -312,13 +310,12 @@
         <title>Quasi-experiment</title>
         <statement>
           <p>In a <em>quasi-experiment</em>, the researchers:</p>
-          <list><title/>
+      
             <ol>
               <li><p>allocate treatments to groups of individuals (i.e., allocate the values of the explanatory variable to the individuals), but</p></li>
               <li><p>do <em>not</em> determine who or what individuals are in those groups.</p></li>
             </ol>
-          </list>
-        </statement>
+              </statement>
       </definition>
 
       <example xml:id="example-quasi-echinacea">
@@ -381,7 +378,14 @@
         Other studies <xref ref="yap2021autism"/> suggest that people on the autism spectrum are more likely to be <q>picky eaters</q>, which contributes to the differences in gut bacteria.
       </p>
     </example>
-
+<p>
+The animation below compares observational, quasi-experimental and true experimental designs.
+</p>
+    <figure>
+<caption>The three main research designs.</caption>
+<image source="images/StudyDesignsMovie.gif" width="75%">
+      </image>
+    </figure>
   </section>
 
 
@@ -394,7 +398,7 @@
       Analytical research studies (observational; experimental) can be classified by their <em>directionality</em> (<xref ref="tab-types-obs-studies"/>).<idx><h>Study types</h><h>analytical</h></idx>
     </p>
 
-    <list><title/>
+
       <ul>
         <li><p><em>Forward direction</em> (<xref ref="sec-forward-studies"/>):
           the values of the explanatory variable are obtained, and the study determines what values of the response variable occur in the future.
@@ -404,7 +408,6 @@
         <li><p><em>No direction</em> (<xref ref="sec-nondirectional-studies"/>):
           the values of the response and explanatory variables are obtained at the same time.</p></li>
       </ul>
-    </list>
 
     <p>
       Directionality is important for understanding cause-and-effect relationships.
@@ -414,7 +417,7 @@
 
     <table xml:id="tab-types-obs-studies">
       <title>Classifying observational studies. (Experimental studies have a forward direction.)</title>
-      <tabular halign="center" top="medium" bottom="medium">
+      <tabular halign="center">
         <col halign="right"/>
         <col/>
         <col/>
@@ -479,14 +482,13 @@
         Forward-directional observational studies:
       </p>
 
-      <list><title/>
+  
         <ul>
           <li><p>may add support to cause-and-effect conclusions, since the comparison occurs <em>before</em> the outcome (only well-designed experimental studies can establish cause-and-effect).</p></li>
           <li><p>can examine many outcomes in one study, since the outcome(s) occur in the future.</p></li>
           <li><p>can be problematic for rare outcomes, as the outcome of interest may never (or rarely) appear in the future.</p></li>
         </ul>
-      </list>
-
+  
       <example xml:id="example-forward-ngt">
         <title>Forward study</title>
         <p>
@@ -513,7 +515,7 @@
         Case-control studies:
       </p>
 
-      <list><title/>
+  
         <ul>
           <li><p>only allow one outcome to be studied, since individuals are chosen to be in the study based on the value of the response variable of interest.</p></li>
           <li><p>are useful for rare outcomes, as the researchers can purposely select large numbers with the rare outcome of interest.</p></li>
@@ -521,8 +523,7 @@
           <li><p>may suffer from <em>selection bias</em> (<xref ref="sec-selection-bias"/>), as researchers purposively try to locate individuals with a rare outcome.<idx><h>Bias</h><h>selection</h></idx></p></li>
           <li><p>may suffer from <em>recall bias</em> (<xref ref="sec-biases"/>) when the individuals are people: accurately recalling the past can be unreliable.<idx><h>Bias</h><h>recall</h></idx></p></li>
         </ul>
-      </list>
-
+  
       <example xml:id="example-backward-smnd">
         <title>Backwards study</title>
         <p>
@@ -546,15 +547,14 @@
         Cross-sectional studies:
       </p>
 
-      <list><title/>
+  
         <ul>
           <li><p>are good for finding associations between variables (and these associations may or may not be causation).</p></li>
           <li><p>are generally quicker and cheaper to conduct than other types of studies.</p></li>
           <li><p>are not useful for studying rare outcomes.</p></li>
           <li><p>do not effectively eliminate other explanations for the relationship between the response and explanatory variables (<em>confounding</em>; <xref ref="def-confounding"/>).</p></li>
         </ul>
-      </list>
-
+  
       <example xml:id="example-nondirectional-food">
         <title>Non-directional study</title>
         <p>
@@ -594,24 +594,22 @@
 
     <p>Designing a study to maximise <em>internal validity</em> means:</p>
 
-    <list><title/>
+
       <ul>
         <li><p>identifying <em>what else</em> might influence the values of the response variable, apart from the explanatory variable (<xref ref="ch-03-research-design-overview"/>).</p></li>
         <li><p>designing the study to be <em>effective</em> (<xref ref="ch-07-research-design-internal"/>).</p></li>
       </ul>
-    </list>
 
     <p>In general, experimental studies have better internal validity than observational studies.</p>
 
     <p>Designing a study to maximise <em>external validity</em> means:</p>
 
-    <list><title/>
+
       <ul>
         <li><p>identifying who or what to study, since the whole population cannot be studied (<xref ref="ch-06-research-design-sampling"/>).</p></li>
         <li><p>determining <em>how many</em> individuals to study.
           (We need to learn more before we can answer this critical question in <xref ref="ch-32-sample-size"/>.)</p></li>
       </ul>
-    </list>
 
     <p>
       Details of the data <em>collection</em> (<xref ref="ch-09-collect"/>) and <em>ethical</em> issues (<xref ref="ch-05-research-design-ethics"/>) also form part of the study design.
@@ -664,7 +662,16 @@
         <li><p>True experiments generally have a higher internal validity than observational studies.</p></li>
         <li><p>Observational studies generally have a higher external validity than quasi-experimental studies.</p></li>
       </ol>
-    </exercise>
+<solution>
+<ol>
+<li><p>TRUE</p></li>
+<li><p>TRUE</p></li>
+<li><p>TRUE</p></li>
+<li><p>TRUE</p></li>
+<li><p>FALSE</p></li>
+</ol>
+</solution>
+</exercise>
 
   </reading-questions>
 
