@@ -12,6 +12,14 @@
     </ul>
   </objectives>
 
+  <sidebyside width="65%">
+    <image source="generated/SixSteps-ch32.png">
+      <description>
+        <p>A diagram showing the six steps of research, arranged in a cycle: Ask, Design, Collect, Classify and summarise, Analyse, Report. Step 5 (<em>Analyse</em>) is highlighted, captioned <q>Estimating the sample size</q>.</p>
+      </description>
+    </image>
+  </sidebyside>
+
   <!-- Rmd top-level chapter heading label {#EstimatingSampleSize} is referenced from
        other chapters (e.g. ch_09) as Sect. sec-estimating-sample-size; since the
        <chapter> xml:id must stay ch-32-sample-size for the main.ptx xi:include wiring,

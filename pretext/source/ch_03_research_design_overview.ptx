@@ -5,13 +5,22 @@
   <idx>Research design</idx>
 
   <objectives xml:id="objectives-ch03">
-    <introduction><p>In this chapter, you will learn to:</p></introduction>
+    <introduction><p>So far, you have learnt to ask an RQ. <alert>In this chapter</alert>, you will learn why research design is important, by learning to: You will learn to:</p></introduction>
     <ul>
-      <li><p>distinguish between internal and external validity.</p></li>
-      <li><p>identify extraneous, confounding, control, and lurking variables.</p></li>
-      <li><p>explain how variation in the response variable arises from the explanatory variable, extraneous variables, and chance.</p></li>
+      <li><p>identify reasons why the value of the response variable varies.</p></li>
+      <li><p>identify and distinguish extraneous, confounding and lurking variables.</p></li>
+      <li><p>understand how chance impacts the values of the response variable.</p></li>
+      <li><p>explain external and internal validity.</p></li>
     </ul>
   </objectives>
+
+  <sidebyside width="65%">
+    <image source="generated/SixSteps-ch03.png">
+      <description>
+        <p>A diagram showing the six steps of research, arranged in a cycle: Ask, Design, Collect, Classify and summarise, Analyse, Report. Step 2 (<em>Design</em>) is highlighted, captioned <q>Design: overview of internal validity</q>.</p>
+      </description>
+    </image>
+  </sidebyside>
 
 
   <section xml:id="sec-intro-internal-validity">
@@ -272,7 +281,6 @@
       <p>The absence of rain may influence people to be more likely to wear sunglasses. Hence, <q>whether it is raining</q> is very likely an extraneous variable.</p>
       <p>To determine if it is a <em>confounding</em> variable, we also ask:</p>
 </li>
-        <ol>
           <li><p>Is one sex (the explanatory variable) more likely to be walking in the park depending on whether it is raining?</p></li>
         </ol>
       <p>

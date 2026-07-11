@@ -23,6 +23,14 @@
     </ul>
   </objectives>
 
+  <sidebyside width="65%">
+    <image source="generated/SixSteps-ch31.png">
+      <description>
+        <p>A diagram showing the six steps of research, arranged in a cycle: Ask, Design, Collect, Classify and summarise, Analyse, Report. Step 5 (<em>Analyse</em>) is highlighted, captioned <q>CIs and tests: compare odds, proportions</q>.</p>
+      </description>
+    </image>
+  </sidebyside>
+
   <section xml:id="sec-meals-on-campus">
     <title>Introduction: meals on-campus</title>
     <image source="Illustrations/pexels-startup-stock-photos-7096.jpg" width="25%">
