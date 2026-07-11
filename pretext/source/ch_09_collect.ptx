@@ -38,7 +38,7 @@
     <idx>Protocol</idx>
     <idx>Data collection</idx>
     <p>
-      <em>Before</em> collecting the data, a plan should be established and documented that explains exactly <em>how</em> the data will be obtained, which will include <em>operational definitions</em> (Sect. <xref ref="sec-operation-definitions"/>).<idx><h>Definitions</h><h>operational</h></idx> This plan is called a <em>protocol</em>, and allows results to be confirmed and compared.
+      <em>Before</em> collecting the data, a plan should be established and documented that explains exactly <em>how</em> the data will be obtained, which will include <em>operational definitions</em> (<xref ref="sec-operation-definitions"/>).<idx><h>Definitions</h><h>operational</h></idx> This plan is called a <em>protocol</em>, and allows results to be confirmed and compared.
     </p>
     <definition xml:id="def-protocol">
       <title>Protocol</title>
@@ -111,7 +111,7 @@
     <ul>
       <li><p>determine the feasibility of the data collection protocol.</p></li>
       <li><p>identify unforeseen challenges.</p></li>
-      <li><p>obtain data to determine appropriate sample sizes (Sect. <xref ref="sec-estimating-sample-size"/>).</p></li>
+      <li><p>obtain data to determine appropriate sample sizes (<xref ref="sec-estimating-sample-size"/>).</p></li>
       <li><p>identify ways to potentially save time and money.</p></li>
     </ul>
     <p>
@@ -129,7 +129,7 @@
       <description><p>Image.</p></description>
     </image>
     <p>
-      The data can be collected once the protocol<idx>Protocol</idx> has been finalised. Protocols ensure studies are reproducible (Sect. <xref ref="sec-reproducible-research"/>),<idx><h>Research</h><h>reproducibility</h></idx> so others can confirm or compare results, and others can understand exactly what was done, and how. Protocols should indicate how design aspects (such as blinding the individuals, random allocation of treatments, etc.) will happen.<idx>Research design</idx> The final <em>protocol</em>, without pedantic detail, should be reported. Diagrams can be useful to support explanations. All studies should have a well-established protocol for describing how the study was done.
+      The data can be collected once the protocol<idx>Protocol</idx> has been finalised. Protocols ensure studies are reproducible (<xref ref="sec-reproducible-research"/>),<idx><h>Research</h><h>reproducibility</h></idx> so others can confirm or compare results, and others can understand exactly what was done, and how. Protocols should indicate how design aspects (such as blinding the individuals, random allocation of treatments, etc.) will happen.<idx>Research design</idx> The final <em>protocol</em>, without pedantic detail, should be reported. Diagrams can be useful to support explanations. All studies should have a well-established protocol for describing how the study was done.
     </p>
     <example>
       <p>
@@ -230,7 +230,7 @@
     <example xml:id="example-question-wording">
       <title>Question wording</title>
       <p>
-        Question <em>wording</em> can be important. In the 2014 <em>General Social Survey</em> (https://gss.norc.org), when white Americans were asked for their opinion of the amount America spends on <em>welfare</em>, <m>58</m>% of respondents answered 'Too much'. However, when white Americans were asked for their opinion of the amount America spends on <em>assistance to the poor</em>, only <m>16</m>% of respondents answered 'Too much' <xref ref="PovertyWording"/>.
+        Question <em>wording</em> can be important. In the 2014 <em>General Social Survey</em> (<url href = "https://gss.norc.org">https://gss.norc.org</url>), when white Americans were asked for their opinion of the amount America spends on <em>welfare</em>, <m>58</m>% of respondents answered 'Too much'. However, when white Americans were asked for their opinion of the amount America spends on <em>assistance to the poor</em>, only <m>16</m>% of respondents answered 'Too much' <xref ref="PovertyWording"/>.
       </p>
     </example>
     <example xml:id="example-mutually-exclusive-qns">
@@ -259,8 +259,8 @@
       Using questionnaires presents myriad challenges.
     </p>
     <ul>
-      <li><p><em>Non-response bias</em> (Sect. <xref ref="sec-selection-bias"/>):<idx><h>Bias</h><h>selection</h></idx> non-response bias is common with questionnaires, as they are often used with voluntary-response samples (Sect. <xref ref="sec-non-random-samples"/>).<idx><h>Sampling</h><h>non-random!voluntary</h></idx> The people who <em>do not</em> respond to the survey may be different from those who <em>do</em> respond.</p></li>
-      <li><p><em>Response bias</em> (Sect. <xref ref="sec-selection-bias"/>):<idx><h>Bias</h><h>response</h></idx> people do not always answer truthfully; for example, what people <em>say</em> may not correspond with what people <em>do</em> (Example <xref ref="example-ecological-cups"/>). Sometimes this is unintentional (e.g., poor questions wording), due to embarrassment, or because questions are controversial. Sometimes, respondents repeatedly provide the same answer (without reading the question) to a series of multiple-choice questions (i.e., always select 'Always').</p></li>
+      <li><p><em>Non-response bias</em> (<xref ref="sec-selection-bias"/>):<idx><h>Bias</h><h>selection</h></idx> non-response bias is common with questionnaires, as they are often used with voluntary-response samples (<xref ref="sec-non-random-samples"/>).<idx><h>Sampling</h><h>non-random!voluntary</h></idx> The people who <em>do not</em> respond to the survey may be different from those who <em>do</em> respond.</p></li>
+      <li><p><em>Response bias</em> (<xref ref="sec-selection-bias"/>):<idx><h>Bias</h><h>response</h></idx> people do not always answer truthfully; for example, what people <em>say</em> may not correspond with what people <em>do</em> (<xref ref="example-ecological-cups"/>). Sometimes this is unintentional (e.g., poor questions wording), due to embarrassment, or because questions are controversial. Sometimes, respondents repeatedly provide the same answer (without reading the question) to a series of multiple-choice questions (i.e., always select 'Always').</p></li>
       <li><p><em>Recall bias</em>:<idx><h>Bias</h><h>recall</h></idx> people may not be able to accurately recall past events clearly, or recall when they happened.</p></li>
       <li><p><em>Question order</em>: the order of the questions can influence the responses.<idx><h>Bias</h><h>question order</h></idx></p></li>
       <li><p><em>Interpretation</em>: phrases and words such as 'Sometimes' and 'Somewhat disagree' may have different meanings to different people.<idx><h>Bias</h><h>interpretation</h></idx></p></li>
@@ -297,10 +297,10 @@
     <example xml:id="example-open-closed-questions-software">
       <title>Open and closed questions: software</title>
       <p>
-        In Example <xref ref="example-open-closed-questions"/>, three questionnaire questions are given that were asked of German students about microplastics <xref ref="raab2021conceptions"/>. Some (artificial) data are shown entered in Fig. <xref ref="fig-microplasticsjamovi"/>.
+        In <xref ref="example-open-closed-questions"/>, three questionnaire questions are given that were asked of German students about microplastics <xref ref="raab2021conceptions"/>. Some (artificial) data are shown entered in <xref ref="fig-microplasticsjamovi"/>.
       </p>
       <p>
-        The first question requires open-ended, text-based answers (<c>Sources</c>).<idx><h>Questionnaire</h><h>questions!open-ended</h></idx> For the second (closed) question, students could select <em>multiple</em> options, so each option needs one column in the data worksheet (<c>WhereSeas</c> to <c>WhereGroundwater</c>).<idx><h>Questionnaire</h><h>questions!open-ended</h></idx><idx><h>Questionnaire</h><h>questions!closed</h></idx> The third (closed) question required students to select <em>one</em> option from a given list, so one column (<c>Danger</c>) is needed to record responses. As usual (Sect. <xref ref="sec-data-entry"/>), each row represents one unit of analysis (student).
+        The first question requires open-ended, text-based answers (<c>Sources</c>).<idx><h>Questionnaire</h><h>questions!open-ended</h></idx> For the second (closed) question, students could select <em>multiple</em> options, so each option needs one column in the data worksheet (<c>WhereSeas</c> to <c>WhereGroundwater</c>).<idx><h>Questionnaire</h><h>questions!open-ended</h></idx><idx><h>Questionnaire</h><h>questions!closed</h></idx> The third (closed) question required students to select <em>one</em> option from a given list, so one column (<c>Danger</c>) is needed to record responses. As usual (<xref ref="sec-data-entry"/>), each row represents one unit of analysis (student).
       </p>
     </example>
     <figure xml:id="fig-microplasticsjamovi">
@@ -327,9 +327,12 @@
       <ol>
         <li><p>It is double-barrelled.</p></li>
         <li><p>It is a leading question.</p></li>
-        <li><p>It uses language that may not be understood. [Correct]</p></li>
+        <li><p>It uses language that may not be understood.</p></li>
         <li><p>It is ambiguous.</p></li>
       </ol>
+<solution>
+<p>It uses language that may not be understood.</p>
+</solution>
     </exercise>
     <exercise>
       <p>What is the biggest problem with this question: 'Do you spend too much time connected to the internet?'</p>
@@ -337,24 +340,36 @@
         <li><p>It is double-barrelled.</p></li>
         <li><p>It is a leading question.</p></li>
         <li><p>It uses language that may not be understood.</p></li>
-        <li><p>It is ambiguous. [Correct]</p></li>
+        <li><p>It is ambiguous.</p></li>
       </ol>
+<solution>
+<p>It is ambiguous.</p>
+</solution>
     </exercise>
     <exercise>
       <p>What is the biggest problem with this question: 'Do you eat fruits and vegetables?'</p>
       <ol>
-        <li><p>It is double-barrelled. [Correct]</p></li>
+        <li><p>It is double-barrelled.</p></li>
         <li><p>It is a leading question.</p></li>
         <li><p>It uses language that may not be understood.</p></li>
         <li><p>It is ambiguous.</p></li>
       </ol>
+<solution>
+<p>It is double-barrelled.</p>
+</solution>
     </exercise>
     <exercise>
-      <p><em>True</em> or <em>false</em>: A well-defined protocol allows the researchers to make the study externally valid. [False]</p>
-    </exercise>
+      <p><em>True</em> or <em>false</em>: A well-defined protocol allows the researchers to make the study externally valid.</p>
+<solution>
+<p>FALSE.</p>
+</solution>
+</exercise>
     <exercise>
-      <p><em>True</em> or <em>false</em>: This question is likely to be a <em>leading</em> question: 'Do you support a ban on drinks sold in unrecyclable plastic bottles?' [True]</p>
-    </exercise>
+      <p><em>True</em> or <em>false</em>: This question is likely to be a <em>leading</em> question: 'Do you support a ban on drinks sold in unrecyclable plastic bottles?'</p>
+<solution>
+<p>TRUE.</p>
+</solution>
+</exercise>
   </reading-questions>
 
   <exercises xml:id="sec-collection-exercises">
