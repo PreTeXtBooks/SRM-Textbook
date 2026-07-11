@@ -24,15 +24,15 @@
   <section xml:id="sec-chap9-intro">
     <title>Introduction</title>
     <p>
-      The type of study (Chap. <xref ref="sec-research-design"/>) and the research design determine how the results of the study should be interpreted. Ideally, all studies would be perfectly externally and internally valid; in practice this is very difficult to achieve. Practically <em>every</em> study has limitations. The results of a study should be interpreted in light of these limitations. Limitations are not necessarily <em>problems</em>.
+      The type of study (<xref ref="sec-research-design"/>) and the research design determine how the results of the study should be interpreted. Ideally, all studies would be perfectly externally and internally valid; in practice this is very difficult to achieve. Practically <em>every</em> study has limitations. The results of a study should be interpreted in light of these limitations. Limitations are not necessarily <em>problems</em>.
     </p>
     <p>
       Limitations generally can be discussed through three components.
     </p>
     <ul>
-      <li><p><em>Internal validity</em> (Sect. <xref ref="sec-intro-internal-validity"/>): discuss any limitations to internal validity due to the research design (such as identifying possible confounding variables). This is related to the <em>effectiveness</em> of the study within the sample (Sect. <xref ref="sec-interpret-study-design"/>).</p></li>
-      <li><p><em>External validity</em> (Sect. <xref ref="sec-intro-external-validity"/>): discuss how well the sample represents the intended population. This is related to the <em>generalisability</em> of the study to the intended population (Sect. <xref ref="sec-interpret-generalisability"/>).</p></li>
-      <li><p><em>Ecological validity</em>: discuss how well the study methods, materials and context approximate the real situation of interest. This is related to the <em>practicality</em> of the results to real life (Sect. <xref ref="sec-interpret-applicability"/>).</p></li>
+      <li><p><em>Internal validity</em> (<xref ref="sec-intro-internal-validity"/>): discuss any limitations to internal validity due to the research design (such as identifying possible confounding variables). This is related to the <em>effectiveness</em> of the study within the sample (<xref ref="sec-interpret-study-design"/>).</p></li>
+      <li><p><em>External validity</em> (<xref ref="sec-intro-external-validity"/>): discuss how well the sample represents the intended population. This is related to the <em>generalisability</em> of the study to the intended population (<xref ref="sec-interpret-generalisability"/>).</p></li>
+      <li><p><em>Ecological validity</em>: discuss how well the study methods, materials and context approximate the real situation of interest. This is related to the <em>practicality</em> of the results to real life (<xref ref="sec-interpret-applicability"/>).</p></li>
     </ul>
     <p>
       All these issues should be addressed when considering the study limitations.
@@ -65,7 +65,7 @@
     <title>Limitations related to internal validity</title>
     <idx><h>Limitations</h><h>research design (effectiveness)</h></idx>
     <p>
-      Internal validity refers to the extent to which a cause-and-effect relationship can be established in a study, eliminating other possible explanations (Sect. <xref ref="sec-intro-internal-validity"/>); that is, the <em>effectiveness</em> of the study in the sample. A discussion of the limitations of internal validity should cover, as appropriate: possible confounding and lurking variables; the impact of the Hawthorne, observer, placebo and carryover effects; the impact of any other design decisions.
+      Internal validity refers to the extent to which a cause-and-effect relationship can be established in a study, eliminating other possible explanations (<xref ref="sec-intro-internal-validity"/>); that is, the <em>effectiveness</em> of the study in the sample. A discussion of the limitations of internal validity should cover, as appropriate: possible confounding and lurking variables; the impact of the Hawthorne, observer, placebo and carryover effects; the impact of any other design decisions.
     </p>
     <p>
       If anything is likely to compromise internal validity, the implications on the interpretation of the results should be discussed. For example, if the participants were not blinded, this should be clearly stated, and the conclusion should indicate that the individuals in the study may have behaved differently than usual.
@@ -109,7 +109,7 @@
     <title>Limitations related to external validity</title>
     <idx><h>Limitations</h><h>external validity (generalisability)</h></idx>
     <p>
-      External validity refers to the ability to <em>generalise</em> the findings made from the sample to the entire <em>intended</em> population (Sect. <xref ref="sec-intro-external-validity"/>). For a study to be externally valid, it must first be internally valid: that is, if the study is not effective in the sample studied (i.e., internally valid), the results may not apply to the intended population either.
+      External validity refers to the ability to <em>generalise</em> the findings made from the sample to the entire <em>intended</em> population (<xref ref="sec-intro-external-validity"/>). For a study to be externally valid, it must first be internally valid: that is, if the study is not effective in the sample studied (i.e., internally valid), the results may not apply to the intended population either.
     </p>
     <image source="Pics/iconmonstr-share-11-240.png" width="25%">
       <description><p>Image.</p></description>
@@ -123,7 +123,7 @@
       </p>
     </warning>
     <p>
-      External validity depends on <em>how</em> the sample was obtained. Results from random samples<idx><h>Sampling</h><h>random</h></idx> (Sect. <xref ref="sec-random-sampling-methods"/>) are likely to generalise to the population and be externally valid. (The analyses in this book assume all samples are <em>simple random samples</em>.) Furthermore, results from approximately representative samples<idx><h>Sampling</h><h>representative</h></idx> (Sect. <xref ref="sec-representative-samples"/>) <em>may</em> generalise to the population and be externally valid if those <em>in</em> the study are not obviously different from those <em>not in</em> the study.
+      External validity depends on <em>how</em> the sample was obtained. Results from random samples<idx><h>Sampling</h><h>random</h></idx> (<xref ref="sec-random-sampling-methods"/>) are likely to generalise to the population and be externally valid. (The analyses in this book assume all samples are <em>simple random samples</em>.) Furthermore, results from approximately representative samples<idx><h>Sampling</h><h>representative</h></idx> (<xref ref="sec-representative-samples"/>) <em>may</em> generalise to the population and be externally valid if those <em>in</em> the study are not obviously different from those <em>not in</em> the study.
     </p>
     <p>
       Any inclusion criteria,<idx>Inclusion criteria</idx> exclusion criteria<idx>Inclusion criteria</idx> or control variables<idx><h>Variables</h><h>control</h></idx> may also limit the external validity of the study.
@@ -206,6 +206,14 @@
         <li><p>When interpreting the results of a study, the steps taken to maximise external validity do not need to be evaluated. [False]</p></li>
         <li><p>When interpreting the results of a study, ecological validity is about the impact of the study on the environment. [False]</p></li>
       </ol>
+<solution>
+      <ol>
+        <li><p>TRUE</p></li>
+        <li><p>FALSE</p></li>
+        <li><p>FALSE</p></li>
+        <li><p>FALSE</p></li>
+      </ol>
+</solution>
     </exercise>
   </reading-questions>
 
@@ -228,6 +236,11 @@
       <p>
         When interpreting the results of studies, we consider the practicality (<fillin characters="10"/> validity), the generalisability (<fillin characters="10"/> validity) and the effectiveness (<fillin characters="10"/> validity).
       </p>
+<solution>
+<p>When interpreting the results of studies, we consider the practicality (ecological validity), the generalisability 
+(external validity) and the effectiveness (internal validity).
+</p>
+</solution>
     </exercise>
     <exercise xml:id="exercise-interpretation-exercise-external-validity">
       <p>
