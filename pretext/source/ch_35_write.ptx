@@ -29,7 +29,7 @@
       Research needs to be effectively communicated and shared, so the results can be used, evaluated and built on by others. The purpose of writing about research is to effectively and clearly communicate.
     </p>
     <p>
-      Research may be shared using face-to-face or online presentations (Sect. <xref ref="sec-preparing-presentations"/>) or written documents (Sect. <xref ref="sec-writing-documents"/>). The style and expectations vary widely between these two formats, between disciplines, and even between journals in the same discipline. Hence, this chapter gives general comments about writing, rather than specific requirements. Formal guidelines for writing about research exist, for both <em>experimental</em><idx><h>Study types</h><h>experimental</h></idx> <xref ref="hopewell2022update"/> and <em>observational</em><idx><h>Study types</h><h>observational</h></idx> studies <xref ref="von2007strengthening"/>, though we will not discuss these specifically. Since different disciplines and journals have their own styles, read articles from your discipline or target journal for examples of the required style and formatting.
+      Research may be shared using face-to-face or online presentations (<xref ref="sec-preparing-presentations"/>) or written documents (<xref ref="sec-writing-documents"/>). The style and expectations vary widely between these two formats, between disciplines, and even between journals in the same discipline. Hence, this chapter gives general comments about writing, rather than specific requirements. Formal guidelines for writing about research exist, for both <em>experimental</em><idx><h>Study types</h><h>experimental</h></idx> <xref ref="hopewell2022update"/> and <em>observational</em><idx><h>Study types</h><h>observational</h></idx> studies <xref ref="von2007strengthening"/>, though we will not discuss these specifically. Since different disciplines and journals have their own styles, read articles from your discipline or target journal for examples of the required style and formatting.
     </p>
   </section>
 
@@ -40,14 +40,16 @@
     </p>
     <ul>
       <li><p><em>Write carefully and precisely</em>. Use simple, clear but technically-correct language. Use the [Glossary] if necessary. Carefully choose every word you use to ensure it conveys the correct and intended meaning. <xref ref="oppenheimer2006consequences"/> concluded, from experiments<idx><h>Study types</h><h>experimental</h></idx>, that students often believe that using fancy words makes them appear smarter. However, he recommended students 'write clearly and simply if you can, and you'll be more likely to be thought of as intelligent' (p. 153).</p></li>
-      <li><p><em>Use correct spelling, grammar, punctuation and formatting.</em> Use (but do not rely upon) a spell checker and grammar checker; use a dictionary. Specifically:</p></li>
+      <li><p><em>Use correct spelling, grammar, punctuation and formatting.</em> Use (but do not rely upon) a spell checker and grammar checker; use a dictionary. Specifically:</p>
+<ul>
       <li><p>do <em>not</em> confuse similar words (there/their/they're; your/you're; affect/effect; chose/choose; etc.).</p></li>
       <li><p>capitalise correctly.</p></li>
       <li><p>use apostrophes correctly. For example, <em>it's</em> is only ever an abbreviation for <em>it is</em>.</p></li>
+</ul></li>
       <li><p><em>Be inclusive</em>. Unless specifically referring to men or women, use inclusive language (e.g., 'fire-fighter', not 'fireman'; 'nurse' rather than 'male nurse').</p></li>
       <li><p><em>Take care using comparative terms.</em> For example, writing 'this treatment is <em>better</em>' must be clarified. Better than <em>what</em>? And 'better' in what sense: cost? ease of use? patient outcomes?</p></li>
       <li><p><em>Use terminology consistently.</em> Different words may be used for the same concept in research and statistics. Use the term that is common in your discipline; most of all, be consistent.</p></li>
-      <li><p><em>Be clear, concise and complete</em>. Place material in an Appendix (Sect. <xref ref="sec-writing-other"/>) if it will interrupt the flow of the narrative. Often, this material can be made available online if too lengthy in printed form.</p></li>
+      <li><p><em>Be clear, concise and complete</em>. Place material in an Appendix (<xref ref="sec-writing-other"/>) if it will interrupt the flow of the narrative. Often, this material can be made available online if too lengthy in printed form.</p></li>
       <li><p><em>Ensure pronouns clearly identify the nouns they refer to.</em> For example, consider this sentence: 'When the weeds and crops were sprayed, its growth rate reduced by <m>80</m>%'. The word <em>its</em> may refers to the growth rate of the weeds, the crops, or both.</p></li>
       <li><p><em>Ensure verbs and nouns agree</em>. Both the nouns and verbs in a sentence should be singular or plural. For example, 'the rats <em>was</em> weighed' should be 'the rats <em>were</em> weighed'. Usually, 'data' is considered plural ('datum' is the singular; 'dataset' is also singular), so write 'the data <em>were</em> right skewed' rather than 'the data <em>was</em> right skewed' (but the latter use is becoming more common). In any case, be consistent.</p></li>
       <li><p><em>Avoid leaps of logic, and reaching conclusions unsupported by the evidence</em>. Ensure your conclusions are consistent with the evidence in the study. For example, a student project found that the proportion of provisional drivers (those yet to get a full licence) was <em>higher</em> in the free university car park, compared to paid car parks. They concluded that provisional drivers seek to 'save money by parking in free car parks'. This <em>may</em> be true, but is not supported by the evidence. The evidence simply shows a difference in proportions, but does not explain <em>why</em>.</p></li>
@@ -58,7 +60,7 @@
     </p>
     <warning>
       <p>
-        Many authors have stated
+        Many authors have stated <url href = "https://quoteinvestigator.com/2021/12/11/understood/">variations of this phrase</url>:
       </p>
       <blockquote>
         <p>Don't write so that you <em>can</em> be understood; write so that you <em>can't</em> be misunderstood.</p>
@@ -90,15 +92,11 @@
   <section xml:id="sec-ethics-when-writing">
     <title>Ethics when writing</title>
     <p>
-      As always, ethical practice is important (Sect. <xref ref="ch-05-research-design-ethics"/>)<idx>Ethics</idx>, including when writing about research. Some relevant issues are given below.
+      As always, ethical practice is important (<xref ref="ch-05-research-design-ethics"/>)<idx>Ethics</idx>, including when writing about research. Some relevant issues are given below.
     </p>
     <ul>
-      <li><p><em>Producing reproducible research</em>. When possible, research should be <em>reproducible</em> (Sect. <xref ref="sec-reproducible-research"/>).<idx><h>Research</h><h>reproducibility</h></idx> This includes describing the protocol,<idx>Protocol</idx> and making available any data (when possible; sometime this is not ethical or permitted) and any instructions or code used to analyse the data.</p></li>
-      <li><p><em>Authorship</em>. Ensure everyone who has made an intellectual contribution is listed as an author. <xref ref="brand2015beyond"/> suggests authorship be considered for those involved with:</p></li>
-    </ul>
-    <p>
-      \
-    </p>
+      <li><p><em>Producing reproducible research</em>. When possible, research should be <em>reproducible</em> (<xref ref="sec-reproducible-research"/>).<idx><h>Research</h><h>reproducibility</h></idx> This includes describing the protocol,<idx>Protocol</idx> and making available any data (when possible; sometime this is not ethical or permitted) and any instructions or code used to analyse the data.</p></li>
+      <li><p><em>Authorship</em>. Ensure everyone who has made an intellectual contribution is listed as an author. <xref ref="brand2015beyond"/> suggests authorship be considered for those involved with:</p>
     <ul>
       <li><p>conceptualisation.</p></li>
       <li><p>methodology.</p></li>
@@ -107,11 +105,6 @@
       <li><p>investigation.</p></li>
       <li><p>resourcing.</p></li>
       <li><p>data curation.</p></li>
-    </ul>
-    <p>
-      \
-    </p>
-    <ul>
       <li><p>creating images or taking photographs.</p></li>
       <li><p>writing, including writing drafts, reviewing and editing.</p></li>
       <li><p>visualization.</p></li>
@@ -119,6 +112,7 @@
       <li><p>project administration.</p></li>
       <li><p>funding acquisition.</p></li>
     </ul>
+</li>
     <ul>
       <li><p><em>Acknowledgements</em>. An optional <em>Acknowledgements</em> section is used to acknowledge research funding bodies, and people who supported the research. Avoid writing 'The authors would like to thank...'; instead, thank them: 'We thank...'. Reviewers of the article, when appropriate (who are almost always volunteers), are usually thanked also.</p></li>
       <li><p><em>Use of artificial intelligence (AI)</em>.<idx>Artificial intelligence</idx> Any use of AI in the study should be disclosed. This includes using AI <em>during</em> the research (e.g., generating figures or research design) or when writing <em>about</em> the research. The description should indicate where AI was used, which AI systems (such as ChatGPT) were used, and how they were used. AI also may make mistakes, so any material generated using AI should be verified by the authors.</p></li>
@@ -147,7 +141,7 @@
       As a <em>verbal</em> medium, speak slowly, clearly, loudly, and with expression. Use eye contact, and practice beforehand. Ensure you keep to your allocated time. Ensure technical or unusual words are pronounced correctly; aids to correct pronunciation of many unfamiliar terms have been given in this book.
     </p>
     <p>
-      As a <em>visual</em> medium, presentations usually omit technical details and give the audience an overview of the major points and processes; sharing tedious technical details is unlikely to produce an engaging presentation. Presentations usually focus on the <em>why</em> and the <em>what</em> of the research. Presentations may encourage audience members to learn more by reading your written documents (Sect. <xref ref="sec-writing-documents"/>).
+      As a <em>visual</em> medium, presentations usually omit technical details and give the audience an overview of the major points and processes; sharing tedious technical details is unlikely to produce an engaging presentation. Presentations usually focus on the <em>why</em> and the <em>what</em> of the research. Presentations may encourage audience members to learn more by reading your written documents (<xref ref="sec-writing-documents"/>).
     </p>
     <p>
       Presentations also tend to use graphs, images, short sentences, and minimal text. Presentation software encourages the use of fancy fonts, transitions and animations, but these are usually more distracting than informative; avoid. Ensure your fonts and colours are readable from a distance (especially in tables and graphs).
@@ -164,21 +158,21 @@
     </p>
     <warning>
       <p>
-        Journal articles, and most other written documents too, should contain sufficient details so that other professionals can repeat the study (Chap. <xref ref="sec-protocols"/>); i.e., the research should, as far as possible, be reproducible (Sect. <xref ref="sec-reproducible-research"/>).<idx><h>Research</h><h>reproducibility</h></idx>
+        Journal articles, and most other written documents too, should contain sufficient details so that other professionals can repeat the study (<xref ref="sec-protocols"/>); i.e., the research should, as far as possible, be reproducible (<xref ref="sec-reproducible-research"/>).<idx><h>Research</h><h>reproducibility</h></idx>
       </p>
     </warning>
     <p>
       Articles usually have a more formal structure than presentations. Sometimes the acronym AIMRaD<idx>AIMRaD</idx> is used to remember these sections:
     </p>
     <ul>
-      <li><p>_<alert>A</alert>bstract_.</p></li>
-      <li><p>_<alert>I</alert>ntroduction_.</p></li>
-      <li><p>_<alert>M</alert>ethods_.</p></li>
-      <li><p>_<alert>R</alert>esults_.</p></li>
-      <li><p>_<alert>D</alert>iscussion_ (or <em>Summary</em>, or <em>Conclusions</em>).</p></li>
+      <li><p><alert>A</alert>bstract_.</p></li>
+      <li><p><alert>I</alert>ntroduction_.</p></li>
+      <li><p><alert>M</alert>ethods_.</p></li>
+      <li><p><alert>R</alert>esults_.</p></li>
+      <li><p><alert>D</alert>iscussion_ (or <em>Summary</em>, or <em>Conclusions</em>).</p></li>
     </ul>
     <p>
-      These components capture the six-step research process used in this book (Fig. <xref ref="fig-report-structure"/>).
+      These components capture the six-step research process used in this book (<xref ref="fig-report-structure"/>).
     </p>
     <figure xml:id="fig-report-structure">
       <caption>The connection between the article and the steps studied. The <em>Abstract</em> briefly covers all aspects of the study, and the <em>Discussion</em> explains what has been learnt through the process, and discusses the results.</caption>
@@ -251,7 +245,7 @@
     </p>
     <warning>
       <p>
-        Cutting-and-pasting software output into reports is rarely acceptable, except for carefully-prepared graphs (Chap. <xref ref="ch-17-summary-comments"/>; Sect. <xref ref="sec-writing-graphs-tables"/>).
+        Cutting-and-pasting software output into reports is rarely acceptable, except for carefully-prepared graphs (<xref ref="ch-17-summary-comments"/>; <xref ref="sec-writing-graphs-tables"/>).
       </p>
     </warning>
   </subsection>
@@ -265,7 +259,7 @@
       <li><p>summarises the results.</p></li>
       <li><p>gives a short evaluation of the results.</p></li>
       <li><p>answers the stated RQ (i.e., makes a conclusion).</p></li>
-      <li><p>discusses limitations (Chap. <xref ref="ch-08-research-design-limitations"/>), strengths, weaknesses, problems, challenges.</p></li>
+      <li><p>discusses limitations (<xref ref="ch-08-research-design-limitations"/>), strengths, weaknesses, problems, challenges.</p></li>
       <li><p>tries to anticipate and respond to potential questions about the research.</p></li>
     </ul>
     <p>
@@ -299,7 +293,7 @@
     <idx><h>Software output</h><h>graphs</h></idx>
     <idx><h>Graphs</h><h>using software</h></idx>
     <p>
-      Good figures and tables take time and care to prepare (Chap. <xref ref="ch-17-summary-comments"/>). Their purpose should always be to <em>display information in the simplest, clearest possible way</em>, and to highlight the important information. In general, tables, graphs and images:
+      Good figures and tables take time and care to prepare (<xref ref="ch-17-summary-comments"/>). Their purpose should always be to <em>display information in the simplest, clearest possible way</em>, and to highlight the important information. In general, tables, graphs and images:
     </p>
     <ul>
       <li><p><em>should</em> be discussed (not just presented) and referred to in the text.</p></li>
@@ -308,7 +302,7 @@
       <li><p><em>should</em> be able to be understood without reference to the article, as far as possible.</p></li>
       <li><p><em>should</em> use easy-to-read fonts and colours: for example, ensure the font size is sufficiently large when placed in the article at the final size.</p></li>
       <li><p><em>should</em> avoid using different colours, line types or fonts unless these have a purpose (i.e., to differentiate between groups in the study); if they are used, their purpose should be explained (e.g., using a figure legend or caption).</p></li>
-      <li><p><em>should not</em> include <em>chart junk</em> (unnecessary additions), such as artificial third dimensions for graphs (Sect. <xref ref="sec-graphs-constructing"/>) and unnecessary lines in tables.</p></li>
+      <li><p><em>should not</em> include <em>chart junk</em> (unnecessary additions), such as artificial third dimensions for graphs (<xref ref="sec-graphs-constructing"/>) and unnecessary lines in tables.</p></li>
     </ul>
     <p>
       Figures and images typically have captions <em>below</em>, while tables typically have captions <em>above</em>. The source of images (e.g., the photographer) should be acknowledged (as ethical practice),<idx>Ethics</idx> when appropriate. Tables should use very few horizontal lines, and no vertical lines.
@@ -339,27 +333,22 @@
       Readers should not be able to misinterpret your meaning, so write <em>carefully</em> and <em>precisely</em>. One potential source of confusion is words with a different meaning in research compared to every-day use or in other disciplines (called <em>lexical ambiguity</em>; <xref ref="dunn2016learning"/>). Some specific words where care is needed are given below.
     </p>
     <ul>
-      <li><p><em>Average</em>:<idx>Averages</idx><idx><h>Mean</h><h>of a sample</h></idx><idx><h>Median</h><h>of a sample</h></idx></p></li>
-    </ul>
-    <p>
-      struct Use the specific word 'mean' or 'median' when that is what you intend.
-    </p>
-    <ul>
-      <li><p><em>Confidence</em>:<idx>Confidence intervals</idx> In research, 'confidence' is usually used in the phrase 'confidence interval' (Sect. <xref ref="sec-ci-interpretation"/>). Take care when using 'confidence' in other contexts to avoid confusion.</p></li>
-      <li><p><em>Control</em>:<idx>Control</idx> In research, a 'control' is usually used in the context of a control group (Def. <xref ref="def-control"/>), but may have other meanings in other disciplines.</p></li>
-      <li><p><em>Correlation</em>:<idx>Correlation</idx> In research, correlation describes the (often linear) relationship between two <em>quantitative</em> variables (Sect. <xref ref="sec-corr-coefficients"/>). In general usage, 'correlation' may mean any 'association' between any two variables.</p></li>
+      <li><p><em>Average</em>: Use the specific word 'mean' or 'median' when that is what you intend.</p></li>
+      <li><p><em>Confidence</em>:<idx>Confidence intervals</idx> In research, 'confidence' is usually used in the phrase 'confidence interval' (<xref ref="sec-ci-interpretation"/>). Take care when using 'confidence' in other contexts to avoid confusion.</p></li>
+      <li><p><em>Control</em>:<idx>Control</idx> In research, a 'control' is usually used in the context of a control group (<xref ref="def-control"/>), but may have other meanings in other disciplines.</p></li>
+      <li><p><em>Correlation</em>:<idx>Correlation</idx> In research, correlation describes the (often linear) relationship between two <em>quantitative</em> variables (<xref ref="sec-corr-coefficients"/>). In general usage, 'correlation' may mean any 'association' between any two variables.</p></li>
       <li><p><em>Estimate</em>:<idx>Estimate</idx> In research, 'estimating' means to <em>calculate</em> an estimate for an unknown population parameter using sample information. In general usage, 'estimate' often means to make an educated guess.</p></li>
-      <li><p><em>Experiment</em>:<idx><h>Study types</h><h>experimental</h></idx> In research, an experiment is a specific type of research study (Sect. <xref ref="sec-experimental-studies"/>). The word 'study' can be used to talk about research more generally.</p></li>
-      <li><p><em>Independent</em>:<idx>Independence</idx> This word has many different uses in statistics and research, in science, and in general usage. The word 'independent' in this book refers to events that do not impact each other in a probabilistic sense (Sect. <xref ref="sec-independence"/>).</p></li>
-      <li><p><em>Intervention</em>:<idx>Intervention</idx> In research, an 'intervention' (Sect. <xref ref="sec-intervention"/>) is specifically when the researchers can manipulate the comparison.</p></li>
-      <li><p><em>Normal</em>:<idx>Normal distribution</idx> In research, 'normal' often refers to the 'normal distribution' (Chap. <xref ref="sec-normal-distribution"/>). If this is <em>not</em> the meaning you intend to convey, consider using the word 'usual' or similar.</p></li>
-      <li><p><em>Odds</em>:<idx>Odds</idx><idx>Probability</idx> In research, 'odds' has a specific meaning (Sect. <xref ref="sec-qual-odds"/>) and is not the same as probability. In general usage, 'probability' and 'odds' are often used interchangeably.</p></li>
-      <li><p><em>Population</em>:<idx>Population</idx> In research, the 'population' refers to a larger group of interest (Def. <xref ref="def-population"/>). In general usage, 'population' often refers to groups of people specifically.</p></li>
+      <li><p><em>Experiment</em>:<idx><h>Study types</h><h>experimental</h></idx> In research, an experiment is a specific type of research study (<xref ref="sec-experimental-studies"/>). The word 'study' can be used to talk about research more generally.</p></li>
+      <li><p><em>Independent</em>:<idx>Independence</idx> This word has many different uses in statistics and research, in science, and in general usage. The word 'independent' in this book refers to events that do not impact each other in a probabilistic sense (<xref ref="sec-independence"/>).</p></li>
+      <li><p><em>Intervention</em>:<idx>Intervention</idx> In research, an 'intervention' (<xref ref="sec-intervention"/>) is specifically when the researchers can manipulate the comparison.</p></li>
+      <li><p><em>Normal</em>:<idx>Normal distribution</idx> In research, 'normal' often refers to the 'normal distribution' (<xref ref="sec-normal-distribution"/>). If this is <em>not</em> the meaning you intend to convey, consider using the word 'usual' or similar.</p></li>
+      <li><p><em>Odds</em>:<idx>Odds</idx><idx>Probability</idx> In research, 'odds' has a specific meaning (<xref ref="sec-qual-odds"/>) and is not the same as probability. In general usage, 'probability' and 'odds' are often used interchangeably.</p></li>
+      <li><p><em>Population</em>:<idx>Population</idx> In research, the 'population' refers to a larger group of interest (<xref ref="def-population"/>). In general usage, 'population' often refers to groups of people specifically.</p></li>
       <li><p><em>Random</em>:<idx>Random</idx> In research, 'random' has a specific meaning: based on impersonal chance. In general usage, it often means 'haphazard' or 'without structure'.</p></li>
-      <li><p><em>Regression</em>:<idx>Regression</idx> In research, 'regression' refers to the mathematical (often linear) relationship between two quantitative variables (Chap. <xref ref="ch-33-correlation-regression"/>).</p></li>
+      <li><p><em>Regression</em>:<idx>Regression</idx> In research, 'regression' refers to the mathematical (often linear) relationship between two quantitative variables (<xref ref="ch-33-correlation-regression"/>).</p></li>
       <li><p><em>Sample</em>: <idx>Sample</idx> In research, we usually have '<em>one</em> sample of <m>30</m> hyenas'; in some disciplines, this could be described as 'taking <m>30</m> samples of hyenas'.</p></li>
-      <li><p><em>Significant</em>:<idx>Statistical significance</idx><idx><h>P-values</h><h>one-tailed</h></idx> In research, 'significance' is usually understood to refer to 'statistical significance' (Sect. <xref ref="sec-about-pvalues"/>). If this is <em>not</em> the meaning you intend to convey, consider using the word 'substantial' or similar.</p></li>
-      <li><p><em>Variable</em>:<idx>Variables</idx> In research, a 'variable' is a characteristic that can vary from individual to individual (Def. <xref ref="def-variable"/>).</p></li>
+      <li><p><em>Significant</em>:<idx>Statistical significance</idx><idx><h>P-values</h><h>one-tailed</h></idx> In research, 'significance' is usually understood to refer to 'statistical significance' (<xref ref="sec-about-pvalues"/>). If this is <em>not</em> the meaning you intend to convey, consider using the word 'substantial' or similar.</p></li>
+      <li><p><em>Variable</em>:<idx>Variables</idx> In research, a 'variable' is a characteristic that can vary from individual to individual (<xref ref="def-variable"/>).</p></li>
     </ul>
     <p>
       Some <em>symbols</em> may also have different meanings in other disciplines. Ensure the meaning of symbols and notation is clearly defined.
@@ -395,6 +384,15 @@
         <li><p>Numbers should be given to as many decimal places as possible, for the greatest accuracy.</p></li>
         <li><p>The design of the study should be explained in detail in the <em>Methods</em> section.</p></li>
       </ol>
+<solution>
+<ol>
+<li><p>FALSE<p></li>
+<li><p>FALSE<p></li>
+<li><p>TRUE<p></li>
+<li><p>FALSE<p></li>
+<li><p>TRUE<p></li>
+</ol>
+</solution>
     </exercise>
   </reading-questions>
 
@@ -505,7 +503,7 @@
     </exercise>
     <exercise xml:id="exercise-write-exercises-student2">
       <p>
-        In a student project, the heights that students could jump vertically were compared, starting from a squat or standing position. Every student in the study performed both jumps. Critique the <em>numerical summary</em> produced by the research team (Table <xref ref="tab-write-exercises-project2"/>).
+        In a student project, the heights that students could jump vertically were compared, starting from a squat or standing position. Every student in the study performed both jumps. Critique the <em>numerical summary</em> produced by the research team (<xref ref="tab-write-exercises-project2"/>).
       </p>
       <table xml:id="tab-write-exercises-project2">
         <title>A numerical summary of the data, showing how much higher the standing jump height is compared to the squat jump.</title>
