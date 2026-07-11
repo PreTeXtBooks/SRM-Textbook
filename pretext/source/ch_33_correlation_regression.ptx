@@ -33,7 +33,7 @@
     </p>
     <figure xml:id="fig-borers-data-dt">
       <caption>The sorghum-yield data.</caption>
-      <image source="generated/BorersDataDT" width="70%">
+      <image source="placeholder.jpeg" width="70%">
         <description><p>An interactive table of the sorghum yield and borer infestation data.</p></description>
       </image>
     </figure>
@@ -1113,7 +1113,7 @@
     </figure>
     <figure xml:id="fig-osadt">
       <caption>The obstructive sleep apnoea dataset.</caption>
-      <image source="generated/OSADT" width="70%">
+      <image source="placeholder.jpeg" width="70%">
         <description><p>An interactive table of the obstructive sleep apnoea dataset.</p></description>
       </image>
     </figure>

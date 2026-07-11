@@ -294,7 +294,7 @@
       </ul>
       <figure xml:id="fig-pvalues-big-small">
         <caption>The strength of evidence: <m>P</m>-values. As the <m>z</m>-score becomes larger, the <m>P</m>-value becomes smaller, and it is more likely that the evidence contradicts the null hypothesis.</caption>
-        <image source="fig-pvalues-big-small.png" width="100%"/>
+        <image source="fig-pvalues-big-small.gif" width="100%"/>
       </figure>
       <p>
         What is meant by 'small' and 'big' in this context? What represents persuasive evidence to support the alternative hypothesis? A <m>P</m>-value smaller than <m>5</m>% (or <m>0.05</m>) is usually considered 'small', and persuasive evidence to support the alternative hypothesis. In contrast, a <m>P</m>-value larger than <m>5</m>% (or <m>0.05</m>) is usually considered 'big', and <em>not</em> persuasive evidence to support the alternative hypothesis.

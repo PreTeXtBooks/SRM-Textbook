@@ -87,7 +87,7 @@
     </p>
     <figure xml:id="fig-eating-software">
       <caption>Software output for comparing the odds and proportion of students eating most meals at home, for students living with and not with their parents.</caption>
-      <image source="fig-eating-software.png" width="65%"/>
+      <image source="jamovi/UniStudents/UniStudents-Chisq-zTest-All.png" width="65%"/>
     </figure>
     <warning>
       <p>
@@ -559,7 +559,7 @@
     </p>
     <figure xml:id="fig-uni-meals-test-expected-jamovi">
       <caption>The expected counts, as computed by software.</caption>
-      <image source="fig-uni-meals-test-expected-jamovi.png" width="70%"/>
+      <image source="jamovi/UniStudents/UniStudents-Expected.png" width="70%"/>
     </figure>
     <example xml:id="example-statistical-validity-eating-ht">
       <title>Statistical validity</title>
@@ -643,7 +643,7 @@
     </warning>
     <figure xml:id="fig-rips-jamovi">
       <caption>Software output for the hypothesis test about knowledge of ocean rips.</caption>
-      <image source="fig-rips-jamovi.png" width="90%"/>
+      <image source="jamovi/RipsID/RipsID-chisq.png" width="90%"/>
     </figure>
     <p>
       The statistical validity conditions are the same as in Sect. <xref ref="sec-validity-chi-sq"/>:<idx><h>Statistical validity (for inference)</h><h>odds ratio</h></idx> all <em>expected</em> counts are at least five. Using Equation <xref ref="eq-smallest-expected-count"/>,
@@ -715,7 +715,7 @@
     </warning>
     <figure xml:id="fig-turtle-nests-output-jamovi">
       <caption>The software output for the turtle-nesting data.</caption>
-      <image source="fig-turtle-nests-output-jamovi.png" width="60%"/>
+      <image source="jamovi/TurtleNests/TurtleNests-Chisq-pDiff.png" width="60%"/>
     </figure>
   </section>
 
@@ -963,7 +963,7 @@
       </table>
       <figure xml:id="fig-ev-jamovi">
         <caption>Software output for the EV study.</caption>
-        <image source="fig-ev-jamovi.png" width="50%"/>
+        <image source="jamovi/EVs/EVs-CI-both.png" width="50%"/>
       </figure>
     </exercise>
 
@@ -992,7 +992,7 @@
       </table>
       <figure xml:id="fig-farmers-jamovi-ht">
         <caption>Software output for the farming study.</caption>
-        <image source="fig-farmers-jamovi-ht.png" width="50%"/>
+        <image source="jamovi/Farmers/Farmers-Chi2-pDiff-CITest.png" width="50%"/>
       </figure>
     </exercise>
 
@@ -1027,7 +1027,7 @@
       </table>
       <figure xml:id="fig-car-crash-jamovi">
         <caption>Software output for the car-crash data.</caption>
-        <image source="fig-car-crash-jamovi.png" width="50%"/>
+        <image source="jamovi/CarCrashes/CarCrashes-ALL.png" width="50%"/>
       </figure>
     </exercise>
 
@@ -1062,7 +1062,7 @@
       </table>
       <figure xml:id="fig-scar-height-risk-jamovi">
         <caption>Software output for the scar-height data.</caption>
-        <image source="fig-scar-height-risk-jamovi.png" width="50%"/>
+        <image source="jamovi/ScarHeight/ScarHeight-No-Expected.png" width="50%"/>
       </figure>
     </exercise>
 
@@ -1100,7 +1100,7 @@
       </table>
       <figure xml:id="fig-pet-birds-jamovi">
         <caption>Software output for the pet-birds data.</caption>
-        <image source="fig-pet-birds-jamovi.png" width="99%"/>
+        <image source="jamovi/PetBirds/PetsCI-Both.png" width="99%"/>
       </figure>
     </exercise>
 
@@ -1136,7 +1136,7 @@
       </table>
       <figure xml:id="fig-emerald-rain-jamovi-output">
         <caption>Software output for the Emerald-rain data.</caption>
-        <image source="fig-emerald-rain-jamovi-output.png" width="65%"/>
+        <image source="jamovi/EmeraldRain/EmeraldRain-NoE-Both.png" width="65%"/>
       </figure>
     </exercise>
 
@@ -1158,7 +1158,7 @@
       </ol>
       <figure xml:id="fig-sunglasses-output">
         <caption>Software output for the hats data.</caption>
-        <image source="fig-sunglasses-output.png" width="99%"/>
+        <image source="jamovi/HatSunglasses/HatSunglasses-CI-Both.png" width="99%"/>
       </figure>
     </exercise>
 
@@ -1179,7 +1179,7 @@
       </ol>
       <figure xml:id="fig-turbines-output">
         <caption>Software output for the turbine data.</caption>
-        <image source="fig-turbines-output.png" width="60%"/>
+        <image source="jamovi/Turbines/Turbines-Both-CITest.png" width="60%"/>
       </figure>
     </exercise>
 
@@ -1256,7 +1256,7 @@
       </table>
       <figure xml:id="fig-dog-walks-jamovi">
         <caption>Software output for the dog-walking data.</caption>
-        <image source="fig-dog-walks-jamovi.png" width="45%"/>
+        <image source="jamovi/DogWalks/DogWalks-Test.png" width="45%"/>
       </figure>
     </exercise>
 
@@ -1289,7 +1289,7 @@
       </table>
       <figure xml:id="fig-mumps-jamovi-html">
         <caption>Software output for the compliance data.</caption>
-        <image source="fig-mumps-jamovi-html.png" width="45%"/>
+        <image source="jamovi/Mumps/Mumps-Test.png" width="45%"/>
       </figure>
     </exercise>
 
@@ -1323,7 +1323,7 @@
       </table>
       <figure xml:id="fig-bags-chisq-jamovi-html">
         <caption>Software output for the shopping-bags data.</caption>
-        <image source="fig-bags-chisq-jamovi-html.png" width="45%"/>
+        <image source="jamovi/ShoppingBags/ShoppingBags-Test.png" width="45%"/>
       </figure>
     </exercise>
 
@@ -1353,7 +1353,7 @@
       </table>
       <figure xml:id="fig-crab-shells-chisq-jamovi-html">
         <caption>Software output for the <m>3\times 3</m> table of crab-shell data (top output), and for the <m>2\times 2</m> table of crab-shell data (bottom output).</caption>
-        <image source="fig-crab-shells-chisq-jamovi-html.png" width="45%"/>
+        <image source="jamovi/CrabShells/CrabShells3ChisquareTest.png" width="45%"/>
       </figure>
     </exercise>
   </exercises>

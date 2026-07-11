@@ -49,7 +49,7 @@
     </p>
     <figure xml:id="fig-roll-dice-hist-mean-fig">
       <caption>Rolling dice: the mean of 25 rolls, for thousands of repetitions. The solid line is the normal distribution used to model the sampling distribution.</caption>
-      <image source="fig-roll-dice-hist-mean-fig.png" width="60%"/>
+      <image source="fig-roll-dice-hist-mean-fig.gif" width="60%"/>
     </figure>
     <p>
       From Fig. <xref ref="fig-roll-dice-hist-mean-fig"/>, the sample means vary with an approximate normal distribution (as with the sample proportions). This normal distribution does <em>not</em> describe the data; it describes how the <em>values of the sample means vary across all possible samples</em>. Under certain conditions (Sect. <xref ref="sec-validity-sample-mean"/>), the values of the sample mean vary with a normal distribution, and this normal distribution has a mean and a standard deviation.
@@ -413,7 +413,7 @@
       </ol>
       <figure xml:id="fig-pizza-ci-jamovi">
         <caption>Summary statistics for the diameter of <em>Eagle Boys</em> large pizzas.</caption>
-        <image source="fig-pizza-ci-jamovi.png" width="40%"/>
+        <image source="jamovi/PizzaDiameter/PizzaDiameters-jamovi.png" width="40%"/>
       </figure>
     </exercise>
 

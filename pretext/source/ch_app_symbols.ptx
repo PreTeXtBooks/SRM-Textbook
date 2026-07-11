@@ -1,5 +1,394 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<appendix xml:id="app-symbols" xmlns:xi="http://www.w3.org/2001/XInclude">
+<!-- Source: 52-App-Symbols.Rmd -->
+<appendix xml:id="sec-statistics-and-parameters" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Symbols, formulas, statistics and parameters</title>
-  <p>Skeleton for <em>52-App-Symbols.Rmd</em>. Content to be added.</p>
+
+  <section xml:id="sec-app-symbols-and-standard-errors">
+    <title>Symbols and standard errors</title>
+    <idx><h>Mean</h><h>of a population</h></idx>
+    <idx><h>Mean</h><h>of a sample</h></idx>
+    <idx><h>Mean difference</h><h>between</h></idx>
+    <idx>Mean difference</idx>
+    <idx><h>Proportions</h><h>of a population</h></idx>
+    <idx><h>Proportions</h><h>of a sample</h></idx>
+    <idx>Odds ratio</idx>
+    <idx><h>Regression</h><h>coefficients</h></idx>
+    <idx>Correlation coefficient (Pearson)</idx>
+    <idx>Symbols used</idx>
+
+    <ul>
+      <li><p>Table <xref ref="tab-parameters-statistics"/> lists the statistics used to estimate unknown population parameters.</p></li>
+      <li><p>When the sampling distribution is approximately normally distributed, under appropriate statistical validity conditions, this is indicated by&#160;&#10004;.<idx>Sampling distribution</idx></p></li>
+      <li>
+        <p>The value of the mean of the sampling distribution (the <em>sampling mean</em>) is<idx>Sampling mean</idx>:</p>
+        <ul>
+          <li><p>unknown, for <em>confidence intervals</em>.</p></li>
+          <li><p>assumed to be the value given in the null hypothesis, for <em>hypothesis tests</em>.</p></li>
+        </ul>
+      </li>
+    </ul>
+
+    <table xml:id="tab-parameters-statistics">
+      <title>Sample statistics used to estimate population parameters. Some statistics have approximately normally-distributed sampling distributions under appropriate (statistical validity) conditions, as indicated using&#160;&#10004;.</title>
+      <tabular halign="center" top="medium" bottom="medium">
+        <row header="yes" bottom="medium">
+          <cell></cell>
+          <cell></cell>
+          <cell>Statistic</cell>
+          <cell>Parameter</cell>
+          <cell>Standard error</cell>
+          <cell>Normal?</cell>
+          <cell>Reference</cell>
+        </row>
+        <row>
+          <cell>Proportion</cell>
+          <cell>CI:</cell>
+          <cell><m>\hat{p}</m></cell>
+          <cell><m>p</m></cell>
+          <cell><m>\displaystyle \sqrt{\frac{\hat{p}\times(1-\hat{p})}{n}}</m></cell>
+          <cell>&#10004;</cell>
+          <cell>Sect. <xref ref="sec-ci-one-proportion"/></cell>
+        </row>
+        <row bottom="minor">
+          <cell>Proportion</cell>
+          <cell>Test:</cell>
+          <cell><m>\hat{p}</m></cell>
+          <cell><m>p</m></cell>
+          <cell><m>\displaystyle \sqrt{\frac{p\times(1-p)}{n}}</m></cell>
+          <cell>&#10004;</cell>
+          <cell>Sect. <xref ref="sec-test-one-proportion"/></cell>
+        </row>
+        <row>
+          <cell>Mean</cell>
+          <cell>CI:</cell>
+          <cell><m>\bar{x}</m></cell>
+          <cell><m>\mu</m></cell>
+          <cell><m>\displaystyle \frac{s}{\sqrt{n}}</m></cell>
+          <cell>&#10004;</cell>
+          <cell>Sect. <xref ref="sec-one-mean-conf-interval"/>; Chap. <xref ref="ch-27-testing-one-mean"/></cell>
+        </row>
+        <row bottom="minor">
+          <cell>Mean</cell>
+          <cell>Test:</cell>
+          <cell><m>\bar{x}</m></cell>
+          <cell><m>\mu</m></cell>
+          <cell><m>\displaystyle \frac{s}{\sqrt{n}}</m></cell>
+          <cell>&#10004;</cell>
+          <cell>Chap. <xref ref="ch-27-testing-one-mean"/></cell>
+        </row>
+        <row>
+          <cell>Mean difference</cell>
+          <cell>CI:</cell>
+          <cell><m>\bar{d}</m></cell>
+          <cell><m>\mu_d</m></cell>
+          <cell><m>\displaystyle \frac{s_d}{\sqrt{n}}</m></cell>
+          <cell>&#10004;</cell>
+          <cell>Chap. <xref ref="ch-29-cis-testing-mean-difference"/></cell>
+        </row>
+        <row bottom="minor">
+          <cell>Mean difference</cell>
+          <cell>Test:</cell>
+          <cell><m>\bar{d}</m></cell>
+          <cell><m>\mu_d</m></cell>
+          <cell><m>\displaystyle \frac{s_d}{\sqrt{n}}</m></cell>
+          <cell>&#10004;</cell>
+          <cell>Chap. <xref ref="ch-29-cis-testing-mean-difference"/></cell>
+        </row>
+        <row>
+          <cell>Difference between means</cell>
+          <cell>CI:</cell>
+          <cell><m>\bar{x}_1 - \bar{x}_2</m></cell>
+          <cell><m>\mu_1 - \mu_2</m></cell>
+          <cell><m>\displaystyle \sqrt{\text{s.e.}(\bar{x}_1)^2 + \text{s.e.}(\bar{x}_2)^2}</m></cell>
+          <cell>&#10004;</cell>
+          <cell>Chap. <xref ref="ch-30-cis-testing-two-means"/></cell>
+        </row>
+        <row bottom="minor">
+          <cell>Difference between means</cell>
+          <cell>Test:</cell>
+          <cell><m>\bar{x}_1 - \bar{x}_2</m></cell>
+          <cell><m>\mu_1 - \mu_2</m></cell>
+          <cell><m>\displaystyle \sqrt{\text{s.e.}(\bar{x}_1)^2 + \text{s.e.}(\bar{x}_2)^2}</m></cell>
+          <cell>&#10004;</cell>
+          <cell>Chap. <xref ref="ch-30-cis-testing-two-means"/></cell>
+        </row>
+        <row>
+          <cell>Difference between proportions</cell>
+          <cell>CI:</cell>
+          <cell><m>\hat{p}_1 - \hat{p}_2</m></cell>
+          <cell><m>p_1 - p_2</m></cell>
+          <cell><m>\displaystyle \sqrt{\text{s.e.}(\hat{p}_1)^2 + \text{s.e.}(\hat{p}_2)^2}</m></cell>
+          <cell>&#10004;</cell>
+          <cell>Chap. <xref ref="ch-31-cis-testing-odds-ratios"/></cell>
+        </row>
+        <row bottom="minor">
+          <cell>Difference between proportions</cell>
+          <cell>Test:</cell>
+          <cell><m>\hat{p}_1 - \hat{p}_2</m></cell>
+          <cell><m>p_1 - p_2</m></cell>
+          <cell><m>\displaystyle \sqrt{\text{s.e.}(\hat{p}_1)^2 + \text{s.e.}(\hat{p}_2)^2}</m> using common proportion <m>\hat{p}</m></cell>
+          <cell>&#10004;</cell>
+          <cell>Chap. <xref ref="ch-31-cis-testing-odds-ratios"/></cell>
+        </row>
+        <row>
+          <cell>Odds ratio (OR)</cell>
+          <cell>CI:</cell>
+          <cell>Sample OR</cell>
+          <cell>Pop. OR</cell>
+          <cell>(Not given)</cell>
+          <cell>&#10008;</cell>
+          <cell>Chap. <xref ref="ch-31-cis-testing-odds-ratios"/></cell>
+        </row>
+        <row bottom="minor">
+          <cell>Odds ratio (OR)</cell>
+          <cell>Test:</cell>
+          <cell>Sample OR</cell>
+          <cell>Pop. OR</cell>
+          <cell>(Not given)</cell>
+          <cell>&#10008;</cell>
+          <cell>Chap. <xref ref="ch-31-cis-testing-odds-ratios"/></cell>
+        </row>
+        <row>
+          <cell>Correlation</cell>
+          <cell>CI:</cell>
+          <cell><m>r</m></cell>
+          <cell><m>\rho</m></cell>
+          <cell>(Not given)</cell>
+          <cell>&#10008;</cell>
+          <cell>Sect. <xref ref="sec-correlation-ci"/></cell>
+        </row>
+        <row bottom="minor">
+          <cell>Correlation</cell>
+          <cell>Test:</cell>
+          <cell><m>r</m></cell>
+          <cell><m>\rho</m></cell>
+          <cell>(Not given)</cell>
+          <cell>&#10008;</cell>
+          <cell>Sect. <xref ref="sec-correlation-testing"/></cell>
+        </row>
+        <row>
+          <cell>Regression: slope</cell>
+          <cell>CI:</cell>
+          <cell><m>b_1</m></cell>
+          <cell><m>\beta_1</m></cell>
+          <cell><m>\text{s.e.}(b_1)</m> (value from software)</cell>
+          <cell>&#10004;</cell>
+          <cell>Sect. <xref ref="sec-regression-ci"/></cell>
+        </row>
+        <row bottom="minor">
+          <cell>Regression: slope</cell>
+          <cell>Test:</cell>
+          <cell><m>b_1</m></cell>
+          <cell><m>\beta_1</m></cell>
+          <cell><m>\text{s.e.}(b_1)</m> (value from software)</cell>
+          <cell>&#10004;</cell>
+          <cell>Sect. <xref ref="sec-regression-ht"/></cell>
+        </row>
+        <row>
+          <cell>Regression: intercept</cell>
+          <cell>CI:</cell>
+          <cell><m>b_0</m></cell>
+          <cell><m>\beta_0</m></cell>
+          <cell><m>\text{s.e.}(b_0)</m> (value from software)</cell>
+          <cell>&#10004;</cell>
+          <cell>Sect. <xref ref="sec-regression-ci"/></cell>
+        </row>
+        <row>
+          <cell>Regression: intercept</cell>
+          <cell>Test:</cell>
+          <cell><m>b_0</m></cell>
+          <cell><m>\beta_0</m></cell>
+          <cell><m>\text{s.e.}(b_0)</m> (value from software)</cell>
+          <cell>&#10004;</cell>
+          <cell>Sect. <xref ref="sec-regression-ht"/></cell>
+        </row>
+      </tabular>
+    </table>
+  </section>
+
+  <section xml:id="sec-app-formulas-ci">
+    <title>Confidence intervals</title>
+
+    <p>
+      For statistics whose sampling distribution has an approximate normal distribution, <em>confidence intervals (CIs)</em> have the form<idx>Confidence intervals</idx>
+    </p>
+    <men xml:id="eq-ci-general-form">\text{statistic} \pm \big( \text{multiplier} \times \text{s.e.}(\text{statistic})\big).</men>
+
+    <p><alert>Notes:</alert></p>
+    <ul>
+      <li><p>The multiplier is <em>approximately</em>&#160;<m>2</m> to create an <em>approximate</em> <m>95</m>% CI (based on the <m>68</m>&#8211;<m>95</m>&#8211;<m>99.7</m> rule).</p></li>
+      <li><p>The quantity '<m>\text{multiplier} \times \text{s.e.}(\text{statistic})</m>' is called the <em>margin of error</em>.<idx>Margin of error</idx></p></li>
+      <li><p>Software uses <em>exact</em> multipliers to form <em>exact</em> confidence intervals.</p></li>
+      <li><p>When the sampling distribution for the statistic does <em>not</em> have an approximate normal distribution (e.g., for ORs and correlation coefficients), <em>this formula does not apply</em> and the CIs are taken directly from software output when available.</p></li>
+    </ul>
+  </section>
+
+  <section xml:id="sec-app-formulas-test">
+    <title>Hypothesis testing</title>
+
+    <p>
+      For statistics whose sampling distribution has an approximate normal distribution, the <em>test statistic</em> has the form:<idx>Hypothesis testing</idx>
+    </p>
+    <men xml:id="eq-test-statistic-general-form">\text{test statistic} = \frac{\text{statistic} - \text{parameter}}{\text{s.e.}(\text{statistic})},</men>
+    <p>
+      where <m>\text{s.e.}(\text{statistic})</m> is the standard error of the statistic. The test-statistic is a <m>t</m>-score for most hypothesis tests in this book when the sampling distribution is described by a normal distribution, but is a <m>z</m>-score for a hypothesis test involving one or two <em>proportions</em>.
+    </p>
+
+    <p><alert>Notes:</alert></p>
+    <ul>
+      <li><p>If the test-statistic is a <m>z</m>-score,<idx><h>Test statistic</h><h>z-score</h></idx> the <m>P</m>-value can be found using tables (Appendix <xref ref="sec-z-tables-online"/>), or <em>approximated</em> using the <m>68</m>&#8211;<m>95</m>&#8211;<m>99.7</m> rule.</p></li>
+      <li><p>If the test-statistic is a <m>t</m>-score,<idx><h>Test statistic</h><h>t-score</h></idx> the <m>P</m>-value can be <em>approximated</em> using tables (Appendix <xref ref="sec-z-tables-online"/>), or <em>approximated</em> using the <m>68</m>&#8211;<m>95</m>&#8211;<m>99.7</m> rule (since <m>t</m>-scores are similar to <m>z</m>-scores; Sect. <xref ref="sec-z-scores"/>).</p></li>
+      <li><p>When the sampling distribution for the statistic does not have an approximate normal distribution (e.g., for ORs and correlation coefficients), <em>this formula does not apply</em> and <m>P</m>-values are taken from software when available.</p></li>
+      <li><p>A hypothesis test about ORs uses a <m>\chi^2</m> test statistic. For <m>2\times 2</m> tables only, the <m>\chi^2</m>-value is equivalent to a <m>z</m>-score with a value of <m>\sqrt{\chi^2}</m>.<idx><h>Test statistic</h><h>chi-squared score</h></idx></p></li>
+    </ul>
+  </section>
+
+  <section xml:id="sec-app-sample-size-formulas">
+    <title>Sample size estimation</title>
+
+    <p>
+      The following formulas compute the <em>approximate</em> minimum (i.e., conservative) sample size needed to produce a <m>95</m>% CI with a specified margin of error<idx>Sample size estimation</idx> (i.e., the 'give-or-take' amount).
+    </p>
+    <ul>
+      <li>
+        <p>To estimate the sample size needed for <em>estimating a proportion</em> (Sect. <xref ref="sec-sample-size-proportions"/>), use:</p>
+        <men xml:id="eq-sample-size-proportion">n = \frac{1}{(\text{Margin of error})^2}.</men>
+      </li>
+      <li>
+        <p>To estimate the sample size needed for <em>estimating a mean</em> (Sect. <xref ref="sec-sample-size-one-mean"/>) use:</p>
+        <men xml:id="eq-sample-size-one-mean">n = \left( \frac{2\times s}{\text{Margin of error}}\right)^2</men>
+        <p>for some estimate&#160;<m>s</m> of the standard deviation of the data.</p>
+      </li>
+      <li>
+        <p>To estimate the sample size needed for <em>estimating a mean difference</em> (Sect. <xref ref="sec-sample-size-mean-differences"/>) use:</p>
+        <men xml:id="eq-sample-size-mean-diff">n = \left( \frac{2 \times s_d}{\text{Margin of error}}\right)^2</men>
+        <p>for some estimate&#160;<m>s_d</m> of the standard deviation of the differences.</p>
+      </li>
+      <li>
+        <p>To estimate the sample size needed for <em>estimating the difference between two means</em> (Sect. <xref ref="sec-sample-size-difference-two-means"/>) use:</p>
+        <men xml:id="eq-sample-size-two-means">n = 2\times \left( \frac{2 \times s}{\text{Margin of error}}\right)^2</men>
+        <p>for <em>each</em> group being compared, where <m>s</m> is an estimate of the common standard deviation in the population for both groups. This formula assumes:</p>
+        <ul>
+          <li><p>the sample size for each group will be the same; and</p></li>
+          <li><p>the standard deviation in each group is the same.</p></li>
+        </ul>
+      </li>
+      <li>
+        <p>To estimate the sample size needed for <em>estimating the difference between two proportions</em> (Sect. <xref ref="sec-sample-size-difference-two-proportions"/>) use:</p>
+        <men xml:id="eq-sample-size-two-proportions">n = \frac{2}{(\text{Margin of error})^2}</men>
+        <p>for <em>each</em> group being compared. This formula assumes the sample size in each group will be the same.</p>
+      </li>
+    </ul>
+
+    <p><alert>Notes:</alert></p>
+    <ul>
+      <li><p>In <em>sample size</em> calculations, <em>round up</em> the sample size found from the above formulas.</p></li>
+    </ul>
+  </section>
+
+  <section xml:id="sec-app-other-formulas">
+    <title>Other formulas</title>
+
+    <ul>
+      <li>
+        <p>To <em>calculate <m>z</m>-scores</em> (Sect. <xref ref="sec-z-scores"/>), use<idx><h>z</h><h>z-score</h></idx></p>
+        <men xml:id="eq-app-zscore-formula">z = \frac{\text{value of variable} - \text{mean of the distribution of the variable}}{\text{standard deviation of the distribution of the variable}}.</men>
+        <p><m>t</m>-scores are like <m>z</m>-scores.<idx><h>Test statistic</h><h>t-score</h></idx> When the 'variable' is a sample estimate (such as <m>\bar{x}</m>), the 'standard deviation of the distribution' is a standard error (such as <m>\text{s.e.}(\bar{x})</m>).</p>
+      </li>
+      <li><p>The <em>unstandardising formula</em> (Sect. <xref ref="sec-unstandardising"/>) is <m>x = \mu + (z\times \sigma)</m>.<idx>Unstandardising formula</idx></p></li>
+      <li><p>The <em>interquartile range</em> (IQR) is <m>Q_3 - Q_1</m>, where <m>Q_1</m> and <m>Q_3</m> are the first and third quartiles respectively (or, equivalently, the <m>25</m>th and <m>75</m>th percentiles).<idx>Interquartile range (IQR)</idx></p></li>
+      <li>
+        <p>The smallest expected value (for assessing statistical validity when forming CIs and conducting hypothesis tests with proportions or ORs) is</p>
+        <men xml:id="eq-app-smallest-expected">\frac{(\text{Smallest row total})\times(\text{Smallest column total})}{\text{Overall total}}.</men>
+      </li>
+      <li><p>The <em>regression equation</em> in the <em>sample</em> is <m>\hat{y} = b_0 + b_1 x</m>, where <m>b_0</m> is the sample intercept and <m>b_1</m> is the sample slope.</p></li>
+    </ul>
+  </section>
+
+  <section xml:id="sec-app-other-symbols">
+    <title>Other symbols and abbreviations used</title>
+    <idx><h>Standard deviation</h><h>of a population</h></idx>
+    <idx><h>Standard deviation</h><h>of a sample</h></idx>
+    <idx>Sample size</idx>
+
+    <table xml:id="tab-other-symbols">
+      <title>Some symbols and abbreviations used in this book.</title>
+      <tabular halign="center" top="medium" bottom="medium">
+        <col halign="center"/>
+        <col halign="left"/>
+        <col halign="center"/>
+        <row header="yes" bottom="medium">
+          <cell>Symbol or abbreviation</cell>
+          <cell>Meaning</cell>
+          <cell>Reference</cell>
+        </row>
+        <row>
+          <cell>RQ</cell>
+          <cell>Research question</cell>
+          <cell>Chap. <xref ref="ch-02-rqs"/></cell>
+        </row>
+        <row>
+          <cell><m>s</m></cell>
+          <cell>Sample standard deviation</cell>
+          <cell>Sect. <xref ref="sec-variation-std-dev"/></cell>
+        </row>
+        <row>
+          <cell><m>\sigma</m></cell>
+          <cell>Population standard deviation</cell>
+          <cell>Sect. <xref ref="sec-variation-std-dev"/></cell>
+        </row>
+        <row>
+          <cell><m>s_d</m></cell>
+          <cell>Sample standard deviation of differences</cell>
+          <cell>Sect. <xref ref="sec-variation-std-dev"/></cell>
+        </row>
+        <row>
+          <cell><m>\sigma_d</m></cell>
+          <cell>Population standard deviation of differences</cell>
+          <cell>Sect. <xref ref="sec-variation-std-dev"/></cell>
+        </row>
+        <row>
+          <cell><m>R^2</m></cell>
+          <cell>R-squared</cell>
+          <cell>Sect. <xref ref="sec-rsquared"/></cell>
+        </row>
+        <row>
+          <cell><m>H_0</m></cell>
+          <cell>Null hypothesis</cell>
+          <cell>Sect. <xref ref="sec-about-hypotheses"/></cell>
+        </row>
+        <row>
+          <cell><m>H_1</m></cell>
+          <cell>Alternative hypothesis</cell>
+          <cell>Sect. <xref ref="sec-about-hypotheses"/></cell>
+        </row>
+        <row>
+          <cell>CI</cell>
+          <cell>Confidence interval</cell>
+          <cell>Chap. <xref ref="ch-24-cis-more"/></cell>
+        </row>
+        <row>
+          <cell>s.e.</cell>
+          <cell>Standard error</cell>
+          <cell>Def. <xref ref="def-standard-error"/></cell>
+        </row>
+        <row>
+          <cell><m>n</m></cell>
+          <cell>Sample size</cell>
+          <cell>Def. <xref ref="def-sample-size"/></cell>
+        </row>
+        <row>
+          <cell><m>\chi^2</m></cell>
+          <cell>The chi-squared test statistic</cell>
+          <cell>Sect. <xref ref="sec-test-stat-obs"/></cell>
+        </row>
+        <row>
+          <cell><m>\pm</m></cell>
+          <cell>Plus-or-minus (give-or-take)</cell>
+          <cell>Sect. <xref ref="sec-c-ip-knownp"/></cell>
+        </row>
+      </tabular>
+    </table>
+  </section>
+
 </appendix>

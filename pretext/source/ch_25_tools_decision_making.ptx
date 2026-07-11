@@ -26,7 +26,7 @@
     </p>
     <figure xml:id="fig-draw15-cards">
       <caption>How likely is it to draw (with replacement) <m>25</m> red cards in a row from a fair pack?</caption>
-      <image source="fig-draw15-cards.png" width="75%"/>
+      <image source="fig-draw15-cards.gif" width="75%"/>
     </figure>
     <p>
       Of course, the sample of <m>25</m> cards is just one of <em>countless</em> possible samples that could have been chosen to study. Different samples comprise different cards, and the sample proportion depends on which cards are drawn for the studied sample. This leads to one of the most important observations about sampling.
@@ -202,7 +202,7 @@
     </p>
     <figure xml:id="fig-roll-dice10">
       <caption>Ten hands of <m>25</m> cards: the sample proportion of cards in each hand that is red (shown on the right-hand side) varies from hand to hand.</caption>
-      <image source="fig-roll-dice10.png" width="75%"/>
+      <image source="fig-roll-dice10.gif" width="75%"/>
     </figure>
     <p>
       The distribution of the sample statistic is called the <em>sampling distribution</em> (Sect. <xref ref="sec-sampling-variation-intro"/>). The sampling distribution for <m>\hat{p}</m> is given in Sect. <xref ref="sec-sampling-distribution-knownp"/> when the value of <m>p</m> is known (as assumed here): an approximate normal distribution, with mean <m>p = 0.5</m>, and a standard deviation (the <em>standard error</em>) of

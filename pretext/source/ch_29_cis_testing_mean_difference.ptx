@@ -998,31 +998,31 @@
     </figure>
     <figure xml:id="fig-smwt-numerical-output">
       <caption>Jamovi output showing summary statistics and hypothesis test results for the 6MWT data.</caption>
-      <image source="fig-smwt-numerical-output.png" width="80%"/>
+      <image source="jamovi/SMWT/SMWT-PairedT.png" width="80%"/>
     </figure>
     <figure xml:id="fig-floweringjamovi-ht">
       <caption>Software output for the flowering-day data.</caption>
-      <image source="fig-floweringjamovi-ht.png" width="100%"/>
+      <image source="jamovi/Flowering/FloweringAll.png" width="100%"/>
     </figure>
     <figure xml:id="fig-fruit-descriptives-jamovi">
       <caption>Software output for the fruit data.</caption>
-      <image source="fig-fruit-descriptives-jamovi.png" width="90%"/>
+      <image source="jamovi/Fruit/FruitWeight.png" width="90%"/>
     </figure>
     <figure xml:id="fig-captoriljamovi">
       <caption>Software output for the Captopril data.</caption>
-      <image source="fig-captoriljamovi.png" width="80%"/>
+      <image source="jamovi/CaptoprilAll/CaptoprilAll-PairedTOutput.png" width="80%"/>
     </figure>
     <figure xml:id="fig-stress-descriptives-jamovi">
       <caption>Software output for the surgery-stress data.</caption>
-      <image source="fig-stress-descriptives-jamovi.png" width="70%"/>
+      <image source="jamovi/Stress/StressDescriptives.png" width="70%"/>
     </figure>
     <figure xml:id="fig-weight-gain-output">
       <caption>The weight-gain data: software output.</caption>
-      <image source="fig-weight-gain-output.png" width="100%"/>
+      <image source="jamovi/WeightGain/WeightGain-PairedT.png" width="100%"/>
     </figure>
     <figure xml:id="fig-nitrogenjamovi">
       <caption>Software output for the nitrogen data. In the top table, the difference is implied as non-irrigated minus irrigated.</caption>
-      <image source="fig-nitrogenjamovi.png" width="100%"/>
+      <image source="jamovi/SoilCN/SoilCN-Testing.png" width="100%"/>
     </figure>
   </section>
 </chapter>

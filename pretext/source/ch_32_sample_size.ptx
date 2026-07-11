@@ -47,7 +47,7 @@
     </ul>
     <figure xml:id="fig-sample-size-ci">
       <caption>The approximate 95% confidence interval for various sample sizes.</caption>
-      <image source="fig-sample-size-ci.png" width="75%">
+      <image source="placeholder.jpeg" width="75%">
         <description><p>An interactive plot showing the approximate 95% confidence interval width shrinking as the sample size, <m>n</m>, increases, with a slider to change the sample size from 5 to 50.</p></description>
       </image>
     </figure>

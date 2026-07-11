@@ -293,7 +293,7 @@
     </p>
     <figure xml:id="fig-ci-widths-many2">
       <caption>Changing the confidence level of the CI changes the width, for any given sample size.</caption>
-      <image source="fig-ci-widths-many2.png" width="70%"/>
+      <image source="placeholder.jpeg" width="70%"/>
     </figure>
     <note>
       <p>
