@@ -22,8 +22,10 @@ __pycache__/
 cli.log
 logs/
 
-assets/generated/
-logs/
+# NOTE: assets/generated/ intentionally NOT ignored — it holds real,
+# permanent figure images (jamovi/regression-plot screenshots etc.)
+# sourced from the book's original bookdown build, not ephemeral
+# per-build output (that's assets/../generated-assets, above).
 
 
 # don't track OS related files (windows/macos/linux)
