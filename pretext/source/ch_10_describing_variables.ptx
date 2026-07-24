@@ -24,17 +24,17 @@
   <section xml:id="sec-describing-intro">
     <title>Introduction</title>
     <p>
-      Understanding the type of data collected is essential before summarising or analysing,<idx>Data</idx> because the <em>type</em> of data determines how to proceed. Broadly, data may be classified as either <em>quantitative</em> data (Sect. <xref ref="sec-quant-data"/>) or <em>qualitative</em> data (Sect. <xref ref="sec-qual-data"/>). The <em>data</em> are the recorded <em>values</em> of the variables, so we also talk about quantitative and qualitative <em>variables</em>. Quantitative variables record quantitative data; qualitative variables record qualitative data.
+      Understanding the type of data collected is essential before summarising or analysing,<idx>Data</idx> because the <em>type</em> of data determines how to proceed. Broadly, data may be classified as either <em>quantitative</em> data (<xref ref="sec-quant-data"/>) or <em>qualitative</em> data (<xref ref="sec-qual-data"/>). The <em>data</em> are the recorded <em>values</em> of the variables, so we also talk about quantitative and qualitative <em>variables</em>. Quantitative variables record quantitative data; qualitative variables record qualitative data.
     </p>
     <example xml:id="example-variables-data">
       <title>Variables and data</title>
       <p>
-        'Age' is a <em>variable</em> because age varies from individual to individual (Def. <xref ref="def-variable"/>). The <em>data</em> may include values like <m>13</m> months, <m>21</m> years and <m>76</m> years.
+        'Age' is a <em>variable</em> because age varies from individual to individual (<xref ref="def-variable"/>). The <em>data</em> may include values like <m>13</m> months, <m>21</m> years and <m>76</m> years.
       </p>
     </example>
     <warning>
       <p>
-        <em>Quantitative research</em> summarises and analyses data using numerical methods (Sect. <xref ref="sec-types-of-research"/>). <em>Quantitative research</em> can involve both <em>quantitative</em> and <em>qualitative</em> data, because both can be summarised numerically (Chaps. <xref ref="sec-summarise-quant-data"/> and <xref ref="ch-12-summary-qual"/> respectively) and analysed numerically.
+        <em>Quantitative research</em> summarises and analyses data using numerical methods (<xref ref="sec-types-of-research"/>). <em>Quantitative research</em> can involve both <em>quantitative</em> and <em>qualitative</em> data, because both can be summarised numerically (<xref ref="sec-summarise-quant-data"/> and <xref ref="ch-12-summary-qual"/> respectively) and analysed numerically.
       </p>
     </warning>
   </section>
@@ -123,7 +123,7 @@
     <example xml:id="example-discrete-as-continuous">
       <title>Treating discrete data as continuous</title>
       <p>
-        Annual income is discrete, since no income is between \$$80 000.00$ and \$$80 000.01$. However, annual incomes are much larger than cents, and vary at scales much greater than cents, and so are often treated as continuous.
+        Annual income is discrete, since no income is between <m>$80 000.00</m> and <m>$80 000.01</m>. However, annual incomes are much larger than cents, and vary at scales much greater than cents, and so are often treated as continuous.
       </p>
     </example>
     <idx>Quantitative data|)</idx>
@@ -223,7 +223,8 @@
         Consider this questionnaire question:
       </p>
       <blockquote>
-        <p>Please indicate the extent to which you agree or disagree with this statement: 'Vaping should be banned'. Strongly disagree; Disagree; Neither agree nor disagree; Agree; Strongly agree.</p>
+        <p>Please indicate the extent to which you agree or disagree with this statement: 'Vaping should be banned'.</p>
+<p>Strongly disagree; Disagree; Neither agree nor disagree; Agree; Strongly agree.</p>
       </blockquote>
       <p>
         The responses will be <em>ordinal</em> with five levels. Giving the levels in the given order (or the reverse order) makes sense; giving the levels in alphabetical order, for example, would be very confusing. The levels have a natural order.
@@ -254,7 +255,7 @@
     </p>
     <table xml:id="tab-water-access-qual-variables">
       <title>The qualitative variables in the water-access dataset.</title>
-      <tabular halign="center" top="medium" bottom="medium">
+      <tabular halign="center">
         <row header="yes" bottom="medium">
           <cell><em>Qualitative variable</em></cell>
           <cell><em>Type</em></cell>
@@ -309,7 +310,7 @@
     </table>
     <table xml:id="tab-water-access-quant-variables">
       <title>The quantitative variables in the water-access dataset.</title>
-      <tabular halign="center" top="medium" bottom="medium">
+      <tabular halign="center">
         <row header="yes" bottom="medium">
           <cell><em>Quantitative variable</em></cell>
           <cell><em>Type</em></cell>
@@ -347,31 +348,26 @@
 
   <reading-questions xml:id="sec-chap11-quick-review">
     <title>Quick review questions</title>
-    <introduction>
+    <exercise xml:id="ch10-rq">
       <p>
         <xref ref="benetou2020diet"/> studied school-aged adolescents in Greece. Among other variables, for each child they recorded the body-mass index (weight, divided by height-squared), diet quality (poor; moderate; good), the region where they lived (Attica; Thessaloniki; Other), the number of days they performed physical exercise in the last week, and school grade.
       </p>
-      <p>Are the following statements <em>true</em> or <em>false</em>?</p>
-    </introduction>
-    <exercise xml:id="rq-ch10-1">
-      <statement><p>'Body-mass index' is a quantitative discrete variable.</p></statement>
-      <answer><p>False (quantitative continuous).</p></answer>
-    </exercise>
-    <exercise xml:id="rq-ch10-2">
-      <statement><p>'Diet quality' is a qualitative ordinal variable.</p></statement>
-      <answer><p>True.</p></answer>
-    </exercise>
-    <exercise xml:id="rq-ch10-3">
-      <statement><p>'Region of residence' is a qualitative nominal variable.</p></statement>
-      <answer><p>True.</p></answer>
-    </exercise>
-    <exercise xml:id="rq-ch10-4">
-      <statement><p>'Number of days the child performed physical exercise in the last week' is a quantitative discrete variable.</p></statement>
-      <answer><p>True.</p></answer>
-    </exercise>
-    <exercise xml:id="rq-ch10-5">
-      <statement><p>'School grade' is a quantitative continuous variable.</p></statement>
-      <answer><p>False (qualitative ordinal).</p></answer>
+      <ol>
+        <li><p>'Body-mass index' is a quantitative discrete variable. </p></li>
+        <li><p>'Diet quality' is a qualitative ordinal variable. </p></li>
+        <li><p>'Region of residence' is a qualitative nominal variable. </p></li>
+        <li><p>'Number of days the child performed physical exercise in the last week' is a quantitative discrete variable.</p></li> 
+        <li><p>'School grade' is a quantitative continuous variable. </p></li>
+      </ol>
+<solution>
+<ol>
+<li><p>FALSE</p></li>
+<li><p>TRUE</p></li>
+<li><p>TRUE</p></li>
+<li><p>TRUE</p></li>
+<li><p>FALSE</p></li>
+</ol>
+</solution>
     </exercise>
   </reading-questions>
 
@@ -530,7 +526,7 @@
       </p>
       <table xml:id="tab-describe-ankle-foot">
         <title>The orthoses dataset.</title>
-        <tabular halign="center" top="medium" bottom="medium">
+        <tabular halign="center">
           <row header="yes" bottom="medium">
             <cell><em>Gender</em></cell>
             <cell><em>Age (years)</em></cell>
@@ -585,7 +581,7 @@
       </ol>
       <table xml:id="tab-table-selfie-deaths">
         <title>Locations of people dying while taking selfies.</title>
-        <tabular halign="center" top="medium" bottom="medium">
+        <tabular halign="center">
           <row header="yes" bottom="medium">
             <cell></cell>
             <cell><em>Number</em></cell>
