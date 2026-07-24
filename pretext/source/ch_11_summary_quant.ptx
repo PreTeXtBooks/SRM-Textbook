@@ -35,7 +35,7 @@
       </statement>
     </definition>
     <p>
-      The distribution can be displayed using a frequency table (Sect. <xref ref="sec-quant-freq-table"/>) or a graph (Sect. <xref ref="sec-quantitative-graphs"/>). The distribution of quantitative data can be described by the shape (Sect. <xref ref="sec-summary-shape"/>), and summarised numerically by computing the average value (Sect. <xref ref="sec-compute-average"/>), computing the amount of variation (Sect. <xref ref="sec-variation"/>), and identifying outliers (Sect. <xref ref="sec-summary-outliers"/>).
+      The distribution can be displayed using a frequency table (<xref ref="sec-quant-freq-table"/>) or a graph (<xref ref="sec-quantitative-graphs"/>). The distribution of quantitative data can be described by the shape (<xref ref="sec-summary-shape"/>), and summarised numerically by computing the average value (<xref ref="sec-compute-average"/>), computing the amount of variation (<xref ref="sec-variation"/>), and identifying outliers (<xref ref="sec-summary-outliers"/>).
     </p>
   </section>
 
@@ -52,18 +52,16 @@
     <example xml:id="example-cyclones-table">
       <title>Frequency table: discrete data</title>
       <p>
-        The data in Table <xref ref="tab-cyclone-data"/>
-      </p>
-      <p>
+        The data in <xref ref="tab-cyclone-data"/>
         show the number of severe cyclones in the Australian region, for each year from 1969 to 2005.
       </p>
       <p>
-        A frequency table can be constructed by binning each discrete value individually (Table <xref ref="tab-cyclone-frequency-table"/>, left table) or grouped in pairs (Table <xref ref="tab-cyclone-frequency-table"/>, right table). The table gives the number of years, and the corresponding percentages, that recorded the given number of cyclones.
+        A frequency table can be constructed by binning each discrete value individually (<xref ref="tab-cyclone-frequency-table"/>, left table) or grouped in pairs (<xref ref="tab-cyclone-frequency-table"/>, right table). The table gives the number of years, and the corresponding percentages, that recorded the given number of cyclones.
       </p>
     </example>
     <table xml:id="tab-cyclone-data">
       <title>The number of severe cyclones recorded in the Australian region for each year (first five and last five of <m>37</m> years shown).</title>
-      <tabular halign="center" top="medium" bottom="medium">
+      <tabular halign="center">
         <row header="yes" bottom="medium">
           <cell>Year</cell><cell>Cyclones recorded</cell>
         </row>
@@ -82,7 +80,7 @@
     </table>
     <table xml:id="tab-cyclone-frequency-table">
       <title>Two frequency tables for the severe cyclone data.</title>
-      <tabular halign="center" top="medium" bottom="medium">
+      <tabular halign="center">
         <row header="yes" bottom="medium">
           <cell>Number cyclones</cell><cell>Number of years</cell><cell>Percentage of years</cell>
         </row>
@@ -103,10 +101,10 @@
     <example xml:id="example-baby-boom-table">
       <title>Frequency table: continuous data</title>
       <p>
-        Table <xref ref="tab-baby-boom-data"/> gives the weights of babies born in a hospital on one day <xref ref="mypapers-Dunn-dataset-1999"/><xref ref="data-Steele-BabyBoom"/>, plus the gender of each baby, and the number of minutes after midnight of the birth (shown in birth order).
+        <xref ref="tab-baby-boom-data"/> gives the weights of babies born in a hospital on one day <xref ref="mypapers-Dunn-dataset-1999"/><xref ref="data-Steele-BabyBoom"/>, plus the gender of each baby, and the number of minutes after midnight of the birth (shown in birth order).
       </p>
       <p>
-        To display the distribution of birth weights, the weights can be grouped into clearly-defined weight intervals (Table <xref ref="tab-baby-boom-table"/>, left column). Alternatively, the breaks between the bins can be given to one more decimal place than the data to avoid observations landing exactly on the bin divisions (final column).
+        To display the distribution of birth weights, the weights can be grouped into clearly-defined weight intervals (<xref ref="tab-baby-boom-table"/>, left column). Alternatively, the breaks between the bins can be given to one more decimal place than the data to avoid observations landing exactly on the bin divisions (final column).
       </p>
       <p>
         The table also gives percentage of births in each bin; for example, the percentage of babies over <m>4.0</m> is <m>1/44 100 = 2.27</m>%, or about <m>2</m>%. Most babies in the sample are between <m>3</m> and <m>4</m> at birth.
@@ -114,7 +112,7 @@
     </example>
     <table xml:id="tab-baby-boom-data">
       <title>The first nine observations (of <m>n = 44</m>) of the baby-births data: the number of babies born in a Brisbane (Australia) hospital on one specific day. The <sq>birth time</sq> is the number of minutes after midnight.</title>
-      <tabular halign="center" top="medium" bottom="medium">
+      <tabular halign="center">
         <row header="yes" bottom="medium">
           <cell>Gender</cell><cell>Weight (kg)</cell><cell>Birth time</cell>
         </row>
@@ -130,7 +128,7 @@
     </table>
     <table xml:id="tab-baby-boom-table">
       <title>The baby-weights data, displayed in a frequency table. The first and last columns show two different (but equivalent) ways to group the data.</title>
-      <tabular halign="center" top="medium" bottom="medium">
+      <tabular halign="center">
         <row header="yes" bottom="medium">
           <cell>Weight group</cell><cell>Number of babies</cell><cell>Percentage of babies</cell><cell>Alternative weight group</cell>
         </row>
@@ -143,7 +141,7 @@
       </tabular>
     </table>
     <p>
-      Sometimes trial and error is needed to find useful intervals for continuous data. Usually, but not universally, the intervals <em>include</em> values at the lower end of the interval, but <em>exclude</em> values at the upper end (as in Table <xref ref="tab-baby-boom-table"/>).
+      Sometimes trial and error is needed to find useful intervals for continuous data. Usually, but not universally, the intervals <em>include</em> values at the lower end of the interval, but <em>exclude</em> values at the upper end (as in <xref ref="tab-baby-boom-table"/>).
     </p>
   </section>
 
@@ -152,15 +150,15 @@
     <idx><h>Quantitative data</h><h>graphs|(</h></idx>
     <idx><h>Software output</h><h>graphs</h></idx>
     <p>
-      The graphs in this section are appropriate for <em>continuous</em> quantitative data, and sometimes for <em>discrete</em> quantitative data if many values are possible. Sometimes, <em>discrete</em> data with very few recorded values are better displayed using graphs designed for qualitative data (Sect. <xref ref="sec-qualitative-graphs"/>).
+      The graphs in this section are appropriate for <em>continuous</em> quantitative data, and sometimes for <em>discrete</em> quantitative data if many values are possible. Sometimes, <em>discrete</em> data with very few recorded values are better displayed using graphs designed for qualitative data (<xref ref="sec-qualitative-graphs"/>).
     </p>
     <p>
       Graphs used to display the distribution of one quantitative variable include:
     </p>
     <ul>
-      <li><p><em>histograms</em> (Sect. <xref ref="sec-histograms"/>), which are best for moderate to large amounts of data.</p></li>
-      <li><p><em>stemplots</em> (Sect. <xref ref="sec-stem-and-leaf-plots"/>), which are best for small amounts of data, and are only sometimes useful.</p></li>
-      <li><p><em>dot charts</em> (Sect. <xref ref="sec-dot-charts-one-var"/>), which are used for small to moderate amounts of data.</p></li>
+      <li><p><em>histograms</em> (<xref ref="sec-histograms"/>), which are best for moderate to large amounts of data.</p></li>
+      <li><p><em>stemplots</em> (<xref ref="sec-stem-and-leaf-plots"/>), which are best for small amounts of data, and are only sometimes useful.</p></li>
+      <li><p><em>dot charts</em> (<xref ref="sec-dot-charts-one-var"/>), which are used for small to moderate amounts of data.</p></li>
     </ul>
     <warning>
       <p>
@@ -175,15 +173,15 @@
       Histograms are a series of boxes, where the width of the box represents an interval of <em>values</em> of the variable being graphed, and the height of the box represents the <em>number</em> (or <em>percentage</em>) of observations within that range of values.<fn>Actually, the <em>area</em> of the box is proportional to the number of observations. We only consider histograms where the boxes have the same width, so the statements are equivalent.</fn> The height of the histogram bars indicate the number (or percentage) in each category (often called 'bins').<idx><h>Graphs</h><h>histogram!bins</h></idx> A histogram is essentially a picture of a frequency table. The vertical axis can be counts (labelled as 'Counts of trees', 'Number of frogs', 'Frequency of people', or similar) or percentages.
     </p>
     <p>
-      When the quantitative variable is <em>discrete</em>, the labels usually are placed on the axis aligned with the centre of the bar (see Example <xref ref="example-histograms-discrete"/>).
+      When the quantitative variable is <em>discrete</em>, the labels usually are placed on the axis aligned with the centre of the bar (see <xref ref="example-histograms-discrete"/>).
     </p>
     <example xml:id="example-histograms-discrete">
       <title>Histograms: discrete data</title>
       <p>
-        Consider again the number of severe cyclones in the Australian region (Table <xref ref="tab-cyclone-data"/>).
+        Consider again the number of severe cyclones in the Australian region (<xref ref="tab-cyclone-data"/>).
       </p>
       <p>
-        A histogram can be constructed from either frequency table in Table <xref ref="tab-cyclone-frequency-table"/>; see Fig. <xref ref="fig-hist-cyclones"/>.
+        A histogram can be constructed from either frequency table in <xref ref="tab-cyclone-frequency-table"/>; see <xref ref="fig-hist-cyclones"/>.
       </p>
       <p>
         For example, the left histogram shows there were eight years in which three severe cyclones were recorded.
@@ -198,14 +196,12 @@
     </figure>
     <warning>
       <p>
-        The axis displaying the counts (or percentages) should <em>start from zero</em>, since the height of the bars visually implies the frequency of those observations (see Example <xref ref="example-vertical-truncation"/>).
+        The axis displaying the counts (or percentages) should <em>start from zero</em>, since the height of the bars visually implies the frequency of those observations (see <xref ref="example-vertical-truncation"/>).
       </p>
     </warning>
     <p>
       When the quantitative variable is <em>continuous</em>, care is needed when constructing the histogram. Since the data are continuous, the data must be rounded. (For instance, the birthweights in
-    </p>
-    <p>
-      are rounded to one decimal place of a kilogram.) This means care is needed when defining boundaries between bins, and ensuring clarity about which bin contains observations when they lie on (or near) a boundary. One way to do this is to define the boundaries between bins to one more decimal place than the given data (as in the final column of Table <xref ref="tab-baby-boom-table"/>).
+ <xref ref="tab-baby-boom-table"/> are rounded to one decimal place of a kilogram.) This means care is needed when defining boundaries between bins, and ensuring clarity about which bin contains observations when they lie on (or near) a boundary. One way to do this is to define the boundaries between bins to one more decimal place than the given data (as in the final column of <xref ref="tab-baby-boom-table"/>).
     </p>
     <p>
       The choice of bin size and bin boundaries can substantially change how a histogram displays the data (Examples <xref ref="example-histograms"/> and <xref ref="example-bin-width-faithful"/>). For large datasets, these choices tend to matter less.
@@ -218,18 +214,22 @@
     <example xml:id="example-histograms">
       <title>Histograms: continuous data</title>
       <p>
-        Consider again the weights (in kg) of babies born in a Brisbane hospital in one day (Table <xref ref="tab-baby-boom-data"/>).
+        Consider again the weights (in kg) of babies born in a Brisbane hospital in one day (<xref ref="tab-baby-boom-data"/>).
       </p>
       <p>
-        A histogram can be constructed for these data; see Fig. <xref ref="fig-bb-hist-two"/>.
+        A histogram can be constructed for these data; see <xref ref="fig-bb-hist-two"/>.
       </p>
       <p>
-        An observation on a boundary between the bins may be placed in the <em>higher</em> box (i.e., <m>2.5</m> is in the '<m>2.5</m> to <m>3.0</m>' box, not the '<m>2.0</m> to <m>2.5</m>' box): see the left panel. Alternatively, a boundary observation may be placed in the <em>lower</em> box; see the centre panel. This histogram is a picture of the frequency table in Table <xref ref="tab-baby-boom-table"/>.
+        An observation on a boundary between the bins may be placed in the <em>higher</em> box (i.e., <m>2.5</m> is in the '<m>2.5</m> to <m>3.0</m>' box, not the '<m>2.0</m> to <m>2.5</m>' box): see the left panel. Alternatively, a boundary observation may be placed in the <em>lower</em> box; see the centre panel. This histogram is a picture of the frequency table in <xref ref="tab-baby-boom-table"/>.
       </p>
       <p>
         To avoid confusion, the boundaries can be defined to one more decimal place than the data (right panel), which is equivalent to counting the observations in the lower box (as in the left panel). Notice that the choice impacts the appearance of the histogram.
       </p>
     </example>
+    <figure>
+      <caption>GIF constructing a histogram.</caption>
+      <image source="unnamed-chunk-5.gif" width="100%"/>
+    </figure>
     <figure xml:id="fig-bb-hist-two">
       <caption>Histograms can be constructed in different ways to manage observations on the boundary of bins. Left: boundary values counted in the higher box. Centre: boundary values counted in the lower box. Right: defining boundaries with one more decimal place than the data may be clearer.</caption>
       <image source="fig-bb-hist-two.png" width="100%"/>
@@ -237,7 +237,7 @@
     <example xml:id="example-histograms2">
       <title>Histograms</title>
       <p>
-        <xref ref="data-Mages2017-BrainFreeze"/> recorded the length of 'brain freezes' after consuming cold food or drink. A histogram of the data (Fig. <xref ref="fig-hist-brain-freeze"/>), shows <m>11</m> people experience symptoms less than <m>5</m> in length; nine people experienced symptoms for at least <m>5</m> but less than <m>10</m>; and <m>1</m> person experienced symptoms for at least <m>35</m> but under <m>40</m>.
+        <xref ref="data-Mages2017-BrainFreeze"/> recorded the length of 'brain freezes' after consuming cold food or drink. A histogram of the data (<xref ref="fig-hist-brain-freeze"/>), shows <m>11</m> people experience symptoms less than <m>5</m> in length; nine people experienced symptoms for at least <m>5</m> but less than <m>10</m>; and <m>1</m> person experienced symptoms for at least <m>35</m> but under <m>40</m>.
       </p>
     </example>
     <figure xml:id="fig-hist-brain-freeze">
@@ -250,7 +250,7 @@
     <example xml:id="example-bin-width-faithful">
       <title>Histograms: bin width</title>
       <p>
-        A histogram for the time between eruptions <xref ref="hardle1991smoothing"/> of the <em>Old Faithful</em> geyser in Yellowstone National Park (USA)<idx><h>Graphs</h><h>histogram!bins</h></idx> is shown in Fig. <xref ref="fig-bimodal-faithful-histo-change-bins"/>. Changing the number of bins changes the impression of the distribution.
+        A histogram for the time between eruptions <xref ref="hardle1991smoothing"/> of the <em>Old Faithful</em> geyser in Yellowstone National Park (USA)<idx><h>Graphs</h><h>histogram!bins</h></idx> is shown in <xref ref="fig-bimodal-faithful-histo-change-bins"/>. Changing the number of bins changes the impression of the distribution.
       </p>
     </example>
     <figure xml:id="fig-bimodal-faithful-histo-change-bins">
@@ -266,28 +266,23 @@
       <em>Stemplots</em> (or <em>stem-and-leaf plots</em>) are best described and explained using an example. Consider again the data in
     </p>
     <p>
-      the weights of babies born in a Brisbane hospital on one day (Table <xref ref="tab-baby-boom-data"/>).
+      the weights of babies born in a Brisbane hospital on one day (<xref ref="tab-baby-boom-data"/>).
     </p>
     <image source="Illustrations/pexels-nappy-3569597.jpg" width="25%">
       <description><p>Image.</p></description>
     </image>
     <p>
-      In a stemplot, part of each number is placed to the left of a vertical line (the <em>stems</em>), and the rest of each number to the right of the line (the <em>leaves</em>). The weights
-    </p>
-    <p>
-      are given to one decimal place of a kilogram, so the whole number of kilograms is placed to the left of the line (as the <em>stem</em>), and the first decimal place is placed on the right of the line (as a <em>leaf</em>). Fig. <xref ref="fig-bb-stem1"/> shows the stemplot in the process of being built, and Fig. <xref ref="fig-bb-stem44"/> shows the final stemplot.
+      In a stemplot, part of each number is placed to the left of a vertical line (the <em>stems</em>), and the rest of each number to the right of the line (the <em>leaves</em>). The weights in <xref ref="tab-baby-boom-table"/>
+      are given to one decimal place of a kilogram, so the whole number of kilograms is placed to the left of the line (as the <em>stem</em>), and the first decimal place is placed on the right of the line (as a <em>leaf</em>). 
+ and the first decimal place is placed on the right of the line (as a leaf). The animation below shows how the stemplot is constructed. The first weight, of 
+<m>1.7kg</m>, is entered with the <m>1</m> to the left of the line, and the <m>7</m> to the right: <c>1 | 7</c>. Similarly, 
+<m>2.1kg</m> is entered as <c>2 | 1</c> and <m>2.2kg</m> is entered as <c>2 | 2</c>, sharing the same stem
+as for <m>2.1kg</m>. The plot shows that most birthweights are <m>3</m>-point-something kilograms
     </p>
     <figure xml:id="fig-bb-stem1">
-      <caption>Starting to make the stemplot for the baby-weight data: the first four observations added. The data are on the left; the stemplot during construction on the right.</caption>
-      <image source="fig-bb-stem1.png" width="100%"/>
+      <caption>GIF making the stemplot for the baby-weight data. The data are on the left; the stemplot during construction on the right.</caption>
+      <image source="fig-bb-stem1.gif" width="100%"/>
     </figure>
-    <figure xml:id="fig-bb-stem44">
-      <caption>The completed stemplot for the baby-weight data.</caption>
-      <image source="fig-bb-stem44.png" width="65%"/>
-    </figure>
-    <p>
-      The first weight, of <m>1.7</m>, is entered with the <m>1</m> to the left of the line, and the <m>7</m> to the right: <c>1 | 7</c>. Similarly, <m>2.1</m> is entered as <c>2 | 1</c> and <m>2.2</m> is entered as <c>2 | 2</c>, sharing the same stem as for <m>2.1</m>. The plot shows that most birthweights are <m>3</m>-point-something kilograms.
-    </p>
     <p>
       For stemplots:
     </p>
@@ -299,7 +294,8 @@
       <li><p>data may sometimes need suitable rounding before creating the stemplot (the baby weights were originally given to three decimal places).</p></li>
       <li><p>the numbers in each row should be evenly spaced, with the numbers in the columns under each other, so the length of each stem is proportional to the number of observations.</p></li>
       <li><p>the observations are <em>ordered</em> within each stem, so patterns in the data can be seen.</p></li>
-      <li><p>add an explanation for reading the stemplot.</p></li>
+      <li><p>add an explanation for reading the stemplot. For example, the stemplot for the baby-birth data says '
+'<c>2 | 6</c> means <m>2.6kg</m>' (rather than, say, <m>0.26kg</m>, or <m>2lb 6oz</m>).</p></li>
     </ul>
     <p>
       For example, the stemplot for the baby-birth data says '<m>2</m> | <m>6</m> means <m>2.6</m>' (rather than, say, <m>0.26</m>, or <m>2</m> <m>6</m>).
@@ -307,7 +303,7 @@
     <example xml:id="example-stem-leaf-plots">
       <title>Stemplots</title>
       <p>
-        <xref ref="wright2021chest"/> recorded the chest-beating rate of gorillas. The stemplot (Fig. <xref ref="fig-gorillas-stem"/>)
+        <xref ref="wright2021chest"/> recorded the chest-beating rate of gorillas. The stemplot (<xref ref="fig-gorillas-stem"/>)
       </p>
       <p>
         for gorillas aged under <m>20</m> years of age shows a lot of variation in the chest-beating rate.
@@ -315,8 +311,12 @@
     </example>
     <figure xml:id="fig-gorillas-stem">
       <caption>The stemplot (right) for the gorilla chest-beating data (shown on the left).</caption>
-      <image source="fig-gorillas-stem.png" width="85%"/>
+      <image source="fig-gorillas-stem.gif" width="85%"/>
     </figure>
+<p>The following short video may help explain some of these concepts:</p>
+
+  <video xml:id="yt-list-vars-one" label="youtube-list-vars-one" youtube="KfkvedIBPjE"/>
+
   </subsection>
 
   <subsection xml:id="sec-dot-charts-one-var">
@@ -328,12 +328,8 @@
     <example xml:id="example-dots-charts-quant2">
       <title>Dot charts</title>
       <p>
-        Consider the weights (in kg) of babies born in a Brisbane hospital (Table <xref ref="tab-baby-boom-data"/>).
-      </p>
-      <p>
-        A dot chart (Fig. <xref ref="fig-baby-boom-dot-html"/>)
-      </p>
-      <p>
+        Consider the weights (in kg) of babies born in a Brisbane hospital (<xref ref="tab-baby-boom-data"/>).
+        A dot chart (<xref ref="fig-baby-boom-dot-html"/>)
         shows that most babies were born between <m>3</m> and <m>4</m>. The points have been <em>jittered</em>.<idx><h>Overplotting</h><h>jittering</h></idx>
       </p>
     </example>
@@ -344,7 +340,7 @@
     <example xml:id="example-dot-charts-quant">
       <title>Dot charts</title>
       <p>
-        The chest-beating rate of young gorillas (Example <xref ref="example-stem-leaf-plots"/>) can be displayed using a dot chart (Fig. <xref ref="fig-fries-html"/>, top panel).
+        The chest-beating rate of young gorillas (<xref ref="example-stem-leaf-plots"/>) can be displayed using a dot chart (<xref ref="fig-fries-html"/>, top panel).
       </p>
       <p>
         The points have been <em>stacked</em>.<idx><h>Overplotting</h><h>stacking</h></idx>
@@ -369,12 +365,12 @@
       <li><p>Any <em>outliers</em> (unusually large or small observations) or unusual features.<idx><h>Quantitative data</h><h>outliers</h></idx><idx>Outliers</idx></p></li>
     </ol>
     <p>
-      These can be described in rough terms. The average, variation and outliers are usually described numerically, too (Sect. <xref ref="sec-compute-average"/> to Sect. <xref ref="sec-summary-outliers"/>).
+      These can be described in rough terms. The average, variation and outliers are usually described numerically, too (<xref ref="sec-compute-average"/> to <xref ref="sec-summary-outliers"/>).
     </p>
     <example xml:id="example-describe-quant-data">
       <title>Describing quantitative data</title>
       <p>
-        The weights of babies (Example <xref ref="example-histograms"/>) are typically between about <m>2.5</m> and <m>3</m> (the <em>average</em>), with most between <m>1.5</m> and <m>4.5</m> (<em>variation</em>). A few babies have very low weights (<em>shape</em>), probably premature births. No unusual values are present.
+        The weights of babies (<xref ref="example-histograms"/>) are typically between about <m>2.5</m> and <m>3</m> (the <em>average</em>), with most between <m>1.5</m> and <m>4.5</m> (<em>variation</em>). A few babies have very low weights (<em>shape</em>), probably premature births. No unusual values are present.
       </p>
     </example>
     <idx><h>Quantitative data</h><h>graphs|)</h></idx>
@@ -403,7 +399,7 @@
       </statement>
     </definition>
     <p>
-      A statistic is a numerical value estimating an unknown population value.<idx>Estimate</idx> However, countless samples are possible (Sect. <xref ref="sec-idea-of-sampling"/>), and so countless possible values for the statistic<mdash/>all of which are estimates of the value of the parameter<mdash/>are possible. The observed value of the statistic depends on which one of the countless possible samples is selected.
+      A statistic is a numerical value estimating an unknown population value.<idx>Estimate</idx> However, countless samples are possible (<xref ref="sec-idea-of-sampling"/>), and so countless possible values for the statistic<mdash/>all of which are estimates of the value of the parameter<mdash/>are possible. The observed value of the statistic depends on which one of the countless possible samples is selected.
     </p>
     <warning>
       <p>
@@ -428,7 +424,7 @@
       <li><p>In bimodal distributions, the distribution has two peaks.<idx><h>Shape</h><h>bimodal</h></idx></p></li>
     </ul>
     <p>
-      Sometimes, no short descriptions (as above) are suitable. Fig. <xref ref="fig-shape-description-examples"/> shows typical shapes.
+      Sometimes, no short descriptions (as above) are suitable. <xref ref="fig-shape-description-examples"/> shows typical shapes.
     </p>
     <figure xml:id="fig-shape-description-examples">
       <caption>Some common shapes of the distribution of qualitative data.</caption>
@@ -437,10 +433,10 @@
     <example xml:id="example-bimodal-faithful">
       <title>Bimodal data</title>
       <p>
-        The <em>Old Faithful</em> geyser in Yellowstone National Park (USA) erupts regularly <xref ref="hardle1991smoothing"/>. The histogram for the time between eruptions (Fig. <xref ref="fig-bimodal-faithful-histo-change-bins"/>, left panel) is bimodal, with peaks near <m>55</m> and <m>80</m>.
+        The <em>Old Faithful</em> geyser in Yellowstone National Park (USA) erupts regularly <xref ref="hardle1991smoothing"/>. The histogram for the time between eruptions (<xref ref="fig-bimodal-faithful-histo-change-bins"/>, left panel) is bimodal, with peaks near <m>55</m> and <m>80</m>.
       </p>
       <p>
-        The weight of babies born in Brisbane (Fig. <xref ref="fig-bb-hist-two"/>) are slightly skewed left.
+        The weight of babies born in Brisbane (<xref ref="fig-bb-hist-two"/>) are slightly skewed left.
       </p>
     </example>
   </section>
@@ -456,8 +452,8 @@
       The average (or <em>location</em>, or <em>central value</em>) for <em>quantitative sample data</em> can be described numerically in many ways. The two most common are:
     </p>
     <ul>
-      <li><p>the <em>sample mean</em> (or <em>sample arithmetic mean</em>), which estimates the unknown population mean (Sect. <xref ref="sec-mean"/>).</p></li>
-      <li><p>the <em>sample median</em>, which estimates the unknown population median (Sect. <xref ref="sec-median"/>).</p></li>
+      <li><p>the <em>sample mean</em> (or <em>sample arithmetic mean</em>), which estimates the unknown population mean (<xref ref="sec-mean"/>).</p></li>
+      <li><p>the <em>sample median</em>, which estimates the unknown population median (<xref ref="sec-median"/>).</p></li>
     </ul>
     <p>
       In both cases, the parameter is <em>estimated</em> by a statistic. Understanding whether to use the mean or median is important.
@@ -507,21 +503,21 @@
         Consider a small dataset for answering this descriptive RQ: 'For gorillas aged under <m>20</m>, what is the average chest-beating rate?' The population mean rate (denoted <m>\mu</m>) is to be estimated.
       </p>
       <p>
-        Every gorilla cannot be studied, so a <em>sample</em> is studied. The unknown population mean <m>\mu</m> is estimated using the sample mean (<m>\bar{x}</m>) of <m>n = 14</m> young gorillas (Example <xref ref="example-stem-leaf-plots"/>, top panel).
+        Every gorilla cannot be studied, so a <em>sample</em> is studied. The unknown population mean <m>\mu</m> is estimated using the sample mean (<m>\bar{x}</m>) of <m>n = 14</m> young gorillas (<xref ref="example-stem-leaf-plots"/>, top panel).
       </p>
       <p>
         Of course, a different sample would likely give a different value for <m>\bar{x}</m>.
       </p>
     </example>
     <p>
-      The sample mean is the 'balance point' of the
-    </p>
-    <p>
-      Also, the positive and negative distances (the 'deviations') of the observations from the mean add to
-    </p>
-    <p>
-      Both of these explanations seem reasonable for identifying an 'average' value for the data.
-    </p>
+      The sample mean is the 'balance point' of the observations. The animation below shows how the mean acts as the balance point for the gorilla data. Also, the positive and negative distances (the 'deviations') of the observations from the mean add to zero, as in the animation below. Both of these explanations seem reasonable for identifying an 'average' value for the data.
+</p>
+    <figure>
+      <image source="unnamed-chunk-16.gif" width="100%"/>
+    </figure>
+    <figure>
+      <image source="unnamed-chunk-17.gif" width="100%"/>
+    </figure>
     <definition xml:id="def-mean">
       <title>Mean</title>
       <statement>
@@ -537,14 +533,14 @@
     <example xml:id="example-compute-mean">
       <title>Computing a sample mean</title>
       <p>
-        For the chest-beating data (Example <xref ref="example-stem-leaf-plots"/>, top panel)
+        For the chest-beating data (<xref ref="example-stem-leaf-plots"/>, top panel)
       </p>
       <p>
         an <em>estimate</em> of the population mean (i.e., the sample mean) chest-beating rate is found by summing all <m>n = 14</m> observations then dividing by <m>n = 14</m>:
       </p>
       <me>\overline{x} = \frac{\sum x}{n} = \frac{0.7 + 0.9 + \cdots + 4.4}{14} = \frac{31.1}{14} =  2.221429.</me>
       <p>
-        The sample mean, the best estimate of the population mean, is <m>2.22</m> beats per <m>10</m>.
+        The sample mean, the best estimate of the population mean, is <m>2.22</m> beats per <m>10h</m>.
       </p>
     </example>
     <note>
@@ -555,18 +551,18 @@
         Software and calculators often produce numerical answers to many decimal places, not all of which may be meaningful or useful. A simple, but often useful, rule-of-thumb is to round to one or two more significant figures than the original data. Software usually does not add measurement units to the answer either.
       </p>
       <p>
-        The chest-beating data are given to one decimal place, so the <em>sample mean</em> rate is given as <m>\bar{x} = 2.22</m> beats per <m>10</m>.
+        The chest-beating data are given to one decimal place, so the <em>sample mean</em> rate is given as <m>\bar{x} = 2.22</m> beats per <m>10h</m>.
       </p>
     </note>
     <example xml:id="example-bats-mean">
       <title>Computing a sample mean</title>
       <p>
-        <xref ref="griffin1960echolocation"/> recorded the distance at which flies (<em>Drosophila</em>) were detected by bats for <m>n = 11</m> detections (Table <xref ref="tab-bat-data"/>). The population mean distance is estimated by the sample mean as <m>\bar{x} = 532/11 = 48.4</m> cm.
+        <xref ref="griffin1960echolocation"/> recorded the distance at which flies (<em>Drosophila</em>) were detected by bats for <m>n = 11</m> detections (<xref ref="tab-bat-data"/>). The population mean distance is estimated by the sample mean as <m>\bar{x} = 532/11 = 48.4</m> cm.
       </p>
     </example>
     <table xml:id="tab-bat-data">
       <title>The distance at which small fruit flies were detected by bats.</title>
-      <tabular halign="center" top="medium" bottom="medium">
+      <tabular halign="center">
         <row header="yes" bottom="medium">
           <cell colspan="11"><em>Detection distance (in cm)</em></cell>
         </row>
@@ -601,10 +597,10 @@
     <example xml:id="example-sample-median">
       <title>Computing a sample median</title>
       <p>
-        To find a sample median for the chest-beating data (Example <xref ref="example-stem-leaf-plots"/>, top panel),
+        To find a sample median for the chest-beating data (<xref ref="example-stem-leaf-plots"/>, top panel),
       </p>
       <p>
-        first arrange the data <em>in numerical order</em> (Table <xref ref="tab-g-young-sorted"/>). The median separates the larger seven numbers from the smaller seven numbers. With <m>n = 14</m> ordered observations, the median is at position <m>(14 + 1)/2 = 7.5</m> (the <em>median itself is not <m>7.5</m></em>). This means that the median is located between the seventh and eighth ordered observations.
+        first arrange the data <em>in numerical order</em> (<xref ref="tab-g-young-sorted"/>). The median separates the larger seven numbers from the smaller seven numbers. With <m>n = 14</m> ordered observations, the median is at position <m>(14 + 1)/2 = 7.5</m> (the <em>median itself is not <m>7.5</m></em>). This means that the median is located between the seventh and eighth ordered observations.
       </p>
       <p>
         Thus, the sample median, an estimate of the <em>population</em> median<idx><h>Median</h><h>of a population</h></idx>, is between <m>1.7</m> (ordered observation <m>7</m>) and <m>1.7</m> (ordered observation <m>8</m>). Since these values are the same, the sample median is <m>1.7</m> beats per <m>10</m>.
@@ -612,7 +608,7 @@
     </example>
     <table xml:id="tab-g-young-sorted">
       <title>The chest-beating rate of young gorillas, in increasing order.</title>
-      <tabular halign="center" top="medium" bottom="medium">
+      <tabular halign="center">
         <row header="yes" bottom="medium">
           <cell colspan="14"><em>Chest-beating rate, per 10 h</em></cell>
         </row>
@@ -625,8 +621,8 @@
       To clarify:
     </p>
     <ul>
-      <li><p>if the sample size <m>n</m> is <em>odd</em> (see Example <xref ref="example-bats-median"/>), the median is the middle number when the observations are ordered.</p></li>
-      <li><p>if the sample size <m>n</m> is <em>even</em> (such as the chest-beating data; Example <xref ref="example-sample-median"/>), the median is halfway between the two middle numbers, when the observations are ordered.</p></li>
+      <li><p>if the sample size <m>n</m> is <em>odd</em> (see <xref ref="example-bats-median"/>), the median is the middle number when the observations are ordered.</p></li>
+      <li><p>if the sample size <m>n</m> is <em>even</em> (such as the chest-beating data; <xref ref="example-sample-median"/>), the median is halfway between the two middle numbers, when the observations are ordered.</p></li>
     </ul>
     <note>
       <p>
@@ -641,7 +637,7 @@
     <example xml:id="example-bats-median">
       <title>Computing a sample median</title>
       <p>
-        For the bat data (Table <xref ref="tab-bat-data"/>), the estimate of the population <em>median</em> distance at which bats detect the flies is the <em>sample</em> median. With <m>n = 11</m>, the median is the <m>(11 + 1)/2 = 6</m>th ordered value, which is <m>45</m>.
+        For the bat data (<xref ref="tab-bat-data"/>), the estimate of the population <em>median</em> distance at which bats detect the flies is the <em>sample</em> median. With <m>n = 11</m>, the median is the <m>(11 + 1)/2 = 6</m>th ordered value, which is <m>45</m>.
       </p>
     </example>
     <idx>Median|)</idx>
@@ -651,13 +647,13 @@
     <title>Which average to use?</title>
     <idx><h>Averages</h><h>compared</h></idx>
     <p>
-      Consider the daily streamflow at the Mary River again (Example <xref ref="example-averages"/>): the sample <em>mean</em> daily streamflow is <m>1 123</m> ML, and the sample <em>median</em> daily streamflow is <m>146.1</m> ML. Which is 'best' for measuring the average streamflow?
+      Consider the daily streamflow at the Mary River again (<xref ref="example-averages"/>): the sample <em>mean</em> daily streamflow is <m>1 123</m> ML, and the sample <em>median</em> daily streamflow is <m>146.1</m> ML. Which is 'best' for measuring the average streamflow?
     </p>
     <p>
       For these data, <m>86</m>% of observations are <em>smaller</em> than the mean, but <m>50</m>% of the observations are smaller than the median (by definition). The mean is hardly a <em>central</em> value.
     </p>
     <p>
-      A dot chart of the daily streamflow (Fig. <xref ref="fig-daily-streamflow"/>; jittered)<idx><h>Overplotting</h><h>jittering</h></idx> shows that the data are <em>very</em> highly right-skewed, with many <em>very</em> large outliers<idx>Outliers</idx> (presumably flood events).
+      A dot chart of the daily streamflow (<xref ref="fig-daily-streamflow"/>; jittered)<idx><h>Overplotting</h><h>jittering</h></idx> shows that the data are <em>very</em> highly right-skewed, with many <em>very</em> large outliers<idx>Outliers</idx> (presumably flood events).
     </p>
     <figure xml:id="fig-daily-streamflow">
       <caption>A dot plot of the daily streamflow at Mary River from 1960 to 2017, for February (<m>n = 1\,650</m>). Many very large outliers exist. Note: values have been jittered in the vertical direction, but overplotting is still present near <m>0</m>.</caption>
@@ -671,7 +667,7 @@
       <li><p><em>medians</em> are best used for data that are highly skewed or contain outliers, because the median is <em>not</em> influenced by outliers or skewness.</p></li>
     </ul>
     <p>
-      Means tend to be too large if the data contain large outliers or severe right skewness, and too small if the data contain small outliers or severe left skewness. The Mary River data contains extremely large outliers<mdash/>and many of them<mdash/>so the mean is much larger than the median. <em>The median is the better measure of average for these data</em>. However, understanding the variation is probably more important than understanding the average value (Sect. <xref ref="sec-variation"/>), and the data may even be better described using percentiles (Sect. <xref ref="sec-variation-percentiles"/>).
+      Means tend to be too large if the data contain large outliers or severe right skewness, and too small if the data contain small outliers or severe left skewness. The Mary River data contains extremely large outliers<mdash/>and many of them<mdash/>so the mean is much larger than the median. <em>The median is the better measure of average for these data</em>. However, understanding the variation is probably more important than understanding the average value (<xref ref="sec-variation"/>), and the data may even be better described using percentiles (<xref ref="sec-variation-percentiles"/>).
     </p>
     <p>
       The mean is generally used rather than the median if possible (for practical and mathematical reasons), and is the most commonly-used measure of location. However, the mean is not always appropriate (as the mean is influenced by outliers<idx>Outliers</idx> and skewness).<idx>Skewness</idx> The mean and median are similar in approximately symmetric distributions. Sometimes, quoting <em>both</em> the mean and the median may be appropriate.
@@ -689,10 +685,10 @@
       For quantitative data, the amount of <em>variation</em> in the bulk of the data should be described. Many ways exist to measure the variation in a dataset, including:
     </p>
     <ul>
-      <li><p>the <em>range</em>, which is very simple and simplistic so is not often used (Sect. <xref ref="sec-variation-range"/>).</p></li>
-      <li><p>the <em>standard deviation</em>, which is commonly used (Sect. <xref ref="sec-variation-std-dev"/>).</p></li>
-      <li><p>the <em>interquartile range (or IQR)</em>, which is commonly used (Sect. <xref ref="sec-variation-iqr"/>).</p></li>
-      <li><p><em>percentiles</em>, which are useful in specific situations (Sect. <xref ref="sec-variation-percentiles"/>), especially for very skewed data.</p></li>
+      <li><p>the <em>range</em>, which is very simple and simplistic so is not often used (<xref ref="sec-variation-range"/>).</p></li>
+      <li><p>the <em>standard deviation</em>, which is commonly used (<xref ref="sec-variation-std-dev"/>).</p></li>
+      <li><p>the <em>interquartile range (or IQR)</em>, which is commonly used (<xref ref="sec-variation-iqr"/>).</p></li>
+      <li><p><em>percentiles</em>, which are useful in specific situations (<xref ref="sec-variation-percentiles"/>), especially for very skewed data.</p></li>
     </ul>
     <p>
       As always, a value computed from a <em>sample</em> (the statistic) estimates the unknown value in the <em>population</em> (the parameter), and every sample can produce a different estimate.
@@ -718,7 +714,7 @@
     <example xml:id="example-range-eg">
       <title>The range</title>
       <p>
-        For the chest-beating data (Table <xref ref="tab-g-young-sorted"/>), the largest value is <m>4.4</m>, and the smallest value is <m>0.7</m>; hence
+        For the chest-beating data (<xref ref="tab-g-young-sorted"/>), the largest value is <m>4.4</m>, and the smallest value is <m>0.7</m>; hence
       </p>
       <me>\text{Range} = 4.4 - 0.7 = 3.7.</me>
       <p>
@@ -759,7 +755,7 @@
     </p>
     <me>s = \sqrt{ \frac{\sum(x - \bar{x})^2}{n - 1} },</me>
     <p>
-      where <m>\bar{x}</m> is the sample mean, <m>x</m> represents the individual data values, <m>n</m> is the sample size, and the symbol '<m>\sum</m>' means to <em>add</em> (Sect. <xref ref="sec-mean"/>). Using the formula requires these steps.
+      where <m>\bar{x}</m> is the sample mean, <m>x</m> represents the individual data values, <m>n</m> is the sample size, and the symbol '<m>\sum</m>' means to <em>add</em> (<xref ref="sec-mean"/>). Using the formula requires these steps.
     </p>
     <ol>
       <li><p>Calculate the sample mean: <m>\overline{x}</m>.</p></li>
@@ -777,7 +773,7 @@
     <example xml:id="example-std-dev">
       <title>Computing a sample standard deviation</title>
       <p>
-        For the chest-beating data (Table <xref ref="tab-g-young-sorted"/>), the squared <em>deviations</em> of each observation from the mean of <m>2.2214</m> (using four decimal places in calculations) are shown in Fig. <xref ref="fig-show-var"/>. The sum of the squared distances is <m>20.9636</m>. Then, the sample standard deviation is:
+        For the chest-beating data (<xref ref="tab-g-young-sorted"/>), the squared <em>deviations</em> of each observation from the mean of <m>2.2214</m> (using four decimal places in calculations) are shown in <xref ref="fig-show-var"/>. The sum of the squared distances is <m>20.9636</m>. Then, the sample standard deviation is:
       </p>
       <me>s = \sqrt{\frac{20.9636}{14 - 1}}     = \sqrt{ 1.612585}     = 1.269876.</me>
       <p>
@@ -815,12 +811,9 @@
         </p>
         <ul>
           <li><p>The first quartile <m>Q_1</m> is a value separating the smallest <m>25</m>% of observations from the largest <m>75</m>%. The <m>Q_1</m> is like the median of the <em>smaller</em> half of the data, halfway between the minimum value and the median.</p></li>
-          <li><p>The second quartile <m>Q_2</m> is a value separating the smallest <m>50</m>% of observations from the largest <m>50</m>%.</p></li>
-        </ul>
-        <p>
+          <li><p>The second quartile <m>Q_2</m> is a value separating the smallest <m>50</m>% of observations from the largest <m>50</m>%.
           (This is also the <em>median</em>.)<idx>Median</idx>
-        </p>
-        <ul>
+        </p></li>
           <li><p>The third quartile <m>Q_3</m> is a value separating the smallest <m>75</m>% of observations from the largest <m>25</m>%. The <m>Q_3</m> is like the median of the <em>larger</em> half of the data, halfway between the median and the maximum value.</p></li>
         </ul>
       </statement>
@@ -842,7 +835,7 @@
       </p>
     </warning>
     <p>
-      For the chest-beating data (Table <xref ref="tab-g-young-sorted"/>), where <m>n = 14</m> (an <em>even</em> number of observations), the median is <m>1.7</m> (Example <xref ref="example-sample-median"/>). The data then can be split into <em>smaller</em> and <em>larger</em> halves, each with seven values:
+      For the chest-beating data (<xref ref="tab-g-young-sorted"/>), where <m>n = 14</m> (an <em>even</em> number of observations), the median is <m>1.7</m> (<xref ref="example-sample-median"/>). The data then can be split into <em>smaller</em> and <em>larger</em> halves, each with seven values:
     </p>
     <ul>
       <li><p>Smaller half: <m>0.7</m>  <m>0.9</m>  <m>1.3</m>  <m>1.5</m>  <m>1.5</m>  <m>1.5</m>  <m>1.7</m></p></li>
@@ -852,20 +845,17 @@
       Since each half has seven observations (an <em>odd</em> number), the median of each half is the <m>(7 + 1)/2 = 4</m>th ordered value. Hence:<idx>Quartiles</idx>
     </p>
     <ul>
-      <li><p><m>Q_1</m>, the <em>first quartile</em>, is the median of the smaller half; <m>Q_1 = 1.5</m>.</p></li>
-    </ul>
-    <p>
+      <li><p><m>Q_1</m>, the <em>first quartile</em>, is the median of the smaller half; <m>Q_1 = 1.5</m>.
       About <m>25</m>% of observations are smaller than <m>1.5</m>.
-    </p>
-    <ul>
+</p></li>
       <li><p><m>Q_2</m>, the <em>second quartile</em> or <em>median</em>, is <m>1.7</m>, so <m>50</m>% of observations are smaller than <m>1.7</m>.</p></li>
-      <li><p><m>Q_3</m>, the <em>third quartile</em>, is the median of the larger half; <m>Q_3 = 3.0</m>.</p></li>
-    </ul>
-    <p>
-      About <m>75</m>% of observations are smaller than <m>3.0</m>.
+      <li><p><m>Q_3</m>, the <em>third quartile</em>, is the median of the larger half; <m>Q_3 = 3.0</m>.
+About <m>75</m>% of observations are smaller than <m>3.0</m>.
+</p></li>
+</ul>
     </p>
     <p>
-      To divide the data into four parts of equal numbers of observations, each part would need <m>14/4 = 3.5</m> observations, which is not possible. Hence, we say the values of <m>Q_1</m> and <m>Q_3</m> are 'about' the values given. (Software sometimes uses a different method for computing the quartiles.) Using these values, the IQR is <m>Q_3 - Q_1</m> = <m>3.0 - 1.5 = 1.5</m>, as shown in Fig. <xref ref="fig-quartiles-ygorillas"/>.
+      To divide the data into four parts of equal numbers of observations, each part would need <m>14/4 = 3.5</m> observations, which is not possible. Hence, we say the values of <m>Q_1</m> and <m>Q_3</m> are 'about' the values given. (Software sometimes uses a different method for computing the quartiles.) Using these values, the IQR is <m>Q_3 - Q_1</m> = <m>3.0 - 1.5 = 1.5</m>, as shown in <xref ref="fig-quartiles-ygorillas"/>.
     </p>
     <figure xml:id="fig-quartiles-ygorillas">
       <caption>A dot chart (with jittering) for the chest-beating data for young gorillas, showing the IQR.</caption>
@@ -883,9 +873,9 @@
       When <m>n</m> is odd, the median <em>may</em> or <em>may not</em> be included in each of these halves when computing <m>Q_1</m> and <m>Q_3</m>; we decide <em>not</em> to include the median in each half.
     </p>
     <example xml:id="example-bats-iqr">
-      <title>Computing the IQR for $n$ odd</title>
+      <title>Computing the IQR for <m>n</m> odd</title>
       <p>
-        The bat data (Table <xref ref="tab-bat-data"/>) has <m>n = 11</m> observations. The smaller and larger halves of the data, <em>without</em> the median of <m>45</m>, are:
+        The bat data (<xref ref="tab-bat-data"/>) has <m>n = 11</m> observations. The smaller and larger halves of the data, <em>without</em> the median of <m>45</m>, are:
       </p>
       <ul>
         <li><p>Smaller half: <m>23</m>  <m>27</m>  <m>34</m>  <m>40</m>  <m>42</m>: the median is <m>Q_1 = 34</m>.</p></li>
@@ -933,7 +923,7 @@
     <example xml:id="example-percentiles-eg">
       <title>Percentiles</title>
       <p>
-        For the streamflow data at the Mary River (Example <xref ref="example-averages"/>), the February data are highly right-skewed (Fig. <xref ref="fig-daily-streamflow"/>). The median (<m>50</m>th percentile) is <m>146.1</m> ML. However, the <m>95</m>th percentile is <m>3 480</m> ML and the <m>99</m>th percentile is <m>19 043</m> ML.
+        For the streamflow data at the Mary River (<xref ref="example-averages"/>), the February data are highly right-skewed (<xref ref="fig-daily-streamflow"/>). The median (<m>50</m>th percentile) is <m>146.1</m> ML. However, the <m>95</m>th percentile is <m>3 480</m> ML and the <m>99</m>th percentile is <m>19 043</m> ML.
       </p>
       <p>
         Constructing infrastructure for the <em>median</em> streamflow would be highly inadequate.
@@ -950,6 +940,10 @@
     <p>
       Since the standard deviation formula uses the mean, it is impacted in the same way as the mean by outliers<idx>Outliers</idx> and skewness.<idx>Skewness</idx> Hence, the standard deviation is best used with approximately symmetric data. The IQR is best used when data are skewed or outlier are present. Sometimes, both the standard deviation and the IQR can be quoted.
     </p>
+<p><url href ="https://learningapps.org/watch?v=pojiu9htv22">Click here for an interactive activity</url></p>
+
+<interactive iframe="https://learningapps.org/watch?v=pojiu9htv22" width="100%" aspect="16:9"/>
+
   </subsection>
   </section>
 
@@ -974,15 +968,15 @@
       Two rules for identifying outliers are:
     </p>
     <ul>
-      <li><p>the <em>standard deviation rule</em>, which is only useful when the data have an approximately symmetric distribution (Sect. <xref ref="sec-outliers-std-dev-rule"/>).</p></li>
-      <li><p>the <em>IQR rule</em>, which is useful in most situations (Sect. <xref ref="sec-outliers-iq-rrule"/>).</p></li>
+      <li><p>the <em>standard deviation rule</em>, which is only useful when the data have an approximately symmetric distribution (<xref ref="sec-outliers-std-dev-rule"/>).</p></li>
+      <li><p>the <em>IQR rule</em>, which is useful in most situations (<xref ref="sec-outliers-iq-rrule"/>).</p></li>
     </ul>
 
   <subsection xml:id="sec-outliers-std-dev-rule">
     <title>The standard deviation rule</title>
     <idx><h>Outliers</h><h>standard deviation rule</h></idx>
     <p>
-      The standard deviation rule uses the mean and the standard deviation, so is suitable for approximately symmetric distributions (when means and standard deviations are sensible numerical summaries). The rationale behind this rule is explained in Sect. <xref ref="sec-normal-distribution"/>.
+      The standard deviation rule uses the mean and the standard deviation, so is suitable for approximately symmetric distributions (when means and standard deviations are sensible numerical summaries). The rationale behind this rule is explained in <xref ref="sec-normal-distribution"/>.
     </p>
     <definition xml:id="def-standard-deviation-rule-for-identifying-outliers">
       <title>Standard deviation rule for identifying outliers</title>
@@ -1001,7 +995,7 @@
         An engineering project <xref ref="data-hald-statistical"/> studied a new building material, to estimate the average permeability. Permeability time (the time for water to permeate the sheets) was measured from <m>81</m> pieces of material (in seconds).
       </p>
       <p>
-        For these data, the mean is <m>\bar{x} = 43.162</m> and the standard deviation is <m>s = 27.358</m>. Using the standard deviation rule, outliers are observations <em>smaller</em> than <m>43.162 - (3 \times 27.358)</m> or <em>larger</em> than <m>43.162 + (3 \times 27.358)</m>; that is, <em>smaller</em> than <m>-38.9</m> (which is clearly not appropriate here, as the data must be positive values), or <em>larger</em> than <m>125.2</m>. This rule is shown in Fig. <xref ref="fig-sd-outliers"/>; two observations are identified as outliers using the standard deviation rule.
+        For these data, the mean is <m>\bar{x} = 43.162</m> and the standard deviation is <m>s = 27.358</m>. Using the standard deviation rule, outliers are observations <em>smaller</em> than <m>43.162 - (3 \times 27.358)</m> or <em>larger</em> than <m>43.162 + (3 \times 27.358)</m>; that is, <em>smaller</em> than <m>-38.9</m> (which is clearly not appropriate here, as the data must be positive values), or <em>larger</em> than <m>125.2</m>. This rule is shown in <xref ref="fig-sd-outliers"/>; two observations are identified as outliers using the standard deviation rule.
       </p>
     </example>
     <figure xml:id="fig-sd-outliers">
@@ -1034,7 +1028,7 @@
     <example xml:id="example-iqr-outliers-eg">
       <title>IQR rule for identifying outliers</title>
       <p>
-        Using the permeability data seen in Example <xref ref="example-sd-outliers-eg"/>, a computer shows that <m>Q_1 = 24.7</m> and <m>Q_3 = 50.6</m>, so <m>\text{IQR} = {50.6 - 24.7 = 25.9}</m>. Then, <em>extreme</em> outliers are observations <m>3 \times 25.9 = 77.7</m> more unusual than <m>Q_1</m> or <m>Q_3</m>. That is, <em>extreme</em> outliers are observations are:
+        Using the permeability data seen in <xref ref="example-sd-outliers-eg"/>, a computer shows that <m>Q_1 = 24.7</m> and <m>Q_3 = 50.6</m>, so <m>\text{IQR} = {50.6 - 24.7 = 25.9}</m>. Then, <em>extreme</em> outliers are observations <m>3 \times 25.9 = 77.7</m> more unusual than <m>Q_1</m> or <m>Q_3</m>. That is, <em>extreme</em> outliers are observations are:
       </p>
       <ul>
         <li><p>more unusual than <m>24.7 - 77.7 = -53.0</m> (that is, <em>less</em> than <m>-53.0</m>); or</p></li>
@@ -1048,7 +1042,7 @@
         <li><p>more unusual than <m>50.6 + 38.9 = 89.5</m> (that is, <em>greater</em> than <m>89.5</m>).</p></li>
       </ul>
       <p>
-        Three observations are identified as outliers using the IQR rule (Fig. <xref ref="fig-iqr-outliers"/>): two extreme outliers, and one mild outlier.
+        Three observations are identified as outliers using the IQR rule (<xref ref="fig-iqr-outliers"/>): two extreme outliers, and one mild outlier.
       </p>
     </example>
     <figure xml:id="fig-iqr-outliers">
@@ -1095,13 +1089,13 @@
     <example xml:id="example-outliers-what-to-do">
       <title>Outliers</title>
       <p>
-        The Mary River dataset (Sect. <xref ref="sec-compute-average"/>) has many <em>extremely</em> large outliers identified by software, but each is reasonable. They probably correspond to flood events (which could be confirmed). Removing these from the analysis would be inappropriate.
+        The Mary River dataset (<xref ref="sec-compute-average"/>) has many <em>extremely</em> large outliers identified by software, but each is reasonable. They probably correspond to flood events (which could be confirmed). Removing these from the analysis would be inappropriate.
       </p>
     </example>
     <example xml:id="example-outliers-what-to-do2">
       <title>Outliers</title>
       <p>
-        The permeability data (Example <xref ref="example-sd-outliers-eg"/>) has large outliers, but all seem reasonable. Removing these from the analysis would be inappropriate.
+        The permeability data (<xref ref="example-sd-outliers-eg"/>) has large outliers, but all seem reasonable. Removing these from the analysis would be inappropriate.
       </p>
     </example>
   </subsection>
@@ -1111,17 +1105,17 @@
     <title>Numerical summary tables</title>
     <idx><h>Quantitative data</h><h>summary tables</h></idx>
     <p>
-      In studies with quantitative variables, the quantitative variables should be summarised in a table. The table should include, as a minimum, measures of average, variation and the sample sizes. An example is given in the next section (Table <xref ref="tab-water-access-quant"/>).
+      In studies with quantitative variables, the quantitative variables should be summarised in a table. The table should include, as a minimum, measures of average, variation and the sample sizes. An example is given in the next section (<xref ref="tab-water-access-quant"/>).
     </p>
   </section>
 
   <section xml:id="sec-water-access-quant">
     <title>Example: water access</title>
     <p>
-      <xref ref="lopez2022farmers"/> recorded data about access to water for three rural communities in Cameroon. Three quantitative variables are recorded. Part of understanding the data requires summarising the quantitative variables; histograms are shown in Fig. <xref ref="fig-water-acess-quant"/>, and a summary table in Table <xref ref="tab-water-access-quant"/>.
+      <xref ref="lopez2022farmers"/> recorded data about access to water for three rural communities in Cameroon. Three quantitative variables are recorded. Part of understanding the data requires summarising the quantitative variables; histograms are shown in <xref ref="fig-water-acess-quant"/>, and a summary table in <xref ref="tab-water-access-quant"/>.
     </p>
     <p>
-      Many households are coordinated by women in their late <m>50</m>s. The number of people and number of children under <m>5</m> years of age are both right-skewed. One household has over <m>30</m> people, and has <m>10</m> children in that household. (These are identified as outliers, but are unlikely to be mistakes.) Some observations are missing for some variables, explaining the differences in sample sizes in Table <xref ref="tab-water-access-quant"/>.
+      Many households are coordinated by women in their late <m>50</m>s. The number of people and number of children under <m>5</m> years of age are both right-skewed. One household has over <m>30</m> people, and has <m>10</m> children in that household. (These are identified as outliers, but are unlikely to be mistakes.) Some observations are missing for some variables, explaining the differences in sample sizes in <xref ref="tab-water-access-quant"/>.
     </p>
     <figure xml:id="fig-water-acess-quant">
       <caption>The age of the female household coordinator, the number of people in the household, and the number of children in the household aged under <m>5</m> years, for the water-access study.</caption>
@@ -1129,7 +1123,7 @@
     </figure>
     <table xml:id="tab-water-access-quant">
       <title>Summarising the quantitative data in the water-access study.</title>
-      <tabular halign="center" top="medium" bottom="medium">
+      <tabular halign="center">
         <row header="yes" bottom="medium">
           <cell></cell>
           <cell><em><m>n</m></em></cell>
@@ -1178,11 +1172,11 @@
   <section xml:id="sec-summarise-quant-summary">
     <title>Chapter summary</title>
     <p>
-      Quantitative data can be graphed using a histogram, stemplot (in special circumstances), or dot charts. Quantitative data can be summarised numerically; the most common techniques are indicated in Table <xref ref="tab-summary-quant-stats"/>. The <em>mean</em> and <em>standard deviation</em> are usually used whenever possible, for practical and mathematical reasons. Sometimes quoting both the mean and median (and the standard deviation and IQR) may be appropriate.
+      Quantitative data can be graphed using a histogram, stemplot (in special circumstances), or dot charts. Quantitative data can be summarised numerically; the most common techniques are indicated in <xref ref="tab-summary-quant-stats"/>. The <em>mean</em> and <em>standard deviation</em> are usually used whenever possible, for practical and mathematical reasons. Sometimes quoting both the mean and median (and the standard deviation and IQR) may be appropriate.
     </p>
     <table xml:id="tab-summary-quant-stats">
       <title>Summarising quantitative data.</title>
-      <tabular halign="center" top="medium" bottom="medium">
+      <tabular halign="center">
         <row header="yes" bottom="medium">
           <cell><em>Feature</em></cell>
           <cell><em>Approximately symmetric</em></cell>
@@ -1264,12 +1258,12 @@
     </introduction>
     <exercise xml:id="exercise-graph-ab-sdeaths">
       <p>
-        The <em>Australian Bureau of Statistics</em> (<url href="http://www.abs.gov.au/">ABS</url>) records the <url href="http://www.abs.gov.au/AUSSTATS/subscriber.nsf/log?openagent&amp;33020do008_2012.xls&amp;3302.0&amp;Data%20Cubes&amp;19D242509768F63BCA257C1B000D6ECA&amp;0&amp;2012&amp;07.11.2013&amp;Latest">age at death of Australians</url>. The histogram of the age of death for females in 2012 is shown in Fig. <xref ref="fig-death-age-lime"/> (left panel). Describe the distribution.
+        The <em>Australian Bureau of Statistics</em> (<url href="http://www.abs.gov.au/">ABS</url>) records the <url href="http://www.abs.gov.au/AUSSTATS/subscriber.nsf/log?openagent&amp;33020do008_2012.xls&amp;3302.0&amp;Data%20Cubes&amp;19D242509768F63BCA257C1B000D6ECA&amp;0&amp;2012&amp;07.11.2013&amp;Latest">age at death of Australians</url>. The histogram of the age of death for females in 2012 is shown in <xref ref="fig-death-age-lime"/> (left panel). Describe the distribution.
       </p>
     </exercise>
     <exercise xml:id="exercise-graph-lime-trees">
       <p>
-        [<em>Dataset</em>: <c>Lime</c>] <xref ref="schepaschenko2017bpdb"/> measured the oven-dried foliage biomass of lime trees grown in natural environments. The histogram of the foliage biomass is shown in Fig. <xref ref="fig-death-age-lime"/> (right panel). Describe the distribution.
+        [<em>Dataset</em>: <c>Lime</c>] <xref ref="schepaschenko2017bpdb"/> measured the oven-dried foliage biomass of lime trees grown in natural environments. The histogram of the foliage biomass is shown in <xref ref="fig-death-age-lime"/> (right panel). Describe the distribution.
       </p>
     </exercise>
     <figure xml:id="fig-death-age-lime">
@@ -1278,7 +1272,7 @@
     </figure>
     <exercise xml:id="exercise-numerical-quant-nhanes">
       <p>
-        [<em>Dataset</em>: <c>NHANES</c>] The histogram of the direct HDL cholesterol concentration from the American National Health and Nutrition Examination Survey (<sc>nhanes</sc>) <xref ref="data-NHANES-Rpackage"/> from <m>1999</m><ndash/><m>2004</m> is shown in Fig. <xref ref="fig-nhanes-cherry-ripe-hist"/> (left panel).
+        [<em>Dataset</em>: <c>NHANES</c>] The histogram of the direct HDL cholesterol concentration from the American National Health and Nutrition Examination Survey (<sc>nhanes</sc>) <xref ref="data-NHANES-Rpackage"/> from <m>1999</m><ndash/><m>2004</m> is shown in <xref ref="fig-nhanes-cherry-ripe-hist"/> (left panel).
       </p>
       <ol>
         <li><p>Should the mean or median be used to measure the 'average' HDL cholesterol concentration? Explain.</p></li>
@@ -1291,7 +1285,7 @@
     </figure>
     <exercise xml:id="exercise-numerical-quant-cherry-ripes">
       <p>
-        [<em>Dataset</em>: <c>CherryRipe</c>] The histogram of the weights of 'Fun Size' <em>Cherry Ripe</em> chocolate bars between 2016 and 2019 is shown in Fig. <xref ref="fig-nhanes-cherry-ripe-hist"/> (right panel).
+        [<em>Dataset</em>: <c>CherryRipe</c>] The histogram of the weights of 'Fun Size' <em>Cherry Ripe</em> chocolate bars between 2016 and 2019 is shown in <xref ref="fig-nhanes-cherry-ripe-hist"/> (right panel).
       </p>
       <ol>
         <li><p>Should the mean or median be used to measure the 'average' weight of a 'Fun Size' <em>Cherry Ripe</em> bar? Explain.</p></li>
@@ -1300,7 +1294,7 @@
     </exercise>
     <exercise xml:id="exercise-numerical-quant-rides">
       <p>
-        <xref ref="levenson2005amusement"/> recorded the number of fatalities at amusement rides in the US from <m>1994</m> to <m>2003</m> (Table <xref ref="tab-fatalities"/>). Using software or a calculator, compute:
+        <xref ref="levenson2005amusement"/> recorded the number of fatalities at amusement rides in the US from <m>1994</m> to <m>2003</m> (<xref ref="tab-fatalities"/>). Using software or a calculator, compute:
       </p>
       <ol>
         <li><p>the sample mean number of fatalities per year over this period.</p></li>
@@ -1311,7 +1305,7 @@
     </exercise>
     <table xml:id="tab-fatalities">
       <title>Fatalities at amusement park rides in the US.</title>
-      <tabular halign="center" top="medium" bottom="medium">
+      <tabular halign="center">
         <row header="yes" bottom="medium">
           <cell colspan="10"><em>Fatalities</em></cell>
         </row>
@@ -1337,7 +1331,7 @@
     </exercise>
     <exercise xml:id="exercise-numerical-quant-soi">
       <p>
-        Draw a stemplot of the <url href="http://www.bom.gov.au/climate/current/soihtm1.shtml">average monthly SOI</url> (from the Australian Bureau of Meteorology) in August from <m>1995</m> to <m>2003</m> (Table <xref ref="tab-so-ivalues"/>). Then, use your calculator (where possible) to calculate the:
+        Draw a stemplot of the <url href="http://www.bom.gov.au/climate/current/soihtm1.shtml">average monthly SOI</url> (from the Australian Bureau of Meteorology) in August from <m>1995</m> to <m>2003</m> (<xref ref="tab-so-ivalues"/>). Then, use your calculator (where possible) to calculate the:
       </p>
       <ol>
         <li><p>sample mean.</p></li>
@@ -1349,7 +1343,7 @@
     </exercise>
     <table xml:id="tab-so-ivalues">
       <title>The average monthly SOI values in August from 1995 to 2003.</title>
-      <tabular halign="center" top="medium" bottom="medium">
+      <tabular halign="center">
         <row header="yes" bottom="medium">
           <cell><em>Year</em></cell>
           <cell><m>1995</m></cell>
@@ -1378,7 +1372,7 @@
     </table>
     <exercise xml:id="exercise-weight-fries">
       <p>
-        [<em>Dataset</em>: <c>FriesWt</c>] <xref ref="data-Wetzel2005-McDonalds"/> weighed orders of french fries to determine how they matched the target weight of <m>171</m> g (Table <xref ref="tab-fries-wt-table"/>).
+        [<em>Dataset</em>: <c>FriesWt</c>] <xref ref="data-Wetzel2005-McDonalds"/> weighed orders of french fries to determine how they matched the target weight of <m>171</m> g (<xref ref="tab-fries-wt-table"/>).
       </p>
       <ol>
         <li><p>Produce graphs to summarise the data.</p></li>
@@ -1390,7 +1384,7 @@
     </exercise>
     <table xml:id="tab-fries-wt-table">
       <title>The weight of servings of french fries (in g).</title>
-      <tabular halign="center" top="medium" bottom="medium">
+      <tabular halign="center">
         <row header="yes" bottom="medium">
           <cell colspan="11"><em>Weight of large orders of fries (in g)</em></cell>
         </row>
@@ -1407,7 +1401,7 @@
     </table>
     <exercise xml:id="exercise-summary-quant-orthoses">
       <p>
-        [<em>Dataset</em>: <c>Orthoses</c>] <xref ref="swinnen2018influence"/> studied the influence of using ankle-foot orthoses in children with cerebral palsy. The data for the <m>15</m> subjects is shown in Table <xref ref="tab-describe-ankle-foot"/>.
+        [<em>Dataset</em>: <c>Orthoses</c>] <xref ref="swinnen2018influence"/> studied the influence of using ankle-foot orthoses in children with cerebral palsy. The data for the <m>15</m> subjects is shown in <xref ref="tab-describe-ankle-foot"/>.
       </p>
       <ol>
         <li><p>Compute the values of the sample mean, sample median, sample standard deviation and sample IQR for the heights.</p></li>
@@ -1420,7 +1414,7 @@
     </exercise>
     <exercise xml:id="exercise-numerical-quant-matching-micro-plastics">
       <p>
-        An article studied patients who had been admitted to Castle Hill Hospital <xref ref="data-detection-jenner2022"/>. The total number of microplastics found in the lungs of each patient are shown in Table <xref ref="tab-microplastics"/>. For these patients:
+        An article studied patients who had been admitted to Castle Hill Hospital <xref ref="data-detection-jenner2022"/>. The total number of microplastics found in the lungs of each patient are shown in <xref ref="tab-microplastics"/>. For these patients:
       </p>
       <ol>
         <li><p>Draw a stemplot, using the numbers as (say) <m>8.0</m>, with the decimals as the leaves.</p></li>
@@ -1432,7 +1426,7 @@
     </exercise>
     <table xml:id="tab-microplastics">
       <title>The number of microplastics found in 11 patients.</title>
-      <tabular halign="center" top="medium" bottom="medium">
+      <tabular halign="center">
         <row header="yes" bottom="medium">
           <cell colspan="11"><em>Number of microplastics</em></cell>
         </row>
@@ -1443,12 +1437,12 @@
     </table>
     <exercise xml:id="exercise-numerical-quant-describe-brain-freeze-histogram">
       <p>
-        Describe the histogram in Fig. <xref ref="fig-hist-brain-freeze"/> for the brain-freeze data.
+        Describe the histogram in <xref ref="fig-hist-brain-freeze"/> for the brain-freeze data.
       </p>
     </exercise>
     <exercise xml:id="exercise-numerical-quant-compare-sd">
       <p>
-        The standard deviation for Dataset A in Fig. <xref ref="fig-two-datasets"/> is <m>s = 2</m>. Will the standard deviation of Dataset B be <em>smaller</em> than or <em>greater</em> than <m>2</m>? Why?
+        The standard deviation for Dataset A in <xref ref="fig-two-datasets"/> is <m>s = 2</m>. Will the standard deviation of Dataset B be <em>smaller</em> than or <em>greater</em> than <m>2</m>? Why?
       </p>
     </exercise>
     <figure xml:id="fig-two-datasets">
@@ -1457,7 +1451,7 @@
     </figure>
     <exercise xml:id="exercise-jeans-iqr1">
       <p>
-        [<em>Dataset</em>: <c>Jeans</c>] <xref ref="PuddingJeans"/> recorded the size of pockets in men's and women's jeans, including the minimum heights of the front pockets (Fig. <xref ref="fig-jeans-boxplot"/>, left panel).
+        [<em>Dataset</em>: <c>Jeans</c>] <xref ref="PuddingJeans"/> recorded the size of pockets in men's and women's jeans, including the minimum heights of the front pockets (<xref ref="fig-jeans-boxplot"/>, left panel).
       </p>
       <ol>
         <li><p>What proportion of jeans in the sample have a minimum height less than <m>17</m>, for men's and women's jeans?</p></li>
@@ -1466,7 +1460,7 @@
     </exercise>
     <exercise xml:id="exercise-jeans-iqr2">
       <p>
-        <xref ref="PuddingJeans"/> recorded data on the price of different styles of women's jeans (Fig. <xref ref="fig-jeans-boxplot"/>, right panel).
+        <xref ref="PuddingJeans"/> recorded data on the price of different styles of women's jeans (<xref ref="fig-jeans-boxplot"/>, right panel).
       </p>
       <ol>
         <li><p>What proportion of boot-cut jeans in the sample cost less than $<m>80</m>?</p></li>
@@ -1481,7 +1475,7 @@
     </figure>
     <exercise xml:id="exercise-stats-histograms">
       <p>
-        A professor has recorded the marks (as a percentage) for all students in her four classes for an assignment. All classes have the same number of students. The corresponding histograms are shown in Fig. <xref ref="fig-variation-histograms"/>.
+        A professor has recorded the marks (as a percentage) for all students in her four classes for an assignment. All classes have the same number of students. The corresponding histograms are shown in <xref ref="fig-variation-histograms"/>.
       </p>
       <ol>
         <li><p>In which class would the median be the largest?</p></li>
@@ -1496,7 +1490,7 @@
     </figure>
     <exercise xml:id="exercise-stats-histograms2">
       <p>
-        Consider the four histograms in Fig. <xref ref="fig-four-histograms"/>. Which histogram is most likely to describe the <em>shape</em> of the following data? Why?
+        Consider the four histograms in <xref ref="fig-four-histograms"/>. Which histogram is most likely to describe the <em>shape</em> of the following data? Why?
       </p>
       <ol>
         <li><p>The time that students remain in an examination room for a <em>short</em>, <em>easy</em> two-hour examination.</p></li>
