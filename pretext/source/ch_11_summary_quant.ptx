@@ -939,9 +939,8 @@ About <m>75</m>% of observations are smaller than <m>3.0</m>.
     <p>
       Since the standard deviation formula uses the mean, it is impacted in the same way as the mean by outliers<idx>Outliers</idx> and skewness.<idx>Skewness</idx> Hence, the standard deviation is best used with approximately symmetric data. The IQR is best used when data are skewed or outlier are present. Sometimes, both the standard deviation and the IQR can be quoted.
     </p>
-<p><url href ="https://learningapps.org/watch?v=pojiu9htv22">Click here for an interactive activity</url></p>
 
-<interactive iframe="https://learningapps.org/watch?v=pojiu9htv22" width="100%" aspect="16:9"/>
+<interactive iframe="https://learningapps.org/watch?v=pojiu9htv22" width="100%" aspect="1:1"/>
 
   </subsection>
   </section>
@@ -1061,6 +1060,8 @@ About <m>75</m>% of observations are smaller than <m>3.0</m>.
         Remember: all rules for identifying outliers are arbitrary.
       </p>
     </warning>
+
+<interactive iframe="https://learningapps.org/watch?v=ptd4xbpe322" width="100%" aspect="1:1"/>
   </subsection>
 
   <subsection xml:id="sec-outliers-what-to-do">
@@ -1173,6 +1174,9 @@ About <m>75</m>% of observations are smaller than <m>3.0</m>.
     <p>
       Quantitative data can be graphed using a histogram, stemplot (in special circumstances), or dot charts. Quantitative data can be summarised numerically; the most common techniques are indicated in <xref ref="tab-summary-quant-stats"/>. The <em>mean</em> and <em>standard deviation</em> are usually used whenever possible, for practical and mathematical reasons. Sometimes quoting both the mean and median (and the standard deviation and IQR) may be appropriate.
     </p>
+<p>The following short video may help explain some of these concepts:
+</p>
+  <video xml:id="yt-list-vars-one" label="youtube-list-vars-one" youtube="Xm0PPtci3JE"/>
     <table xml:id="tab-summary-quant-stats">
       <title>Summarising quantitative data.</title>
       <tabular halign="center">
@@ -1202,52 +1206,38 @@ About <m>75</m>% of observations are smaller than <m>3.0</m>.
 
   <reading-questions xml:id="sec-summarise-quant-quick-review">
     <title>Quick review questions</title>
-    <introduction>
-      <p>Are the following statements <em>true</em> or <em>false</em>?</p>
-    </introduction>
-    <exercise xml:id="rq-ch11-1">
-      <statement><p>The IQR measures the amount of variability in data.</p></statement>
-      <answer><p>True.</p></answer>
-    </exercise>
-    <exercise xml:id="rq-ch11-2">
-      <statement><p>The mean and the median can both be called an 'average'.</p></statement>
-      <answer><p>True.</p></answer>
-    </exercise>
-    <exercise xml:id="rq-ch11-3">
-      <statement><p>The mean and the median are not always the same value.</p></statement>
-      <answer><p>True.</p></answer>
-    </exercise>
-    <exercise xml:id="rq-ch11-4">
-      <statement><p>The range is a simple measure of variation in a set of data.</p></statement>
-      <answer><p>True.</p></answer>
-    </exercise>
-    <exercise xml:id="rq-ch11-5">
-      <statement><p>The standard deviation measures the amount of variability in data.</p></statement>
-      <answer><p>True.</p></answer>
-    </exercise>
-    <exercise xml:id="rq-ch11-6">
-      <statement><p>Another name for the median is <m>Q_2</m>.</p></statement>
-      <answer><p>True.</p></answer>
-    </exercise>
-    <exercise xml:id="rq-ch11-7">
-      <statement><p><m>Q_3</m> is the median of the largest half of the data.</p></statement>
-      <answer><p>True.</p></answer>
-    </exercise>
-    <exercise xml:id="rq-ch11-8">
-      <statement><p>The IQR is a useful measure of variation in data that are skewed.</p></statement>
-      <answer><p>True.</p></answer>
-    </exercise>
-    <exercise xml:id="rq-ch11-9">
-      <statement><p>The IQR is the difference between the first and second quartiles.</p></statement>
-      <answer><p>False (it is the difference between the third and first quartiles).</p></answer>
-    </exercise>
-    <exercise xml:id="rq-ch11-10">
-      <statement><p>Another name for the <m>75</m>th percentile is <m>Q_3</m>.</p></statement>
-      <answer><p>True.</p></answer>
-    </exercise>
-    <exercise xml:id="rq-ch11-11">
-      <statement><p>The units of the standard deviation and the IQR are the same as for the original data.</p></statement>
-      <answer><p>True.</p></answer>
+    <exercise xml:id="ch11-rq">
+      <p>
+        Are the following statements <em>true</em> or <em>false</em>.
+      </p>
+      <ol>
+        <li><p>The IQR measures the amount of variability in data.</p></li>
+        <li><p>The mean and the median can both be called an 'average'. </p></li>
+        <li><p>The mean and the median are not always the same value. </p></li>
+        <li><p>The range is a simple measure of variation in a set of data. </p></li>
+        <li><p>The standard deviation measures the amount of variability in data. </p></li>
+        <li><p>Another name for the median is <m>Q_2 - Q_3</m></p></li>
+        <li><p><m>Q_3> is the median of the largest half of the data.</p></li>
+        <li><p>The IQR is a useful measure of variation in data that are skewed. </p></li>
+        <li><p>The IQR is the difference between the first and second quartiles. </p></li>
+        <li><p>Another name for the 75th percentile is <m>Q_3</m></p></li>
+        <li><p>The units of the standard deviation and the IQR are the same as for the original data. </p></li>
+      </ol>
+<solution>
+<ol>
+<li><p>TRUE</p></li>
+<li><p>TRUE</p></li>
+<li><p>TRUE</p></li>
+<li><p>TRUE</p></li>
+<li><p>TRUE</p></li>
+<li><p>TRUE</p></li>
+<li><p>TRUE</p></li>
+<li><p>TRUE</p></li>
+<li><p>FALSE</p></li>
+<li><p>TRUE</p></li>
+<li><p>TRUE</p></li>
+</ol>
+</solution>
     </exercise>
   </reading-questions>
 
