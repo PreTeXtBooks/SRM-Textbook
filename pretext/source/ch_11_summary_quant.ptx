@@ -1217,7 +1217,7 @@ About <m>75</m>% of observations are smaller than <m>3.0</m>.
         <li><p>The range is a simple measure of variation in a set of data. </p></li>
         <li><p>The standard deviation measures the amount of variability in data. </p></li>
         <li><p>Another name for the median is <m>Q_2 - Q_3</m></p></li>
-        <li><p><m>Q_3> is the median of the largest half of the data.</p></li>
+        <li><p><m>Q_3</m> is the median of the largest half of the data.</p></li>
         <li><p>The IQR is a useful measure of variation in data that are skewed. </p></li>
         <li><p>The IQR is the difference between the first and second quartiles. </p></li>
         <li><p>Another name for the 75th percentile is <m>Q_3</m></p></li>
