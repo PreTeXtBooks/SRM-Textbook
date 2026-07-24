@@ -853,7 +853,6 @@ as for <m>2.1kg</m>. The plot shows that most birthweights are <m>3</m>-point-so
 About <m>75</m>% of observations are smaller than <m>3.0</m>.
 </p></li>
 </ul>
-    </p>
     <p>
       To divide the data into four parts of equal numbers of observations, each part would need <m>14/4 = 3.5</m> observations, which is not possible. Hence, we say the values of <m>Q_1</m> and <m>Q_3</m> are 'about' the values given. (Software sometimes uses a different method for computing the quartiles.) Using these values, the IQR is <m>Q_3 - Q_1</m> = <m>3.0 - 1.5 = 1.5</m>, as shown in <xref ref="fig-quartiles-ygorillas"/>.
     </p>
