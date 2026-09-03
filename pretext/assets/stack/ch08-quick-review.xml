@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+<question type="stack">
+<name>
+<text>Chapter 8 quick review: research design limitations</text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>Are the following statements <em>true</em> or <em>false</em>?</p><ol><li><p>When interpreting the results of a study, the steps taken to maximise internal validity should be evaluated. [[input:ans1]] [[validation:ans1]]</p></li><li><p>If studies are not externally valid, then they are not useful. [[input:ans2]] [[validation:ans2]]</p></li><li><p>When interpreting the results of a study, the steps taken to maximise external validity do not need to be evaluated. [[input:ans3]] [[validation:ans3]]</p></li><li><p>When interpreting the results of a study, ecological validity is about the impact of the study on the environment. [[input:ans4]] [[validation:ans4]]</p></li></ol>]]></text>
+</questiontext>
+<questionvariables>
+<text></text>
+</questionvariables>
+<generalfeedback format="html">
+<text><![CDATA[<p>The limitations of a study relate to three kinds of validity: <em>internal</em> validity (effectiveness: how well the study isolated the relationship of interest within the sample), <em>external</em> validity (generalisability: how well the sample results apply to the intended population) and <em>ecological</em> validity (practicality: how well the results apply to the real-world situation). All three should be evaluated when interpreting results, and a study lacking one of them is limited, not useless.</p>]]></text>
+</generalfeedback>
+<questionnote format="moodle_auto_format">
+<text><![CDATA[Fixed question (chapter 8 quick review), no random variants.]]></text>
+</questionnote>
+<input>
+<name>ans1</name>
+<type>boolean</type>
+<tans>true</tans>
+<showvalidation>0</showvalidation>
+<boxsize>15</boxsize>
+<strictsyntax>1</strictsyntax>
+<insertstars>0</insertstars>
+<syntaxhint></syntaxhint>
+<syntaxattribute>0</syntaxattribute>
+<forbidwords></forbidwords>
+<allowwords></allowwords>
+<forbidfloat>1</forbidfloat>
+<requirelowestterms>0</requirelowestterms>
+<checkanswertype>0</checkanswertype>
+<mustverify>0</mustverify>
+<options></options>
+</input>
+<input>
+<name>ans2</name>
+<type>boolean</type>
+<tans>false</tans>
+<showvalidation>0</showvalidation>
+<boxsize>15</boxsize>
+<strictsyntax>1</strictsyntax>
+<insertstars>0</insertstars>
+<syntaxhint></syntaxhint>
+<syntaxattribute>0</syntaxattribute>
+<forbidwords></forbidwords>
+<allowwords></allowwords>
+<forbidfloat>1</forbidfloat>
+<requirelowestterms>0</requirelowestterms>
+<checkanswertype>0</checkanswertype>
+<mustverify>0</mustverify>
+<options></options>
+</input>
+<input>
+<name>ans3</name>
+<type>boolean</type>
+<tans>false</tans>
+<showvalidation>0</showvalidation>
+<boxsize>15</boxsize>
+<strictsyntax>1</strictsyntax>
+<insertstars>0</insertstars>
+<syntaxhint></syntaxhint>
+<syntaxattribute>0</syntaxattribute>
+<forbidwords></forbidwords>
+<allowwords></allowwords>
+<forbidfloat>1</forbidfloat>
+<requirelowestterms>0</requirelowestterms>
+<checkanswertype>0</checkanswertype>
+<mustverify>0</mustverify>
+<options></options>
+</input>
+<input>
+<name>ans4</name>
+<type>boolean</type>
+<tans>false</tans>
+<showvalidation>0</showvalidation>
+<boxsize>15</boxsize>
+<strictsyntax>1</strictsyntax>
+<insertstars>0</insertstars>
+<syntaxhint></syntaxhint>
+<syntaxattribute>0</syntaxattribute>
+<forbidwords></forbidwords>
+<allowwords></allowwords>
+<forbidfloat>1</forbidfloat>
+<requirelowestterms>0</requirelowestterms>
+<checkanswertype>0</checkanswertype>
+<mustverify>0</mustverify>
+<options></options>
+</input>
+<prt>
+<name>prt_ans1</name>
+<value>1</value>
+<autosimplify>1</autosimplify>
+<feedbackstyle>1</feedbackstyle>
+<node>
+<name>0</name>
+<answertest>AlgEquiv</answertest>
+<sans>ans1</sans>
+<tans>true</tans>
+<quiet>0</quiet>
+<truescoremode>=</truescoremode>
+    <truescore>1</truescore>
+<truenextnode>-1</truenextnode>
+<trueanswernote>prt_ans1-1-T</trueanswernote>
+<truefeedback format="html">
+<text><![CDATA[<p>Correct &mdash; TRUE. How well the study isolated the relationship of interest (its effectiveness) decides how much the results can be trusted, so it must be evaluated.</p>]]></text>
+</truefeedback>
+<falsescoremode>=</falsescoremode>
+    <falsescore>0</falsescore>
+<falsenextnode>-1</falsenextnode>
+<falseanswernote>prt_ans1-1-F</falseanswernote>
+<falsefeedback format="html">
+<text><![CDATA[<p>Not quite &mdash; this statement is TRUE. How well the study isolated the relationship of interest (its effectiveness) decides how much the results can be trusted, so it must be evaluated.</p>]]></text>
+</falsefeedback>
+</node>
+</prt>
+<prt>
+<name>prt_ans2</name>
+<value>1</value>
+<autosimplify>1</autosimplify>
+<feedbackstyle>1</feedbackstyle>
+<node>
+<name>0</name>
+<answertest>AlgEquiv</answertest>
+<sans>ans2</sans>
+<tans>false</tans>
+<quiet>0</quiet>
+<truescoremode>=</truescoremode>
+    <truescore>1</truescore>
+<truenextnode>-1</truenextnode>
+<trueanswernote>prt_ans2-1-T</trueanswernote>
+<truefeedback format="html">
+<text><![CDATA[<p>Correct &mdash; FALSE. A study that does not generalise to the whole population can still tell us about the individuals studied; the limitation needs stating, not the study discarding.</p>]]></text>
+</truefeedback>
+<falsescoremode>=</falsescoremode>
+    <falsescore>0</falsescore>
+<falsenextnode>-1</falsenextnode>
+<falseanswernote>prt_ans2-1-F</falseanswernote>
+<falsefeedback format="html">
+<text><![CDATA[<p>Not quite &mdash; this statement is FALSE. A study that does not generalise to the whole population can still tell us about the individuals studied; the limitation needs stating, not the study discarding.</p>]]></text>
+</falsefeedback>
+</node>
+</prt>
+<prt>
+<name>prt_ans3</name>
+<value>1</value>
+<autosimplify>1</autosimplify>
+<feedbackstyle>1</feedbackstyle>
+<node>
+<name>0</name>
+<answertest>AlgEquiv</answertest>
+<sans>ans3</sans>
+<tans>false</tans>
+<quiet>0</quiet>
+<truescoremode>=</truescoremode>
+    <truescore>1</truescore>
+<truenextnode>-1</truenextnode>
+<trueanswernote>prt_ans3-1-T</trueanswernote>
+<truefeedback format="html">
+<text><![CDATA[<p>Correct &mdash; FALSE. External validity (generalisability) is one of the three kinds of validity to evaluate when interpreting a study, together with internal and ecological validity.</p>]]></text>
+</truefeedback>
+<falsescoremode>=</falsescoremode>
+    <falsescore>0</falsescore>
+<falsenextnode>-1</falsenextnode>
+<falseanswernote>prt_ans3-1-F</falseanswernote>
+<falsefeedback format="html">
+<text><![CDATA[<p>Not quite &mdash; this statement is FALSE. External validity (generalisability) is one of the three kinds of validity to evaluate when interpreting a study, together with internal and ecological validity.</p>]]></text>
+</falsefeedback>
+</node>
+</prt>
+<prt>
+<name>prt_ans4</name>
+<value>1</value>
+<autosimplify>1</autosimplify>
+<feedbackstyle>1</feedbackstyle>
+<node>
+<name>0</name>
+<answertest>AlgEquiv</answertest>
+<sans>ans4</sans>
+<tans>false</tans>
+<quiet>0</quiet>
+<truescoremode>=</truescoremode>
+    <truescore>1</truescore>
+<truenextnode>-1</truenextnode>
+<trueanswernote>prt_ans4-1-T</trueanswernote>
+<truefeedback format="html">
+<text><![CDATA[<p>Correct &mdash; FALSE. Ecological validity is about practicality: how well the study's conditions reflect the real-world situation of interest, not environmental impact.</p>]]></text>
+</truefeedback>
+<falsescoremode>=</falsescoremode>
+    <falsescore>0</falsescore>
+<falsenextnode>-1</falsenextnode>
+<falseanswernote>prt_ans4-1-F</falseanswernote>
+<falsefeedback format="html">
+<text><![CDATA[<p>Not quite &mdash; this statement is FALSE. Ecological validity is about practicality: how well the study's conditions reflect the real-world situation of interest, not environmental impact.</p>]]></text>
+</falsefeedback>
+</node>
+</prt>
+<qtest>
+<testcase>1</testcase>
+<description>ans1: correct (true)</description>
+<testinput>
+<name>ans1</name>
+<value>true</value>
+</testinput>
+<testinput>
+<name>ans2</name>
+<value>false</value>
+</testinput>
+<testinput>
+<name>ans3</name>
+<value>false</value>
+</testinput>
+<testinput>
+<name>ans4</name>
+<value>false</value>
+</testinput>
+<expected>
+<name>prt_ans1</name>
+<expectedscore>1.0000000</expectedscore>
+<expectedpenalty>0.0000000</expectedpenalty>
+<expectedanswernote>prt_ans1-1-T</expectedanswernote>
+</expected>
+</qtest>
+<qtest>
+<testcase>2</testcase>
+<description>ans1: wrong (false)</description>
+<testinput>
+<name>ans1</name>
+<value>false</value>
+</testinput>
+<testinput>
+<name>ans2</name>
+<value>false</value>
+</testinput>
+<testinput>
+<name>ans3</name>
+<value>false</value>
+</testinput>
+<testinput>
+<name>ans4</name>
+<value>false</value>
+</testinput>
+<expected>
+<name>prt_ans1</name>
+<expectedscore>0.0000000</expectedscore>
+<expectedpenalty>0.1000000</expectedpenalty>
+<expectedanswernote>prt_ans1-1-F</expectedanswernote>
+</expected>
+</qtest>
+<qtest>
+<testcase>3</testcase>
+<description>ans2: correct (false)</description>
+<testinput>
+<name>ans1</name>
+<value>true</value>
+</testinput>
+<testinput>
+<name>ans2</name>
+<value>false</value>
+</testinput>
+<testinput>
+<name>ans3</name>
+<value>false</value>
+</testinput>
+<testinput>
+<name>ans4</name>
+<value>false</value>
+</testinput>
+<expected>
+<name>prt_ans2</name>
+<expectedscore>1.0000000</expectedscore>
+<expectedpenalty>0.0000000</expectedpenalty>
+<expectedanswernote>prt_ans2-1-T</expectedanswernote>
+</expected>
+</qtest>
+<qtest>
+<testcase>4</testcase>
+<description>ans2: wrong (true)</description>
+<testinput>
+<name>ans1</name>
+<value>true</value>
+</testinput>
+<testinput>
+<name>ans2</name>
+<value>true</value>
+</testinput>
+<testinput>
+<name>ans3</name>
+<value>false</value>
+</testinput>
+<testinput>
+<name>ans4</name>
+<value>false</value>
+</testinput>
+<expected>
+<name>prt_ans2</name>
+<expectedscore>0.0000000</expectedscore>
+<expectedpenalty>0.1000000</expectedpenalty>
+<expectedanswernote>prt_ans2-1-F</expectedanswernote>
+</expected>
+</qtest>
+<qtest>
+<testcase>5</testcase>
+<description>ans3: correct (false)</description>
+<testinput>
+<name>ans1</name>
+<value>true</value>
+</testinput>
+<testinput>
+<name>ans2</name>
+<value>false</value>
+</testinput>
+<testinput>
+<name>ans3</name>
+<value>false</value>
+</testinput>
+<testinput>
+<name>ans4</name>
+<value>false</value>
+</testinput>
+<expected>
+<name>prt_ans3</name>
+<expectedscore>1.0000000</expectedscore>
+<expectedpenalty>0.0000000</expectedpenalty>
+<expectedanswernote>prt_ans3-1-T</expectedanswernote>
+</expected>
+</qtest>
+<qtest>
+<testcase>6</testcase>
+<description>ans3: wrong (true)</description>
+<testinput>
+<name>ans1</name>
+<value>true</value>
+</testinput>
+<testinput>
+<name>ans2</name>
+<value>false</value>
+</testinput>
+<testinput>
+<name>ans3</name>
+<value>true</value>
+</testinput>
+<testinput>
+<name>ans4</name>
+<value>false</value>
+</testinput>
+<expected>
+<name>prt_ans3</name>
+<expectedscore>0.0000000</expectedscore>
+<expectedpenalty>0.1000000</expectedpenalty>
+<expectedanswernote>prt_ans3-1-F</expectedanswernote>
+</expected>
+</qtest>
+<qtest>
+<testcase>7</testcase>
+<description>ans4: correct (false)</description>
+<testinput>
+<name>ans1</name>
+<value>true</value>
+</testinput>
+<testinput>
+<name>ans2</name>
+<value>false</value>
+</testinput>
+<testinput>
+<name>ans3</name>
+<value>false</value>
+</testinput>
+<testinput>
+<name>ans4</name>
+<value>false</value>
+</testinput>
+<expected>
+<name>prt_ans4</name>
+<expectedscore>1.0000000</expectedscore>
+<expectedpenalty>0.0000000</expectedpenalty>
+<expectedanswernote>prt_ans4-1-T</expectedanswernote>
+</expected>
+</qtest>
+<qtest>
+<testcase>8</testcase>
+<description>ans4: wrong (true)</description>
+<testinput>
+<name>ans1</name>
+<value>true</value>
+</testinput>
+<testinput>
+<name>ans2</name>
+<value>false</value>
+</testinput>
+<testinput>
+<name>ans3</name>
+<value>false</value>
+</testinput>
+<testinput>
+<name>ans4</name>
+<value>true</value>
+</testinput>
+<expected>
+<name>prt_ans4</name>
+<expectedscore>0.0000000</expectedscore>
+<expectedpenalty>0.1000000</expectedpenalty>
+<expectedanswernote>prt_ans4-1-F</expectedanswernote>
+</expected>
+</qtest>
+</question>
+</quiz>
