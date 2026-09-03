@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+<question type="stack">
+<name>
+<text>Chapter 2: units of observation and analysis</text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>Suppose some primary schools were allocated for students to use tablets, and others to use laptops. At the end of the year, students were assessed in their proficiency using the internet.</p><ol><li><p>What is the <em>unit of analysis</em>?</p><p>[[input:ans1]] [[validation:ans1]]</p></li><li><p>What is the <em>unit of observation</em>?</p><p>[[input:ans2]] [[validation:ans2]]</p></li></ol>]]></text>
+</questiontext>
+<questionvariables>
+<text></text>
+</questionvariables>
+<generalfeedback format="html">
+<text><![CDATA[<p>The <em>unit of observation</em> is the who or what from which each observation is made: here the student, whose proficiency was assessed. The <em>unit of analysis</em> is the smallest independent collection of units of observation, the level at which the treatment was applied: here the school, because tablets or laptops were allocated to whole schools. When these two differ, the sample size for the comparison is the number of schools, not the number of students.</p>]]></text>
+</generalfeedback>
+<questionnote format="moodle_auto_format">
+<text><![CDATA[Fixed question (chapter 2, units of observation and analysis), no random variants.]]></text>
+</questionnote>
+<input>
+<name>ans1</name>
+<type>radio</type>
+<tans>[[1,false,"The students"],[2,true,"The schools"],[3,false,"The tablets"],[4,false,"The laptops"]]</tans>
+<showvalidation>0</showvalidation>
+<boxsize>15</boxsize>
+<strictsyntax>1</strictsyntax>
+<insertstars>0</insertstars>
+<syntaxhint></syntaxhint>
+<syntaxattribute>0</syntaxattribute>
+<forbidwords></forbidwords>
+<allowwords></allowwords>
+<forbidfloat>1</forbidfloat>
+<requirelowestterms>0</requirelowestterms>
+<checkanswertype>0</checkanswertype>
+<mustverify>0</mustverify>
+<options></options>
+</input>
+<input>
+<name>ans2</name>
+<type>radio</type>
+<tans>[[1,true,"The students"],[2,false,"The schools"],[3,false,"The tablets"],[4,false,"The laptops"]]</tans>
+<showvalidation>0</showvalidation>
+<boxsize>15</boxsize>
+<strictsyntax>1</strictsyntax>
+<insertstars>0</insertstars>
+<syntaxhint></syntaxhint>
+<syntaxattribute>0</syntaxattribute>
+<forbidwords></forbidwords>
+<allowwords></allowwords>
+<forbidfloat>1</forbidfloat>
+<requirelowestterms>0</requirelowestterms>
+<checkanswertype>0</checkanswertype>
+<mustverify>0</mustverify>
+<options></options>
+</input>
+<prt>
+<name>prt_ans1</name>
+<value>1</value>
+<autosimplify>1</autosimplify>
+<feedbackstyle>1</feedbackstyle>
+<node>
+<name>0</name>
+<answertest>AlgEquiv</answertest>
+<sans>ans1</sans>
+<tans>2</tans>
+<quiet>0</quiet>
+<truescoremode>=</truescoremode>
+    <truescore>1</truescore>
+<truenextnode>-1</truenextnode>
+<trueanswernote>prt_ans1-1-T</trueanswernote>
+<truefeedback format="html">
+<text><![CDATA[<p>Correct &mdash; &lsquo;The schools&rsquo;. Tablets or laptops were allocated to whole schools, so the smallest independent unit that received a treatment is the school. Students in the same school are not independent of each other.</p>]]></text>
+</truefeedback>
+<falsescoremode>=</falsescoremode>
+    <falsescore>0</falsescore>
+<falsenextnode>-1</falsenextnode>
+<falseanswernote>prt_ans1-1-F</falseanswernote>
+<falsefeedback format="html">
+<text><![CDATA[<p>Not quite &mdash; the answer is &lsquo;The schools&rsquo;. Tablets or laptops were allocated to whole schools, so the smallest independent unit that received a treatment is the school. Students in the same school are not independent of each other.</p>]]></text>
+</falsefeedback>
+</node>
+</prt>
+<prt>
+<name>prt_ans2</name>
+<value>1</value>
+<autosimplify>1</autosimplify>
+<feedbackstyle>1</feedbackstyle>
+<node>
+<name>0</name>
+<answertest>AlgEquiv</answertest>
+<sans>ans2</sans>
+<tans>1</tans>
+<quiet>0</quiet>
+<truescoremode>=</truescoremode>
+    <truescore>1</truescore>
+<truenextnode>-1</truenextnode>
+<trueanswernote>prt_ans2-1-T</trueanswernote>
+<truefeedback format="html">
+<text><![CDATA[<p>Correct &mdash; &lsquo;The students&rsquo;. Proficiency was measured on each student, so the student is the unit from which the observations are made.</p>]]></text>
+</truefeedback>
+<falsescoremode>=</falsescoremode>
+    <falsescore>0</falsescore>
+<falsenextnode>-1</falsenextnode>
+<falseanswernote>prt_ans2-1-F</falseanswernote>
+<falsefeedback format="html">
+<text><![CDATA[<p>Not quite &mdash; the answer is &lsquo;The students&rsquo;. Proficiency was measured on each student, so the student is the unit from which the observations are made.</p>]]></text>
+</falsefeedback>
+</node>
+</prt>
+<qtest>
+<testcase>1</testcase>
+<description>ans1: correct (2)</description>
+<testinput>
+<name>ans1</name>
+<value>2</value>
+</testinput>
+<testinput>
+<name>ans2</name>
+<value>1</value>
+</testinput>
+<expected>
+<name>prt_ans1</name>
+<expectedscore>1.0000000</expectedscore>
+<expectedpenalty>0.0000000</expectedpenalty>
+<expectedanswernote>prt_ans1-1-T</expectedanswernote>
+</expected>
+</qtest>
+<qtest>
+<testcase>2</testcase>
+<description>ans1: wrong (1)</description>
+<testinput>
+<name>ans1</name>
+<value>1</value>
+</testinput>
+<testinput>
+<name>ans2</name>
+<value>1</value>
+</testinput>
+<expected>
+<name>prt_ans1</name>
+<expectedscore>0.0000000</expectedscore>
+<expectedpenalty>0.1000000</expectedpenalty>
+<expectedanswernote>prt_ans1-1-F</expectedanswernote>
+</expected>
+</qtest>
+<qtest>
+<testcase>3</testcase>
+<description>ans2: correct (1)</description>
+<testinput>
+<name>ans1</name>
+<value>2</value>
+</testinput>
+<testinput>
+<name>ans2</name>
+<value>1</value>
+</testinput>
+<expected>
+<name>prt_ans2</name>
+<expectedscore>1.0000000</expectedscore>
+<expectedpenalty>0.0000000</expectedpenalty>
+<expectedanswernote>prt_ans2-1-T</expectedanswernote>
+</expected>
+</qtest>
+<qtest>
+<testcase>4</testcase>
+<description>ans2: wrong (2)</description>
+<testinput>
+<name>ans1</name>
+<value>2</value>
+</testinput>
+<testinput>
+<name>ans2</name>
+<value>2</value>
+</testinput>
+<expected>
+<name>prt_ans2</name>
+<expectedscore>0.0000000</expectedscore>
+<expectedpenalty>0.1000000</expectedpenalty>
+<expectedanswernote>prt_ans2-1-F</expectedanswernote>
+</expected>
+</qtest>
+</question>
+</quiz>
