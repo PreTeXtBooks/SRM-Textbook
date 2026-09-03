@@ -1,1 +1,2 @@
 pretext
+lxml<6.1.3
