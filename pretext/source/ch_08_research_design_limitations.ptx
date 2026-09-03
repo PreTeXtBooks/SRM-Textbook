@@ -198,23 +198,15 @@
 
   <reading-questions xml:id="sec-chap9-quick-review">
     <title>Quick review questions</title>
-    <exercise>
-      <p>Are the following statements <em>true</em> or <em>false</em>?</p>
-      <ol>
-        <li><p>When interpreting the results of a study, the steps taken to maximise internal validity should be evaluated. [True]</p></li>
-        <li><p>If studies are not externally valid, then they are not useful. [False]</p></li>
-        <li><p>When interpreting the results of a study, the steps taken to maximise external validity do not need to be evaluated. [False]</p></li>
-        <li><p>When interpreting the results of a study, ecological validity is about the impact of the study on the environment. [False]</p></li>
-      </ol>
-<solution>
-      <ol>
-        <li><p>TRUE</p></li>
-        <li><p>FALSE</p></li>
-        <li><p>FALSE</p></li>
-        <li><p>FALSE</p></li>
-      </ol>
-</solution>
+
+    <exercise xml:id="rq-limitations">
+      <title>Quick review</title>
+      <introduction>
+        <p>Four true-or-false statements about the limitations of studies. Answer them all, then submit.</p>
+      </introduction>
+      <stack label="stk-ch08-quick-review" source="stack/ch08-quick-review.xml"/>
     </exercise>
+
   </reading-questions>
 
   <exercises xml:id="sec-interpretation-exercises">
