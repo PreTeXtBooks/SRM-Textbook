@@ -929,38 +929,15 @@
 
   <reading-questions xml:id="sec-chap7-quick-review">
     <title>Quick review questions</title>
-    <exercise>
-      <p>
-        <xref ref="doosti2016development"/> wanted to determine the relationship between the depth of bruising on apples and the impact force. The researchers purposefully hit apples with three different <em>forces</em> (<m>200</m>, <m>700</m> and <m>1200\mJs</m>) to inflict bruises on the apples. The researchers then recorded the <em>depth</em> of the bruising. The study was conducted separately for three different <em>regions</em> of the apple (lower; middle; upper), and each apple was only used once.
-      </p>
-      <p>
-        Are the following statements <em>true</em> or <em>false</em>?
-      </p>
-      <ol>
-        <li><p>The <em>response variable</em> is 'the depth of bruising'. [True]</p></li>
-        <li><p>The <em>explanatory variable</em> is 'the force used on the apples'. [True]</p></li>
-        <li><p>The variable 'location of the bruising' would be classified as a confounding variable. [False; extraneous]</p></li>
-        <li><p>The researchers could minimise the effects of confounding by incorporating potential confounding variables in the analysis. [True]</p></li>
-        <li><p>The researchers could use random allocation of the treatments to the apples to minimise confounding. [True]</p></li>
-        <li><p>The <em>carryover</em> effect is likely to be a big problem in this study. [False]</p></li>
-        <li><p>The <em>Hawthorne</em> effect is likely to be a big problem in this study. [False]</p></li>
-        <li><p>The <em>placebo</em> effect is likely to be a big problem in this study. [False]</p></li>
-        <li><p>The <em>observer</em> effect is likely to be a big problem in this study. [False]</p></li>
-      </ol>
-<solution>
-      <ol>
-<li><p>TRUE</p></li>
-<li><p>TRUE</p></li>
-<li><p>FALSE</p></li>
-<li><p>TRUE</p></li>
-<li><p>TRUE</p></li>
-<li><p>FALSE</p></li>
-<li><p>FALSE</p></li>
-<li><p>FALSE</p></li>
-<li><p>FALSE</p></li>
-      </ol>
-</solution>
+
+    <exercise xml:id="rq-apple-bruising">
+      <title>Quick review</title>
+      <introduction>
+        <p>Nine true-or-false statements about the apple-bruising study of <xref ref="doosti2016development"/>. Answer them all, then submit.</p>
+      </introduction>
+      <stack label="stk-ch07-quick-review" source="stack/ch07-quick-review.xml"/>
     </exercise>
+
   </reading-questions>
 
   <exercises xml:id="sec-designing-experiments-exercises">
