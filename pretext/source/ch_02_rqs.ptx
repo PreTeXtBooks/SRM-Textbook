@@ -1134,9 +1134,13 @@
       </p>
     </example>
 
-    <p>
-      <url href="https://learningapps.org/watch?v=pmy2wjmun22" visual="learningapps.org">Interactive activity: units of observation and analysis</url>
-    </p>
+    <exercise xml:id="ex-units-obs-analysis">
+      <title>Units of observation and analysis</title>
+      <introduction>
+        <p>Two questions about a study in primary schools. Choose one option for each, then submit.</p>
+      </introduction>
+      <stack label="stk-ch02-units" source="stack/ch02-units.xml"/>
+    </exercise>
 
   </section>
 
