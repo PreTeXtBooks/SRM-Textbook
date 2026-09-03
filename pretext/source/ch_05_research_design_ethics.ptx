@@ -168,28 +168,11 @@
     <title>Quick review questions</title>
 
     <exercise xml:id="rq-ethics">
-      <p>Are the following statements <em>true</em> or <em>false</em>?</p>
-      <ol>
-        <li><p>Ethics apply for <em>any</em> type of study.</p></li>
-        <li><p>Ethics only refer to the interactions of the researchers with participants in the study.</p></li>
-        <li><p>Ethics only apply when <em>people</em> are the individuals.</p></li>
-        <li><p>Ethics only apply when <em>people</em> or <em>animals</em> are the individuals.</p></li>
-        <li><p>Ethics can extend to storage of data.</p></li>
-        <li><p>Ethics only apply to the design of the study.</p></li>
-        <li><p>Ethics apply even to the analysis of the data.</p></li>
-      </ol>
-<solution>
-      <ol>
-        <li><p>TRUE</p></li>
-        <li><p>FALSE</p></li>
-        <li><p>FALSE</p></li>
-        <li><p>FALSE</p></li>
-        <li><p>TRUE</p></li>
-        <li><p>FALSE</p></li>
-        <li><p>TRUE</p></li>
-
-      </ol>
-</solution>
+      <title>Quick review</title>
+      <introduction>
+        <p>Seven true-or-false statements about research ethics. Answer them all, then submit.</p>
+      </introduction>
+      <stack label="stk-ch05-quick-review" source="stack/ch05-quick-review.xml"/>
     </exercise>
 
   </reading-questions>
