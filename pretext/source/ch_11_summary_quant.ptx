@@ -1206,39 +1206,15 @@ About <m>75</m>% of observations are smaller than <m>3.0</m>.
 
   <reading-questions xml:id="sec-summarise-quant-quick-review">
     <title>Quick review questions</title>
+
     <exercise xml:id="ch11-rq">
-      <p>
-        Are the following statements <em>true</em> or <em>false</em>.
-      </p>
-      <ol>
-        <li><p>The IQR measures the amount of variability in data.</p></li>
-        <li><p>The mean and the median can both be called an 'average'. </p></li>
-        <li><p>The mean and the median are not always the same value. </p></li>
-        <li><p>The range is a simple measure of variation in a set of data. </p></li>
-        <li><p>The standard deviation measures the amount of variability in data. </p></li>
-        <li><p>Another name for the median is <m>Q_2 - Q_3</m></p></li>
-        <li><p><m>Q_3</m> is the median of the largest half of the data.</p></li>
-        <li><p>The IQR is a useful measure of variation in data that are skewed. </p></li>
-        <li><p>The IQR is the difference between the first and second quartiles. </p></li>
-        <li><p>Another name for the 75th percentile is <m>Q_3</m></p></li>
-        <li><p>The units of the standard deviation and the IQR are the same as for the original data. </p></li>
-      </ol>
-<solution>
-<ol>
-<li><p>TRUE</p></li>
-<li><p>TRUE</p></li>
-<li><p>TRUE</p></li>
-<li><p>TRUE</p></li>
-<li><p>TRUE</p></li>
-<li><p>TRUE</p></li>
-<li><p>TRUE</p></li>
-<li><p>TRUE</p></li>
-<li><p>FALSE</p></li>
-<li><p>TRUE</p></li>
-<li><p>TRUE</p></li>
-</ol>
-</solution>
+      <title>Quick review</title>
+      <introduction>
+        <p>Eleven true-or-false statements about summarising quantitative data. Answer them all, then submit.</p>
+      </introduction>
+      <stack label="stk-ch11-quick-review" source="stack/ch11-quick-review.xml"/>
     </exercise>
+
   </reading-questions>
 
   <exercises xml:id="sec-summarise-quant-exercises">
