@@ -348,27 +348,15 @@
 
   <reading-questions xml:id="sec-chap11-quick-review">
     <title>Quick review questions</title>
+
     <exercise xml:id="ch10-rq">
-      <p>
-        <xref ref="benetou2020diet"/> studied school-aged adolescents in Greece. Among other variables, for each child they recorded the body-mass index (weight, divided by height-squared), diet quality (poor; moderate; good), the region where they lived (Attica; Thessaloniki; Other), the number of days they performed physical exercise in the last week, and school grade.
-      </p>
-      <ol>
-        <li><p>'Body-mass index' is a quantitative discrete variable. </p></li>
-        <li><p>'Diet quality' is a qualitative ordinal variable. </p></li>
-        <li><p>'Region of residence' is a qualitative nominal variable. </p></li>
-        <li><p>'Number of days the child performed physical exercise in the last week' is a quantitative discrete variable.</p></li> 
-        <li><p>'School grade' is a quantitative continuous variable. </p></li>
-      </ol>
-<solution>
-<ol>
-<li><p>FALSE</p></li>
-<li><p>TRUE</p></li>
-<li><p>TRUE</p></li>
-<li><p>TRUE</p></li>
-<li><p>FALSE</p></li>
-</ol>
-</solution>
+      <title>Quick review</title>
+      <introduction>
+        <p>Five true-or-false statements about the variables recorded by <xref ref="benetou2020diet"/>. Answer them all, then submit.</p>
+      </introduction>
+      <stack label="stk-ch10-quick-review" source="stack/ch10-quick-review.xml"/>
     </exercise>
+
   </reading-questions>
 
   <exercises xml:id="sec-describe-exercises">
