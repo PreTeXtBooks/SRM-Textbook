@@ -662,24 +662,12 @@ The animation below compares observational, quasi-experimental and true experime
     <title>Quick review questions</title>
 
     <exercise xml:id="rq-research-design-types">
-      <p>Are the following statements <em>true</em> or <em>false</em>?</p>
-      <ol>
-        <li><p><xref ref="fraboni2018red"/> studied the <q>red-light running behaviour of cyclists in Italy</q>. This study is most likely to be observational.</p></li>
-        <li><p>In a true experiment, the researchers apply treatments to groups that they have determined; in a quasi-experiment, the researchers apply treatments to groups that they have not determined.</p></li>
-        <li><p>In a quasi-experiment, the researchers allocate treatments to groups that they cannot manipulate.</p></li>
-        <li><p>True experiments generally have a higher internal validity than observational studies.</p></li>
-        <li><p>Observational studies generally have a higher external validity than quasi-experimental studies.</p></li>
-      </ol>
-<solution>
-<ol>
-<li><p>TRUE</p></li>
-<li><p>TRUE</p></li>
-<li><p>TRUE</p></li>
-<li><p>TRUE</p></li>
-<li><p>FALSE</p></li>
-</ol>
-</solution>
-</exercise>
+      <title>Quick review</title>
+      <introduction>
+        <p>Five true-or-false statements about types of research study, the first about <xref ref="fraboni2018red"/>. Answer them all, then submit.</p>
+      </introduction>
+      <stack label="stk-ch04-quick-review" source="stack/ch04-quick-review.xml"/>
+    </exercise>
 
   </reading-questions>
 
