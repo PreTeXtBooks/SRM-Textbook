@@ -900,19 +900,11 @@ older students.</p>
     <title>Quick review questions</title>
 
     <exercise xml:id="rq-sampling">
-      <p>Are the following statements <em>true</em> or <em>false</em>?</p>
-      <ol>
-        <li><p>Suppose students are randomly selected and sent postal surveys from their university, but some students have moved and so never receive the survey. This is <em>response</em> bias.</p></li>
-        <li><p>A <em>large</em> sample is <em>always</em> better than a <em>random</em> sample.</p></li>
-        <li><p><em>Convenience</em> sampling and <em>judgement</em> sampling are examples of non-random sampling.</p></li>
-      </ol>
-<solution>
-      <ol>
-<li><p>FALSE</p></li>
-<li><p>FALSE</p></li>
-<li><p>TRUE</p></li>
-      </ol>
-</solution>
+      <title>Quick review</title>
+      <introduction>
+        <p>Three true-or-false statements about sampling. Answer them all, then submit.</p>
+      </introduction>
+      <stack label="stk-ch06-quick-review" source="stack/ch06-quick-review.xml"/>
     </exercise>
 
   </reading-questions>
