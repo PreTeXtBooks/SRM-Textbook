@@ -513,37 +513,11 @@
     <title>Quick review questions</title>
 
     <exercise xml:id="rq-bicycle-cargo">
-      <p>
-        <xref ref="martnes2023physical"/> compared the average time to complete a journey when (p. 1)
-      </p>
-      <blockquote>
-        <p>... riding an electric-assisted bicycle with cargo (<m>30\kgs</m>) and without cargo...</p>
-      </blockquote>
-      <p>
-        They recorded the age, height, weight, and resting metabolic rate of all subjects who completed the <m>4.5\kms</m> ride.
-        Each subject was allocated to ride both with <em>and</em> without cargo.
-      </p>
-      <p>Are the following statements <em>true</em> or <em>false</em>?</p>
-      <ol>
-        <li><p>The explanatory variable is <q>the age of the subjects</q>.</p></li>
-        <li><p><q>The height of the subjects</q> is a lurking variable.</p></li>
-        <li><p>The explanatory variable is <q>whether the bicycle is ridden with or without cargo</q>.</p></li>
-        <li><p><q>Weight</q> is an extraneous variable.</p></li>
-        <li><p>The response variable is <q>the time to complete the journey</q>.</p></li>
-        <li><p><q>Age</q> is a possible confounding variable.</p></li>
-        <li><p><q>Resting metabolic rate</q> is a possible confounding variable.</p></li>
-      </ol>
-<solution>
-      <ol>
-        <li><p>FALSE.</p></li>
-        <li><p>FALSE.</p></li>
-        <li><p>TRUE.</p></li>
-        <li><p>TRUE.</p></li>
-        <li><p>TRUE.</p></li>
-        <li><p>FALSE.</p></li>
-        <li><p>FALSE.</p></li>
-      </ol>
-</solution>
+      <title>Quick review</title>
+      <introduction>
+        <p>Seven true-or-false statements about the electric-bicycle study of <xref ref="martnes2023physical"/>. Answer them all, then submit.</p>
+      </introduction>
+      <stack label="stk-ch03-quick-review" source="stack/ch03-quick-review.xml"/>
     </exercise>
 
   </reading-questions>
