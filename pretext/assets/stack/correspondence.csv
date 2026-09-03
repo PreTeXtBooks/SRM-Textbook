@@ -1,0 +1,12 @@
+stack_file,stack_label,chapter,ptx_file,exercise_xml_id,replaces,content,github_issue
+ch02-quick-review.xml,stk-ch02-quick-review,2,ch_02_rqs.ptx,rq-netball-poci,reading question rq-netball-poci,8 true/false statements,8
+ch02-units.xml,stk-ch02-units,2,ch_02_rqs.ptx,ex-units-obs-analysis,LearningApps activity https://learningapps.org/watch?v=pmy2wjmun22,2 multiple-choice questions,5
+ch03-quick-review.xml,stk-ch03-quick-review,3,ch_03_research_design_overview.ptx,rq-bicycle-cargo,reading question rq-bicycle-cargo,7 true/false statements,10
+ch04-quick-review.xml,stk-ch04-quick-review,4,ch_04_research_design_types.ptx,rq-research-design-types,reading question rq-research-design-types,5 true/false statements,13
+ch05-quick-review.xml,stk-ch05-quick-review,5,ch_05_research_design_ethics.ptx,rq-ethics,reading question rq-ethics,7 true/false statements,14
+ch06-quick-review.xml,stk-ch06-quick-review,6,ch_06_research_design_sampling.ptx,rq-sampling,reading question rq-sampling,3 true/false statements,17
+ch07-quick-review.xml,stk-ch07-quick-review,7,ch_07_research_design_internal.ptx,rq-apple-bruising,reading question without xml:id (apple bruising),9 true/false statements,20
+ch08-quick-review.xml,stk-ch08-quick-review,8,ch_08_research_design_limitations.ptx,rq-limitations,reading question without xml:id (validity),4 true/false statements,21
+ch09-quick-review.xml,stk-ch09-quick-review,9,ch_09_collect.ptx,rq-collecting-data,"five reading questions without xml:id (3 MCQ, 2 true/false)",3 multiple-choice questions and 2 true/false statements,22
+ch10-quick-review.xml,stk-ch10-quick-review,10,ch_10_describing_variables.ptx,ch10-rq,reading question ch10-rq,5 true/false statements,24
+ch11-quick-review.xml,stk-ch11-quick-review,11,ch_11_summary_quant.ptx,ch11-rq,reading question ch11-rq,11 true/false statements,29

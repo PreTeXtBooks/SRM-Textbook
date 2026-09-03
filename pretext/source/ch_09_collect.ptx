@@ -322,54 +322,15 @@
 
   <reading-questions xml:id="sec-chap10-quick-review">
     <title>Quick review questions</title>
-    <exercise>
-      <p>What is the biggest problem with this question: 'Do you have bromodosis?'</p>
-      <ol>
-        <li><p>It is double-barrelled.</p></li>
-        <li><p>It is a leading question.</p></li>
-        <li><p>It uses language that may not be understood.</p></li>
-        <li><p>It is ambiguous.</p></li>
-      </ol>
-<solution>
-<p>It uses language that may not be understood.</p>
-</solution>
+
+    <exercise xml:id="rq-collecting-data">
+      <title>Quick review</title>
+      <introduction>
+        <p>Three multiple-choice questions about questionnaire wording and two true-or-false statements. Answer them all, then submit.</p>
+      </introduction>
+      <stack label="stk-ch09-quick-review" source="stack/ch09-quick-review.xml"/>
     </exercise>
-    <exercise>
-      <p>What is the biggest problem with this question: 'Do you spend too much time connected to the internet?'</p>
-      <ol>
-        <li><p>It is double-barrelled.</p></li>
-        <li><p>It is a leading question.</p></li>
-        <li><p>It uses language that may not be understood.</p></li>
-        <li><p>It is ambiguous.</p></li>
-      </ol>
-<solution>
-<p>It is ambiguous.</p>
-</solution>
-    </exercise>
-    <exercise>
-      <p>What is the biggest problem with this question: 'Do you eat fruits and vegetables?'</p>
-      <ol>
-        <li><p>It is double-barrelled.</p></li>
-        <li><p>It is a leading question.</p></li>
-        <li><p>It uses language that may not be understood.</p></li>
-        <li><p>It is ambiguous.</p></li>
-      </ol>
-<solution>
-<p>It is double-barrelled.</p>
-</solution>
-    </exercise>
-    <exercise>
-      <p><em>True</em> or <em>false</em>: A well-defined protocol allows the researchers to make the study externally valid.</p>
-<solution>
-<p>FALSE.</p>
-</solution>
-</exercise>
-    <exercise>
-      <p><em>True</em> or <em>false</em>: This question is likely to be a <em>leading</em> question: 'Do you support a ban on drinks sold in unrecyclable plastic bottles?'</p>
-<solution>
-<p>TRUE.</p>
-</solution>
-</exercise>
+
   </reading-questions>
 
   <exercises xml:id="sec-collection-exercises">
