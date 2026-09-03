@@ -1508,21 +1508,11 @@
     <title>Quick review questions</title>
 
     <exercise xml:id="rq-netball-poci">
-      <p>Consider this RQ:</p>
-      <blockquote>
-        <p>In elite female netball players, do players in defence positions have the same average number of knee injuries (per player, per season) compared to players in attacking positions?</p>
-      </blockquote>
-      <p>Are the following statements <em>true</em> or <em>false</em>?</p>
-      <ol>
-        <li><p>The <em>comparison</em> is <q>between knee injuries and other types of injuries</q>.</p></li>
-        <li><p>The <em>comparison</em> in this RQ is a <em>between</em>-individuals comparison.</p></li>
-        <li><p>The <em>outcome</em> is <q>the average number of knee injuries per player, per season</q>.</p></li>
-        <li><p>The <em>response variable</em> is <q>the average number of knee injuries per season</q>.</p></li>
-        <li><p>The <em>unit of analysis</em> is <q>the number of knee injuries</q>.</p></li>
-        <li><p>The <em>unit of observation</em> is <q>the elite netball player</q>.</p></li>
-        <li><p>This RQ is a descriptive RQ.</p></li>
-        <li><p>This RQ is an estimation-type RQ.</p></li>
-      </ol>
+      <title>Quick review</title>
+      <introduction>
+        <p>Eight true-or-false statements about one research question. Answer them all, then submit.</p>
+      </introduction>
+      <stack label="stk-ch02-quick-review" source="stack/ch02-quick-review.xml"/>
     </exercise>
 
   </reading-questions>
